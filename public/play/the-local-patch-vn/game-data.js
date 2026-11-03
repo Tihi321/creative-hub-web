@@ -1,0 +1,15673 @@
+window.VNO_GAME_DATA = {
+  "slug": "the-local-patch-2",
+  "title": "The Local Patch",
+  "primaryLang": "en",
+  "presentation": "visual-novel",
+  "saveDir": "vno-the-local-patch-2",
+  "resolution": {
+    "w": 1920,
+    "h": 1080
+  },
+  "theme": {
+    "name": "noir",
+    "label": "Noir",
+    "description": "Dark and moody for mysteries, horror and thrillers. A near-black textbox, a red accent and Courier Prime (OFL, covers Croatian).",
+    "light": false,
+    "pixel": false,
+    "colors": {
+      "accent": "#c0392b",
+      "background": "#0a0a0a",
+      "text": "#e8e4dc",
+      "idle": "#7a7670",
+      "hover": "#e05a4a",
+      "selected": "#ffffff",
+      "insensitive": "#7a76707f",
+      "muted": "#3a1511"
+    },
+    "textbox": {
+      "color": "#000000",
+      "opacity": 0.86,
+      "borderColor": "#c0392b",
+      "radius": 0
+    },
+    "namebox": {
+      "color": "#1a0a08",
+      "opacity": 0.95,
+      "radius": 0,
+      "textColor": "#e05a4a"
+    },
+    "fonts": {
+      "text": "CourierPrime-Regular.ttf",
+      "name": "CourierPrime-Bold.ttf",
+      "interface": "CourierPrime-Regular.ttf",
+      "bold": "CourierPrime-Bold.ttf",
+      "scripts": [
+        "latin"
+      ]
+    },
+    "sizes": {
+      "text": 34,
+      "name": 44,
+      "interface": 32,
+      "label": 36,
+      "title": 78,
+      "choice": 34
+    },
+    "choice": {
+      "color": "#000000d0",
+      "hoverColor": "#3a1511f0",
+      "borderColor": "#c0392b",
+      "radius": 0,
+      "textColor": "#b8b2a8",
+      "hoverTextColor": "#ffffff"
+    },
+    "transitions": {
+      "dissolve": 0.9,
+      "show": 0.35,
+      "fade": 1
+    },
+    "frames": {}
+  },
+  "rtlLangs": [],
+  "characters": {
+    "aris_thorne": {
+      "id": "aris_thorne",
+      "varName": "aris_thorne",
+      "displayName": "Aris Thorne",
+      "color": "#b5caa7",
+      "aliases": [
+        "Dr Thorne",
+        "Thorne"
+      ],
+      "expressions": [
+        "neutral",
+        "happy",
+        "sad",
+        "angry",
+        "surprised",
+        "worried",
+        "scared",
+        "thinking"
+      ],
+      "sprites": {
+        "neutral": "images/aris_thorne neutral.webp",
+        "happy": "images/aris_thorne happy.webp",
+        "sad": "images/aris_thorne sad.webp",
+        "angry": "images/aris_thorne angry.webp",
+        "surprised": "images/aris_thorne surprised.webp",
+        "worried": "images/aris_thorne worried.webp",
+        "scared": "images/aris_thorne scared.webp",
+        "thinking": "images/aris_thorne thinking.webp"
+      }
+    },
+    "vera_lin": {
+      "id": "vera_lin",
+      "varName": "vera_lin",
+      "displayName": "Vera Lin",
+      "color": "#a7c5ca",
+      "aliases": [
+        "Dr Lin",
+        "Lin"
+      ],
+      "expressions": [
+        "neutral",
+        "happy",
+        "angry",
+        "surprised",
+        "worried",
+        "thinking"
+      ],
+      "sprites": {
+        "neutral": "images/vera_lin neutral.webp",
+        "happy": "images/vera_lin happy.webp",
+        "angry": "images/vera_lin angry.webp",
+        "surprised": "images/vera_lin surprised.webp",
+        "worried": "images/vera_lin worried.webp",
+        "thinking": "images/vera_lin thinking.webp"
+      }
+    },
+    "kaelen_vance": {
+      "id": "kaelen_vance",
+      "varName": "kaelen_vance",
+      "displayName": "Kaelen Vance",
+      "color": "#caa7b5",
+      "aliases": [
+        "Chief Vance",
+        "the Chief",
+        "Vance"
+      ],
+      "expressions": [
+        "neutral",
+        "happy",
+        "sad",
+        "angry",
+        "worried",
+        "thinking"
+      ],
+      "sprites": {
+        "neutral": "images/kaelen_vance neutral.webp",
+        "happy": "images/kaelen_vance happy.webp",
+        "sad": "images/kaelen_vance sad.webp",
+        "angry": "images/kaelen_vance angry.webp",
+        "worried": "images/kaelen_vance worried.webp",
+        "thinking": "images/kaelen_vance thinking.webp"
+      }
+    },
+    "watch_officer": {
+      "id": "watch_officer",
+      "varName": "watch_officer",
+      "displayName": "Watch Officer",
+      "color": "#caa7b5",
+      "expressions": [],
+      "sprites": {}
+    },
+    "woman_in_line": {
+      "id": "woman_in_line",
+      "varName": "woman_in_line",
+      "displayName": "Woman in Line",
+      "color": "#a7b5ca",
+      "expressions": [],
+      "sprites": {}
+    },
+    "voice_in_the_crowd": {
+      "id": "voice_in_the_crowd",
+      "varName": "voice_in_the_crowd",
+      "displayName": "Voice in the Crowd",
+      "color": "#cabca7",
+      "expressions": [],
+      "sprites": {}
+    },
+    "voices_in_the_crowd": {
+      "id": "voices_in_the_crowd",
+      "varName": "voices_in_the_crowd",
+      "displayName": "Voices in the Crowd",
+      "color": "#a7cabc",
+      "expressions": [],
+      "sprites": {}
+    },
+    "sera": {
+      "id": "sera",
+      "varName": "sera",
+      "displayName": "Sera",
+      "color": "#bca7ca",
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/sera neutral.webp"
+      }
+    }
+  },
+  "backgrounds": {
+    "bg_observational_core_morning": "images/bg observational_core_morning.webp",
+    "bg_bio_integration_lab_morning": "images/bg bio_integration_lab_morning.webp",
+    "bg_command_node_day": "images/bg command_node_day.webp",
+    "bg_observational_core_night": "images/bg observational_core_night.webp",
+    "bg_concourse_morning": "images/bg concourse_morning.webp",
+    "bg_ai_core_afternoon": "images/bg ai_core_afternoon.webp",
+    "bg_command_node_afternoon": "images/bg command_node_afternoon.webp",
+    "bg_reactor_ring_evening": "images/bg reactor_ring_evening.webp",
+    "bg_ai_core_night": "images/bg ai_core_night.webp",
+    "bg_observational_core_dawn": "images/bg observational_core_dawn.webp",
+    "bg_command_node_morning": "images/bg command_node_morning.webp",
+    "bg_bio_integration_lab_night": "images/bg bio_integration_lab_night.webp",
+    "bg_command_node_night": "images/bg command_node_night.webp",
+    "bg_concourse_evening": "images/bg concourse_evening.webp"
+  },
+  "cgs": {
+    "carbon_14_assay_screen": {
+      "path": "images/cg carbon_14_assay_screen.webp",
+      "display": "insert"
+    },
+    "aris_standing_alone_observational": {
+      "path": "images/cg aris_standing_alone_observational.webp",
+      "display": "full"
+    },
+    "reactor_blanket_telemetry": {
+      "path": "images/cg reactor_blanket_telemetry.webp",
+      "display": "insert"
+    },
+    "aris_post_ship_wide": {
+      "path": "images/cg aris_post_ship_wide.webp",
+      "display": "insert"
+    },
+    "patch_faithful_filling_plaza": {
+      "path": "images/cg patch_faithful_filling_plaza.webp",
+      "display": "full"
+    },
+    "reactor_long_telemetry_window": {
+      "path": "images/cg reactor_long_telemetry_window.webp",
+      "display": "insert"
+    },
+    "vera_her_stool_reactor": {
+      "path": "images/cg vera_her_stool_reactor.webp",
+      "display": "full"
+    },
+    "vera_floor_bio_integration": {
+      "path": "images/cg vera_floor_bio_integration.webp",
+      "display": "full"
+    },
+    "patch_manifest_vera_screen": {
+      "path": "images/cg patch_manifest_vera_screen.webp",
+      "display": "insert"
+    },
+    "ampoule_rack_maintenance_log": {
+      "path": "images/cg ampoule_rack_maintenance_log.webp",
+      "display": "insert"
+    },
+    "command_node_plunged_into": {
+      "path": "images/cg command_node_plunged_into.webp",
+      "display": "full"
+    },
+    "aris_alone_his_side": {
+      "path": "images/cg aris_alone_his_side.webp",
+      "display": "full"
+    },
+    "standing_watch_log_entry": {
+      "path": "images/cg standing_watch_log_entry.webp",
+      "display": "insert"
+    },
+    "header_vera_firmware_layer": {
+      "path": "images/cg header_vera_firmware_layer.webp",
+      "display": "insert"
+    },
+    "arkship_keres_seen_outside": {
+      "path": "images/cg arkship_keres_seen_outside.webp",
+      "display": "full"
+    }
+  },
+  "audio": {
+    "music": {
+      "music_01": {
+        "path": "audio/music_01.mp3"
+      },
+      "music_02": {
+        "path": "audio/music_02.mp3"
+      },
+      "music_03": {
+        "path": "audio/music_03.mp3"
+      }
+    },
+    "sfx": {
+      "soft_chime_slate": "audio/sfx_soft_chime_slate.ogg",
+      "two_tone_alert_reactor": "audio/sfx_two_tone_alert_reactor.ogg",
+      "soft_click_message_going": "audio/sfx_soft_click_message_going.ogg",
+      "harsh_error_tone_test": "audio/sfx_harsh_error_tone_test.ogg",
+      "soft_click_as_plaza": "audio/sfx_soft_click_as_plaza.ogg",
+      "soft_click_note_going": "audio/sfx_soft_click_note_going.ogg",
+      "soft_chime_as_fit": "audio/sfx_soft_chime_as_fit.ogg",
+      "flat_dead_tone_as": "audio/sfx_flat_dead_tone_as.ogg",
+      "hard_metallic_shudder_through": "audio/sfx_hard_metallic_shudder_through.ogg",
+      "rising_pressure_alarm_ring": "audio/sfx_rising_pressure_alarm_ring.ogg",
+      "soft_chime_then_second": "audio/sfx_soft_chime_then_second.ogg",
+      "door_hissing_open": "audio/sfx_door_hissing_open.ogg"
+    },
+    "ambience": {
+      "low_hum_life_support": "audio/amb_low_hum_life_support.mp3",
+      "incubator_fans_bubble_hydroponic": "audio/amb_incubator_fans_bubble_hydroponic.mp3",
+      "soft_fans_slow_pulse": "audio/amb_soft_fans_slow_pulse.mp3",
+      "murmur_crowded_promenade_footsteps": "audio/amb_murmur_crowded_promenade_footsteps.mp3",
+      "low_sustained_murmur_many": "audio/amb_low_sustained_murmur_many.mp3",
+      "soft_fans_pulse_status": "audio/amb_soft_fans_pulse_status.mp3",
+      "deep_hum_reactor_through": "audio/amb_deep_hum_reactor_through.mp3",
+      "deep_slow_hum_prayer": "audio/amb_deep_slow_hum_prayer.mp3",
+      "incubator_fans_under_them": "audio/amb_incubator_fans_under_them.mp3",
+      "cold_hum_life_support": "audio/amb_cold_hum_life_support.mp3",
+      "incubator_fans_soft_beat": "audio/amb_incubator_fans_soft_beat.mp3",
+      "soft_fans_status_lights": "audio/amb_soft_fans_status_lights.mp3",
+      "steady_hum_life_support": "audio/amb_steady_hum_life_support.mp3",
+      "hum_life_support_steady": "audio/amb_hum_life_support_steady.mp3",
+      "incubator_fans_soft_steady": "audio/amb_incubator_fans_soft_steady.mp3",
+      "murmur_ordinary_evening_crowd": "audio/amb_murmur_ordinary_evening_crowd.mp3",
+      "hum_life_support_quarter": "audio/amb_hum_life_support_quarter.mp3"
+    }
+  },
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "label": "ch_01",
+      "number": 1,
+      "title": "Half-Life Drift",
+      "music": "music_01",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch01.s01",
+          "label": "ch_01_s01",
+          "title": "Observational Core, Monday",
+          "locationKey": "observational_core",
+          "bgPath": "images/bg observational_core_morning.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s01.b001",
+              "type": "narration",
+              "text": "The round chamber is dark except for cyan decay curves floating on the black glass walls. Dust turns slowly in the projector beams. It is cold enough to see breath.",
+              "html": "The round chamber is dark except for cyan decay curves floating on the black glass walls. Dust turns slowly in the projector beams. It is cold enough to see breath.",
+              "stage": {
+                "beatId": "ch01.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "low_hum_life_support"
+              }
+            },
+            {
+              "id": "ch01.s01.b002",
+              "type": "narration",
+              "text": "In the centre, one worn chair. A rack of twelve sealed ampoules glows faintly blue beside it, each with its own small counter ticking.",
+              "html": "In the centre, one worn chair. A rack of twelve sealed ampoules glows faintly blue beside it, each with its own small counter ticking.",
+              "stage": {
+                "beatId": "ch01.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b004",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Cold. Good. Cold keeps me honest.",
+              "html": "Cold. Good. Cold keeps me honest.",
+              "stage": {
+                "beatId": "ch01.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b005",
+              "type": "narration",
+              "text": "He breathes on his fingers and taps the slate awake.",
+              "html": "He breathes on his fingers and taps the slate awake.",
+              "stage": {
+                "beatId": "ch01.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b006",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Life support. Fifth below middle C. Same note since I was a boy.",
+              "html": "Life support. Fifth below middle C. Same note since I was a boy.",
+              "stage": {
+                "beatId": "ch01.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b007",
+              "type": "narration",
+              "text": "He tilts his head and listens.",
+              "html": "He tilts his head and listens.",
+              "stage": {
+                "beatId": "ch01.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Except it isn't, this morning.",
+              "html": "Except it isn&#39;t, this morning.",
+              "stage": {
+                "beatId": "ch01.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b009",
+              "type": "narration",
+              "text": "He taps the slate. A note joins a column of a thousand other notes.",
+              "html": "He taps the slate. A note joins a column of a thousand other notes.",
+              "stage": {
+                "beatId": "ch01.s01.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b010",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "A quarter tone flat. Logged. Everything gets logged.",
+              "html": "A quarter tone flat. Logged. Everything gets logged.",
+              "stage": {
+                "beatId": "ch01.s01.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b011",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Somewhere in the logs there's a message. There always is, if you keep enough of them.",
+              "html": "Somewhere in the logs there&#39;s a message. There always is, if you keep enough of them.",
+              "stage": {
+                "beatId": "ch01.s01.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b012",
+              "type": "narration",
+              "text": "He turns to the ampoule rack. Twelve small glass vials, a gram of graphite in each, each watched by a counter that ticks at every blue flash of decay.",
+              "html": "He turns to the ampoule rack. Twelve small glass vials, a gram of graphite in each, each watched by a counter that ticks at every blue flash of decay.",
+              "stage": {
+                "beatId": "ch01.s01.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b013",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Good morning, carbon-fourteen. Fifty-seven hundred and thirty years, give or take forty. The most boring number on the ship.",
+              "html": "Good morning, carbon-fourteen. Fifty-seven hundred and thirty years, give or take forty. The most boring number on the ship.",
+              "stage": {
+                "beatId": "ch01.s01.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b014",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You were boring when we left Sol. You were boring when my grandmother was born on Ring 2.",
+              "html": "You were boring when we left Sol. You were boring when my grandmother was born on Ring 2.",
+              "stage": {
+                "beatId": "ch01.s01.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b015",
+              "type": "narration",
+              "text": "He pulls up the overnight counts. He stops.",
+              "html": "He pulls up the overnight counts. He stops.",
+              "stage": {
+                "beatId": "ch01.s01.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b016",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And you. What are you doing?",
+              "html": "And you. What are you doing?",
+              "stage": {
+                "beatId": "ch01.s01.b016",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "angry",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s01.b017",
+              "type": "narration",
+              "text": "The screen reads: HALF-LIFE ESTIMATE 5,729.83 YEARS. DEVIATION FROM REFERENCE: -0.003%. ALL TWELVE CHANNELS.",
+              "html": "The screen reads: HALF-LIFE ESTIMATE 5,729.83 YEARS. DEVIATION FROM REFERENCE: -0.003%. ALL TWELVE CHANNELS.",
+              "stage": {
+                "beatId": "ch01.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "carbon_14_assay_screen"
+              }
+            },
+            {
+              "id": "ch01.s01.b018",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Not one channel. All twelve. Same size. Same phase.",
+              "html": "Not one channel. All twelve. Same size. Same phase.",
+              "stage": {
+                "beatId": "ch01.s01.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s01.b019",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "A dirty detector does one channel. A warm housing does the top row. Not all twelve. Not in step.",
+              "html": "A dirty detector does one channel. A warm housing does the top row. Not all twelve. Not in step.",
+              "stage": {
+                "beatId": "ch01.s01.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s01.b020",
+              "type": "narration",
+              "text": "He pulls the photomultiplier diagnostics, the thermal logs, the calibration history. One by one he swipes them away.",
+              "html": "He pulls the photomultiplier diagnostics, the thermal logs, the calibration history. One by one he swipes them away.",
+              "stage": {
+                "beatId": "ch01.s01.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b021",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Not the detector. Not the housing. Not heat. Not the clock.",
+              "html": "Not the detector. Not the housing. Not heat. Not the clock.",
+              "stage": {
+                "beatId": "ch01.s01.b021",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch01.s01.b022",
+              "type": "narration",
+              "text": "He checks the time on three separate clocks. Three times he runs the numbers. Three times they agree.",
+              "html": "He checks the time on three separate clocks. Three times he runs the numbers. Three times they agree.",
+              "stage": {
+                "beatId": "ch01.s01.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b023",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Eleven years. Eleven years this assay has been as boring as a stone. And this morning it moves.",
+              "html": "Eleven years. Eleven years this assay has been as boring as a stone. And this morning it moves.",
+              "stage": {
+                "beatId": "ch01.s01.b023",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b024",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s01.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b025",
+              "type": "narration",
+              "text": "He sits down in the worn chair and does not move for a while. His breath clouds and clears.",
+              "html": "He sits down in the worn chair and does not move for a while. His breath clouds and clears.",
+              "stage": {
+                "beatId": "ch01.s01.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b026",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Three thousandths of a percent. A rounding error. A nothing.",
+              "html": "Three thousandths of a percent. A rounding error. A nothing.",
+              "stage": {
+                "beatId": "ch01.s01.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b027",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Except nothing has moved in this number since before the ship was built.",
+              "html": "Except nothing has moved in this number since before the ship was built.",
+              "stage": {
+                "beatId": "ch01.s01.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b028",
+              "type": "narration",
+              "text": "He stands and drags the whole eleven-year trace onto the wall. Thousands of daily counts unroll across the black glass like a tide line.",
+              "html": "He stands and drags the whole eleven-year trace onto the wall. Thousands of daily counts unroll across the black glass like a tide line.",
+              "stage": {
+                "beatId": "ch01.s01.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b029",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Show me where you moved before. Show me the little ones I missed.",
+              "html": "Show me where you moved before. Show me the little ones I missed.",
+              "stage": {
+                "beatId": "ch01.s01.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b030",
+              "type": "narration",
+              "text": "He writes a script. Then a longer one. Then a loop that checks every period from one day to four thousand.",
+              "html": "He writes a script. Then a longer one. Then a loop that checks every period from one day to four thousand.",
+              "stage": {
+                "beatId": "ch01.s01.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b031",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Come on. Come on. You don't wake up one morning and move. Nothing does. You've been practising.",
+              "html": "Come on. Come on. You don&#39;t wake up one morning and move. Nothing does. You&#39;ve been practising.",
+              "stage": {
+                "beatId": "ch01.s01.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b032",
+              "type": "narration",
+              "text": "A list of numbers appears in the air in front of him.",
+              "html": "A list of numbers appears in the air in front of him.",
+              "stage": {
+                "beatId": "ch01.s01.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": "soft_chime_slate",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b033",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Two. Three. Five. Seven. Eleven. Thirteen. Seventeen. Nineteen.",
+              "html": "Two. Three. Five. Seven. Eleven. Thirteen. Seventeen. Nineteen.",
+              "stage": {
+                "beatId": "ch01.s01.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b034",
+              "type": "narration",
+              "text": "He stops breathing for a moment.",
+              "html": "He stops breathing for a moment.",
+              "stage": {
+                "beatId": "ch01.s01.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b035",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Primes.",
+              "html": "Primes.",
+              "stage": {
+                "beatId": "ch01.s01.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b036",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The gaps between the drifts are primes. In order. And each one a little shorter than the last.",
+              "html": "The gaps between the drifts are primes. In order. And each one a little shorter than the last.",
+              "stage": {
+                "beatId": "ch01.s01.b036",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "aris_standing_alone_observational",
+                "activeCharKey": "aris_thorne",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch01.s01.b037",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Like something ticking down.",
+              "html": "Like something ticking down.",
+              "stage": {
+                "beatId": "ch01.s01.b037",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b038",
+              "type": "narration",
+              "text": "He checks them against everything he can name: the rotation of the ship, the reactor shield cycle, the counter calibration, the cleaning schedule of the vents.",
+              "html": "He checks them against everything he can name: the rotation of the ship, the reactor shield cycle, the counter calibration, the cleaning schedule of the vents.",
+              "stage": {
+                "beatId": "ch01.s01.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b039",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The ship turns every ninety seconds. No. The shield cycles every six days. No. The vents, eleven days. Close. No.",
+              "html": "The ship turns every ninety seconds. No. The shield cycles every six days. No. The vents, eleven days. Close. No.",
+              "stage": {
+                "beatId": "ch01.s01.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b040",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Nothing matches. Nothing natural ticks like this.",
+              "html": "Nothing matches. Nothing natural ticks like this.",
+              "stage": {
+                "beatId": "ch01.s01.b040",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b041",
+              "type": "narration",
+              "text": "He presses both palms flat on the cold console and laughs once, short and ugly.",
+              "html": "He presses both palms flat on the cold console and laughs once, short and ugly.",
+              "stage": {
+                "beatId": "ch01.s01.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b042",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Twenty years I said it. In papers. In meetings. In my own head at three in the morning. A world this finely set has a setter.",
+              "html": "Twenty years I said it. In papers. In meetings. In my own head at three in the morning. A world this finely set has a setter.",
+              "stage": {
+                "beatId": "ch01.s01.b042",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b043",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And a setter leaves fingerprints.",
+              "html": "And a setter leaves fingerprints.",
+              "stage": {
+                "beatId": "ch01.s01.b043",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "happy",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s01.b044",
+              "type": "narration",
+              "text": "He looks at the comm panel. His hand is already on it.",
+              "html": "He looks at the comm panel. His hand is already on it.",
+              "stage": {
+                "beatId": "ch01.s01.b044",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null
+              }
+            },
+            {
+              "id": "ch01.s01.b045",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Vera. Vera, are you up? Of course you're up. I need you to look at something.",
+              "html": "Vera. Vera, are you up? Of course you&#39;re up. I need you to look at something.",
+              "stage": {
+                "beatId": "ch01.s01.b045",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s02",
+          "label": "ch_01_s02",
+          "title": "Bio-Integration Lab, Monday",
+          "locationKey": "bio_integration_lab",
+          "bgPath": "images/bg bio_integration_lab_morning.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s02.b001",
+              "type": "narration",
+              "text": "The long lab is bright and warm. Green light glows from the incubators. Assay plates shine pale yellow under a hood, and the air smells of agar and warm salt water.",
+              "html": "The long lab is bright and warm. Green light glows from the incubators. Assay plates shine pale yellow under a hood, and the air smells of agar and warm salt water.",
+              "stage": {
+                "beatId": "ch01.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "incubator_fans_bubble_hydroponic"
+              }
+            },
+            {
+              "id": "ch01.s02.b002",
+              "type": "narration",
+              "text": "Racks of sample tubes line the white benches. Along one wall, plants grow in hydroponic trays, their roots trailing in clear water.",
+              "html": "Racks of sample tubes line the white benches. Along one wall, plants grow in hydroponic trays, their roots trailing in clear water.",
+              "stage": {
+                "beatId": "ch01.s02.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s02.b003",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b004",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Two, three, five, seven, eleven, thirteen, seventeen, nineteen.",
+              "html": "Two, three, five, seven, eleven, thirteen, seventeen, nineteen.",
+              "stage": {
+                "beatId": "ch01.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s02.b005",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Morning to you too, Aris.",
+              "html": "Morning to you too, Aris.",
+              "stage": {
+                "beatId": "ch01.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b006",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Two, three, five—",
+              "html": "Two, three, five—",
+              "stage": {
+                "beatId": "ch01.s02.b006",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b007",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I heard you the first time. Spacing of what to what?",
+              "html": "I heard you the first time. Spacing of what to what?",
+              "stage": {
+                "beatId": "ch01.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Interval start to interval start. The gaps between drift episodes follow the primes. It's a signature.",
+              "html": "Interval start to interval start. The gaps between drift episodes follow the primes. It&#39;s a signature.",
+              "stage": {
+                "beatId": "ch01.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b009",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It's a fit to a sparse series.",
+              "html": "It&#39;s a fit to a sparse series.",
+              "stage": {
+                "beatId": "ch01.s02.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b010",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Vera—",
+              "html": "Vera—",
+              "stage": {
+                "beatId": "ch01.s02.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b011",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "You fed eleven years of counts to a sequence checker until the sequence checker found a sequence. How many periods are hiding in eleven years of daily data?",
+              "html": "You fed eleven years of counts to a sequence checker until the sequence checker found a sequence. How many periods are hiding in eleven years of daily data?",
+              "stage": {
+                "beatId": "ch01.s02.b011",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "surprised",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch01.s02.b012",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That isn't the—",
+              "html": "That isn&#39;t the—",
+              "stage": {
+                "beatId": "ch01.s02.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b013",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A lot, Aris. You found the one you went looking for.",
+              "html": "A lot, Aris. You found the one you went looking for.",
+              "stage": {
+                "beatId": "ch01.s02.b013",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b014",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You're not listening.",
+              "html": "You&#39;re not listening.",
+              "stage": {
+                "beatId": "ch01.s02.b014",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "angry",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s02.b015",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I'm listening perfectly.",
+              "html": "I&#39;m listening perfectly.",
+              "stage": {
+                "beatId": "ch01.s02.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b016",
+              "type": "narration",
+              "text": "She sets the pipette down and turns. Her stained hands rest on the bench. The stains have not come off in twenty years.",
+              "html": "She sets the pipette down and turns. Her stained hands rest on the bench. The stains have not come off in twenty years.",
+              "stage": {
+                "beatId": "ch01.s02.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b017",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I'm telling you I have my own anomaly. And mine has a mechanism.",
+              "html": "I&#39;m telling you I have my own anomaly. And mine has a mechanism.",
+              "stage": {
+                "beatId": "ch01.s02.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b018",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s02.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b019",
+              "type": "narration",
+              "text": "She swipes the wall. A grid of enzyme curves replaces his face for a moment, then shrinks to share the screen with him.",
+              "html": "She swipes the wall. A grid of enzyme curves replaces his face for a moment, then shrinks to share the screen with him.",
+              "stage": {
+                "beatId": "ch01.s02.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b020",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The eight hydrolases. The enzymes the gene banks use to turn stored food into food. Their curves have been flat for thirty years.",
+              "html": "The eight hydrolases. The enzymes the gene banks use to turn stored food into food. Their curves have been flat for thirty years.",
+              "stage": {
+                "beatId": "ch01.s02.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b021",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Boring.",
+              "html": "Boring.",
+              "stage": {
+                "beatId": "ch01.s02.b021",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b022",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Beautifully boring. I check them every Monday and I'm bored every Monday. It's my favourite part of the week.",
+              "html": "Beautifully boring. I check them every Monday and I&#39;m bored every Monday. It&#39;s my favourite part of the week.",
+              "stage": {
+                "beatId": "ch01.s02.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b023",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "This week three of them speed up. Parts per million. Every replicate.",
+              "html": "This week three of them speed up. Parts per million. Every replicate.",
+              "stage": {
+                "beatId": "ch01.s02.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b024",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That's tiny.",
+              "html": "That&#39;s tiny.",
+              "stage": {
+                "beatId": "ch01.s02.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b025",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It is. And the DNA repair error rate in the tissue bank went up with it. A few more failed proofreads in ten million.",
+              "html": "It is. And the DNA repair error rate in the tissue bank went up with it. A few more failed proofreads in ten million.",
+              "stage": {
+                "beatId": "ch01.s02.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b026",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The kind of thing that takes a century to matter.",
+              "html": "The kind of thing that takes a century to matter.",
+              "stage": {
+                "beatId": "ch01.s02.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b027",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A century isn't what worries me. The slope worries me.",
+              "html": "A century isn&#39;t what worries me. The slope worries me.",
+              "stage": {
+                "beatId": "ch01.s02.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b028",
+              "type": "narration",
+              "text": "She taps the curve. It glows where it bends.",
+              "html": "She taps the curve. It glows where it bends.",
+              "stage": {
+                "beatId": "ch01.s02.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b029",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "If enzyme rates drift, the way molecules hold on to each other is drifting. If that drifts, the forces holding proteins in their folds are drifting.",
+              "html": "If enzyme rates drift, the way molecules hold on to each other is drifting. If that drifts, the forces holding proteins in their folds are drifting.",
+              "stage": {
+                "beatId": "ch01.s02.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b030",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Which means a constant has moved.",
+              "html": "Which means a constant has moved.",
+              "stage": {
+                "beatId": "ch01.s02.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b031",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Which means a constant has moved.",
+              "html": "Which means a constant has moved.",
+              "stage": {
+                "beatId": "ch01.s02.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b032",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Which means someone moved it.",
+              "html": "Which means someone moved it.",
+              "stage": {
+                "beatId": "ch01.s02.b032",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s02.b033",
+              "type": "narration",
+              "text": "She looks at him for a long moment, then picks her pipette back up.",
+              "html": "She looks at him for a long moment, then picks her pipette back up.",
+              "stage": {
+                "beatId": "ch01.s02.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b034",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It means the room changed temperature. Bodies adapt to that. So does software.",
+              "html": "It means the room changed temperature. Bodies adapt to that. So does software.",
+              "stage": {
+                "beatId": "ch01.s02.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b035",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You don't even want to know why?",
+              "html": "You don&#39;t even want to know why?",
+              "stage": {
+                "beatId": "ch01.s02.b035",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b036",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I want to know how far. Why is a luxury for people with time.",
+              "html": "I want to know how far. Why is a luxury for people with time.",
+              "stage": {
+                "beatId": "ch01.s02.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b037",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That's the saddest thing a scientist's ever said to me.",
+              "html": "That&#39;s the saddest thing a scientist&#39;s ever said to me.",
+              "stage": {
+                "beatId": "ch01.s02.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b038",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Then you don't spend enough time with scientists.",
+              "html": "Then you don&#39;t spend enough time with scientists.",
+              "stage": {
+                "beatId": "ch01.s02.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b039",
+              "type": "narration",
+              "text": "She goes back to her plates. Then she stops, pipette in the air.",
+              "html": "She goes back to her plates. Then she stops, pipette in the air.",
+              "stage": {
+                "beatId": "ch01.s02.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b040",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "If the forces are shifting down at the particle level, where would it bite first?",
+              "html": "If the forces are shifting down at the particle level, where would it bite first?",
+              "stage": {
+                "beatId": "ch01.s02.b040",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "thinking",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch01.s02.b041",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The reactor.",
+              "html": "The reactor.",
+              "stage": {
+                "beatId": "ch01.s02.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b042",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The blanket. The lithium. The neutron economy is the most sensitive scale on this ship.",
+              "html": "The blanket. The lithium. The neutron economy is the most sensitive scale on this ship.",
+              "stage": {
+                "beatId": "ch01.s02.b042",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch01.s02.b043",
+              "type": "narration",
+              "text": "She pulls up a feed from the reactor ring. Orange numbers march across the bench screen.",
+              "html": "She pulls up a feed from the reactor ring. Orange numbers march across the bench screen.",
+              "stage": {
+                "beatId": "ch01.s02.b043",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b044",
+              "type": "narration",
+              "text": "A single line, highlighted in orange: LITHIUM-6 CAPTURE CROSS-SECTION: DRIFT +0.0021% (24H). FLAG: UNEXPLAINED.",
+              "html": "A single line, highlighted in orange: LITHIUM-6 CAPTURE CROSS-SECTION: DRIFT +0.0021% (24H). FLAG: UNEXPLAINED.",
+              "stage": {
+                "beatId": "ch01.s02.b044",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "reactor_blanket_telemetry"
+              }
+            },
+            {
+              "id": "ch01.s02.b045",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "There you are.",
+              "html": "There you are.",
+              "stage": {
+                "beatId": "ch01.s02.b045",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s02.b046",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That's the same week. That's the same week, Vera.",
+              "html": "That&#39;s the same week. That&#39;s the same week, Vera.",
+              "stage": {
+                "beatId": "ch01.s02.b046",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s02.b047",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I can see the calendar, Aris.",
+              "html": "I can see the calendar, Aris.",
+              "stage": {
+                "beatId": "ch01.s02.b047",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b048",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s02.b048",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b049",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The enzymes, the decay rate, the blanket. Three scales that have never agreed on anything. All moving together.",
+              "html": "The enzymes, the decay rate, the blanket. Three scales that have never agreed on anything. All moving together.",
+              "stage": {
+                "beatId": "ch01.s02.b049",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b050",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Now do you want to know why?",
+              "html": "Now do you want to know why?",
+              "stage": {
+                "beatId": "ch01.s02.b050",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b051",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Do me a favour. Don't tell anyone about the primes until I've measured how big this is.",
+              "html": "Do me a favour. Don&#39;t tell anyone about the primes until I&#39;ve measured how big this is.",
+              "stage": {
+                "beatId": "ch01.s02.b051",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "worried",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch01.s02.b052",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You'll want to see the full trace.",
+              "html": "You&#39;ll want to see the full trace.",
+              "stage": {
+                "beatId": "ch01.s02.b052",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b053",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Aris.",
+              "html": "Aris.",
+              "stage": {
+                "beatId": "ch01.s02.b053",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b054",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I'll send it over.",
+              "html": "I&#39;ll send it over.",
+              "stage": {
+                "beatId": "ch01.s02.b054",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b055",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "That's not what I asked.",
+              "html": "That&#39;s not what I asked.",
+              "stage": {
+                "beatId": "ch01.s02.b055",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b056",
+              "type": "narration",
+              "text": "The wall screen goes dark.",
+              "html": "The wall screen goes dark.",
+              "stage": {
+                "beatId": "ch01.s02.b056",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s03",
+          "label": "ch_01_s03",
+          "title": "Command Node, Monday",
+          "locationKey": "command_node",
+          "bgPath": "images/bg command_node_day.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s03.b001",
+              "type": "narration",
+              "text": "The compact room is deliberately warm and deliberately dim. The great white-line schematic of the Keres fills one wall. Rings 3 and 7 glow amber.",
+              "html": "The compact room is deliberately warm and deliberately dim. The great white-line schematic of the Keres fills one wall. Rings 3 and 7 glow amber.",
+              "stage": {
+                "beatId": "ch01.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "soft_fans_slow_pulse"
+              }
+            },
+            {
+              "id": "ch01.s03.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s03.b002",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b003",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Cortisol in the return air. Ring 3, up fourteen percent on the week. Ring 7, up nineteen.",
+              "html": "Cortisol in the return air. Ring 3, up fourteen percent on the week. Ring 7, up nineteen.",
+              "stage": {
+                "beatId": "ch01.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b004",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Sleep efficiency's down in both, Chief. Corridor loiter time is up. Two hundred metres of Ring 7 have gone quiet on the acoustic monitors.",
+              "html": "Sleep efficiency&#39;s down in both, Chief. Corridor loiter time is up. Two hundred metres of Ring 7 have gone quiet on the acoustic monitors.",
+              "stage": {
+                "beatId": "ch01.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b005",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Quiet because they're whispering.",
+              "html": "Quiet because they&#39;re whispering.",
+              "stage": {
+                "beatId": "ch01.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b006",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "About what?",
+              "html": "About what?",
+              "stage": {
+                "beatId": "ch01.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b007",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Doesn't matter yet. A body knows it's sick long before it can say where it hurts.",
+              "html": "Doesn&#39;t matter yet. A body knows it&#39;s sick long before it can say where it hurts.",
+              "stage": {
+                "beatId": "ch01.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b008",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "The security subsystem calls it early civil disorder. It recommends a visible patrol.",
+              "html": "The security subsystem calls it early civil disorder. It recommends a visible patrol.",
+              "stage": {
+                "beatId": "ch01.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b009",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Decline it.",
+              "html": "Decline it.",
+              "stage": {
+                "beatId": "ch01.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b010",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Chief?",
+              "html": "Chief?",
+              "stage": {
+                "beatId": "ch01.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b011",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "A patrol is a signal of threat. Threat raises cortisol. Cortisol raises aggression. You don't put out a fever by heating the room.",
+              "html": "A patrol is a signal of threat. Threat raises cortisol. Cortisol raises aggression. You don&#39;t put out a fever by heating the room.",
+              "stage": {
+                "beatId": "ch01.s03.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b012",
+              "type": "narration",
+              "text": "He pulls the environmental map up over the schematic. Pressures, vent flows and light bands shimmer across the rings.",
+              "html": "He pulls the environmental map up over the schematic. Pressures, vent flows and light bands shimmer across the rings.",
+              "stage": {
+                "beatId": "ch01.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b013",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Rings 3 and 7. Raise ambient pressure by one and a half percent.",
+              "html": "Rings 3 and 7. Raise ambient pressure by one and a half percent.",
+              "stage": {
+                "beatId": "ch01.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b014",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Slow the light cycle. Stretch the evening band by forty minutes. Cool the spectrum down toward four-eighty nanometres.",
+              "html": "Slow the light cycle. Stretch the evening band by forty minutes. Cool the spectrum down toward four-eighty nanometres.",
+              "stage": {
+                "beatId": "ch01.s03.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b015",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "The blue, then?",
+              "html": "The blue, then?",
+              "stage": {
+                "beatId": "ch01.s03.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b016",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The blue for 7. Move the agricultural vents so Ring 3 gets the lavender banks.",
+              "html": "The blue for 7. Move the agricultural vents so Ring 3 gets the lavender banks.",
+              "stage": {
+                "beatId": "ch01.s03.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b017",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "And bring up the oxytocin analog. Low draw. We already carry the stock.",
+              "html": "And bring up the oxytocin analog. Low draw. We already carry the stock.",
+              "stage": {
+                "beatId": "ch01.s03.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b018",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "The subsystem says—",
+              "html": "The subsystem says—",
+              "stage": {
+                "beatId": "ch01.s03.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b019",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The subsystem says punish. I say modulate.",
+              "html": "The subsystem says punish. I say modulate.",
+              "stage": {
+                "beatId": "ch01.s03.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b020",
+              "type": "narration",
+              "text": "He watches the amber on the schematic.",
+              "html": "He watches the amber on the schematic.",
+              "stage": {
+                "beatId": "ch01.s03.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b021",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The rings are inflamed. It's an immune response, not a crime. We bring the swelling down. If it's still hot tomorrow, I cool the light further.",
+              "html": "The rings are inflamed. It&#39;s an immune response, not a crime. We bring the swelling down. If it&#39;s still hot tomorrow, I cool the light further.",
+              "stage": {
+                "beatId": "ch01.s03.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b022",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I don't send in sticks.",
+              "html": "I don&#39;t send in sticks.",
+              "stage": {
+                "beatId": "ch01.s03.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b023",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s03.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b024",
+              "type": "narration",
+              "text": "On the map, Ring 3's corridors turn soft lilac. On a corridor camera, a crowd that stood shoulder to shoulder drifts, without knowing why, a little apart.",
+              "html": "On the map, Ring 3&#39;s corridors turn soft lilac. On a corridor camera, a crowd that stood shoulder to shoulder drifts, without knowing why, a little apart.",
+              "stage": {
+                "beatId": "ch01.s03.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b025",
+              "type": "narration",
+              "text": "A man sets down a bag he has been gripping. A woman sits on a bench and rubs her eyes.",
+              "html": "A man sets down a bag he has been gripping. A woman sits on a bench and rubs her eyes.",
+              "stage": {
+                "beatId": "ch01.s03.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b026",
+              "type": "narration",
+              "text": "The cortisol curve bends.",
+              "html": "The cortisol curve bends.",
+              "stage": {
+                "beatId": "ch01.s03.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b027",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "It's working.",
+              "html": "It&#39;s working.",
+              "stage": {
+                "beatId": "ch01.s03.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b028",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Hours. Not days.",
+              "html": "Hours. Not days.",
+              "stage": {
+                "beatId": "ch01.s03.b028",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "thinking",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch01.s03.b029",
+              "type": "narration",
+              "text": "He checks the chem-bank reservoir. It has dropped four percent in one watch.",
+              "html": "He checks the chem-bank reservoir. It has dropped four percent in one watch.",
+              "stage": {
+                "beatId": "ch01.s03.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b030",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Log the reservoir draw. Every hour.",
+              "html": "Log the reservoir draw. Every hour.",
+              "stage": {
+                "beatId": "ch01.s03.b030",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b031",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "It's in the automatic logs, Chief.",
+              "html": "It&#39;s in the automatic logs, Chief.",
+              "stage": {
+                "beatId": "ch01.s03.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b032",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Log it by hand. A number I write down is a number I can't pretend I didn't choose.",
+              "html": "Log it by hand. A number I write down is a number I can&#39;t pretend I didn&#39;t choose.",
+              "stage": {
+                "beatId": "ch01.s03.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b033",
+              "type": "narration",
+              "text": "He looks at the curve again. Something about it is wrong in a way he cannot name.",
+              "html": "He looks at the curve again. Something about it is wrong in a way he cannot name.",
+              "stage": {
+                "beatId": "ch01.s03.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b034",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Thirty years I've read this chemistry. It has never once lied to me.",
+              "html": "Thirty years I&#39;ve read this chemistry. It has never once lied to me.",
+              "stage": {
+                "beatId": "ch01.s03.b034",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "angry",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s03.b035",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Is it lying now?",
+              "html": "Is it lying now?",
+              "stage": {
+                "beatId": "ch01.s03.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b036",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "No. It's just reading back like it was worked out in a room a quarter percent off from mine.",
+              "html": "No. It&#39;s just reading back like it was worked out in a room a quarter percent off from mine.",
+              "stage": {
+                "beatId": "ch01.s03.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s03.b037",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Chief. Reactor reports a neutron flux anomaly.",
+              "html": "Chief. Reactor reports a neutron flux anomaly.",
+              "stage": {
+                "beatId": "ch01.s03.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": "two_tone_alert_reactor",
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b038",
+              "type": "narration",
+              "text": "Kaelen closes his eyes.",
+              "html": "Kaelen closes his eyes.",
+              "stage": {
+                "beatId": "ch01.s03.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b039",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Of course it does.",
+              "html": "Of course it does.",
+              "stage": {
+                "beatId": "ch01.s03.b039",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch01.s03.b040",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Tell them to log it. And tell the physics office I want a plain answer by end of watch. Not a paper.",
+              "html": "Tell them to log it. And tell the physics office I want a plain answer by end of watch. Not a paper.",
+              "stage": {
+                "beatId": "ch01.s03.b040",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b041",
+              "type": "narration",
+              "text": "He moves the lavender markers one ring inward and does not look at the reactor line again.",
+              "html": "He moves the lavender markers one ring inward and does not look at the reactor line again.",
+              "stage": {
+                "beatId": "ch01.s03.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b042",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "By end of watch.",
+              "html": "By end of watch.",
+              "stage": {
+                "beatId": "ch01.s03.b042",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "sad"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s04",
+          "label": "ch_01_s04",
+          "title": "Observational Core, Monday",
+          "locationKey": "observational_core",
+          "bgPath": "images/bg observational_core_night.webp",
+          "transition": "fade",
+          "pause": 1,
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s04.b001",
+              "type": "narration",
+              "text": "The chamber is darker than in the morning. The decay curves have been replaced by one long trace and a column of primes running down the black glass.",
+              "html": "The chamber is darker than in the morning. The decay curves have been replaced by one long trace and a column of primes running down the black glass.",
+              "stage": {
+                "beatId": "ch01.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "low_hum_life_support"
+              }
+            },
+            {
+              "id": "ch01.s04.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s04.b002",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b003",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Two, three, five, seven, eleven, thirteen, seventeen, nineteen.",
+              "html": "Two, three, five, seven, eleven, thirteen, seventeen, nineteen.",
+              "stage": {
+                "beatId": "ch01.s04.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b004",
+              "type": "narration",
+              "text": "A message from Vera blinks on the slate: DON'T POST IT YET. I MEAN IT.",
+              "html": "A message from Vera blinks on the slate: DON&#39;T POST IT YET. I MEAN IT.",
+              "stage": {
+                "beatId": "ch01.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b005",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "She means it.",
+              "html": "She means it.",
+              "stage": {
+                "beatId": "ch01.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b006",
+              "type": "narration",
+              "text": "He sets the slate down. Then picks it up again.",
+              "html": "He sets the slate down. Then picks it up again.",
+              "stage": {
+                "beatId": "ch01.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b007",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Physics office wants a plain answer by end of watch. The Chief wants a plain answer.",
+              "html": "Physics office wants a plain answer by end of watch. The Chief wants a plain answer.",
+              "stage": {
+                "beatId": "ch01.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Plain. As if it were plain.",
+              "html": "Plain. As if it were plain.",
+              "stage": {
+                "beatId": "ch01.s04.b008",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "angry",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s04.b009",
+              "type": "narration",
+              "text": "He files the analysis in the physics office log, with his confidence intervals attached, the way the regulations say.",
+              "html": "He files the analysis in the physics office log, with his confidence intervals attached, the way the regulations say.",
+              "stage": {
+                "beatId": "ch01.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b010",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Filed. Correct. Proper. Nobody reads the physics log.",
+              "html": "Filed. Correct. Proper. Nobody reads the physics log.",
+              "stage": {
+                "beatId": "ch01.s04.b010",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b011",
+              "type": "narration",
+              "text": "Then he opens the ship-wide board. Thousands of names glow in a list, the chatter of a normal Monday: a hydroponics swap, a choir rehearsal, a lost cat on Ring 4.",
+              "html": "Then he opens the ship-wide board. Thousands of names glow in a list, the chatter of a normal Monday: a hydroponics swap, a choir rehearsal, a lost cat on Ring 4.",
+              "stage": {
+                "beatId": "ch01.s04.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b012",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "They have a right to know someone is out there.",
+              "html": "They have a right to know someone is out there.",
+              "stage": {
+                "beatId": "ch01.s04.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b013",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Or they have a right to know I think so.",
+              "html": "Or they have a right to know I think so.",
+              "stage": {
+                "beatId": "ch01.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b014",
+              "type": "narration",
+              "text": "His thumb hovers over the screen.",
+              "html": "His thumb hovers over the screen.",
+              "stage": {
+                "beatId": "ch01.s04.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b015",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s04.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b016",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Eleven years of data. Twelve channels. Prime gaps, shrinking.",
+              "html": "Eleven years of data. Twelve channels. Prime gaps, shrinking.",
+              "stage": {
+                "beatId": "ch01.s04.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b017",
+              "type": "narration",
+              "text": "He types a title. Deletes it. Types another.",
+              "html": "He types a title. Deletes it. Types another.",
+              "stage": {
+                "beatId": "ch01.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b018",
+              "type": "narration",
+              "text": "The title reads: THE CONSTANTS ARE BEING EDITED. THE GAPS ARE PRIME. SOMEONE IS WRITING TO US.",
+              "html": "The title reads: THE CONSTANTS ARE BEING EDITED. THE GAPS ARE PRIME. SOMEONE IS WRITING TO US.",
+              "stage": {
+                "beatId": "ch01.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "aris_post_ship_wide"
+              }
+            },
+            {
+              "id": "ch01.s04.b019",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Patch notes. That's all they are. Somebody's patch notes.",
+              "html": "Patch notes. That&#39;s all they are. Somebody&#39;s patch notes.",
+              "stage": {
+                "beatId": "ch01.s04.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b020",
+              "type": "narration",
+              "text": "He presses send.",
+              "html": "He presses send.",
+              "stage": {
+                "beatId": "ch01.s04.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b021",
+              "type": "narration",
+              "text": "For one second nothing happens. Then the first reply appears under his post. Then ten. Then a hundred, faster than he can read them.",
+              "html": "For one second nothing happens. Then the first reply appears under his post. Then ten. Then a hundred, faster than he can read them.",
+              "stage": {
+                "beatId": "ch01.s04.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": "soft_click_message_going",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b022",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "There. Now someone has to answer.",
+              "html": "There. Now someone has to answer.",
+              "stage": {
+                "beatId": "ch01.s04.b022",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "surprised"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": "ch_02"
+    },
+    {
+      "id": "chapter_2",
+      "label": "ch_02",
+      "number": 2,
+      "title": "Patch Faithful",
+      "music": "music_02",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch02.s01",
+          "label": "ch_02_s01",
+          "title": "Concourse, Tuesday",
+          "locationKey": "concourse",
+          "bgPath": "images/bg concourse_morning.webp",
+          "transition": "dissolve",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s01.b001",
+              "type": "narration",
+              "text": "The great curved promenade is three storeys of shop fronts and benches. Overhead, far across the cylinder, the hanging gardens of the other side hang upside down in the morning light.",
+              "html": "The great curved promenade is three storeys of shop fronts and benches. Overhead, far across the cylinder, the hanging gardens of the other side hang upside down in the morning light.",
+              "stage": {
+                "beatId": "ch02.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "murmur_crowded_promenade_footsteps"
+              }
+            },
+            {
+              "id": "ch02.s01.b002",
+              "type": "narration",
+              "text": "Every display along the concourse shows the same thing: a column of primes and a curve of decay counts, shrinking like a fuse.",
+              "html": "Every display along the concourse shows the same thing: a column of primes and a curve of decay counts, shrinking like a fuse.",
+              "stage": {
+                "beatId": "ch02.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b004",
+              "type": "narration",
+              "text": "He stands in the galley line with a tray of reconstituted protein. People around him are not looking at their food. They are looking at the screens.",
+              "html": "He stands in the galley line with a tray of reconstituted protein. People around him are not looking at their food. They are looking at the screens.",
+              "stage": {
+                "beatId": "ch02.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b005",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Four hours of sleep. Four hours. What happened in four hours?",
+              "html": "Four hours of sleep. Four hours. What happened in four hours?",
+              "stage": {
+                "beatId": "ch02.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b006",
+              "type": "narration",
+              "text": "His slate buzzes in his pocket. Then again. Then it does not stop.",
+              "html": "His slate buzzes in his pocket. Then again. Then it does not stop.",
+              "stage": {
+                "beatId": "ch02.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b007",
+              "type": "narration",
+              "text": "He pulls it out. The physics office log entry he filed last night sits at the top of the ship's feed, with a number beside it.",
+              "html": "He pulls it out. The physics office log entry he filed last night sits at the top of the ship&#39;s feed, with a number beside it.",
+              "stage": {
+                "beatId": "ch02.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Eleven thousand forwards.",
+              "html": "Eleven thousand forwards.",
+              "stage": {
+                "beatId": "ch02.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b009",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The physics feed. Every terminal that ever subscribed gets a copy. Nobody has unsubscribed from the physics feed in forty years.",
+              "html": "The physics feed. Every terminal that ever subscribed gets a copy. Nobody has unsubscribed from the physics feed in forty years.",
+              "stage": {
+                "beatId": "ch02.s01.b009",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch02.s01.b010",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And the board post on top of it. Of course.",
+              "html": "And the board post on top of it. Of course.",
+              "stage": {
+                "beatId": "ch02.s01.b010",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b011",
+              "type": "narration",
+              "text": "Two places ahead of him, a woman in a grey work smock speaks to no one in particular.",
+              "html": "Two places ahead of him, a woman in a grey work smock speaks to no one in particular.",
+              "stage": {
+                "beatId": "ch02.s01.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b012",
+              "type": "line",
+              "speaker": "woman_in_line",
+              "speakerLabel": "WOMAN IN LINE",
+              "text": "They're counting down.",
+              "html": "They&#39;re counting down.",
+              "stage": {
+                "beatId": "ch02.s01.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "woman_in_line",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b013",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Who is?",
+              "html": "Who is?",
+              "stage": {
+                "beatId": "ch02.s01.b013",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch02.s01.b014",
+              "type": "line",
+              "speaker": "woman_in_line",
+              "speakerLabel": "WOMAN IN LINE",
+              "text": "Whoever wrote us. Haven't you seen it? It's on every wall.",
+              "html": "Whoever wrote us. Haven&#39;t you seen it? It&#39;s on every wall.",
+              "stage": {
+                "beatId": "ch02.s01.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "woman_in_line",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b015",
+              "type": "narration",
+              "text": "She points at the screen. Aris's own name sits at the bottom of the post, small and white.",
+              "html": "She points at the screen. Aris&#39;s own name sits at the bottom of the post, small and white.",
+              "stage": {
+                "beatId": "ch02.s01.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b016",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I've seen it.",
+              "html": "I&#39;ve seen it.",
+              "stage": {
+                "beatId": "ch02.s01.b016",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch02.s01.b017",
+              "type": "line",
+              "speaker": "woman_in_line",
+              "speakerLabel": "WOMAN IN LINE",
+              "text": "My mother always said the numbers were set by a hand. The Programmer's hand. Nobody believed her.",
+              "html": "My mother always said the numbers were set by a hand. The Programmer&#39;s hand. Nobody believed her.",
+              "stage": {
+                "beatId": "ch02.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "woman_in_line",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b018",
+              "type": "line",
+              "speaker": "woman_in_line",
+              "speakerLabel": "WOMAN IN LINE",
+              "text": "Now there's proof. With error bars.",
+              "html": "Now there&#39;s proof. With error bars.",
+              "stage": {
+                "beatId": "ch02.s01.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "woman_in_line",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch02.s01.b019",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Confidence intervals.",
+              "html": "Confidence intervals.",
+              "stage": {
+                "beatId": "ch02.s01.b019",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b020",
+              "type": "line",
+              "speaker": "woman_in_line",
+              "speakerLabel": "WOMAN IN LINE",
+              "text": "What?",
+              "html": "What?",
+              "stage": {
+                "beatId": "ch02.s01.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "woman_in_line",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b021",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Nothing. They're called confidence intervals.",
+              "html": "Nothing. They&#39;re called confidence intervals.",
+              "stage": {
+                "beatId": "ch02.s01.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b022",
+              "type": "narration",
+              "text": "On the far wall someone has already painted a symbol: a square bracket, open, and a column of primes inside it. The paint is still wet.",
+              "html": "On the far wall someone has already painted a symbol: a square bracket, open, and a column of primes inside it. The paint is still wet.",
+              "stage": {
+                "beatId": "ch02.s01.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b023",
+              "type": "line",
+              "speaker": "woman_in_line",
+              "speakerLabel": "WOMAN IN LINE",
+              "text": "The Faithful are going to the Core. All of them. You should come.",
+              "html": "The Faithful are going to the Core. All of them. You should come.",
+              "stage": {
+                "beatId": "ch02.s01.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "woman_in_line",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b024",
+              "type": "narration",
+              "text": "She leaves her tray on the counter and walks away. Three people behind her leave theirs too.",
+              "html": "She leaves her tray on the counter and walks away. Three people behind her leave theirs too.",
+              "stage": {
+                "beatId": "ch02.s01.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b025",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s01.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b026",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The Patch Faithful.",
+              "html": "The Patch Faithful.",
+              "stage": {
+                "beatId": "ch02.s01.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b027",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "A few hundred people who pray to the constants on Ring 5. A nuisance to the Command Node. A comfort to each other.",
+              "html": "A few hundred people who pray to the constants on Ring 5. A nuisance to the Command Node. A comfort to each other.",
+              "stage": {
+                "beatId": "ch02.s01.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b028",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Twenty years they've had their prayers. Now they have my confidence intervals.",
+              "html": "Twenty years they&#39;ve had their prayers. Now they have my confidence intervals.",
+              "stage": {
+                "beatId": "ch02.s01.b028",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "happy",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "happy"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s02",
+          "label": "ch_02_s02",
+          "title": "AI Core, Tuesday",
+          "locationKey": "ai_core",
+          "bgPath": "images/bg ai_core_afternoon.webp",
+          "transition": "fade",
+          "pause": 1,
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s02.b001",
+              "type": "narration",
+              "text": "The tall steel bulkhead of the AI Core rises over the plaza, its round blue-white eye unblinking. Behind it, three centuries of rules: rations, air, births, disputes. Not a mind. A rulebook. The nearest thing the Keres has to a throne.",
+              "html": "The tall steel bulkhead of the AI Core rises over the plaza, its round blue-white eye unblinking. Behind it, three centuries of rules: rations, air, births, disputes. Not a mind. A rulebook. The nearest thing the Keres has to a throne.",
+              "stage": {
+                "beatId": "ch02.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "low_sustained_murmur_many"
+              }
+            },
+            {
+              "id": "ch02.s02.b002",
+              "type": "narration",
+              "text": "Banners in hand-painted letters hang from the railings. Candles line the floor in uneven rows.",
+              "html": "Banners in hand-painted letters hang from the railings. Candles line the floor in uneven rows.",
+              "stage": {
+                "beatId": "ch02.s02.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b003",
+              "type": "narration",
+              "text": "Three thousand people fill the plaza and spill back up the concourse. They are not shouting. They are swaying, and humming, and waiting.",
+              "html": "Three thousand people fill the plaza and spill back up the concourse. They are not shouting. They are swaying, and humming, and waiting.",
+              "stage": {
+                "beatId": "ch02.s02.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b004",
+              "type": "narration",
+              "text": "A banner across the front reads, in red paint: GIVE THE SHIP TO THE ONE WHO WROTE IT.",
+              "html": "A banner across the front reads, in red paint: GIVE THE SHIP TO THE ONE WHO WROTE IT.",
+              "stage": {
+                "beatId": "ch02.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "patch_faithful_filling_plaza"
+              }
+            },
+            {
+              "id": "ch02.s02.b005",
+              "type": "narration",
+              "text": "Voices rise in the crowd, a chant soft as breathing.",
+              "html": "Voices rise in the crowd, a chant soft as breathing.",
+              "stage": {
+                "beatId": "ch02.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b006",
+              "type": "line",
+              "speaker": "voice_in_the_crowd",
+              "speakerLabel": "VOICE IN THE CROWD",
+              "text": "Two. Three. Five. Seven.",
+              "html": "Two. Three. Five. Seven.",
+              "stage": {
+                "beatId": "ch02.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "voice_in_the_crowd",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b007",
+              "type": "line",
+              "speaker": "voices_in_the_crowd",
+              "speakerLabel": "VOICES IN THE CROWD",
+              "text": "Eleven. Thirteen. Seventeen. Nineteen.",
+              "html": "Eleven. Thirteen. Seventeen. Nineteen.",
+              "stage": {
+                "beatId": "ch02.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "voices_in_the_crowd",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b008",
+              "type": "line",
+              "speaker": "voice_in_the_crowd",
+              "speakerLabel": "VOICE IN THE CROWD",
+              "text": "Open the Core. Let the Programmer speak through it.",
+              "html": "Open the Core. Let the Programmer speak through it.",
+              "stage": {
+                "beatId": "ch02.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "voice_in_the_crowd",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b009",
+              "type": "line",
+              "speaker": "voices_in_the_crowd",
+              "speakerLabel": "VOICES IN THE CROWD",
+              "text": "Two. Three. Five. Seven.",
+              "html": "Two. Three. Five. Seven.",
+              "stage": {
+                "beatId": "ch02.s02.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "voices_in_the_crowd",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s03",
+          "label": "ch_02_s03",
+          "title": "Command Node, Tuesday",
+          "locationKey": "command_node",
+          "bgPath": "images/bg command_node_afternoon.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s03.b001",
+              "type": "narration",
+              "text": "The schematic of the Keres glows on the wall. The forward spindle, where the AI Core sits, has gone from green to a deep amber. Cold tea stands untouched on the long table.",
+              "html": "The schematic of the Keres glows on the wall. The forward spindle, where the AI Core sits, has gone from green to a deep amber. Cold tea stands untouched on the long table.",
+              "stage": {
+                "beatId": "ch02.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "soft_fans_pulse_status"
+              }
+            },
+            {
+              "id": "ch02.s03.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s03.b002",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b003",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Listen to them.",
+              "html": "Listen to them.",
+              "stage": {
+                "beatId": "ch02.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b004",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "I am listening, Chief. Three thousand at the Core doors and more coming down the spindle.",
+              "html": "I am listening, Chief. Three thousand at the Core doors and more coming down the spindle.",
+              "stage": {
+                "beatId": "ch02.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b005",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Listen to the band. Low. Broad. That's prayer, not shouting.",
+              "html": "Listen to the band. Low. Broad. That&#39;s prayer, not shouting.",
+              "stage": {
+                "beatId": "ch02.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b006",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Cortisol's up around the Core.",
+              "html": "Cortisol&#39;s up around the Core.",
+              "stage": {
+                "beatId": "ch02.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b007",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Up. Not spiking. They aren't angry.",
+              "html": "Up. Not spiking. They aren&#39;t angry.",
+              "stage": {
+                "beatId": "ch02.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b008",
+              "type": "narration",
+              "text": "He leans closer to the feed. In the candlelight, the faces are wet-eyed and bright.",
+              "html": "He leans closer to the feed. In the candlelight, the faces are wet-eyed and bright.",
+              "stage": {
+                "beatId": "ch02.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b009",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "They're hopeful. That's worse.",
+              "html": "They&#39;re hopeful. That&#39;s worse.",
+              "stage": {
+                "beatId": "ch02.s03.b009",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "thinking",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch02.s03.b010",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Worse?",
+              "html": "Worse?",
+              "stage": {
+                "beatId": "ch02.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b011",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Anger burns out. Fear burns out. Hope doesn't deplete. Hope compounds.",
+              "html": "Anger burns out. Fear burns out. Hope doesn&#39;t deplete. Hope compounds.",
+              "stage": {
+                "beatId": "ch02.s03.b011",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b012",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Standard containment says a visible patrol at the Core doors. Barriers at the spindle.",
+              "html": "Standard containment says a visible patrol at the Core doors. Barriers at the spindle.",
+              "stage": {
+                "beatId": "ch02.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b013",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "No patrol.",
+              "html": "No patrol.",
+              "stage": {
+                "beatId": "ch02.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b014",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Chief, if they breach the Core—",
+              "html": "Chief, if they breach the Core—",
+              "stage": {
+                "beatId": "ch02.s03.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b015",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "They won't. They aren't here to break anything.",
+              "html": "They won&#39;t. They aren&#39;t here to break anything.",
+              "stage": {
+                "beatId": "ch02.s03.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b016",
+              "type": "narration",
+              "text": "He uncrosses his arms and pulls the environmental map across the schematic.",
+              "html": "He uncrosses his arms and pulls the environmental map across the schematic.",
+              "stage": {
+                "beatId": "ch02.s03.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b017",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Somebody handed them a countdown. Now they need something to do with their hands. You don't answer that with sticks.",
+              "html": "Somebody handed them a countdown. Now they need something to do with their hands. You don&#39;t answer that with sticks.",
+              "stage": {
+                "beatId": "ch02.s03.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b018",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "You answer it with chemistry. And light.",
+              "html": "You answer it with chemistry. And light.",
+              "stage": {
+                "beatId": "ch02.s03.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b019",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s03.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b020",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Oxytocin analog into the Core concourse. The in-group blend. Make them feel like a congregation, warm to each other.",
+              "html": "Oxytocin analog into the Core concourse. The in-group blend. Make them feel like a congregation, warm to each other.",
+              "stage": {
+                "beatId": "ch02.s03.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b021",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Warm to each other is how mobs start.",
+              "html": "Warm to each other is how mobs start.",
+              "stage": {
+                "beatId": "ch02.s03.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b022",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Warm to each other is how families start. Mobs start cold.",
+              "html": "Warm to each other is how families start. Mobs start cold.",
+              "stage": {
+                "beatId": "ch02.s03.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b023",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Lights down. Shift the spectrum to four-eighty nanometres. Hard blue.",
+              "html": "Lights down. Shift the spectrum to four-eighty nanometres. Hard blue.",
+              "stage": {
+                "beatId": "ch02.s03.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b024",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "The band they use in elder care.",
+              "html": "The band they use in elder care.",
+              "stage": {
+                "beatId": "ch02.s03.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b025",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The band that slows the agitated and deepens their sleep. Decades of our own data say it works.",
+              "html": "The band that slows the agitated and deepens their sleep. Decades of our own data say it works.",
+              "stage": {
+                "beatId": "ch02.s03.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b026",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "And open the agricultural vents. I want the hydroponics bays up that concourse. Grass. Green. Ordinary.",
+              "html": "And open the agricultural vents. I want the hydroponics bays up that concourse. Grass. Green. Ordinary.",
+              "stage": {
+                "beatId": "ch02.s03.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b027",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Ordinary?",
+              "html": "Ordinary?",
+              "stage": {
+                "beatId": "ch02.s03.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b028",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Nobody storms a door smelling cut grass. They think of picnics.",
+              "html": "Nobody storms a door smelling cut grass. They think of picnics.",
+              "stage": {
+                "beatId": "ch02.s03.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b029",
+              "type": "narration",
+              "text": "The watch officer makes the changes. On the feed, the candlelit plaza turns blue.",
+              "html": "The watch officer makes the changes. On the feed, the candlelit plaza turns blue.",
+              "stage": {
+                "beatId": "ch02.s03.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b030",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s03.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b031",
+              "type": "narration",
+              "text": "The crowd does not leave. But it softens. The chant slows. Voices drop to a hum, low and steady, three thousand people swaying together.",
+              "html": "The crowd does not leave. But it softens. The chant slows. Voices drop to a hum, low and steady, three thousand people swaying together.",
+              "stage": {
+                "beatId": "ch02.s03.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b032",
+              "type": "narration",
+              "text": "At the front, a man who was pressing his palms to the steel bulkhead lets his hands fall and sits down on the deck.",
+              "html": "At the front, a man who was pressing his palms to the steel bulkhead lets his hands fall and sits down on the deck.",
+              "stage": {
+                "beatId": "ch02.s03.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b033",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "There. Inflammation down.",
+              "html": "There. Inflammation down.",
+              "stage": {
+                "beatId": "ch02.s03.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b034",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "No one at the doors, Chief.",
+              "html": "No one at the doors, Chief.",
+              "stage": {
+                "beatId": "ch02.s03.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b035",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Hours. Not days.",
+              "html": "Hours. Not days.",
+              "stage": {
+                "beatId": "ch02.s03.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b036",
+              "type": "narration",
+              "text": "He checks the chem-bank reservoir. His jaw tightens.",
+              "html": "He checks the chem-bank reservoir. His jaw tightens.",
+              "stage": {
+                "beatId": "ch02.s03.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b037",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Eleven percent gone in one watch. And I haven't touched the lavender.",
+              "html": "Eleven percent gone in one watch. And I haven&#39;t touched the lavender.",
+              "stage": {
+                "beatId": "ch02.s03.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b038",
+              "type": "narration",
+              "text": "He writes the number by hand on the table's surface, in plain digits, under yesterday's four.",
+              "html": "He writes the number by hand on the table&#39;s surface, in plain digits, under yesterday&#39;s four.",
+              "stage": {
+                "beatId": "ch02.s03.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b039",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Chief. Reactor office. The neutron multiplication factor is falling.",
+              "html": "Chief. Reactor office. The neutron multiplication factor is falling.",
+              "stage": {
+                "beatId": "ch02.s03.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b040",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I know. I read the same telemetry you do.",
+              "html": "I know. I read the same telemetry you do.",
+              "stage": {
+                "beatId": "ch02.s03.b040",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b041",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Call Vera Lin to the Command Node. Tell her it isn't a drill and it isn't a paper.",
+              "html": "Call Vera Lin to the Command Node. Tell her it isn&#39;t a drill and it isn&#39;t a paper.",
+              "stage": {
+                "beatId": "ch02.s03.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b042",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Tell her the fire's in the walls this time.",
+              "html": "Tell her the fire&#39;s in the walls this time.",
+              "stage": {
+                "beatId": "ch02.s03.b042",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "sad"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s04",
+          "label": "ch_02_s04",
+          "title": "Reactor Ring, Tuesday",
+          "locationKey": "reactor_ring",
+          "bgPath": "images/bg reactor_ring_evening.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s04.b001",
+              "type": "narration",
+              "text": "The curving corridor rises out of sight in both directions. Amber warning stripes run along the grey shielding walls. Through the narrow viewport, the reactor glows a deep, patient orange.",
+              "html": "The curving corridor rises out of sight in both directions. Amber warning stripes run along the grey shielding walls. Through the narrow viewport, the reactor glows a deep, patient orange.",
+              "stage": {
+                "beatId": "ch02.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "deep_hum_reactor_through"
+              }
+            },
+            {
+              "id": "ch02.s04.b002",
+              "type": "narration",
+              "text": "Vera has dragged a lab stool here and surrounded herself with screens: four of reactor telemetry, one of her own enzyme models. Three empty stimulant wrappers lie by her feet.",
+              "html": "Vera has dragged a lab stool here and surrounded herself with screens: four of reactor telemetry, one of her own enzyme models. Three empty stimulant wrappers lie by her feet.",
+              "stage": {
+                "beatId": "ch02.s04.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s04.b003",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b004",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Three watches awake. Hands steady. Mostly.",
+              "html": "Three watches awake. Hands steady. Mostly.",
+              "stage": {
+                "beatId": "ch02.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b005",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "You two are telling me the same story from opposite ends.",
+              "html": "You two are telling me the same story from opposite ends.",
+              "stage": {
+                "beatId": "ch02.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b006",
+              "type": "narration",
+              "text": "She drags the enzyme curve over the reactor curve. They lie on top of each other almost perfectly.",
+              "html": "She drags the enzyme curve over the reactor curve. They lie on top of each other almost perfectly.",
+              "stage": {
+                "beatId": "ch02.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b007",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Same slope. Same week.",
+              "html": "Same slope. Same week.",
+              "stage": {
+                "beatId": "ch02.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b008",
+              "type": "narration",
+              "text": "The orange line reads: NEUTRON MULTIPLICATION (BERYLLIUM): -0.0040% AND FALLING. TRITIUM BREEDING RATIO: 1.0812, TREND DOWN.",
+              "html": "The orange line reads: NEUTRON MULTIPLICATION (BERYLLIUM): -0.0040% AND FALLING. TRITIUM BREEDING RATIO: 1.0812, TREND DOWN.",
+              "stage": {
+                "beatId": "ch02.s04.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "reactor_long_telemetry_window"
+              }
+            },
+            {
+              "id": "ch02.s04.b009",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The beryllium's supposed to slow the neutrons and multiply them. And it's losing its appetite.",
+              "html": "The beryllium&#39;s supposed to slow the neutrons and multiply them. And it&#39;s losing its appetite.",
+              "stage": {
+                "beatId": "ch02.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b010",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Join the club.",
+              "html": "Join the club.",
+              "stage": {
+                "beatId": "ch02.s04.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b011",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The reactor is just a very big, very hot piece of particle physics. If the forces move, it moves with them.",
+              "html": "The reactor is just a very big, very hot piece of particle physics. If the forces move, it moves with them.",
+              "stage": {
+                "beatId": "ch02.s04.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b012",
+              "type": "narration",
+              "text": "Her slate chimes. Kaelen's summons, flagged red. She glances at it and turns it face down.",
+              "html": "Her slate chimes. Kaelen&#39;s summons, flagged red. She glances at it and turns it face down.",
+              "stage": {
+                "beatId": "ch02.s04.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b013",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "In a minute, Chief.",
+              "html": "In a minute, Chief.",
+              "stage": {
+                "beatId": "ch02.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b014",
+              "type": "narration",
+              "text": "She opens Aris's prime analysis on the fifth screen. She runs it through her own checker. The checker thinks. Then it agrees with him.",
+              "html": "She opens Aris&#39;s prime analysis on the fifth screen. She runs it through her own checker. The checker thinks. Then it agrees with him.",
+              "stage": {
+                "beatId": "ch02.s04.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b015",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Oh, that's not fair.",
+              "html": "Oh, that&#39;s not fair.",
+              "stage": {
+                "beatId": "ch02.s04.b015",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch02.s04.b016",
+              "type": "narration",
+              "text": "She watches the drift intervals tighten into a curve that looks, for one moment, like something counting.",
+              "html": "She watches the drift intervals tighten into a curve that looks, for one moment, like something counting.",
+              "stage": {
+                "beatId": "ch02.s04.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b017",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b018",
+              "type": "narration",
+              "text": "For a moment she feels the pull of his certainty, like a current around her ankles.",
+              "html": "For a moment she feels the pull of his certainty, like a current around her ankles.",
+              "stage": {
+                "beatId": "ch02.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b019",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Counting down to what?",
+              "html": "Counting down to what?",
+              "stage": {
+                "beatId": "ch02.s04.b019",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b020",
+              "type": "narration",
+              "text": "She looks at the orange numbers. Then at her enzyme plates on the other screen. The pull lets go.",
+              "html": "She looks at the orange numbers. Then at her enzyme plates on the other screen. The pull lets go.",
+              "stage": {
+                "beatId": "ch02.s04.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b021",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I don't care. I really, honestly, don't care.",
+              "html": "I don&#39;t care. I really, honestly, don&#39;t care.",
+              "stage": {
+                "beatId": "ch02.s04.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b022",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The universe changed its mind. Fine. How do we bend with it?",
+              "html": "The universe changed its mind. Fine. How do we bend with it?",
+              "stage": {
+                "beatId": "ch02.s04.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b023",
+              "type": "narration",
+              "text": "She pulls up the Keres firmware tree. Thousands of branches unfold on the screen, each a subsystem that can be patched from the Command Node.",
+              "html": "She pulls up the Keres firmware tree. Thousands of branches unfold on the screen, each a subsystem that can be patched from the Command Node.",
+              "stage": {
+                "beatId": "ch02.s04.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b024",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The ship already bends. Tritium ratios, enzyme models, air mix. All patched from one room, pushed out to every node at once.",
+              "html": "The ship already bends. Tritium ratios, enzyme models, air mix. All patched from one room, pushed out to every node at once.",
+              "stage": {
+                "beatId": "ch02.s04.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b025",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The local patch. Oldest trick on the Keres.",
+              "html": "The local patch. Oldest trick on the Keres.",
+              "stage": {
+                "beatId": "ch02.s04.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b026",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Same thing a cell does. Catch the wrong letter in the DNA, rewrite it before the cell divides.",
+              "html": "Same thing a cell does. Catch the wrong letter in the DNA, rewrite it before the cell divides.",
+              "stage": {
+                "beatId": "ch02.s04.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b027",
+              "type": "narration",
+              "text": "She taps the trunk of the tree.",
+              "html": "She taps the trunk of the tree.",
+              "stage": {
+                "beatId": "ch02.s04.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b028",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "But every patch so far had a person writing it. Somebody had to notice the change first.",
+              "html": "But every patch so far had a person writing it. Somebody had to notice the change first.",
+              "stage": {
+                "beatId": "ch02.s04.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b029",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "What if the patch wrote itself?",
+              "html": "What if the patch wrote itself?",
+              "stage": {
+                "beatId": "ch02.s04.b029",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "thinking",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch02.s04.b030",
+              "type": "narration",
+              "text": "She begins to type. Fast, then faster.",
+              "html": "She begins to type. Fast, then faster.",
+              "stage": {
+                "beatId": "ch02.s04.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "vera_her_stool_reactor"
+              }
+            },
+            {
+              "id": "ch02.s04.b031",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Not a control system that holds the reactor to fixed constants. One that reads the constants as inputs.",
+              "html": "Not a control system that holds the reactor to fixed constants. One that reads the constants as inputs.",
+              "stage": {
+                "beatId": "ch02.s04.b031",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b032",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Measure the cross-sections. Measure the enzyme rates. Measure the forces in the folds.",
+              "html": "Measure the cross-sections. Measure the enzyme rates. Measure the forces in the folds.",
+              "stage": {
+                "beatId": "ch02.s04.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b033",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Then rewrite the logic gates to match. Gates that are data. Gates that move when the world moves.",
+              "html": "Then rewrite the logic gates to match. Gates that are data. Gates that move when the world moves.",
+              "stage": {
+                "beatId": "ch02.s04.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b034",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Software with a genome. Mutate or die.",
+              "html": "Software with a genome. Mutate or die.",
+              "stage": {
+                "beatId": "ch02.s04.b034",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "happy",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch02.s04.b035",
+              "type": "narration",
+              "text": "Three hundred lines scroll up the screen. Her slate buzzes again under her hand.",
+              "html": "Three hundred lines scroll up the screen. Her slate buzzes again under her hand.",
+              "stage": {
+                "beatId": "ch02.s04.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null
+              }
+            },
+            {
+              "id": "ch02.s04.b036",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Tell the Command Node I'm busy. Tell them I'm rewriting the physics we're standing on.",
+              "html": "Tell the Command Node I&#39;m busy. Tell them I&#39;m rewriting the physics we&#39;re standing on.",
+              "stage": {
+                "beatId": "ch02.s04.b036",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b037",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I'll be there when it holds.",
+              "html": "I&#39;ll be there when it holds.",
+              "stage": {
+                "beatId": "ch02.s04.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b038",
+              "type": "narration",
+              "text": "The multiplication factor on the telemetry window drops another ten-thousandth of a percent. She writes the next line.",
+              "html": "The multiplication factor on the telemetry window drops another ten-thousandth of a percent. She writes the next line.",
+              "stage": {
+                "beatId": "ch02.s04.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b039",
+              "type": "narration",
+              "text": "She types the line after that. Her hand jerks. The stylus skids.",
+              "html": "She types the line after that. Her hand jerks. The stylus skids.",
+              "stage": {
+                "beatId": "ch02.s04.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b040",
+              "type": "narration",
+              "text": "A red flag blooms on the screen. A gate has flipped the wrong way under a cross-section she already fed it.",
+              "html": "A red flag blooms on the screen. A gate has flipped the wrong way under a cross-section she already fed it.",
+              "stage": {
+                "beatId": "ch02.s04.b040",
+                "shows": [],
+                "hides": [],
+                "sfx": "harsh_error_tone_test",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b041",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s04.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b042",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "That's the stimulant. Four hours past where it holds.",
+              "html": "That&#39;s the stimulant. Four hours past where it holds.",
+              "stage": {
+                "beatId": "ch02.s04.b042",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch02.s04.b043",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Building the one thing on this ship that can't afford a wrong gate. With these hands.",
+              "html": "Building the one thing on this ship that can&#39;t afford a wrong gate. With these hands.",
+              "stage": {
+                "beatId": "ch02.s04.b043",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b044",
+              "type": "narration",
+              "text": "She peels the patch off her wrist and drops it on the floor. She pours a cup of tea from a flask. She does not drink it.",
+              "html": "She peels the patch off her wrist and drops it on the floor. She pours a cup of tea from a flask. She does not drink it.",
+              "stage": {
+                "beatId": "ch02.s04.b044",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b045",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Again. Slowly.",
+              "html": "Again. Slowly.",
+              "stage": {
+                "beatId": "ch02.s04.b045",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "thinking",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch02.s04.b046",
+              "type": "narration",
+              "text": "She backs the line out and writes it again, one character at a time. The test runs. The flag turns green.",
+              "html": "She backs the line out and writes it again, one character at a time. The test runs. The flag turns green.",
+              "stage": {
+                "beatId": "ch02.s04.b046",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b047",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Holds.",
+              "html": "Holds.",
+              "stage": {
+                "beatId": "ch02.s04.b047",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b048",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Was that the only mistake, or just the first one?",
+              "html": "Was that the only mistake, or just the first one?",
+              "stage": {
+                "beatId": "ch02.s04.b048",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b049",
+              "type": "narration",
+              "text": "The reactor hums back at her, deep and orange.",
+              "html": "The reactor hums back at her, deep and orange.",
+              "stage": {
+                "beatId": "ch02.s04.b049",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b050",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Yeah. That's what I thought.",
+              "html": "Yeah. That&#39;s what I thought.",
+              "stage": {
+                "beatId": "ch02.s04.b050",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b051",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Whatever it costs, we pay it here. In the dark. At whatever hour the constants pick.",
+              "html": "Whatever it costs, we pay it here. In the dark. At whatever hour the constants pick.",
+              "stage": {
+                "beatId": "ch02.s04.b051",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b052",
+              "type": "narration",
+              "text": "She picks up her slate at last and stands.",
+              "html": "She picks up her slate at last and stands.",
+              "stage": {
+                "beatId": "ch02.s04.b052",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s05",
+          "label": "ch_02_s05",
+          "title": "AI Core, Tuesday",
+          "locationKey": "ai_core",
+          "bgPath": "images/bg ai_core_night.webp",
+          "transition": "fade",
+          "pause": 1,
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s05.b001",
+              "type": "narration",
+              "text": "The plaza is drenched in hard blue light. The candles burn lower. The steel eye of the Core shines over three thousand swaying people, quieter now, but still here.",
+              "html": "The plaza is drenched in hard blue light. The candles burn lower. The steel eye of the Core shines over three thousand swaying people, quieter now, but still here.",
+              "stage": {
+                "beatId": "ch02.s05.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "deep_slow_hum_prayer"
+              }
+            },
+            {
+              "id": "ch02.s05.b002",
+              "type": "narration",
+              "text": "The air smells of cut grass from the vents.",
+              "html": "The air smells of cut grass from the vents.",
+              "stage": {
+                "beatId": "ch02.s05.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s05.b003",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b004",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You said this would be a short conversation.",
+              "html": "You said this would be a short conversation.",
+              "stage": {
+                "beatId": "ch02.s05.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b005",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "It is. One sentence.",
+              "html": "It is. One sentence.",
+              "stage": {
+                "beatId": "ch02.s05.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b006",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Which sentence?",
+              "html": "Which sentence?",
+              "stage": {
+                "beatId": "ch02.s05.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b007",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": '"It\'s only physics."',
+              "html": "&quot;It&#39;s only physics.&quot;",
+              "stage": {
+                "beatId": "ch02.s05.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b008",
+              "type": "narration",
+              "text": "Aris looks at the crowd. Faces turn toward them. Someone recognises him.",
+              "html": "Aris looks at the crowd. Faces turn toward them. Someone recognises him.",
+              "stage": {
+                "beatId": "ch02.s05.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b009",
+              "type": "line",
+              "speaker": "voice_in_the_crowd",
+              "speakerLabel": "VOICE IN THE CROWD",
+              "text": "That's him. That's Thorne. He found it.",
+              "html": "That&#39;s him. That&#39;s Thorne. He found it.",
+              "stage": {
+                "beatId": "ch02.s05.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "voice_in_the_crowd",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch02.s05.b010",
+              "type": "narration",
+              "text": "The hum changes pitch. Heads turn like a field in wind.",
+              "html": "The hum changes pitch. Heads turn like a field in wind.",
+              "stage": {
+                "beatId": "ch02.s05.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b011",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Feel that? That's the fever. You can take it down with three words.",
+              "html": "Feel that? That&#39;s the fever. You can take it down with three words.",
+              "stage": {
+                "beatId": "ch02.s05.b011",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "sad",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch02.s05.b012",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Or I can lie to three thousand people.",
+              "html": "Or I can lie to three thousand people.",
+              "stage": {
+                "beatId": "ch02.s05.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b013",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Is it a lie?",
+              "html": "Is it a lie?",
+              "stage": {
+                "beatId": "ch02.s05.b013",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b014",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You don't know. Vera doesn't know. I'm the only one who's looked at it long enough.",
+              "html": "You don&#39;t know. Vera doesn&#39;t know. I&#39;m the only one who&#39;s looked at it long enough.",
+              "stage": {
+                "beatId": "ch02.s05.b014",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "angry",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch02.s05.b015",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I know what happens to this crowd if you tell them God is counting down.",
+              "html": "I know what happens to this crowd if you tell them God is counting down.",
+              "stage": {
+                "beatId": "ch02.s05.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b016",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s05.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b017",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I'm not asking you to believe it. I'm asking you to say it. For their blood pressure.",
+              "html": "I&#39;m not asking you to believe it. I&#39;m asking you to say it. For their blood pressure.",
+              "stage": {
+                "beatId": "ch02.s05.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b018",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "For their blood pressure.",
+              "html": "For their blood pressure.",
+              "stage": {
+                "beatId": "ch02.s05.b018",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b019",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Their chemistry doesn't care what's true. It cares what it hears.",
+              "html": "Their chemistry doesn&#39;t care what&#39;s true. It cares what it hears.",
+              "stage": {
+                "beatId": "ch02.s05.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b020",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That's the difference between us, Chief. I care what's true.",
+              "html": "That&#39;s the difference between us, Chief. I care what&#39;s true.",
+              "stage": {
+                "beatId": "ch02.s05.b020",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "angry",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch02.s05.b021",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "And I care whether they're alive on Sunday.",
+              "html": "And I care whether they&#39;re alive on Sunday.",
+              "stage": {
+                "beatId": "ch02.s05.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b022",
+              "type": "narration",
+              "text": "Kaelen hands him a microphone. Aris holds it for a long moment.",
+              "html": "Kaelen hands him a microphone. Aris holds it for a long moment.",
+              "stage": {
+                "beatId": "ch02.s05.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b023",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "My name is Aris Thorne. I wrote the analysis you've all read.",
+              "html": "My name is Aris Thorne. I wrote the analysis you&#39;ve all read.",
+              "stage": {
+                "beatId": "ch02.s05.b023",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "scared",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": "soft_click_as_plaza",
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "scared"
+              }
+            },
+            {
+              "id": "ch02.s05.b024",
+              "type": "narration",
+              "text": "The crowd goes utterly still. Three thousand faces turn up to him in the blue light.",
+              "html": "The crowd goes utterly still. Three thousand faces turn up to him in the blue light.",
+              "stage": {
+                "beatId": "ch02.s05.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b025",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The Chief wants me to tell you it's only physics.",
+              "html": "The Chief wants me to tell you it&#39;s only physics.",
+              "stage": {
+                "beatId": "ch02.s05.b025",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b026",
+              "type": "narration",
+              "text": "He looks at Kaelen. Kaelen does not move.",
+              "html": "He looks at Kaelen. Kaelen does not move.",
+              "stage": {
+                "beatId": "ch02.s05.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b027",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I can't. I don't know that. And I won't say a thing I don't know.",
+              "html": "I can&#39;t. I don&#39;t know that. And I won&#39;t say a thing I don&#39;t know.",
+              "stage": {
+                "beatId": "ch02.s05.b027",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch02.s05.b028",
+              "type": "narration",
+              "text": "A sound rises from the crowd, not a shout, but a long breath going in.",
+              "html": "A sound rises from the crowd, not a shout, but a long breath going in.",
+              "stage": {
+                "beatId": "ch02.s05.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b029",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The gaps are prime. They're shrinking. Something is going to happen, and I don't know what.",
+              "html": "The gaps are prime. They&#39;re shrinking. Something is going to happen, and I don&#39;t know what.",
+              "stage": {
+                "beatId": "ch02.s05.b029",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b030",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Aris.",
+              "html": "Aris.",
+              "stage": {
+                "beatId": "ch02.s05.b030",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "worried",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch02.s05.b031",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That's the truth, Chief. You'll have to medicate it.",
+              "html": "That&#39;s the truth, Chief. You&#39;ll have to medicate it.",
+              "stage": {
+                "beatId": "ch02.s05.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b032",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s05.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b033",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Lavender to the Core concourse. Full draw.",
+              "html": "Lavender to the Core concourse. Full draw.",
+              "stage": {
+                "beatId": "ch02.s05.b033",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": "ch_03"
+    },
+    {
+      "id": "chapter_3",
+      "label": "ch_03",
+      "number": 3,
+      "title": "Polymorphic Firmware",
+      "music": "music_02",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch03.s01",
+          "label": "ch_03_s01",
+          "title": "Bio-Integration Lab, Wednesday",
+          "locationKey": "bio_integration_lab",
+          "bgPath": "images/bg bio_integration_lab_morning.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s01.b001",
+              "type": "narration",
+              "text": "The long lab is half dark, its overhead lights dimmed to save power. The incubators glow green. Vera sits cross-legged on the floor between the benches, three screens angled around her.",
+              "html": "The long lab is half dark, its overhead lights dimmed to save power. The incubators glow green. Vera sits cross-legged on the floor between the benches, three screens angled around her.",
+              "stage": {
+                "beatId": "ch03.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "incubator_fans_under_them"
+              }
+            },
+            {
+              "id": "ch03.s01.b002",
+              "type": "narration",
+              "text": "Her palms are flat on the deck plating. Through it comes the beat of the cooling loops, steady for thirty years. This morning it limps.",
+              "html": "Her palms are flat on the deck plating. Through it comes the beat of the cooling loops, steady for thirty years. This morning it limps.",
+              "stage": {
+                "beatId": "ch03.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b004",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I hear you. You're limping.",
+              "html": "I hear you. You&#39;re limping.",
+              "stage": {
+                "beatId": "ch03.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b005",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Thump, thump. Thump... thump. Like a heart that's missing a step.",
+              "html": "Thump, thump. Thump... thump. Like a heart that&#39;s missing a step.",
+              "stage": {
+                "beatId": "ch03.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b006",
+              "type": "narration",
+              "text": "She opens her eyes and looks at the nearest screen.",
+              "html": "She opens her eyes and looks at the nearest screen.",
+              "stage": {
+                "beatId": "ch03.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b007",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Tritium breeding ratio. Yesterday one point zero eight one. This morning one point zero seven nine. And steepening.",
+              "html": "Tritium breeding ratio. Yesterday one point zero eight one. This morning one point zero seven nine. And steepening.",
+              "stage": {
+                "beatId": "ch03.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b008",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Breed more fuel than you burn. That's the only rule the plant has. And we're sliding toward one.",
+              "html": "Breed more fuel than you burn. That&#39;s the only rule the plant has. And we&#39;re sliding toward one.",
+              "stage": {
+                "beatId": "ch03.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b009",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "At one we break even. Below one we start eating the fuel we have left.",
+              "html": "At one we break even. Below one we start eating the fuel we have left.",
+              "stage": {
+                "beatId": "ch03.s01.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b010",
+              "type": "narration",
+              "text": "She pulls the cross-section data. A line of orange numbers wobbles across the screen.",
+              "html": "She pulls the cross-section data. A line of orange numbers wobbles across the screen.",
+              "stage": {
+                "beatId": "ch03.s01.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b011",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Lithium-6 capture. The chance a passing neutron gets caught. Parts per million yesterday. Tens of parts per million today.",
+              "html": "Lithium-6 capture. The chance a passing neutron gets caught. Parts per million yesterday. Tens of parts per million today.",
+              "stage": {
+                "beatId": "ch03.s01.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b012",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The people who wrote the control logic knew this number would never move. Lucky them.",
+              "html": "The people who wrote the control logic knew this number would never move. Lucky them.",
+              "stage": {
+                "beatId": "ch03.s01.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b013",
+              "type": "narration",
+              "text": "On the screen, the old control logic keeps metering the blanket to a fixed value. The ratio dips. The logic corrects. The ratio dips again.",
+              "html": "On the screen, the old control logic keeps metering the blanket to a fixed value. The ratio dips. The logic corrects. The ratio dips again.",
+              "stage": {
+                "beatId": "ch03.s01.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b014",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Look at it. A dog chasing its tail around the core.",
+              "html": "Look at it. A dog chasing its tail around the core.",
+              "stage": {
+                "beatId": "ch03.s01.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b015",
+              "type": "narration",
+              "text": "Her slate chimes. A message from the reactor office: MAINTENANCE WINDOW IN 47 MINUTES.",
+              "html": "Her slate chimes. A message from the reactor office: MAINTENANCE WINDOW IN 47 MINUTES.",
+              "stage": {
+                "beatId": "ch03.s01.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b016",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Forty-seven minutes. Fine. I've annotated whole genomes in less.",
+              "html": "Forty-seven minutes. Fine. I&#39;ve annotated whole genomes in less.",
+              "stage": {
+                "beatId": "ch03.s01.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b017",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "That's a lie. But it's a motivating lie.",
+              "html": "That&#39;s a lie. But it&#39;s a motivating lie.",
+              "stage": {
+                "beatId": "ch03.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b018",
+              "type": "narration",
+              "text": "She loads her layer into the sandbox. A copy of the reactor blooms on the middle screen in thin white lines.",
+              "html": "She loads her layer into the sandbox. A copy of the reactor blooms on the middle screen in thin white lines.",
+              "stage": {
+                "beatId": "ch03.s01.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b019",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Test one. Here's the drift we measured. Hold the ratio.",
+              "html": "Test one. Here&#39;s the drift we measured. Hold the ratio.",
+              "stage": {
+                "beatId": "ch03.s01.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b020",
+              "type": "narration",
+              "text": "The layer reads the drift. Its gates flicker as they rewrite themselves. The ratio flattens at one point zero seven nine and holds.",
+              "html": "The layer reads the drift. Its gates flicker as they rewrite themselves. The ratio flattens at one point zero seven nine and holds.",
+              "stage": {
+                "beatId": "ch03.s01.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b021",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Good. Boring. I love boring.",
+              "html": "Good. Boring. I love boring.",
+              "stage": {
+                "beatId": "ch03.s01.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b022",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Test two. A collapse. Five percent in a hundred seconds.",
+              "html": "Test two. A collapse. Five percent in a hundred seconds.",
+              "stage": {
+                "beatId": "ch03.s01.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b023",
+              "type": "narration",
+              "text": "The cross-section line drops like a stone. On the screen, the gates rewrite themselves again and again, thirty times. The ratio dips, wobbles, and climbs back.",
+              "html": "The cross-section line drops like a stone. On the screen, the gates rewrite themselves again and again, thirty times. The ratio dips, wobbles, and climbs back.",
+              "stage": {
+                "beatId": "ch03.s01.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b024",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s01.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b025",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Twenty-eight. Twenty-nine. Thirty. And back.",
+              "html": "Twenty-eight. Twenty-nine. Thirty. And back.",
+              "stage": {
+                "beatId": "ch03.s01.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b026",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Okay. Now something the universe hasn't done yet.",
+              "html": "Okay. Now something the universe hasn&#39;t done yet.",
+              "stage": {
+                "beatId": "ch03.s01.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b027",
+              "type": "narration",
+              "text": "She types a number she has made up. The cross-section on the screen jumps all at once, a cliff instead of a slope.",
+              "html": "She types a number she has made up. The cross-section on the screen jumps all at once, a cliff instead of a slope.",
+              "stage": {
+                "beatId": "ch03.s01.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b028",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A step. Everything changes in one instant. Show me what you've got.",
+              "html": "A step. Everything changes in one instant. Show me what you&#39;ve got.",
+              "stage": {
+                "beatId": "ch03.s01.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b029",
+              "type": "narration",
+              "text": "The gates blur. Two hundred rewrites in three seconds.",
+              "html": "The gates blur. Two hundred rewrites in three seconds.",
+              "stage": {
+                "beatId": "ch03.s01.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "vera_floor_bio_integration"
+              }
+            },
+            {
+              "id": "ch03.s01.b030",
+              "type": "narration",
+              "text": "The simulated reactor does not even notice.",
+              "html": "The simulated reactor does not even notice.",
+              "stage": {
+                "beatId": "ch03.s01.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b031",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Oh, you beautiful thing.",
+              "html": "Oh, you beautiful thing.",
+              "stage": {
+                "beatId": "ch03.s01.b031",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "happy",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch03.s01.b032",
+              "type": "narration",
+              "text": "She signs the layer as a delta patch. She checks it against the firmware manifest, the way every patch on the Keres has been checked for three centuries.",
+              "html": "She signs the layer as a delta patch. She checks it against the firmware manifest, the way every patch on the Keres has been checked for three centuries.",
+              "stage": {
+                "beatId": "ch03.s01.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null
+              }
+            },
+            {
+              "id": "ch03.s01.b033",
+              "type": "narration",
+              "text": "It reads: DELTA PATCH VL-001 / ADAPTIVE BLANKET METERING / VERIFIED / TARGET: 214 BLANKET NODES / PUSH?",
+              "html": "It reads: DELTA PATCH VL-001 / ADAPTIVE BLANKET METERING / VERIFIED / TARGET: 214 BLANKET NODES / PUSH?",
+              "stage": {
+                "beatId": "ch03.s01.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "patch_manifest_vera_screen"
+              }
+            },
+            {
+              "id": "ch03.s01.b034",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Push.",
+              "html": "Push.",
+              "stage": {
+                "beatId": "ch03.s01.b034",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b035",
+              "type": "narration",
+              "text": "She presses her palms back to the deck. Through the plating, the plant takes the change: a hitch, then a smoother beat.",
+              "html": "She presses her palms back to the deck. Through the plating, the plant takes the change: a hitch, then a smoother beat.",
+              "stage": {
+                "beatId": "ch03.s01.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b036",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Thump. Thump. Thump.",
+              "html": "Thump. Thump. Thump.",
+              "stage": {
+                "beatId": "ch03.s01.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b037",
+              "type": "narration",
+              "text": "On the screen, the breeding ratio stops falling and stays.",
+              "html": "On the screen, the breeding ratio stops falling and stays.",
+              "stage": {
+                "beatId": "ch03.s01.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b038",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Command Node. Tell Kaelen the blanket will hold.",
+              "html": "Command Node. Tell Kaelen the blanket will hold.",
+              "stage": {
+                "beatId": "ch03.s01.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b039",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Tell him the fire in the walls has a valve now. It opens and closes on its own.",
+              "html": "Tell him the fire in the walls has a valve now. It opens and closes on its own.",
+              "stage": {
+                "beatId": "ch03.s01.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b040",
+              "type": "narration",
+              "text": "She lowers the slate. Her smile fades.",
+              "html": "She lowers the slate. Her smile fades.",
+              "stage": {
+                "beatId": "ch03.s01.b040",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b041",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s01.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b042",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Every fall I could invent. And none I couldn't.",
+              "html": "Every fall I could invent. And none I couldn&#39;t.",
+              "stage": {
+                "beatId": "ch03.s01.b042",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch03.s02",
+          "label": "ch_03_s02",
+          "title": "Observational Core, Thursday",
+          "locationKey": "observational_core",
+          "bgPath": "images/bg observational_core_dawn.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s02.b001",
+              "type": "narration",
+              "text": "The chamber is a cave of cyan. Every wall is covered with plots, overlays, crossed-out models. A cup sits on the console, empty, never filled.",
+              "html": "The chamber is a cave of cyan. Every wall is covered with plots, overlays, crossed-out models. A cup sits on the console, empty, never filled.",
+              "stage": {
+                "beatId": "ch03.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "cold_hum_life_support"
+              }
+            },
+            {
+              "id": "ch03.s02.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s02.b002",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b003",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Thirty hours awake. Everything is very clear. Every number hums against its neighbours.",
+              "html": "Thirty hours awake. Everything is very clear. Every number hums against its neighbours.",
+              "stage": {
+                "beatId": "ch03.s02.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b004",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "It's almost nice. A fever with a filing system.",
+              "html": "It&#39;s almost nice. A fever with a filing system.",
+              "stage": {
+                "beatId": "ch03.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b005",
+              "type": "narration",
+              "text": "He pulls the raw scintillation counts beside the stored logs. He compares them line by line.",
+              "html": "He pulls the raw scintillation counts beside the stored logs. He compares them line by line.",
+              "stage": {
+                "beatId": "ch03.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b006",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "If it's a message, someone could be editing my logs. Sharpening it.",
+              "html": "If it&#39;s a message, someone could be editing my logs. Sharpening it.",
+              "stage": {
+                "beatId": "ch03.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b007",
+              "type": "narration",
+              "text": "He checks a third time. The logs match.",
+              "html": "He checks a third time. The logs match.",
+              "stage": {
+                "beatId": "ch03.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "No one is editing them.",
+              "html": "No one is editing them.",
+              "stage": {
+                "beatId": "ch03.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b009",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That should make me feel better.",
+              "html": "That should make me feel better.",
+              "stage": {
+                "beatId": "ch03.s02.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b010",
+              "type": "narration",
+              "text": "He drags a new plot to the centre wall: gap length against cycle.",
+              "html": "He drags a new plot to the centre wall: gap length against cycle.",
+              "stage": {
+                "beatId": "ch03.s02.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b011",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "First week, the gaps run the primes. Two, three, five, seven, eleven, thirteen, seventeen, nineteen. Days apart.",
+              "html": "First week, the gaps run the primes. Two, three, five, seven, eleven, thirteen, seventeen, nineteen. Days apart.",
+              "stage": {
+                "beatId": "ch03.s02.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b012",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Then it starts again, shorter. Then again, shorter still.",
+              "html": "Then it starts again, shorter. Then again, shorter still.",
+              "stage": {
+                "beatId": "ch03.s02.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b013",
+              "type": "narration",
+              "text": "The points on the wall fall in a smooth, steep curve.",
+              "html": "The points on the wall fall in a smooth, steep curve.",
+              "stage": {
+                "beatId": "ch03.s02.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b014",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Like a stone dropped from rest.",
+              "html": "Like a stone dropped from rest.",
+              "stage": {
+                "beatId": "ch03.s02.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b015",
+              "type": "narration",
+              "text": "He tries to make it something else. He says each idea out loud and kills it.",
+              "html": "He tries to make it something else. He says each idea out loud and kills it.",
+              "stage": {
+                "beatId": "ch03.s02.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b016",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "A beat between two clocks. No. The clocks agree.",
+              "html": "A beat between two clocks. No. The clocks agree.",
+              "stage": {
+                "beatId": "ch03.s02.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b017",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Heat aliasing in the counter housings. No. The housings are flat.",
+              "html": "Heat aliasing in the counter housings. No. The housings are flat.",
+              "stage": {
+                "beatId": "ch03.s02.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b018",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The dark count locking to the drift. No. I checked that on Monday.",
+              "html": "The dark count locking to the drift. No. I checked that on Monday.",
+              "stage": {
+                "beatId": "ch03.s02.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b019",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Me. My own code. A bug.",
+              "html": "Me. My own code. A bug.",
+              "stage": {
+                "beatId": "ch03.s02.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b020",
+              "type": "narration",
+              "text": "He reads his code from the top, line by line, his lips moving.",
+              "html": "He reads his code from the top, line by line, his lips moving.",
+              "stage": {
+                "beatId": "ch03.s02.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b021",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "No.",
+              "html": "No.",
+              "stage": {
+                "beatId": "ch03.s02.b021",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch03.s02.b022",
+              "type": "narration",
+              "text": "Only the curve is left on the wall. At the bottom of it, where the gaps reach zero, a number glows.",
+              "html": "Only the curve is left on the wall. At the bottom of it, where the gaps reach zero, a number glows.",
+              "stage": {
+                "beatId": "ch03.s02.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b023",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Fifty-nine hours.",
+              "html": "Fifty-nine hours.",
+              "stage": {
+                "beatId": "ch03.s02.b023",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b024",
+              "type": "narration",
+              "text": "He sits down very slowly in the worn chair.",
+              "html": "He sits down very slowly in the worn chair.",
+              "stage": {
+                "beatId": "ch03.s02.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b025",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s02.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b026",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Not a message. A countdown.",
+              "html": "Not a message. A countdown.",
+              "stage": {
+                "beatId": "ch03.s02.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b027",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I waited my whole life to be answered. And the answer comes with a deadline.",
+              "html": "I waited my whole life to be answered. And the answer comes with a deadline.",
+              "stage": {
+                "beatId": "ch03.s02.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b028",
+              "type": "narration",
+              "text": "He waits to feel afraid. What comes is quieter and older.",
+              "html": "He waits to feel afraid. What comes is quieter and older.",
+              "stage": {
+                "beatId": "ch03.s02.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b029",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You did hear me. You just don't talk. You schedule.",
+              "html": "You did hear me. You just don&#39;t talk. You schedule.",
+              "stage": {
+                "beatId": "ch03.s02.b029",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch03.s02.b030",
+              "type": "narration",
+              "text": "He opens a note to the Command Node and types fast.",
+              "html": "He opens a note to the Command Node and types fast.",
+              "stage": {
+                "beatId": "ch03.s02.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b031",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Projection of drift interval collapse. Confidence intervals attached. Request full meeting before the window closes.",
+              "html": "Projection of drift interval collapse. Confidence intervals attached. Request full meeting before the window closes.",
+              "stage": {
+                "beatId": "ch03.s02.b031",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b032",
+              "type": "narration",
+              "text": "He reads it back twice.",
+              "html": "He reads it back twice.",
+              "stage": {
+                "beatId": "ch03.s02.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b033",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "It's a physics note.",
+              "html": "It&#39;s a physics note.",
+              "stage": {
+                "beatId": "ch03.s02.b033",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch03.s02.b034",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I can't find the place where it stops being one.",
+              "html": "I can&#39;t find the place where it stops being one.",
+              "stage": {
+                "beatId": "ch03.s02.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch03.s02.b035",
+              "type": "narration",
+              "text": "The clock in the corner reads 04:10.",
+              "html": "The clock in the corner reads 04:10.",
+              "stage": {
+                "beatId": "ch03.s02.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": "soft_click_note_going",
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch03.s03",
+          "label": "ch_03_s03",
+          "title": "Command Node, Thursday",
+          "locationKey": "command_node",
+          "bgPath": "images/bg command_node_morning.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s03.b001",
+              "type": "narration",
+              "text": "The schematic of the Keres glows white on the wall. The forward spindle is still amber. On the long table, a row of cold tea cups, and the handwritten numbers of three watches: four, eleven, and more below.",
+              "html": "The schematic of the Keres glows white on the wall. The forward spindle is still amber. On the long table, a row of cold tea cups, and the handwritten numbers of three watches: four, eleven, and more below.",
+              "stage": {
+                "beatId": "ch03.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "soft_fans_slow_pulse"
+              }
+            },
+            {
+              "id": "ch03.s03.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s03.b002",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b003",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Note from Dr. Thorne, Chief. Flagged for you. Four eleven.",
+              "html": "Note from Dr. Thorne, Chief. Flagged for you. Four eleven.",
+              "stage": {
+                "beatId": "ch03.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b004",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I'm reading it.",
+              "html": "I&#39;m reading it.",
+              "stage": {
+                "beatId": "ch03.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b005",
+              "type": "narration",
+              "text": "He reads it standing. Then he takes a ration slip from his pocket and a pencil, and does sums on the back.",
+              "html": "He reads it standing. Then he takes a ration slip from his pocket and a pencil, and does sums on the back.",
+              "stage": {
+                "beatId": "ch03.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b006",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Reservoir at thirty-four percent. Down from fifty-six on Tuesday. The lavender at full draw did that.",
+              "html": "Reservoir at thirty-four percent. Down from fifty-six on Tuesday. The lavender at full draw did that.",
+              "stage": {
+                "beatId": "ch03.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b007",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The analog goes faster than synthesis can replace it. The precursor comes from the gene banks. The gene banks have the same drift Vera's chasing.",
+              "html": "The analog goes faster than synthesis can replace it. The precursor comes from the gene banks. The gene banks have the same drift Vera&#39;s chasing.",
+              "stage": {
+                "beatId": "ch03.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b008",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Everything on this ship has the same slope now. I'm starting to know it like a face.",
+              "html": "Everything on this ship has the same slope now. I&#39;m starting to know it like a face.",
+              "stage": {
+                "beatId": "ch03.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b009",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "And the Faithful?",
+              "html": "And the Faithful?",
+              "stage": {
+                "beatId": "ch03.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b010",
+              "type": "narration",
+              "text": "He looks at the feed. Three thousand people in the blue light at the AI Core, humming, as they have since Tuesday night.",
+              "html": "He looks at the feed. Three thousand people in the blue light at the AI Core, humming, as they have since Tuesday night.",
+              "stage": {
+                "beatId": "ch03.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b011",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Fifty-nine hours to Aris's zero, if Aris is right.",
+              "html": "Fifty-nine hours to Aris&#39;s zero, if Aris is right.",
+              "stage": {
+                "beatId": "ch03.s03.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b012",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Full dose, I can hold the Core for eleven of them. Quarter dose, about fifty-five.",
+              "html": "Full dose, I can hold the Core for eleven of them. Quarter dose, about fifty-five.",
+              "stage": {
+                "beatId": "ch03.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b013",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "And after that?",
+              "html": "And after that?",
+              "stage": {
+                "beatId": "ch03.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b014",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Four hours short. After that, whatever comes at the end of the count comes to a ship with empty tanks.",
+              "html": "Four hours short. After that, whatever comes at the end of the count comes to a ship with empty tanks.",
+              "stage": {
+                "beatId": "ch03.s03.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b015",
+              "type": "narration",
+              "text": "He folds the slip once.",
+              "html": "He folds the slip once.",
+              "stage": {
+                "beatId": "ch03.s03.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b016",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Start a drawdown schedule. The Core concourse and Rings 3 and 7 at full dose until hour eleven.",
+              "html": "Start a drawdown schedule. The Core concourse and Rings 3 and 7 at full dose until hour eleven.",
+              "stage": {
+                "beatId": "ch03.s03.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b017",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Then I want a written plan for which concourses go cold first. In order. Signed. With my name on it.",
+              "html": "Then I want a written plan for which concourses go cold first. In order. Signed. With my name on it.",
+              "stage": {
+                "beatId": "ch03.s03.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b018",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Chief, that means choosing—",
+              "html": "Chief, that means choosing—",
+              "stage": {
+                "beatId": "ch03.s03.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b019",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Which corridors get a calming agent and which get nothing. Yes. Write it.",
+              "html": "Which corridors get a calming agent and which get nothing. Yes. Write it.",
+              "stage": {
+                "beatId": "ch03.s03.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b020",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "And if someone asks why their corridor?",
+              "html": "And if someone asks why their corridor?",
+              "stage": {
+                "beatId": "ch03.s03.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b021",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Then they ask me. That's why my name is on it.",
+              "html": "Then they ask me. That&#39;s why my name is on it.",
+              "stage": {
+                "beatId": "ch03.s03.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b022",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s03.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b023",
+              "type": "narration",
+              "text": "On the physiological feed, three thousand heart rates line up into one slow, shared rhythm.",
+              "html": "On the physiological feed, three thousand heart rates line up into one slow, shared rhythm.",
+              "stage": {
+                "beatId": "ch03.s03.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b024",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Look at their hearts.",
+              "html": "Look at their hearts.",
+              "stage": {
+                "beatId": "ch03.s03.b024",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch03.s03.b025",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "The feed calls them calm.",
+              "html": "The feed calls them calm.",
+              "stage": {
+                "beatId": "ch03.s03.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b026",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The feed calls them calm. They're synchronising. Three thousand hearts finding one beat.",
+              "html": "The feed calls them calm. They&#39;re synchronising. Three thousand hearts finding one beat.",
+              "stage": {
+                "beatId": "ch03.s03.b026",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b027",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The way a marching column finds the frequency of a bridge.",
+              "html": "The way a marching column finds the frequency of a bridge.",
+              "stage": {
+                "beatId": "ch03.s03.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b028",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "A patrol, Chief. Please.",
+              "html": "A patrol, Chief. Please.",
+              "stage": {
+                "beatId": "ch03.s03.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b029",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "A patrol is a shock to the system. It might scatter them. It might lock them together tighter.",
+              "html": "A patrol is a shock to the system. It might scatter them. It might lock them together tighter.",
+              "stage": {
+                "beatId": "ch03.s03.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b030",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I won't roll that die on three thousand people.",
+              "html": "I won&#39;t roll that die on three thousand people.",
+              "stage": {
+                "beatId": "ch03.s03.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b031",
+              "type": "narration",
+              "text": "He moves markers on the map.",
+              "html": "He moves markers on the map.",
+              "stage": {
+                "beatId": "ch03.s03.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b032",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Core concourse pressure up half a percent. Heavy and sleepy. Let them think about their bodies, not their hearts.",
+              "html": "Core concourse pressure up half a percent. Heavy and sleepy. Let them think about their bodies, not their hearts.",
+              "stage": {
+                "beatId": "ch03.s03.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b033",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "And start drawing precursor from the agricultural reserve.",
+              "html": "And start drawing precursor from the agricultural reserve.",
+              "stage": {
+                "beatId": "ch03.s03.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b034",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "That breaks the food-reserve protocol.",
+              "html": "That breaks the food-reserve protocol.",
+              "stage": {
+                "beatId": "ch03.s03.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b035",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Then log that it broke. And that I ordered it.",
+              "html": "Then log that it broke. And that I ordered it.",
+              "stage": {
+                "beatId": "ch03.s03.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b036",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "That protocol was written for a universe that held still.",
+              "html": "That protocol was written for a universe that held still.",
+              "stage": {
+                "beatId": "ch03.s03.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b037",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "If the count is real, the worst hour is the last one. I mean to have something in the tank for it.",
+              "html": "If the count is real, the worst hour is the last one. I mean to have something in the tank for it.",
+              "stage": {
+                "beatId": "ch03.s03.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b038",
+              "type": "narration",
+              "text": "He looks at the feed once more. Under the calm, he sees the slope again: ground still tilting toward an edge no one can see.",
+              "html": "He looks at the feed once more. Under the calm, he sees the slope again: ground still tilting toward an edge no one can see.",
+              "stage": {
+                "beatId": "ch03.s03.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b039",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Get me Thorne and Lin. Here. Now.",
+              "html": "Get me Thorne and Lin. Here. Now.",
+              "stage": {
+                "beatId": "ch03.s03.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch03.s04",
+          "label": "ch_03_s04",
+          "title": "Command Node, Thursday",
+          "locationKey": "command_node",
+          "bgPath": "images/bg command_node_day.webp",
+          "transition": "none",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s04.b001",
+              "type": "narration",
+              "text": "The cool white lights are up. Three chairs are pulled close around the end of the long table. Aris's curve fills the schematic wall, the reactor and the rings drawn faintly behind it.",
+              "html": "The cool white lights are up. Three chairs are pulled close around the end of the long table. Aris&#39;s curve fills the schematic wall, the reactor and the rings drawn faintly behind it.",
+              "stage": {
+                "beatId": "ch03.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s04.b002",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b003",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Fifty-nine hours from four ten this morning. The intervals reach zero. I've broken every other explanation.",
+              "html": "Fifty-nine hours from four ten this morning. The intervals reach zero. I&#39;ve broken every other explanation.",
+              "stage": {
+                "beatId": "ch03.s04.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b004",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Every one you could think of.",
+              "html": "Every one you could think of.",
+              "stage": {
+                "beatId": "ch03.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b005",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Every one anyone could think of. Name one I missed.",
+              "html": "Every one anyone could think of. Name one I missed.",
+              "stage": {
+                "beatId": "ch03.s04.b005",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "angry",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch03.s04.b006",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "I can't. That's not the same as there not being one.",
+              "html": "I can&#39;t. That&#39;s not the same as there not being one.",
+              "stage": {
+                "beatId": "ch03.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b007",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Stop. I didn't call you here to argue about God. I called you because I have to choose something today.",
+              "html": "Stop. I didn&#39;t call you here to argue about God. I called you because I have to choose something today.",
+              "stage": {
+                "beatId": "ch03.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b008",
+              "type": "narration",
+              "text": "They both look at him.",
+              "html": "They both look at him.",
+              "stage": {
+                "beatId": "ch03.s04.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b009",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Your layer is on two hundred and fourteen blanket nodes. How many does the ship have?",
+              "html": "Your layer is on two hundred and fourteen blanket nodes. How many does the ship have?",
+              "stage": {
+                "beatId": "ch03.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b010",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "About five thousand. Containment. Life support. Gene banks. Your air mix.",
+              "html": "About five thousand. Containment. Life support. Gene banks. Your air mix.",
+              "stage": {
+                "beatId": "ch03.s04.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b011",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Every one running logic that thinks the numbers never move.",
+              "html": "Every one running logic that thinks the numbers never move.",
+              "stage": {
+                "beatId": "ch03.s04.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b012",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Then they all need your layer. What does it cost to put it there?",
+              "html": "Then they all need your layer. What does it cost to put it there?",
+              "stage": {
+                "beatId": "ch03.s04.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b013",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Each node has to restart on the new firmware. A few seconds dark per node. Air handlers, lights, vents.",
+              "html": "Each node has to restart on the new firmware. A few seconds dark per node. Air handlers, lights, vents.",
+              "stage": {
+                "beatId": "ch03.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b014",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Do it slowly and it takes a week. Do it before Saturday and whole concourses blink at once.",
+              "html": "Do it slowly and it takes a week. Do it before Saturday and whole concourses blink at once.",
+              "stage": {
+                "beatId": "ch03.s04.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b015",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Including the Core concourse.",
+              "html": "Including the Core concourse.",
+              "stage": {
+                "beatId": "ch03.s04.b015",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch03.s04.b016",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Including the Core concourse.",
+              "html": "Including the Core concourse.",
+              "stage": {
+                "beatId": "ch03.s04.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b017",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b018",
+              "type": "narration",
+              "text": "On the feed, three thousand Faithful sway in the blue light Kaelen has spent two days building.",
+              "html": "On the feed, three thousand Faithful sway in the blue light Kaelen has spent two days building.",
+              "stage": {
+                "beatId": "ch03.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b019",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You'd turn their lights off. In front of the Core. With a countdown on every wall.",
+              "html": "You&#39;d turn their lights off. In front of the Core. With a countdown on every wall.",
+              "stage": {
+                "beatId": "ch03.s04.b019",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b020",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "For a few seconds at a time. Over and over. For two days.",
+              "html": "For a few seconds at a time. Over and over. For two days.",
+              "stage": {
+                "beatId": "ch03.s04.b020",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b021",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "That's a fever spike every hour. And I'll be paying for each one out of the tank.",
+              "html": "That&#39;s a fever spike every hour. And I&#39;ll be paying for each one out of the tank.",
+              "stage": {
+                "beatId": "ch03.s04.b021",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch03.s04.b022",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "There's something else. One thing I can't patch at all.",
+              "html": "There&#39;s something else. One thing I can&#39;t patch at all.",
+              "stage": {
+                "beatId": "ch03.s04.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b023",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Say it.",
+              "html": "Say it.",
+              "stage": {
+                "beatId": "ch03.s04.b023",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b024",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The pressure valves on the Ring 7 vapour line are mechanical. Springs and steel. No node, no firmware.",
+              "html": "The pressure valves on the Ring 7 vapour line are mechanical. Springs and steel. No node, no firmware.",
+              "stage": {
+                "beatId": "ch03.s04.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b025",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "If the physics jumps and the controls lag, that line spikes, and my layer can't touch it. Your people would have to.",
+              "html": "If the physics jumps and the controls lag, that line spikes, and my layer can&#39;t touch it. Your people would have to.",
+              "stage": {
+                "beatId": "ch03.s04.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b026",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Then I'll have people at Ring 7 on Saturday. Not a patrol. Engineers.",
+              "html": "Then I&#39;ll have people at Ring 7 on Saturday. Not a patrol. Engineers.",
+              "stage": {
+                "beatId": "ch03.s04.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b027",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And I'll give you a fall you couldn't invent.",
+              "html": "And I&#39;ll give you a fall you couldn&#39;t invent.",
+              "stage": {
+                "beatId": "ch03.s04.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b028",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "What?",
+              "html": "What?",
+              "stage": {
+                "beatId": "ch03.s04.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b029",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "My curve. The real shape of the drift. Test your layer against what the data says, not what you imagine.",
+              "html": "My curve. The real shape of the drift. Test your layer against what the data says, not what you imagine.",
+              "stage": {
+                "beatId": "ch03.s04.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b030",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "That's actually useful.",
+              "html": "That&#39;s actually useful.",
+              "stage": {
+                "beatId": "ch03.s04.b030",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "surprised",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch03.s04.b031",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I'm told I'm good at my job.",
+              "html": "I&#39;m told I&#39;m good at my job.",
+              "stage": {
+                "beatId": "ch03.s04.b031",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch03.s04.b032",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s04.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b033",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Then here's the choice. Vera's layer on every node before zero. The concourses blink. I take the cost.",
+              "html": "Then here&#39;s the choice. Vera&#39;s layer on every node before zero. The concourses blink. I take the cost.",
+              "stage": {
+                "beatId": "ch03.s04.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b034",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I'll hold the Core on quarter dose between the blinks and spend the agricultural reserve on the blinks themselves.",
+              "html": "I&#39;ll hold the Core on quarter dose between the blinks and spend the agricultural reserve on the blinks themselves.",
+              "stage": {
+                "beatId": "ch03.s04.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b035",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "That burns the reserve by Saturday morning, Chief.",
+              "html": "That burns the reserve by Saturday morning, Chief.",
+              "stage": {
+                "beatId": "ch03.s04.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b036",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Then we meet zero with nothing in the tank but the light. Log it. My name.",
+              "html": "Then we meet zero with nothing in the tank but the light. Log it. My name.",
+              "stage": {
+                "beatId": "ch03.s04.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b037",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Eleven coders and me. Five thousand nodes.",
+              "html": "Eleven coders and me. Five thousand nodes.",
+              "stage": {
+                "beatId": "ch03.s04.b037",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "worried",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch03.s04.b038",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Eleven coders and you.",
+              "html": "Eleven coders and you.",
+              "stage": {
+                "beatId": "ch03.s04.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b039",
+              "type": "narration",
+              "text": "She laughs once, tired. Then she nods.",
+              "html": "She laughs once, tired. Then she nods.",
+              "stage": {
+                "beatId": "ch03.s04.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b040",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Before Saturday, then.",
+              "html": "Before Saturday, then.",
+              "stage": {
+                "beatId": "ch03.s04.b040",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b041",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Aris. I need it exact. When is zero?",
+              "html": "Aris. I need it exact. When is zero?",
+              "stage": {
+                "beatId": "ch03.s04.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b042",
+              "type": "narration",
+              "text": "Aris pulls the curve toward him. He runs the fit once more, his lips moving.",
+              "html": "Aris pulls the curve toward him. He runs the fit once more, his lips moving.",
+              "stage": {
+                "beatId": "ch03.s04.b042",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b043",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Saturday.",
+              "html": "Saturday.",
+              "stage": {
+                "beatId": "ch03.s04.b043",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": "soft_chime_as_fit",
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b044",
+              "type": "narration",
+              "text": "He looks up at them both.",
+              "html": "He looks up at them both.",
+              "stage": {
+                "beatId": "ch03.s04.b044",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b045",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Fifteen ten, ship time. Give or take four minutes.",
+              "html": "Fifteen ten, ship time. Give or take four minutes.",
+              "stage": {
+                "beatId": "ch03.s04.b045",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": "ch_04"
+    },
+    {
+      "id": "chapter_4",
+      "label": "ch_04",
+      "number": 4,
+      "title": "Zero",
+      "music": "music_02",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch04.s01",
+          "label": "ch_04_s01",
+          "title": "Bio-Integration Lab, Thursday",
+          "locationKey": "bio_integration_lab",
+          "bgPath": "images/bg bio_integration_lab_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s01.b001",
+              "type": "narration",
+              "text": "The lab is lit only by screens. Cups of cold tea stand along the bench like a row of small grey moons. The reactor sandbox glows on the middle screen.",
+              "html": "The lab is lit only by screens. Cups of cold tea stand along the bench like a row of small grey moons. The reactor sandbox glows on the middle screen.",
+              "stage": {
+                "beatId": "ch04.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "incubator_fans_soft_beat"
+              }
+            },
+            {
+              "id": "ch04.s01.b002",
+              "type": "narration",
+              "text": "Down the hall, eleven borrowed coders sit at borrowed benches, pushing her layer node by node, their keys clicking like rain.",
+              "html": "Down the hall, eleven borrowed coders sit at borrowed benches, pushing her layer node by node, their keys clicking like rain.",
+              "stage": {
+                "beatId": "ch04.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b004",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Fine. No more falls I invent. Here's the drift as it really runs.",
+              "html": "Fine. No more falls I invent. Here&#39;s the drift as it really runs.",
+              "stage": {
+                "beatId": "ch04.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b005",
+              "type": "narration",
+              "text": "She feeds the layer Aris's curve: the measured slope, steepening, bending toward zero.",
+              "html": "She feeds the layer Aris&#39;s curve: the measured slope, steepening, bending toward zero.",
+              "stage": {
+                "beatId": "ch04.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b006",
+              "type": "narration",
+              "text": "The gates rewrite themselves to the drift. Then they do something she did not write. They run ahead of it.",
+              "html": "The gates rewrite themselves to the drift. Then they do something she did not write. They run ahead of it.",
+              "stage": {
+                "beatId": "ch04.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b007",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "What are you doing?",
+              "html": "What are you doing?",
+              "stage": {
+                "beatId": "ch04.s01.b007",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "angry",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch04.s01.b008",
+              "type": "narration",
+              "text": "On the screen the layer mutates against a cliff that is not in the input yet. The display floods green.",
+              "html": "On the screen the layer mutates against a cliff that is not in the input yet. The display floods green.",
+              "stage": {
+                "beatId": "ch04.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b009",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "You bet on the future.",
+              "html": "You bet on the future.",
+              "stage": {
+                "beatId": "ch04.s01.b009",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": "flat_dead_tone_as",
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch04.s01.b010",
+              "type": "narration",
+              "text": "She stares at the frozen sandbox for a long moment.",
+              "html": "She stares at the frozen sandbox for a long moment.",
+              "stage": {
+                "beatId": "ch04.s01.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b011",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "If the countdown's noise, you go on bracing for a fall that never comes. And one night you rewrite yourself into a shape that fits nothing.",
+              "html": "If the countdown&#39;s noise, you go on bracing for a fall that never comes. And one night you rewrite yourself into a shape that fits nothing.",
+              "stage": {
+                "beatId": "ch04.s01.b011",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b012",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "And you take the reactor with you.",
+              "html": "And you take the reactor with you.",
+              "stage": {
+                "beatId": "ch04.s01.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b013",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A body that panics at a fever that isn't coming. That's how you get an allergy.",
+              "html": "A body that panics at a fever that isn&#39;t coming. That&#39;s how you get an allergy.",
+              "stage": {
+                "beatId": "ch04.s01.b013",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch04.s01.b014",
+              "type": "narration",
+              "text": "She pulls up the sensor banks and starts a filter.",
+              "html": "She pulls up the sensor banks and starts a filter.",
+              "stage": {
+                "beatId": "ch04.s01.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b015",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "New rule. You get told what is. Not one second before.",
+              "html": "New rule. You get told what is. Not one second before.",
+              "stage": {
+                "beatId": "ch04.s01.b015",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b016",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "No projections fed to you as truth. Whatever happens at zero happens to you the way it happens to the ship. All at once.",
+              "html": "No projections fed to you as truth. Whatever happens at zero happens to you the way it happens to the ship. All at once.",
+              "stage": {
+                "beatId": "ch04.s01.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b017",
+              "type": "narration",
+              "text": "She writes it. It comes out three lines longer than it should.",
+              "html": "She writes it. It comes out three lines longer than it should.",
+              "stage": {
+                "beatId": "ch04.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b018",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "No time for pretty. Ugly and right will do.",
+              "html": "No time for pretty. Ugly and right will do.",
+              "stage": {
+                "beatId": "ch04.s01.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b019",
+              "type": "narration",
+              "text": "She runs the steepening profile again. This time the layer holds the drift as it arrives and does not run ahead. The green points settle.",
+              "html": "She runs the steepening profile again. This time the layer holds the drift as it arrives and does not run ahead. The green points settle.",
+              "stage": {
+                "beatId": "ch04.s01.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b020",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s01.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b021",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A layer that adapts to bad data adapts to nothing.",
+              "html": "A layer that adapts to bad data adapts to nothing.",
+              "stage": {
+                "beatId": "ch04.s01.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b022",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Now you only know what's true.",
+              "html": "Now you only know what&#39;s true.",
+              "stage": {
+                "beatId": "ch04.s01.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch04.s02",
+          "label": "ch_04_s02",
+          "title": "Observational Core, Friday",
+          "locationKey": "observational_core",
+          "bgPath": "images/bg observational_core_morning.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s02.b001",
+              "type": "narration",
+              "text": "The cyan walls are cleaner now. The old plots are gone. In their place, a field of five thousand small dots, each one a node of the ship, each one waiting.",
+              "html": "The cyan walls are cleaner now. The old plots are gone. In their place, a field of five thousand small dots, each one a node of the ship, each one waiting.",
+              "stage": {
+                "beatId": "ch04.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "cold_hum_life_support"
+              }
+            },
+            {
+              "id": "ch04.s02.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s02.b002",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b003",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The harness. The one job left that doesn't ask what I believe.",
+              "html": "The harness. The one job left that doesn&#39;t ask what I believe.",
+              "stage": {
+                "beatId": "ch04.s02.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b004",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Node by node. What the layer says its gates are doing, against what they're actually doing.",
+              "html": "Node by node. What the layer says its gates are doing, against what they&#39;re actually doing.",
+              "stage": {
+                "beatId": "ch04.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b005",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And if I can't tell the difference, it fails loudly.",
+              "html": "And if I can&#39;t tell the difference, it fails loudly.",
+              "stage": {
+                "beatId": "ch04.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b006",
+              "type": "narration",
+              "text": "He runs the harness. The dots blink, one by one, then all together. Green.",
+              "html": "He runs the harness. The dots blink, one by one, then all together. Green.",
+              "stage": {
+                "beatId": "ch04.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b007",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Clean.",
+              "html": "Clean.",
+              "stage": {
+                "beatId": "ch04.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b008",
+              "type": "narration",
+              "text": "He should stand up. He should send it to Vera. Instead he sits and looks at his own checker for a long time.",
+              "html": "He should stand up. He should send it to Vera. Instead he sits and looks at his own checker for a long time.",
+              "stage": {
+                "beatId": "ch04.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b009",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Backwards, then. Do it backwards.",
+              "html": "Backwards, then. Do it backwards.",
+              "stage": {
+                "beatId": "ch04.s02.b009",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch04.s02.b010",
+              "type": "narration",
+              "text": "He feeds it the residuals, the gaps between the gaps. Then, after a pause, the dark count from ampoule seven.",
+              "html": "He feeds it the residuals, the gaps between the gaps. Then, after a pause, the dark count from ampoule seven.",
+              "stage": {
+                "beatId": "ch04.s02.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b011",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Ampoule seven. Failed its heat calibration all week. I've been leaving you out of every fit.",
+              "html": "Ampoule seven. Failed its heat calibration all week. I&#39;ve been leaving you out of every fit.",
+              "stage": {
+                "beatId": "ch04.s02.b011",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b012",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Because you were inconvenient.",
+              "html": "Because you were inconvenient.",
+              "stage": {
+                "beatId": "ch04.s02.b012",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "angry",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch04.s02.b013",
+              "type": "narration",
+              "text": "The checker thinks. A sequence appears. It is not the primes.",
+              "html": "The checker thinks. A sequence appears. It is not the primes.",
+              "stage": {
+                "beatId": "ch04.s02.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b014",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That's tighter than mine.",
+              "html": "That&#39;s tighter than mine.",
+              "stage": {
+                "beatId": "ch04.s02.b014",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b015",
+              "type": "narration",
+              "text": "He opens the maintenance log beside it. A name repeats down the page every fourteen days for eleven years.",
+              "html": "He opens the maintenance log beside it. A name repeats down the page every fourteen days for eleven years.",
+              "stage": {
+                "beatId": "ch04.s02.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b016",
+              "type": "narration",
+              "text": "It reads: SERVICED BY: K. OSEI. EVERY 14 DAYS. TIMES VARY. NOTE: COUNTERS SLOW TO SETTLE AFTER HANDLING.",
+              "html": "It reads: SERVICED BY: K. OSEI. EVERY 14 DAYS. TIMES VARY. NOTE: COUNTERS SLOW TO SETTLE AFTER HANDLING.",
+              "stage": {
+                "beatId": "ch04.s02.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "ampoule_rack_maintenance_log"
+              }
+            },
+            {
+              "id": "ch04.s02.b017",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Osei. Every fourteen days. At slightly different hours.",
+              "html": "Osei. Every fourteen days. At slightly different hours.",
+              "stage": {
+                "beatId": "ch04.s02.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b018",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And the counters never quite settle after his hands.",
+              "html": "And the counters never quite settle after his hands.",
+              "stage": {
+                "beatId": "ch04.s02.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b019",
+              "type": "narration",
+              "text": "He laughs once. It is not the laugh from Monday.",
+              "html": "He laughs once. It is not the laugh from Monday.",
+              "stage": {
+                "beatId": "ch04.s02.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b020",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The ship has a rhythm. A man with a cleaning cloth. And I heard it as a voice.",
+              "html": "The ship has a rhythm. A man with a cleaning cloth. And I heard it as a voice.",
+              "stage": {
+                "beatId": "ch04.s02.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b021",
+              "type": "narration",
+              "text": "He runs a third fit, a fourth. They come back loose as noise.",
+              "html": "He runs a third fit, a fourth. They come back loose as noise.",
+              "stage": {
+                "beatId": "ch04.s02.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b022",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Two tight fits out of a hundred. And I showed the whole ship the one I wanted.",
+              "html": "Two tight fits out of a hundred. And I showed the whole ship the one I wanted.",
+              "stage": {
+                "beatId": "ch04.s02.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b023",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s02.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b024",
+              "type": "narration",
+              "text": "He sits like that for a long time. The hum of life support goes on around him, a quarter tone flat.",
+              "html": "He sits like that for a long time. The hum of life support goes on around him, a quarter tone flat.",
+              "stage": {
+                "beatId": "ch04.s02.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b025",
+              "type": "narration",
+              "text": "Then he lifts his head, saves the second fit, and gives it a plain name.",
+              "html": "Then he lifts his head, saves the second fit, and gives it a plain name.",
+              "stage": {
+                "beatId": "ch04.s02.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b026",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Finding. Second periodicity. Source: ampoule maintenance cycle. As strong as the first.",
+              "html": "Finding. Second periodicity. Source: ampoule maintenance cycle. As strong as the first.",
+              "stage": {
+                "beatId": "ch04.s02.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b027",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Not in a subfolder. In the standing watch log.",
+              "html": "Not in a subfolder. In the standing watch log.",
+              "stage": {
+                "beatId": "ch04.s02.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b028",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Where Vera will see it the minute she looks.",
+              "html": "Where Vera will see it the minute she looks.",
+              "stage": {
+                "beatId": "ch04.s02.b028",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch04.s03",
+          "label": "ch_04_s03",
+          "title": "Command Node, Friday",
+          "locationKey": "command_node",
+          "bgPath": "images/bg command_node_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s03.b001",
+              "type": "narration",
+              "text": "The countdown runs in white digits in the corner of the schematic wall: 18:10:00, and falling. Beneath it, Aris's curve. Cold tea everywhere.",
+              "html": "The countdown runs in white digits in the corner of the schematic wall: 18:10:00, and falling. Beneath it, Aris&#39;s curve. Cold tea everywhere.",
+              "stage": {
+                "beatId": "ch04.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "soft_fans_status_lights"
+              }
+            },
+            {
+              "id": "ch04.s03.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s03.b002",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b003",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Eighteen hours. It hits zero tomorrow at fifteen ten.",
+              "html": "Eighteen hours. It hits zero tomorrow at fifteen ten.",
+              "stage": {
+                "beatId": "ch04.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b004",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It's a fit to a sparse series. You grew it by hunting for a period until you found one.",
+              "html": "It&#39;s a fit to a sparse series. You grew it by hunting for a period until you found one.",
+              "stage": {
+                "beatId": "ch04.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b005",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "It's too clean to be noise. I've fitted a hundred curves. One of them—",
+              "html": "It&#39;s too clean to be noise. I&#39;ve fitted a hundred curves. One of them—",
+              "stage": {
+                "beatId": "ch04.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b006",
+              "type": "narration",
+              "text": "He stops, half a breath too late.",
+              "html": "He stops, half a breath too late.",
+              "stage": {
+                "beatId": "ch04.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b007",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Two of them fit like this.",
+              "html": "Two of them fit like this.",
+              "stage": {
+                "beatId": "ch04.s03.b007",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch04.s03.b008",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Two.",
+              "html": "Two.",
+              "stage": {
+                "beatId": "ch04.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b009",
+              "type": "narration",
+              "text": "She does not press. She read the watch log an hour ago. She has stood where he is standing, once, and she knows the floor there.",
+              "html": "She does not press. She read the watch log an hour ago. She has stood where he is standing, once, and she knows the floor there.",
+              "stage": {
+                "beatId": "ch04.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b010",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s03.b010",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [
+                  "kaelen_vance"
+                ],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b011",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The ship's in a new phase, Aris. The forces are moving. In a new phase the noise gets louder.",
+              "html": "The ship&#39;s in a new phase, Aris. The forces are moving. In a new phase the noise gets louder.",
+              "stage": {
+                "beatId": "ch04.s03.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b012",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A curve fitted to loud noise looks like a countdown because you ask it to.",
+              "html": "A curve fitted to loud noise looks like a countdown because you ask it to.",
+              "stage": {
+                "beatId": "ch04.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b013",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It's a fever. You've been reading the fever as a letter.",
+              "html": "It&#39;s a fever. You&#39;ve been reading the fever as a letter.",
+              "stage": {
+                "beatId": "ch04.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b014",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Doesn't matter.",
+              "html": "Doesn&#39;t matter.",
+              "stage": {
+                "beatId": "ch04.s03.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b015",
+              "type": "narration",
+              "text": "They both turn to him.",
+              "html": "They both turn to him.",
+              "stage": {
+                "beatId": "ch04.s03.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b016",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Countdown or fever. The tank's at twenty-two percent. The blinks cost more than I priced them.",
+              "html": "Countdown or fever. The tank&#39;s at twenty-two percent. The blinks cost more than I priced them.",
+              "stage": {
+                "beatId": "ch04.s03.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b017",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Quarter dose carries the Core to about four hours short of zero. After that, the light and nothing else.",
+              "html": "Quarter dose carries the Core to about four hours short of zero. After that, the light and nothing else.",
+              "stage": {
+                "beatId": "ch04.s03.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b018",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I need the ship held together for the next hour. And the hour after that. That's the only question I've got time for.",
+              "html": "I need the ship held together for the next hour. And the hour after that. That&#39;s the only question I&#39;ve got time for.",
+              "stage": {
+                "beatId": "ch04.s03.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b019",
+              "type": "narration",
+              "text": "Vera turns her chair to the console and feeds the layer the newest stretch of drift.",
+              "html": "Vera turns her chair to the console and feeds the layer the newest stretch of drift.",
+              "stage": {
+                "beatId": "ch04.s03.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b020",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Four thousand eight hundred nodes patched and verified. The last two hundred by morning.",
+              "html": "Four thousand eight hundred nodes patched and verified. The last two hundred by morning.",
+              "stage": {
+                "beatId": "ch04.s03.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b021",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It holds the drift it's given. It'll hold the snap, if a snap comes all at once.",
+              "html": "It holds the drift it&#39;s given. It&#39;ll hold the snap, if a snap comes all at once.",
+              "stage": {
+                "beatId": "ch04.s03.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b022",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It won't tell us what's on the other side.",
+              "html": "It won&#39;t tell us what&#39;s on the other side.",
+              "stage": {
+                "beatId": "ch04.s03.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b023",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Nothing will tell us that.",
+              "html": "Nothing will tell us that.",
+              "stage": {
+                "beatId": "ch04.s03.b023",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b024",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "No. That's the point.",
+              "html": "No. That&#39;s the point.",
+              "stage": {
+                "beatId": "ch04.s03.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch04.s04",
+          "label": "ch_04_s04",
+          "title": "Command Node, Saturday",
+          "locationKey": "command_node",
+          "bgPath": "images/bg command_node_afternoon.webp",
+          "transition": "fade",
+          "pause": 1,
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s04.b001",
+              "type": "narration",
+              "text": "The ship is calm. On the feeds, the galley lines are short, the corridors smell green from the vents, the concourse lights are lilac. At the AI Core, a few hundred Faithful pray in shifts.",
+              "html": "The ship is calm. On the feeds, the galley lines are short, the corridors smell green from the vents, the concourse lights are lilac. At the AI Core, a few hundred Faithful pray in shifts.",
+              "stage": {
+                "beatId": "ch04.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "steady_hum_life_support"
+              }
+            },
+            {
+              "id": "ch04.s04.b002",
+              "type": "narration",
+              "text": "The countdown in the corner of the wall reads 00:00:10.",
+              "html": "The countdown in the corner of the wall reads 00:00:10.",
+              "stage": {
+                "beatId": "ch04.s04.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s04.b003",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "surprised",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b004",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Ten seconds.",
+              "html": "Ten seconds.",
+              "stage": {
+                "beatId": "ch04.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b005",
+              "type": "narration",
+              "text": "Nobody speaks.",
+              "html": "Nobody speaks.",
+              "stage": {
+                "beatId": "ch04.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b006",
+              "type": "narration",
+              "text": "The digits run down. Three. Two. One. Zero.",
+              "html": "The digits run down. Three. Two. One. Zero.",
+              "stage": {
+                "beatId": "ch04.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b007",
+              "type": "narration",
+              "text": "Nothing happens.",
+              "html": "Nothing happens.",
+              "stage": {
+                "beatId": "ch04.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Nothing.",
+              "html": "Nothing.",
+              "stage": {
+                "beatId": "ch04.s04.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch04.s04.b009",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Wait.",
+              "html": "Wait.",
+              "stage": {
+                "beatId": "ch04.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b010",
+              "type": "narration",
+              "text": "Then it happens.",
+              "html": "Then it happens.",
+              "stage": {
+                "beatId": "ch04.s04.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b011",
+              "type": "narration",
+              "text": "The hum drops out of the air. In the silence Aris can hear his own heart.",
+              "html": "The hum drops out of the air. In the silence Aris can hear his own heart.",
+              "stage": {
+                "beatId": "ch04.s04.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b012",
+              "type": "narration",
+              "text": "The deck kicks under them. The ration slip flies off Kaelen's console. Beyond the bulkhead, a rack of parts crashes down in the crawlway.",
+              "html": "The deck kicks under them. The ration slip flies off Kaelen&#39;s console. Beyond the bulkhead, a rack of parts crashes down in the crawlway.",
+              "stage": {
+                "beatId": "ch04.s04.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": "hard_metallic_shudder_through",
+                "ambience": null,
+                "cg": "command_node_plunged_into"
+              }
+            },
+            {
+              "id": "ch04.s04.b013",
+              "type": "narration",
+              "text": "The hum comes back a quarter tone sharp, then flat, then as if it does not know what it is.",
+              "html": "The hum comes back a quarter tone sharp, then flat, then as if it does not know what it is.",
+              "stage": {
+                "beatId": "ch04.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b014",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Fine-structure constant. It moved.",
+              "html": "Fine-structure constant. It moved.",
+              "stage": {
+                "beatId": "ch04.s04.b014",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch04.s04.b015",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "How far?",
+              "html": "How far?",
+              "stage": {
+                "beatId": "ch04.s04.b015",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b016",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A part in ten thousand. Not enough to break a bond. Enough to shift every bond on the ship at once.",
+              "html": "A part in ten thousand. Not enough to break a bond. Enough to shift every bond on the ship at once.",
+              "stage": {
+                "beatId": "ch04.s04.b016",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b017",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Every protein. Every membrane. The water in every body on board.",
+              "html": "Every protein. Every membrane. The water in every body on board.",
+              "stage": {
+                "beatId": "ch04.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b018",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Reactor plasma's hitting the bottle! Containment's wavering!",
+              "html": "Reactor plasma&#39;s hitting the bottle! Containment&#39;s wavering!",
+              "stage": {
+                "beatId": "ch04.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b019",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Pressure spike in Ring 7! The vapour line valves are lagging! Hatch four's sealed with people on the wrong side!",
+              "html": "Pressure spike in Ring 7! The vapour line valves are lagging! Hatch four&#39;s sealed with people on the wrong side!",
+              "stage": {
+                "beatId": "ch04.s04.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": "rising_pressure_alarm_ring",
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "scared"
+              }
+            },
+            {
+              "id": "ch04.s04.b020",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Vera.",
+              "html": "Vera.",
+              "stage": {
+                "beatId": "ch04.s04.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b021",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Working.",
+              "html": "Working.",
+              "stage": {
+                "beatId": "ch04.s04.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b022",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s04.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null
+              }
+            },
+            {
+              "id": "ch04.s04.b023",
+              "type": "narration",
+              "text": "The schematic wall shows five thousand nodes as a field of green. Six hundred go red in the first second. Eight hundred in the second.",
+              "html": "The schematic wall shows five thousand nodes as a field of green. Six hundred go red in the first second. Eight hundred in the second.",
+              "stage": {
+                "beatId": "ch04.s04.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b024",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It's getting an input it never imagined.",
+              "html": "It&#39;s getting an input it never imagined.",
+              "stage": {
+                "beatId": "ch04.s04.b024",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch04.s04.b025",
+              "type": "narration",
+              "text": "The red spreads. Then it stops spreading.",
+              "html": "The red spreads. Then it stops spreading.",
+              "stage": {
+                "beatId": "ch04.s04.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b026",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It isn't falling.",
+              "html": "It isn&#39;t falling.",
+              "stage": {
+                "beatId": "ch04.s04.b026",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b027",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It's mutating.",
+              "html": "It&#39;s mutating.",
+              "stage": {
+                "beatId": "ch04.s04.b027",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch04.s04.b028",
+              "type": "narration",
+              "text": "Each node reads its own drift, rewrites its own gates, passes the rewrite along the mesh. Red turns to green, patch by patch, like a wound closing.",
+              "html": "Each node reads its own drift, rewrites its own gates, passes the rewrite along the mesh. Red turns to green, patch by patch, like a wound closing.",
+              "stage": {
+                "beatId": "ch04.s04.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b029",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Reactor metering just relearned lithium-6. It jumped a tenth of a percent and it isn't coming back.",
+              "html": "Reactor metering just relearned lithium-6. It jumped a tenth of a percent and it isn&#39;t coming back.",
+              "stage": {
+                "beatId": "ch04.s04.b029",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b030",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Blanket re-metered. They're arguing the plasma back into the bottle.",
+              "html": "Blanket re-metered. They&#39;re arguing the plasma back into the bottle.",
+              "stage": {
+                "beatId": "ch04.s04.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b031",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The air. Ring 7.",
+              "html": "The air. Ring 7.",
+              "stage": {
+                "beatId": "ch04.s04.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b032",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Scrubbers relearned their kinetics in four seconds. But that vapour line is springs and steel. Your engineers have to close it.",
+              "html": "Scrubbers relearned their kinetics in four seconds. But that vapour line is springs and steel. Your engineers have to close it.",
+              "stage": {
+                "beatId": "ch04.s04.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b033",
+              "type": "narration",
+              "text": "Kaelen is already moving markers. He does not send a patrol.",
+              "html": "Kaelen is already moving markers. He does not send a patrol.",
+              "stage": {
+                "beatId": "ch04.s04.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b034",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Engineers at Ring 7, close the valves by hand. Vent the hatch-four corridor into the agricultural plenum. Drop the far side two percent so we can crack the hatch without a blowout.",
+              "html": "Engineers at Ring 7, close the valves by hand. Vent the hatch-four corridor into the agricultural plenum. Drop the far side two percent so we can crack the hatch without a blowout.",
+              "stage": {
+                "beatId": "ch04.s04.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b035",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "And that corridor's lights at full white. Don't soften it. I want them to see the way out.",
+              "html": "And that corridor&#39;s lights at full white. Don&#39;t soften it. I want them to see the way out.",
+              "stage": {
+                "beatId": "ch04.s04.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b036",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Hatch four open. Walk them through. Slow.",
+              "html": "Hatch four open. Walk them through. Slow.",
+              "stage": {
+                "beatId": "ch04.s04.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b037",
+              "type": "narration",
+              "text": "The room waits. Eleven seconds. They take longer than the whole rewrite.",
+              "html": "The room waits. Eleven seconds. They take longer than the whole rewrite.",
+              "stage": {
+                "beatId": "ch04.s04.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b038",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Through, Chief. Forty-one minor injuries. No crush. An old man with a bruised shoulder. A girl who won't let go of the rail.",
+              "html": "Through, Chief. Forty-one minor injuries. No crush. An old man with a bruised shoulder. A girl who won&#39;t let go of the rail.",
+              "stage": {
+                "beatId": "ch04.s04.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b039",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Get the rail out of her hands and get her warm.",
+              "html": "Get the rail out of her hands and get her warm.",
+              "stage": {
+                "beatId": "ch04.s04.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b040",
+              "type": "narration",
+              "text": "He keeps moving markers. On the AI Core feed, the few hundred Faithful stand frozen in the white emergency light, staring up at the steel eye.",
+              "html": "He keeps moving markers. On the AI Core feed, the few hundred Faithful stand frozen in the white emergency light, staring up at the steel eye.",
+              "stage": {
+                "beatId": "ch04.s04.b040",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b041",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "And the Core. All I have left. Lavender and blue, full draw, until the tank's dry.",
+              "html": "And the Core. All I have left. Lavender and blue, full draw, until the tank&#39;s dry.",
+              "stage": {
+                "beatId": "ch04.s04.b041",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "sad",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch04.s04.b042",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "That empties it.",
+              "html": "That empties it.",
+              "stage": {
+                "beatId": "ch04.s04.b042",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b043",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "That's what it was for.",
+              "html": "That&#39;s what it was for.",
+              "stage": {
+                "beatId": "ch04.s04.b043",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b044",
+              "type": "narration",
+              "text": "On the feed the white light softens into blue. The Faithful sink to their knees, not in panic, but slowly, holding each other.",
+              "html": "On the feed the white light softens into blue. The Faithful sink to their knees, not in panic, but slowly, holding each other.",
+              "stage": {
+                "beatId": "ch04.s04.b044",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b045",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Hydrolase rates up a percent. Repair pathways relearning their proofreading. Three hundred nodes still renegotiating.",
+              "html": "Hydrolase rates up a percent. Repair pathways relearning their proofreading. Three hundred nodes still renegotiating.",
+              "stage": {
+                "beatId": "ch04.s04.b045",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b046",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "It took the jump. It'll take the next one.",
+              "html": "It took the jump. It&#39;ll take the next one.",
+              "stage": {
+                "beatId": "ch04.s04.b046",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch04.s04.b047",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s04.b047",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "worried",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [
+                  "kaelen_vance"
+                ],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b048",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The harness crashed. Nine hundred alerts in a tenth of a second.",
+              "html": "The harness crashed. Nine hundred alerts in a tenth of a second.",
+              "stage": {
+                "beatId": "ch04.s04.b048",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b049",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "It's restarting.",
+              "html": "It&#39;s restarting.",
+              "stage": {
+                "beatId": "ch04.s04.b049",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b050",
+              "type": "narration",
+              "text": "The harness comes back. Five thousand green points, each one saying what it does is what it claims.",
+              "html": "The harness comes back. Five thousand green points, each one saying what it does is what it claims.",
+              "stage": {
+                "beatId": "ch04.s04.b050",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b051",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Clean. Your patch is honest.",
+              "html": "Clean. Your patch is honest.",
+              "stage": {
+                "beatId": "ch04.s04.b051",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "worried",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch04.s04.b052",
+              "type": "narration",
+              "text": "He should look away from the screen. Instead he opens the drift intervals from the minutes around zero and feeds them to the checker.",
+              "html": "He should look away from the screen. Instead he opens the drift intervals from the minutes around zero and feeds them to the checker.",
+              "stage": {
+                "beatId": "ch04.s04.b052",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b053",
+              "type": "narration",
+              "text": "A spread comes back. Not a sequence.",
+              "html": "A spread comes back. Not a sequence.",
+              "stage": {
+                "beatId": "ch04.s04.b053",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b054",
+              "type": "narration",
+              "text": "He feeds it the intervals from the new plateau. Another spread.",
+              "html": "He feeds it the intervals from the new plateau. Another spread.",
+              "stage": {
+                "beatId": "ch04.s04.b054",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b055",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "A noise floor. Where the signal was.",
+              "html": "A noise floor. Where the signal was.",
+              "stage": {
+                "beatId": "ch04.s04.b055",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "aris_alone_his_side",
+                "activeCharKey": "aris_thorne",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch04.s04.b056",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The stone was the slope all along.",
+              "html": "The stone was the slope all along.",
+              "stage": {
+                "beatId": "ch04.s04.b056",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b057",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And there was never anyone on the other side of the cliff.",
+              "html": "And there was never anyone on the other side of the cliff.",
+              "stage": {
+                "beatId": "ch04.s04.b057",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b058",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Aris. Did the harness hold?",
+              "html": "Aris. Did the harness hold?",
+              "stage": {
+                "beatId": "ch04.s04.b058",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null,
+                "activeCharKey": "vera_lin",
+                "expression": "worried"
+              }
+            },
+            {
+              "id": "ch04.s04.b059",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "It crashed, it restarted, it held.",
+              "html": "It crashed, it restarted, it held.",
+              "stage": {
+                "beatId": "ch04.s04.b059",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b060",
+              "type": "narration",
+              "text": "He takes a breath.",
+              "html": "He takes a breath.",
+              "stage": {
+                "beatId": "ch04.s04.b060",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b061",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The countdown was the drift, steepening. I dressed it up because I needed it to be a letter.",
+              "html": "The countdown was the drift, steepening. I dressed it up because I needed it to be a letter.",
+              "stage": {
+                "beatId": "ch04.s04.b061",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b062",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "You built the harness.",
+              "html": "You built the harness.",
+              "stage": {
+                "beatId": "ch04.s04.b062",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b063",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "If you'd spent those hours in despair, the layer could be lying to itself right now and I'd never know.",
+              "html": "If you&#39;d spent those hours in despair, the layer could be lying to itself right now and I&#39;d never know.",
+              "stage": {
+                "beatId": "ch04.s04.b063",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b064",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "The fever put you at your console. I'll take that.",
+              "html": "The fever put you at your console. I&#39;ll take that.",
+              "stage": {
+                "beatId": "ch04.s04.b064",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b065",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s04.b065",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b066",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "New baseline. And the physics will drift again on a schedule nobody knows. I need a standing watch on the constants.",
+              "html": "New baseline. And the physics will drift again on a schedule nobody knows. I need a standing watch on the constants.",
+              "stage": {
+                "beatId": "ch04.s04.b066",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b067",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I'll take it.",
+              "html": "I&#39;ll take it.",
+              "stage": {
+                "beatId": "ch04.s04.b067",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b068",
+              "type": "narration",
+              "text": "He looks at his display: a slope, rising and falling around a new mean.",
+              "html": "He looks at his display: a slope, rising and falling around a new mean.",
+              "stage": {
+                "beatId": "ch04.s04.b068",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b069",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I'll log it as a slope. Not a countdown.",
+              "html": "I&#39;ll log it as a slope. Not a countdown.",
+              "stage": {
+                "beatId": "ch04.s04.b069",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b070",
+              "type": "narration",
+              "text": "Vera lets her hands go still on the deck. Under them, the ship breathes, a quarter tone sharp of where it lived for thirty years.",
+              "html": "Vera lets her hands go still on the deck. Under them, the ship breathes, a quarter tone sharp of where it lived for thirty years.",
+              "stage": {
+                "beatId": "ch04.s04.b070",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b071",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "New constants.",
+              "html": "New constants.",
+              "stage": {
+                "beatId": "ch04.s04.b071",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch04.s04.b072",
+              "type": "narration",
+              "text": "She pushes a delta patch to the sensor banks and watches it settle.",
+              "html": "She pushes a delta patch to the sensor banks and watches it settle.",
+              "stage": {
+                "beatId": "ch04.s04.b072",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b073",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "New firmware.",
+              "html": "New firmware.",
+              "stage": {
+                "beatId": "ch04.s04.b073",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b074",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Chief. Lights.",
+              "html": "Chief. Lights.",
+              "stage": {
+                "beatId": "ch04.s04.b074",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "hum_life_support_steady",
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b075",
+              "type": "narration",
+              "text": "On the schematic wall, the dark decks start to glow again. Not all at once. One at a time.",
+              "html": "On the schematic wall, the dark decks start to glow again. Not all at once. One at a time.",
+              "stage": {
+                "beatId": "ch04.s04.b075",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b076",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Deck one. Deck two. Concourse coming up. Ring 3. Ring 7.",
+              "html": "Deck one. Deck two. Concourse coming up. Ring 3. Ring 7.",
+              "stage": {
+                "beatId": "ch04.s04.b076",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b077",
+              "type": "narration",
+              "text": "On the feed, the long curve of the concourse fills with ordinary yellow light, a ring at a time, rolling around the ship like a sunrise.",
+              "html": "On the feed, the long curve of the concourse fills with ordinary yellow light, a ring at a time, rolling around the ship like a sunrise.",
+              "stage": {
+                "beatId": "ch04.s04.b077",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b078",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "There.",
+              "html": "There.",
+              "stage": {
+                "beatId": "ch04.s04.b078",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch04.s04.b079",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Deck by deck.",
+              "html": "Deck by deck.",
+              "stage": {
+                "beatId": "ch04.s04.b079",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b080",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Like it's waking up.",
+              "html": "Like it&#39;s waking up.",
+              "stage": {
+                "beatId": "ch04.s04.b080",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": "ch_05"
+    },
+    {
+      "id": "chapter_5",
+      "label": "ch_05",
+      "number": 5,
+      "title": "The Local Patch",
+      "music": "music_01",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch05.s01",
+          "label": "ch_05_s01",
+          "title": "Command Node, Sunday",
+          "locationKey": "command_node",
+          "bgPath": "images/bg command_node_morning.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch05.s01.b001",
+              "type": "narration",
+              "text": "The harsh white is gone. The lilac of Kaelen's evening band lies across the floor, soft and even, and makes the consoles look like furniture in a warm room.",
+              "html": "The harsh white is gone. The lilac of Kaelen&#39;s evening band lies across the floor, soft and even, and makes the consoles look like furniture in a warm room.",
+              "stage": {
+                "beatId": "ch05.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "hum_life_support_steady"
+              }
+            },
+            {
+              "id": "ch05.s01.b002",
+              "type": "narration",
+              "text": "The schematic wall glows green from end to end. Cups of cold tea, a dropped ration slip, a rack of parts still lying where it fell.",
+              "html": "The schematic wall glows green from end to end. Cups of cold tea, a dropped ration slip, a rack of parts still lying where it fell.",
+              "stage": {
+                "beatId": "ch05.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b004",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Breeding ratio, one point zero eight. Holding.",
+              "html": "Breeding ratio, one point zero eight. Holding.",
+              "stage": {
+                "beatId": "ch05.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b005",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Lithium-6 capture at a value nobody on the Keres ever wrote down. And the layer meters to it like it's always been there.",
+              "html": "Lithium-6 capture at a value nobody on the Keres ever wrote down. And the layer meters to it like it&#39;s always been there.",
+              "stage": {
+                "beatId": "ch05.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b006",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "The reactor's breathing.",
+              "html": "The reactor&#39;s breathing.",
+              "stage": {
+                "beatId": "ch05.s01.b006",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b007",
+              "type": "narration",
+              "text": "She watches the number settle and does not say what she feels.",
+              "html": "She watches the number settle and does not say what she feels.",
+              "stage": {
+                "beatId": "ch05.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b008",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Ring report.",
+              "html": "Ring report.",
+              "stage": {
+                "beatId": "ch05.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b009",
+              "type": "narration",
+              "text": "He pulls it onto the wall. Ring 3, cortisol at a low plateau, loiter time back to normal. Ring 7, falling, not yet fallen.",
+              "html": "He pulls it onto the wall. Ring 3, cortisol at a low plateau, loiter time back to normal. Ring 7, falling, not yet fallen.",
+              "stage": {
+                "beatId": "ch05.s01.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b010",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "No breaches. Chem-bank at nineteen percent. Not draining.",
+              "html": "No breaches. Chem-bank at nineteen percent. Not draining.",
+              "stage": {
+                "beatId": "ch05.s01.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b011",
+              "type": "narration",
+              "text": "On the AI Core feed, the Faithful have broken into ordinary noise: people arguing, gossiping, asking where breakfast is.",
+              "html": "On the AI Core feed, the Faithful have broken into ordinary noise: people arguing, gossiping, asking where breakfast is.",
+              "stage": {
+                "beatId": "ch05.s01.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b012",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Listen to that. Three thousand people remembering they have stomachs.",
+              "html": "Listen to that. Three thousand people remembering they have stomachs.",
+              "stage": {
+                "beatId": "ch05.s01.b012",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "happy",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b013",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Is that a medical term?",
+              "html": "Is that a medical term?",
+              "stage": {
+                "beatId": "ch05.s01.b013",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b014",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "It's the best one I know.",
+              "html": "It&#39;s the best one I know.",
+              "stage": {
+                "beatId": "ch05.s01.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b015",
+              "type": "narration",
+              "text": "He turns to the room.",
+              "html": "He turns to the room.",
+              "stage": {
+                "beatId": "ch05.s01.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b016",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "We have a new baseline. The physics has stopped moving. I don't know on what schedule it moves next.",
+              "html": "We have a new baseline. The physics has stopped moving. I don&#39;t know on what schedule it moves next.",
+              "stage": {
+                "beatId": "ch05.s01.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b017",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I intend to find out.",
+              "html": "I intend to find out.",
+              "stage": {
+                "beatId": "ch05.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b018",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s01.b018",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [
+                  "vera_lin",
+                  "kaelen_vance"
+                ],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b019",
+              "type": "narration",
+              "text": "On Aris's screen there is a slope: the drift, risen and fallen around a new mean. Six hours of it. Not a single prime.",
+              "html": "On Aris&#39;s screen there is a slope: the drift, risen and fallen around a new mean. Six hours of it. Not a single prime.",
+              "stage": {
+                "beatId": "ch05.s01.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b020",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "No one spoke.",
+              "html": "No one spoke.",
+              "stage": {
+                "beatId": "ch05.s01.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b021",
+              "type": "narration",
+              "text": "They both look at him.",
+              "html": "They both look at him.",
+              "stage": {
+                "beatId": "ch05.s01.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b022",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I want that in the standing watch log, Kaelen. In plain words.",
+              "html": "I want that in the standing watch log, Kaelen. In plain words.",
+              "stage": {
+                "beatId": "ch05.s01.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b023",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "So that when the next scholar finds primes in the noise, they find the correction underneath.",
+              "html": "So that when the next scholar finds primes in the noise, they find the correction underneath.",
+              "stage": {
+                "beatId": "ch05.s01.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b024",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Write it.",
+              "html": "Write it.",
+              "stage": {
+                "beatId": "ch05.s01.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b025",
+              "type": "narration",
+              "text": "Aris writes it. The date. His name.",
+              "html": "Aris writes it. The date. His name.",
+              "stage": {
+                "beatId": "ch05.s01.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s01.b026",
+              "type": "narration",
+              "text": "It reads: NO ONE SPOKE. THE PRIMES WERE NOISE WITH A SHAPE I WANTED. A SECOND RHYTHM FIT AS WELL. — A. THORNE",
+              "html": "It reads: NO ONE SPOKE. THE PRIMES WERE NOISE WITH A SHAPE I WANTED. A SECOND RHYTHM FIT AS WELL. — A. THORNE",
+              "stage": {
+                "beatId": "ch05.s01.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "standing_watch_log_entry"
+              }
+            },
+            {
+              "id": "ch05.s01.b027",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "There.",
+              "html": "There.",
+              "stage": {
+                "beatId": "ch05.s01.b027",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch05.s01.b028",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "How does it feel?",
+              "html": "How does it feel?",
+              "stage": {
+                "beatId": "ch05.s01.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s01.b029",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Like putting down something I've been carrying since I was a boy.",
+              "html": "Like putting down something I&#39;ve been carrying since I was a boy.",
+              "stage": {
+                "beatId": "ch05.s01.b029",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "thinking",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch05.s01.b030",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Good. Now sleep, before you find a pattern in the ceiling tiles.",
+              "html": "Good. Now sleep, before you find a pattern in the ceiling tiles.",
+              "stage": {
+                "beatId": "ch05.s01.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b031",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "There is one. Every fourth tile is—",
+              "html": "There is one. Every fourth tile is—",
+              "stage": {
+                "beatId": "ch05.s01.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch05.s01.b032",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Aris.",
+              "html": "Aris.",
+              "stage": {
+                "beatId": "ch05.s01.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch05.s01.b033",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Going.",
+              "html": "Going.",
+              "stage": {
+                "beatId": "ch05.s01.b033",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "happy",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "happy"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch05.s02",
+          "label": "ch_05_s02",
+          "title": "Observational Core, Thursday, before dawn a week later",
+          "locationKey": "observational_core",
+          "bgPath": "images/bg observational_core_dawn.webp",
+          "transition": "fade",
+          "pause": 1,
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch05.s02.b001",
+              "type": "narration",
+              "text": "The chamber is dark and quiet. One plot glows on the black glass: the slope, rising and falling around its new mean. A cot has been dragged in beside the console.",
+              "html": "The chamber is dark and quiet. One plot glows on the black glass: the slope, rising and falling around its new mean. A cot has been dragged in beside the console.",
+              "stage": {
+                "beatId": "ch05.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "cold_hum_life_support"
+              }
+            },
+            {
+              "id": "ch05.s02.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s02.b002",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": "soft_chime_then_second",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b003",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Harness. Something changed and it can't tell me what.",
+              "html": "Harness. Something changed and it can&#39;t tell me what.",
+              "stage": {
+                "beatId": "ch05.s02.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b004",
+              "type": "narration",
+              "text": "He is at the console in ninety seconds, bare feet on the cold deck. He reads.",
+              "html": "He is at the console in ninety seconds, bare feet on the cold deck. He reads.",
+              "stage": {
+                "beatId": "ch05.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b005",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Cross-sections wobbled. A part in a hundred thousand. Gone in under two seconds.",
+              "html": "Cross-sections wobbled. A part in a hundred thousand. Gone in under two seconds.",
+              "stage": {
+                "beatId": "ch05.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b006",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The layer caught it. Rewrote its gates. Settled.",
+              "html": "The layer caught it. Rewrote its gates. Settled.",
+              "stage": {
+                "beatId": "ch05.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b007",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And the harness flagged it because the rewrite didn't match its prediction. That's all.",
+              "html": "And the harness flagged it because the rewrite didn&#39;t match its prediction. That&#39;s all.",
+              "stage": {
+                "beatId": "ch05.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Nothing failed.",
+              "html": "Nothing failed.",
+              "stage": {
+                "beatId": "ch05.s02.b008",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "sad",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "sad"
+              }
+            },
+            {
+              "id": "ch05.s02.b009",
+              "type": "narration",
+              "text": "He sits and looks at the wobble for a while. His hand rests near the old brute-force checker.",
+              "html": "He sits and looks at the wobble for a while. His hand rests near the old brute-force checker.",
+              "stage": {
+                "beatId": "ch05.s02.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b010",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Once upon a time, this was a knock on the door.",
+              "html": "Once upon a time, this was a knock on the door.",
+              "stage": {
+                "beatId": "ch05.s02.b010",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b011",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I'd have run the long checker. Found Osei's fourteen days. Called it a hand reaching through the physics.",
+              "html": "I&#39;d have run the long checker. Found Osei&#39;s fourteen days. Called it a hand reaching through the physics.",
+              "stage": {
+                "beatId": "ch05.s02.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b012",
+              "type": "narration",
+              "text": "He does not run the checker. He logs the wobble as a wobble, attaches the layer's rewrite, and sets the watch for the next shift.",
+              "html": "He does not run the checker. He logs the wobble as a wobble, attaches the layer&#39;s rewrite, and sets the watch for the next shift.",
+              "stage": {
+                "beatId": "ch05.s02.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b013",
+              "type": "narration",
+              "text": "He is almost back to his cot before he realises.",
+              "html": "He is almost back to his cot before he realises.",
+              "stage": {
+                "beatId": "ch05.s02.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b014",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I wasn't even tempted.",
+              "html": "I wasn&#39;t even tempted.",
+              "stage": {
+                "beatId": "ch05.s02.b014",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "surprised",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch05.s02.b015",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s02.b015",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "surprised",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "sera",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": "door_hissing_open",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b016",
+              "type": "narration",
+              "text": "A woman stands in the doorway as if she has come a long way and is not sure of the last step.",
+              "html": "A woman stands in the doorway as if she has come a long way and is not sure of the last step.",
+              "stage": {
+                "beatId": "ch05.s02.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b017",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "Doctor Thorne?",
+              "html": "Doctor Thorne?",
+              "stage": {
+                "beatId": "ch05.s02.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b018",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Yes.",
+              "html": "Yes.",
+              "stage": {
+                "beatId": "ch05.s02.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "surprised"
+              }
+            },
+            {
+              "id": "ch05.s02.b019",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "I'm Sera. I kept the primes.",
+              "html": "I&#39;m Sera. I kept the primes.",
+              "stage": {
+                "beatId": "ch05.s02.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b020",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "I kept them in my bunk and prayed to them. I told my daughter they were the Programmer's countdown.",
+              "html": "I kept them in my bunk and prayed to them. I told my daughter they were the Programmer&#39;s countdown.",
+              "stage": {
+                "beatId": "ch05.s02.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b021",
+              "type": "narration",
+              "text": "She unfolds the slip. Lines of careful handwriting.",
+              "html": "She unfolds the slip. Lines of careful handwriting.",
+              "stage": {
+                "beatId": "ch05.s02.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b022",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "They've started again. Last night, at the end of the watch. The drift came back, and it spaced itself the way it did before.",
+              "html": "They&#39;ve started again. Last night, at the end of the watch. The drift came back, and it spaced itself the way it did before.",
+              "stage": {
+                "beatId": "ch05.s02.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b023",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "I came before the Faithful hear it. Because I don't know what I'd do if they heard it from someone else.",
+              "html": "I came before the Faithful hear it. Because I don&#39;t know what I&#39;d do if they heard it from someone else.",
+              "stage": {
+                "beatId": "ch05.s02.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b024",
+              "type": "narration",
+              "text": "Aris takes the slip. On it are the intervals from the wobble he has just logged, and beneath them, worked out by hand, a spacing that looks exactly like the old countdown.",
+              "html": "Aris takes the slip. On it are the intervals from the wobble he has just logged, and beneath them, worked out by hand, a spacing that looks exactly like the old countdown.",
+              "stage": {
+                "beatId": "ch05.s02.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b025",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Of course it does.",
+              "html": "Of course it does.",
+              "stage": {
+                "beatId": "ch05.s02.b025",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b026",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Any slope you feed it comes back as a countdown. It did for me too.",
+              "html": "Any slope you feed it comes back as a countdown. It did for me too.",
+              "stage": {
+                "beatId": "ch05.s02.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b027",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s02.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b028",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "I know how this feels, Sera. I built the whole thing.",
+              "html": "I know how this feels, Sera. I built the whole thing.",
+              "stage": {
+                "beatId": "ch05.s02.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b029",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Here's the truth, and I want you to hear it plain before anyone gives you a version you like better.",
+              "html": "Here&#39;s the truth, and I want you to hear it plain before anyone gives you a version you like better.",
+              "stage": {
+                "beatId": "ch05.s02.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b030",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The primes had a rival that fit just as well. A man named Osei, cleaning the counters every fourteen days.",
+              "html": "The primes had a rival that fit just as well. A man named Osei, cleaning the counters every fourteen days.",
+              "stage": {
+                "beatId": "ch05.s02.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b031",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "There's no one on the other side of the cliff.",
+              "html": "There&#39;s no one on the other side of the cliff.",
+              "stage": {
+                "beatId": "ch05.s02.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b032",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Last night the drift spaced itself the same way because it's the same drift. The shape isn't a letter. It never was.",
+              "html": "Last night the drift spaced itself the same way because it&#39;s the same drift. The shape isn&#39;t a letter. It never was.",
+              "stage": {
+                "beatId": "ch05.s02.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b033",
+              "type": "narration",
+              "text": "Sera looks at the slip in his hand for a long moment.",
+              "html": "Sera looks at the slip in his hand for a long moment.",
+              "stage": {
+                "beatId": "ch05.s02.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b034",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "And the ones who prayed?",
+              "html": "And the ones who prayed?",
+              "stage": {
+                "beatId": "ch05.s02.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b035",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You gave them something to hold in a bad hour. You held it too.",
+              "html": "You gave them something to hold in a bad hour. You held it too.",
+              "stage": {
+                "beatId": "ch05.s02.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b036",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "That isn't a crime, and it isn't a lie. As long as you put it down when you know better.",
+              "html": "That isn&#39;t a crime, and it isn&#39;t a lie. As long as you put it down when you know better.",
+              "stage": {
+                "beatId": "ch05.s02.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b037",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "You put it down before it hurt anyone. That's the watch, Sera. That is exactly the watch.",
+              "html": "You put it down before it hurt anyone. That&#39;s the watch, Sera. That is exactly the watch.",
+              "stage": {
+                "beatId": "ch05.s02.b037",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b038",
+              "type": "narration",
+              "text": "He steps back from the console.",
+              "html": "He steps back from the console.",
+              "stage": {
+                "beatId": "ch05.s02.b038",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b039",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "The slope's on the main display. It reads out plainly. Would you like to see how the night shift is done?",
+              "html": "The slope&#39;s on the main display. It reads out plainly. Would you like to see how the night shift is done?",
+              "stage": {
+                "beatId": "ch05.s02.b039",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s02.b040",
+              "type": "narration",
+              "text": "Sera folds the ration slip. She does not answer at once.",
+              "html": "Sera folds the ration slip. She does not answer at once.",
+              "stage": {
+                "beatId": "ch05.s02.b040",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s02.b041",
+              "type": "narration",
+              "text": "Then she sits down in the second chair.",
+              "html": "Then she sits down in the second chair.",
+              "stage": {
+                "beatId": "ch05.s02.b041",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch05.s03",
+          "label": "ch_05_s03",
+          "title": "Bio-Integration Lab, Saturday",
+          "locationKey": "bio_integration_lab",
+          "bgPath": "images/bg bio_integration_lab_night.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch05.s03.b001",
+              "type": "narration",
+              "text": "The lab lights are back to warm white. Fresh plants green the hydroponic trays. On the wall screen, the DNA repair statistics are calm, long flat lines.",
+              "html": "The lab lights are back to warm white. Fresh plants green the hydroponic trays. On the wall screen, the DNA repair statistics are calm, long flat lines.",
+              "stage": {
+                "beatId": "ch05.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "incubator_fans_soft_steady"
+              }
+            },
+            {
+              "id": "ch05.s03.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s03.b002",
+                "shows": [
+                  {
+                    "charKey": "vera_lin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b003",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A plateau. Harder than a fall.",
+              "html": "A plateau. Harder than a fall.",
+              "stage": {
+                "beatId": "ch05.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b004",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "A fall is a cliff. A cliff is easy. A plateau is a slow lie the gates have to be talked out of every hour.",
+              "html": "A fall is a cliff. A cliff is easy. A plateau is a slow lie the gates have to be talked out of every hour.",
+              "stage": {
+                "beatId": "ch05.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b005",
+              "type": "narration",
+              "text": "She patches. Re-patches. Then she opens the layer's header.",
+              "html": "She patches. Re-patches. Then she opens the layer&#39;s header.",
+              "stage": {
+                "beatId": "ch05.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b006",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Header. Version one point nine. Name.",
+              "html": "Header. Version one point nine. Name.",
+              "stage": {
+                "beatId": "ch05.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b007",
+              "type": "narration",
+              "text": "She pauses. Then she types it.",
+              "html": "She pauses. Then she types it.",
+              "stage": {
+                "beatId": "ch05.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b008",
+              "type": "narration",
+              "text": "It reads: THE LOCAL PATCH. SMALL, SIGNED, PUSHED TO THE NODE THAT NEEDS IT. THE KERES IS THREE CENTURIES OF THESE. NOTHING IN THIS LAYER IS FINAL.",
+              "html": "It reads: THE LOCAL PATCH. SMALL, SIGNED, PUSHED TO THE NODE THAT NEEDS IT. THE KERES IS THREE CENTURIES OF THESE. NOTHING IN THIS LAYER IS FINAL.",
+              "stage": {
+                "beatId": "ch05.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "header_vera_firmware_layer"
+              }
+            },
+            {
+              "id": "ch05.s03.b009",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "That's what the ship always called a firmware fix. A local patch.",
+              "html": "That&#39;s what the ship always called a firmware fix. A local patch.",
+              "stage": {
+                "beatId": "ch05.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b010",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Turns out we're made of them.",
+              "html": "Turns out we&#39;re made of them.",
+              "stage": {
+                "beatId": "ch05.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b011",
+              "type": "narration",
+              "text": "She pulls up the gene banks. A fault light blinks amber.",
+              "html": "She pulls up the gene banks. A fault light blinks amber.",
+              "stage": {
+                "beatId": "ch05.s03.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b012",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "Oh, hello.",
+              "html": "Oh, hello.",
+              "stage": {
+                "beatId": "ch05.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b013",
+              "type": "narration",
+              "text": "A repair cascade is running ahead of its input, trying to fit a proofreading rate to a plateau that is not there yet.",
+              "html": "A repair cascade is running ahead of its input, trying to fit a proofreading rate to a plateau that is not there yet.",
+              "stage": {
+                "beatId": "ch05.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b014",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "You're betting on the future again.",
+              "html": "You&#39;re betting on the future again.",
+              "stage": {
+                "beatId": "ch05.s03.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b015",
+              "type": "narration",
+              "text": "On the screen, the filter she wrote before zero catches it, three lines longer than it should be. The gates refuse the bet. They hold at what is.",
+              "html": "On the screen, the filter she wrote before zero catches it, three lines longer than it should be. The gates refuse the bet. They hold at what is.",
+              "stage": {
+                "beatId": "ch05.s03.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b016",
+              "type": "narration",
+              "text": "The cascade runs down and stops. The green points settle.",
+              "html": "The cascade runs down and stops. The green points settle.",
+              "stage": {
+                "beatId": "ch05.s03.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b017",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s03.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s03.b018",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "You don't get to know the future.",
+              "html": "You don&#39;t get to know the future.",
+              "stage": {
+                "beatId": "ch05.s03.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b019",
+              "type": "line",
+              "speaker": "vera_lin",
+              "speakerLabel": "VERA",
+              "text": "You get to know the next second. That's enough.",
+              "html": "You get to know the next second. That&#39;s enough.",
+              "stage": {
+                "beatId": "ch05.s03.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "vera_lin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s03.b020",
+              "type": "narration",
+              "text": "She picks up a cup of tea. For once, it is hot. She drinks it.",
+              "html": "She picks up a cup of tea. For once, it is hot. She drinks it.",
+              "stage": {
+                "beatId": "ch05.s03.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch05.s04",
+          "label": "ch_05_s04",
+          "title": "Concourse, Sunday",
+          "locationKey": "concourse",
+          "bgPath": "images/bg concourse_evening.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch05.s04.b001",
+              "type": "narration",
+              "text": "The long curved promenade glows warm yellow. Shops are open. Overhead, across the cylinder, the hanging gardens are lit gold. A small crowd has gathered around a bench by the central display, not praying, just listening.",
+              "html": "The long curved promenade glows warm yellow. Shops are open. Overhead, across the cylinder, the hanging gardens are lit gold. A small crowd has gathered around a bench by the central display, not praying, just listening.",
+              "stage": {
+                "beatId": "ch05.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "murmur_ordinary_evening_crowd"
+              }
+            },
+            {
+              "id": "ch05.s04.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s04.b002",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "thinking",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "sera",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s04.b003",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "End of shift. The slope held within four parts in a million. One wobble at oh three seventeen on Thursday, caught and settled.",
+              "html": "End of shift. The slope held within four parts in a million. One wobble at oh three seventeen on Thursday, caught and settled.",
+              "stage": {
+                "beatId": "ch05.s04.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b004",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "Gene banks steady. Reactor steady. Next reading at the end of the night shift.",
+              "html": "Gene banks steady. Reactor steady. Next reading at the end of the night shift.",
+              "stage": {
+                "beatId": "ch05.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b005",
+              "type": "narration",
+              "text": "She looks up. A few people nod. A child yawns. Someone asks a question about the reactor, and she answers it plainly.",
+              "html": "She looks up. A few people nod. A child yawns. Someone asks a question about the reactor, and she answers it plainly.",
+              "stage": {
+                "beatId": "ch05.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s04.b006",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "A population that can't see the numbers invents them.",
+              "html": "A population that can&#39;t see the numbers invents them.",
+              "stage": {
+                "beatId": "ch05.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "thinking"
+              }
+            },
+            {
+              "id": "ch05.s04.b007",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "She's good, Chief.",
+              "html": "She&#39;s good, Chief.",
+              "stage": {
+                "beatId": "ch05.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b008",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "She's very good.",
+              "html": "She&#39;s very good.",
+              "stage": {
+                "beatId": "ch05.s04.b008",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b009",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Same time tomorrow?",
+              "html": "Same time tomorrow?",
+              "stage": {
+                "beatId": "ch05.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b010",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "Every shift. Read it as arithmetic. Not a sermon and not a prophecy.",
+              "html": "Every shift. Read it as arithmetic. Not a sermon and not a prophecy.",
+              "stage": {
+                "beatId": "ch05.s04.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b011",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "When the drift comes back hot, they'll already know the language for it.",
+              "html": "When the drift comes back hot, they&#39;ll already know the language for it.",
+              "stage": {
+                "beatId": "ch05.s04.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b012",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s04.b012",
+                "shows": [
+                  {
+                    "charKey": "kaelen_vance",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [
+                  "sera"
+                ],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s04.b013",
+              "type": "narration",
+              "text": "The crowd breaks up into ordinary evening noise. Somebody laughs. A choir is rehearsing two shop fronts down.",
+              "html": "The crowd breaks up into ordinary evening noise. Somebody laughs. A choir is rehearsing two shop fronts down.",
+              "stage": {
+                "beatId": "ch05.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s04.b014",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I moved the old patrol protocols to the archive today.",
+              "html": "I moved the old patrol protocols to the archive today.",
+              "stage": {
+                "beatId": "ch05.s04.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b015",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "With the fixed-constant firmware.",
+              "html": "With the fixed-constant firmware.",
+              "stage": {
+                "beatId": "ch05.s04.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b016",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "With a note saying I ordered it, and why.",
+              "html": "With a note saying I ordered it, and why.",
+              "stage": {
+                "beatId": "ch05.s04.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b017",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I wrote no protocol for the Faithful. I punished no one.",
+              "html": "I wrote no protocol for the Faithful. I punished no one.",
+              "stage": {
+                "beatId": "ch05.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b018",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "Some people say you should have.",
+              "html": "Some people say you should have.",
+              "stage": {
+                "beatId": "ch05.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b019",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "A fever that isn't punished breaks on its own. A fever that's punished learns to hide.",
+              "html": "A fever that isn&#39;t punished breaks on its own. A fever that&#39;s punished learns to hide.",
+              "stage": {
+                "beatId": "ch05.s04.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b020",
+              "type": "narration",
+              "text": "He watches Sera fold her slate away and walk home with her daughter.",
+              "html": "He watches Sera fold her slate away and walk home with her daughter.",
+              "stage": {
+                "beatId": "ch05.s04.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s04.b021",
+              "type": "line",
+              "speaker": "watch_officer",
+              "speakerLabel": "WATCH OFFICER",
+              "text": "You sound pleased, Chief.",
+              "html": "You sound pleased, Chief.",
+              "stage": {
+                "beatId": "ch05.s04.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "watch_officer",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b022",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "I'm not pleased. Pleased means the problem's over.",
+              "html": "I&#39;m not pleased. Pleased means the problem&#39;s over.",
+              "stage": {
+                "beatId": "ch05.s04.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s04.b023",
+              "type": "line",
+              "speaker": "kaelen_vance",
+              "speakerLabel": "KAELEN",
+              "text": "It's never over. But the ship's holding. And holding is enough.",
+              "html": "It&#39;s never over. But the ship&#39;s holding. And holding is enough.",
+              "stage": {
+                "beatId": "ch05.s04.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "kaelen_vance",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch05.s05",
+          "label": "ch_05_s05",
+          "title": "Observational Core, Sunday, late night a week later",
+          "locationKey": "observational_core",
+          "bgPath": "images/bg observational_core_night.webp",
+          "transition": "fade",
+          "pause": 1,
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch05.s05.b001",
+              "type": "narration",
+              "text": "The cold round chamber at the ship's spine. The slope glows on the black glass. Dust turns slowly in the projector beams, as it always has.",
+              "html": "The cold round chamber at the ship&#39;s spine. The slope glows on the black glass. Dust turns slowly in the projector beams, as it always has.",
+              "stage": {
+                "beatId": "ch05.s05.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "hum_life_support_quarter"
+              }
+            },
+            {
+              "id": "ch05.s05.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s05.b002",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s05.b003",
+              "type": "narration",
+              "text": "Aris logs the drift. Then he sets his slate down and does not pick it up again.",
+              "html": "Aris logs the drift. Then he sets his slate down and does not pick it up again.",
+              "stage": {
+                "beatId": "ch05.s05.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s05.b004",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "A quarter tone sharp of the one I grew up with.",
+              "html": "A quarter tone sharp of the one I grew up with.",
+              "stage": {
+                "beatId": "ch05.s05.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b005",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Steady. Not counting down to anything.",
+              "html": "Steady. Not counting down to anything.",
+              "stage": {
+                "beatId": "ch05.s05.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b006",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Just the Keres. Breathing.",
+              "html": "Just the Keres. Breathing.",
+              "stage": {
+                "beatId": "ch05.s05.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b007",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "All of us, carried through a universe that changes its mind.",
+              "html": "All of us, carried through a universe that changes its mind.",
+              "stage": {
+                "beatId": "ch05.s05.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "arkship_keres_seen_outside",
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b008",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "And something inside it learned to bend.",
+              "html": "And something inside it learned to bend.",
+              "stage": {
+                "beatId": "ch05.s05.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b009",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch05.s05.b009",
+                "shows": [
+                  {
+                    "charKey": "aris_thorne",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "sera",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": "door_hissing_open",
+                "ambience": null,
+                "cg": null
+              }
+            },
+            {
+              "id": "ch05.s05.b010",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "Evening, Doctor.",
+              "html": "Evening, Doctor.",
+              "stage": {
+                "beatId": "ch05.s05.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b011",
+              "type": "line",
+              "speaker": "aris_thorne",
+              "speakerLabel": "ARIS",
+              "text": "Evening. It's all yours.",
+              "html": "Evening. It&#39;s all yours.",
+              "stage": {
+                "beatId": "ch05.s05.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "aris_thorne",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b012",
+              "type": "narration",
+              "text": "He hands her the watch. She sits down in the second chair and opens the log.",
+              "html": "He hands her the watch. She sits down in the second chair and opens the log.",
+              "stage": {
+                "beatId": "ch05.s05.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s05.b013",
+              "type": "line",
+              "speaker": "sera",
+              "speakerLabel": "SERA",
+              "text": "Night shift. Week two of the new baseline. The slope held. No wobble since Thursday.",
+              "html": "Night shift. Week two of the new baseline. The slope held. No wobble since Thursday.",
+              "stage": {
+                "beatId": "ch05.s05.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "sera",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch05.s05.b014",
+              "type": "narration",
+              "text": "Her voice does not rise or fall with the numbers. It just reads them.",
+              "html": "Her voice does not rise or fall with the numbers. It just reads them.",
+              "stage": {
+                "beatId": "ch05.s05.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch05.s05.b015",
+              "type": "narration",
+              "text": "Aris listens, and for the first time in years, he closes his eyes in this room and lets himself rest.",
+              "html": "Aris listens, and for the first time in years, he closes his eyes in this room and lets himself rest.",
+              "stage": {
+                "beatId": "ch05.s05.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": null
+    }
+  ],
+  "puzzles": {},
+  "editions": {
+    "en": {
+      "lang": "en",
+      "title": "The Local Patch",
+      "characterNames": {
+        "aris_thorne": "Aris Thorne",
+        "aris_thorne#1": "Dr Thorne",
+        "aris_thorne#2": "Thorne",
+        "vera_lin": "Vera Lin",
+        "vera_lin#1": "Dr Lin",
+        "vera_lin#2": "Lin",
+        "kaelen_vance": "Kaelen Vance",
+        "kaelen_vance#1": "Chief Vance",
+        "kaelen_vance#2": "the Chief",
+        "kaelen_vance#3": "Vance",
+        "watch_officer": "Watch Officer",
+        "woman_in_line": "Woman in Line",
+        "voice_in_the_crowd": "Voice in the Crowd",
+        "voices_in_the_crowd": "Voices in the Crowd",
+        "sera": "Sera"
+      },
+      "chapterTitles": {
+        "1": "Half-Life Drift",
+        "2": "Patch Faithful",
+        "3": "Polymorphic Firmware",
+        "4": "Zero",
+        "5": "The Local Patch"
+      },
+      "endings": {},
+      "choices": {},
+      "beats": {
+        "ch01.s01.b001": "The round chamber is dark except for cyan decay curves floating on the black glass walls. Dust turns slowly in the projector beams. It is cold enough to see breath.",
+        "ch01.s01.b002": "In the centre, one worn chair. A rack of twelve sealed ampoules glows faintly blue beside it, each with its own small counter ticking.",
+        "ch01.s01.b004": "Cold. Good. Cold keeps me honest.",
+        "ch01.s01.b005": "He breathes on his fingers and taps the slate awake.",
+        "ch01.s01.b006": "Life support. Fifth below middle C. Same note since I was a boy.",
+        "ch01.s01.b007": "He tilts his head and listens.",
+        "ch01.s01.b008": "Except it isn't, this morning.",
+        "ch01.s01.b009": "He taps the slate. A note joins a column of a thousand other notes.",
+        "ch01.s01.b010": "A quarter tone flat. Logged. Everything gets logged.",
+        "ch01.s01.b011": "Somewhere in the logs there's a message. There always is, if you keep enough of them.",
+        "ch01.s01.b012": "He turns to the ampoule rack. Twelve small glass vials, a gram of graphite in each, each watched by a counter that ticks at every blue flash of decay.",
+        "ch01.s01.b013": "Good morning, carbon-fourteen. Fifty-seven hundred and thirty years, give or take forty. The most boring number on the ship.",
+        "ch01.s01.b014": "You were boring when we left Sol. You were boring when my grandmother was born on Ring 2.",
+        "ch01.s01.b015": "He pulls up the overnight counts. He stops.",
+        "ch01.s01.b016": "And you. What are you doing?",
+        "ch01.s01.b017": "The screen reads: HALF-LIFE ESTIMATE 5,729.83 YEARS. DEVIATION FROM REFERENCE: -0.003%. ALL TWELVE CHANNELS.",
+        "ch01.s01.b018": "Not one channel. All twelve. Same size. Same phase.",
+        "ch01.s01.b019": "A dirty detector does one channel. A warm housing does the top row. Not all twelve. Not in step.",
+        "ch01.s01.b020": "He pulls the photomultiplier diagnostics, the thermal logs, the calibration history. One by one he swipes them away.",
+        "ch01.s01.b021": "Not the detector. Not the housing. Not heat. Not the clock.",
+        "ch01.s01.b022": "He checks the time on three separate clocks. Three times he runs the numbers. Three times they agree.",
+        "ch01.s01.b023": "Eleven years. Eleven years this assay has been as boring as a stone. And this morning it moves.",
+        "ch01.s01.b025": "He sits down in the worn chair and does not move for a while. His breath clouds and clears.",
+        "ch01.s01.b026": "Three thousandths of a percent. A rounding error. A nothing.",
+        "ch01.s01.b027": "Except nothing has moved in this number since before the ship was built.",
+        "ch01.s01.b028": "He stands and drags the whole eleven-year trace onto the wall. Thousands of daily counts unroll across the black glass like a tide line.",
+        "ch01.s01.b029": "Show me where you moved before. Show me the little ones I missed.",
+        "ch01.s01.b030": "He writes a script. Then a longer one. Then a loop that checks every period from one day to four thousand.",
+        "ch01.s01.b031": "Come on. Come on. You don't wake up one morning and move. Nothing does. You've been practising.",
+        "ch01.s01.b032": "A list of numbers appears in the air in front of him.",
+        "ch01.s01.b033": "Two. Three. Five. Seven. Eleven. Thirteen. Seventeen. Nineteen.",
+        "ch01.s01.b034": "He stops breathing for a moment.",
+        "ch01.s01.b035": "Primes.",
+        "ch01.s01.b036": "The gaps between the drifts are primes. In order. And each one a little shorter than the last.",
+        "ch01.s01.b037": "Like something ticking down.",
+        "ch01.s01.b038": "He checks them against everything he can name: the rotation of the ship, the reactor shield cycle, the counter calibration, the cleaning schedule of the vents.",
+        "ch01.s01.b039": "The ship turns every ninety seconds. No. The shield cycles every six days. No. The vents, eleven days. Close. No.",
+        "ch01.s01.b040": "Nothing matches. Nothing natural ticks like this.",
+        "ch01.s01.b041": "He presses both palms flat on the cold console and laughs once, short and ugly.",
+        "ch01.s01.b042": "Twenty years I said it. In papers. In meetings. In my own head at three in the morning. A world this finely set has a setter.",
+        "ch01.s01.b043": "And a setter leaves fingerprints.",
+        "ch01.s01.b044": "He looks at the comm panel. His hand is already on it.",
+        "ch01.s01.b045": "Vera. Vera, are you up? Of course you're up. I need you to look at something.",
+        "ch01.s02.b001": "The long lab is bright and warm. Green light glows from the incubators. Assay plates shine pale yellow under a hood, and the air smells of agar and warm salt water.",
+        "ch01.s02.b002": "Racks of sample tubes line the white benches. Along one wall, plants grow in hydroponic trays, their roots trailing in clear water.",
+        "ch01.s02.b004": "Two, three, five, seven, eleven, thirteen, seventeen, nineteen.",
+        "ch01.s02.b005": "Morning to you too, Aris.",
+        "ch01.s02.b006": "Two, three, five—",
+        "ch01.s02.b007": "I heard you the first time. Spacing of what to what?",
+        "ch01.s02.b008": "Interval start to interval start. The gaps between drift episodes follow the primes. It's a signature.",
+        "ch01.s02.b009": "It's a fit to a sparse series.",
+        "ch01.s02.b010": "Vera—",
+        "ch01.s02.b011": "You fed eleven years of counts to a sequence checker until the sequence checker found a sequence. How many periods are hiding in eleven years of daily data?",
+        "ch01.s02.b012": "That isn't the—",
+        "ch01.s02.b013": "A lot, Aris. You found the one you went looking for.",
+        "ch01.s02.b014": "You're not listening.",
+        "ch01.s02.b015": "I'm listening perfectly.",
+        "ch01.s02.b016": "She sets the pipette down and turns. Her stained hands rest on the bench. The stains have not come off in twenty years.",
+        "ch01.s02.b017": "I'm telling you I have my own anomaly. And mine has a mechanism.",
+        "ch01.s02.b019": "She swipes the wall. A grid of enzyme curves replaces his face for a moment, then shrinks to share the screen with him.",
+        "ch01.s02.b020": "The eight hydrolases. The enzymes the gene banks use to turn stored food into food. Their curves have been flat for thirty years.",
+        "ch01.s02.b021": "Boring.",
+        "ch01.s02.b022": "Beautifully boring. I check them every Monday and I'm bored every Monday. It's my favourite part of the week.",
+        "ch01.s02.b023": "This week three of them speed up. Parts per million. Every replicate.",
+        "ch01.s02.b024": "That's tiny.",
+        "ch01.s02.b025": "It is. And the DNA repair error rate in the tissue bank went up with it. A few more failed proofreads in ten million.",
+        "ch01.s02.b026": "The kind of thing that takes a century to matter.",
+        "ch01.s02.b027": "A century isn't what worries me. The slope worries me.",
+        "ch01.s02.b028": "She taps the curve. It glows where it bends.",
+        "ch01.s02.b029": "If enzyme rates drift, the way molecules hold on to each other is drifting. If that drifts, the forces holding proteins in their folds are drifting.",
+        "ch01.s02.b030": "Which means a constant has moved.",
+        "ch01.s02.b031": "Which means a constant has moved.",
+        "ch01.s02.b032": "Which means someone moved it.",
+        "ch01.s02.b033": "She looks at him for a long moment, then picks her pipette back up.",
+        "ch01.s02.b034": "It means the room changed temperature. Bodies adapt to that. So does software.",
+        "ch01.s02.b035": "You don't even want to know why?",
+        "ch01.s02.b036": "I want to know how far. Why is a luxury for people with time.",
+        "ch01.s02.b037": "That's the saddest thing a scientist's ever said to me.",
+        "ch01.s02.b038": "Then you don't spend enough time with scientists.",
+        "ch01.s02.b039": "She goes back to her plates. Then she stops, pipette in the air.",
+        "ch01.s02.b040": "If the forces are shifting down at the particle level, where would it bite first?",
+        "ch01.s02.b041": "The reactor.",
+        "ch01.s02.b042": "The blanket. The lithium. The neutron economy is the most sensitive scale on this ship.",
+        "ch01.s02.b043": "She pulls up a feed from the reactor ring. Orange numbers march across the bench screen.",
+        "ch01.s02.b044": "A single line, highlighted in orange: LITHIUM-6 CAPTURE CROSS-SECTION: DRIFT +0.0021% (24H). FLAG: UNEXPLAINED.",
+        "ch01.s02.b045": "There you are.",
+        "ch01.s02.b046": "That's the same week. That's the same week, Vera.",
+        "ch01.s02.b047": "I can see the calendar, Aris.",
+        "ch01.s02.b049": "The enzymes, the decay rate, the blanket. Three scales that have never agreed on anything. All moving together.",
+        "ch01.s02.b050": "Now do you want to know why?",
+        "ch01.s02.b051": "Do me a favour. Don't tell anyone about the primes until I've measured how big this is.",
+        "ch01.s02.b052": "You'll want to see the full trace.",
+        "ch01.s02.b053": "Aris.",
+        "ch01.s02.b054": "I'll send it over.",
+        "ch01.s02.b055": "That's not what I asked.",
+        "ch01.s02.b056": "The wall screen goes dark.",
+        "ch01.s03.b001": "The compact room is deliberately warm and deliberately dim. The great white-line schematic of the Keres fills one wall. Rings 3 and 7 glow amber.",
+        "ch01.s03.b003": "Cortisol in the return air. Ring 3, up fourteen percent on the week. Ring 7, up nineteen.",
+        "ch01.s03.b004": "Sleep efficiency's down in both, Chief. Corridor loiter time is up. Two hundred metres of Ring 7 have gone quiet on the acoustic monitors.",
+        "ch01.s03.b005": "Quiet because they're whispering.",
+        "ch01.s03.b006": "About what?",
+        "ch01.s03.b007": "Doesn't matter yet. A body knows it's sick long before it can say where it hurts.",
+        "ch01.s03.b008": "The security subsystem calls it early civil disorder. It recommends a visible patrol.",
+        "ch01.s03.b009": "Decline it.",
+        "ch01.s03.b010": "Chief?",
+        "ch01.s03.b011": "A patrol is a signal of threat. Threat raises cortisol. Cortisol raises aggression. You don't put out a fever by heating the room.",
+        "ch01.s03.b012": "He pulls the environmental map up over the schematic. Pressures, vent flows and light bands shimmer across the rings.",
+        "ch01.s03.b013": "Rings 3 and 7. Raise ambient pressure by one and a half percent.",
+        "ch01.s03.b014": "Slow the light cycle. Stretch the evening band by forty minutes. Cool the spectrum down toward four-eighty nanometres.",
+        "ch01.s03.b015": "The blue, then?",
+        "ch01.s03.b016": "The blue for 7. Move the agricultural vents so Ring 3 gets the lavender banks.",
+        "ch01.s03.b017": "And bring up the oxytocin analog. Low draw. We already carry the stock.",
+        "ch01.s03.b018": "The subsystem says—",
+        "ch01.s03.b019": "The subsystem says punish. I say modulate.",
+        "ch01.s03.b020": "He watches the amber on the schematic.",
+        "ch01.s03.b021": "The rings are inflamed. It's an immune response, not a crime. We bring the swelling down. If it's still hot tomorrow, I cool the light further.",
+        "ch01.s03.b022": "I don't send in sticks.",
+        "ch01.s03.b024": "On the map, Ring 3's corridors turn soft lilac. On a corridor camera, a crowd that stood shoulder to shoulder drifts, without knowing why, a little apart.",
+        "ch01.s03.b025": "A man sets down a bag he has been gripping. A woman sits on a bench and rubs her eyes.",
+        "ch01.s03.b026": "The cortisol curve bends.",
+        "ch01.s03.b027": "It's working.",
+        "ch01.s03.b028": "Hours. Not days.",
+        "ch01.s03.b029": "He checks the chem-bank reservoir. It has dropped four percent in one watch.",
+        "ch01.s03.b030": "Log the reservoir draw. Every hour.",
+        "ch01.s03.b031": "It's in the automatic logs, Chief.",
+        "ch01.s03.b032": "Log it by hand. A number I write down is a number I can't pretend I didn't choose.",
+        "ch01.s03.b033": "He looks at the curve again. Something about it is wrong in a way he cannot name.",
+        "ch01.s03.b034": "Thirty years I've read this chemistry. It has never once lied to me.",
+        "ch01.s03.b035": "Is it lying now?",
+        "ch01.s03.b036": "No. It's just reading back like it was worked out in a room a quarter percent off from mine.",
+        "ch01.s03.b037": "Chief. Reactor reports a neutron flux anomaly.",
+        "ch01.s03.b038": "Kaelen closes his eyes.",
+        "ch01.s03.b039": "Of course it does.",
+        "ch01.s03.b040": "Tell them to log it. And tell the physics office I want a plain answer by end of watch. Not a paper.",
+        "ch01.s03.b041": "He moves the lavender markers one ring inward and does not look at the reactor line again.",
+        "ch01.s03.b042": "By end of watch.",
+        "ch01.s04.b001": "The chamber is darker than in the morning. The decay curves have been replaced by one long trace and a column of primes running down the black glass.",
+        "ch01.s04.b003": "Two, three, five, seven, eleven, thirteen, seventeen, nineteen.",
+        "ch01.s04.b004": "A message from Vera blinks on the slate: DON'T POST IT YET. I MEAN IT.",
+        "ch01.s04.b005": "She means it.",
+        "ch01.s04.b006": "He sets the slate down. Then picks it up again.",
+        "ch01.s04.b007": "Physics office wants a plain answer by end of watch. The Chief wants a plain answer.",
+        "ch01.s04.b008": "Plain. As if it were plain.",
+        "ch01.s04.b009": "He files the analysis in the physics office log, with his confidence intervals attached, the way the regulations say.",
+        "ch01.s04.b010": "Filed. Correct. Proper. Nobody reads the physics log.",
+        "ch01.s04.b011": "Then he opens the ship-wide board. Thousands of names glow in a list, the chatter of a normal Monday: a hydroponics swap, a choir rehearsal, a lost cat on Ring 4.",
+        "ch01.s04.b012": "They have a right to know someone is out there.",
+        "ch01.s04.b013": "Or they have a right to know I think so.",
+        "ch01.s04.b014": "His thumb hovers over the screen.",
+        "ch01.s04.b016": "Eleven years of data. Twelve channels. Prime gaps, shrinking.",
+        "ch01.s04.b017": "He types a title. Deletes it. Types another.",
+        "ch01.s04.b018": "The title reads: THE CONSTANTS ARE BEING EDITED. THE GAPS ARE PRIME. SOMEONE IS WRITING TO US.",
+        "ch01.s04.b019": "Patch notes. That's all they are. Somebody's patch notes.",
+        "ch01.s04.b020": "He presses send.",
+        "ch01.s04.b021": "For one second nothing happens. Then the first reply appears under his post. Then ten. Then a hundred, faster than he can read them.",
+        "ch01.s04.b022": "There. Now someone has to answer.",
+        "ch02.s01.b001": "The great curved promenade is three storeys of shop fronts and benches. Overhead, far across the cylinder, the hanging gardens of the other side hang upside down in the morning light.",
+        "ch02.s01.b002": "Every display along the concourse shows the same thing: a column of primes and a curve of decay counts, shrinking like a fuse.",
+        "ch02.s01.b004": "He stands in the galley line with a tray of reconstituted protein. People around him are not looking at their food. They are looking at the screens.",
+        "ch02.s01.b005": "Four hours of sleep. Four hours. What happened in four hours?",
+        "ch02.s01.b006": "His slate buzzes in his pocket. Then again. Then it does not stop.",
+        "ch02.s01.b007": "He pulls it out. The physics office log entry he filed last night sits at the top of the ship's feed, with a number beside it.",
+        "ch02.s01.b008": "Eleven thousand forwards.",
+        "ch02.s01.b009": "The physics feed. Every terminal that ever subscribed gets a copy. Nobody has unsubscribed from the physics feed in forty years.",
+        "ch02.s01.b010": "And the board post on top of it. Of course.",
+        "ch02.s01.b011": "Two places ahead of him, a woman in a grey work smock speaks to no one in particular.",
+        "ch02.s01.b012": "They're counting down.",
+        "ch02.s01.b013": "Who is?",
+        "ch02.s01.b014": "Whoever wrote us. Haven't you seen it? It's on every wall.",
+        "ch02.s01.b015": "She points at the screen. Aris's own name sits at the bottom of the post, small and white.",
+        "ch02.s01.b016": "I've seen it.",
+        "ch02.s01.b017": "My mother always said the numbers were set by a hand. The Programmer's hand. Nobody believed her.",
+        "ch02.s01.b018": "Now there's proof. With error bars.",
+        "ch02.s01.b019": "Confidence intervals.",
+        "ch02.s01.b020": "What?",
+        "ch02.s01.b021": "Nothing. They're called confidence intervals.",
+        "ch02.s01.b022": "On the far wall someone has already painted a symbol: a square bracket, open, and a column of primes inside it. The paint is still wet.",
+        "ch02.s01.b023": "The Faithful are going to the Core. All of them. You should come.",
+        "ch02.s01.b024": "She leaves her tray on the counter and walks away. Three people behind her leave theirs too.",
+        "ch02.s01.b026": "The Patch Faithful.",
+        "ch02.s01.b027": "A few hundred people who pray to the constants on Ring 5. A nuisance to the Command Node. A comfort to each other.",
+        "ch02.s01.b028": "Twenty years they've had their prayers. Now they have my confidence intervals.",
+        "ch02.s02.b001": "The tall steel bulkhead of the AI Core rises over the plaza, its round blue-white eye unblinking. Behind it, three centuries of rules: rations, air, births, disputes. Not a mind. A rulebook. The nearest thing the Keres has to a throne.",
+        "ch02.s02.b002": "Banners in hand-painted letters hang from the railings. Candles line the floor in uneven rows.",
+        "ch02.s02.b003": "Three thousand people fill the plaza and spill back up the concourse. They are not shouting. They are swaying, and humming, and waiting.",
+        "ch02.s02.b004": "A banner across the front reads, in red paint: GIVE THE SHIP TO THE ONE WHO WROTE IT.",
+        "ch02.s02.b005": "Voices rise in the crowd, a chant soft as breathing.",
+        "ch02.s02.b006": "Two. Three. Five. Seven.",
+        "ch02.s02.b007": "Eleven. Thirteen. Seventeen. Nineteen.",
+        "ch02.s02.b008": "Open the Core. Let the Programmer speak through it.",
+        "ch02.s02.b009": "Two. Three. Five. Seven.",
+        "ch02.s03.b001": "The schematic of the Keres glows on the wall. The forward spindle, where the AI Core sits, has gone from green to a deep amber. Cold tea stands untouched on the long table.",
+        "ch02.s03.b003": "Listen to them.",
+        "ch02.s03.b004": "I am listening, Chief. Three thousand at the Core doors and more coming down the spindle.",
+        "ch02.s03.b005": "Listen to the band. Low. Broad. That's prayer, not shouting.",
+        "ch02.s03.b006": "Cortisol's up around the Core.",
+        "ch02.s03.b007": "Up. Not spiking. They aren't angry.",
+        "ch02.s03.b008": "He leans closer to the feed. In the candlelight, the faces are wet-eyed and bright.",
+        "ch02.s03.b009": "They're hopeful. That's worse.",
+        "ch02.s03.b010": "Worse?",
+        "ch02.s03.b011": "Anger burns out. Fear burns out. Hope doesn't deplete. Hope compounds.",
+        "ch02.s03.b012": "Standard containment says a visible patrol at the Core doors. Barriers at the spindle.",
+        "ch02.s03.b013": "No patrol.",
+        "ch02.s03.b014": "Chief, if they breach the Core—",
+        "ch02.s03.b015": "They won't. They aren't here to break anything.",
+        "ch02.s03.b016": "He uncrosses his arms and pulls the environmental map across the schematic.",
+        "ch02.s03.b017": "Somebody handed them a countdown. Now they need something to do with their hands. You don't answer that with sticks.",
+        "ch02.s03.b018": "You answer it with chemistry. And light.",
+        "ch02.s03.b020": "Oxytocin analog into the Core concourse. The in-group blend. Make them feel like a congregation, warm to each other.",
+        "ch02.s03.b021": "Warm to each other is how mobs start.",
+        "ch02.s03.b022": "Warm to each other is how families start. Mobs start cold.",
+        "ch02.s03.b023": "Lights down. Shift the spectrum to four-eighty nanometres. Hard blue.",
+        "ch02.s03.b024": "The band they use in elder care.",
+        "ch02.s03.b025": "The band that slows the agitated and deepens their sleep. Decades of our own data say it works.",
+        "ch02.s03.b026": "And open the agricultural vents. I want the hydroponics bays up that concourse. Grass. Green. Ordinary.",
+        "ch02.s03.b027": "Ordinary?",
+        "ch02.s03.b028": "Nobody storms a door smelling cut grass. They think of picnics.",
+        "ch02.s03.b029": "The watch officer makes the changes. On the feed, the candlelit plaza turns blue.",
+        "ch02.s03.b031": "The crowd does not leave. But it softens. The chant slows. Voices drop to a hum, low and steady, three thousand people swaying together.",
+        "ch02.s03.b032": "At the front, a man who was pressing his palms to the steel bulkhead lets his hands fall and sits down on the deck.",
+        "ch02.s03.b033": "There. Inflammation down.",
+        "ch02.s03.b034": "No one at the doors, Chief.",
+        "ch02.s03.b035": "Hours. Not days.",
+        "ch02.s03.b036": "He checks the chem-bank reservoir. His jaw tightens.",
+        "ch02.s03.b037": "Eleven percent gone in one watch. And I haven't touched the lavender.",
+        "ch02.s03.b038": "He writes the number by hand on the table's surface, in plain digits, under yesterday's four.",
+        "ch02.s03.b039": "Chief. Reactor office. The neutron multiplication factor is falling.",
+        "ch02.s03.b040": "I know. I read the same telemetry you do.",
+        "ch02.s03.b041": "Call Vera Lin to the Command Node. Tell her it isn't a drill and it isn't a paper.",
+        "ch02.s03.b042": "Tell her the fire's in the walls this time.",
+        "ch02.s04.b001": "The curving corridor rises out of sight in both directions. Amber warning stripes run along the grey shielding walls. Through the narrow viewport, the reactor glows a deep, patient orange.",
+        "ch02.s04.b002": "Vera has dragged a lab stool here and surrounded herself with screens: four of reactor telemetry, one of her own enzyme models. Three empty stimulant wrappers lie by her feet.",
+        "ch02.s04.b004": "Three watches awake. Hands steady. Mostly.",
+        "ch02.s04.b005": "You two are telling me the same story from opposite ends.",
+        "ch02.s04.b006": "She drags the enzyme curve over the reactor curve. They lie on top of each other almost perfectly.",
+        "ch02.s04.b007": "Same slope. Same week.",
+        "ch02.s04.b008": "The orange line reads: NEUTRON MULTIPLICATION (BERYLLIUM): -0.0040% AND FALLING. TRITIUM BREEDING RATIO: 1.0812, TREND DOWN.",
+        "ch02.s04.b009": "The beryllium's supposed to slow the neutrons and multiply them. And it's losing its appetite.",
+        "ch02.s04.b010": "Join the club.",
+        "ch02.s04.b011": "The reactor is just a very big, very hot piece of particle physics. If the forces move, it moves with them.",
+        "ch02.s04.b012": "Her slate chimes. Kaelen's summons, flagged red. She glances at it and turns it face down.",
+        "ch02.s04.b013": "In a minute, Chief.",
+        "ch02.s04.b014": "She opens Aris's prime analysis on the fifth screen. She runs it through her own checker. The checker thinks. Then it agrees with him.",
+        "ch02.s04.b015": "Oh, that's not fair.",
+        "ch02.s04.b016": "She watches the drift intervals tighten into a curve that looks, for one moment, like something counting.",
+        "ch02.s04.b018": "For a moment she feels the pull of his certainty, like a current around her ankles.",
+        "ch02.s04.b019": "Counting down to what?",
+        "ch02.s04.b020": "She looks at the orange numbers. Then at her enzyme plates on the other screen. The pull lets go.",
+        "ch02.s04.b021": "I don't care. I really, honestly, don't care.",
+        "ch02.s04.b022": "The universe changed its mind. Fine. How do we bend with it?",
+        "ch02.s04.b023": "She pulls up the Keres firmware tree. Thousands of branches unfold on the screen, each a subsystem that can be patched from the Command Node.",
+        "ch02.s04.b024": "The ship already bends. Tritium ratios, enzyme models, air mix. All patched from one room, pushed out to every node at once.",
+        "ch02.s04.b025": "The local patch. Oldest trick on the Keres.",
+        "ch02.s04.b026": "Same thing a cell does. Catch the wrong letter in the DNA, rewrite it before the cell divides.",
+        "ch02.s04.b027": "She taps the trunk of the tree.",
+        "ch02.s04.b028": "But every patch so far had a person writing it. Somebody had to notice the change first.",
+        "ch02.s04.b029": "What if the patch wrote itself?",
+        "ch02.s04.b030": "She begins to type. Fast, then faster.",
+        "ch02.s04.b031": "Not a control system that holds the reactor to fixed constants. One that reads the constants as inputs.",
+        "ch02.s04.b032": "Measure the cross-sections. Measure the enzyme rates. Measure the forces in the folds.",
+        "ch02.s04.b033": "Then rewrite the logic gates to match. Gates that are data. Gates that move when the world moves.",
+        "ch02.s04.b034": "Software with a genome. Mutate or die.",
+        "ch02.s04.b035": "Three hundred lines scroll up the screen. Her slate buzzes again under her hand.",
+        "ch02.s04.b036": "Tell the Command Node I'm busy. Tell them I'm rewriting the physics we're standing on.",
+        "ch02.s04.b037": "I'll be there when it holds.",
+        "ch02.s04.b038": "The multiplication factor on the telemetry window drops another ten-thousandth of a percent. She writes the next line.",
+        "ch02.s04.b039": "She types the line after that. Her hand jerks. The stylus skids.",
+        "ch02.s04.b040": "A red flag blooms on the screen. A gate has flipped the wrong way under a cross-section she already fed it.",
+        "ch02.s04.b042": "That's the stimulant. Four hours past where it holds.",
+        "ch02.s04.b043": "Building the one thing on this ship that can't afford a wrong gate. With these hands.",
+        "ch02.s04.b044": "She peels the patch off her wrist and drops it on the floor. She pours a cup of tea from a flask. She does not drink it.",
+        "ch02.s04.b045": "Again. Slowly.",
+        "ch02.s04.b046": "She backs the line out and writes it again, one character at a time. The test runs. The flag turns green.",
+        "ch02.s04.b047": "Holds.",
+        "ch02.s04.b048": "Was that the only mistake, or just the first one?",
+        "ch02.s04.b049": "The reactor hums back at her, deep and orange.",
+        "ch02.s04.b050": "Yeah. That's what I thought.",
+        "ch02.s04.b051": "Whatever it costs, we pay it here. In the dark. At whatever hour the constants pick.",
+        "ch02.s04.b052": "She picks up her slate at last and stands.",
+        "ch02.s05.b001": "The plaza is drenched in hard blue light. The candles burn lower. The steel eye of the Core shines over three thousand swaying people, quieter now, but still here.",
+        "ch02.s05.b002": "The air smells of cut grass from the vents.",
+        "ch02.s05.b004": "You said this would be a short conversation.",
+        "ch02.s05.b005": "It is. One sentence.",
+        "ch02.s05.b006": "Which sentence?",
+        "ch02.s05.b007": '"It\'s only physics."',
+        "ch02.s05.b008": "Aris looks at the crowd. Faces turn toward them. Someone recognises him.",
+        "ch02.s05.b009": "That's him. That's Thorne. He found it.",
+        "ch02.s05.b010": "The hum changes pitch. Heads turn like a field in wind.",
+        "ch02.s05.b011": "Feel that? That's the fever. You can take it down with three words.",
+        "ch02.s05.b012": "Or I can lie to three thousand people.",
+        "ch02.s05.b013": "Is it a lie?",
+        "ch02.s05.b014": "You don't know. Vera doesn't know. I'm the only one who's looked at it long enough.",
+        "ch02.s05.b015": "I know what happens to this crowd if you tell them God is counting down.",
+        "ch02.s05.b017": "I'm not asking you to believe it. I'm asking you to say it. For their blood pressure.",
+        "ch02.s05.b018": "For their blood pressure.",
+        "ch02.s05.b019": "Their chemistry doesn't care what's true. It cares what it hears.",
+        "ch02.s05.b020": "That's the difference between us, Chief. I care what's true.",
+        "ch02.s05.b021": "And I care whether they're alive on Sunday.",
+        "ch02.s05.b022": "Kaelen hands him a microphone. Aris holds it for a long moment.",
+        "ch02.s05.b023": "My name is Aris Thorne. I wrote the analysis you've all read.",
+        "ch02.s05.b024": "The crowd goes utterly still. Three thousand faces turn up to him in the blue light.",
+        "ch02.s05.b025": "The Chief wants me to tell you it's only physics.",
+        "ch02.s05.b026": "He looks at Kaelen. Kaelen does not move.",
+        "ch02.s05.b027": "I can't. I don't know that. And I won't say a thing I don't know.",
+        "ch02.s05.b028": "A sound rises from the crowd, not a shout, but a long breath going in.",
+        "ch02.s05.b029": "The gaps are prime. They're shrinking. Something is going to happen, and I don't know what.",
+        "ch02.s05.b030": "Aris.",
+        "ch02.s05.b031": "That's the truth, Chief. You'll have to medicate it.",
+        "ch02.s05.b033": "Lavender to the Core concourse. Full draw.",
+        "ch03.s01.b001": "The long lab is half dark, its overhead lights dimmed to save power. The incubators glow green. Vera sits cross-legged on the floor between the benches, three screens angled around her.",
+        "ch03.s01.b002": "Her palms are flat on the deck plating. Through it comes the beat of the cooling loops, steady for thirty years. This morning it limps.",
+        "ch03.s01.b004": "I hear you. You're limping.",
+        "ch03.s01.b005": "Thump, thump. Thump... thump. Like a heart that's missing a step.",
+        "ch03.s01.b006": "She opens her eyes and looks at the nearest screen.",
+        "ch03.s01.b007": "Tritium breeding ratio. Yesterday one point zero eight one. This morning one point zero seven nine. And steepening.",
+        "ch03.s01.b008": "Breed more fuel than you burn. That's the only rule the plant has. And we're sliding toward one.",
+        "ch03.s01.b009": "At one we break even. Below one we start eating the fuel we have left.",
+        "ch03.s01.b010": "She pulls the cross-section data. A line of orange numbers wobbles across the screen.",
+        "ch03.s01.b011": "Lithium-6 capture. The chance a passing neutron gets caught. Parts per million yesterday. Tens of parts per million today.",
+        "ch03.s01.b012": "The people who wrote the control logic knew this number would never move. Lucky them.",
+        "ch03.s01.b013": "On the screen, the old control logic keeps metering the blanket to a fixed value. The ratio dips. The logic corrects. The ratio dips again.",
+        "ch03.s01.b014": "Look at it. A dog chasing its tail around the core.",
+        "ch03.s01.b015": "Her slate chimes. A message from the reactor office: MAINTENANCE WINDOW IN 47 MINUTES.",
+        "ch03.s01.b016": "Forty-seven minutes. Fine. I've annotated whole genomes in less.",
+        "ch03.s01.b017": "That's a lie. But it's a motivating lie.",
+        "ch03.s01.b018": "She loads her layer into the sandbox. A copy of the reactor blooms on the middle screen in thin white lines.",
+        "ch03.s01.b019": "Test one. Here's the drift we measured. Hold the ratio.",
+        "ch03.s01.b020": "The layer reads the drift. Its gates flicker as they rewrite themselves. The ratio flattens at one point zero seven nine and holds.",
+        "ch03.s01.b021": "Good. Boring. I love boring.",
+        "ch03.s01.b022": "Test two. A collapse. Five percent in a hundred seconds.",
+        "ch03.s01.b023": "The cross-section line drops like a stone. On the screen, the gates rewrite themselves again and again, thirty times. The ratio dips, wobbles, and climbs back.",
+        "ch03.s01.b025": "Twenty-eight. Twenty-nine. Thirty. And back.",
+        "ch03.s01.b026": "Okay. Now something the universe hasn't done yet.",
+        "ch03.s01.b027": "She types a number she has made up. The cross-section on the screen jumps all at once, a cliff instead of a slope.",
+        "ch03.s01.b028": "A step. Everything changes in one instant. Show me what you've got.",
+        "ch03.s01.b029": "The gates blur. Two hundred rewrites in three seconds.",
+        "ch03.s01.b030": "The simulated reactor does not even notice.",
+        "ch03.s01.b031": "Oh, you beautiful thing.",
+        "ch03.s01.b032": "She signs the layer as a delta patch. She checks it against the firmware manifest, the way every patch on the Keres has been checked for three centuries.",
+        "ch03.s01.b033": "It reads: DELTA PATCH VL-001 / ADAPTIVE BLANKET METERING / VERIFIED / TARGET: 214 BLANKET NODES / PUSH?",
+        "ch03.s01.b034": "Push.",
+        "ch03.s01.b035": "She presses her palms back to the deck. Through the plating, the plant takes the change: a hitch, then a smoother beat.",
+        "ch03.s01.b036": "Thump. Thump. Thump.",
+        "ch03.s01.b037": "On the screen, the breeding ratio stops falling and stays.",
+        "ch03.s01.b038": "Command Node. Tell Kaelen the blanket will hold.",
+        "ch03.s01.b039": "Tell him the fire in the walls has a valve now. It opens and closes on its own.",
+        "ch03.s01.b040": "She lowers the slate. Her smile fades.",
+        "ch03.s01.b042": "Every fall I could invent. And none I couldn't.",
+        "ch03.s02.b001": "The chamber is a cave of cyan. Every wall is covered with plots, overlays, crossed-out models. A cup sits on the console, empty, never filled.",
+        "ch03.s02.b003": "Thirty hours awake. Everything is very clear. Every number hums against its neighbours.",
+        "ch03.s02.b004": "It's almost nice. A fever with a filing system.",
+        "ch03.s02.b005": "He pulls the raw scintillation counts beside the stored logs. He compares them line by line.",
+        "ch03.s02.b006": "If it's a message, someone could be editing my logs. Sharpening it.",
+        "ch03.s02.b007": "He checks a third time. The logs match.",
+        "ch03.s02.b008": "No one is editing them.",
+        "ch03.s02.b009": "That should make me feel better.",
+        "ch03.s02.b010": "He drags a new plot to the centre wall: gap length against cycle.",
+        "ch03.s02.b011": "First week, the gaps run the primes. Two, three, five, seven, eleven, thirteen, seventeen, nineteen. Days apart.",
+        "ch03.s02.b012": "Then it starts again, shorter. Then again, shorter still.",
+        "ch03.s02.b013": "The points on the wall fall in a smooth, steep curve.",
+        "ch03.s02.b014": "Like a stone dropped from rest.",
+        "ch03.s02.b015": "He tries to make it something else. He says each idea out loud and kills it.",
+        "ch03.s02.b016": "A beat between two clocks. No. The clocks agree.",
+        "ch03.s02.b017": "Heat aliasing in the counter housings. No. The housings are flat.",
+        "ch03.s02.b018": "The dark count locking to the drift. No. I checked that on Monday.",
+        "ch03.s02.b019": "Me. My own code. A bug.",
+        "ch03.s02.b020": "He reads his code from the top, line by line, his lips moving.",
+        "ch03.s02.b021": "No.",
+        "ch03.s02.b022": "Only the curve is left on the wall. At the bottom of it, where the gaps reach zero, a number glows.",
+        "ch03.s02.b023": "Fifty-nine hours.",
+        "ch03.s02.b024": "He sits down very slowly in the worn chair.",
+        "ch03.s02.b026": "Not a message. A countdown.",
+        "ch03.s02.b027": "I waited my whole life to be answered. And the answer comes with a deadline.",
+        "ch03.s02.b028": "He waits to feel afraid. What comes is quieter and older.",
+        "ch03.s02.b029": "You did hear me. You just don't talk. You schedule.",
+        "ch03.s02.b030": "He opens a note to the Command Node and types fast.",
+        "ch03.s02.b031": "Projection of drift interval collapse. Confidence intervals attached. Request full meeting before the window closes.",
+        "ch03.s02.b032": "He reads it back twice.",
+        "ch03.s02.b033": "It's a physics note.",
+        "ch03.s02.b034": "I can't find the place where it stops being one.",
+        "ch03.s02.b035": "The clock in the corner reads 04:10.",
+        "ch03.s03.b001": "The schematic of the Keres glows white on the wall. The forward spindle is still amber. On the long table, a row of cold tea cups, and the handwritten numbers of three watches: four, eleven, and more below.",
+        "ch03.s03.b003": "Note from Dr. Thorne, Chief. Flagged for you. Four eleven.",
+        "ch03.s03.b004": "I'm reading it.",
+        "ch03.s03.b005": "He reads it standing. Then he takes a ration slip from his pocket and a pencil, and does sums on the back.",
+        "ch03.s03.b006": "Reservoir at thirty-four percent. Down from fifty-six on Tuesday. The lavender at full draw did that.",
+        "ch03.s03.b007": "The analog goes faster than synthesis can replace it. The precursor comes from the gene banks. The gene banks have the same drift Vera's chasing.",
+        "ch03.s03.b008": "Everything on this ship has the same slope now. I'm starting to know it like a face.",
+        "ch03.s03.b009": "And the Faithful?",
+        "ch03.s03.b010": "He looks at the feed. Three thousand people in the blue light at the AI Core, humming, as they have since Tuesday night.",
+        "ch03.s03.b011": "Fifty-nine hours to Aris's zero, if Aris is right.",
+        "ch03.s03.b012": "Full dose, I can hold the Core for eleven of them. Quarter dose, about fifty-five.",
+        "ch03.s03.b013": "And after that?",
+        "ch03.s03.b014": "Four hours short. After that, whatever comes at the end of the count comes to a ship with empty tanks.",
+        "ch03.s03.b015": "He folds the slip once.",
+        "ch03.s03.b016": "Start a drawdown schedule. The Core concourse and Rings 3 and 7 at full dose until hour eleven.",
+        "ch03.s03.b017": "Then I want a written plan for which concourses go cold first. In order. Signed. With my name on it.",
+        "ch03.s03.b018": "Chief, that means choosing—",
+        "ch03.s03.b019": "Which corridors get a calming agent and which get nothing. Yes. Write it.",
+        "ch03.s03.b020": "And if someone asks why their corridor?",
+        "ch03.s03.b021": "Then they ask me. That's why my name is on it.",
+        "ch03.s03.b023": "On the physiological feed, three thousand heart rates line up into one slow, shared rhythm.",
+        "ch03.s03.b024": "Look at their hearts.",
+        "ch03.s03.b025": "The feed calls them calm.",
+        "ch03.s03.b026": "The feed calls them calm. They're synchronising. Three thousand hearts finding one beat.",
+        "ch03.s03.b027": "The way a marching column finds the frequency of a bridge.",
+        "ch03.s03.b028": "A patrol, Chief. Please.",
+        "ch03.s03.b029": "A patrol is a shock to the system. It might scatter them. It might lock them together tighter.",
+        "ch03.s03.b030": "I won't roll that die on three thousand people.",
+        "ch03.s03.b031": "He moves markers on the map.",
+        "ch03.s03.b032": "Core concourse pressure up half a percent. Heavy and sleepy. Let them think about their bodies, not their hearts.",
+        "ch03.s03.b033": "And start drawing precursor from the agricultural reserve.",
+        "ch03.s03.b034": "That breaks the food-reserve protocol.",
+        "ch03.s03.b035": "Then log that it broke. And that I ordered it.",
+        "ch03.s03.b036": "That protocol was written for a universe that held still.",
+        "ch03.s03.b037": "If the count is real, the worst hour is the last one. I mean to have something in the tank for it.",
+        "ch03.s03.b038": "He looks at the feed once more. Under the calm, he sees the slope again: ground still tilting toward an edge no one can see.",
+        "ch03.s03.b039": "Get me Thorne and Lin. Here. Now.",
+        "ch03.s04.b001": "The cool white lights are up. Three chairs are pulled close around the end of the long table. Aris's curve fills the schematic wall, the reactor and the rings drawn faintly behind it.",
+        "ch03.s04.b003": "Fifty-nine hours from four ten this morning. The intervals reach zero. I've broken every other explanation.",
+        "ch03.s04.b004": "Every one you could think of.",
+        "ch03.s04.b005": "Every one anyone could think of. Name one I missed.",
+        "ch03.s04.b006": "I can't. That's not the same as there not being one.",
+        "ch03.s04.b007": "Stop. I didn't call you here to argue about God. I called you because I have to choose something today.",
+        "ch03.s04.b008": "They both look at him.",
+        "ch03.s04.b009": "Your layer is on two hundred and fourteen blanket nodes. How many does the ship have?",
+        "ch03.s04.b010": "About five thousand. Containment. Life support. Gene banks. Your air mix.",
+        "ch03.s04.b011": "Every one running logic that thinks the numbers never move.",
+        "ch03.s04.b012": "Then they all need your layer. What does it cost to put it there?",
+        "ch03.s04.b013": "Each node has to restart on the new firmware. A few seconds dark per node. Air handlers, lights, vents.",
+        "ch03.s04.b014": "Do it slowly and it takes a week. Do it before Saturday and whole concourses blink at once.",
+        "ch03.s04.b015": "Including the Core concourse.",
+        "ch03.s04.b016": "Including the Core concourse.",
+        "ch03.s04.b018": "On the feed, three thousand Faithful sway in the blue light Kaelen has spent two days building.",
+        "ch03.s04.b019": "You'd turn their lights off. In front of the Core. With a countdown on every wall.",
+        "ch03.s04.b020": "For a few seconds at a time. Over and over. For two days.",
+        "ch03.s04.b021": "That's a fever spike every hour. And I'll be paying for each one out of the tank.",
+        "ch03.s04.b022": "There's something else. One thing I can't patch at all.",
+        "ch03.s04.b023": "Say it.",
+        "ch03.s04.b024": "The pressure valves on the Ring 7 vapour line are mechanical. Springs and steel. No node, no firmware.",
+        "ch03.s04.b025": "If the physics jumps and the controls lag, that line spikes, and my layer can't touch it. Your people would have to.",
+        "ch03.s04.b026": "Then I'll have people at Ring 7 on Saturday. Not a patrol. Engineers.",
+        "ch03.s04.b027": "And I'll give you a fall you couldn't invent.",
+        "ch03.s04.b028": "What?",
+        "ch03.s04.b029": "My curve. The real shape of the drift. Test your layer against what the data says, not what you imagine.",
+        "ch03.s04.b030": "That's actually useful.",
+        "ch03.s04.b031": "I'm told I'm good at my job.",
+        "ch03.s04.b033": "Then here's the choice. Vera's layer on every node before zero. The concourses blink. I take the cost.",
+        "ch03.s04.b034": "I'll hold the Core on quarter dose between the blinks and spend the agricultural reserve on the blinks themselves.",
+        "ch03.s04.b035": "That burns the reserve by Saturday morning, Chief.",
+        "ch03.s04.b036": "Then we meet zero with nothing in the tank but the light. Log it. My name.",
+        "ch03.s04.b037": "Eleven coders and me. Five thousand nodes.",
+        "ch03.s04.b038": "Eleven coders and you.",
+        "ch03.s04.b039": "She laughs once, tired. Then she nods.",
+        "ch03.s04.b040": "Before Saturday, then.",
+        "ch03.s04.b041": "Aris. I need it exact. When is zero?",
+        "ch03.s04.b042": "Aris pulls the curve toward him. He runs the fit once more, his lips moving.",
+        "ch03.s04.b043": "Saturday.",
+        "ch03.s04.b044": "He looks up at them both.",
+        "ch03.s04.b045": "Fifteen ten, ship time. Give or take four minutes.",
+        "ch04.s01.b001": "The lab is lit only by screens. Cups of cold tea stand along the bench like a row of small grey moons. The reactor sandbox glows on the middle screen.",
+        "ch04.s01.b002": "Down the hall, eleven borrowed coders sit at borrowed benches, pushing her layer node by node, their keys clicking like rain.",
+        "ch04.s01.b004": "Fine. No more falls I invent. Here's the drift as it really runs.",
+        "ch04.s01.b005": "She feeds the layer Aris's curve: the measured slope, steepening, bending toward zero.",
+        "ch04.s01.b006": "The gates rewrite themselves to the drift. Then they do something she did not write. They run ahead of it.",
+        "ch04.s01.b007": "What are you doing?",
+        "ch04.s01.b008": "On the screen the layer mutates against a cliff that is not in the input yet. The display floods green.",
+        "ch04.s01.b009": "You bet on the future.",
+        "ch04.s01.b010": "She stares at the frozen sandbox for a long moment.",
+        "ch04.s01.b011": "If the countdown's noise, you go on bracing for a fall that never comes. And one night you rewrite yourself into a shape that fits nothing.",
+        "ch04.s01.b012": "And you take the reactor with you.",
+        "ch04.s01.b013": "A body that panics at a fever that isn't coming. That's how you get an allergy.",
+        "ch04.s01.b014": "She pulls up the sensor banks and starts a filter.",
+        "ch04.s01.b015": "New rule. You get told what is. Not one second before.",
+        "ch04.s01.b016": "No projections fed to you as truth. Whatever happens at zero happens to you the way it happens to the ship. All at once.",
+        "ch04.s01.b017": "She writes it. It comes out three lines longer than it should.",
+        "ch04.s01.b018": "No time for pretty. Ugly and right will do.",
+        "ch04.s01.b019": "She runs the steepening profile again. This time the layer holds the drift as it arrives and does not run ahead. The green points settle.",
+        "ch04.s01.b021": "A layer that adapts to bad data adapts to nothing.",
+        "ch04.s01.b022": "Now you only know what's true.",
+        "ch04.s02.b001": "The cyan walls are cleaner now. The old plots are gone. In their place, a field of five thousand small dots, each one a node of the ship, each one waiting.",
+        "ch04.s02.b003": "The harness. The one job left that doesn't ask what I believe.",
+        "ch04.s02.b004": "Node by node. What the layer says its gates are doing, against what they're actually doing.",
+        "ch04.s02.b005": "And if I can't tell the difference, it fails loudly.",
+        "ch04.s02.b006": "He runs the harness. The dots blink, one by one, then all together. Green.",
+        "ch04.s02.b007": "Clean.",
+        "ch04.s02.b008": "He should stand up. He should send it to Vera. Instead he sits and looks at his own checker for a long time.",
+        "ch04.s02.b009": "Backwards, then. Do it backwards.",
+        "ch04.s02.b010": "He feeds it the residuals, the gaps between the gaps. Then, after a pause, the dark count from ampoule seven.",
+        "ch04.s02.b011": "Ampoule seven. Failed its heat calibration all week. I've been leaving you out of every fit.",
+        "ch04.s02.b012": "Because you were inconvenient.",
+        "ch04.s02.b013": "The checker thinks. A sequence appears. It is not the primes.",
+        "ch04.s02.b014": "That's tighter than mine.",
+        "ch04.s02.b015": "He opens the maintenance log beside it. A name repeats down the page every fourteen days for eleven years.",
+        "ch04.s02.b016": "It reads: SERVICED BY: K. OSEI. EVERY 14 DAYS. TIMES VARY. NOTE: COUNTERS SLOW TO SETTLE AFTER HANDLING.",
+        "ch04.s02.b017": "Osei. Every fourteen days. At slightly different hours.",
+        "ch04.s02.b018": "And the counters never quite settle after his hands.",
+        "ch04.s02.b019": "He laughs once. It is not the laugh from Monday.",
+        "ch04.s02.b020": "The ship has a rhythm. A man with a cleaning cloth. And I heard it as a voice.",
+        "ch04.s02.b021": "He runs a third fit, a fourth. They come back loose as noise.",
+        "ch04.s02.b022": "Two tight fits out of a hundred. And I showed the whole ship the one I wanted.",
+        "ch04.s02.b024": "He sits like that for a long time. The hum of life support goes on around him, a quarter tone flat.",
+        "ch04.s02.b025": "Then he lifts his head, saves the second fit, and gives it a plain name.",
+        "ch04.s02.b026": "Finding. Second periodicity. Source: ampoule maintenance cycle. As strong as the first.",
+        "ch04.s02.b027": "Not in a subfolder. In the standing watch log.",
+        "ch04.s02.b028": "Where Vera will see it the minute she looks.",
+        "ch04.s03.b001": "The countdown runs in white digits in the corner of the schematic wall: 18:10:00, and falling. Beneath it, Aris's curve. Cold tea everywhere.",
+        "ch04.s03.b003": "Eighteen hours. It hits zero tomorrow at fifteen ten.",
+        "ch04.s03.b004": "It's a fit to a sparse series. You grew it by hunting for a period until you found one.",
+        "ch04.s03.b005": "It's too clean to be noise. I've fitted a hundred curves. One of them—",
+        "ch04.s03.b006": "He stops, half a breath too late.",
+        "ch04.s03.b007": "Two of them fit like this.",
+        "ch04.s03.b008": "Two.",
+        "ch04.s03.b009": "She does not press. She read the watch log an hour ago. She has stood where he is standing, once, and she knows the floor there.",
+        "ch04.s03.b011": "The ship's in a new phase, Aris. The forces are moving. In a new phase the noise gets louder.",
+        "ch04.s03.b012": "A curve fitted to loud noise looks like a countdown because you ask it to.",
+        "ch04.s03.b013": "It's a fever. You've been reading the fever as a letter.",
+        "ch04.s03.b014": "Doesn't matter.",
+        "ch04.s03.b015": "They both turn to him.",
+        "ch04.s03.b016": "Countdown or fever. The tank's at twenty-two percent. The blinks cost more than I priced them.",
+        "ch04.s03.b017": "Quarter dose carries the Core to about four hours short of zero. After that, the light and nothing else.",
+        "ch04.s03.b018": "I need the ship held together for the next hour. And the hour after that. That's the only question I've got time for.",
+        "ch04.s03.b019": "Vera turns her chair to the console and feeds the layer the newest stretch of drift.",
+        "ch04.s03.b020": "Four thousand eight hundred nodes patched and verified. The last two hundred by morning.",
+        "ch04.s03.b021": "It holds the drift it's given. It'll hold the snap, if a snap comes all at once.",
+        "ch04.s03.b022": "It won't tell us what's on the other side.",
+        "ch04.s03.b023": "Nothing will tell us that.",
+        "ch04.s03.b024": "No. That's the point.",
+        "ch04.s04.b001": "The ship is calm. On the feeds, the galley lines are short, the corridors smell green from the vents, the concourse lights are lilac. At the AI Core, a few hundred Faithful pray in shifts.",
+        "ch04.s04.b002": "The countdown in the corner of the wall reads 00:00:10.",
+        "ch04.s04.b004": "Ten seconds.",
+        "ch04.s04.b005": "Nobody speaks.",
+        "ch04.s04.b006": "The digits run down. Three. Two. One. Zero.",
+        "ch04.s04.b007": "Nothing happens.",
+        "ch04.s04.b008": "Nothing.",
+        "ch04.s04.b009": "Wait.",
+        "ch04.s04.b010": "Then it happens.",
+        "ch04.s04.b011": "The hum drops out of the air. In the silence Aris can hear his own heart.",
+        "ch04.s04.b012": "The deck kicks under them. The ration slip flies off Kaelen's console. Beyond the bulkhead, a rack of parts crashes down in the crawlway.",
+        "ch04.s04.b013": "The hum comes back a quarter tone sharp, then flat, then as if it does not know what it is.",
+        "ch04.s04.b014": "Fine-structure constant. It moved.",
+        "ch04.s04.b015": "How far?",
+        "ch04.s04.b016": "A part in ten thousand. Not enough to break a bond. Enough to shift every bond on the ship at once.",
+        "ch04.s04.b017": "Every protein. Every membrane. The water in every body on board.",
+        "ch04.s04.b018": "Reactor plasma's hitting the bottle! Containment's wavering!",
+        "ch04.s04.b019": "Pressure spike in Ring 7! The vapour line valves are lagging! Hatch four's sealed with people on the wrong side!",
+        "ch04.s04.b020": "Vera.",
+        "ch04.s04.b021": "Working.",
+        "ch04.s04.b023": "The schematic wall shows five thousand nodes as a field of green. Six hundred go red in the first second. Eight hundred in the second.",
+        "ch04.s04.b024": "It's getting an input it never imagined.",
+        "ch04.s04.b025": "The red spreads. Then it stops spreading.",
+        "ch04.s04.b026": "It isn't falling.",
+        "ch04.s04.b027": "It's mutating.",
+        "ch04.s04.b028": "Each node reads its own drift, rewrites its own gates, passes the rewrite along the mesh. Red turns to green, patch by patch, like a wound closing.",
+        "ch04.s04.b029": "Reactor metering just relearned lithium-6. It jumped a tenth of a percent and it isn't coming back.",
+        "ch04.s04.b030": "Blanket re-metered. They're arguing the plasma back into the bottle.",
+        "ch04.s04.b031": "The air. Ring 7.",
+        "ch04.s04.b032": "Scrubbers relearned their kinetics in four seconds. But that vapour line is springs and steel. Your engineers have to close it.",
+        "ch04.s04.b033": "Kaelen is already moving markers. He does not send a patrol.",
+        "ch04.s04.b034": "Engineers at Ring 7, close the valves by hand. Vent the hatch-four corridor into the agricultural plenum. Drop the far side two percent so we can crack the hatch without a blowout.",
+        "ch04.s04.b035": "And that corridor's lights at full white. Don't soften it. I want them to see the way out.",
+        "ch04.s04.b036": "Hatch four open. Walk them through. Slow.",
+        "ch04.s04.b037": "The room waits. Eleven seconds. They take longer than the whole rewrite.",
+        "ch04.s04.b038": "Through, Chief. Forty-one minor injuries. No crush. An old man with a bruised shoulder. A girl who won't let go of the rail.",
+        "ch04.s04.b039": "Get the rail out of her hands and get her warm.",
+        "ch04.s04.b040": "He keeps moving markers. On the AI Core feed, the few hundred Faithful stand frozen in the white emergency light, staring up at the steel eye.",
+        "ch04.s04.b041": "And the Core. All I have left. Lavender and blue, full draw, until the tank's dry.",
+        "ch04.s04.b042": "That empties it.",
+        "ch04.s04.b043": "That's what it was for.",
+        "ch04.s04.b044": "On the feed the white light softens into blue. The Faithful sink to their knees, not in panic, but slowly, holding each other.",
+        "ch04.s04.b045": "Hydrolase rates up a percent. Repair pathways relearning their proofreading. Three hundred nodes still renegotiating.",
+        "ch04.s04.b046": "It took the jump. It'll take the next one.",
+        "ch04.s04.b048": "The harness crashed. Nine hundred alerts in a tenth of a second.",
+        "ch04.s04.b049": "It's restarting.",
+        "ch04.s04.b050": "The harness comes back. Five thousand green points, each one saying what it does is what it claims.",
+        "ch04.s04.b051": "Clean. Your patch is honest.",
+        "ch04.s04.b052": "He should look away from the screen. Instead he opens the drift intervals from the minutes around zero and feeds them to the checker.",
+        "ch04.s04.b053": "A spread comes back. Not a sequence.",
+        "ch04.s04.b054": "He feeds it the intervals from the new plateau. Another spread.",
+        "ch04.s04.b055": "A noise floor. Where the signal was.",
+        "ch04.s04.b056": "The stone was the slope all along.",
+        "ch04.s04.b057": "And there was never anyone on the other side of the cliff.",
+        "ch04.s04.b058": "Aris. Did the harness hold?",
+        "ch04.s04.b059": "It crashed, it restarted, it held.",
+        "ch04.s04.b060": "He takes a breath.",
+        "ch04.s04.b061": "The countdown was the drift, steepening. I dressed it up because I needed it to be a letter.",
+        "ch04.s04.b062": "You built the harness.",
+        "ch04.s04.b063": "If you'd spent those hours in despair, the layer could be lying to itself right now and I'd never know.",
+        "ch04.s04.b064": "The fever put you at your console. I'll take that.",
+        "ch04.s04.b066": "New baseline. And the physics will drift again on a schedule nobody knows. I need a standing watch on the constants.",
+        "ch04.s04.b067": "I'll take it.",
+        "ch04.s04.b068": "He looks at his display: a slope, rising and falling around a new mean.",
+        "ch04.s04.b069": "I'll log it as a slope. Not a countdown.",
+        "ch04.s04.b070": "Vera lets her hands go still on the deck. Under them, the ship breathes, a quarter tone sharp of where it lived for thirty years.",
+        "ch04.s04.b071": "New constants.",
+        "ch04.s04.b072": "She pushes a delta patch to the sensor banks and watches it settle.",
+        "ch04.s04.b073": "New firmware.",
+        "ch04.s04.b074": "Chief. Lights.",
+        "ch04.s04.b075": "On the schematic wall, the dark decks start to glow again. Not all at once. One at a time.",
+        "ch04.s04.b076": "Deck one. Deck two. Concourse coming up. Ring 3. Ring 7.",
+        "ch04.s04.b077": "On the feed, the long curve of the concourse fills with ordinary yellow light, a ring at a time, rolling around the ship like a sunrise.",
+        "ch04.s04.b078": "There.",
+        "ch04.s04.b079": "Deck by deck.",
+        "ch04.s04.b080": "Like it's waking up.",
+        "ch05.s01.b001": "The harsh white is gone. The lilac of Kaelen's evening band lies across the floor, soft and even, and makes the consoles look like furniture in a warm room.",
+        "ch05.s01.b002": "The schematic wall glows green from end to end. Cups of cold tea, a dropped ration slip, a rack of parts still lying where it fell.",
+        "ch05.s01.b004": "Breeding ratio, one point zero eight. Holding.",
+        "ch05.s01.b005": "Lithium-6 capture at a value nobody on the Keres ever wrote down. And the layer meters to it like it's always been there.",
+        "ch05.s01.b006": "The reactor's breathing.",
+        "ch05.s01.b007": "She watches the number settle and does not say what she feels.",
+        "ch05.s01.b008": "Ring report.",
+        "ch05.s01.b009": "He pulls it onto the wall. Ring 3, cortisol at a low plateau, loiter time back to normal. Ring 7, falling, not yet fallen.",
+        "ch05.s01.b010": "No breaches. Chem-bank at nineteen percent. Not draining.",
+        "ch05.s01.b011": "On the AI Core feed, the Faithful have broken into ordinary noise: people arguing, gossiping, asking where breakfast is.",
+        "ch05.s01.b012": "Listen to that. Three thousand people remembering they have stomachs.",
+        "ch05.s01.b013": "Is that a medical term?",
+        "ch05.s01.b014": "It's the best one I know.",
+        "ch05.s01.b015": "He turns to the room.",
+        "ch05.s01.b016": "We have a new baseline. The physics has stopped moving. I don't know on what schedule it moves next.",
+        "ch05.s01.b017": "I intend to find out.",
+        "ch05.s01.b019": "On Aris's screen there is a slope: the drift, risen and fallen around a new mean. Six hours of it. Not a single prime.",
+        "ch05.s01.b020": "No one spoke.",
+        "ch05.s01.b021": "They both look at him.",
+        "ch05.s01.b022": "I want that in the standing watch log, Kaelen. In plain words.",
+        "ch05.s01.b023": "So that when the next scholar finds primes in the noise, they find the correction underneath.",
+        "ch05.s01.b024": "Write it.",
+        "ch05.s01.b025": "Aris writes it. The date. His name.",
+        "ch05.s01.b026": "It reads: NO ONE SPOKE. THE PRIMES WERE NOISE WITH A SHAPE I WANTED. A SECOND RHYTHM FIT AS WELL. — A. THORNE",
+        "ch05.s01.b027": "There.",
+        "ch05.s01.b028": "How does it feel?",
+        "ch05.s01.b029": "Like putting down something I've been carrying since I was a boy.",
+        "ch05.s01.b030": "Good. Now sleep, before you find a pattern in the ceiling tiles.",
+        "ch05.s01.b031": "There is one. Every fourth tile is—",
+        "ch05.s01.b032": "Aris.",
+        "ch05.s01.b033": "Going.",
+        "ch05.s02.b001": "The chamber is dark and quiet. One plot glows on the black glass: the slope, rising and falling around its new mean. A cot has been dragged in beside the console.",
+        "ch05.s02.b003": "Harness. Something changed and it can't tell me what.",
+        "ch05.s02.b004": "He is at the console in ninety seconds, bare feet on the cold deck. He reads.",
+        "ch05.s02.b005": "Cross-sections wobbled. A part in a hundred thousand. Gone in under two seconds.",
+        "ch05.s02.b006": "The layer caught it. Rewrote its gates. Settled.",
+        "ch05.s02.b007": "And the harness flagged it because the rewrite didn't match its prediction. That's all.",
+        "ch05.s02.b008": "Nothing failed.",
+        "ch05.s02.b009": "He sits and looks at the wobble for a while. His hand rests near the old brute-force checker.",
+        "ch05.s02.b010": "Once upon a time, this was a knock on the door.",
+        "ch05.s02.b011": "I'd have run the long checker. Found Osei's fourteen days. Called it a hand reaching through the physics.",
+        "ch05.s02.b012": "He does not run the checker. He logs the wobble as a wobble, attaches the layer's rewrite, and sets the watch for the next shift.",
+        "ch05.s02.b013": "He is almost back to his cot before he realises.",
+        "ch05.s02.b014": "I wasn't even tempted.",
+        "ch05.s02.b016": "A woman stands in the doorway as if she has come a long way and is not sure of the last step.",
+        "ch05.s02.b017": "Doctor Thorne?",
+        "ch05.s02.b018": "Yes.",
+        "ch05.s02.b019": "I'm Sera. I kept the primes.",
+        "ch05.s02.b020": "I kept them in my bunk and prayed to them. I told my daughter they were the Programmer's countdown.",
+        "ch05.s02.b021": "She unfolds the slip. Lines of careful handwriting.",
+        "ch05.s02.b022": "They've started again. Last night, at the end of the watch. The drift came back, and it spaced itself the way it did before.",
+        "ch05.s02.b023": "I came before the Faithful hear it. Because I don't know what I'd do if they heard it from someone else.",
+        "ch05.s02.b024": "Aris takes the slip. On it are the intervals from the wobble he has just logged, and beneath them, worked out by hand, a spacing that looks exactly like the old countdown.",
+        "ch05.s02.b025": "Of course it does.",
+        "ch05.s02.b026": "Any slope you feed it comes back as a countdown. It did for me too.",
+        "ch05.s02.b028": "I know how this feels, Sera. I built the whole thing.",
+        "ch05.s02.b029": "Here's the truth, and I want you to hear it plain before anyone gives you a version you like better.",
+        "ch05.s02.b030": "The primes had a rival that fit just as well. A man named Osei, cleaning the counters every fourteen days.",
+        "ch05.s02.b031": "There's no one on the other side of the cliff.",
+        "ch05.s02.b032": "Last night the drift spaced itself the same way because it's the same drift. The shape isn't a letter. It never was.",
+        "ch05.s02.b033": "Sera looks at the slip in his hand for a long moment.",
+        "ch05.s02.b034": "And the ones who prayed?",
+        "ch05.s02.b035": "You gave them something to hold in a bad hour. You held it too.",
+        "ch05.s02.b036": "That isn't a crime, and it isn't a lie. As long as you put it down when you know better.",
+        "ch05.s02.b037": "You put it down before it hurt anyone. That's the watch, Sera. That is exactly the watch.",
+        "ch05.s02.b038": "He steps back from the console.",
+        "ch05.s02.b039": "The slope's on the main display. It reads out plainly. Would you like to see how the night shift is done?",
+        "ch05.s02.b040": "Sera folds the ration slip. She does not answer at once.",
+        "ch05.s02.b041": "Then she sits down in the second chair.",
+        "ch05.s03.b001": "The lab lights are back to warm white. Fresh plants green the hydroponic trays. On the wall screen, the DNA repair statistics are calm, long flat lines.",
+        "ch05.s03.b003": "A plateau. Harder than a fall.",
+        "ch05.s03.b004": "A fall is a cliff. A cliff is easy. A plateau is a slow lie the gates have to be talked out of every hour.",
+        "ch05.s03.b005": "She patches. Re-patches. Then she opens the layer's header.",
+        "ch05.s03.b006": "Header. Version one point nine. Name.",
+        "ch05.s03.b007": "She pauses. Then she types it.",
+        "ch05.s03.b008": "It reads: THE LOCAL PATCH. SMALL, SIGNED, PUSHED TO THE NODE THAT NEEDS IT. THE KERES IS THREE CENTURIES OF THESE. NOTHING IN THIS LAYER IS FINAL.",
+        "ch05.s03.b009": "That's what the ship always called a firmware fix. A local patch.",
+        "ch05.s03.b010": "Turns out we're made of them.",
+        "ch05.s03.b011": "She pulls up the gene banks. A fault light blinks amber.",
+        "ch05.s03.b012": "Oh, hello.",
+        "ch05.s03.b013": "A repair cascade is running ahead of its input, trying to fit a proofreading rate to a plateau that is not there yet.",
+        "ch05.s03.b014": "You're betting on the future again.",
+        "ch05.s03.b015": "On the screen, the filter she wrote before zero catches it, three lines longer than it should be. The gates refuse the bet. They hold at what is.",
+        "ch05.s03.b016": "The cascade runs down and stops. The green points settle.",
+        "ch05.s03.b018": "You don't get to know the future.",
+        "ch05.s03.b019": "You get to know the next second. That's enough.",
+        "ch05.s03.b020": "She picks up a cup of tea. For once, it is hot. She drinks it.",
+        "ch05.s04.b001": "The long curved promenade glows warm yellow. Shops are open. Overhead, across the cylinder, the hanging gardens are lit gold. A small crowd has gathered around a bench by the central display, not praying, just listening.",
+        "ch05.s04.b003": "End of shift. The slope held within four parts in a million. One wobble at oh three seventeen on Thursday, caught and settled.",
+        "ch05.s04.b004": "Gene banks steady. Reactor steady. Next reading at the end of the night shift.",
+        "ch05.s04.b005": "She looks up. A few people nod. A child yawns. Someone asks a question about the reactor, and she answers it plainly.",
+        "ch05.s04.b006": "A population that can't see the numbers invents them.",
+        "ch05.s04.b007": "She's good, Chief.",
+        "ch05.s04.b008": "She's very good.",
+        "ch05.s04.b009": "Same time tomorrow?",
+        "ch05.s04.b010": "Every shift. Read it as arithmetic. Not a sermon and not a prophecy.",
+        "ch05.s04.b011": "When the drift comes back hot, they'll already know the language for it.",
+        "ch05.s04.b013": "The crowd breaks up into ordinary evening noise. Somebody laughs. A choir is rehearsing two shop fronts down.",
+        "ch05.s04.b014": "I moved the old patrol protocols to the archive today.",
+        "ch05.s04.b015": "With the fixed-constant firmware.",
+        "ch05.s04.b016": "With a note saying I ordered it, and why.",
+        "ch05.s04.b017": "I wrote no protocol for the Faithful. I punished no one.",
+        "ch05.s04.b018": "Some people say you should have.",
+        "ch05.s04.b019": "A fever that isn't punished breaks on its own. A fever that's punished learns to hide.",
+        "ch05.s04.b020": "He watches Sera fold her slate away and walk home with her daughter.",
+        "ch05.s04.b021": "You sound pleased, Chief.",
+        "ch05.s04.b022": "I'm not pleased. Pleased means the problem's over.",
+        "ch05.s04.b023": "It's never over. But the ship's holding. And holding is enough.",
+        "ch05.s05.b001": "The cold round chamber at the ship's spine. The slope glows on the black glass. Dust turns slowly in the projector beams, as it always has.",
+        "ch05.s05.b003": "Aris logs the drift. Then he sets his slate down and does not pick it up again.",
+        "ch05.s05.b004": "A quarter tone sharp of the one I grew up with.",
+        "ch05.s05.b005": "Steady. Not counting down to anything.",
+        "ch05.s05.b006": "Just the Keres. Breathing.",
+        "ch05.s05.b007": "All of us, carried through a universe that changes its mind.",
+        "ch05.s05.b008": "And something inside it learned to bend.",
+        "ch05.s05.b010": "Evening, Doctor.",
+        "ch05.s05.b011": "Evening. It's all yours.",
+        "ch05.s05.b012": "He hands her the watch. She sits down in the second chair and opens the log.",
+        "ch05.s05.b013": "Night shift. Week two of the new baseline. The slope held. No wobble since Thursday.",
+        "ch05.s05.b014": "Her voice does not rise or fall with the numbers. It just reads them.",
+        "ch05.s05.b015": "Aris listens, and for the first time in years, he closes his eyes in this room and lets himself rest."
+      },
+      "puzzles": {},
+      "ui": {},
+      "voice": {}
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "rtl": false,
+      "fontFamily": "var(--vno-font-text)"
+    }
+  ],
+  "uiLanguages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "ui": {}
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "nativeName": "العربية",
+      "ui": {
+        "Start": "ابدأ",
+        "Load": "تحميل",
+        "Save": "حفظ",
+        "Preferences": "التفضيلات",
+        "Prefs": "التفضيلات",
+        "About": "حول",
+        "Back": "رجوع",
+        "History": "السجل",
+        "Skip": "تخطي",
+        "Auto": "تلقائي",
+        "Q.Save": "حفظ سريع",
+        "Q.Load": "تحميل سريع",
+        "Menu": "القائمة",
+        "Main Menu": "القائمة الرئيسية",
+        "Start again": "ابدأ من جديد",
+        "The End": "النهاية",
+        "Display": "العرض",
+        "Fullscreen": "ملء الشاشة",
+        "Language": "اللغة",
+        "Text Speed": "سرعة النص",
+        "Auto-Forward Time": "وقت التقدم التلقائي",
+        "Music Volume": "مستوى صوت الموسيقى",
+        "Sound Volume": "مستوى صوت المؤثرات",
+        "Voice Volume": "مستوى صوت الأصوات",
+        "Page {}": "صفحة {}",
+        "empty slot": "خانة فارغة",
+        "The dialogue history is empty.": "سجل الحوار فارغ."
+      }
+    },
+    {
+      "code": "bs",
+      "name": "Bosnian",
+      "nativeName": "Bosanski",
+      "ui": {
+        "Start": "Počni",
+        "Load": "Učitaj",
+        "Save": "Spremi",
+        "Preferences": "Postavke",
+        "Prefs": "Post.",
+        "About": "O igri",
+        "Back": "Nazad",
+        "History": "Historija",
+        "Skip": "Preskoči",
+        "Auto": "Automatski",
+        "Q.Save": "Brzo spremanje",
+        "Q.Load": "Brzo učitavanje",
+        "Menu": "Meni",
+        "Main Menu": "Glavni meni",
+        "Start again": "Počni ispočetka",
+        "The End": "Kraj",
+        "Display": "Prikaz",
+        "Fullscreen": "Cijeli ekran",
+        "Language": "Jezik",
+        "Text Speed": "Brzina teksta",
+        "Auto-Forward Time": "Vrijeme automatskog prelaska",
+        "Music Volume": "Jačina muzike",
+        "Sound Volume": "Jačina zvukova",
+        "Voice Volume": "Jačina glasa",
+        "Page {}": "Stranica {}",
+        "empty slot": "prazno mjesto",
+        "The dialogue history is empty.": "Historija dijaloga je prazna."
+      }
+    },
+    {
+      "code": "bg",
+      "name": "Bulgarian",
+      "nativeName": "Български",
+      "ui": {
+        "Start": "Старт",
+        "Load": "Зареди",
+        "Save": "Запази",
+        "Preferences": "Настройки",
+        "Prefs": "Настр.",
+        "About": "За играта",
+        "Back": "Назад",
+        "History": "История",
+        "Skip": "Пропусни",
+        "Auto": "Авто",
+        "Q.Save": "Бързо зап.",
+        "Q.Load": "Бързо зар.",
+        "Menu": "Меню",
+        "Main Menu": "Главно меню",
+        "Start again": "Започни отначало",
+        "The End": "Край",
+        "Display": "Дисплей",
+        "Fullscreen": "Цял екран",
+        "Language": "Език",
+        "Text Speed": "Скорост на текста",
+        "Auto-Forward Time": "Време за автоматично продължаване",
+        "Music Volume": "Сила на музиката",
+        "Sound Volume": "Сила на звуците",
+        "Voice Volume": "Сила на гласа",
+        "Page {}": "Страница {}",
+        "empty slot": "празно място",
+        "The dialogue history is empty.": "Историята на диалозите е празна."
+      }
+    },
+    {
+      "code": "zh",
+      "name": "Chinese",
+      "nativeName": "中文",
+      "ui": {
+        "Start": "开始",
+        "Load": "读取",
+        "Save": "保存",
+        "Preferences": "设置",
+        "Prefs": "设置",
+        "About": "关于",
+        "Back": "返回",
+        "History": "历史",
+        "Skip": "跳过",
+        "Auto": "自动",
+        "Q.Save": "快速保存",
+        "Q.Load": "快速读取",
+        "Menu": "菜单",
+        "Main Menu": "主菜单",
+        "Start again": "重新开始",
+        "The End": "完",
+        "Display": "显示",
+        "Fullscreen": "全屏",
+        "Language": "语言",
+        "Text Speed": "文字速度",
+        "Auto-Forward Time": "自动前进时间",
+        "Music Volume": "音乐音量",
+        "Sound Volume": "音效音量",
+        "Voice Volume": "语音音量",
+        "Page {}": "第 {} 页",
+        "empty slot": "空存档位",
+        "The dialogue history is empty.": "对话历史为空。"
+      }
+    },
+    {
+      "code": "hr",
+      "name": "Croatian",
+      "nativeName": "Hrvatski",
+      "ui": {
+        "Start": "Započni",
+        "Load": "Učitaj",
+        "Save": "Spremi",
+        "Save Game": "Spremi igru",
+        "Load Game": "Učitaj igru",
+        "Preferences": "Postavke",
+        "Prefs": "Postavke",
+        "About": "O igri",
+        "Back": "Natrag",
+        "History": "Povijest",
+        "Skip": "Preskoči",
+        "Auto": "Automatski",
+        "Q.Save": "Br.spremi",
+        "Q.Load": "Br.učitaj",
+        "Menu": "Izbornik",
+        "Main Menu": "Glavni izbornik",
+        "Start again": "Počni ispočetka",
+        "The End": "Kraj",
+        "Display": "Prikaz",
+        "Fullscreen": "Cijeli zaslon",
+        "Language": "Jezik",
+        "Text": "Tekst",
+        "Audio": "Zvuk",
+        "Text Speed": "Brzina teksta",
+        "Auto-Forward Time": "Vrijeme automatskog prelaska",
+        "Music Volume": "Glasnoća glazbe",
+        "Sound Volume": "Glasnoća zvukova",
+        "Voice Volume": "Glasnoća glasa",
+        "Page {}": "Stranica {}",
+        "Page {} of {}": "Stranica {} od {}",
+        "Next": "Sljedeća stranica",
+        "Previous": "Prethodna stranica",
+        "Read aloud": "Čitaj naglas",
+        "Clues": "Tragovi",
+        "Accuse": "Optuži",
+        "Submit": "Pošalji",
+        "Hint": "Natuknica",
+        "Give Up": "Odustani",
+        "empty slot": "prazno mjesto",
+        "The dialogue history is empty.": "Povijest dijaloga je prazna.",
+        "Close": "Zatvori",
+        "Interface Language": "Jezik sučelja",
+        "Story Language": "Jezik priče",
+        "Story Text Size": "Veličina teksta priče"
+      }
+    },
+    {
+      "code": "cs",
+      "name": "Czech",
+      "nativeName": "Čeština",
+      "ui": {
+        "Start": "Start",
+        "Load": "Načíst",
+        "Save": "Uložit",
+        "Preferences": "Nastavení",
+        "Prefs": "Nast.",
+        "About": "O hře",
+        "Back": "Zpět",
+        "History": "Historie",
+        "Skip": "Přeskočit",
+        "Auto": "Auto",
+        "Q.Save": "Rychlé uložení",
+        "Q.Load": "Rychlé načtení",
+        "Menu": "Nabídka",
+        "Main Menu": "Hlavní nabídka",
+        "Start again": "Začít znovu",
+        "The End": "Konec",
+        "Display": "Zobrazení",
+        "Fullscreen": "Celá obrazovka",
+        "Language": "Jazyk",
+        "Text Speed": "Rychlost textu",
+        "Auto-Forward Time": "Doba automatického posunu",
+        "Music Volume": "Hlasitost hudby",
+        "Sound Volume": "Hlasitost zvuků",
+        "Voice Volume": "Hlasitost hlasů",
+        "Page {}": "Strana {}",
+        "empty slot": "prázdné místo",
+        "The dialogue history is empty.": "Historie dialogů je prázdná."
+      }
+    },
+    {
+      "code": "da",
+      "name": "Danish",
+      "nativeName": "Dansk",
+      "ui": {
+        "Start": "Start",
+        "Load": "Indlæs",
+        "Save": "Gem",
+        "Preferences": "Indstillinger",
+        "Prefs": "Indst.",
+        "About": "Om",
+        "Back": "Tilbage",
+        "History": "Historik",
+        "Skip": "Spring over",
+        "Auto": "Auto",
+        "Q.Save": "Hurtig gem",
+        "Q.Load": "Hurtig indlæs",
+        "Menu": "Menu",
+        "Main Menu": "Hovedmenu",
+        "Start again": "Start forfra",
+        "The End": "Slut",
+        "Display": "Visning",
+        "Fullscreen": "Fuld skærm",
+        "Language": "Sprog",
+        "Text Speed": "Tekstfart",
+        "Auto-Forward Time": "Tid til automatisk fremad",
+        "Music Volume": "Musikvolumen",
+        "Sound Volume": "Lydvolumen",
+        "Voice Volume": "Stemmevolumen",
+        "Page {}": "Side {}",
+        "empty slot": "tom plads",
+        "The dialogue history is empty.": "Dialoghistorikken er tom."
+      }
+    },
+    {
+      "code": "nl",
+      "name": "Dutch",
+      "nativeName": "Nederlands",
+      "ui": {
+        "Start": "Start",
+        "Load": "Laden",
+        "Save": "Opslaan",
+        "Preferences": "Voorkeuren",
+        "Prefs": "Voork.",
+        "About": "Info",
+        "Back": "Terug",
+        "History": "Geschiedenis",
+        "Skip": "Overslaan",
+        "Auto": "Auto",
+        "Q.Save": "Snel opslaan",
+        "Q.Load": "Snel laden",
+        "Menu": "Menu",
+        "Main Menu": "Hoofdmenu",
+        "Start again": "Opnieuw beginnen",
+        "The End": "Einde",
+        "Display": "Weergave",
+        "Fullscreen": "Volledig scherm",
+        "Language": "Taal",
+        "Text Speed": "Tekstsnelheid",
+        "Auto-Forward Time": "Tijd voor automatisch doorgaan",
+        "Music Volume": "Muziekvolume",
+        "Sound Volume": "Geluidsvolume",
+        "Voice Volume": "Stemvolume",
+        "Page {}": "Pagina {}",
+        "empty slot": "lege plek",
+        "The dialogue history is empty.": "De dialooggeschiedenis is leeg."
+      }
+    },
+    {
+      "code": "et",
+      "name": "Estonian",
+      "nativeName": "Eesti",
+      "ui": {
+        "Start": "Alusta",
+        "Load": "Laadi",
+        "Save": "Salvesta",
+        "Preferences": "Eelistused",
+        "Prefs": "Eelist.",
+        "About": "Teave",
+        "Back": "Tagasi",
+        "History": "Ajalugu",
+        "Skip": "Jäta vahele",
+        "Auto": "Auto",
+        "Q.Save": "Kiirsalvestus",
+        "Q.Load": "Kiirlaadimine",
+        "Menu": "Menüü",
+        "Main Menu": "Peamenüü",
+        "Start again": "Alusta otsast",
+        "The End": "Lõpp",
+        "Display": "Kuva",
+        "Fullscreen": "Täisekraan",
+        "Language": "Keel",
+        "Text Speed": "Teksti kiirus",
+        "Auto-Forward Time": "Automaatse edasiliikumise aeg",
+        "Music Volume": "Muusika helitugevus",
+        "Sound Volume": "Heliefektide helitugevus",
+        "Voice Volume": "Hääle helitugevus",
+        "Page {}": "Lehekülg {}",
+        "empty slot": "tühi koht",
+        "The dialogue history is empty.": "Dialoogi ajalugu on tühi."
+      }
+    },
+    {
+      "code": "fi",
+      "name": "Finnish",
+      "nativeName": "Suomi",
+      "ui": {
+        "Start": "Aloita",
+        "Load": "Lataa",
+        "Save": "Tallenna",
+        "Preferences": "Asetukset",
+        "Prefs": "Aset.",
+        "About": "Tietoja",
+        "Back": "Takaisin",
+        "History": "Historia",
+        "Skip": "Ohita",
+        "Auto": "Auto",
+        "Q.Save": "Pikatallennus",
+        "Q.Load": "Pikalataus",
+        "Menu": "Valikko",
+        "Main Menu": "Päävalikko",
+        "Start again": "Aloita alusta",
+        "The End": "Loppu",
+        "Display": "Näyttö",
+        "Fullscreen": "Koko näyttö",
+        "Language": "Kieli",
+        "Text Speed": "Tekstin nopeus",
+        "Auto-Forward Time": "Automaattisen etenemisen aika",
+        "Music Volume": "Musiikin äänenvoimakkuus",
+        "Sound Volume": "Äänitehosteiden voimakkuus",
+        "Voice Volume": "Puheen voimakkuus",
+        "Page {}": "Sivu {}",
+        "empty slot": "tyhjä paikka",
+        "The dialogue history is empty.": "Dialogihistoria on tyhjä."
+      }
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "nativeName": "Français",
+      "ui": {
+        "Start": "Commencer",
+        "Load": "Charger",
+        "Save": "Sauvegarder",
+        "Preferences": "Préférences",
+        "Prefs": "Préf.",
+        "About": "À propos",
+        "Back": "Retour",
+        "History": "Historique",
+        "Skip": "Passer",
+        "Auto": "Auto",
+        "Q.Save": "Sauv. rapide",
+        "Q.Load": "Charg. rapide",
+        "Menu": "Menu",
+        "Main Menu": "Menu principal",
+        "Start again": "Recommencer",
+        "The End": "Fin",
+        "Display": "Affichage",
+        "Fullscreen": "Plein écran",
+        "Language": "Langue",
+        "Text Speed": "Vitesse du texte",
+        "Auto-Forward Time": "Délai du défilement auto",
+        "Music Volume": "Volume de la musique",
+        "Sound Volume": "Volume des sons",
+        "Voice Volume": "Volume des voix",
+        "Page {}": "Page {}",
+        "empty slot": "emplacement vide",
+        "The dialogue history is empty.": "L'historique des dialogues est vide."
+      }
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "nativeName": "Deutsch",
+      "ui": {
+        "Start": "Start",
+        "Load": "Laden",
+        "Save": "Speichern",
+        "Preferences": "Einstellungen",
+        "Prefs": "Einstell.",
+        "About": "Über",
+        "Back": "Zurück",
+        "History": "Verlauf",
+        "Skip": "Überspringen",
+        "Auto": "Auto",
+        "Q.Save": "Q.Speichern",
+        "Q.Load": "Q.Laden",
+        "Menu": "Menü",
+        "Main Menu": "Hauptmenü",
+        "Start again": "Von vorn beginnen",
+        "The End": "Ende",
+        "Display": "Anzeige",
+        "Fullscreen": "Vollbild",
+        "Language": "Sprache",
+        "Text Speed": "Textgeschwindigkeit",
+        "Auto-Forward Time": "Zeit für Auto-Weiter",
+        "Music Volume": "Musiklautstärke",
+        "Sound Volume": "Soundlautstärke",
+        "Voice Volume": "Sprachlautstärke",
+        "Page {}": "Seite {}",
+        "empty slot": "leerer Platz",
+        "The dialogue history is empty.": "Der Dialogverlauf ist leer."
+      }
+    },
+    {
+      "code": "el",
+      "name": "Greek",
+      "nativeName": "Ελληνικά",
+      "ui": {
+        "Start": "Έναρξη",
+        "Load": "Φόρτωση",
+        "Save": "Αποθήκευση",
+        "Preferences": "Προτιμήσεις",
+        "Prefs": "Προτ.",
+        "About": "Σχετικά",
+        "Back": "Πίσω",
+        "History": "Ιστορικό",
+        "Skip": "Παράλειψη",
+        "Auto": "Αυτόματα",
+        "Q.Save": "Γρήγ. αποθ.",
+        "Q.Load": "Γρήγ. φόρτ.",
+        "Menu": "Μενού",
+        "Main Menu": "Κύριο μενού",
+        "Start again": "Ξεκίνα από την αρχή",
+        "The End": "Τέλος",
+        "Display": "Προβολή",
+        "Fullscreen": "Πλήρης οθόνη",
+        "Language": "Γλώσσα",
+        "Text Speed": "Ταχύτητα κειμένου",
+        "Auto-Forward Time": "Χρόνος αυτόματης προώθησης",
+        "Music Volume": "Ένταση μουσικής",
+        "Sound Volume": "Ένταση ήχων",
+        "Voice Volume": "Ένταση φωνής",
+        "Page {}": "Σελίδα {}",
+        "empty slot": "κενή θέση",
+        "The dialogue history is empty.": "Το ιστορικό διαλόγων είναι κενό."
+      }
+    },
+    {
+      "code": "he",
+      "name": "Hebrew",
+      "nativeName": "עברית",
+      "ui": {
+        "Start": "התחל",
+        "Load": "טען",
+        "Save": "שמור",
+        "Preferences": "העדפות",
+        "Prefs": "העדפות",
+        "About": "אודות",
+        "Back": "חזרה",
+        "History": "היסטוריה",
+        "Skip": "דלג",
+        "Auto": "אוטומטי",
+        "Q.Save": "שמירה מהירה",
+        "Q.Load": "טעינה מהירה",
+        "Menu": "תפריט",
+        "Main Menu": "תפריט ראשי",
+        "Start again": "התחל מחדש",
+        "The End": "הסוף",
+        "Display": "תצוגה",
+        "Fullscreen": "מסך מלא",
+        "Language": "שפה",
+        "Text Speed": "מהירות הטקסט",
+        "Auto-Forward Time": "זמן התקדמות אוטומטית",
+        "Music Volume": "עוצמת המוזיקה",
+        "Sound Volume": "עוצמת הצלילים",
+        "Voice Volume": "עוצמת הקול",
+        "Page {}": "עמוד {}",
+        "empty slot": "משבצת ריקה",
+        "The dialogue history is empty.": "היסטוריית הדיאלוג ריקה."
+      }
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "nativeName": "हिन्दी",
+      "ui": {
+        "Start": "शुरू करें",
+        "Load": "लोड करें",
+        "Save": "सहेजें",
+        "Preferences": "पसंद",
+        "Prefs": "पसंद",
+        "About": "परिचय",
+        "Back": "पीछे",
+        "History": "इतिहास",
+        "Skip": "छोड़ें",
+        "Auto": "स्वचालित",
+        "Q.Save": "त्वरित सहेजें",
+        "Q.Load": "त्वरित लोड",
+        "Menu": "मेनू",
+        "Main Menu": "मुख्य मेनू",
+        "Start again": "फिर से शुरू करें",
+        "The End": "समाप्त",
+        "Display": "प्रदर्शन",
+        "Fullscreen": "पूर्ण स्क्रीन",
+        "Language": "भाषा",
+        "Text Speed": "पाठ की गति",
+        "Auto-Forward Time": "स्वचालित आगे बढ़ने का समय",
+        "Music Volume": "संगीत की आवाज़",
+        "Sound Volume": "ध्वनि की आवाज़",
+        "Voice Volume": "आवाज़ (वॉइस) की आवाज़",
+        "Page {}": "पृष्ठ {}",
+        "empty slot": "खाली स्थान",
+        "The dialogue history is empty.": "संवाद का इतिहास खाली है।"
+      }
+    },
+    {
+      "code": "hu",
+      "name": "Hungarian",
+      "nativeName": "Magyar",
+      "ui": {
+        "Start": "Indítás",
+        "Load": "Betöltés",
+        "Save": "Mentés",
+        "Preferences": "Beállítások",
+        "Prefs": "Beáll.",
+        "About": "Névjegy",
+        "Back": "Vissza",
+        "History": "Előzmények",
+        "Skip": "Átugrás",
+        "Auto": "Auto",
+        "Q.Save": "Gyorsmentés",
+        "Q.Load": "Gyorsbetöltés",
+        "Menu": "Menü",
+        "Main Menu": "Főmenü",
+        "Start again": "Újrakezdés",
+        "The End": "Vége",
+        "Display": "Megjelenítés",
+        "Fullscreen": "Teljes képernyő",
+        "Language": "Nyelv",
+        "Text Speed": "Szövegsebesség",
+        "Auto-Forward Time": "Automatikus továbblépés ideje",
+        "Music Volume": "Zene hangereje",
+        "Sound Volume": "Hangeffektek hangereje",
+        "Voice Volume": "Hang hangereje",
+        "Page {}": "{}. oldal",
+        "empty slot": "üres hely",
+        "The dialogue history is empty.": "A párbeszédek előzménye üres."
+      }
+    },
+    {
+      "code": "id",
+      "name": "Indonesian",
+      "nativeName": "Bahasa Indonesia",
+      "ui": {
+        "Start": "Mulai",
+        "Load": "Muat",
+        "Save": "Simpan",
+        "Preferences": "Preferensi",
+        "Prefs": "Pref.",
+        "About": "Tentang",
+        "Back": "Kembali",
+        "History": "Riwayat",
+        "Skip": "Lewati",
+        "Auto": "Otomatis",
+        "Q.Save": "Simpan cepat",
+        "Q.Load": "Muat cepat",
+        "Menu": "Menu",
+        "Main Menu": "Menu utama",
+        "Start again": "Mulai lagi",
+        "The End": "Tamat",
+        "Display": "Tampilan",
+        "Fullscreen": "Layar penuh",
+        "Language": "Bahasa",
+        "Text Speed": "Kecepatan teks",
+        "Auto-Forward Time": "Waktu maju otomatis",
+        "Music Volume": "Volume musik",
+        "Sound Volume": "Volume suara",
+        "Voice Volume": "Volume suara pengisi",
+        "Page {}": "Halaman {}",
+        "empty slot": "slot kosong",
+        "The dialogue history is empty.": "Riwayat dialog kosong."
+      }
+    },
+    {
+      "code": "it",
+      "name": "Italian",
+      "nativeName": "Italiano",
+      "ui": {
+        "Start": "Inizia",
+        "Load": "Carica",
+        "Save": "Salva",
+        "Preferences": "Preferenze",
+        "Prefs": "Pref.",
+        "About": "Informazioni",
+        "Back": "Indietro",
+        "History": "Cronologia",
+        "Skip": "Salta",
+        "Auto": "Auto",
+        "Q.Save": "Salv. rapido",
+        "Q.Load": "Car. rapido",
+        "Menu": "Menu",
+        "Main Menu": "Menu principale",
+        "Start again": "Ricomincia",
+        "The End": "Fine",
+        "Display": "Schermo",
+        "Fullscreen": "Schermo intero",
+        "Language": "Lingua",
+        "Text Speed": "Velocità del testo",
+        "Auto-Forward Time": "Tempo di avanzamento automatico",
+        "Music Volume": "Volume della musica",
+        "Sound Volume": "Volume dei suoni",
+        "Voice Volume": "Volume delle voci",
+        "Page {}": "Pagina {}",
+        "empty slot": "slot vuoto",
+        "The dialogue history is empty.": "La cronologia dei dialoghi è vuota."
+      }
+    },
+    {
+      "code": "ja",
+      "name": "Japanese",
+      "nativeName": "日本語",
+      "ui": {
+        "Start": "スタート",
+        "Load": "ロード",
+        "Save": "セーブ",
+        "Preferences": "設定",
+        "Prefs": "設定",
+        "About": "このゲームについて",
+        "Back": "戻る",
+        "History": "履歴",
+        "Skip": "スキップ",
+        "Auto": "オート",
+        "Q.Save": "クイックセーブ",
+        "Q.Load": "クイックロード",
+        "Menu": "メニュー",
+        "Main Menu": "メインメニュー",
+        "Start again": "最初からやり直す",
+        "The End": "おわり",
+        "Display": "表示",
+        "Fullscreen": "フルスクリーン",
+        "Language": "言語",
+        "Text Speed": "テキスト速度",
+        "Auto-Forward Time": "オート待機時間",
+        "Music Volume": "音楽の音量",
+        "Sound Volume": "効果音の音量",
+        "Voice Volume": "ボイスの音量",
+        "Page {}": "ページ {}",
+        "empty slot": "空きスロット",
+        "The dialogue history is empty.": "会話の履歴は空です。"
+      }
+    },
+    {
+      "code": "ko",
+      "name": "Korean",
+      "nativeName": "한국어",
+      "ui": {
+        "Start": "시작",
+        "Load": "불러오기",
+        "Save": "저장",
+        "Preferences": "환경설정",
+        "Prefs": "설정",
+        "About": "정보",
+        "Back": "뒤로",
+        "History": "기록",
+        "Skip": "건너뛰기",
+        "Auto": "자동",
+        "Q.Save": "빠른 저장",
+        "Q.Load": "빠른 불러오기",
+        "Menu": "메뉴",
+        "Main Menu": "메인 메뉴",
+        "Start again": "처음부터 다시 시작",
+        "The End": "끝",
+        "Display": "화면",
+        "Fullscreen": "전체 화면",
+        "Language": "언어",
+        "Text Speed": "텍스트 속도",
+        "Auto-Forward Time": "자동 진행 시간",
+        "Music Volume": "음악 음량",
+        "Sound Volume": "효과음 음량",
+        "Voice Volume": "음성 음량",
+        "Page {}": "{}페이지",
+        "empty slot": "빈 슬롯",
+        "The dialogue history is empty.": "대화 기록이 비어 있습니다."
+      }
+    },
+    {
+      "code": "lv",
+      "name": "Latvian",
+      "nativeName": "Latviešu",
+      "ui": {
+        "Start": "Sākt",
+        "Load": "Ielādēt",
+        "Save": "Saglabāt",
+        "Preferences": "Iestatījumi",
+        "Prefs": "Iest.",
+        "About": "Par spēli",
+        "Back": "Atpakaļ",
+        "History": "Vēsture",
+        "Skip": "Izlaist",
+        "Auto": "Auto",
+        "Q.Save": "Ātrā saglab.",
+        "Q.Load": "Ātrā ielāde",
+        "Menu": "Izvēlne",
+        "Main Menu": "Galvenā izvēlne",
+        "Start again": "Sākt no jauna",
+        "The End": "Beigas",
+        "Display": "Attēlojums",
+        "Fullscreen": "Pilnekrāna režīms",
+        "Language": "Valoda",
+        "Text Speed": "Teksta ātrums",
+        "Auto-Forward Time": "Automātiskās virzīšanas laiks",
+        "Music Volume": "Mūzikas skaļums",
+        "Sound Volume": "Skaņu skaļums",
+        "Voice Volume": "Balss skaļums",
+        "Page {}": "{}. lappuse",
+        "empty slot": "tukša vieta",
+        "The dialogue history is empty.": "Dialogu vēsture ir tukša."
+      }
+    },
+    {
+      "code": "lt",
+      "name": "Lithuanian",
+      "nativeName": "Lietuvių",
+      "ui": {
+        "Start": "Pradėti",
+        "Load": "Įkelti",
+        "Save": "Išsaugoti",
+        "Preferences": "Nustatymai",
+        "Prefs": "Nust.",
+        "About": "Apie",
+        "Back": "Atgal",
+        "History": "Istorija",
+        "Skip": "Praleisti",
+        "Auto": "Auto",
+        "Q.Save": "Greitas išsaug.",
+        "Q.Load": "Greitas įkėl.",
+        "Menu": "Meniu",
+        "Main Menu": "Pagrindinis meniu",
+        "Start again": "Pradėti iš naujo",
+        "The End": "Pabaiga",
+        "Display": "Vaizdas",
+        "Fullscreen": "Visas ekranas",
+        "Language": "Kalba",
+        "Text Speed": "Teksto greitis",
+        "Auto-Forward Time": "Automatinio tęsimo laikas",
+        "Music Volume": "Muzikos garsas",
+        "Sound Volume": "Garsų garsas",
+        "Voice Volume": "Balso garsas",
+        "Page {}": "{} puslapis",
+        "empty slot": "tuščia vieta",
+        "The dialogue history is empty.": "Dialogų istorija tuščia."
+      }
+    },
+    {
+      "code": "no",
+      "name": "Norwegian",
+      "nativeName": "Norsk",
+      "ui": {
+        "Start": "Start",
+        "Load": "Last inn",
+        "Save": "Lagre",
+        "Preferences": "Innstillinger",
+        "Prefs": "Innst.",
+        "About": "Om",
+        "Back": "Tilbake",
+        "History": "Historikk",
+        "Skip": "Hopp over",
+        "Auto": "Auto",
+        "Q.Save": "Hurtiglagre",
+        "Q.Load": "Hurtiglast",
+        "Menu": "Meny",
+        "Main Menu": "Hovedmeny",
+        "Start again": "Start på nytt",
+        "The End": "Slutt",
+        "Display": "Visning",
+        "Fullscreen": "Fullskjerm",
+        "Language": "Språk",
+        "Text Speed": "Tekstfart",
+        "Auto-Forward Time": "Tid for automatisk videre",
+        "Music Volume": "Musikkvolum",
+        "Sound Volume": "Lydvolum",
+        "Voice Volume": "Stemmevolum",
+        "Page {}": "Side {}",
+        "empty slot": "tom plass",
+        "The dialogue history is empty.": "Dialoghistorikken er tom."
+      }
+    },
+    {
+      "code": "fa",
+      "name": "Persian",
+      "nativeName": "فارسی",
+      "ui": {
+        "Start": "شروع",
+        "Load": "بارگذاری",
+        "Save": "ذخیره",
+        "Preferences": "تنظیمات",
+        "Prefs": "تنظیمات",
+        "About": "درباره",
+        "Back": "بازگشت",
+        "History": "تاریخچه",
+        "Skip": "رد کردن",
+        "Auto": "خودکار",
+        "Q.Save": "ذخیره سریع",
+        "Q.Load": "بارگذاری سریع",
+        "Menu": "منو",
+        "Main Menu": "منوی اصلی",
+        "Start again": "شروع دوباره",
+        "The End": "پایان",
+        "Display": "نمایش",
+        "Fullscreen": "تمام صفحه",
+        "Language": "زبان",
+        "Text Speed": "سرعت متن",
+        "Auto-Forward Time": "زمان پیشروی خودکار",
+        "Music Volume": "بلندی موسیقی",
+        "Sound Volume": "بلندی صداها",
+        "Voice Volume": "بلندی گفتار",
+        "Page {}": "صفحه {}",
+        "empty slot": "جایگاه خالی",
+        "The dialogue history is empty.": "تاریخچه گفتگو خالی است."
+      }
+    },
+    {
+      "code": "pl",
+      "name": "Polish",
+      "nativeName": "Polski",
+      "ui": {
+        "Start": "Start",
+        "Load": "Wczytaj",
+        "Save": "Zapisz",
+        "Preferences": "Ustawienia",
+        "Prefs": "Ustaw.",
+        "About": "O grze",
+        "Back": "Wstecz",
+        "History": "Historia",
+        "Skip": "Pomiń",
+        "Auto": "Auto",
+        "Q.Save": "Szybki zapis",
+        "Q.Load": "Szybki odczyt",
+        "Menu": "Menu",
+        "Main Menu": "Menu główne",
+        "Start again": "Zacznij od nowa",
+        "The End": "Koniec",
+        "Display": "Wyświetlanie",
+        "Fullscreen": "Pełny ekran",
+        "Language": "Język",
+        "Text Speed": "Szybkość tekstu",
+        "Auto-Forward Time": "Czas automatycznego przechodzenia",
+        "Music Volume": "Głośność muzyki",
+        "Sound Volume": "Głośność dźwięków",
+        "Voice Volume": "Głośność głosów",
+        "Page {}": "Strona {}",
+        "empty slot": "puste miejsce",
+        "The dialogue history is empty.": "Historia dialogów jest pusta."
+      }
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "nativeName": "Português",
+      "ui": {
+        "Start": "Iniciar",
+        "Load": "Carregar",
+        "Save": "Salvar",
+        "Preferences": "Preferências",
+        "Prefs": "Prefs.",
+        "About": "Sobre",
+        "Back": "Voltar",
+        "History": "Histórico",
+        "Skip": "Pular",
+        "Auto": "Auto",
+        "Q.Save": "Salv. rápido",
+        "Q.Load": "Carr. rápido",
+        "Menu": "Menu",
+        "Main Menu": "Menu principal",
+        "Start again": "Recomeçar",
+        "The End": "Fim",
+        "Display": "Exibição",
+        "Fullscreen": "Tela cheia",
+        "Language": "Idioma",
+        "Text Speed": "Velocidade do texto",
+        "Auto-Forward Time": "Tempo de avanço automático",
+        "Music Volume": "Volume da música",
+        "Sound Volume": "Volume dos sons",
+        "Voice Volume": "Volume das vozes",
+        "Page {}": "Página {}",
+        "empty slot": "espaço vazio",
+        "The dialogue history is empty.": "O histórico de diálogos está vazio."
+      }
+    },
+    {
+      "code": "ro",
+      "name": "Romanian",
+      "nativeName": "Română",
+      "ui": {
+        "Start": "Start",
+        "Load": "Încarcă",
+        "Save": "Salvează",
+        "Preferences": "Preferințe",
+        "Prefs": "Pref.",
+        "About": "Despre",
+        "Back": "Înapoi",
+        "History": "Istoric",
+        "Skip": "Sari peste",
+        "Auto": "Auto",
+        "Q.Save": "Salv. rapidă",
+        "Q.Load": "Înc. rapidă",
+        "Menu": "Meniu",
+        "Main Menu": "Meniu principal",
+        "Start again": "Începe din nou",
+        "The End": "Sfârșit",
+        "Display": "Afișare",
+        "Fullscreen": "Ecran complet",
+        "Language": "Limbă",
+        "Text Speed": "Viteza textului",
+        "Auto-Forward Time": "Timp de avans automat",
+        "Music Volume": "Volumul muzicii",
+        "Sound Volume": "Volumul sunetelor",
+        "Voice Volume": "Volumul vocii",
+        "Page {}": "Pagina {}",
+        "empty slot": "loc gol",
+        "The dialogue history is empty.": "Istoricul dialogurilor este gol."
+      }
+    },
+    {
+      "code": "ru",
+      "name": "Russian",
+      "nativeName": "Русский",
+      "ui": {
+        "Start": "Начать",
+        "Load": "Загрузить",
+        "Save": "Сохранить",
+        "Preferences": "Настройки",
+        "Prefs": "Настр.",
+        "About": "Об игре",
+        "Back": "Назад",
+        "History": "История",
+        "Skip": "Пропуск",
+        "Auto": "Авто",
+        "Q.Save": "Б.сохр.",
+        "Q.Load": "Б.загр.",
+        "Menu": "Меню",
+        "Main Menu": "Главное меню",
+        "Start again": "Начать заново",
+        "The End": "Конец",
+        "Display": "Экран",
+        "Fullscreen": "Во весь экран",
+        "Language": "Язык",
+        "Text Speed": "Скорость текста",
+        "Auto-Forward Time": "Время автопродолжения",
+        "Music Volume": "Громкость музыки",
+        "Sound Volume": "Громкость звуков",
+        "Voice Volume": "Громкость голоса",
+        "Page {}": "Страница {}",
+        "empty slot": "пустая ячейка",
+        "The dialogue history is empty.": "История диалогов пуста."
+      }
+    },
+    {
+      "code": "sr",
+      "name": "Serbian",
+      "nativeName": "Српски",
+      "ui": {
+        "Start": "Започни",
+        "Load": "Учитај",
+        "Save": "Сачувај",
+        "Preferences": "Подешавања",
+        "Prefs": "Подеш.",
+        "About": "О игри",
+        "Back": "Назад",
+        "History": "Историја",
+        "Skip": "Прескочи",
+        "Auto": "Аутоматски",
+        "Q.Save": "Брзо чување",
+        "Q.Load": "Брзо учитавање",
+        "Menu": "Мени",
+        "Main Menu": "Главни мени",
+        "Start again": "Почни изнова",
+        "The End": "Крај",
+        "Display": "Приказ",
+        "Fullscreen": "Цео екран",
+        "Language": "Језик",
+        "Text Speed": "Брзина текста",
+        "Auto-Forward Time": "Време аутоматског преласка",
+        "Music Volume": "Јачина музике",
+        "Sound Volume": "Јачина звукова",
+        "Voice Volume": "Јачина гласа",
+        "Page {}": "Страна {}",
+        "empty slot": "празно место",
+        "The dialogue history is empty.": "Историја дијалога је празна."
+      }
+    },
+    {
+      "code": "sk",
+      "name": "Slovak",
+      "nativeName": "Slovenčina",
+      "ui": {
+        "Start": "Štart",
+        "Load": "Načítať",
+        "Save": "Uložiť",
+        "Preferences": "Nastavenia",
+        "Prefs": "Nast.",
+        "About": "O hre",
+        "Back": "Späť",
+        "History": "História",
+        "Skip": "Preskočiť",
+        "Auto": "Auto",
+        "Q.Save": "Rýchle uloženie",
+        "Q.Load": "Rýchle načítanie",
+        "Menu": "Ponuka",
+        "Main Menu": "Hlavná ponuka",
+        "Start again": "Začať odznova",
+        "The End": "Koniec",
+        "Display": "Zobrazenie",
+        "Fullscreen": "Celá obrazovka",
+        "Language": "Jazyk",
+        "Text Speed": "Rýchlosť textu",
+        "Auto-Forward Time": "Čas automatického posunu",
+        "Music Volume": "Hlasitosť hudby",
+        "Sound Volume": "Hlasitosť zvukov",
+        "Voice Volume": "Hlasitosť hlasov",
+        "Page {}": "Strana {}",
+        "empty slot": "prázdne miesto",
+        "The dialogue history is empty.": "História dialógov je prázdna."
+      }
+    },
+    {
+      "code": "sl",
+      "name": "Slovenian",
+      "nativeName": "Slovenščina",
+      "ui": {
+        "Start": "Začni",
+        "Load": "Naloži",
+        "Save": "Shrani",
+        "Preferences": "Nastavitve",
+        "Prefs": "Nast.",
+        "About": "O igri",
+        "Back": "Nazaj",
+        "History": "Zgodovina",
+        "Skip": "Preskoči",
+        "Auto": "Samodejno",
+        "Q.Save": "Hitro shrani",
+        "Q.Load": "Hitro naloži",
+        "Menu": "Meni",
+        "Main Menu": "Glavni meni",
+        "Start again": "Začni znova",
+        "The End": "Konec",
+        "Display": "Prikaz",
+        "Fullscreen": "Celozaslonski način",
+        "Language": "Jezik",
+        "Text Speed": "Hitrost besedila",
+        "Auto-Forward Time": "Čas samodejnega nadaljevanja",
+        "Music Volume": "Glasnost glasbe",
+        "Sound Volume": "Glasnost zvokov",
+        "Voice Volume": "Glasnost glasov",
+        "Page {}": "Stran {}",
+        "empty slot": "prazno mesto",
+        "The dialogue history is empty.": "Zgodovina dialogov je prazna."
+      }
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "nativeName": "Español",
+      "ui": {
+        "Start": "Comenzar",
+        "Load": "Cargar",
+        "Save": "Guardar",
+        "Preferences": "Preferencias",
+        "Prefs": "Prefs.",
+        "About": "Acerca de",
+        "Back": "Atrás",
+        "History": "Historial",
+        "Skip": "Saltar",
+        "Auto": "Auto",
+        "Q.Save": "Guard. rápido",
+        "Q.Load": "Carg. rápido",
+        "Menu": "Menú",
+        "Main Menu": "Menú principal",
+        "Start again": "Empezar de nuevo",
+        "The End": "Fin",
+        "Display": "Pantalla",
+        "Fullscreen": "Pantalla completa",
+        "Language": "Idioma",
+        "Text Speed": "Velocidad del texto",
+        "Auto-Forward Time": "Tiempo de avance automático",
+        "Music Volume": "Volumen de la música",
+        "Sound Volume": "Volumen de los sonidos",
+        "Voice Volume": "Volumen de las voces",
+        "Page {}": "Página {}",
+        "empty slot": "espacio vacío",
+        "The dialogue history is empty.": "El historial de diálogos está vacío."
+      }
+    },
+    {
+      "code": "sv",
+      "name": "Swedish",
+      "nativeName": "Svenska",
+      "ui": {
+        "Start": "Starta",
+        "Load": "Ladda",
+        "Save": "Spara",
+        "Preferences": "Inställningar",
+        "Prefs": "Inst.",
+        "About": "Om",
+        "Back": "Tillbaka",
+        "History": "Historik",
+        "Skip": "Hoppa över",
+        "Auto": "Auto",
+        "Q.Save": "Snabbspara",
+        "Q.Load": "Snabbladda",
+        "Menu": "Meny",
+        "Main Menu": "Huvudmeny",
+        "Start again": "Börja om",
+        "The End": "Slut",
+        "Display": "Visning",
+        "Fullscreen": "Helskärm",
+        "Language": "Språk",
+        "Text Speed": "Texthastighet",
+        "Auto-Forward Time": "Tid för automatisk framåt",
+        "Music Volume": "Musikvolym",
+        "Sound Volume": "Ljudvolym",
+        "Voice Volume": "Röstvolym",
+        "Page {}": "Sida {}",
+        "empty slot": "tom plats",
+        "The dialogue history is empty.": "Dialoghistoriken är tom."
+      }
+    },
+    {
+      "code": "tr",
+      "name": "Turkish",
+      "nativeName": "Türkçe",
+      "ui": {
+        "Start": "Başla",
+        "Load": "Yükle",
+        "Save": "Kaydet",
+        "Preferences": "Tercihler",
+        "Prefs": "Terc.",
+        "About": "Hakkında",
+        "Back": "Geri",
+        "History": "Geçmiş",
+        "Skip": "Atla",
+        "Auto": "Otomatik",
+        "Q.Save": "Hızlı kayıt",
+        "Q.Load": "Hızlı yükle",
+        "Menu": "Menü",
+        "Main Menu": "Ana menü",
+        "Start again": "Baştan başla",
+        "The End": "Son",
+        "Display": "Görüntü",
+        "Fullscreen": "Tam ekran",
+        "Language": "Dil",
+        "Text Speed": "Metin hızı",
+        "Auto-Forward Time": "Otomatik ilerleme süresi",
+        "Music Volume": "Müzik sesi",
+        "Sound Volume": "Ses efektleri sesi",
+        "Voice Volume": "Konuşma sesi",
+        "Page {}": "Sayfa {}",
+        "empty slot": "boş yuva",
+        "The dialogue history is empty.": "Diyalog geçmişi boş."
+      }
+    },
+    {
+      "code": "uk",
+      "name": "Ukrainian",
+      "nativeName": "Українська",
+      "ui": {
+        "Start": "Почати",
+        "Load": "Завантажити",
+        "Save": "Зберегти",
+        "Preferences": "Налаштування",
+        "Prefs": "Налашт.",
+        "About": "Про гру",
+        "Back": "Назад",
+        "History": "Історія",
+        "Skip": "Пропуск",
+        "Auto": "Авто",
+        "Q.Save": "Ш.збер.",
+        "Q.Load": "Ш.завант.",
+        "Menu": "Меню",
+        "Main Menu": "Головне меню",
+        "Start again": "Почати спочатку",
+        "The End": "Кінець",
+        "Display": "Екран",
+        "Fullscreen": "На весь екран",
+        "Language": "Мова",
+        "Text Speed": "Швидкість тексту",
+        "Auto-Forward Time": "Час автопродовження",
+        "Music Volume": "Гучність музики",
+        "Sound Volume": "Гучність звуків",
+        "Voice Volume": "Гучність голосу",
+        "Page {}": "Сторінка {}",
+        "empty slot": "порожня комірка",
+        "The dialogue history is empty.": "Історія діалогів порожня."
+      }
+    },
+    {
+      "code": "vi",
+      "name": "Vietnamese",
+      "nativeName": "Tiếng Việt",
+      "ui": {
+        "Start": "Bắt đầu",
+        "Load": "Tải",
+        "Save": "Lưu",
+        "Preferences": "Tùy chọn",
+        "Prefs": "Tùy chọn",
+        "About": "Giới thiệu",
+        "Back": "Quay lại",
+        "History": "Lịch sử",
+        "Skip": "Bỏ qua",
+        "Auto": "Tự động",
+        "Q.Save": "Lưu nhanh",
+        "Q.Load": "Tải nhanh",
+        "Menu": "Menu",
+        "Main Menu": "Menu chính",
+        "Start again": "Bắt đầu lại",
+        "The End": "Kết thúc",
+        "Display": "Hiển thị",
+        "Fullscreen": "Toàn màn hình",
+        "Language": "Ngôn ngữ",
+        "Text Speed": "Tốc độ chữ",
+        "Auto-Forward Time": "Thời gian tự động chuyển",
+        "Music Volume": "Âm lượng nhạc",
+        "Sound Volume": "Âm lượng âm thanh",
+        "Voice Volume": "Âm lượng giọng nói",
+        "Page {}": "Trang {}",
+        "empty slot": "ô trống",
+        "The dialogue history is empty.": "Lịch sử hội thoại đang trống."
+      }
+    }
+  ]
+};

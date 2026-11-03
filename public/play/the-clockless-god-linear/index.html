@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>The Clockless God</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="player.css">
+  <style>
+
+  </style>
+  <!-- Load game data from script file so file:// protocol works with ZERO CORS issues -->
+  <script src="game-data.js"></script>
+</head>
+<body class="vno-body">
+  <div id="vno-container">
+    <div id="vno-stage" class="vno-stage">
+      <!-- Background Layer -->
+      <div id="vno-bg-layer" class="vno-layer">
+        <div id="vno-bg-image" class="vno-bg"></div>
+        <div id="vno-black-curtain" class="vno-black-curtain"></div>
+      </div>
+
+      <!-- Character Sprites Layer -->
+      <div id="vno-sprites-layer" class="vno-layer">
+        <div id="vno-slot-left" class="vno-slot vno-slot-left"></div>
+        <div id="vno-slot-center" class="vno-slot vno-slot-center"></div>
+        <div id="vno-slot-right" class="vno-slot vno-slot-right"></div>
+      </div>
+
+      <!-- CG & Insert Overlay Layer -->
+      <div id="vno-cg-layer" class="vno-layer vno-hidden">
+        <div id="vno-cg-overlay" class="vno-cg-overlay"></div>
+        <div id="vno-insert-card" class="vno-insert-card vno-hidden">
+          <img id="vno-insert-img" alt="Insert card" src="">
+        </div>
+      </div>
+
+      <!-- Chapter Title Card -->
+      <div id="vno-chapter-card" class="vno-fullscreen-card vno-hidden">
+        <div id="vno-chapter-card-text" class="vno-chapter-card-text"></div>
+      </div>
+
+      <!-- The End Card -->
+      <div id="vno-ending-card" class="vno-fullscreen-card vno-hidden">
+        <div id="vno-ending-card-text" class="vno-ending-card-text">The End</div>
+        <div class="vno-ending-buttons">
+          <button id="vno-btn-restart" class="vno-button">Restart</button>
+          <button id="vno-btn-ending-menu" class="vno-button">Main Menu</button>
+        </div>
+      </div>
+
+      <!-- Dialogue Box -->
+      <div id="vno-textbox-container" class="vno-textbox-container">
+        <div id="vno-namebox" class="vno-namebox vno-hidden">
+          <span id="vno-speaker-name"></span>
+        </div>
+        <div id="vno-textbox" class="vno-textbox">
+          <div id="vno-dialogue-text" class="vno-dialogue-text"></div>
+          <div id="vno-typewriter-indicator" class="vno-indicator vno-hidden">&#9660;</div>
+        </div>
+        <!-- Quick Menu -->
+        <div id="vno-quick-menu" class="vno-quick-menu">
+          <button id="vno-qm-back" class="vno-qm-btn" title="Rollback (PageUp / Left)">Back</button>
+          <button id="vno-qm-history" class="vno-qm-btn" title="Dialogue History">History</button>
+          <button id="vno-qm-skip" class="vno-qm-btn" title="Skip Text (Ctrl)">Skip</button>
+          <button id="vno-qm-auto" class="vno-qm-btn" title="Auto Forward">Auto</button>
+          <button id="vno-qm-save" class="vno-qm-btn" title="Save Game">Save</button>
+          <button id="vno-qm-qsave" class="vno-qm-btn" title="Quick Save">Q.Save</button>
+          <button id="vno-qm-qload" class="vno-qm-btn" title="Quick Load">Q.Load</button>
+          <button id="vno-qm-prefs" class="vno-qm-btn" title="Preferences">Prefs</button>
+          <button id="vno-qm-menu" class="vno-qm-btn" title="Main Menu">Menu</button>
+        </div>
+      </div>
+
+      <!-- Branching Choices Overlay -->
+      <div id="vno-choice-overlay" class="vno-overlay vno-hidden">
+        <div id="vno-choice-container" class="vno-choice-container"></div>
+      </div>
+
+      <!-- Interactive Puzzle / Mini-Game Overlay -->
+      <div id="vno-puzzle-overlay" class="vno-overlay vno-hidden">
+        <div id="vno-puzzle-container" class="vno-puzzle-container">
+          <div id="vno-puzzle-header" class="vno-puzzle-header">
+            <h2 id="vno-puzzle-title">Puzzle</h2>
+            <div id="vno-puzzle-header-actions">
+              <button id="vno-puzzle-btn-hint" class="vno-button vno-btn-hint">Hint</button>
+              <button id="vno-puzzle-btn-giveup" class="vno-button vno-btn-giveup">Give Up</button>
+            </div>
+          </div>
+          <div id="vno-puzzle-body" class="vno-puzzle-body"></div>
+        </div>
+      </div>
+
+      <!-- Screens: Main Menu, Save/Load, Preferences, History -->
+      <!-- Main Menu Screen -->
+      <div id="vno-screen-main-menu" class="vno-screen">
+        <div class="vno-main-menu-bg"></div>
+        <div class="vno-main-menu-content">
+          <h1 id="vno-mm-title" class="vno-main-menu-title">The Clockless God</h1>
+          <div class="vno-main-menu-buttons">
+            <button id="vno-mm-start" class="vno-menu-btn">Start</button>
+            <button id="vno-mm-load" class="vno-menu-btn">Load</button>
+            <button id="vno-mm-prefs" class="vno-menu-btn">Preferences</button>
+            <button id="vno-mm-about" class="vno-menu-btn">About</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- History Screen -->
+      <div id="vno-screen-history" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-history-title">History</h2>
+            <button class="vno-screen-close">&times;</button>
+          </div>
+          <div id="vno-history-list" class="vno-screen-body vno-history-list"></div>
+        </div>
+      </div>
+
+      <!-- Save / Load Screen -->
+      <div id="vno-screen-save" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-save-screen-title">Save Game</h2>
+            <button class="vno-screen-close">&times;</button>
+          </div>
+          <div class="vno-save-pages">
+            <button class="vno-page-btn" data-page="1">1</button>
+            <button class="vno-page-btn" data-page="2">2</button>
+            <button class="vno-page-btn" data-page="3">3</button>
+            <button class="vno-page-btn" data-page="4">4</button>
+            <button class="vno-page-btn" data-page="5">5</button>
+            <button class="vno-page-btn" data-page="6">6</button>
+            <button class="vno-page-btn" data-page="7">7</button>
+            <button class="vno-page-btn" data-page="8">8</button>
+            <button class="vno-page-btn" data-page="9">9</button>
+            <button class="vno-page-btn" data-page="auto">Auto</button>
+            <button class="vno-page-btn" data-page="quick">Quick</button>
+          </div>
+          <div id="vno-save-slots-grid" class="vno-save-slots-grid"></div>
+        </div>
+      </div>
+
+      <!-- Preferences Screen -->
+      <div id="vno-screen-prefs" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-prefs-title">Preferences</h2>
+            <button class="vno-screen-close">&times;</button>
+          </div>
+          <div class="vno-screen-body vno-prefs-body">
+            <div class="vno-pref-group">
+              <label id="vno-pref-label-display">Display</label>
+              <div class="vno-pref-control">
+                <button id="vno-pref-fullscreen" class="vno-button">Toggle Fullscreen</button>
+              </div>
+            </div>
+            <div class="vno-pref-group">
+              <label id="vno-pref-label-language">Language</label>
+              <div class="vno-pref-control">
+                <select id="vno-pref-language" class="vno-select"></select>
+              </div>
+            </div>
+            <div class="vno-pref-group">
+              <label id="vno-pref-label-text-speed">Text Speed</label>
+              <div class="vno-pref-control">
+                <input id="vno-pref-text-speed" type="range" min="1" max="100" value="50">
+              </div>
+            </div>
+            <div class="vno-pref-group">
+              <label id="vno-pref-label-auto-delay">Auto-Forward Delay</label>
+              <div class="vno-pref-control">
+                <input id="vno-pref-auto-delay" type="range" min="1" max="10" value="4">
+              </div>
+            </div>
+            <div class="vno-pref-group">
+              <label id="vno-pref-label-vol-music">Music Volume</label>
+              <div class="vno-pref-control">
+                <input id="vno-pref-vol-music" type="range" min="0" max="100" value="80">
+              </div>
+            </div>
+            <div class="vno-pref-group">
+              <label id="vno-pref-label-vol-sfx">Sound Effects Volume</label>
+              <div class="vno-pref-control">
+                <input id="vno-pref-vol-sfx" type="range" min="0" max="100" value="80">
+              </div>
+            </div>
+            <div class="vno-pref-group">
+              <label id="vno-pref-label-vol-voice">Voice Volume</label>
+              <div class="vno-pref-control">
+                <input id="vno-pref-vol-voice" type="range" min="0" max="100" value="90">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Screen -->
+      <div id="vno-screen-about" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-about-title">About</h2>
+            <button class="vno-screen-close">&times;</button>
+          </div>
+          <div class="vno-screen-body">
+            <h3 id="vno-about-book-title">The Clockless God</h3>
+            <p>Powered by Visual Novels Orchestrator HTML5 Game Engine.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Persistent Stage Language Switcher (accessible on every screen) -->
+      <div id="vno-lang-bar" class="vno-lang-bar" title="Language">
+        <label for="vno-stage-language" id="vno-lang-bar-label" class="vno-lang-bar-label">&#127760;</label>
+        <select id="vno-stage-language" class="vno-lang-select" aria-label="Language"></select>
+      </div>
+
+      <!-- Audio Elements -->
+      <audio id="vno-audio-music" loop preload="auto"></audio>
+      <audio id="vno-audio-ambience" loop preload="auto"></audio>
+      <audio id="vno-audio-sfx" preload="auto"></audio>
+      <audio id="vno-audio-voice" preload="auto"></audio>
+    </div>
+  </div>
+
+  <script src="player.js"></script>
+<script src="../../assets/hub-bridge.js" data-player="vn" data-back="../../item/the-clockless-god/"></script>
+</body>
+</html>

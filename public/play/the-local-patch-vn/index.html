@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>The Local Patch</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="player.css">
+  <style>
+
+  </style>
+  <!-- Load game data from script file so file:// protocol works with ZERO CORS issues -->
+  <script src="game-data.js"></script>
+</head>
+<body class="vno-body">
+  <div id="vno-container">
+    <div id="vno-stage" class="vno-stage">
+      <!-- Background Layer -->
+      <div id="vno-bg-layer" class="vno-layer">
+        <div id="vno-bg-image" class="vno-bg"></div>
+        <div id="vno-black-curtain" class="vno-black-curtain"></div>
+      </div>
+
+      <!-- Character Sprites Layer -->
+      <div id="vno-sprites-layer" class="vno-layer">
+        <div id="vno-slot-left" class="vno-slot vno-slot-left"></div>
+        <div id="vno-slot-center" class="vno-slot vno-slot-center"></div>
+        <div id="vno-slot-right" class="vno-slot vno-slot-right"></div>
+      </div>
+
+      <!-- CG & Insert Overlay Layer -->
+      <div id="vno-cg-layer" class="vno-layer vno-hidden">
+        <div id="vno-cg-overlay" class="vno-cg-overlay"></div>
+        <div id="vno-insert-card" class="vno-insert-card vno-hidden">
+          <img id="vno-insert-img" alt="Insert card" src="">
+        </div>
+      </div>
+
+      <!-- Chapter Title Card -->
+      <div id="vno-chapter-card" class="vno-fullscreen-card vno-hidden">
+        <div id="vno-chapter-card-text" class="vno-chapter-card-text"></div>
+      </div>
+
+      <!-- The End Card -->
+      <div id="vno-ending-card" class="vno-fullscreen-card vno-hidden">
+        <div id="vno-ending-card-text" class="vno-ending-card-text">The End</div>
+        <div class="vno-ending-buttons">
+          <button id="vno-btn-restart" class="vno-button">Restart</button>
+          <button id="vno-btn-ending-menu" class="vno-button">Main Menu</button>
+        </div>
+      </div>
+
+      <!-- Picture book page: one full illustration on top, the page's caption below (a picture-book project only) -->
+      <div id="vno-page-layer" class="vno-page-layer vno-hidden">
+        <div id="vno-page-image-area" class="vno-page-image-area">
+          <div id="vno-page-image" class="vno-page-image"></div>
+          <div id="vno-page-placeholder" class="vno-page-placeholder vno-hidden">Illustration missing</div>
+        </div>
+        <div id="vno-page-caption-area" class="vno-page-caption-area">
+          <div id="vno-page-caption" class="vno-page-caption"></div>
+          <div id="vno-page-footer" class="vno-page-footer">
+            <button id="vno-page-prev" class="vno-page-nav" title="Previous page">&#8249;</button>
+            <span id="vno-page-counter" class="vno-page-counter"></span>
+            <button id="vno-page-next" class="vno-page-nav" title="Next page">&#8250;</button>
+            <button id="vno-page-replay" class="vno-page-nav vno-page-replay vno-hidden" title="Read aloud">&#128266;</button>
+          </div>
+        </div>
+        <button id="vno-page-menu" class="vno-page-menu" title="Main Menu">Menu</button>
+      </div>
+
+      <!-- The scene's location title (a catalogue's sceneTitles, else the scene's place text) -->
+      <div id="vno-scene-title" class="vno-scene-title vno-hidden"></div>
+
+      <!-- Dialogue Box -->
+      <div id="vno-textbox-container" class="vno-textbox-container">
+        <div id="vno-namebox" class="vno-namebox vno-hidden">
+          <span id="vno-speaker-name"></span>
+        </div>
+        <div id="vno-textbox" class="vno-textbox">
+          <div id="vno-dialogue-text" class="vno-dialogue-text"></div>
+          <div id="vno-typewriter-indicator" class="vno-indicator vno-hidden">&#9660;</div>
+        </div>
+        <!-- Quick Menu -->
+        <div id="vno-quick-menu" class="vno-quick-menu">
+          <button id="vno-qm-back" class="vno-qm-btn" title="Rollback (PageUp / Left)">Back</button>
+          <button id="vno-qm-history" class="vno-qm-btn" title="Dialogue History">History</button>
+          <button id="vno-qm-skip" class="vno-qm-btn" title="Skip Text (Ctrl)">Skip</button>
+          <button id="vno-qm-auto" class="vno-qm-btn" title="Auto Forward">Auto</button>
+          <button id="vno-qm-save" class="vno-qm-btn" title="Save Game">Save</button>
+          <button id="vno-qm-qsave" class="vno-qm-btn" title="Quick Save">Q.Save</button>
+          <button id="vno-qm-qload" class="vno-qm-btn" title="Quick Load">Q.Load</button>
+          <button id="vno-qm-prefs" class="vno-qm-btn" title="Preferences">Prefs</button>
+          <button id="vno-qm-menu" class="vno-qm-btn" title="Main Menu">Menu</button>
+        </div>
+      </div>
+
+      <!-- Branching Choices Overlay -->
+      <div id="vno-choice-overlay" class="vno-overlay vno-hidden">
+        <div id="vno-choice-container" class="vno-choice-container"></div>
+      </div>
+
+      <!-- Interactive Puzzle / Mini-Game Overlay -->
+      <div id="vno-puzzle-overlay" class="vno-overlay vno-hidden">
+        <div id="vno-puzzle-container" class="vno-puzzle-container">
+          <div id="vno-puzzle-header" class="vno-puzzle-header">
+            <h2 id="vno-puzzle-title">Puzzle</h2>
+            <div id="vno-puzzle-header-actions">
+              <button id="vno-puzzle-btn-hint" class="vno-button vno-btn-hint">Hint</button>
+              <button id="vno-puzzle-btn-giveup" class="vno-button vno-btn-giveup">Give Up</button>
+            </div>
+          </div>
+          <div id="vno-puzzle-body" class="vno-puzzle-body"></div>
+        </div>
+      </div>
+
+      <!-- Screens: Main Menu, Save/Load, Preferences, History -->
+      <!-- Main Menu Screen -->
+      <div id="vno-screen-main-menu" class="vno-screen">
+        <div class="vno-main-menu-bg"></div>
+        <div class="vno-main-menu-content">
+          <h1 id="vno-mm-title" class="vno-main-menu-title">The Local Patch</h1>
+          <div class="vno-main-menu-buttons">
+            <button id="vno-mm-start" class="vno-menu-btn">Start</button>
+            <button id="vno-mm-load" class="vno-menu-btn">Load</button>
+            <button id="vno-mm-prefs" class="vno-menu-btn">Preferences</button>
+            <button id="vno-mm-about" class="vno-menu-btn">About</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- History Screen -->
+      <div id="vno-screen-history" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-history-title">History</h2>
+            <button type="button" class="vno-screen-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div id="vno-history-list" class="vno-screen-body vno-history-list"></div>
+        </div>
+      </div>
+
+      <!-- Save / Load Screen -->
+      <div id="vno-screen-save" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-save-screen-title">Save Game</h2>
+            <button type="button" class="vno-screen-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="vno-save-pages">
+            <button class="vno-page-btn" data-page="1">1</button>
+            <button class="vno-page-btn" data-page="2">2</button>
+            <button class="vno-page-btn" data-page="3">3</button>
+            <button class="vno-page-btn" data-page="4">4</button>
+            <button class="vno-page-btn" data-page="5">5</button>
+            <button class="vno-page-btn" data-page="6">6</button>
+            <button class="vno-page-btn" data-page="7">7</button>
+            <button class="vno-page-btn" data-page="8">8</button>
+            <button class="vno-page-btn" data-page="9">9</button>
+            <button class="vno-page-btn" data-page="auto">Auto</button>
+            <button class="vno-page-btn" data-page="quick">Quick</button>
+          </div>
+          <div id="vno-save-slots-grid" class="vno-save-slots-grid"></div>
+        </div>
+      </div>
+
+      <!-- Preferences Screen -->
+      <div id="vno-screen-prefs" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-prefs-title">Preferences</h2>
+            <button type="button" class="vno-screen-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="vno-screen-body vno-prefs-body">
+            <section class="vno-pref-section">
+              <h3 id="vno-pref-h-display">Display</h3>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-display" for="vno-pref-fullscreen">Display</label>
+                <div class="vno-pref-control">
+                  <button id="vno-pref-fullscreen" class="vno-button">Toggle Fullscreen</button>
+                </div>
+              </div>
+            </section>
+            <section class="vno-pref-section">
+              <h3 id="vno-pref-h-language">Language</h3>
+              <div id="vno-pref-row-ui-language" class="vno-pref-group">
+                <label id="vno-pref-label-ui-language" for="vno-pref-ui-language">Interface Language</label>
+                <div class="vno-pref-control">
+                  <select id="vno-pref-ui-language" class="vno-select" aria-label="Interface Language"></select>
+                </div>
+              </div>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-language" for="vno-pref-language">Story Language</label>
+                <div class="vno-pref-control">
+                  <select id="vno-pref-language" class="vno-select" aria-label="Story Language"></select>
+                </div>
+              </div>
+            </section>
+            <section class="vno-pref-section">
+              <h3 id="vno-pref-h-text">Text</h3>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-text-speed" for="vno-pref-text-speed">Text Speed</label>
+                <div class="vno-pref-control">
+                  <input id="vno-pref-text-speed" type="range" min="1" max="100" value="50" aria-describedby="vno-pref-text-speed-value">
+                  <output id="vno-pref-text-speed-value" class="vno-pref-value" for="vno-pref-text-speed">50</output>
+                </div>
+              </div>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-auto-delay" for="vno-pref-auto-delay">Auto-Forward Delay</label>
+                <div class="vno-pref-control">
+                  <input id="vno-pref-auto-delay" type="range" min="1" max="10" value="4" aria-describedby="vno-pref-auto-delay-value">
+                  <output id="vno-pref-auto-delay-value" class="vno-pref-value" for="vno-pref-auto-delay">4</output>
+                </div>
+              </div>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-story-text-size" for="vno-pref-story-text-size">Story Text Size</label>
+                <div class="vno-pref-control">
+                  <input id="vno-pref-story-text-size" type="range" min="80" max="140" step="10" value="100" aria-describedby="vno-pref-story-text-size-value">
+                  <output id="vno-pref-story-text-size-value" class="vno-pref-value" for="vno-pref-story-text-size">100%</output>
+                </div>
+              </div>
+            </section>
+            <section class="vno-pref-section">
+              <h3 id="vno-pref-h-audio">Audio</h3>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-vol-music" for="vno-pref-vol-music">Music Volume</label>
+                <div class="vno-pref-control">
+                  <input id="vno-pref-vol-music" type="range" min="0" max="100" value="48" aria-describedby="vno-pref-vol-music-value">
+                  <output id="vno-pref-vol-music-value" class="vno-pref-value" for="vno-pref-vol-music">48</output>
+                </div>
+              </div>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-vol-sfx" for="vno-pref-vol-sfx">Sound Effects Volume</label>
+                <div class="vno-pref-control">
+                  <input id="vno-pref-vol-sfx" type="range" min="0" max="100" value="80" aria-describedby="vno-pref-vol-sfx-value">
+                  <output id="vno-pref-vol-sfx-value" class="vno-pref-value" for="vno-pref-vol-sfx">80</output>
+                </div>
+              </div>
+              <div class="vno-pref-group">
+                <label id="vno-pref-label-vol-voice" for="vno-pref-vol-voice">Voice Volume</label>
+                <div class="vno-pref-control">
+                  <input id="vno-pref-vol-voice" type="range" min="0" max="100" value="90" aria-describedby="vno-pref-vol-voice-value">
+                  <output id="vno-pref-vol-voice-value" class="vno-pref-value" for="vno-pref-vol-voice">90</output>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Screen -->
+      <div id="vno-screen-about" class="vno-screen vno-hidden">
+        <div class="vno-screen-panel">
+          <div class="vno-screen-header">
+            <h2 id="vno-about-title">About</h2>
+            <button type="button" class="vno-screen-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="vno-screen-body">
+            <h3 id="vno-about-book-title">The Local Patch</h3>
+            <p>Powered by Visual Novels Orchestrator HTML5 Game Engine.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Persistent Stage Language Switcher (accessible on every screen) -->
+      <div id="vno-lang-bar" class="vno-lang-bar" title="Language">
+        <label for="vno-stage-language" id="vno-lang-bar-label" class="vno-lang-bar-label">&#127760;</label>
+        <select id="vno-stage-language" class="vno-lang-select" aria-label="Language"></select>
+      </div>
+
+      <!-- Audio Elements -->
+      <audio id="vno-audio-music" loop preload="auto"></audio>
+      <audio id="vno-audio-ambience" loop preload="auto"></audio>
+      <audio id="vno-audio-sfx" preload="auto"></audio>
+      <audio id="vno-audio-voice" preload="auto"></audio>
+    </div>
+  </div>
+
+  <script src="player.js"></script>
+<script src="../../assets/hub-bridge.js" data-player="vn" data-back="../../item/the-local-patch/"></script>
+</body>
+</html>

@@ -1,0 +1,7353 @@
+window.VNO_GAME_DATA = {
+  "slug": "the-trap-room-at-the-lanterna",
+  "title": "The Trap Room at the Lanterna",
+  "primaryLang": "en",
+  "saveDir": "vno-the-trap-room-at-the-lanterna",
+  "resolution": {
+    "w": 1920,
+    "h": 1080
+  },
+  "theme": {
+    "name": "noir",
+    "label": "Noir",
+    "description": "Dark and moody for mysteries, horror and thrillers. A near-black textbox, a red accent and Courier Prime (OFL, covers Croatian).",
+    "light": false,
+    "pixel": false,
+    "colors": {
+      "accent": "#c0392b",
+      "background": "#0a0a0a",
+      "text": "#e8e4dc",
+      "idle": "#7a7670",
+      "hover": "#e05a4a",
+      "selected": "#ffffff",
+      "insensitive": "#7a76707f",
+      "muted": "#3a1511"
+    },
+    "textbox": {
+      "color": "#000000",
+      "opacity": 0.86,
+      "borderColor": "#c0392b",
+      "radius": 0
+    },
+    "namebox": {
+      "color": "#1a0a08",
+      "opacity": 0.95,
+      "radius": 0,
+      "textColor": "#e05a4a"
+    },
+    "fonts": {
+      "text": "CourierPrime-Regular.ttf",
+      "name": "CourierPrime-Bold.ttf",
+      "interface": "CourierPrime-Regular.ttf",
+      "bold": "CourierPrime-Bold.ttf",
+      "scripts": [
+        "latin"
+      ]
+    },
+    "sizes": {
+      "text": 34,
+      "name": 44,
+      "interface": 32,
+      "label": 36,
+      "title": 78,
+      "choice": 34
+    },
+    "choice": {
+      "color": "#000000d0",
+      "hoverColor": "#3a1511f0",
+      "borderColor": "#c0392b",
+      "radius": 0,
+      "textColor": "#b8b2a8",
+      "hoverTextColor": "#ffffff"
+    },
+    "transitions": {
+      "dissolve": 0.9,
+      "show": 0.35,
+      "fade": 1
+    },
+    "frames": {}
+  },
+  "rtlLangs": [],
+  "characters": {
+    "inspector_nada_ferluga": {
+      "id": "inspector_nada_ferluga",
+      "varName": "inspector_nada_ferluga",
+      "displayName": "Inspector Nada Ferluga",
+      "color": "#bca7ca",
+      "aliases": [
+        "Nada",
+        "Inspector Ferluga",
+        "the Inspector"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/inspector_nada_ferluga neutral.webp"
+      }
+    },
+    "luka_bencic": {
+      "id": "luka_bencic",
+      "varName": "luka_bencic",
+      "displayName": "Luka Benčić",
+      "color": "#a7c5ca",
+      "aliases": [
+        "Luka"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/luka_bencic neutral.webp"
+      }
+    },
+    "bruno_orsini": {
+      "id": "bruno_orsini",
+      "varName": "bruno_orsini",
+      "displayName": "Bruno Orsini",
+      "color": "#bca7ca",
+      "aliases": [
+        "Orsini",
+        "the Great Orsini"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/bruno_orsini neutral.webp"
+      }
+    },
+    "signora_livia_brandolin": {
+      "id": "signora_livia_brandolin",
+      "varName": "signora_livia_brandolin",
+      "displayName": "Signora Livia Brandolin",
+      "color": "#bca7ca",
+      "aliases": [
+        "Livia",
+        "Signora Brandolin",
+        "Livia Brandolin"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/signora_livia_brandolin neutral.webp"
+      }
+    },
+    "doctor_emil_kranjc": {
+      "id": "doctor_emil_kranjc",
+      "varName": "doctor_emil_kranjc",
+      "displayName": "Doctor Emil Kranjc",
+      "color": "#a7b5ca",
+      "aliases": [
+        "Kranjc",
+        "Doctor Kranjc",
+        "the doctor"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/doctor_emil_kranjc neutral.webp"
+      }
+    },
+    "mira_valenti": {
+      "id": "mira_valenti",
+      "varName": "mira_valenti",
+      "displayName": "Mira Valenti",
+      "color": "#a7cabc",
+      "aliases": [
+        "Mira",
+        "the Vanishing Bride",
+        "the Bride"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/mira_valenti neutral.webp"
+      }
+    },
+    "teodor_marusic": {
+      "id": "teodor_marusic",
+      "varName": "teodor_marusic",
+      "displayName": "Teodor Marušić",
+      "color": "#b5caa7",
+      "aliases": [
+        "Teodor"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/teodor_marusic neutral.webp"
+      }
+    },
+    "pina_sardo": {
+      "id": "pina_sardo",
+      "varName": "pina_sardo",
+      "displayName": "Pina Sardo",
+      "color": "#cabca7",
+      "aliases": [
+        "Pina"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/pina_sardo neutral.webp"
+      }
+    },
+    "zlatko_horvat": {
+      "id": "zlatko_horvat",
+      "varName": "zlatko_horvat",
+      "displayName": "Zlatko Horvat",
+      "color": "#a7c5ca",
+      "aliases": [
+        "Zlatko"
+      ],
+      "expressions": [
+        "neutral"
+      ],
+      "sprites": {
+        "neutral": "images/zlatko_horvat neutral.webp"
+      }
+    }
+  },
+  "backgrounds": {
+    "bg_auditorium_evening": "images/bg auditorium_evening.webp",
+    "bg_trap_room_night": "images/bg trap_room_night.webp",
+    "bg_green_room_night": "images/bg green_room_night.webp",
+    "bg_stage_door_night": "images/bg stage_door_night.webp",
+    "bg_stage_night": "images/bg stage_night.webp",
+    "bg_fly_gallery_night": "images/bg fly_gallery_night.webp",
+    "bg_stage_dawn": "images/bg stage_dawn.webp",
+    "bg_stage_door_dawn": "images/bg stage_door_dawn.webp",
+    "bg_auditorium_morning": "images/bg auditorium_morning.webp",
+    "bg_stage_door_morning": "images/bg stage_door_morning.webp"
+  },
+  "cgs": {
+    "nada_kneels_beside_orsini": {
+      "path": "images/cg nada_kneels_beside_orsini.webp",
+      "display": "full"
+    },
+    "orsini_glass": {
+      "path": "images/cg orsini_glass.webp",
+      "display": "insert"
+    },
+    "rosin_glove": {
+      "path": "images/cg rosin_glove.webp",
+      "display": "insert"
+    },
+    "small_black_notebook_open": {
+      "path": "images/cg small_black_notebook_open.webp",
+      "display": "insert"
+    },
+    "nada_stands_circle_ghost": {
+      "path": "images/cg nada_stands_circle_ghost.webp",
+      "display": "full"
+    },
+    "trap_key": {
+      "path": "images/cg trap_key.webp",
+      "display": "insert"
+    },
+    "teodor_lays_his_folded": {
+      "path": "images/cg teodor_lays_his_folded.webp",
+      "display": "full"
+    },
+    "livia_mira_pina_zlatko": {
+      "path": "images/cg livia_mira_pina_zlatko.webp",
+      "display": "full"
+    }
+  },
+  "audio": {
+    "music": {
+      "music_01": {
+        "path": "audio/music_01.mp3"
+      },
+      "music_02": {
+        "path": "audio/music_02.mp3"
+      },
+      "music_03": {
+        "path": "audio/music_03.mp3"
+      }
+    },
+    "sfx": {},
+    "ambience": {
+      "full_theatre_murmuring_orchestra": "audio/amb_full_theatre_murmuring_orchestra.mp3",
+      "water_dripping_ropes_creaking": "audio/amb_water_dripping_ropes_creaking.mp3",
+      "rain_cobbles_ship_horn": "audio/amb_rain_cobbles_ship_horn.mp3",
+      "rain_skylight_clock_ticking": "audio/amb_rain_skylight_clock_ticking.mp3",
+      "wind_high_roof_ropes": "audio/amb_wind_high_roof_ropes.mp3",
+      "rain_roof_ghost_light": "audio/amb_rain_roof_ghost_light.mp3",
+      "rain_easing_off_gulls": "audio/amb_rain_easing_off_gulls.mp3",
+      "water_dripping_gutters_carts": "audio/amb_water_dripping_gutters_carts.mp3",
+      "empty_theatre_soft_creak": "audio/amb_empty_theatre_soft_creak.mp3",
+      "gulls_harbour_waking_up": "audio/amb_gulls_harbour_waking_up.mp3"
+    }
+  },
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "label": "ch_01",
+      "number": 1,
+      "title": "The Vanishing Bride",
+      "music": "music_01",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch01.s01",
+          "label": "ch_01_s01",
+          "title": "Auditorium, Saturday",
+          "locationKey": "auditorium",
+          "bgPath": "images/bg auditorium_evening.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s01.b001",
+              "type": "narration",
+              "text": "The Teatro Lanterna glows like the inside of a jewellery box. Red velvet, gold leaf curling off the balconies, a chandelier that has seen better decades.",
+              "html": "The Teatro Lanterna glows like the inside of a jewellery box. Red velvet, gold leaf curling off the balconies, a chandelier that has seen better decades.",
+              "stage": {
+                "beatId": "ch01.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "full_theatre_murmuring_orchestra"
+              }
+            },
+            {
+              "id": "ch01.s01.b002",
+              "type": "narration",
+              "text": "Every seat is full. It is the last night of the season, and Trieste has come to say goodbye.",
+              "html": "Every seat is full. It is the last night of the season, and Trieste has come to say goodbye.",
+              "stage": {
+                "beatId": "ch01.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Third row, Inspector. Third row! I can see the brass on the trapdoor. I can see the scuffs on it.",
+              "html": "Third row, Inspector. Third row! I can see the brass on the trapdoor. I can see the scuffs on it.",
+              "stage": {
+                "beatId": "ch01.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "You can see a great many things, Luka. Try watching one of them.",
+              "html": "You can see a great many things, Luka. Try watching one of them.",
+              "stage": {
+                "beatId": "ch01.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b006",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "I'm writing it all down. In case he tells us how it's done.",
+              "html": "I&#39;m writing it all down. In case he tells us how it&#39;s done.",
+              "stage": {
+                "beatId": "ch01.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "He won't. Magicians never do. That is the whole of their profession.",
+              "html": "He won&#39;t. Magicians never do. That is the whole of their profession.",
+              "stage": {
+                "beatId": "ch01.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b008",
+              "type": "narration",
+              "text": "The lights drop. The orchestra stops mid-squeak. One spotlight falls on the centre of the stage.",
+              "html": "The lights drop. The orchestra stops mid-squeak. One spotlight falls on the centre of the stage.",
+              "stage": {
+                "beatId": "ch01.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b009",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s01.b009",
+                "shows": [
+                  {
+                    "charKey": "bruno_orsini",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [
+                  "inspector_nada_ferluga",
+                  "luka_bencic"
+                ],
+                "sfx": "drum_roll",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b010",
+              "type": "line",
+              "speaker": "bruno_orsini",
+              "speakerAliasKey": "bruno_orsini#1",
+              "speakerLabel": "ORSINI",
+              "text": "Ladies and gentlemen of Trieste! For one last night, I give you... the Vanishing Bride!",
+              "html": "Ladies and gentlemen of Trieste! For one last night, I give you... the Vanishing Bride!",
+              "stage": {
+                "beatId": "ch01.s01.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "bruno_orsini",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b011",
+              "type": "narration",
+              "text": "Mira steps into a tall black cabinet painted with silver stars. Orsini swirls his cape across the door.",
+              "html": "Mira steps into a tall black cabinet painted with silver stars. Orsini swirls his cape across the door.",
+              "stage": {
+                "beatId": "ch01.s01.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b012",
+              "type": "line",
+              "speaker": "bruno_orsini",
+              "speakerAliasKey": "bruno_orsini#1",
+              "speakerLabel": "ORSINI",
+              "text": "One. Two. Three!",
+              "html": "One. Two. Three!",
+              "stage": {
+                "beatId": "ch01.s01.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "bruno_orsini",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b013",
+              "type": "narration",
+              "text": "He throws the door open. The cabinet is empty. Not a sequin left.",
+              "html": "He throws the door open. The cabinet is empty. Not a sequin left.",
+              "stage": {
+                "beatId": "ch01.s01.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b014",
+              "type": "narration",
+              "text": "The audience gasps, then roars.",
+              "html": "The audience gasps, then roars.",
+              "stage": {
+                "beatId": "ch01.s01.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b015",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Gone. She's gone. Where does she go? Inspector, where does she go?",
+              "html": "Gone. She&#39;s gone. Where does she go? Inspector, where does she go?",
+              "stage": {
+                "beatId": "ch01.s01.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b016",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Four seconds behind the cape. Enough for a panel. Up, I think, not down.",
+              "html": "Four seconds behind the cape. Enough for a panel. Up, I think, not down.",
+              "stage": {
+                "beatId": "ch01.s01.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b017",
+              "type": "line",
+              "speaker": "bruno_orsini",
+              "speakerAliasKey": "bruno_orsini#1",
+              "speakerLabel": "ORSINI",
+              "text": "And now, my friends, the groom follows his bride!",
+              "html": "And now, my friends, the groom follows his bride!",
+              "stage": {
+                "beatId": "ch01.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "bruno_orsini",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b018",
+              "type": "narration",
+              "text": "Orsini stands on the brass trapdoor. He bows. He smiles at the third row as if he knows Nada personally.",
+              "html": "Orsini stands on the brass trapdoor. He bows. He smiles at the third row as if he knows Nada personally.",
+              "stage": {
+                "beatId": "ch01.s01.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b019",
+              "type": "narration",
+              "text": "The trapdoor drops. Orsini drops with it, cape and all. The spotlight swings to the back of the stalls, to the aisle where he is meant to appear.",
+              "html": "The trapdoor drops. Orsini drops with it, cape and all. The spotlight swings to the back of the stalls, to the aisle where he is meant to appear.",
+              "stage": {
+                "beatId": "ch01.s01.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": "heavy_wooden_clunk",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b020",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s01.b020",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [
+                  "bruno_orsini",
+                  "mira_valenti"
+                ],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b021",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Here he comes. Any second. He comes up behind the last row, everyone says so.",
+              "html": "Here he comes. Any second. He comes up behind the last row, everyone says so.",
+              "stage": {
+                "beatId": "ch01.s01.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b022",
+              "type": "narration",
+              "text": "The spotlight waits on the empty aisle. The audience waits with it.",
+              "html": "The spotlight waits on the empty aisle. The audience waits with it.",
+              "stage": {
+                "beatId": "ch01.s01.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b023",
+              "type": "narration",
+              "text": "Ten seconds. Twenty. Somebody laughs nervously. The orchestra plays the same three bars again.",
+              "html": "Ten seconds. Twenty. Somebody laughs nervously. The orchestra plays the same three bars again.",
+              "stage": {
+                "beatId": "ch01.s01.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b024",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "That is forty seconds, Luka.",
+              "html": "That is forty seconds, Luka.",
+              "stage": {
+                "beatId": "ch01.s01.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s01.b025",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Maybe he's... building suspense?",
+              "html": "Maybe he&#39;s... building suspense?",
+              "stage": {
+                "beatId": "ch01.s01.b025",
+                "shows": [
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s01.b026",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Orsini has never built suspense in his life. He builds applause. Come on.",
+              "html": "Orsini has never built suspense in his life. He builds applause. Come on.",
+              "stage": {
+                "beatId": "ch01.s01.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s02",
+          "label": "ch_01_s02",
+          "title": "Trap room, Saturday",
+          "locationKey": "trap_room",
+          "bgPath": "images/bg trap_room_night.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s02.b001",
+              "type": "narration",
+              "text": "Under the stage the air is cold and smells of damp wood and old paint. A single bulb swings above a forest of counterweights and propped-up scenery.",
+              "html": "Under the stage the air is cold and smells of damp wood and old paint. A single bulb swings above a forest of counterweights and propped-up scenery.",
+              "stage": {
+                "beatId": "ch01.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "water_dripping_ropes_creaking"
+              }
+            },
+            {
+              "id": "ch01.s02.b002",
+              "type": "narration",
+              "text": "Above, the square of the trapdoor shows a thin line of light. Feet are running somewhere overhead.",
+              "html": "Above, the square of the trapdoor shows a thin line of light. Feet are running somewhere overhead.",
+              "stage": {
+                "beatId": "ch01.s02.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s02.b003",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Inspector. Is he...",
+              "html": "Inspector. Is he...",
+              "stage": {
+                "beatId": "ch01.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "nada_kneels_beside_orsini",
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "He is. I am sorry, Luka. Don't touch anything.",
+              "html": "He is. I am sorry, Luka. Don&#39;t touch anything.",
+              "stage": {
+                "beatId": "ch01.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b006",
+              "type": "narration",
+              "text": "She closes Orsini's eyes with two careful fingers. She does not look at him long. She looks at the room.",
+              "html": "She closes Orsini&#39;s eyes with two careful fingers. She does not look at him long. She looks at the room.",
+              "stage": {
+                "beatId": "ch01.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "One staircase. One door, padlocked from this side. One trapdoor, which he came through. No window.",
+              "html": "One staircase. One door, padlocked from this side. One trapdoor, which he came through. No window.",
+              "stage": {
+                "beatId": "ch01.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b008",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "The body was found in the trap room. Under the stage, by the counterweights. Nine minutes past ten. I'm writing nine past ten.",
+              "html": "The body was found in the trap room. Under the stage, by the counterweights. Nine minutes past ten. I&#39;m writing nine past ten.",
+              "stage": {
+                "beatId": "ch01.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b009",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Good. Write that the padlock is closed, too. And that his cape is not torn.",
+              "html": "Good. Write that the padlock is closed, too. And that his cape is not torn.",
+              "stage": {
+                "beatId": "ch01.s02.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b010",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Not torn. Right. There's rope burn on the beam up there, but that's old. Everything down here has rope burn.",
+              "html": "Not torn. Right. There&#39;s rope burn on the beam up there, but that&#39;s old. Everything down here has rope burn.",
+              "stage": {
+                "beatId": "ch01.s02.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s02.b011",
+              "type": "narration",
+              "text": "Nada stands and brushes her coat. Her face is calm, but she takes off her spectacles and cleans them twice.",
+              "html": "Nada stands and brushes her coat. Her face is calm, but she takes off her spectacles and cleans them twice.",
+              "stage": {
+                "beatId": "ch01.s02.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b012",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Somebody was waiting for him down here, Luka. In the dark, while two thousand people clapped.",
+              "html": "Somebody was waiting for him down here, Luka. In the dark, while two thousand people clapped.",
+              "stage": {
+                "beatId": "ch01.s02.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s03",
+          "label": "ch_01_s03",
+          "title": "Green room, Saturday",
+          "locationKey": "green_room",
+          "bgPath": "images/bg green_room_night.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s03.b001",
+              "type": "narration",
+              "text": "The green room is warm and shabby, all mirrors and bulbs and feather boas hanging like sleeping birds. A silver bucket of ice sits on a little table with a bottle of champagne in it.",
+              "html": "The green room is warm and shabby, all mirrors and bulbs and feather boas hanging like sleeping birds. A silver bucket of ice sits on a little table with a bottle of champagne in it.",
+              "stage": {
+                "beatId": "ch01.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b002",
+              "type": "narration",
+              "text": "Three glasses stand beside it, poured and waiting for a toast that will not come.",
+              "html": "Three glasses stand beside it, poured and waiting for a toast that will not come.",
+              "stage": {
+                "beatId": "ch01.s03.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s03.b003",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Inspector, smell this one. No, don't drink it. Smell it.",
+              "html": "Inspector, smell this one. No, don&#39;t drink it. Smell it.",
+              "stage": {
+                "beatId": "ch01.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Sweet. And something underneath. A chemist's shop.",
+              "html": "Sweet. And something underneath. A chemist&#39;s shop.",
+              "stage": {
+                "beatId": "ch01.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b006",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Like my grandmother's cough syrup. The one that made her sleep through Easter.",
+              "html": "Like my grandmother&#39;s cough syrup. The one that made her sleep through Easter.",
+              "stage": {
+                "beatId": "ch01.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b007",
+              "type": "narration",
+              "text": "Orsini's full champagne glass, with a sweet, medicinal smell",
+              "html": "Orsini&#39;s full champagne glass, with a sweet, medicinal smell",
+              "stage": {
+                "beatId": "ch01.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "orsini_glass"
+              }
+            },
+            {
+              "id": "ch01.s03.b008",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "The glass with the star painted on the stem. Whose is that?",
+              "html": "The glass with the star painted on the stem. Whose is that?",
+              "stage": {
+                "beatId": "ch01.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b009",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": '"For the Great Orsini. Ti voglio bene. L."',
+              "html": "&quot;For the Great Orsini. Ti voglio bene. L.&quot;",
+              "stage": {
+                "beatId": "ch01.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b010",
+              "type": "narration",
+              "text": "A door swings open. Perfume and cigarette smoke arrive before the woman does.",
+              "html": "A door swings open. Perfume and cigarette smoke arrive before the woman does.",
+              "stage": {
+                "beatId": "ch01.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b011",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s03.b011",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "happy",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b012",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Darling, they tell me the police are in my green room. I did not know we sold tickets to the police.",
+              "html": "Darling, they tell me the police are in my green room. I did not know we sold tickets to the police.",
+              "stage": {
+                "beatId": "ch01.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s03.b013",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Inspector Ferluga, Signora Brandolin. I was in your third row.",
+              "html": "Inspector Ferluga, Signora Brandolin. I was in your third row.",
+              "stage": {
+                "beatId": "ch01.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b014",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Then you saw. You saw him go down and not come up. Thirty years I have run this house, and nobody has ever not come up.",
+              "html": "Then you saw. You saw him go down and not come up. Thirty years I have run this house, and nobody has ever not come up.",
+              "stage": {
+                "beatId": "ch01.s03.b014",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b015",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Signora. The champagne in Orsini's glass. What is in it?",
+              "html": "Signora. The champagne in Orsini&#39;s glass. What is in it?",
+              "stage": {
+                "beatId": "ch01.s03.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b016",
+              "type": "narration",
+              "text": "Livia looks at the glass for a long time. She taps ash that is not there from her holder.",
+              "html": "Livia looks at the glass for a long time. She taps ash that is not there from her holder.",
+              "stage": {
+                "beatId": "ch01.s03.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b017",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Laudanum. A little. Only a little, darling, I am not a monster.",
+              "html": "Laudanum. A little. Only a little, darling, I am not a monster.",
+              "stage": {
+                "beatId": "ch01.s03.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b018",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Grandmother's cough syrup.",
+              "html": "Grandmother&#39;s cough syrup.",
+              "stage": {
+                "beatId": "ch01.s03.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b019",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "He was leaving me. He signed with a house in Vienna. The train is at seven tomorrow morning. If he slept through it, he would have to stay, and do one more month, and I would not go bankrupt by Christmas.",
+              "html": "He was leaving me. He signed with a house in Vienna. The train is at seven tomorrow morning. If he slept through it, he would have to stay, and do one more month, and I would not go bankrupt by Christmas.",
+              "stage": {
+                "beatId": "ch01.s03.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b020",
+              "type": "narration",
+              "text": "Signora Brandolin had the laced champagne: she says so herself, the bottle was hers, and she poured it.",
+              "html": "Signora Brandolin had the laced champagne: she says so herself, the bottle was hers, and she poured it.",
+              "stage": {
+                "beatId": "ch01.s03.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b021",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "You laced it here?",
+              "html": "You laced it here?",
+              "stage": {
+                "beatId": "ch01.s03.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b022",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Here. I carried that bottle up from my office and I put it in that bucket and I have not taken it out since. Ask anyone. Nobody else touched it.",
+              "html": "Here. I carried that bottle up from my office and I put it in that bucket and I have not taken it out since. Ask anyone. Nobody else touched it.",
+              "stage": {
+                "beatId": "ch01.s03.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b023",
+              "type": "narration",
+              "text": "Luka crouches by the bucket. He lifts the bottle by its neck, slowly, and holds it up to the light.",
+              "html": "Luka crouches by the bucket. He lifts the bottle by its neck, slowly, and holds it up to the light.",
+              "stage": {
+                "beatId": "ch01.s03.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b024",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Inspector. It drips. The ice cracked the label and there's a little chip in the glass, right here at the bottom. Drip. Drip. See? It leaves a spot every time.",
+              "html": "Inspector. It drips. The ice cracked the label and there&#39;s a little chip in the glass, right here at the bottom. Drip. Drip. See? It leaves a spot every time.",
+              "stage": {
+                "beatId": "ch01.s03.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b025",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Where does it leave spots?",
+              "html": "Where does it leave spots?",
+              "stage": {
+                "beatId": "ch01.s03.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s03.b026",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Here. Here. A ring on the table. Two by the sofa. A trail to the door of her office and back. That's all.",
+              "html": "Here. Here. A ring on the table. Two by the sofa. A trail to the door of her office and back. That&#39;s all.",
+              "stage": {
+                "beatId": "ch01.s03.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s04",
+          "label": "ch_01_s04",
+          "title": "Trap room, Saturday",
+          "locationKey": "trap_room",
+          "bgPath": "images/bg trap_room_night.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s04.b001",
+              "type": "narration",
+              "text": "Nada and Luka come back down the narrow wooden staircase. Luka holds a lamp low over every step.",
+              "html": "Nada and Luka come back down the narrow wooden staircase. Luka holds a lamp low over every step.",
+              "stage": {
+                "beatId": "ch01.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s04.b002",
+                "shows": [
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b003",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Dust. Dust. A cigarette end, very old. A nail. No drips. Not one, Inspector. Not on the stairs, not by the counterweights, not near him.",
+              "html": "Dust. Dust. A cigarette end, very old. A nail. No drips. Not one, Inspector. Not on the stairs, not by the counterweights, not near him.",
+              "stage": {
+                "beatId": "ch01.s04.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b004",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "The bottle leaves a spot wherever it goes.",
+              "html": "The bottle leaves a spot wherever it goes.",
+              "stage": {
+                "beatId": "ch01.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b005",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Wherever it goes. Like a snail.",
+              "html": "Wherever it goes. Like a snail.",
+              "stage": {
+                "beatId": "ch01.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b006",
+              "type": "narration",
+              "text": "The leaking bottle marks every place it has been, and there is not a drop on the trap room stairs: whoever had the laced champagne was not in the trap room.",
+              "html": "The leaking bottle marks every place it has been, and there is not a drop on the trap room stairs: whoever had the laced champagne was not in the trap room.",
+              "stage": {
+                "beatId": "ch01.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "So our sleeping draught is a small sin, and a separate one. Good. I like my sins in separate boxes.",
+              "html": "So our sleeping draught is a small sin, and a separate one. Good. I like my sins in separate boxes.",
+              "stage": {
+                "beatId": "ch01.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b008",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Signora Brandolin wanted him asleep, not... this.",
+              "html": "Signora Brandolin wanted him asleep, not... this.",
+              "stage": {
+                "beatId": "ch01.s04.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s04.b009",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Signora Brandolin wanted him on stage for another month. A dead magician sells no tickets.",
+              "html": "Signora Brandolin wanted him on stage for another month. A dead magician sells no tickets.",
+              "stage": {
+                "beatId": "ch01.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s05",
+          "label": "ch_01_s05",
+          "title": "Green room, Saturday",
+          "locationKey": "green_room",
+          "bgPath": "images/bg green_room_night.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s05.b001",
+              "type": "narration",
+              "text": "Livia has lit a real cigarette now. Her hand shakes a little, and she does not hide it.",
+              "html": "Livia has lit a real cigarette now. Her hand shakes a little, and she does not hide it.",
+              "stage": {
+                "beatId": "ch01.s05.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s05.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s05.b002",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s05.b003",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Who else was backstage during the act, Signora?",
+              "html": "Who else was backstage during the act, Signora?",
+              "stage": {
+                "beatId": "ch01.s05.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s05.b004",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "The girl, of course. Mira. She has to be, she is the Bride. And his doctor, Kranjc. He comes every night now. Bruno said it was his heart. Bruno said a great many things.",
+              "html": "The girl, of course. Mira. She has to be, she is the Bride. And his doctor, Kranjc. He comes every night now. Bruno said it was his heart. Bruno said a great many things.",
+              "stage": {
+                "beatId": "ch01.s05.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s05.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "And during the vanishing? Where were you?",
+              "html": "And during the vanishing? Where were you?",
+              "stage": {
+                "beatId": "ch01.s05.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s05.b006",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Here, darling, waiting with my bottle like a fool. But I looked out once, through the wings. I wanted to see him take his last bow.",
+              "html": "Here, darling, waiting with my bottle like a fool. But I looked out once, through the wings. I wanted to see him take his last bow.",
+              "stage": {
+                "beatId": "ch01.s05.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s05.b007",
+              "type": "narration",
+              "text": "She points the cigarette holder up, towards the dark above the stage.",
+              "html": "She points the cigarette holder up, towards the dark above the stage.",
+              "stage": {
+                "beatId": "ch01.s05.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s05.b008",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Somebody was on the fly ladder. Climbing, right when the Bride vanished. I saw only the hands on the rungs. Pale gloves. White, or pale grey, in that light. I could not tell you which.",
+              "html": "Somebody was on the fly ladder. Climbing, right when the Bride vanished. I saw only the hands on the rungs. Pale gloves. White, or pale grey, in that light. I could not tell you which.",
+              "stage": {
+                "beatId": "ch01.s05.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s05.b009",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Mira wears white satin gloves. In the act.",
+              "html": "Mira wears white satin gloves. In the act.",
+              "stage": {
+                "beatId": "ch01.s05.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s05.b010",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "And Kranjc never takes his off. Grey kid. He says hands carry disease.",
+              "html": "And Kranjc never takes his off. Grey kid. He says hands carry disease.",
+              "stage": {
+                "beatId": "ch01.s05.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s05.b011",
+              "type": "narration",
+              "text": "Whoever climbed the ladder wore pale gloves, and only two people backstage wear them: either Mira or Doctor Kranjc was in the fly gallery.",
+              "html": "Whoever climbed the ladder wore pale gloves, and only two people backstage wear them: either Mira or Doctor Kranjc was in the fly gallery.",
+              "stage": {
+                "beatId": "ch01.s05.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s05.b012",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "One bottle. One ladder. One trapdoor. One locked door. Four things, and only one of them killed him.",
+              "html": "One bottle. One ladder. One trapdoor. One locked door. Four things, and only one of them killed him.",
+              "stage": {
+                "beatId": "ch01.s05.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s06",
+          "label": "ch_01_s06",
+          "title": "Stage door, Saturday",
+          "locationKey": "stage_door",
+          "bgPath": "images/bg stage_door_night.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s06.b001",
+              "type": "narration",
+              "text": "The harbour street behind the theatre shines with rain. Posters of the Great Orsini peel off the wall, his painted moustache running in the wet.",
+              "html": "The harbour street behind the theatre shines with rain. Posters of the Great Orsini peel off the wall, his painted moustache running in the wet.",
+              "stage": {
+                "beatId": "ch01.s06.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "rain_cobbles_ship_horn"
+              }
+            },
+            {
+              "id": "ch01.s06.b002",
+              "type": "narration",
+              "text": "A police wagon has pulled up. Its lamps make two yellow circles on the stones.",
+              "html": "A police wagon has pulled up. Its lamps make two yellow circles on the stones.",
+              "stage": {
+                "beatId": "ch01.s06.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s06.b003",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "The constables are coming. Do we let anyone leave?",
+              "html": "The constables are coming. Do we let anyone leave?",
+              "stage": {
+                "beatId": "ch01.s06.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Nobody leaves until dawn. The company scatters at seven, with the Vienna train and everything else. We have until then.",
+              "html": "Nobody leaves until dawn. The company scatters at seven, with the Vienna train and everything else. We have until then.",
+              "stage": {
+                "beatId": "ch01.s06.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b006",
+              "type": "narration",
+              "text": "A thin man comes out of the rain under a black umbrella. He carries a doctor's bag. He does not hurry.",
+              "html": "A thin man comes out of the rain under a black umbrella. He carries a doctor&#39;s bag. He does not hurry.",
+              "stage": {
+                "beatId": "ch01.s06.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": "footsteps_wet_cobbles_slow",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b007",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s06.b007",
+                "shows": [
+                  {
+                    "charKey": "doctor_emil_kranjc",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b008",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "Inspector. I am told my patient has died. I am Doctor Kranjc. I attended him.",
+              "html": "Inspector. I am told my patient has died. I am Doctor Kranjc. I attended him.",
+              "stage": {
+                "beatId": "ch01.s06.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b009",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "You attended him tonight, Doctor?",
+              "html": "You attended him tonight, Doctor?",
+              "stage": {
+                "beatId": "ch01.s06.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b010",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "Every night this month. A weak heart, and a strong opinion of himself. The two often go together.",
+              "html": "Every night this month. A weak heart, and a strong opinion of himself. The two often go together.",
+              "stage": {
+                "beatId": "ch01.s06.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b011",
+              "type": "narration",
+              "text": "He folds his umbrella neatly and shakes it once. His gloves do not get wet. He seems to have arranged that too.",
+              "html": "He folds his umbrella neatly and shakes it once. His gloves do not get wet. He seems to have arranged that too.",
+              "stage": {
+                "beatId": "ch01.s06.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b012",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I will sign the certificate, of course. It will save everyone a great deal of trouble. Heart failure, under the strain of performance. Very sad.",
+              "html": "I will sign the certificate, of course. It will save everyone a great deal of trouble. Heart failure, under the strain of performance. Very sad.",
+              "stage": {
+                "beatId": "ch01.s06.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b013",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "He didn't die of his heart. Someone...",
+              "html": "He didn&#39;t die of his heart. Someone...",
+              "stage": {
+                "beatId": "ch01.s06.b013",
+                "shows": [
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "angry",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch01.s06.b014",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Luka.",
+              "html": "Luka.",
+              "stage": {
+                "beatId": "ch01.s06.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b015",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "The young man is upset. That is natural. Shall we go inside, Inspector? I have my pen.",
+              "html": "The young man is upset. That is natural. Shall we go inside, Inspector? I have my pen.",
+              "stage": {
+                "beatId": "ch01.s06.b015",
+                "shows": [
+                  {
+                    "charKey": "doctor_emil_kranjc",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch01.s06.b016",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Keep your pen in your bag for now, Doctor. Tonight I will decide what goes on the certificate.",
+              "html": "Keep your pen in your bag for now, Doctor. Tonight I will decide what goes on the certificate.",
+              "stage": {
+                "beatId": "ch01.s06.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch01.s06.b017",
+              "type": "narration",
+              "text": "Kranjc bows, very slightly. Behind his glasses, his eyes do not change at all.",
+              "html": "Kranjc bows, very slightly. Behind his glasses, his eyes do not change at all.",
+              "stage": {
+                "beatId": "ch01.s06.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": "ch_02"
+    },
+    {
+      "id": "chapter_2",
+      "label": "ch_02",
+      "number": 2,
+      "title": "Rosin and Sequins",
+      "music": "music_02",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch02.s01",
+          "label": "ch_02_s01",
+          "title": "Green room, Saturday",
+          "locationKey": "green_room",
+          "bgPath": "images/bg green_room_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s01.b001",
+              "type": "narration",
+              "text": "The green room smells of wet umbrellas now. The champagne bucket has been pushed into a corner, with a constable's card on it that says DO NOT TOUCH.",
+              "html": "The green room smells of wet umbrellas now. The champagne bucket has been pushed into a corner, with a constable&#39;s card on it that says DO NOT TOUCH.",
+              "stage": {
+                "beatId": "ch02.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "rain_skylight_clock_ticking"
+              }
+            },
+            {
+              "id": "ch02.s01.b002",
+              "type": "narration",
+              "text": "Kranjc sits on the very edge of the velvet sofa, as if the sofa might be catching.",
+              "html": "Kranjc sits on the very edge of the velvet sofa, as if the sofa might be catching.",
+              "stage": {
+                "beatId": "ch02.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "doctor_emil_kranjc",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b004",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Tell me where you were during the act, Doctor.",
+              "html": "Tell me where you were during the act, Doctor.",
+              "stage": {
+                "beatId": "ch02.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b005",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "Above it. In the fly gallery. Bruno liked me to watch his breathing from up there, when he came out of the cabinet. One sees the chest move very clearly from above.",
+              "html": "Above it. In the fly gallery. Bruno liked me to watch his breathing from up there, when he came out of the cabinet. One sees the chest move very clearly from above.",
+              "stage": {
+                "beatId": "ch02.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b006",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "And you climbed the ladder to get there.",
+              "html": "And you climbed the ladder to get there.",
+              "stage": {
+                "beatId": "ch02.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b007",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "There is no other way, Inspector. Unless one is a sandbag.",
+              "html": "There is no other way, Inspector. Unless one is a sandbag.",
+              "stage": {
+                "beatId": "ch02.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b008",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Pale gloves on the rungs...",
+              "html": "Pale gloves on the rungs...",
+              "stage": {
+                "beatId": "ch02.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b009",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "The young man has something to say.",
+              "html": "The young man has something to say.",
+              "stage": {
+                "beatId": "ch02.s01.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b010",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Only a question, Doctor. Have you ever been up the fly ladder before tonight?",
+              "html": "Only a question, Doctor. Have you ever been up the fly ladder before tonight?",
+              "stage": {
+                "beatId": "ch02.s01.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b011",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "Many times.",
+              "html": "Many times.",
+              "stage": {
+                "beatId": "ch02.s01.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b012",
+              "type": "narration",
+              "text": "Luka goes to the costume rack and comes back with a pair of white cotton stage gloves. He holds one up. The palm is streaked a dull grey-gold.",
+              "html": "Luka goes to the costume rack and comes back with a pair of white cotton stage gloves. He holds one up. The palm is streaked a dull grey-gold.",
+              "stage": {
+                "beatId": "ch02.s01.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b013",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "I climbed it, ten minutes ago, with these on. The flymen rub rosin on every rung so their hands don't slip. It's sticky and it's powdery at the same time, it gets into everything. Look. Six rungs and my palms are gold.",
+              "html": "I climbed it, ten minutes ago, with these on. The flymen rub rosin on every rung so their hands don&#39;t slip. It&#39;s sticky and it&#39;s powdery at the same time, it gets into everything. Look. Six rungs and my palms are gold.",
+              "stage": {
+                "beatId": "ch02.s01.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b014",
+              "type": "narration",
+              "text": "a white stage glove with grey-gold rosin dust on the palm, from six rungs of the fly ladder",
+              "html": "a white stage glove with grey-gold rosin dust on the palm, from six rungs of the fly ladder",
+              "stage": {
+                "beatId": "ch02.s01.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "rosin_glove"
+              }
+            },
+            {
+              "id": "ch02.s01.b015",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Your gloves, please, Doctor. Hold them up to the light.",
+              "html": "Your gloves, please, Doctor. Hold them up to the light.",
+              "stage": {
+                "beatId": "ch02.s01.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b016",
+              "type": "narration",
+              "text": "Kranjc does not move for a moment. Then he holds up both hands, palms out, like a man surrendering very politely.",
+              "html": "Kranjc does not move for a moment. Then he holds up both hands, palms out, like a man surrendering very politely.",
+              "stage": {
+                "beatId": "ch02.s01.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b017",
+              "type": "narration",
+              "text": "The grey kid is spotless. Not a grain on it.",
+              "html": "The grey kid is spotless. Not a grain on it.",
+              "stage": {
+                "beatId": "ch02.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b018",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I keep a spare pair in my bag. I changed them.",
+              "html": "I keep a spare pair in my bag. I changed them.",
+              "stage": {
+                "beatId": "ch02.s01.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b019",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "May I see the other pair, then? The ones with the rosin?",
+              "html": "May I see the other pair, then? The ones with the rosin?",
+              "stage": {
+                "beatId": "ch02.s01.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b020",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I threw them away.",
+              "html": "I threw them away.",
+              "stage": {
+                "beatId": "ch02.s01.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b021",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Where?",
+              "html": "Where?",
+              "stage": {
+                "beatId": "ch02.s01.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b022",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I do not recall. The evening has been distressing.",
+              "html": "I do not recall. The evening has been distressing.",
+              "stage": {
+                "beatId": "ch02.s01.b022",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s01.b023",
+              "type": "narration",
+              "text": "Nada walks to the door and holds it open.",
+              "html": "Nada walks to the door and holds it open.",
+              "stage": {
+                "beatId": "ch02.s01.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s01.b024",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Then come with me to the ladder, Doctor. Climb two rungs. Only two. I will hold your bag.",
+              "html": "Then come with me to the ladder, Doctor. Climb two rungs. Only two. I will hold your bag.",
+              "stage": {
+                "beatId": "ch02.s01.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s02",
+          "label": "ch_02_s02",
+          "title": "Stage, Saturday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s02.b001",
+              "type": "narration",
+              "text": "The stage is bare now, the curtain open on the dark, empty house. A single ghost light stands on its pole beside the brass trapdoor.",
+              "html": "The stage is bare now, the curtain open on the dark, empty house. A single ghost light stands on its pole beside the brass trapdoor.",
+              "stage": {
+                "beatId": "ch02.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b002",
+              "type": "narration",
+              "text": "The fly ladder runs straight up the back wall into black, iron rung after iron rung.",
+              "html": "The fly ladder runs straight up the back wall into black, iron rung after iron rung.",
+              "stage": {
+                "beatId": "ch02.s02.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s02.b003",
+                "shows": [
+                  {
+                    "charKey": "doctor_emil_kranjc",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b004",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Two rungs.",
+              "html": "Two rungs.",
+              "stage": {
+                "beatId": "ch02.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b005",
+              "type": "narration",
+              "text": "Kranjc lifts one foot to the first rung. His glasses flash as he looks up. He puts the foot down again.",
+              "html": "Kranjc lifts one foot to the first rung. His glasses flash as he looks up. He puts the foot down again.",
+              "stage": {
+                "beatId": "ch02.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b006",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I do not care for heights. I never have. My father kept me off the hayloft for it.",
+              "html": "I do not care for heights. I never have. My father kept me off the hayloft for it.",
+              "stage": {
+                "beatId": "ch02.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "And yet you watched from the fly gallery every night this month.",
+              "html": "And yet you watched from the fly gallery every night this month.",
+              "stage": {
+                "beatId": "ch02.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b008",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I may have... misremembered. I watched from the wings tonight. Near the ladder.",
+              "html": "I may have... misremembered. I watched from the wings tonight. Near the ladder.",
+              "stage": {
+                "beatId": "ch02.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b009",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "The wings. Near the ladder. Not up it.",
+              "html": "The wings. Near the ladder. Not up it.",
+              "stage": {
+                "beatId": "ch02.s02.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b010",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Spotless gloves, no spare pair to show me, and a man who cannot climb two rungs. Say it plainly.",
+              "html": "Spotless gloves, no spare pair to show me, and a man who cannot climb two rungs. Say it plainly.",
+              "stage": {
+                "beatId": "ch02.s02.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b011",
+              "type": "narration",
+              "text": "Luka says it plainly: there is no rosin on his gloves and he cannot climb two rungs, so Doctor Kranjc was not in the fly gallery.",
+              "html": "Luka says it plainly: there is no rosin on his gloves and he cannot climb two rungs, so Doctor Kranjc was not in the fly gallery.",
+              "stage": {
+                "beatId": "ch02.s02.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b012",
+              "type": "narration",
+              "text": "Kranjc takes his bag back from Nada. His hands are steady again.",
+              "html": "Kranjc takes his bag back from Nada. His hands are steady again.",
+              "stage": {
+                "beatId": "ch02.s02.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s02.b013",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I am not on trial for my fear of ladders, Inspector.",
+              "html": "I am not on trial for my fear of ladders, Inspector.",
+              "stage": {
+                "beatId": "ch02.s02.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s02.b014",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "No, Doctor. Not for that.",
+              "html": "No, Doctor. Not for that.",
+              "stage": {
+                "beatId": "ch02.s02.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s03",
+          "label": "ch_02_s03",
+          "title": "Stage, Saturday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_night.webp",
+          "transition": "none",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s03.b001",
+              "type": "narration",
+              "text": "A swish of sequins comes out of the wings. Mira walks into the ghost light still in her white gown, her veil pushed back, a shawl over her shoulders that does nothing for the cold.",
+              "html": "A swish of sequins comes out of the wings. Mira walks into the ghost light still in her white gown, her veil pushed back, a shawl over her shoulders that does nothing for the cold.",
+              "stage": {
+                "beatId": "ch02.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s03.b002",
+                "shows": [
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b003",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "The constable says I'm next. Go on, then. I've been sawn in half every night since August, I can take a few questions.",
+              "html": "The constable says I&#39;m next. Go on, then. I&#39;ve been sawn in half every night since August, I can take a few questions.",
+              "stage": {
+                "beatId": "ch02.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b004",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Where do you go, Signorina Valenti, when the Bride vanishes?",
+              "html": "Where do you go, Signorina Valenti, when the Bride vanishes?",
+              "stage": {
+                "beatId": "ch02.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b005",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "You want me to give away the trick? Now? He's dead, and he'd still sue me.",
+              "html": "You want me to give away the trick? Now? He&#39;s dead, and he&#39;d still sue me.",
+              "stage": {
+                "beatId": "ch02.s03.b005",
+                "shows": [
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch02.s03.b006",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "He would have to stand in line.",
+              "html": "He would have to stand in line.",
+              "stage": {
+                "beatId": "ch02.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b007",
+              "type": "narration",
+              "text": "Mira looks at the trapdoor. Her face changes for a second, then hardens again.",
+              "html": "Mira looks at the trapdoor. Her face changes for a second, then hardens again.",
+              "stage": {
+                "beatId": "ch02.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b008",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "Up. There's a panel at the back of the cabinet and a little lift, and I come out at the top of the ladder. I climb the last part. In this dress. Every night.",
+              "html": "Up. There&#39;s a panel at the back of the cabinet and a little lift, and I come out at the top of the ladder. I climb the last part. In this dress. Every night.",
+              "stage": {
+                "beatId": "ch02.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch02.s03.b009",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Your gloves, Signorina. The palms.",
+              "html": "Your gloves, Signorina. The palms.",
+              "stage": {
+                "beatId": "ch02.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b010",
+              "type": "narration",
+              "text": "Mira looks down. Her white satin gloves are streaked grey-gold, the fingers stiff with it.",
+              "html": "Mira looks down. Her white satin gloves are streaked grey-gold, the fingers stiff with it.",
+              "stage": {
+                "beatId": "ch02.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s03.b011",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "Rosin. Of course. It never comes off. I owe the wardrobe mistress four pairs.",
+              "html": "Rosin. Of course. It never comes off. I owe the wardrobe mistress four pairs.",
+              "stage": {
+                "beatId": "ch02.s03.b011",
+                "shows": [
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b012",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "So you were in the fly gallery when he dropped.",
+              "html": "So you were in the fly gallery when he dropped.",
+              "stage": {
+                "beatId": "ch02.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s03.b013",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "I'm always in the fly gallery when he drops. That's the act.",
+              "html": "I&#39;m always in the fly gallery when he drops. That&#39;s the act.",
+              "stage": {
+                "beatId": "ch02.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s04",
+          "label": "ch_02_s04",
+          "title": "Fly gallery, Saturday",
+          "locationKey": "fly_gallery",
+          "bgPath": "images/bg fly_gallery_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s04.b001",
+              "type": "narration",
+              "text": "High above the stage the iron catwalk hums under their feet. Ropes stand in rows on the pin rail like the strings of a huge harp.",
+              "html": "High above the stage the iron catwalk hums under their feet. Ropes stand in rows on the pin rail like the strings of a huge harp.",
+              "stage": {
+                "beatId": "ch02.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "wind_high_roof_ropes"
+              }
+            },
+            {
+              "id": "ch02.s04.b002",
+              "type": "narration",
+              "text": "Below them, painted skies hang in the dark. One brass stage weight lies on its side by the rail, out of its row.",
+              "html": "Below them, painted skies hang in the dark. One brass stage weight lies on its side by the rail, out of its row.",
+              "stage": {
+                "beatId": "ch02.s04.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s04.b003",
+                "shows": [
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "This one's out of place. They're all lined up on the hooks, except this one. It's heavy. It's got your rosin on it, Signorina. Little white satin prints.",
+              "html": "This one&#39;s out of place. They&#39;re all lined up on the hooks, except this one. It&#39;s heavy. It&#39;s got your rosin on it, Signorina. Little white satin prints.",
+              "stage": {
+                "beatId": "ch02.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b005",
+              "type": "narration",
+              "text": "Mira is quiet for a long breath. Then she lets go of the rail and folds her arms.",
+              "html": "Mira is quiet for a long breath. Then she lets go of the rail and folds her arms.",
+              "stage": {
+                "beatId": "ch02.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b006",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "Fine. Yes. I picked it up. I was going to drop it on his cabinet when he came back to take his bow. Smash his precious silver stars. Ruin the act in front of all Trieste.",
+              "html": "Fine. Yes. I picked it up. I was going to drop it on his cabinet when he came back to take his bow. Smash his precious silver stars. Ruin the act in front of all Trieste.",
+              "stage": {
+                "beatId": "ch02.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Why?",
+              "html": "Why?",
+              "stage": {
+                "beatId": "ch02.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b008",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "Four months, Inspector. Four months without wages. He paid the doves before he paid me. He said a bride should be grateful for the veil.",
+              "html": "Four months, Inspector. Four months without wages. He paid the doves before he paid me. He said a bride should be grateful for the veil.",
+              "stage": {
+                "beatId": "ch02.s04.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b009",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "And did you drop it?",
+              "html": "And did you drop it?",
+              "stage": {
+                "beatId": "ch02.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b010",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "No. I stood here holding it with both hands like an idiot. And then he didn't come back up, and I put it down, and I've been shaking ever since.",
+              "html": "No. I stood here holding it with both hands like an idiot. And then he didn&#39;t come back up, and I put it down, and I&#39;ve been shaking ever since.",
+              "stage": {
+                "beatId": "ch02.s04.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b011",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "What about the trick rope? Orsini's escape rope. The one he's tied up with in the second half. It's gone from his trunk in the wings.",
+              "html": "What about the trick rope? Orsini&#39;s escape rope. The one he&#39;s tied up with in the second half. It&#39;s gone from his trunk in the wings.",
+              "stage": {
+                "beatId": "ch02.s04.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b012",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "And where would I put a rope, in this?",
+              "html": "And where would I put a rope, in this?",
+              "stage": {
+                "beatId": "ch02.s04.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b013",
+              "type": "narration",
+              "text": "She holds her arms out. The gown fits her like a glove from neck to knee, the seams small and tight.",
+              "html": "She holds her arms out. The gown fits her like a glove from neck to knee, the seams small and tight.",
+              "stage": {
+                "beatId": "ch02.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b014",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "The wardrobe mistress sews me into it at seven. She cuts me out at eleven. There isn't room in here for a hairpin, let alone a rope. Ask her.",
+              "html": "The wardrobe mistress sews me into it at seven. She cuts me out at eleven. There isn&#39;t room in here for a hairpin, let alone a rope. Ask her.",
+              "stage": {
+                "beatId": "ch02.s04.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b015",
+              "type": "narration",
+              "text": "Luka looks at the tiny stitches along her side. He nods slowly.",
+              "html": "Luka looks at the tiny stitches along her side. He nods slowly.",
+              "stage": {
+                "beatId": "ch02.s04.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b016",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "She's sewn in. No pocket, no sleeve, nowhere for it. She couldn't have carried it up that ladder or down it.",
+              "html": "She&#39;s sewn in. No pocket, no sleeve, nowhere for it. She couldn&#39;t have carried it up that ladder or down it.",
+              "stage": {
+                "beatId": "ch02.s04.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b017",
+              "type": "narration",
+              "text": "Mira is sewn into a gown with no room for a hairpin, so Mira did not have the trick rope.",
+              "html": "Mira is sewn into a gown with no room for a hairpin, so Mira did not have the trick rope.",
+              "stage": {
+                "beatId": "ch02.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b018",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "A laced bottle. A brass weight. A missing rope. Three people, three places, three things.",
+              "html": "A laced bottle. A brass weight. A missing rope. Three people, three places, three things.",
+              "stage": {
+                "beatId": "ch02.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s04.b019",
+              "type": "narration",
+              "text": "She looks down through the gap in the catwalk, at the small square of brass far below on the stage.",
+              "html": "She looks down through the gap in the catwalk, at the small square of brass far below on the stage.",
+              "stage": {
+                "beatId": "ch02.s04.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s04.b020",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Luka. Read me everything we have. Every line, in order.",
+              "html": "Luka. Read me everything we have. Every line, in order.",
+              "stage": {
+                "beatId": "ch02.s04.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch02.s05",
+          "label": "ch_02_s05",
+          "title": "Stage, Saturday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch02.s05.b001",
+              "type": "narration",
+              "text": "The company has gathered at the edge of the ghost light, as if it were a campfire. Livia sits on a prop throne. Mira stands with her arms folded. Kranjc waits apart, in the shadow of the wings.",
+              "html": "The company has gathered at the edge of the ghost light, as if it were a campfire. Livia sits on a prop throne. Mira stands with her arms folded. Kranjc waits apart, in the shadow of the wings.",
+              "stage": {
+                "beatId": "ch02.s05.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch02.s05.b002",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b003",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "One of you went down to the trap room tonight and waited for him. One of you had the champagne. One of you had the weight. And one of you had his rope.",
+              "html": "One of you went down to the trap room tonight and waited for him. One of you had the champagne. One of you had the weight. And one of you had his rope.",
+              "stage": {
+                "beatId": "ch02.s05.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b004",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Darling, you make it sound like a parlour game.",
+              "html": "Darling, you make it sound like a parlour game.",
+              "stage": {
+                "beatId": "ch02.s05.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "It is a very old one. Who, with what, and where.",
+              "html": "It is a very old one. Who, with what, and where.",
+              "stage": {
+                "beatId": "ch02.s05.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b006",
+              "type": "puzzle",
+              "stage": {
+                "beatId": "ch02.s05.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              },
+              "puzzleKey": "trap_room"
+            },
+            {
+              "id": "ch02.s05.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Signora Brandolin was in the green room with her laced champagne. Mira was in the fly gallery with the brass stage weight. And you, Doctor Kranjc, were in the trap room, with Orsini's trick rope.",
+              "html": "Signora Brandolin was in the green room with her laced champagne. Mira was in the fly gallery with the brass stage weight. And you, Doctor Kranjc, were in the trap room, with Orsini&#39;s trick rope.",
+              "stage": {
+                "beatId": "ch02.s05.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b008",
+              "type": "narration",
+              "text": "Every head turns to the shadow of the wings. Kranjc steps out of it, unhurried.",
+              "html": "Every head turns to the shadow of the wings. Kranjc steps out of it, unhurried.",
+              "stage": {
+                "beatId": "ch02.s05.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b009",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "That is a very tidy story, Inspector. Does it have a reason in it?",
+              "html": "That is a very tidy story, Inspector. Does it have a reason in it?",
+              "stage": {
+                "beatId": "ch02.s05.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b010",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "It does. Bruno had a little black book. He kept it in his cape. He used to tap it and smile at people. He tapped it at you all week, Doctor.",
+              "html": "It does. Bruno had a little black book. He kept it in his cape. He used to tap it and smile at people. He tapped it at you all week, Doctor.",
+              "stage": {
+                "beatId": "ch02.s05.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch02.s05.b011",
+              "type": "narration",
+              "text": "Luka kneels by the folded cape the constables brought up from below. He finds a slit in the scarlet lining and draws out a small black notebook.",
+              "html": "Luka kneels by the folded cape the constables brought up from below. He finds a slit in the scarlet lining and draws out a small black notebook.",
+              "stage": {
+                "beatId": "ch02.s05.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b012",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": '"Kranjc. Morphine. Twenty-two prescriptions, signed with the names of three dead patients. Tell the board on Monday." It\'s underlined twice.',
+              "html": "&quot;Kranjc. Morphine. Twenty-two prescriptions, signed with the names of three dead patients. Tell the board on Monday.&quot; It&#39;s underlined twice.",
+              "stage": {
+                "beatId": "ch02.s05.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "small_black_notebook_open",
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b013",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "He was going to ruin you on Monday, Doctor. So he did not get to Monday.",
+              "html": "He was going to ruin you on Monday, Doctor. So he did not get to Monday.",
+              "stage": {
+                "beatId": "ch02.s05.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b014",
+              "type": "narration",
+              "text": "For the first time, Kranjc smiles properly. It is not a nice smile.",
+              "html": "For the first time, Kranjc smiles properly. It is not a nice smile.",
+              "stage": {
+                "beatId": "ch02.s05.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b015",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "Inspector. You found him behind a padlocked door. I have never had a key to the trap room in my life. Search me. Search my bag. Search my house.",
+              "html": "Inspector. You found him behind a padlocked door. I have never had a key to the trap room in my life. Search me. Search my bag. Search my house.",
+              "stage": {
+                "beatId": "ch02.s05.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b016",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "He's right. The keys are the night crew's. Nobody else touches them. Not even me.",
+              "html": "He&#39;s right. The keys are the night crew&#39;s. Nobody else touches them. Not even me.",
+              "stage": {
+                "beatId": "ch02.s05.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b017",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Then someone opened the door for you.",
+              "html": "Then someone opened the door for you.",
+              "stage": {
+                "beatId": "ch02.s05.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b018",
+              "type": "narration",
+              "text": "Far off, over the harbour, the bells of the city begin to strike. One. Two. Three.",
+              "html": "Far off, over the harbour, the bells of the city begin to strike. One. Two. Three.",
+              "stage": {
+                "beatId": "ch02.s05.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch02.s05.b019",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "Oh, no. It's midnight. Closing night.",
+              "html": "Oh, no. It&#39;s midnight. Closing night.",
+              "stage": {
+                "beatId": "ch02.s05.b019",
+                "shows": [
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": "distant_church_bells_striking",
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b020",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "What happens at midnight?",
+              "html": "What happens at midnight?",
+              "stage": {
+                "beatId": "ch02.s05.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch02.s05.b021",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "The Lanterna game, darling. And now you'll never get a straight answer until dawn.",
+              "html": "The Lanterna game, darling. And now you&#39;ll never get a straight answer until dawn.",
+              "stage": {
+                "beatId": "ch02.s05.b021",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "happy"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": "ch_03"
+    },
+    {
+      "id": "chapter_3",
+      "label": "ch_03",
+      "number": 3,
+      "title": "Lanterns and Masks",
+      "music": "music_02",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch03.s01",
+          "label": "ch_03_s01",
+          "title": "Stage, Sunday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s01.b001",
+              "type": "narration",
+              "text": "The last bell over the harbour fades. The stage is dark except for the ghost light, a bare bulb on a pole that throws long shadows across the boards.",
+              "html": "The last bell over the harbour fades. The stage is dark except for the ghost light, a bare bulb on a pole that throws long shadows across the boards.",
+              "stage": {
+                "beatId": "ch03.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "rain_roof_ghost_light"
+              }
+            },
+            {
+              "id": "ch03.s01.b002",
+              "type": "narration",
+              "text": "From the wings come three people, one after another, as if they have done this every closing night for years. Each one carries a small paper mask on a stick.",
+              "html": "From the wings come three people, one after another, as if they have done this every closing night for years. Each one carries a small paper mask on a stick.",
+              "stage": {
+                "beatId": "ch03.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "teodor_marusic",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "pina_sardo",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "zlatko_horvat",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s01.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Who are they?",
+              "html": "Who are they?",
+              "stage": {
+                "beatId": "ch03.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b005",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "The night crew, darling. Teodor, our carpenter. Pina, our prompter. Zlatko, who works the ropes. They lock up. They keep every key in this house.",
+              "html": "The night crew, darling. Teodor, our carpenter. Pina, our prompter. Zlatko, who works the ropes. They lock up. They keep every key in this house.",
+              "stage": {
+                "beatId": "ch03.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b006",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Then they are exactly the people I need.",
+              "html": "Then they are exactly the people I need.",
+              "stage": {
+                "beatId": "ch03.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b007",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Not tonight you don't. Not until dawn.",
+              "html": "Not tonight you don&#39;t. Not until dawn.",
+              "stage": {
+                "beatId": "ch03.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s01.b008",
+              "type": "narration",
+              "text": "The three of them stop in a line at the edge of the ghost light. Together, without a word, they raise the paper masks to their faces and lower them again.",
+              "html": "The three of them stop in a line at the edge of the ghost light. Together, without a word, they raise the paper masks to their faces and lower them again.",
+              "stage": {
+                "beatId": "ch03.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": "three_paper_masks_snapping",
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch03.s02",
+          "label": "ch_03_s02",
+          "title": "Stage, Sunday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s02.b001",
+              "type": "narration",
+              "text": "Livia rises from the prop throne. For a moment she is not a tired owner losing money. She is an old actress giving the opening speech.",
+              "html": "Livia rises from the prop throne. For a moment she is not a tired owner losing money. She is an old actress giving the opening speech.",
+              "stage": {
+                "beatId": "ch03.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s02.b002",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "happy",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b003",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "It is older than any of us. Older than this roof. On closing night, at the stroke of twelve, the crew draws lots in the paint shop. Some draw a Lantern. Some draw a Mask.",
+              "html": "It is older than any of us. Older than this roof. On closing night, at the stroke of twelve, the crew draws lots in the paint shop. Some draw a Lantern. Some draw a Mask.",
+              "stage": {
+                "beatId": "ch03.s02.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch03.s02.b004",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Nobody knows who drew what. The paper goes into the stove. And until the sun comes up, they play their part. Every word. To anyone. Even to the police.",
+              "html": "Nobody knows who drew what. The paper goes into the stove. And until the sun comes up, they play their part. Every word. To anyone. Even to the police.",
+              "stage": {
+                "beatId": "ch03.s02.b004",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b005",
+              "type": "narration",
+              "text": "Livia gives the rule as the old company gives it: in the Lanterna game a Lantern always tells the truth and a Mask always lies. Who is a Lantern and who is a Mask?",
+              "html": "Livia gives the rule as the old company gives it: in the Lanterna game a Lantern always tells the truth and a Mask always lies. Who is a Lantern and who is a Mask?",
+              "stage": {
+                "beatId": "ch03.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b006",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "And if I arrest them all for obstruction?",
+              "html": "And if I arrest them all for obstruction?",
+              "stage": {
+                "beatId": "ch03.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b007",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "They'll go to the cells and keep playing. Teodor once played it through a fire.",
+              "html": "They&#39;ll go to the cells and keep playing. Teodor once played it through a fire.",
+              "stage": {
+                "beatId": "ch03.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch03.s02.b008",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "That's... actually rather wonderful.",
+              "html": "That&#39;s... actually rather wonderful.",
+              "stage": {
+                "beatId": "ch03.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b009",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "It is a great nuisance, Luka. Write down that it is a great nuisance.",
+              "html": "It is a great nuisance, Luka. Write down that it is a great nuisance.",
+              "stage": {
+                "beatId": "ch03.s02.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s02.b010",
+              "type": "narration",
+              "text": "Nada steps into the circle of the ghost light. She looks at the three of them, one at a time, the way she looked at the trap room.",
+              "html": "Nada steps into the circle of the ghost light. She looks at the three of them, one at a time, the way she looked at the trap room.",
+              "stage": {
+                "beatId": "ch03.s02.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s02.b011",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "One padlocked door. One killer with no key. Three people with keys. And somebody turned one of them in that lock tonight.",
+              "html": "One padlocked door. One killer with no key. Three people with keys. And somebody turned one of them in that lock tonight.",
+              "stage": {
+                "beatId": "ch03.s02.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch03.s03",
+          "label": "ch_03_s03",
+          "title": "Stage, Sunday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s03.b001",
+              "type": "narration",
+              "text": "The crew stand very still. The ghost light buzzes. Somewhere in the flies a rope creaks and settles.",
+              "html": "The crew stand very still. The ghost light buzzes. Somewhere in the flies a rope creaks and settles.",
+              "stage": {
+                "beatId": "ch03.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s03.b002",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "teodor_marusic",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "pina_sardo",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b003",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "I will ask each of you the same question. Did you give Doctor Kranjc a key to the trap room tonight?",
+              "html": "I will ask each of you the same question. Did you give Doctor Kranjc a key to the trap room tonight?",
+              "stage": {
+                "beatId": "ch03.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b004",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "No.",
+              "html": "No.",
+              "stage": {
+                "beatId": "ch03.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b005",
+              "type": "line",
+              "speaker": "pina_sardo",
+              "speakerAliasKey": "pina_sardo#1",
+              "speakerLabel": "PINA",
+              "text": "No.",
+              "html": "No.",
+              "stage": {
+                "beatId": "ch03.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "pina_sardo",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b006",
+              "type": "line",
+              "speaker": "zlatko_horvat",
+              "speakerAliasKey": "zlatko_horvat#1",
+              "speakerLabel": "ZLATKO",
+              "text": "No.",
+              "html": "No.",
+              "stage": {
+                "beatId": "ch03.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "zlatko_horvat",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b007",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Three noes. That's no help at all.",
+              "html": "Three noes. That&#39;s no help at all.",
+              "stage": {
+                "beatId": "ch03.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch03.s03.b008",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "It is a great deal of help, Luka. Somebody opened that padlock for him. So one of those three noes is a lie.",
+              "html": "It is a great deal of help, Luka. Somebody opened that padlock for him. So one of those three noes is a lie.",
+              "stage": {
+                "beatId": "ch03.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b009",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "And only a Mask lies.",
+              "html": "And only a Mask lies.",
+              "stage": {
+                "beatId": "ch03.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b010",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Only a Mask lies. Find the Mask, and you find the key.",
+              "html": "Only a Mask lies. Find the Mask, and you find the key.",
+              "stage": {
+                "beatId": "ch03.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b011",
+              "type": "narration",
+              "text": "Kranjc, in the shadow of the wings, gives a soft cough. It might be a laugh.",
+              "html": "Kranjc, in the shadow of the wings, gives a soft cough. It might be a laugh.",
+              "stage": {
+                "beatId": "ch03.s03.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s03.b012",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "Charming. A parlour game for a murder. I did warn you, Inspector.",
+              "html": "Charming. A parlour game for a murder. I did warn you, Inspector.",
+              "stage": {
+                "beatId": "ch03.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s03.b013",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "You did, Doctor. Be quiet now, please. I am counting.",
+              "html": "You did, Doctor. Be quiet now, please. I am counting.",
+              "stage": {
+                "beatId": "ch03.s03.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch03.s04",
+          "label": "ch_03_s04",
+          "title": "Stage, Sunday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_night.webp",
+          "transition": "fade",
+          "music": "music_02",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch03.s04.b001",
+              "type": "narration",
+              "text": "Nada turns her back on Kranjc. She takes Luka's notebook out of his hands and opens it to a clean page.",
+              "html": "Nada turns her back on Kranjc. She takes Luka&#39;s notebook out of his hands and opens it to a clean page.",
+              "stage": {
+                "beatId": "ch03.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s04.b002",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "pina_sardo",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "teodor_marusic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b003",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "One line each, then. Not about yourselves. About the others. Tell me what you know about your crew. Signorina Sardo, you first.",
+              "html": "One line each, then. Not about yourselves. About the others. Tell me what you know about your crew. Signorina Sardo, you first.",
+              "stage": {
+                "beatId": "ch03.s04.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b004",
+              "type": "narration",
+              "text": "Pina opens her prompt book, as if she might find her line written there. She closes it again.",
+              "html": "Pina opens her prompt book, as if she might find her line written there. She closes it again.",
+              "stage": {
+                "beatId": "ch03.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b005",
+              "type": "line",
+              "speaker": "pina_sardo",
+              "speakerAliasKey": "pina_sardo#1",
+              "speakerLabel": "PINA",
+              "text": "Then I say this, and I will not say it twice.",
+              "html": "Then I say this, and I will not say it twice.",
+              "stage": {
+                "beatId": "ch03.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "pina_sardo",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b006",
+              "type": "narration",
+              "text": 'Pina says: "At least one of Teodor and Zlatko is a Mask."',
+              "html": "Pina says: &quot;At least one of Teodor and Zlatko is a Mask.&quot;",
+              "stage": {
+                "beatId": "ch03.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b007",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": '"At least one of Teodor and Zlatko." At least one. Could be both.',
+              "html": "&quot;At least one of Teodor and Zlatko.&quot; At least one. Could be both.",
+              "stage": {
+                "beatId": "ch03.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch03.s04.b008",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Could be. Signor Marušić.",
+              "html": "Could be. Signor Marušić.",
+              "stage": {
+                "beatId": "ch03.s04.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b009",
+              "type": "narration",
+              "text": "Teodor scratches his stubble. He looks at Zlatko beside him, then back at Nada, and shrugs one heavy shoulder.",
+              "html": "Teodor scratches his stubble. He looks at Zlatko beside him, then back at Nada, and shrugs one heavy shoulder.",
+              "stage": {
+                "beatId": "ch03.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b010",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "Easy, that. I'll say it straight.",
+              "html": "Easy, that. I&#39;ll say it straight.",
+              "stage": {
+                "beatId": "ch03.s04.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b011",
+              "type": "narration",
+              "text": 'Teodor says: "Zlatko and I are both Lanterns."',
+              "html": "Teodor says: &quot;Zlatko and I are both Lanterns.&quot;",
+              "stage": {
+                "beatId": "ch03.s04.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b012",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Both of them. Him and Zlatko. Both Lanterns.",
+              "html": "Both of them. Him and Zlatko. Both Lanterns.",
+              "stage": {
+                "beatId": "ch03.s04.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "angry"
+              }
+            },
+            {
+              "id": "ch03.s04.b013",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "And Signor Horvat.",
+              "html": "And Signor Horvat.",
+              "stage": {
+                "beatId": "ch03.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b014",
+              "type": "narration",
+              "text": "Zlatko takes a long time. He looks at the boards, at his own rope-burned hands, and at last at the small woman with the prompt book.",
+              "html": "Zlatko takes a long time. He looks at the boards, at his own rope-burned hands, and at last at the small woman with the prompt book.",
+              "stage": {
+                "beatId": "ch03.s04.b014",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b015",
+              "type": "line",
+              "speaker": "zlatko_horvat",
+              "speakerAliasKey": "zlatko_horvat#1",
+              "speakerLabel": "ZLATKO",
+              "text": "I only know one thing for sure, Inspector.",
+              "html": "I only know one thing for sure, Inspector.",
+              "stage": {
+                "beatId": "ch03.s04.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "zlatko_horvat",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b016",
+              "type": "narration",
+              "text": 'Zlatko says: "Pina is a Lantern."',
+              "html": "Zlatko says: &quot;Pina is a Lantern.&quot;",
+              "stage": {
+                "beatId": "ch03.s04.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b017",
+              "type": "narration",
+              "text": "The ghost light hums. Nobody on the stage moves. Even Kranjc has stopped smiling.",
+              "html": "The ghost light hums. Nobody on the stage moves. Even Kranjc has stopped smiling.",
+              "stage": {
+                "beatId": "ch03.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b018",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Three lines. That's all we get?",
+              "html": "Three lines. That&#39;s all we get?",
+              "stage": {
+                "beatId": "ch03.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b019",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "That is all we need.",
+              "html": "That is all we need.",
+              "stage": {
+                "beatId": "ch03.s04.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b020",
+              "type": "puzzle",
+              "stage": {
+                "beatId": "ch03.s04.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              },
+              "puzzleKey": "lanterna_game"
+            },
+            {
+              "id": "ch03.s04.b021",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Signora Sardo is a Lantern. Signor Horvat is a Lantern. And you, Signor Marušić, are the Mask.",
+              "html": "Signora Sardo is a Lantern. Signor Horvat is a Lantern. And you, Signor Marušić, are the Mask.",
+              "stage": {
+                "beatId": "ch03.s04.b021",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "nada_stands_circle_ghost",
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b022",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch03.s04.b022",
+                "shows": [
+                  {
+                    "charKey": "teodor_marusic",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "pina_sardo",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null
+              }
+            },
+            {
+              "id": "ch03.s04.b023",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "If Pina were a Mask, then her line would be a lie, and both of the others would be Lanterns. Then Zlatko tells the truth, and says Pina is a Lantern. But she isn't. So she can't be a Mask. So she's a Lantern.",
+              "html": "If Pina were a Mask, then her line would be a lie, and both of the others would be Lanterns. Then Zlatko tells the truth, and says Pina is a Lantern. But she isn&#39;t. So she can&#39;t be a Mask. So she&#39;s a Lantern.",
+              "stage": {
+                "beatId": "ch03.s04.b023",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b024",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Go on.",
+              "html": "Go on.",
+              "stage": {
+                "beatId": "ch03.s04.b024",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b025",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "So her line is true. One of Teodor and Zlatko is a Mask. And Zlatko says Pina is a Lantern, which is true, so... Zlatko's a Lantern too. So the Mask is...",
+              "html": "So her line is true. One of Teodor and Zlatko is a Mask. And Zlatko says Pina is a Lantern, which is true, so... Zlatko&#39;s a Lantern too. So the Mask is...",
+              "stage": {
+                "beatId": "ch03.s04.b025",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b026",
+              "type": "narration",
+              "text": "He stops. He looks at the old carpenter with the ring of keys.",
+              "html": "He stops. He looks at the old carpenter with the ring of keys.",
+              "stage": {
+                "beatId": "ch03.s04.b026",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b027",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "So Teodor's line was a lie. He isn't a Lantern at all.",
+              "html": "So Teodor&#39;s line was a lie. He isn&#39;t a Lantern at all.",
+              "stage": {
+                "beatId": "ch03.s04.b027",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b028",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": 'Which makes his "No" a lie too, Luka. He gave Doctor Kranjc the key.',
+              "html": "Which makes his &quot;No&quot; a lie too, Luka. He gave Doctor Kranjc the key.",
+              "stage": {
+                "beatId": "ch03.s04.b028",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b029",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "I've never seen that doctor before in my life.",
+              "html": "I&#39;ve never seen that doctor before in my life.",
+              "stage": {
+                "beatId": "ch03.s04.b029",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b030",
+              "type": "line",
+              "speaker": "pina_sardo",
+              "speakerAliasKey": "pina_sardo#1",
+              "speakerLabel": "PINA",
+              "text": "He has. Every night this month. He brings him cigarettes.",
+              "html": "He has. Every night this month. He brings him cigarettes.",
+              "stage": {
+                "beatId": "ch03.s04.b030",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "pina_sardo",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b031",
+              "type": "line",
+              "speaker": "zlatko_horvat",
+              "speakerAliasKey": "zlatko_horvat#1",
+              "speakerLabel": "ZLATKO",
+              "text": "He went down the trap room stairs with the doctor at ten to ten, Inspector. I saw them from the flies. I did not know why. I am sorry, Teodor.",
+              "html": "He went down the trap room stairs with the doctor at ten to ten, Inspector. I saw them from the flies. I did not know why. I am sorry, Teodor.",
+              "stage": {
+                "beatId": "ch03.s04.b031",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "zlatko_horvat",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b032",
+              "type": "narration",
+              "text": "Teodor's hand tightens on his key ring until the iron rattles. He does not look at Kranjc. He does not look at anyone.",
+              "html": "Teodor&#39;s hand tightens on his key ring until the iron rattles. He does not look at Kranjc. He does not look at anyone.",
+              "stage": {
+                "beatId": "ch03.s04.b032",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b033",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "You've got it all wrong. I'm a happy man. I owe nobody nothing.",
+              "html": "You&#39;ve got it all wrong. I&#39;m a happy man. I owe nobody nothing.",
+              "stage": {
+                "beatId": "ch03.s04.b033",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b034",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Until dawn, then, Signor Marušić. I can wait until dawn.",
+              "html": "Until dawn, then, Signor Marušić. I can wait until dawn.",
+              "stage": {
+                "beatId": "ch03.s04.b034",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch03.s04.b035",
+              "type": "narration",
+              "text": "In the wings, Kranjc picks up his black bag. A constable steps into the light beside him, and he puts the bag down again.",
+              "html": "In the wings, Kranjc picks up his black bag. A constable steps into the light beside him, and he puts the bag down again.",
+              "stage": {
+                "beatId": "ch03.s04.b035",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch03.s04.b036",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "You will wait too, Doctor. We all will. The sun is not in a hurry, and neither am I.",
+              "html": "You will wait too, Doctor. We all will. The sun is not in a hurry, and neither am I.",
+              "stage": {
+                "beatId": "ch03.s04.b036",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": "ch_04"
+    },
+    {
+      "id": "chapter_4",
+      "label": "ch_04",
+      "number": 4,
+      "title": "Bows to an Empty House",
+      "music": "music_03",
+      "musicLoopStartSec": null,
+      "scenes": [
+        {
+          "id": "ch04.s01",
+          "label": "ch_04_s01",
+          "title": "Stage, Sunday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_dawn.webp",
+          "transition": "fade",
+          "music": "music_03",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s01.b001",
+              "type": "narration",
+              "text": "The ghost light has burned all night. Under it the company has sat in a loose circle on crates and prop chairs, coats over their knees, nobody quite asleep.",
+              "html": "The ghost light has burned all night. Under it the company has sat in a loose circle on crates and prop chairs, coats over their knees, nobody quite asleep.",
+              "stage": {
+                "beatId": "ch04.s01.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "rain_easing_off_gulls"
+              }
+            },
+            {
+              "id": "ch04.s01.b002",
+              "type": "narration",
+              "text": "High above the stage, the small dusty windows of the fly tower have turned from black to the colour of dishwater.",
+              "html": "High above the stage, the small dusty windows of the fly tower have turned from black to the colour of dishwater.",
+              "stage": {
+                "beatId": "ch04.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s01.b003",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "teodor_marusic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Is it dawn yet?",
+              "html": "Is it dawn yet?",
+              "stage": {
+                "beatId": "ch04.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Not yet. Seven minutes. I have been counting the gulls.",
+              "html": "Not yet. Seven minutes. I have been counting the gulls.",
+              "stage": {
+                "beatId": "ch04.s01.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b006",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "You can't count gulls, Inspector.",
+              "html": "You can&#39;t count gulls, Inspector.",
+              "stage": {
+                "beatId": "ch04.s01.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "I have counted nineteen. They are very regular.",
+              "html": "I have counted nineteen. They are very regular.",
+              "stage": {
+                "beatId": "ch04.s01.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b008",
+              "type": "narration",
+              "text": "Teodor turns the iron key ring over and over. One key on it is newer than the others, bright brass among the rust.",
+              "html": "Teodor turns the iron key ring over and over. One key on it is newer than the others, bright brass among the rust.",
+              "stage": {
+                "beatId": "ch04.s01.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b009",
+              "type": "narration",
+              "text": "the bright brass trap room key on Teodor's iron key ring, newer than the rest",
+              "html": "the bright brass trap room key on Teodor&#39;s iron key ring, newer than the rest",
+              "stage": {
+                "beatId": "ch04.s01.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "trap_key"
+              }
+            },
+            {
+              "id": "ch04.s01.b010",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Signor Marušić. You do not have to wait for the sun to tell me why.",
+              "html": "Signor Marušić. You do not have to wait for the sun to tell me why.",
+              "stage": {
+                "beatId": "ch04.s01.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b011",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "Nothing to tell. That doctor never held a single paper of mine.",
+              "html": "Nothing to tell. That doctor never held a single paper of mine.",
+              "stage": {
+                "beatId": "ch04.s01.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b012",
+              "type": "narration",
+              "text": "Pina, on the next crate, closes her prompt book slowly over one finger.",
+              "html": "Pina, on the next crate, closes her prompt book slowly over one finger.",
+              "stage": {
+                "beatId": "ch04.s01.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b013",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "Never lent me a lira. Never came round every Friday for it, either. Never said he'd tear the lot up.",
+              "html": "Never lent me a lira. Never came round every Friday for it, either. Never said he&#39;d tear the lot up.",
+              "stage": {
+                "beatId": "ch04.s01.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b014",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Inspector. He's a Mask. Every word's the wrong way round.",
+              "html": "Inspector. He&#39;s a Mask. Every word&#39;s the wrong way round.",
+              "stage": {
+                "beatId": "ch04.s01.b014",
+                "shows": [
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch04.s01.b015",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "I know, Luka. Listen to it the right way round.",
+              "html": "I know, Luka. Listen to it the right way round.",
+              "stage": {
+                "beatId": "ch04.s01.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b016",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "And he never asked for one turn of a key. Just one. For a minute. Never said nobody would get hurt.",
+              "html": "And he never asked for one turn of a key. Just one. For a minute. Never said nobody would get hurt.",
+              "stage": {
+                "beatId": "ch04.s01.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b017",
+              "type": "narration",
+              "text": "For a moment nobody speaks. Zlatko reaches over with one huge hand and rests it on the old man's shoulder.",
+              "html": "For a moment nobody speaks. Zlatko reaches over with one huge hand and rests it on the old man&#39;s shoulder.",
+              "stage": {
+                "beatId": "ch04.s01.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s01.b018",
+              "type": "line",
+              "speaker": "zlatko_horvat",
+              "speakerAliasKey": "zlatko_horvat#1",
+              "speakerLabel": "ZLATKO",
+              "text": "He did say it, Teodor. I heard him at the stage door on Thursday. You believed him. That is all.",
+              "html": "He did say it, Teodor. I heard him at the stage door on Thursday. You believed him. That is all.",
+              "stage": {
+                "beatId": "ch04.s01.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "zlatko_horvat",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b019",
+              "type": "line",
+              "speaker": "teodor_marusic",
+              "speakerAliasKey": "teodor_marusic#1",
+              "speakerLabel": "TEODOR",
+              "text": "I'm not sorry. Not one bit.",
+              "html": "I&#39;m not sorry. Not one bit.",
+              "stage": {
+                "beatId": "ch04.s01.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "teodor_marusic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s01.b020",
+              "type": "line",
+              "speaker": "pina_sardo",
+              "speakerAliasKey": "pina_sardo#1",
+              "speakerLabel": "PINA",
+              "text": "He is. He cried in the paint shop at half past ten. I wrote down the time.",
+              "html": "He is. He cried in the paint shop at half past ten. I wrote down the time.",
+              "stage": {
+                "beatId": "ch04.s01.b020",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "pina_sardo",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch04.s02",
+          "label": "ch_04_s02",
+          "title": "Stage, Sunday",
+          "locationKey": "stage",
+          "bgPath": "images/bg stage_dawn.webp",
+          "transition": "fade",
+          "music": "music_03",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s02.b001",
+              "type": "narration",
+              "text": "A thin bar of grey light falls through the fly tower windows and across the boards, all the way to the brass trapdoor.",
+              "html": "A thin bar of grey light falls through the fly tower windows and across the boards, all the way to the brass trapdoor.",
+              "stage": {
+                "beatId": "ch04.s02.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b002",
+              "type": "narration",
+              "text": "Somewhere outside, a ship's bell rings the hour.",
+              "html": "Somewhere outside, a ship&#39;s bell rings the hour.",
+              "stage": {
+                "beatId": "ch04.s02.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b003",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Sun's up, darlings. The game is over.",
+              "html": "Sun&#39;s up, darlings. The game is over.",
+              "stage": {
+                "beatId": "ch04.s02.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": "ship_bell_ringing_far",
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s02.b004",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s02.b004",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "teodor_marusic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  },
+                  {
+                    "charKey": "pina_sardo",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b005",
+              "type": "narration",
+              "text": "One by one the three of them drop their paper masks into the old iron stove in the wings. Pina first, then Zlatko, then Teodor.",
+              "html": "One by one the three of them drop their paper masks into the old iron stove in the wings. Pina first, then Zlatko, then Teodor.",
+              "stage": {
+                "beatId": "ch04.s02.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b006",
+              "type": "narration",
+              "text": "Teodor unties his leather apron. He folds it once and lays it on the crate, with the key ring on top of it.",
+              "html": "Teodor unties his leather apron. He folds it once and lays it on the crate, with the key ring on top of it.",
+              "stage": {
+                "beatId": "ch04.s02.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s02.b007",
+              "type": "narration",
+              "text": "He looks at the keys for a long time, and then he looks at Nada, and he nods once. He does not say a word.",
+              "html": "He looks at the keys for a long time, and then he looks at Nada, and he nods once. He does not say a word.",
+              "stage": {
+                "beatId": "ch04.s02.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "teodor_lays_his_folded"
+              }
+            },
+            {
+              "id": "ch04.s02.b008",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Thank you, Signor Marušić. That is enough.",
+              "html": "Thank you, Signor Marušić. That is enough.",
+              "stage": {
+                "beatId": "ch04.s02.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch04.s03",
+          "label": "ch_04_s03",
+          "title": "Stage door, Sunday",
+          "locationKey": "stage_door",
+          "bgPath": "images/bg stage_door_dawn.webp",
+          "transition": "fade",
+          "music": "music_03",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s03.b001",
+              "type": "narration",
+              "text": "The rain has stopped. The harbour street shines like a wet mirror. The posters of the Great Orsini hang in grey ribbons off the wall.",
+              "html": "The rain has stopped. The harbour street shines like a wet mirror. The posters of the Great Orsini hang in grey ribbons off the wall.",
+              "stage": {
+                "beatId": "ch04.s03.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "water_dripping_gutters_carts"
+              }
+            },
+            {
+              "id": "ch04.s03.b002",
+              "type": "narration",
+              "text": "A police wagon stands by the stage door, its horse breathing clouds into the cold.",
+              "html": "A police wagon stands by the stage door, its horse breathing clouds into the cold.",
+              "stage": {
+                "beatId": "ch04.s03.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s03.b003",
+                "shows": [
+                  {
+                    "charKey": "doctor_emil_kranjc",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b004",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I trust you will tell the board, Inspector. They do so like to be told things on a Monday.",
+              "html": "I trust you will tell the board, Inspector. They do so like to be told things on a Monday.",
+              "stage": {
+                "beatId": "ch04.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "I will tell them on Sunday, Doctor. I would not want you to wait.",
+              "html": "I will tell them on Sunday, Doctor. I would not want you to wait.",
+              "stage": {
+                "beatId": "ch04.s03.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b006",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "You know, Bruno was a terrible man. He would have ruined three families with that little book. Mine was only the first.",
+              "html": "You know, Bruno was a terrible man. He would have ruined three families with that little book. Mine was only the first.",
+              "stage": {
+                "beatId": "ch04.s03.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Then you might have come to me. I am in the third row most Saturdays.",
+              "html": "Then you might have come to me. I am in the third row most Saturdays.",
+              "stage": {
+                "beatId": "ch04.s03.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b008",
+              "type": "narration",
+              "text": "For a moment Kranjc's face does something it has not done all night. It looks tired.",
+              "html": "For a moment Kranjc&#39;s face does something it has not done all night. It looks tired.",
+              "stage": {
+                "beatId": "ch04.s03.b008",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b009",
+              "type": "line",
+              "speaker": "doctor_emil_kranjc",
+              "speakerAliasKey": "doctor_emil_kranjc#1",
+              "speakerLabel": "KRANJC",
+              "text": "I do not care for heights, Inspector. Or for the police. Or, it seems, for being right.",
+              "html": "I do not care for heights, Inspector. Or for the police. Or, it seems, for being right.",
+              "stage": {
+                "beatId": "ch04.s03.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "doctor_emil_kranjc",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b010",
+              "type": "narration",
+              "text": "The constable opens the wagon door. Kranjc steps up into it neatly, as if into a train carriage. He does not look back.",
+              "html": "The constable opens the wagon door. Kranjc steps up into it neatly, as if into a train carriage. He does not look back.",
+              "stage": {
+                "beatId": "ch04.s03.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s03.b011",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "He never once took his gloves off.",
+              "html": "He never once took his gloves off.",
+              "stage": {
+                "beatId": "ch04.s03.b011",
+                "shows": [],
+                "hides": [],
+                "sfx": "wagon_door_slamming_wheels",
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s03.b012",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "No. Some people never do, Luka. That is the whole of their profession.",
+              "html": "No. Some people never do, Luka. That is the whole of their profession.",
+              "stage": {
+                "beatId": "ch04.s03.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch04.s04",
+          "label": "ch_04_s04",
+          "title": "Auditorium, Sunday",
+          "locationKey": "auditorium",
+          "bgPath": "images/bg auditorium_morning.webp",
+          "transition": "fade",
+          "pause": 2,
+          "music": "music_03",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s04.b001",
+              "type": "narration",
+              "text": "The house is empty. Every red velvet seat is folded up, two thousand of them, like sleeping bats. Morning light comes in through a high window and turns the dust to gold.",
+              "html": "The house is empty. Every red velvet seat is folded up, two thousand of them, like sleeping bats. Morning light comes in through a high window and turns the dust to gold.",
+              "stage": {
+                "beatId": "ch04.s04.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "empty_theatre_soft_creak"
+              }
+            },
+            {
+              "id": "ch04.s04.b002",
+              "type": "narration",
+              "text": "The chandelier is dark. The gold leaf on the balconies is peeling, the way it always has.",
+              "html": "The chandelier is dark. The gold leaf on the balconies is peeling, the way it always has.",
+              "stage": {
+                "beatId": "ch04.s04.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b003",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s04.b003",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b004",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Why are we still here? It's over.",
+              "html": "Why are we still here? It&#39;s over.",
+              "stage": {
+                "beatId": "ch04.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b005",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "Because Signora Brandolin asked us to stay. And because I have never seen this house empty. Look at it.",
+              "html": "Because Signora Brandolin asked us to stay. And because I have never seen this house empty. Look at it.",
+              "stage": {
+                "beatId": "ch04.s04.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b006",
+              "type": "narration",
+              "text": "Luka looks. For once he does not write anything down.",
+              "html": "Luka looks. For once he does not write anything down.",
+              "stage": {
+                "beatId": "ch04.s04.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b007",
+              "type": "narration",
+              "text": "On the stage, the curtain slowly rises. Behind it, the company stands in a line along the footlights. Nobody is in costume except Mira, who still cannot get out of her gown.",
+              "html": "On the stage, the curtain slowly rises. Behind it, the company stands in a line along the footlights. Nobody is in costume except Mira, who still cannot get out of her gown.",
+              "stage": {
+                "beatId": "ch04.s04.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b008",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s04.b008",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "happy",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "neutral",
+                    "slot": "right"
+                  },
+                  {
+                    "charKey": "pina_sardo",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [
+                  "inspector_nada_ferluga",
+                  "luka_bencic"
+                ],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b009",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "Ladies and gentlemen. Tonight, our friend Bruno Orsini made his last vanishing.",
+              "html": "Ladies and gentlemen. Tonight, our friend Bruno Orsini made his last vanishing.",
+              "stage": {
+                "beatId": "ch04.s04.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch04.s04.b010",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "He was a dreadful man. He owed me four months.",
+              "html": "He was a dreadful man. He owed me four months.",
+              "stage": {
+                "beatId": "ch04.s04.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b011",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "He owed everybody something, darling. And now we owe him a bow.",
+              "html": "He owed everybody something, darling. And now we owe him a bow.",
+              "stage": {
+                "beatId": "ch04.s04.b011",
+                "shows": [
+                  {
+                    "charKey": "signora_livia_brandolin",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b012",
+              "type": "narration",
+              "text": "Mira swallows. She steps to the edge of the stage, beside the brass trapdoor, and takes Livia's hand.",
+              "html": "Mira swallows. She steps to the edge of the stage, beside the brass trapdoor, and takes Livia&#39;s hand.",
+              "stage": {
+                "beatId": "ch04.s04.b012",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b013",
+              "type": "line",
+              "speaker": "signora_livia_brandolin",
+              "speakerAliasKey": "signora_livia_brandolin#1",
+              "speakerLabel": "LIVIA",
+              "text": "You'll be paid, Mira. Every lira. I'll sell the chandelier if I have to.",
+              "html": "You&#39;ll be paid, Mira. Every lira. I&#39;ll sell the chandelier if I have to.",
+              "stage": {
+                "beatId": "ch04.s04.b013",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "signora_livia_brandolin",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b014",
+              "type": "line",
+              "speaker": "mira_valenti",
+              "speakerAliasKey": "mira_valenti#1",
+              "speakerLabel": "MIRA",
+              "text": "Don't sell the chandelier. Sell the cabinet. I never want to see a silver star again.",
+              "html": "Don&#39;t sell the chandelier. Sell the cabinet. I never want to see a silver star again.",
+              "stage": {
+                "beatId": "ch04.s04.b014",
+                "shows": [
+                  {
+                    "charKey": "mira_valenti",
+                    "expression": "happy",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "mira_valenti",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch04.s04.b015",
+              "type": "line",
+              "speaker": "zlatko_horvat",
+              "speakerAliasKey": "zlatko_horvat#1",
+              "speakerLabel": "ZLATKO",
+              "text": "Places, everyone.",
+              "html": "Places, everyone.",
+              "stage": {
+                "beatId": "ch04.s04.b015",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "zlatko_horvat",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b016",
+              "type": "line",
+              "speaker": "pina_sardo",
+              "speakerAliasKey": "pina_sardo#1",
+              "speakerLabel": "PINA",
+              "text": '"The company bows. The house is silent. Curtain."',
+              "html": "&quot;The company bows. The house is silent. Curtain.&quot;",
+              "stage": {
+                "beatId": "ch04.s04.b016",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "pina_sardo",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s04.b017",
+              "type": "narration",
+              "text": "The five of them bow, low and slow, to two thousand empty seats.",
+              "html": "The five of them bow, low and slow, to two thousand empty seats.",
+              "stage": {
+                "beatId": "ch04.s04.b017",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "cg": "livia_mira_pina_zlatko"
+              }
+            },
+            {
+              "id": "ch04.s04.b018",
+              "type": "narration",
+              "text": "In the third row, Nada puts her hands together, once, twice, three times. After a moment, Luka claps too.",
+              "html": "In the third row, Nada puts her hands together, once, twice, three times. After a moment, Luka claps too.",
+              "stage": {
+                "beatId": "ch04.s04.b018",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s04.b019",
+              "type": "narration",
+              "text": "The sound is very small in that big gold room. It is enough.",
+              "html": "The sound is very small in that big gold room. It is enough.",
+              "stage": {
+                "beatId": "ch04.s04.b019",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch04.s05",
+          "label": "ch_04_s05",
+          "title": "Stage door, Sunday",
+          "locationKey": "stage_door",
+          "bgPath": "images/bg stage_door_morning.webp",
+          "transition": "fade",
+          "music": "music_03",
+          "musicLoopStartSec": null,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch04.s05.b001",
+              "type": "narration",
+              "text": "The harbour street is busy now. Fishwives call to each other. The seven o'clock train to Vienna whistles somewhere across the city, leaving without its magician.",
+              "html": "The harbour street is busy now. Fishwives call to each other. The seven o&#39;clock train to Vienna whistles somewhere across the city, leaving without its magician.",
+              "stage": {
+                "beatId": "ch04.s05.b001",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": "gulls_harbour_waking_up"
+              }
+            },
+            {
+              "id": "ch04.s05.b002",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch04.s05.b002",
+                "shows": [
+                  {
+                    "charKey": "inspector_nada_ferluga",
+                    "expression": "neutral",
+                    "slot": "center"
+                  },
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "neutral",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": "distant_train_whistle",
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s05.b003",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "Inspector. Can I ask you something?",
+              "html": "Inspector. Can I ask you something?",
+              "stage": {
+                "beatId": "ch04.s05.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s05.b004",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "You will anyway.",
+              "html": "You will anyway.",
+              "stage": {
+                "beatId": "ch04.s05.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s05.b005",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "When Signora Brandolin says the game is very old. Older than the roof. Do you think it's true? Or do you think she made it up, tonight, for us?",
+              "html": "When Signora Brandolin says the game is very old. Older than the roof. Do you think it&#39;s true? Or do you think she made it up, tonight, for us?",
+              "stage": {
+                "beatId": "ch04.s05.b005",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s05.b006",
+              "type": "narration",
+              "text": "Nada thinks about it as they walk. She counts the steps without meaning to. Eleven. Twelve.",
+              "html": "Nada thinks about it as they walk. She counts the steps without meaning to. Eleven. Twelve.",
+              "stage": {
+                "beatId": "ch04.s05.b006",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch04.s05.b007",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "She is an actress, Luka, and she owns a theatre that is losing money. I think it is the oldest game in the world.",
+              "html": "She is an actress, Luka, and she owns a theatre that is losing money. I think it is the oldest game in the world.",
+              "stage": {
+                "beatId": "ch04.s05.b007",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s05.b008",
+              "type": "line",
+              "speaker": "luka_bencic",
+              "speakerAliasKey": "luka_bencic#1",
+              "speakerLabel": "LUKA",
+              "text": "That's not an answer.",
+              "html": "That&#39;s not an answer.",
+              "stage": {
+                "beatId": "ch04.s05.b008",
+                "shows": [
+                  {
+                    "charKey": "luka_bencic",
+                    "expression": "happy",
+                    "slot": "left"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "luka_bencic",
+                "expression": "happy"
+              }
+            },
+            {
+              "id": "ch04.s05.b009",
+              "type": "line",
+              "speaker": "inspector_nada_ferluga",
+              "speakerAliasKey": "inspector_nada_ferluga#1",
+              "speakerLabel": "NADA",
+              "text": "No. It is a much better thing. It is breakfast. Come on. You are buying.",
+              "html": "No. It is a much better thing. It is breakfast. Come on. You are buying.",
+              "stage": {
+                "beatId": "ch04.s05.b009",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null,
+                "activeCharKey": "inspector_nada_ferluga",
+                "expression": "neutral"
+              }
+            },
+            {
+              "id": "ch04.s05.b010",
+              "type": "narration",
+              "text": "They walk off down the shining street, side by side, into the morning.",
+              "html": "They walk off down the shining street, side by side, into the morning.",
+              "stage": {
+                "beatId": "ch04.s05.b010",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": null,
+      "nextChapterLabel": null
+    }
+  ],
+  "puzzles": {
+    "trap_room": {
+      "key": "trap_room",
+      "kind": "murdle",
+      "data": {
+        "format": 1,
+        "difficulty": {
+          "steps": 27,
+          "score": 40,
+          "rules": {
+            "clue": 5,
+            "elim": 12,
+            "last": 7,
+            "trans": 3
+          }
+        },
+        "steps": [
+          {
+            "rule": "clue",
+            "cell": [
+              "s1",
+              "p3"
+            ],
+            "value": "no",
+            "clue": "c1"
+          },
+          {
+            "rule": "clue",
+            "cell": [
+              "w3",
+              "p1"
+            ],
+            "value": "no",
+            "clue": "c2"
+          },
+          {
+            "rule": "clue",
+            "cell": [
+              "s1",
+              "w3"
+            ],
+            "value": "yes",
+            "clue": "c3"
+          },
+          {
+            "rule": "clue",
+            "cell": [
+              "s2",
+              "p3"
+            ],
+            "value": "no",
+            "clue": "c4"
+          },
+          {
+            "rule": "clue",
+            "cell": [
+              "s3",
+              "w1"
+            ],
+            "value": "no",
+            "clue": "c5"
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s1",
+              "w1"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s1",
+                "w3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s1",
+              "w2"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s1",
+                "w3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s2",
+              "w3"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s1",
+                "w3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s3",
+              "w3"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s1",
+                "w3"
+              ]
+            ]
+          },
+          {
+            "rule": "last",
+            "cell": [
+              "s3",
+              "w2"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "s3",
+                "w1"
+              ],
+              [
+                "s3",
+                "w3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s2",
+              "w2"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s3",
+                "w2"
+              ]
+            ]
+          },
+          {
+            "rule": "last",
+            "cell": [
+              "s2",
+              "w1"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "s2",
+                "w2"
+              ],
+              [
+                "s2",
+                "w3"
+              ]
+            ]
+          },
+          {
+            "rule": "last",
+            "cell": [
+              "s3",
+              "p3"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "s1",
+                "p3"
+              ],
+              [
+                "s2",
+                "p3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s3",
+              "p1"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s3",
+                "p3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s3",
+              "p2"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s3",
+                "p3"
+              ]
+            ]
+          },
+          {
+            "rule": "trans",
+            "cell": [
+              "w3",
+              "p3"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s1",
+                "w3"
+              ],
+              [
+                "s1",
+                "p3"
+              ]
+            ]
+          },
+          {
+            "rule": "last",
+            "cell": [
+              "w3",
+              "p2"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "w3",
+                "p1"
+              ],
+              [
+                "w3",
+                "p3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "w1",
+              "p2"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "w3",
+                "p2"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "w2",
+              "p2"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "w3",
+                "p2"
+              ]
+            ]
+          },
+          {
+            "rule": "trans",
+            "cell": [
+              "s1",
+              "p1"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s1",
+                "w3"
+              ],
+              [
+                "w3",
+                "p1"
+              ]
+            ]
+          },
+          {
+            "rule": "last",
+            "cell": [
+              "s1",
+              "p2"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "s1",
+                "p1"
+              ],
+              [
+                "s1",
+                "p3"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "s2",
+              "p2"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "s1",
+                "p2"
+              ]
+            ]
+          },
+          {
+            "rule": "last",
+            "cell": [
+              "s2",
+              "p1"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "s2",
+                "p2"
+              ],
+              [
+                "s2",
+                "p3"
+              ]
+            ]
+          },
+          {
+            "rule": "trans",
+            "cell": [
+              "w1",
+              "p1"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "s2",
+                "w1"
+              ],
+              [
+                "s2",
+                "p1"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "w1",
+              "p3"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "w1",
+                "p1"
+              ]
+            ]
+          },
+          {
+            "rule": "elim",
+            "cell": [
+              "w2",
+              "p1"
+            ],
+            "value": "no",
+            "from": [
+              [
+                "w1",
+                "p1"
+              ]
+            ]
+          },
+          {
+            "rule": "last",
+            "cell": [
+              "w2",
+              "p3"
+            ],
+            "value": "yes",
+            "from": [
+              [
+                "w2",
+                "p1"
+              ],
+              [
+                "w2",
+                "p2"
+              ]
+            ]
+          }
+        ],
+        "kind": "murdle",
+        "size": 3,
+        "categories": [
+          {
+            "key": "suspect",
+            "items": [
+              "s1",
+              "s2",
+              "s3"
+            ]
+          },
+          {
+            "key": "weapon",
+            "items": [
+              "w1",
+              "w2",
+              "w3"
+            ]
+          },
+          {
+            "key": "place",
+            "items": [
+              "p1",
+              "p2",
+              "p3"
+            ]
+          }
+        ],
+        "solution": {
+          "s1": {
+            "place": "p2",
+            "weapon": "w3"
+          },
+          "s2": {
+            "place": "p1",
+            "weapon": "w1"
+          },
+          "s3": {
+            "place": "p3",
+            "weapon": "w2"
+          }
+        },
+        "clues": [
+          {
+            "id": "c1",
+            "type": "either",
+            "a": "p3",
+            "b": [
+              "s3",
+              "s2"
+            ],
+            "at": "ch01.s05.b011"
+          },
+          {
+            "id": "c2",
+            "type": "not",
+            "a": "w3",
+            "b": "p1",
+            "at": "ch01.s04.b006"
+          },
+          {
+            "id": "c3",
+            "type": "is",
+            "a": "s1",
+            "b": "w3",
+            "at": "ch01.s03.b020"
+          },
+          {
+            "id": "c4",
+            "type": "not",
+            "a": "s2",
+            "b": "p3",
+            "at": "ch02.s02.b011"
+          },
+          {
+            "id": "c5",
+            "type": "not",
+            "a": "s3",
+            "b": "w1",
+            "at": "ch02.s04.b017"
+          }
+        ],
+        "murder": {
+          "place": "p1",
+          "answer": {
+            "suspect": "s2",
+            "weapon": "w1",
+            "place": "p1"
+          }
+        }
+      },
+      "names": {
+        "s1": "Signora Brandolin",
+        "s2": "Doctor Kranjc",
+        "s3": "Mira",
+        "w1": "trick rope",
+        "w2": "brass stage weight",
+        "w3": "laced champagne",
+        "p1": "trap room",
+        "p2": "green room",
+        "p3": "fly gallery"
+      },
+      "text": {
+        "c1": "Whoever climbed the ladder wore pale gloves, and only two people backstage wear them: either Mira or Doctor Kranjc was in the fly gallery.",
+        "c2": "The leaking bottle marks every place it has been, and there is not a drop on the trap room stairs: whoever had the laced champagne was not in the trap room.",
+        "c3": "Signora Brandolin had the laced champagne: she says so herself, the bottle was hers, and she poured it.",
+        "c4": "Luka says it plainly: there is no rosin on his gloves and he cannot climb two rungs, so Doctor Kranjc was not in the fly gallery.",
+        "c5": "Mira is sewn into a gown with no room for a hairpin, so Mira did not have the trick rope.",
+        "murder": "The body was found in the trap room."
+      },
+      "portraits": {
+        "s1": "images/signora_livia_brandolin neutral.webp",
+        "s2": "images/doctor_emil_kranjc neutral.webp",
+        "s3": "images/mira_valenti neutral.webp"
+      },
+      "clueAt": {
+        "c3": "ch01.s03.b020",
+        "c2": "ch01.s04.b006",
+        "c1": "ch01.s05.b011",
+        "c4": "ch02.s02.b011",
+        "c5": "ch02.s04.b017"
+      },
+      "hints": true
+    },
+    "lanterna_game": {
+      "key": "lanterna_game",
+      "kind": "knights",
+      "data": {
+        "format": 1,
+        "difficulty": {
+          "steps": 3,
+          "score": 6,
+          "rules": {
+            "direct": 2,
+            "split": 1
+          }
+        },
+        "steps": [
+          {
+            "rule": "split",
+            "value": "knave",
+            "who": "k1",
+            "statement": "t1",
+            "contradicts": "knight"
+          },
+          {
+            "rule": "direct",
+            "value": "knight",
+            "who": "k2",
+            "statement": "t1"
+          },
+          {
+            "rule": "direct",
+            "value": "knight",
+            "who": "k3",
+            "statement": "t3"
+          }
+        ],
+        "kind": "knights",
+        "size": 3,
+        "speakers": [
+          "k1",
+          "k2",
+          "k3"
+        ],
+        "statements": [
+          {
+            "id": "t1",
+            "speaker": "k2",
+            "claim": {
+              "type": "some_knave",
+              "of": [
+                "k1",
+                "k3"
+              ]
+            }
+          },
+          {
+            "id": "t2",
+            "speaker": "k1",
+            "claim": {
+              "type": "all_knight",
+              "of": [
+                "k1",
+                "k3"
+              ]
+            }
+          },
+          {
+            "id": "t3",
+            "speaker": "k3",
+            "claim": {
+              "type": "knight",
+              "who": "k2"
+            }
+          }
+        ],
+        "solution": {
+          "k1": "knave",
+          "k2": "knight",
+          "k3": "knight"
+        }
+      },
+      "names": {
+        "k1": "Teodor",
+        "k2": "Pina",
+        "k3": "Zlatko"
+      },
+      "text": {
+        "intro": "Livia gives the rule as the old company gives it: in the Lanterna game a Lantern always tells the truth and a Mask always lies. Who is a Lantern and who is a Mask?",
+        "t1": 'Pina says: "At least one of Teodor and Zlatko is a Mask."',
+        "t2": 'Teodor says: "Zlatko and I are both Lanterns."',
+        "t3": 'Zlatko says: "Pina is a Lantern."'
+      },
+      "portraits": {
+        "k1": "images/teodor_marusic neutral.webp",
+        "k2": "images/pina_sardo neutral.webp",
+        "k3": "images/zlatko_horvat neutral.webp"
+      },
+      "clueAt": {},
+      "hints": true
+    }
+  },
+  "editions": {
+    "en": {
+      "lang": "en",
+      "title": "The Trap Room at the Lanterna",
+      "characterNames": {
+        "inspector_nada_ferluga": "Inspector Nada Ferluga",
+        "inspector_nada_ferluga#1": "Nada",
+        "inspector_nada_ferluga#2": "Inspector Ferluga",
+        "inspector_nada_ferluga#3": "the Inspector",
+        "luka_bencic": "Luka Benčić",
+        "luka_bencic#1": "Luka",
+        "bruno_orsini": "Bruno Orsini",
+        "bruno_orsini#1": "Orsini",
+        "bruno_orsini#2": "the Great Orsini",
+        "signora_livia_brandolin": "Signora Livia Brandolin",
+        "signora_livia_brandolin#1": "Livia",
+        "signora_livia_brandolin#2": "Signora Brandolin",
+        "signora_livia_brandolin#3": "Livia Brandolin",
+        "doctor_emil_kranjc": "Doctor Emil Kranjc",
+        "doctor_emil_kranjc#1": "Kranjc",
+        "doctor_emil_kranjc#2": "Doctor Kranjc",
+        "doctor_emil_kranjc#3": "the doctor",
+        "mira_valenti": "Mira Valenti",
+        "mira_valenti#1": "Mira",
+        "mira_valenti#2": "the Vanishing Bride",
+        "mira_valenti#3": "the Bride",
+        "teodor_marusic": "Teodor Marušić",
+        "teodor_marusic#1": "Teodor",
+        "pina_sardo": "Pina Sardo",
+        "pina_sardo#1": "Pina",
+        "zlatko_horvat": "Zlatko Horvat",
+        "zlatko_horvat#1": "Zlatko"
+      },
+      "chapterTitles": {
+        "1": "The Vanishing Bride",
+        "2": "Rosin and Sequins",
+        "3": "Lanterns and Masks",
+        "4": "Bows to an Empty House"
+      },
+      "endings": {},
+      "choices": {},
+      "beats": {
+        "ch01.s01.b001": "The Teatro Lanterna glows like the inside of a jewellery box. Red velvet, gold leaf curling off the balconies, a chandelier that has seen better decades.",
+        "ch01.s01.b002": "Every seat is full. It is the last night of the season, and Trieste has come to say goodbye.",
+        "ch01.s01.b004": "Third row, Inspector. Third row! I can see the brass on the trapdoor. I can see the scuffs on it.",
+        "ch01.s01.b005": "You can see a great many things, Luka. Try watching one of them.",
+        "ch01.s01.b006": "I'm writing it all down. In case he tells us how it's done.",
+        "ch01.s01.b007": "He won't. Magicians never do. That is the whole of their profession.",
+        "ch01.s01.b008": "The lights drop. The orchestra stops mid-squeak. One spotlight falls on the centre of the stage.",
+        "ch01.s01.b010": "Ladies and gentlemen of Trieste! For one last night, I give you... the Vanishing Bride!",
+        "ch01.s01.b011": "Mira steps into a tall black cabinet painted with silver stars. Orsini swirls his cape across the door.",
+        "ch01.s01.b012": "One. Two. Three!",
+        "ch01.s01.b013": "He throws the door open. The cabinet is empty. Not a sequin left.",
+        "ch01.s01.b014": "The audience gasps, then roars.",
+        "ch01.s01.b015": "Gone. She's gone. Where does she go? Inspector, where does she go?",
+        "ch01.s01.b016": "Four seconds behind the cape. Enough for a panel. Up, I think, not down.",
+        "ch01.s01.b017": "And now, my friends, the groom follows his bride!",
+        "ch01.s01.b018": "Orsini stands on the brass trapdoor. He bows. He smiles at the third row as if he knows Nada personally.",
+        "ch01.s01.b019": "The trapdoor drops. Orsini drops with it, cape and all. The spotlight swings to the back of the stalls, to the aisle where he is meant to appear.",
+        "ch01.s01.b021": "Here he comes. Any second. He comes up behind the last row, everyone says so.",
+        "ch01.s01.b022": "The spotlight waits on the empty aisle. The audience waits with it.",
+        "ch01.s01.b023": "Ten seconds. Twenty. Somebody laughs nervously. The orchestra plays the same three bars again.",
+        "ch01.s01.b024": "That is forty seconds, Luka.",
+        "ch01.s01.b025": "Maybe he's... building suspense?",
+        "ch01.s01.b026": "Orsini has never built suspense in his life. He builds applause. Come on.",
+        "ch01.s02.b001": "Under the stage the air is cold and smells of damp wood and old paint. A single bulb swings above a forest of counterweights and propped-up scenery.",
+        "ch01.s02.b002": "Above, the square of the trapdoor shows a thin line of light. Feet are running somewhere overhead.",
+        "ch01.s02.b004": "Inspector. Is he...",
+        "ch01.s02.b005": "He is. I am sorry, Luka. Don't touch anything.",
+        "ch01.s02.b006": "She closes Orsini's eyes with two careful fingers. She does not look at him long. She looks at the room.",
+        "ch01.s02.b007": "One staircase. One door, padlocked from this side. One trapdoor, which he came through. No window.",
+        "ch01.s02.b008": "The body was found in the trap room. Under the stage, by the counterweights. Nine minutes past ten. I'm writing nine past ten.",
+        "ch01.s02.b009": "Good. Write that the padlock is closed, too. And that his cape is not torn.",
+        "ch01.s02.b010": "Not torn. Right. There's rope burn on the beam up there, but that's old. Everything down here has rope burn.",
+        "ch01.s02.b011": "Nada stands and brushes her coat. Her face is calm, but she takes off her spectacles and cleans them twice.",
+        "ch01.s02.b012": "Somebody was waiting for him down here, Luka. In the dark, while two thousand people clapped.",
+        "ch01.s03.b001": "The green room is warm and shabby, all mirrors and bulbs and feather boas hanging like sleeping birds. A silver bucket of ice sits on a little table with a bottle of champagne in it.",
+        "ch01.s03.b002": "Three glasses stand beside it, poured and waiting for a toast that will not come.",
+        "ch01.s03.b004": "Inspector, smell this one. No, don't drink it. Smell it.",
+        "ch01.s03.b005": "Sweet. And something underneath. A chemist's shop.",
+        "ch01.s03.b006": "Like my grandmother's cough syrup. The one that made her sleep through Easter.",
+        "ch01.s03.b007": "Orsini's full champagne glass, with a sweet, medicinal smell",
+        "ch01.s03.b008": "The glass with the star painted on the stem. Whose is that?",
+        "ch01.s03.b009": '"For the Great Orsini. Ti voglio bene. L."',
+        "ch01.s03.b010": "A door swings open. Perfume and cigarette smoke arrive before the woman does.",
+        "ch01.s03.b012": "Darling, they tell me the police are in my green room. I did not know we sold tickets to the police.",
+        "ch01.s03.b013": "Inspector Ferluga, Signora Brandolin. I was in your third row.",
+        "ch01.s03.b014": "Then you saw. You saw him go down and not come up. Thirty years I have run this house, and nobody has ever not come up.",
+        "ch01.s03.b015": "Signora. The champagne in Orsini's glass. What is in it?",
+        "ch01.s03.b016": "Livia looks at the glass for a long time. She taps ash that is not there from her holder.",
+        "ch01.s03.b017": "Laudanum. A little. Only a little, darling, I am not a monster.",
+        "ch01.s03.b018": "Grandmother's cough syrup.",
+        "ch01.s03.b019": "He was leaving me. He signed with a house in Vienna. The train is at seven tomorrow morning. If he slept through it, he would have to stay, and do one more month, and I would not go bankrupt by Christmas.",
+        "ch01.s03.b020": "Signora Brandolin had the laced champagne: she says so herself, the bottle was hers, and she poured it.",
+        "ch01.s03.b021": "You laced it here?",
+        "ch01.s03.b022": "Here. I carried that bottle up from my office and I put it in that bucket and I have not taken it out since. Ask anyone. Nobody else touched it.",
+        "ch01.s03.b023": "Luka crouches by the bucket. He lifts the bottle by its neck, slowly, and holds it up to the light.",
+        "ch01.s03.b024": "Inspector. It drips. The ice cracked the label and there's a little chip in the glass, right here at the bottom. Drip. Drip. See? It leaves a spot every time.",
+        "ch01.s03.b025": "Where does it leave spots?",
+        "ch01.s03.b026": "Here. Here. A ring on the table. Two by the sofa. A trail to the door of her office and back. That's all.",
+        "ch01.s04.b001": "Nada and Luka come back down the narrow wooden staircase. Luka holds a lamp low over every step.",
+        "ch01.s04.b003": "Dust. Dust. A cigarette end, very old. A nail. No drips. Not one, Inspector. Not on the stairs, not by the counterweights, not near him.",
+        "ch01.s04.b004": "The bottle leaves a spot wherever it goes.",
+        "ch01.s04.b005": "Wherever it goes. Like a snail.",
+        "ch01.s04.b006": "The leaking bottle marks every place it has been, and there is not a drop on the trap room stairs: whoever had the laced champagne was not in the trap room.",
+        "ch01.s04.b007": "So our sleeping draught is a small sin, and a separate one. Good. I like my sins in separate boxes.",
+        "ch01.s04.b008": "Signora Brandolin wanted him asleep, not... this.",
+        "ch01.s04.b009": "Signora Brandolin wanted him on stage for another month. A dead magician sells no tickets.",
+        "ch01.s05.b001": "Livia has lit a real cigarette now. Her hand shakes a little, and she does not hide it.",
+        "ch01.s05.b003": "Who else was backstage during the act, Signora?",
+        "ch01.s05.b004": "The girl, of course. Mira. She has to be, she is the Bride. And his doctor, Kranjc. He comes every night now. Bruno said it was his heart. Bruno said a great many things.",
+        "ch01.s05.b005": "And during the vanishing? Where were you?",
+        "ch01.s05.b006": "Here, darling, waiting with my bottle like a fool. But I looked out once, through the wings. I wanted to see him take his last bow.",
+        "ch01.s05.b007": "She points the cigarette holder up, towards the dark above the stage.",
+        "ch01.s05.b008": "Somebody was on the fly ladder. Climbing, right when the Bride vanished. I saw only the hands on the rungs. Pale gloves. White, or pale grey, in that light. I could not tell you which.",
+        "ch01.s05.b009": "Mira wears white satin gloves. In the act.",
+        "ch01.s05.b010": "And Kranjc never takes his off. Grey kid. He says hands carry disease.",
+        "ch01.s05.b011": "Whoever climbed the ladder wore pale gloves, and only two people backstage wear them: either Mira or Doctor Kranjc was in the fly gallery.",
+        "ch01.s05.b012": "One bottle. One ladder. One trapdoor. One locked door. Four things, and only one of them killed him.",
+        "ch01.s06.b001": "The harbour street behind the theatre shines with rain. Posters of the Great Orsini peel off the wall, his painted moustache running in the wet.",
+        "ch01.s06.b002": "A police wagon has pulled up. Its lamps make two yellow circles on the stones.",
+        "ch01.s06.b004": "The constables are coming. Do we let anyone leave?",
+        "ch01.s06.b005": "Nobody leaves until dawn. The company scatters at seven, with the Vienna train and everything else. We have until then.",
+        "ch01.s06.b006": "A thin man comes out of the rain under a black umbrella. He carries a doctor's bag. He does not hurry.",
+        "ch01.s06.b008": "Inspector. I am told my patient has died. I am Doctor Kranjc. I attended him.",
+        "ch01.s06.b009": "You attended him tonight, Doctor?",
+        "ch01.s06.b010": "Every night this month. A weak heart, and a strong opinion of himself. The two often go together.",
+        "ch01.s06.b011": "He folds his umbrella neatly and shakes it once. His gloves do not get wet. He seems to have arranged that too.",
+        "ch01.s06.b012": "I will sign the certificate, of course. It will save everyone a great deal of trouble. Heart failure, under the strain of performance. Very sad.",
+        "ch01.s06.b013": "He didn't die of his heart. Someone...",
+        "ch01.s06.b014": "Luka.",
+        "ch01.s06.b015": "The young man is upset. That is natural. Shall we go inside, Inspector? I have my pen.",
+        "ch01.s06.b016": "Keep your pen in your bag for now, Doctor. Tonight I will decide what goes on the certificate.",
+        "ch01.s06.b017": "Kranjc bows, very slightly. Behind his glasses, his eyes do not change at all.",
+        "ch02.s01.b001": "The green room smells of wet umbrellas now. The champagne bucket has been pushed into a corner, with a constable's card on it that says DO NOT TOUCH.",
+        "ch02.s01.b002": "Kranjc sits on the very edge of the velvet sofa, as if the sofa might be catching.",
+        "ch02.s01.b004": "Tell me where you were during the act, Doctor.",
+        "ch02.s01.b005": "Above it. In the fly gallery. Bruno liked me to watch his breathing from up there, when he came out of the cabinet. One sees the chest move very clearly from above.",
+        "ch02.s01.b006": "And you climbed the ladder to get there.",
+        "ch02.s01.b007": "There is no other way, Inspector. Unless one is a sandbag.",
+        "ch02.s01.b008": "Pale gloves on the rungs...",
+        "ch02.s01.b009": "The young man has something to say.",
+        "ch02.s01.b010": "Only a question, Doctor. Have you ever been up the fly ladder before tonight?",
+        "ch02.s01.b011": "Many times.",
+        "ch02.s01.b012": "Luka goes to the costume rack and comes back with a pair of white cotton stage gloves. He holds one up. The palm is streaked a dull grey-gold.",
+        "ch02.s01.b013": "I climbed it, ten minutes ago, with these on. The flymen rub rosin on every rung so their hands don't slip. It's sticky and it's powdery at the same time, it gets into everything. Look. Six rungs and my palms are gold.",
+        "ch02.s01.b014": "a white stage glove with grey-gold rosin dust on the palm, from six rungs of the fly ladder",
+        "ch02.s01.b015": "Your gloves, please, Doctor. Hold them up to the light.",
+        "ch02.s01.b016": "Kranjc does not move for a moment. Then he holds up both hands, palms out, like a man surrendering very politely.",
+        "ch02.s01.b017": "The grey kid is spotless. Not a grain on it.",
+        "ch02.s01.b018": "I keep a spare pair in my bag. I changed them.",
+        "ch02.s01.b019": "May I see the other pair, then? The ones with the rosin?",
+        "ch02.s01.b020": "I threw them away.",
+        "ch02.s01.b021": "Where?",
+        "ch02.s01.b022": "I do not recall. The evening has been distressing.",
+        "ch02.s01.b023": "Nada walks to the door and holds it open.",
+        "ch02.s01.b024": "Then come with me to the ladder, Doctor. Climb two rungs. Only two. I will hold your bag.",
+        "ch02.s02.b001": "The stage is bare now, the curtain open on the dark, empty house. A single ghost light stands on its pole beside the brass trapdoor.",
+        "ch02.s02.b002": "The fly ladder runs straight up the back wall into black, iron rung after iron rung.",
+        "ch02.s02.b004": "Two rungs.",
+        "ch02.s02.b005": "Kranjc lifts one foot to the first rung. His glasses flash as he looks up. He puts the foot down again.",
+        "ch02.s02.b006": "I do not care for heights. I never have. My father kept me off the hayloft for it.",
+        "ch02.s02.b007": "And yet you watched from the fly gallery every night this month.",
+        "ch02.s02.b008": "I may have... misremembered. I watched from the wings tonight. Near the ladder.",
+        "ch02.s02.b009": "The wings. Near the ladder. Not up it.",
+        "ch02.s02.b010": "Spotless gloves, no spare pair to show me, and a man who cannot climb two rungs. Say it plainly.",
+        "ch02.s02.b011": "Luka says it plainly: there is no rosin on his gloves and he cannot climb two rungs, so Doctor Kranjc was not in the fly gallery.",
+        "ch02.s02.b012": "Kranjc takes his bag back from Nada. His hands are steady again.",
+        "ch02.s02.b013": "I am not on trial for my fear of ladders, Inspector.",
+        "ch02.s02.b014": "No, Doctor. Not for that.",
+        "ch02.s03.b001": "A swish of sequins comes out of the wings. Mira walks into the ghost light still in her white gown, her veil pushed back, a shawl over her shoulders that does nothing for the cold.",
+        "ch02.s03.b003": "The constable says I'm next. Go on, then. I've been sawn in half every night since August, I can take a few questions.",
+        "ch02.s03.b004": "Where do you go, Signorina Valenti, when the Bride vanishes?",
+        "ch02.s03.b005": "You want me to give away the trick? Now? He's dead, and he'd still sue me.",
+        "ch02.s03.b006": "He would have to stand in line.",
+        "ch02.s03.b007": "Mira looks at the trapdoor. Her face changes for a second, then hardens again.",
+        "ch02.s03.b008": "Up. There's a panel at the back of the cabinet and a little lift, and I come out at the top of the ladder. I climb the last part. In this dress. Every night.",
+        "ch02.s03.b009": "Your gloves, Signorina. The palms.",
+        "ch02.s03.b010": "Mira looks down. Her white satin gloves are streaked grey-gold, the fingers stiff with it.",
+        "ch02.s03.b011": "Rosin. Of course. It never comes off. I owe the wardrobe mistress four pairs.",
+        "ch02.s03.b012": "So you were in the fly gallery when he dropped.",
+        "ch02.s03.b013": "I'm always in the fly gallery when he drops. That's the act.",
+        "ch02.s04.b001": "High above the stage the iron catwalk hums under their feet. Ropes stand in rows on the pin rail like the strings of a huge harp.",
+        "ch02.s04.b002": "Below them, painted skies hang in the dark. One brass stage weight lies on its side by the rail, out of its row.",
+        "ch02.s04.b004": "This one's out of place. They're all lined up on the hooks, except this one. It's heavy. It's got your rosin on it, Signorina. Little white satin prints.",
+        "ch02.s04.b005": "Mira is quiet for a long breath. Then she lets go of the rail and folds her arms.",
+        "ch02.s04.b006": "Fine. Yes. I picked it up. I was going to drop it on his cabinet when he came back to take his bow. Smash his precious silver stars. Ruin the act in front of all Trieste.",
+        "ch02.s04.b007": "Why?",
+        "ch02.s04.b008": "Four months, Inspector. Four months without wages. He paid the doves before he paid me. He said a bride should be grateful for the veil.",
+        "ch02.s04.b009": "And did you drop it?",
+        "ch02.s04.b010": "No. I stood here holding it with both hands like an idiot. And then he didn't come back up, and I put it down, and I've been shaking ever since.",
+        "ch02.s04.b011": "What about the trick rope? Orsini's escape rope. The one he's tied up with in the second half. It's gone from his trunk in the wings.",
+        "ch02.s04.b012": "And where would I put a rope, in this?",
+        "ch02.s04.b013": "She holds her arms out. The gown fits her like a glove from neck to knee, the seams small and tight.",
+        "ch02.s04.b014": "The wardrobe mistress sews me into it at seven. She cuts me out at eleven. There isn't room in here for a hairpin, let alone a rope. Ask her.",
+        "ch02.s04.b015": "Luka looks at the tiny stitches along her side. He nods slowly.",
+        "ch02.s04.b016": "She's sewn in. No pocket, no sleeve, nowhere for it. She couldn't have carried it up that ladder or down it.",
+        "ch02.s04.b017": "Mira is sewn into a gown with no room for a hairpin, so Mira did not have the trick rope.",
+        "ch02.s04.b018": "A laced bottle. A brass weight. A missing rope. Three people, three places, three things.",
+        "ch02.s04.b019": "She looks down through the gap in the catwalk, at the small square of brass far below on the stage.",
+        "ch02.s04.b020": "Luka. Read me everything we have. Every line, in order.",
+        "ch02.s05.b001": "The company has gathered at the edge of the ghost light, as if it were a campfire. Livia sits on a prop throne. Mira stands with her arms folded. Kranjc waits apart, in the shadow of the wings.",
+        "ch02.s05.b003": "One of you went down to the trap room tonight and waited for him. One of you had the champagne. One of you had the weight. And one of you had his rope.",
+        "ch02.s05.b004": "Darling, you make it sound like a parlour game.",
+        "ch02.s05.b005": "It is a very old one. Who, with what, and where.",
+        "ch02.s05.b007": "Signora Brandolin was in the green room with her laced champagne. Mira was in the fly gallery with the brass stage weight. And you, Doctor Kranjc, were in the trap room, with Orsini's trick rope.",
+        "ch02.s05.b008": "Every head turns to the shadow of the wings. Kranjc steps out of it, unhurried.",
+        "ch02.s05.b009": "That is a very tidy story, Inspector. Does it have a reason in it?",
+        "ch02.s05.b010": "It does. Bruno had a little black book. He kept it in his cape. He used to tap it and smile at people. He tapped it at you all week, Doctor.",
+        "ch02.s05.b011": "Luka kneels by the folded cape the constables brought up from below. He finds a slit in the scarlet lining and draws out a small black notebook.",
+        "ch02.s05.b012": '"Kranjc. Morphine. Twenty-two prescriptions, signed with the names of three dead patients. Tell the board on Monday." It\'s underlined twice.',
+        "ch02.s05.b013": "He was going to ruin you on Monday, Doctor. So he did not get to Monday.",
+        "ch02.s05.b014": "For the first time, Kranjc smiles properly. It is not a nice smile.",
+        "ch02.s05.b015": "Inspector. You found him behind a padlocked door. I have never had a key to the trap room in my life. Search me. Search my bag. Search my house.",
+        "ch02.s05.b016": "He's right. The keys are the night crew's. Nobody else touches them. Not even me.",
+        "ch02.s05.b017": "Then someone opened the door for you.",
+        "ch02.s05.b018": "Far off, over the harbour, the bells of the city begin to strike. One. Two. Three.",
+        "ch02.s05.b019": "Oh, no. It's midnight. Closing night.",
+        "ch02.s05.b020": "What happens at midnight?",
+        "ch02.s05.b021": "The Lanterna game, darling. And now you'll never get a straight answer until dawn.",
+        "ch03.s01.b001": "The last bell over the harbour fades. The stage is dark except for the ghost light, a bare bulb on a pole that throws long shadows across the boards.",
+        "ch03.s01.b002": "From the wings come three people, one after another, as if they have done this every closing night for years. Each one carries a small paper mask on a stick.",
+        "ch03.s01.b004": "Who are they?",
+        "ch03.s01.b005": "The night crew, darling. Teodor, our carpenter. Pina, our prompter. Zlatko, who works the ropes. They lock up. They keep every key in this house.",
+        "ch03.s01.b006": "Then they are exactly the people I need.",
+        "ch03.s01.b007": "Not tonight you don't. Not until dawn.",
+        "ch03.s01.b008": "The three of them stop in a line at the edge of the ghost light. Together, without a word, they raise the paper masks to their faces and lower them again.",
+        "ch03.s02.b001": "Livia rises from the prop throne. For a moment she is not a tired owner losing money. She is an old actress giving the opening speech.",
+        "ch03.s02.b003": "It is older than any of us. Older than this roof. On closing night, at the stroke of twelve, the crew draws lots in the paint shop. Some draw a Lantern. Some draw a Mask.",
+        "ch03.s02.b004": "Nobody knows who drew what. The paper goes into the stove. And until the sun comes up, they play their part. Every word. To anyone. Even to the police.",
+        "ch03.s02.b005": "Livia gives the rule as the old company gives it: in the Lanterna game a Lantern always tells the truth and a Mask always lies. Who is a Lantern and who is a Mask?",
+        "ch03.s02.b006": "And if I arrest them all for obstruction?",
+        "ch03.s02.b007": "They'll go to the cells and keep playing. Teodor once played it through a fire.",
+        "ch03.s02.b008": "That's... actually rather wonderful.",
+        "ch03.s02.b009": "It is a great nuisance, Luka. Write down that it is a great nuisance.",
+        "ch03.s02.b010": "Nada steps into the circle of the ghost light. She looks at the three of them, one at a time, the way she looked at the trap room.",
+        "ch03.s02.b011": "One padlocked door. One killer with no key. Three people with keys. And somebody turned one of them in that lock tonight.",
+        "ch03.s03.b001": "The crew stand very still. The ghost light buzzes. Somewhere in the flies a rope creaks and settles.",
+        "ch03.s03.b003": "I will ask each of you the same question. Did you give Doctor Kranjc a key to the trap room tonight?",
+        "ch03.s03.b004": "No.",
+        "ch03.s03.b005": "No.",
+        "ch03.s03.b006": "No.",
+        "ch03.s03.b007": "Three noes. That's no help at all.",
+        "ch03.s03.b008": "It is a great deal of help, Luka. Somebody opened that padlock for him. So one of those three noes is a lie.",
+        "ch03.s03.b009": "And only a Mask lies.",
+        "ch03.s03.b010": "Only a Mask lies. Find the Mask, and you find the key.",
+        "ch03.s03.b011": "Kranjc, in the shadow of the wings, gives a soft cough. It might be a laugh.",
+        "ch03.s03.b012": "Charming. A parlour game for a murder. I did warn you, Inspector.",
+        "ch03.s03.b013": "You did, Doctor. Be quiet now, please. I am counting.",
+        "ch03.s04.b001": "Nada turns her back on Kranjc. She takes Luka's notebook out of his hands and opens it to a clean page.",
+        "ch03.s04.b003": "One line each, then. Not about yourselves. About the others. Tell me what you know about your crew. Signorina Sardo, you first.",
+        "ch03.s04.b004": "Pina opens her prompt book, as if she might find her line written there. She closes it again.",
+        "ch03.s04.b005": "Then I say this, and I will not say it twice.",
+        "ch03.s04.b006": 'Pina says: "At least one of Teodor and Zlatko is a Mask."',
+        "ch03.s04.b007": '"At least one of Teodor and Zlatko." At least one. Could be both.',
+        "ch03.s04.b008": "Could be. Signor Marušić.",
+        "ch03.s04.b009": "Teodor scratches his stubble. He looks at Zlatko beside him, then back at Nada, and shrugs one heavy shoulder.",
+        "ch03.s04.b010": "Easy, that. I'll say it straight.",
+        "ch03.s04.b011": 'Teodor says: "Zlatko and I are both Lanterns."',
+        "ch03.s04.b012": "Both of them. Him and Zlatko. Both Lanterns.",
+        "ch03.s04.b013": "And Signor Horvat.",
+        "ch03.s04.b014": "Zlatko takes a long time. He looks at the boards, at his own rope-burned hands, and at last at the small woman with the prompt book.",
+        "ch03.s04.b015": "I only know one thing for sure, Inspector.",
+        "ch03.s04.b016": 'Zlatko says: "Pina is a Lantern."',
+        "ch03.s04.b017": "The ghost light hums. Nobody on the stage moves. Even Kranjc has stopped smiling.",
+        "ch03.s04.b018": "Three lines. That's all we get?",
+        "ch03.s04.b019": "That is all we need.",
+        "ch03.s04.b021": "Signora Sardo is a Lantern. Signor Horvat is a Lantern. And you, Signor Marušić, are the Mask.",
+        "ch03.s04.b023": "If Pina were a Mask, then her line would be a lie, and both of the others would be Lanterns. Then Zlatko tells the truth, and says Pina is a Lantern. But she isn't. So she can't be a Mask. So she's a Lantern.",
+        "ch03.s04.b024": "Go on.",
+        "ch03.s04.b025": "So her line is true. One of Teodor and Zlatko is a Mask. And Zlatko says Pina is a Lantern, which is true, so... Zlatko's a Lantern too. So the Mask is...",
+        "ch03.s04.b026": "He stops. He looks at the old carpenter with the ring of keys.",
+        "ch03.s04.b027": "So Teodor's line was a lie. He isn't a Lantern at all.",
+        "ch03.s04.b028": 'Which makes his "No" a lie too, Luka. He gave Doctor Kranjc the key.',
+        "ch03.s04.b029": "I've never seen that doctor before in my life.",
+        "ch03.s04.b030": "He has. Every night this month. He brings him cigarettes.",
+        "ch03.s04.b031": "He went down the trap room stairs with the doctor at ten to ten, Inspector. I saw them from the flies. I did not know why. I am sorry, Teodor.",
+        "ch03.s04.b032": "Teodor's hand tightens on his key ring until the iron rattles. He does not look at Kranjc. He does not look at anyone.",
+        "ch03.s04.b033": "You've got it all wrong. I'm a happy man. I owe nobody nothing.",
+        "ch03.s04.b034": "Until dawn, then, Signor Marušić. I can wait until dawn.",
+        "ch03.s04.b035": "In the wings, Kranjc picks up his black bag. A constable steps into the light beside him, and he puts the bag down again.",
+        "ch03.s04.b036": "You will wait too, Doctor. We all will. The sun is not in a hurry, and neither am I.",
+        "ch04.s01.b001": "The ghost light has burned all night. Under it the company has sat in a loose circle on crates and prop chairs, coats over their knees, nobody quite asleep.",
+        "ch04.s01.b002": "High above the stage, the small dusty windows of the fly tower have turned from black to the colour of dishwater.",
+        "ch04.s01.b004": "Is it dawn yet?",
+        "ch04.s01.b005": "Not yet. Seven minutes. I have been counting the gulls.",
+        "ch04.s01.b006": "You can't count gulls, Inspector.",
+        "ch04.s01.b007": "I have counted nineteen. They are very regular.",
+        "ch04.s01.b008": "Teodor turns the iron key ring over and over. One key on it is newer than the others, bright brass among the rust.",
+        "ch04.s01.b009": "the bright brass trap room key on Teodor's iron key ring, newer than the rest",
+        "ch04.s01.b010": "Signor Marušić. You do not have to wait for the sun to tell me why.",
+        "ch04.s01.b011": "Nothing to tell. That doctor never held a single paper of mine.",
+        "ch04.s01.b012": "Pina, on the next crate, closes her prompt book slowly over one finger.",
+        "ch04.s01.b013": "Never lent me a lira. Never came round every Friday for it, either. Never said he'd tear the lot up.",
+        "ch04.s01.b014": "Inspector. He's a Mask. Every word's the wrong way round.",
+        "ch04.s01.b015": "I know, Luka. Listen to it the right way round.",
+        "ch04.s01.b016": "And he never asked for one turn of a key. Just one. For a minute. Never said nobody would get hurt.",
+        "ch04.s01.b017": "For a moment nobody speaks. Zlatko reaches over with one huge hand and rests it on the old man's shoulder.",
+        "ch04.s01.b018": "He did say it, Teodor. I heard him at the stage door on Thursday. You believed him. That is all.",
+        "ch04.s01.b019": "I'm not sorry. Not one bit.",
+        "ch04.s01.b020": "He is. He cried in the paint shop at half past ten. I wrote down the time.",
+        "ch04.s02.b001": "A thin bar of grey light falls through the fly tower windows and across the boards, all the way to the brass trapdoor.",
+        "ch04.s02.b002": "Somewhere outside, a ship's bell rings the hour.",
+        "ch04.s02.b003": "Sun's up, darlings. The game is over.",
+        "ch04.s02.b005": "One by one the three of them drop their paper masks into the old iron stove in the wings. Pina first, then Zlatko, then Teodor.",
+        "ch04.s02.b006": "Teodor unties his leather apron. He folds it once and lays it on the crate, with the key ring on top of it.",
+        "ch04.s02.b007": "He looks at the keys for a long time, and then he looks at Nada, and he nods once. He does not say a word.",
+        "ch04.s02.b008": "Thank you, Signor Marušić. That is enough.",
+        "ch04.s03.b001": "The rain has stopped. The harbour street shines like a wet mirror. The posters of the Great Orsini hang in grey ribbons off the wall.",
+        "ch04.s03.b002": "A police wagon stands by the stage door, its horse breathing clouds into the cold.",
+        "ch04.s03.b004": "I trust you will tell the board, Inspector. They do so like to be told things on a Monday.",
+        "ch04.s03.b005": "I will tell them on Sunday, Doctor. I would not want you to wait.",
+        "ch04.s03.b006": "You know, Bruno was a terrible man. He would have ruined three families with that little book. Mine was only the first.",
+        "ch04.s03.b007": "Then you might have come to me. I am in the third row most Saturdays.",
+        "ch04.s03.b008": "For a moment Kranjc's face does something it has not done all night. It looks tired.",
+        "ch04.s03.b009": "I do not care for heights, Inspector. Or for the police. Or, it seems, for being right.",
+        "ch04.s03.b010": "The constable opens the wagon door. Kranjc steps up into it neatly, as if into a train carriage. He does not look back.",
+        "ch04.s03.b011": "He never once took his gloves off.",
+        "ch04.s03.b012": "No. Some people never do, Luka. That is the whole of their profession.",
+        "ch04.s04.b001": "The house is empty. Every red velvet seat is folded up, two thousand of them, like sleeping bats. Morning light comes in through a high window and turns the dust to gold.",
+        "ch04.s04.b002": "The chandelier is dark. The gold leaf on the balconies is peeling, the way it always has.",
+        "ch04.s04.b004": "Why are we still here? It's over.",
+        "ch04.s04.b005": "Because Signora Brandolin asked us to stay. And because I have never seen this house empty. Look at it.",
+        "ch04.s04.b006": "Luka looks. For once he does not write anything down.",
+        "ch04.s04.b007": "On the stage, the curtain slowly rises. Behind it, the company stands in a line along the footlights. Nobody is in costume except Mira, who still cannot get out of her gown.",
+        "ch04.s04.b009": "Ladies and gentlemen. Tonight, our friend Bruno Orsini made his last vanishing.",
+        "ch04.s04.b010": "He was a dreadful man. He owed me four months.",
+        "ch04.s04.b011": "He owed everybody something, darling. And now we owe him a bow.",
+        "ch04.s04.b012": "Mira swallows. She steps to the edge of the stage, beside the brass trapdoor, and takes Livia's hand.",
+        "ch04.s04.b013": "You'll be paid, Mira. Every lira. I'll sell the chandelier if I have to.",
+        "ch04.s04.b014": "Don't sell the chandelier. Sell the cabinet. I never want to see a silver star again.",
+        "ch04.s04.b015": "Places, everyone.",
+        "ch04.s04.b016": '"The company bows. The house is silent. Curtain."',
+        "ch04.s04.b017": "The five of them bow, low and slow, to two thousand empty seats.",
+        "ch04.s04.b018": "In the third row, Nada puts her hands together, once, twice, three times. After a moment, Luka claps too.",
+        "ch04.s04.b019": "The sound is very small in that big gold room. It is enough.",
+        "ch04.s05.b001": "The harbour street is busy now. Fishwives call to each other. The seven o'clock train to Vienna whistles somewhere across the city, leaving without its magician.",
+        "ch04.s05.b003": "Inspector. Can I ask you something?",
+        "ch04.s05.b004": "You will anyway.",
+        "ch04.s05.b005": "When Signora Brandolin says the game is very old. Older than the roof. Do you think it's true? Or do you think she made it up, tonight, for us?",
+        "ch04.s05.b006": "Nada thinks about it as they walk. She counts the steps without meaning to. Eleven. Twelve.",
+        "ch04.s05.b007": "She is an actress, Luka, and she owns a theatre that is losing money. I think it is the oldest game in the world.",
+        "ch04.s05.b008": "That's not an answer.",
+        "ch04.s05.b009": "No. It is a much better thing. It is breakfast. Come on. You are buying.",
+        "ch04.s05.b010": "They walk off down the shining street, side by side, into the morning."
+      },
+      "puzzles": {
+        "trap_room": {
+          "names": {
+            "s1": "Signora Brandolin",
+            "s2": "Doctor Kranjc",
+            "s3": "Mira",
+            "w1": "trick rope",
+            "w2": "brass stage weight",
+            "w3": "laced champagne",
+            "p1": "trap room",
+            "p2": "green room",
+            "p3": "fly gallery"
+          },
+          "text": {
+            "c1": "Whoever climbed the ladder wore pale gloves, and only two people backstage wear them: either Mira or Doctor Kranjc was in the fly gallery.",
+            "c2": "The leaking bottle marks every place it has been, and there is not a drop on the trap room stairs: whoever had the laced champagne was not in the trap room.",
+            "c3": "Signora Brandolin had the laced champagne: she says so herself, the bottle was hers, and she poured it.",
+            "c4": "Luka says it plainly: there is no rosin on his gloves and he cannot climb two rungs, so Doctor Kranjc was not in the fly gallery.",
+            "c5": "Mira is sewn into a gown with no room for a hairpin, so Mira did not have the trick rope.",
+            "murder": "The body was found in the trap room."
+          }
+        },
+        "lanterna_game": {
+          "names": {
+            "k1": "Teodor",
+            "k2": "Pina",
+            "k3": "Zlatko"
+          },
+          "text": {
+            "intro": "Livia gives the rule as the old company gives it: in the Lanterna game a Lantern always tells the truth and a Mask always lies. Who is a Lantern and who is a Mask?",
+            "t1": 'Pina says: "At least one of Teodor and Zlatko is a Mask."',
+            "t2": 'Teodor says: "Zlatko and I are both Lanterns."',
+            "t3": 'Zlatko says: "Pina is a Lantern."'
+          }
+        }
+      },
+      "ui": {},
+      "voice": {}
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "rtl": false,
+      "fontFamily": "var(--vno-font-text)"
+    }
+  ]
+};

@@ -1,0 +1,2580 @@
+window.VNO_GAME_DATA = {
+  "slug": "the-snail-and-the-salad",
+  "title": "The Snail and the Salad",
+  "primaryLang": "en",
+  "presentation": "picture-book",
+  "saveDir": "vno-the-snail-and-the-salad",
+  "resolution": {
+    "w": 1920,
+    "h": 1080
+  },
+  "theme": {
+    "name": "storybook",
+    "label": "Storybook",
+    "description": "Bright and friendly for kids. Large rounded text (Quicksand, OFL), a warm cream textbox and big buttons.",
+    "light": true,
+    "pixel": false,
+    "colors": {
+      "accent": "#e8743b",
+      "background": "#fff4e0",
+      "text": "#3a2a1e",
+      "idle": "#8a6d52",
+      "hover": "#e8743b",
+      "selected": "#3a2a1e",
+      "insensitive": "#8a6d527f",
+      "muted": "#f4c9a5"
+    },
+    "textbox": {
+      "color": "#fff8ea",
+      "opacity": 0.93,
+      "borderColor": "#e8743b",
+      "radius": 28
+    },
+    "namebox": {
+      "color": "#ffd166",
+      "opacity": 1,
+      "radius": 22,
+      "textColor": "#3a2a1e"
+    },
+    "fonts": {
+      "text": "Quicksand-Medium.ttf",
+      "name": "Quicksand-Bold.ttf",
+      "interface": "Quicksand-Medium.ttf",
+      "bold": "Quicksand-Bold.ttf",
+      "scripts": [
+        "latin"
+      ]
+    },
+    "sizes": {
+      "text": 40,
+      "name": 50,
+      "interface": 36,
+      "label": 40,
+      "title": 84,
+      "choice": 40
+    },
+    "choice": {
+      "color": "#fff8eaf2",
+      "hoverColor": "#ffd166",
+      "borderColor": "#e8743b",
+      "radius": 26,
+      "textColor": "#5a4030",
+      "hoverTextColor": "#3a2a1e"
+    },
+    "transitions": {
+      "dissolve": 0.7,
+      "show": 0.3,
+      "fade": 0.7
+    },
+    "frames": {}
+  },
+  "rtlLangs": [],
+  "characters": {
+    "tino": {
+      "id": "tino",
+      "varName": "tino",
+      "displayName": "Tino",
+      "color": "#3b7f8a",
+      "expressions": [],
+      "sprites": {}
+    },
+    "mama": {
+      "id": "mama",
+      "varName": "mama",
+      "displayName": "Mama",
+      "color": "#8a3b5b",
+      "expressions": [],
+      "sprites": {}
+    },
+    "buba": {
+      "id": "buba",
+      "varName": "buba",
+      "displayName": "Buba",
+      "color": "#3b7f8a",
+      "expressions": [],
+      "sprites": {}
+    }
+  },
+  "backgrounds": {
+    "bg_ch01_s01": "images/bg ch01_s01.webp",
+    "bg_ch01_s02": "images/bg ch01_s02.webp",
+    "bg_ch01_s03": "images/bg ch01_s03.webp",
+    "bg_ch01_s04": "images/bg ch01_s04.webp",
+    "bg_ch01_s05": "images/bg ch01_s05.webp",
+    "bg_ch01_s06": "images/bg ch01_s06.webp",
+    "bg_ch01_s07": "images/bg ch01_s07.webp",
+    "bg_ch01_s08": "images/bg ch01_s08.webp",
+    "bg_ch01_s09": "images/bg ch01_s09.webp",
+    "bg_ch01_s10": "images/bg ch01_s10.webp",
+    "bg_ch01_s11": "images/bg ch01_s11.webp",
+    "bg_ch01_s12": "images/bg ch01_s12.webp"
+  },
+  "cgs": {},
+  "audio": {
+    "music": {
+      "music_01": {
+        "path": "audio/music_01.ogg"
+      }
+    },
+    "sfx": {},
+    "ambience": {}
+  },
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "label": "ch_01",
+      "number": 1,
+      "title": "The Snail and the Salad",
+      "music": "music_01",
+      "musicLoopStartSec": 0,
+      "scenes": [
+        {
+          "id": "ch01.s01",
+          "label": "ch_01_s01",
+          "title": "Under the big green leaf",
+          "locationKey": "under_the_big_green_leaf",
+          "bgPath": "images/bg ch01_s01.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s01.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s01.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b002",
+              "type": "narration",
+              "text": "Tino wakes up in his little round shell.",
+              "html": "Tino wakes up in his little round shell.",
+              "stage": {
+                "beatId": "ch01.s01.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b003",
+              "type": "narration",
+              "text": "His tummy goes rumble, rumble.",
+              "html": "His tummy goes rumble, rumble.",
+              "stage": {
+                "beatId": "ch01.s01.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s01.b004",
+              "type": "narration",
+              "text": "He is very, very hungry.",
+              "html": "He is very, very hungry.",
+              "stage": {
+                "beatId": "ch01.s01.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s02",
+          "label": "ch_01_s02",
+          "title": "The flowerpot",
+          "locationKey": "the_flowerpot",
+          "bgPath": "images/bg ch01_s02.webp",
+          "transition": "dissolve",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s02.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s02.b001",
+                "shows": [
+                  {
+                    "charKey": "mama",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b002",
+              "type": "narration",
+              "text": "Mama says the salad is on the other side of the garden.",
+              "html": "Mama says the salad is on the other side of the garden.",
+              "stage": {
+                "beatId": "ch01.s02.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b003",
+              "type": "narration",
+              "text": "She says slow is still moving.",
+              "html": "She says slow is still moving.",
+              "stage": {
+                "beatId": "ch01.s02.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s02.b004",
+              "type": "narration",
+              "text": "Tino nods and smiles.",
+              "html": "Tino nods and smiles.",
+              "stage": {
+                "beatId": "ch01.s02.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s03",
+          "label": "ch_01_s03",
+          "title": "The pebble path",
+          "locationKey": "the_pebble_path",
+          "bgPath": "images/bg ch01_s03.webp",
+          "transition": "dissolve",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s03.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s03.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b002",
+              "type": "narration",
+              "text": "Tino sets off along the pebble path.",
+              "html": "Tino sets off along the pebble path.",
+              "stage": {
+                "beatId": "ch01.s03.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b003",
+              "type": "narration",
+              "text": "Slowly, slowly, slowly, one tiny step after another.",
+              "html": "Slowly, slowly, slowly, one tiny step after another.",
+              "stage": {
+                "beatId": "ch01.s03.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s03.b004",
+              "type": "narration",
+              "text": "The garden is very, very big.",
+              "html": "The garden is very, very big.",
+              "stage": {
+                "beatId": "ch01.s03.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s04",
+          "label": "ch_01_s04",
+          "title": "The pebble path",
+          "locationKey": "the_pebble_path",
+          "bgPath": "images/bg ch01_s04.webp",
+          "transition": "none",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s04.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s04.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b002",
+              "type": "narration",
+              "text": "One pebble is as big as a mountain.",
+              "html": "One pebble is as big as a mountain.",
+              "stage": {
+                "beatId": "ch01.s04.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b003",
+              "type": "narration",
+              "text": "Tino climbs up, up, up.",
+              "html": "Tino climbs up, up, up.",
+              "stage": {
+                "beatId": "ch01.s04.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s04.b004",
+              "type": "narration",
+              "text": "Then he slides down, wheee!",
+              "html": "Then he slides down, wheee!",
+              "stage": {
+                "beatId": "ch01.s04.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s05",
+          "label": "ch_01_s05",
+          "title": "The spotted mushroom",
+          "locationKey": "the_spotted_mushroom",
+          "bgPath": "images/bg ch01_s05.webp",
+          "transition": "dissolve",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s05.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s05.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s05.b002",
+              "type": "narration",
+              "text": "The sprinkler goes fsss!",
+              "html": "The sprinkler goes fsss!",
+              "stage": {
+                "beatId": "ch01.s05.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s05.b003",
+              "type": "narration",
+              "text": "Drip, drop, drip.",
+              "html": "Drip, drop, drip.",
+              "stage": {
+                "beatId": "ch01.s05.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s05.b004",
+              "type": "narration",
+              "text": "Tino waits under the spotted mushroom until the shower stops.",
+              "html": "Tino waits under the spotted mushroom until the shower stops.",
+              "stage": {
+                "beatId": "ch01.s05.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s06",
+          "label": "ch_01_s06",
+          "title": "The tomato row",
+          "locationKey": "the_tomato_row",
+          "bgPath": "images/bg ch01_s06.webp",
+          "transition": "dissolve",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s06.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s06.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "buba",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b002",
+              "type": "narration",
+              "text": "Buba lands beside him with a flit.",
+              "html": "Buba lands beside him with a flit.",
+              "stage": {
+                "beatId": "ch01.s06.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b003",
+              "type": "narration",
+              "text": "She says she will fly ahead and wait.",
+              "html": "She says she will fly ahead and wait.",
+              "stage": {
+                "beatId": "ch01.s06.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s06.b004",
+              "type": "narration",
+              "text": "Off she goes, loop the loop!",
+              "html": "Off she goes, loop the loop!",
+              "stage": {
+                "beatId": "ch01.s06.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s07",
+          "label": "ch_01_s07",
+          "title": "The tomato row",
+          "locationKey": "the_tomato_row",
+          "bgPath": "images/bg ch01_s07.webp",
+          "transition": "none",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s07.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s07.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s07.b002",
+              "type": "narration",
+              "text": "A big boot stomps down.",
+              "html": "A big boot stomps down.",
+              "stage": {
+                "beatId": "ch01.s07.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s07.b003",
+              "type": "narration",
+              "text": "Thump!",
+              "html": "Thump!",
+              "stage": {
+                "beatId": "ch01.s07.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s07.b004",
+              "type": "narration",
+              "text": "Tino pulls into his shell, and the boot stomps past.",
+              "html": "Tino pulls into his shell, and the boot stomps past.",
+              "stage": {
+                "beatId": "ch01.s07.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s08",
+          "label": "ch_01_s08",
+          "title": "The lettuce patch",
+          "locationKey": "the_lettuce_patch",
+          "bgPath": "images/bg ch01_s08.webp",
+          "transition": "dissolve",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s08.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s08.b001",
+                "shows": [
+                  {
+                    "charKey": "buba",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s08.b002",
+              "type": "narration",
+              "text": "Buba waits on a big crisp leaf.",
+              "html": "Buba waits on a big crisp leaf.",
+              "stage": {
+                "beatId": "ch01.s08.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s08.b003",
+              "type": "narration",
+              "text": "The whole patch is green and crunchy.",
+              "html": "The whole patch is green and crunchy.",
+              "stage": {
+                "beatId": "ch01.s08.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s08.b004",
+              "type": "narration",
+              "text": "Tino's tummy rumbles again.",
+              "html": "Tino&#39;s tummy rumbles again.",
+              "stage": {
+                "beatId": "ch01.s08.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s09",
+          "label": "ch_01_s09",
+          "title": "The lettuce patch",
+          "locationKey": "the_lettuce_patch",
+          "bgPath": "images/bg ch01_s09.webp",
+          "transition": "none",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s09.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s09.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s09.b002",
+              "type": "narration",
+              "text": "Tino takes one tiny bite.",
+              "html": "Tino takes one tiny bite.",
+              "stage": {
+                "beatId": "ch01.s09.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s09.b003",
+              "type": "narration",
+              "text": "CRUNCH!",
+              "html": "CRUNCH!",
+              "stage": {
+                "beatId": "ch01.s09.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s09.b004",
+              "type": "narration",
+              "text": "It is the best salad in the whole wide garden.",
+              "html": "It is the best salad in the whole wide garden.",
+              "stage": {
+                "beatId": "ch01.s09.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s10",
+          "label": "ch_01_s10",
+          "title": "The lettuce patch",
+          "locationKey": "the_lettuce_patch",
+          "bgPath": "images/bg ch01_s10.webp",
+          "transition": "none",
+          "pause": 1,
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s10.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s10.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s10.b002",
+              "type": "narration",
+              "text": "He eats a little round hole right through the leaf.",
+              "html": "He eats a little round hole right through the leaf.",
+              "stage": {
+                "beatId": "ch01.s10.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s10.b003",
+              "type": "narration",
+              "text": "Munch, munch, munch.",
+              "html": "Munch, munch, munch.",
+              "stage": {
+                "beatId": "ch01.s10.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s10.b004",
+              "type": "narration",
+              "text": "Tino is very, very full.",
+              "html": "Tino is very, very full.",
+              "stage": {
+                "beatId": "ch01.s10.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s11",
+          "label": "ch_01_s11",
+          "title": "The pebble path",
+          "locationKey": "the_pebble_path",
+          "bgPath": "images/bg ch01_s11.webp",
+          "transition": "dissolve",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s11.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s11.b001",
+                "shows": [
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "center"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s11.b002",
+              "type": "narration",
+              "text": "Tino carries a small piece of lettuce home for Mama.",
+              "html": "Tino carries a small piece of lettuce home for Mama.",
+              "stage": {
+                "beatId": "ch01.s11.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s11.b003",
+              "type": "narration",
+              "text": "Slowly, slowly, slowly.",
+              "html": "Slowly, slowly, slowly.",
+              "stage": {
+                "beatId": "ch01.s11.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s11.b004",
+              "type": "narration",
+              "text": "The sun sinks low and the garden turns gold.",
+              "html": "The sun sinks low and the garden turns gold.",
+              "stage": {
+                "beatId": "ch01.s11.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch01.s12",
+          "label": "ch_01_s12",
+          "title": "The flowerpot",
+          "locationKey": "the_flowerpot",
+          "bgPath": "images/bg ch01_s12.webp",
+          "transition": "fade",
+          "music": "music_01",
+          "musicLoopStartSec": 0,
+          "musicExplicitNull": false,
+          "ambience": null,
+          "beats": [
+            {
+              "id": "ch01.s12.b001",
+              "type": "cast",
+              "stage": {
+                "beatId": "ch01.s12.b001",
+                "shows": [
+                  {
+                    "charKey": "mama",
+                    "expression": "neutral",
+                    "slot": "left"
+                  },
+                  {
+                    "charKey": "tino",
+                    "expression": "neutral",
+                    "slot": "right"
+                  }
+                ],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s12.b002",
+              "type": "narration",
+              "text": "Mama and Tino share the leaf.",
+              "html": "Mama and Tino share the leaf.",
+              "stage": {
+                "beatId": "ch01.s12.b002",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s12.b003",
+              "type": "narration",
+              "text": "Tino yawns and curls up in his shell.",
+              "html": "Tino yawns and curls up in his shell.",
+              "stage": {
+                "beatId": "ch01.s12.b003",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            },
+            {
+              "id": "ch01.s12.b004",
+              "type": "narration",
+              "text": "Goodnight, little snail.",
+              "html": "Goodnight, little snail.",
+              "stage": {
+                "beatId": "ch01.s12.b004",
+                "shows": [],
+                "hides": [],
+                "sfx": null,
+                "ambience": null
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "ending": {
+        "type": "the_end",
+        "message": "The End"
+      },
+      "nextChapterLabel": null
+    }
+  ],
+  "puzzles": {},
+  "editions": {
+    "en": {
+      "lang": "en",
+      "title": "The Snail and the Salad",
+      "characterNames": {
+        "tino": "Tino",
+        "mama": "Mama",
+        "buba": "Buba"
+      },
+      "chapterTitles": {
+        "1": "The Snail and the Salad"
+      },
+      "sceneTitles": {
+        "ch01.s01": "Under the big green leaf, morning",
+        "ch01.s02": "The flowerpot, morning",
+        "ch01.s03": "The pebble path, morning",
+        "ch01.s04": "The pebble path, midday",
+        "ch01.s05": "The spotted mushroom, midday",
+        "ch01.s06": "The tomato row, afternoon",
+        "ch01.s07": "The tomato row, afternoon",
+        "ch01.s08": "The lettuce patch, afternoon",
+        "ch01.s09": "The lettuce patch, late afternoon",
+        "ch01.s10": "The lettuce patch, late afternoon",
+        "ch01.s11": "The pebble path, evening",
+        "ch01.s12": "The flowerpot, night"
+      },
+      "endings": {
+        "1": "The End"
+      },
+      "choices": {},
+      "beats": {
+        "ch01.s01.b002": "Tino wakes up in his little round shell.",
+        "ch01.s01.b003": "His tummy goes rumble, rumble.",
+        "ch01.s01.b004": "He is very, very hungry.",
+        "ch01.s02.b002": "Mama says the salad is on the other side of the garden.",
+        "ch01.s02.b003": "She says slow is still moving.",
+        "ch01.s02.b004": "Tino nods and smiles.",
+        "ch01.s03.b002": "Tino sets off along the pebble path.",
+        "ch01.s03.b003": "Slowly, slowly, slowly, one tiny step after another.",
+        "ch01.s03.b004": "The garden is very, very big.",
+        "ch01.s04.b002": "One pebble is as big as a mountain.",
+        "ch01.s04.b003": "Tino climbs up, up, up.",
+        "ch01.s04.b004": "Then he slides down, wheee!",
+        "ch01.s05.b002": "The sprinkler goes fsss!",
+        "ch01.s05.b003": "Drip, drop, drip.",
+        "ch01.s05.b004": "Tino waits under the spotted mushroom until the shower stops.",
+        "ch01.s06.b002": "Buba lands beside him with a flit.",
+        "ch01.s06.b003": "She says she will fly ahead and wait.",
+        "ch01.s06.b004": "Off she goes, loop the loop!",
+        "ch01.s07.b002": "A big boot stomps down.",
+        "ch01.s07.b003": "Thump!",
+        "ch01.s07.b004": "Tino pulls into his shell, and the boot stomps past.",
+        "ch01.s08.b002": "Buba waits on a big crisp leaf.",
+        "ch01.s08.b003": "The whole patch is green and crunchy.",
+        "ch01.s08.b004": "Tino's tummy rumbles again.",
+        "ch01.s09.b002": "Tino takes one tiny bite.",
+        "ch01.s09.b003": "CRUNCH!",
+        "ch01.s09.b004": "It is the best salad in the whole wide garden.",
+        "ch01.s10.b002": "He eats a little round hole right through the leaf.",
+        "ch01.s10.b003": "Munch, munch, munch.",
+        "ch01.s10.b004": "Tino is very, very full.",
+        "ch01.s11.b002": "Tino carries a small piece of lettuce home for Mama.",
+        "ch01.s11.b003": "Slowly, slowly, slowly.",
+        "ch01.s11.b004": "The sun sinks low and the garden turns gold.",
+        "ch01.s12.b002": "Mama and Tino share the leaf.",
+        "ch01.s12.b003": "Tino yawns and curls up in his shell.",
+        "ch01.s12.b004": "Goodnight, little snail."
+      },
+      "puzzles": {},
+      "ui": {},
+      "voice": {
+        "ch01.s01.b002": "voice/en/ch01.s01.b002.mp3",
+        "ch01.s01.b003": "voice/en/ch01.s01.b003.mp3",
+        "ch01.s01.b004": "voice/en/ch01.s01.b004.mp3",
+        "ch01.s02.b002": "voice/en/ch01.s02.b002.mp3",
+        "ch01.s02.b003": "voice/en/ch01.s02.b003.mp3",
+        "ch01.s02.b004": "voice/en/ch01.s02.b004.mp3",
+        "ch01.s03.b002": "voice/en/ch01.s03.b002.mp3",
+        "ch01.s03.b003": "voice/en/ch01.s03.b003.mp3",
+        "ch01.s03.b004": "voice/en/ch01.s03.b004.mp3",
+        "ch01.s04.b002": "voice/en/ch01.s04.b002.mp3",
+        "ch01.s04.b003": "voice/en/ch01.s04.b003.mp3",
+        "ch01.s04.b004": "voice/en/ch01.s04.b004.mp3",
+        "ch01.s05.b002": "voice/en/ch01.s05.b002.mp3",
+        "ch01.s05.b003": "voice/en/ch01.s05.b003.mp3",
+        "ch01.s05.b004": "voice/en/ch01.s05.b004.mp3",
+        "ch01.s06.b002": "voice/en/ch01.s06.b002.mp3",
+        "ch01.s06.b003": "voice/en/ch01.s06.b003.mp3",
+        "ch01.s06.b004": "voice/en/ch01.s06.b004.mp3",
+        "ch01.s07.b002": "voice/en/ch01.s07.b002.mp3",
+        "ch01.s07.b003": "voice/en/ch01.s07.b003.mp3",
+        "ch01.s07.b004": "voice/en/ch01.s07.b004.mp3",
+        "ch01.s08.b002": "voice/en/ch01.s08.b002.mp3",
+        "ch01.s08.b003": "voice/en/ch01.s08.b003.mp3",
+        "ch01.s08.b004": "voice/en/ch01.s08.b004.mp3",
+        "ch01.s09.b002": "voice/en/ch01.s09.b002.mp3",
+        "ch01.s09.b003": "voice/en/ch01.s09.b003.mp3",
+        "ch01.s09.b004": "voice/en/ch01.s09.b004.mp3",
+        "ch01.s10.b002": "voice/en/ch01.s10.b002.mp3",
+        "ch01.s10.b003": "voice/en/ch01.s10.b003.mp3",
+        "ch01.s10.b004": "voice/en/ch01.s10.b004.mp3",
+        "ch01.s11.b002": "voice/en/ch01.s11.b002.mp3",
+        "ch01.s11.b003": "voice/en/ch01.s11.b003.mp3",
+        "ch01.s11.b004": "voice/en/ch01.s11.b004.mp3",
+        "ch01.s12.b002": "voice/en/ch01.s12.b002.mp3",
+        "ch01.s12.b003": "voice/en/ch01.s12.b003.mp3",
+        "ch01.s12.b004": "voice/en/ch01.s12.b004.mp3"
+      }
+    },
+    "hr": {
+      "lang": "hr",
+      "title": "Puž i salata",
+      "characterNames": {
+        "tino": "Tino",
+        "mama": "Mama",
+        "buba": "Buba"
+      },
+      "chapterTitles": {
+        "1": "Puž i salata"
+      },
+      "sceneTitles": {
+        "ch01.s01": "Pod velikim zelenim listom, jutro",
+        "ch01.s02": "Teglica za cvijeće, jutro",
+        "ch01.s03": "Staza od kamenčića, jutro",
+        "ch01.s04": "Staza od kamenčića, podne",
+        "ch01.s05": "Pjegava gljiva, podne",
+        "ch01.s06": "Red rajčica, poslijepodne",
+        "ch01.s07": "Red rajčica, poslijepodne",
+        "ch01.s08": "Salatni vrt, poslijepodne",
+        "ch01.s09": "Salatni vrt, kasno poslijepodne",
+        "ch01.s10": "Salatni vrt, kasno poslijepodne",
+        "ch01.s11": "Staza od kamenčića, večer",
+        "ch01.s12": "Teglica za cvijeće, noć"
+      },
+      "endings": {
+        "1": "Kraj"
+      },
+      "choices": {},
+      "beats": {
+        "ch01.s01.b002": "Tino se budi u svojoj maloj okrugloj kućici.",
+        "ch01.s01.b003": "Trbuščić mu kruli: krrr, krrr.",
+        "ch01.s01.b004": "Jako je, jako gladan.",
+        "ch01.s02.b002": "Mama kaže da je salata s druge strane vrta.",
+        "ch01.s02.b003": "Kaže da je i polako kretanje.",
+        "ch01.s02.b004": "Tino kimne i nasmije se.",
+        "ch01.s03.b002": "Tino kreće stazom od kamenčića.",
+        "ch01.s03.b003": "Polako, polako, polako, jedan mali korak za drugim.",
+        "ch01.s03.b004": "Vrt je jako, jako velik.",
+        "ch01.s04.b002": "Jedan je kamenčić velik kao planina.",
+        "ch01.s04.b003": "Tino se penje gore, gore, gore.",
+        "ch01.s04.b004": "A onda se spusti — juhuu!",
+        "ch01.s05.b002": "Prskalica ide fsss!",
+        "ch01.s05.b003": "Kap, kap, kap.",
+        "ch01.s05.b004": "Tino čeka pod pjegavom gljivom dok kišica ne prestane.",
+        "ch01.s06.b002": "Buba sleti kraj njega — frrr.",
+        "ch01.s06.b003": "Kaže da će odletjeti naprijed i pričekati.",
+        "ch01.s06.b004": "I ode, u petlju!",
+        "ch01.s07.b002": "Velika čizma lupi o tlo.",
+        "ch01.s07.b003": "Tres!",
+        "ch01.s07.b004": "Tino se uvuče u kućicu, a čizma prođe pokraj njega.",
+        "ch01.s08.b002": "Buba čeka na velikom hrskavom listu.",
+        "ch01.s08.b003": "Cijeli je vrt zelen i hrskav.",
+        "ch01.s08.b004": "Tinu opet zakruli trbuščić.",
+        "ch01.s09.b002": "Tino zagrize jedan sićušni zalogaj.",
+        "ch01.s09.b003": "HRSK!",
+        "ch01.s09.b004": "To je najbolja salata u cijelom širokom vrtu.",
+        "ch01.s10.b002": "Pojede okruglu rupicu ravno kroz list.",
+        "ch01.s10.b003": "Mljac, mljac, mljac.",
+        "ch01.s10.b004": "Tino je jako, jako sit.",
+        "ch01.s11.b002": "Tino nosi mali komadić salate kući za mamu.",
+        "ch01.s11.b003": "Polako, polako, polako.",
+        "ch01.s11.b004": "Sunce se spušta i vrt postaje zlatan.",
+        "ch01.s12.b002": "Mama i Tino dijele list.",
+        "ch01.s12.b003": "Tino zijevne i sklupča se u svojoj kućici.",
+        "ch01.s12.b004": "Laku noć, mali puže."
+      },
+      "puzzles": {},
+      "ui": {
+        "Language": "Jezik",
+        "The End": "Kraj",
+        "Start again": "Počni ispočetka",
+        "Back to main menu": "Natrag na glavni izbornik",
+        "Start": "Započni",
+        "Load": "Učitaj",
+        "Save": "Spremi",
+        "Preferences": "Postavke",
+        "Prefs": "Postavke",
+        "About": "O igri",
+        "Help": "Pomoć",
+        "Quit": "Izlaz",
+        "History": "Povijest",
+        "Skip": "Preskoči",
+        "Skipping": "Preskakanje",
+        "Auto": "Automatski",
+        "Q.Save": "Br.spremi",
+        "Q.Load": "Br.učitaj",
+        "Return": "Povratak",
+        "Back": "Natrag",
+        "Menu": "Izbornik",
+        "Main Menu": "Glavni izbornik",
+        "Window": "Prozor",
+        "Fullscreen": "Cijeli zaslon",
+        "Display": "Prikaz",
+        "Unseen Text": "Neviđeni tekst",
+        "After Choices": "Nakon izbora",
+        "Transitions": "Prijelazi",
+        "Text Speed": "Brzina teksta",
+        "Auto-Forward Time": "Vrijeme automatskog prelaska",
+        "Music Volume": "Glasnoća glazbe",
+        "Sound Volume": "Glasnoća zvukova",
+        "Voice Volume": "Glasnoća glasa",
+        "Mute All": "Utišaj sve",
+        "Yes": "Da",
+        "No": "Ne",
+        "empty slot": "prazno mjesto",
+        "Automatic saves": "Automatska spremanja",
+        "Quick saves": "Brza spremanja",
+        "Page {}": "Stranica {}",
+        "The dialogue history is empty.": "Povijest dijaloga je prazna.",
+        "Are you sure?": "Jeste li sigurni?",
+        "Are you sure you want to quit?": "Jeste li sigurni da želite izaći?",
+        "Are you sure you want to delete this save?": "Jeste li sigurni da želite izbrisati ovo spremanje?",
+        "Are you sure you want to overwrite your save?": "Jeste li sigurni da želite prepisati svoje spremanje?",
+        "Loading will lose unsaved progress.\\nAre you sure you want to do this?": "Učitavanje će izgubiti nespremljeni napredak.\\nJeste li sigurni da to želite?",
+        "Are you sure you want to return to the main menu?\\nThis will lose unsaved progress.": "Jeste li sigurni da se želite vratiti u glavni izbornik?\\nNespremljeni napredak će se izgubiti.",
+        "Are you sure you want to begin skipping?": "Jeste li sigurni da želite početi preskakati?",
+        "Are you sure you want to skip to the next choice?": "Jeste li sigurni da želite preskočiti do sljedećeg izbora?",
+        "End Replay": "Završi ponavljanje",
+        "Upload Sync": "Pošalji sinkronizaciju",
+        "Download Sync": "Preuzmi sinkronizaciju",
+        "Keyboard": "Tipkovnica",
+        "Mouse": "Miš",
+        "Gamepad": "Kontroler",
+        "Advances dialogue and activates the interface.": "Pomiče dijalog i aktivira sučelje.",
+        "Space": "Razmaknica",
+        "Advances dialogue without selecting choices.": "Pomiče dijalog bez biranja opcija.",
+        "Arrow Keys": "Tipke sa strelicama",
+        "Navigate the interface.": "Kretanje sučeljem.",
+        "Escape": "Esc",
+        "Accesses the game menu.": "Otvara izbornik igre.",
+        "Skips dialogue while held down.": "Preskače dijalog dok je tipka pritisnuta.",
+        "Toggles dialogue skipping.": "Uključuje i isključuje preskakanje dijaloga.",
+        "Rolls back to earlier dialogue.": "Vraća se na raniji dijalog.",
+        "Rolls forward to later dialogue.": "Ide naprijed na kasniji dijalog.",
+        "Hides the user interface.": "Sakriva korisničko sučelje.",
+        "Takes a screenshot.": "Snima snimku zaslona.",
+        "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.": "Uključuje i isključuje pomoćno {a=https://www.renpy.org/l/voicing}samoizgovaranje{/a}.",
+        "Opens the accessibility menu.": "Otvara izbornik pristupačnosti.",
+        "Left Click": "Lijevi klik",
+        "Middle Click": "Srednji klik",
+        "Right Click": "Desni klik",
+        "Mouse Wheel Up": "Kotačić miša gore",
+        "Mouse Wheel Down": "Kotačić miša dolje",
+        "Right Trigger\\nA/Bottom Button": "Desni okidač\\nA/donja tipka",
+        "Left Trigger\\nLeft Shoulder": "Lijevi okidač\\nLijevi branik",
+        "Right Shoulder": "Desni branik",
+        "D-Pad, Sticks": "Smjerne tipke, štapići",
+        "Start, Guide, B/Right Button": "Start, Guide, B/desna tipka",
+        "Y/Top Button": "Y/gornja tipka",
+        "Calibrate": "Kalibriraj",
+        "Clues": "Tragovi",
+        "Accuse": "Optuži",
+        "Submit": "Pošalji",
+        "Hint": "Natuknica",
+        "Give Up": "Odustani",
+        "Next": "Sljedeća stranica",
+        "Previous": "Prethodna stranica",
+        "Page {} of {}": "Stranica {} od {}",
+        "Read aloud": "Čitaj naglas",
+        "Text": "Tekst",
+        "Audio": "Zvuk",
+        "Close": "Zatvori",
+        "Interface Language": "Jezik sučelja",
+        "Story Language": "Jezik priče",
+        "Story Text Size": "Veličina teksta priče",
+        "Save Game": "Spremi igru",
+        "Load Game": "Učitaj igru"
+      },
+      "voice": {
+        "ch01.s01.b002": "voice/hr/ch01.s01.b002.mp3",
+        "ch01.s01.b003": "voice/hr/ch01.s01.b003.mp3",
+        "ch01.s01.b004": "voice/hr/ch01.s01.b004.mp3",
+        "ch01.s02.b002": "voice/hr/ch01.s02.b002.mp3",
+        "ch01.s02.b003": "voice/hr/ch01.s02.b003.mp3",
+        "ch01.s02.b004": "voice/hr/ch01.s02.b004.mp3",
+        "ch01.s03.b002": "voice/hr/ch01.s03.b002.mp3",
+        "ch01.s03.b003": "voice/hr/ch01.s03.b003.mp3",
+        "ch01.s03.b004": "voice/hr/ch01.s03.b004.mp3",
+        "ch01.s04.b002": "voice/hr/ch01.s04.b002.mp3",
+        "ch01.s04.b003": "voice/hr/ch01.s04.b003.mp3",
+        "ch01.s04.b004": "voice/hr/ch01.s04.b004.mp3",
+        "ch01.s05.b002": "voice/hr/ch01.s05.b002.mp3",
+        "ch01.s05.b003": "voice/hr/ch01.s05.b003.mp3",
+        "ch01.s05.b004": "voice/hr/ch01.s05.b004.mp3",
+        "ch01.s06.b002": "voice/hr/ch01.s06.b002.mp3",
+        "ch01.s06.b003": "voice/hr/ch01.s06.b003.mp3",
+        "ch01.s06.b004": "voice/hr/ch01.s06.b004.mp3",
+        "ch01.s07.b002": "voice/hr/ch01.s07.b002.mp3",
+        "ch01.s07.b003": "voice/hr/ch01.s07.b003.mp3",
+        "ch01.s07.b004": "voice/hr/ch01.s07.b004.mp3",
+        "ch01.s08.b002": "voice/hr/ch01.s08.b002.mp3",
+        "ch01.s08.b003": "voice/hr/ch01.s08.b003.mp3",
+        "ch01.s08.b004": "voice/hr/ch01.s08.b004.mp3",
+        "ch01.s09.b002": "voice/hr/ch01.s09.b002.mp3",
+        "ch01.s09.b003": "voice/hr/ch01.s09.b003.mp3",
+        "ch01.s09.b004": "voice/hr/ch01.s09.b004.mp3",
+        "ch01.s10.b002": "voice/hr/ch01.s10.b002.mp3",
+        "ch01.s10.b003": "voice/hr/ch01.s10.b003.mp3",
+        "ch01.s10.b004": "voice/hr/ch01.s10.b004.mp3",
+        "ch01.s11.b002": "voice/hr/ch01.s11.b002.mp3",
+        "ch01.s11.b003": "voice/hr/ch01.s11.b003.mp3",
+        "ch01.s11.b004": "voice/hr/ch01.s11.b004.mp3",
+        "ch01.s12.b002": "voice/hr/ch01.s12.b002.mp3",
+        "ch01.s12.b003": "voice/hr/ch01.s12.b003.mp3",
+        "ch01.s12.b004": "voice/hr/ch01.s12.b004.mp3"
+      }
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "rtl": false,
+      "fontFamily": "var(--vno-font-text)"
+    },
+    {
+      "code": "hr",
+      "name": "Croatian",
+      "nativeName": "Hrvatski",
+      "rtl": false,
+      "fontFamily": "Font_hr, var(--vno-font-text)"
+    }
+  ],
+  "uiLanguages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "ui": {}
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "nativeName": "العربية",
+      "ui": {
+        "Start": "ابدأ",
+        "Load": "تحميل",
+        "Save": "حفظ",
+        "Preferences": "التفضيلات",
+        "Prefs": "التفضيلات",
+        "About": "حول",
+        "Back": "رجوع",
+        "History": "السجل",
+        "Skip": "تخطي",
+        "Auto": "تلقائي",
+        "Q.Save": "حفظ سريع",
+        "Q.Load": "تحميل سريع",
+        "Menu": "القائمة",
+        "Main Menu": "القائمة الرئيسية",
+        "Start again": "ابدأ من جديد",
+        "The End": "النهاية",
+        "Display": "العرض",
+        "Fullscreen": "ملء الشاشة",
+        "Language": "اللغة",
+        "Text Speed": "سرعة النص",
+        "Auto-Forward Time": "وقت التقدم التلقائي",
+        "Music Volume": "مستوى صوت الموسيقى",
+        "Sound Volume": "مستوى صوت المؤثرات",
+        "Voice Volume": "مستوى صوت الأصوات",
+        "Page {}": "صفحة {}",
+        "empty slot": "خانة فارغة",
+        "The dialogue history is empty.": "سجل الحوار فارغ."
+      }
+    },
+    {
+      "code": "bs",
+      "name": "Bosnian",
+      "nativeName": "Bosanski",
+      "ui": {
+        "Start": "Počni",
+        "Load": "Učitaj",
+        "Save": "Spremi",
+        "Preferences": "Postavke",
+        "Prefs": "Post.",
+        "About": "O igri",
+        "Back": "Nazad",
+        "History": "Historija",
+        "Skip": "Preskoči",
+        "Auto": "Automatski",
+        "Q.Save": "Brzo spremanje",
+        "Q.Load": "Brzo učitavanje",
+        "Menu": "Meni",
+        "Main Menu": "Glavni meni",
+        "Start again": "Počni ispočetka",
+        "The End": "Kraj",
+        "Display": "Prikaz",
+        "Fullscreen": "Cijeli ekran",
+        "Language": "Jezik",
+        "Text Speed": "Brzina teksta",
+        "Auto-Forward Time": "Vrijeme automatskog prelaska",
+        "Music Volume": "Jačina muzike",
+        "Sound Volume": "Jačina zvukova",
+        "Voice Volume": "Jačina glasa",
+        "Page {}": "Stranica {}",
+        "empty slot": "prazno mjesto",
+        "The dialogue history is empty.": "Historija dijaloga je prazna."
+      }
+    },
+    {
+      "code": "bg",
+      "name": "Bulgarian",
+      "nativeName": "Български",
+      "ui": {
+        "Start": "Старт",
+        "Load": "Зареди",
+        "Save": "Запази",
+        "Preferences": "Настройки",
+        "Prefs": "Настр.",
+        "About": "За играта",
+        "Back": "Назад",
+        "History": "История",
+        "Skip": "Пропусни",
+        "Auto": "Авто",
+        "Q.Save": "Бързо зап.",
+        "Q.Load": "Бързо зар.",
+        "Menu": "Меню",
+        "Main Menu": "Главно меню",
+        "Start again": "Започни отначало",
+        "The End": "Край",
+        "Display": "Дисплей",
+        "Fullscreen": "Цял екран",
+        "Language": "Език",
+        "Text Speed": "Скорост на текста",
+        "Auto-Forward Time": "Време за автоматично продължаване",
+        "Music Volume": "Сила на музиката",
+        "Sound Volume": "Сила на звуците",
+        "Voice Volume": "Сила на гласа",
+        "Page {}": "Страница {}",
+        "empty slot": "празно място",
+        "The dialogue history is empty.": "Историята на диалозите е празна."
+      }
+    },
+    {
+      "code": "zh",
+      "name": "Chinese",
+      "nativeName": "中文",
+      "ui": {
+        "Start": "开始",
+        "Load": "读取",
+        "Save": "保存",
+        "Preferences": "设置",
+        "Prefs": "设置",
+        "About": "关于",
+        "Back": "返回",
+        "History": "历史",
+        "Skip": "跳过",
+        "Auto": "自动",
+        "Q.Save": "快速保存",
+        "Q.Load": "快速读取",
+        "Menu": "菜单",
+        "Main Menu": "主菜单",
+        "Start again": "重新开始",
+        "The End": "完",
+        "Display": "显示",
+        "Fullscreen": "全屏",
+        "Language": "语言",
+        "Text Speed": "文字速度",
+        "Auto-Forward Time": "自动前进时间",
+        "Music Volume": "音乐音量",
+        "Sound Volume": "音效音量",
+        "Voice Volume": "语音音量",
+        "Page {}": "第 {} 页",
+        "empty slot": "空存档位",
+        "The dialogue history is empty.": "对话历史为空。"
+      }
+    },
+    {
+      "code": "hr",
+      "name": "Croatian",
+      "nativeName": "Hrvatski",
+      "ui": {
+        "Start": "Započni",
+        "Load": "Učitaj",
+        "Save": "Spremi",
+        "Save Game": "Spremi igru",
+        "Load Game": "Učitaj igru",
+        "Preferences": "Postavke",
+        "Prefs": "Postavke",
+        "About": "O igri",
+        "Back": "Natrag",
+        "History": "Povijest",
+        "Skip": "Preskoči",
+        "Auto": "Automatski",
+        "Q.Save": "Br.spremi",
+        "Q.Load": "Br.učitaj",
+        "Menu": "Izbornik",
+        "Main Menu": "Glavni izbornik",
+        "Start again": "Počni ispočetka",
+        "The End": "Kraj",
+        "Display": "Prikaz",
+        "Fullscreen": "Cijeli zaslon",
+        "Language": "Jezik",
+        "Text": "Tekst",
+        "Audio": "Zvuk",
+        "Text Speed": "Brzina teksta",
+        "Auto-Forward Time": "Vrijeme automatskog prelaska",
+        "Music Volume": "Glasnoća glazbe",
+        "Sound Volume": "Glasnoća zvukova",
+        "Voice Volume": "Glasnoća glasa",
+        "Page {}": "Stranica {}",
+        "Page {} of {}": "Stranica {} od {}",
+        "Next": "Sljedeća stranica",
+        "Previous": "Prethodna stranica",
+        "Read aloud": "Čitaj naglas",
+        "Clues": "Tragovi",
+        "Accuse": "Optuži",
+        "Submit": "Pošalji",
+        "Hint": "Natuknica",
+        "Give Up": "Odustani",
+        "empty slot": "prazno mjesto",
+        "The dialogue history is empty.": "Povijest dijaloga je prazna.",
+        "Close": "Zatvori",
+        "Interface Language": "Jezik sučelja",
+        "Story Language": "Jezik priče",
+        "Story Text Size": "Veličina teksta priče"
+      }
+    },
+    {
+      "code": "cs",
+      "name": "Czech",
+      "nativeName": "Čeština",
+      "ui": {
+        "Start": "Start",
+        "Load": "Načíst",
+        "Save": "Uložit",
+        "Preferences": "Nastavení",
+        "Prefs": "Nast.",
+        "About": "O hře",
+        "Back": "Zpět",
+        "History": "Historie",
+        "Skip": "Přeskočit",
+        "Auto": "Auto",
+        "Q.Save": "Rychlé uložení",
+        "Q.Load": "Rychlé načtení",
+        "Menu": "Nabídka",
+        "Main Menu": "Hlavní nabídka",
+        "Start again": "Začít znovu",
+        "The End": "Konec",
+        "Display": "Zobrazení",
+        "Fullscreen": "Celá obrazovka",
+        "Language": "Jazyk",
+        "Text Speed": "Rychlost textu",
+        "Auto-Forward Time": "Doba automatického posunu",
+        "Music Volume": "Hlasitost hudby",
+        "Sound Volume": "Hlasitost zvuků",
+        "Voice Volume": "Hlasitost hlasů",
+        "Page {}": "Strana {}",
+        "empty slot": "prázdné místo",
+        "The dialogue history is empty.": "Historie dialogů je prázdná."
+      }
+    },
+    {
+      "code": "da",
+      "name": "Danish",
+      "nativeName": "Dansk",
+      "ui": {
+        "Start": "Start",
+        "Load": "Indlæs",
+        "Save": "Gem",
+        "Preferences": "Indstillinger",
+        "Prefs": "Indst.",
+        "About": "Om",
+        "Back": "Tilbage",
+        "History": "Historik",
+        "Skip": "Spring over",
+        "Auto": "Auto",
+        "Q.Save": "Hurtig gem",
+        "Q.Load": "Hurtig indlæs",
+        "Menu": "Menu",
+        "Main Menu": "Hovedmenu",
+        "Start again": "Start forfra",
+        "The End": "Slut",
+        "Display": "Visning",
+        "Fullscreen": "Fuld skærm",
+        "Language": "Sprog",
+        "Text Speed": "Tekstfart",
+        "Auto-Forward Time": "Tid til automatisk fremad",
+        "Music Volume": "Musikvolumen",
+        "Sound Volume": "Lydvolumen",
+        "Voice Volume": "Stemmevolumen",
+        "Page {}": "Side {}",
+        "empty slot": "tom plads",
+        "The dialogue history is empty.": "Dialoghistorikken er tom."
+      }
+    },
+    {
+      "code": "nl",
+      "name": "Dutch",
+      "nativeName": "Nederlands",
+      "ui": {
+        "Start": "Start",
+        "Load": "Laden",
+        "Save": "Opslaan",
+        "Preferences": "Voorkeuren",
+        "Prefs": "Voork.",
+        "About": "Info",
+        "Back": "Terug",
+        "History": "Geschiedenis",
+        "Skip": "Overslaan",
+        "Auto": "Auto",
+        "Q.Save": "Snel opslaan",
+        "Q.Load": "Snel laden",
+        "Menu": "Menu",
+        "Main Menu": "Hoofdmenu",
+        "Start again": "Opnieuw beginnen",
+        "The End": "Einde",
+        "Display": "Weergave",
+        "Fullscreen": "Volledig scherm",
+        "Language": "Taal",
+        "Text Speed": "Tekstsnelheid",
+        "Auto-Forward Time": "Tijd voor automatisch doorgaan",
+        "Music Volume": "Muziekvolume",
+        "Sound Volume": "Geluidsvolume",
+        "Voice Volume": "Stemvolume",
+        "Page {}": "Pagina {}",
+        "empty slot": "lege plek",
+        "The dialogue history is empty.": "De dialooggeschiedenis is leeg."
+      }
+    },
+    {
+      "code": "et",
+      "name": "Estonian",
+      "nativeName": "Eesti",
+      "ui": {
+        "Start": "Alusta",
+        "Load": "Laadi",
+        "Save": "Salvesta",
+        "Preferences": "Eelistused",
+        "Prefs": "Eelist.",
+        "About": "Teave",
+        "Back": "Tagasi",
+        "History": "Ajalugu",
+        "Skip": "Jäta vahele",
+        "Auto": "Auto",
+        "Q.Save": "Kiirsalvestus",
+        "Q.Load": "Kiirlaadimine",
+        "Menu": "Menüü",
+        "Main Menu": "Peamenüü",
+        "Start again": "Alusta otsast",
+        "The End": "Lõpp",
+        "Display": "Kuva",
+        "Fullscreen": "Täisekraan",
+        "Language": "Keel",
+        "Text Speed": "Teksti kiirus",
+        "Auto-Forward Time": "Automaatse edasiliikumise aeg",
+        "Music Volume": "Muusika helitugevus",
+        "Sound Volume": "Heliefektide helitugevus",
+        "Voice Volume": "Hääle helitugevus",
+        "Page {}": "Lehekülg {}",
+        "empty slot": "tühi koht",
+        "The dialogue history is empty.": "Dialoogi ajalugu on tühi."
+      }
+    },
+    {
+      "code": "fi",
+      "name": "Finnish",
+      "nativeName": "Suomi",
+      "ui": {
+        "Start": "Aloita",
+        "Load": "Lataa",
+        "Save": "Tallenna",
+        "Preferences": "Asetukset",
+        "Prefs": "Aset.",
+        "About": "Tietoja",
+        "Back": "Takaisin",
+        "History": "Historia",
+        "Skip": "Ohita",
+        "Auto": "Auto",
+        "Q.Save": "Pikatallennus",
+        "Q.Load": "Pikalataus",
+        "Menu": "Valikko",
+        "Main Menu": "Päävalikko",
+        "Start again": "Aloita alusta",
+        "The End": "Loppu",
+        "Display": "Näyttö",
+        "Fullscreen": "Koko näyttö",
+        "Language": "Kieli",
+        "Text Speed": "Tekstin nopeus",
+        "Auto-Forward Time": "Automaattisen etenemisen aika",
+        "Music Volume": "Musiikin äänenvoimakkuus",
+        "Sound Volume": "Äänitehosteiden voimakkuus",
+        "Voice Volume": "Puheen voimakkuus",
+        "Page {}": "Sivu {}",
+        "empty slot": "tyhjä paikka",
+        "The dialogue history is empty.": "Dialogihistoria on tyhjä."
+      }
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "nativeName": "Français",
+      "ui": {
+        "Start": "Commencer",
+        "Load": "Charger",
+        "Save": "Sauvegarder",
+        "Preferences": "Préférences",
+        "Prefs": "Préf.",
+        "About": "À propos",
+        "Back": "Retour",
+        "History": "Historique",
+        "Skip": "Passer",
+        "Auto": "Auto",
+        "Q.Save": "Sauv. rapide",
+        "Q.Load": "Charg. rapide",
+        "Menu": "Menu",
+        "Main Menu": "Menu principal",
+        "Start again": "Recommencer",
+        "The End": "Fin",
+        "Display": "Affichage",
+        "Fullscreen": "Plein écran",
+        "Language": "Langue",
+        "Text Speed": "Vitesse du texte",
+        "Auto-Forward Time": "Délai du défilement auto",
+        "Music Volume": "Volume de la musique",
+        "Sound Volume": "Volume des sons",
+        "Voice Volume": "Volume des voix",
+        "Page {}": "Page {}",
+        "empty slot": "emplacement vide",
+        "The dialogue history is empty.": "L'historique des dialogues est vide."
+      }
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "nativeName": "Deutsch",
+      "ui": {
+        "Start": "Start",
+        "Load": "Laden",
+        "Save": "Speichern",
+        "Preferences": "Einstellungen",
+        "Prefs": "Einstell.",
+        "About": "Über",
+        "Back": "Zurück",
+        "History": "Verlauf",
+        "Skip": "Überspringen",
+        "Auto": "Auto",
+        "Q.Save": "Q.Speichern",
+        "Q.Load": "Q.Laden",
+        "Menu": "Menü",
+        "Main Menu": "Hauptmenü",
+        "Start again": "Von vorn beginnen",
+        "The End": "Ende",
+        "Display": "Anzeige",
+        "Fullscreen": "Vollbild",
+        "Language": "Sprache",
+        "Text Speed": "Textgeschwindigkeit",
+        "Auto-Forward Time": "Zeit für Auto-Weiter",
+        "Music Volume": "Musiklautstärke",
+        "Sound Volume": "Soundlautstärke",
+        "Voice Volume": "Sprachlautstärke",
+        "Page {}": "Seite {}",
+        "empty slot": "leerer Platz",
+        "The dialogue history is empty.": "Der Dialogverlauf ist leer."
+      }
+    },
+    {
+      "code": "el",
+      "name": "Greek",
+      "nativeName": "Ελληνικά",
+      "ui": {
+        "Start": "Έναρξη",
+        "Load": "Φόρτωση",
+        "Save": "Αποθήκευση",
+        "Preferences": "Προτιμήσεις",
+        "Prefs": "Προτ.",
+        "About": "Σχετικά",
+        "Back": "Πίσω",
+        "History": "Ιστορικό",
+        "Skip": "Παράλειψη",
+        "Auto": "Αυτόματα",
+        "Q.Save": "Γρήγ. αποθ.",
+        "Q.Load": "Γρήγ. φόρτ.",
+        "Menu": "Μενού",
+        "Main Menu": "Κύριο μενού",
+        "Start again": "Ξεκίνα από την αρχή",
+        "The End": "Τέλος",
+        "Display": "Προβολή",
+        "Fullscreen": "Πλήρης οθόνη",
+        "Language": "Γλώσσα",
+        "Text Speed": "Ταχύτητα κειμένου",
+        "Auto-Forward Time": "Χρόνος αυτόματης προώθησης",
+        "Music Volume": "Ένταση μουσικής",
+        "Sound Volume": "Ένταση ήχων",
+        "Voice Volume": "Ένταση φωνής",
+        "Page {}": "Σελίδα {}",
+        "empty slot": "κενή θέση",
+        "The dialogue history is empty.": "Το ιστορικό διαλόγων είναι κενό."
+      }
+    },
+    {
+      "code": "he",
+      "name": "Hebrew",
+      "nativeName": "עברית",
+      "ui": {
+        "Start": "התחל",
+        "Load": "טען",
+        "Save": "שמור",
+        "Preferences": "העדפות",
+        "Prefs": "העדפות",
+        "About": "אודות",
+        "Back": "חזרה",
+        "History": "היסטוריה",
+        "Skip": "דלג",
+        "Auto": "אוטומטי",
+        "Q.Save": "שמירה מהירה",
+        "Q.Load": "טעינה מהירה",
+        "Menu": "תפריט",
+        "Main Menu": "תפריט ראשי",
+        "Start again": "התחל מחדש",
+        "The End": "הסוף",
+        "Display": "תצוגה",
+        "Fullscreen": "מסך מלא",
+        "Language": "שפה",
+        "Text Speed": "מהירות הטקסט",
+        "Auto-Forward Time": "זמן התקדמות אוטומטית",
+        "Music Volume": "עוצמת המוזיקה",
+        "Sound Volume": "עוצמת הצלילים",
+        "Voice Volume": "עוצמת הקול",
+        "Page {}": "עמוד {}",
+        "empty slot": "משבצת ריקה",
+        "The dialogue history is empty.": "היסטוריית הדיאלוג ריקה."
+      }
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "nativeName": "हिन्दी",
+      "ui": {
+        "Start": "शुरू करें",
+        "Load": "लोड करें",
+        "Save": "सहेजें",
+        "Preferences": "पसंद",
+        "Prefs": "पसंद",
+        "About": "परिचय",
+        "Back": "पीछे",
+        "History": "इतिहास",
+        "Skip": "छोड़ें",
+        "Auto": "स्वचालित",
+        "Q.Save": "त्वरित सहेजें",
+        "Q.Load": "त्वरित लोड",
+        "Menu": "मेनू",
+        "Main Menu": "मुख्य मेनू",
+        "Start again": "फिर से शुरू करें",
+        "The End": "समाप्त",
+        "Display": "प्रदर्शन",
+        "Fullscreen": "पूर्ण स्क्रीन",
+        "Language": "भाषा",
+        "Text Speed": "पाठ की गति",
+        "Auto-Forward Time": "स्वचालित आगे बढ़ने का समय",
+        "Music Volume": "संगीत की आवाज़",
+        "Sound Volume": "ध्वनि की आवाज़",
+        "Voice Volume": "आवाज़ (वॉइस) की आवाज़",
+        "Page {}": "पृष्ठ {}",
+        "empty slot": "खाली स्थान",
+        "The dialogue history is empty.": "संवाद का इतिहास खाली है।"
+      }
+    },
+    {
+      "code": "hu",
+      "name": "Hungarian",
+      "nativeName": "Magyar",
+      "ui": {
+        "Start": "Indítás",
+        "Load": "Betöltés",
+        "Save": "Mentés",
+        "Preferences": "Beállítások",
+        "Prefs": "Beáll.",
+        "About": "Névjegy",
+        "Back": "Vissza",
+        "History": "Előzmények",
+        "Skip": "Átugrás",
+        "Auto": "Auto",
+        "Q.Save": "Gyorsmentés",
+        "Q.Load": "Gyorsbetöltés",
+        "Menu": "Menü",
+        "Main Menu": "Főmenü",
+        "Start again": "Újrakezdés",
+        "The End": "Vége",
+        "Display": "Megjelenítés",
+        "Fullscreen": "Teljes képernyő",
+        "Language": "Nyelv",
+        "Text Speed": "Szövegsebesség",
+        "Auto-Forward Time": "Automatikus továbblépés ideje",
+        "Music Volume": "Zene hangereje",
+        "Sound Volume": "Hangeffektek hangereje",
+        "Voice Volume": "Hang hangereje",
+        "Page {}": "{}. oldal",
+        "empty slot": "üres hely",
+        "The dialogue history is empty.": "A párbeszédek előzménye üres."
+      }
+    },
+    {
+      "code": "id",
+      "name": "Indonesian",
+      "nativeName": "Bahasa Indonesia",
+      "ui": {
+        "Start": "Mulai",
+        "Load": "Muat",
+        "Save": "Simpan",
+        "Preferences": "Preferensi",
+        "Prefs": "Pref.",
+        "About": "Tentang",
+        "Back": "Kembali",
+        "History": "Riwayat",
+        "Skip": "Lewati",
+        "Auto": "Otomatis",
+        "Q.Save": "Simpan cepat",
+        "Q.Load": "Muat cepat",
+        "Menu": "Menu",
+        "Main Menu": "Menu utama",
+        "Start again": "Mulai lagi",
+        "The End": "Tamat",
+        "Display": "Tampilan",
+        "Fullscreen": "Layar penuh",
+        "Language": "Bahasa",
+        "Text Speed": "Kecepatan teks",
+        "Auto-Forward Time": "Waktu maju otomatis",
+        "Music Volume": "Volume musik",
+        "Sound Volume": "Volume suara",
+        "Voice Volume": "Volume suara pengisi",
+        "Page {}": "Halaman {}",
+        "empty slot": "slot kosong",
+        "The dialogue history is empty.": "Riwayat dialog kosong."
+      }
+    },
+    {
+      "code": "it",
+      "name": "Italian",
+      "nativeName": "Italiano",
+      "ui": {
+        "Start": "Inizia",
+        "Load": "Carica",
+        "Save": "Salva",
+        "Preferences": "Preferenze",
+        "Prefs": "Pref.",
+        "About": "Informazioni",
+        "Back": "Indietro",
+        "History": "Cronologia",
+        "Skip": "Salta",
+        "Auto": "Auto",
+        "Q.Save": "Salv. rapido",
+        "Q.Load": "Car. rapido",
+        "Menu": "Menu",
+        "Main Menu": "Menu principale",
+        "Start again": "Ricomincia",
+        "The End": "Fine",
+        "Display": "Schermo",
+        "Fullscreen": "Schermo intero",
+        "Language": "Lingua",
+        "Text Speed": "Velocità del testo",
+        "Auto-Forward Time": "Tempo di avanzamento automatico",
+        "Music Volume": "Volume della musica",
+        "Sound Volume": "Volume dei suoni",
+        "Voice Volume": "Volume delle voci",
+        "Page {}": "Pagina {}",
+        "empty slot": "slot vuoto",
+        "The dialogue history is empty.": "La cronologia dei dialoghi è vuota."
+      }
+    },
+    {
+      "code": "ja",
+      "name": "Japanese",
+      "nativeName": "日本語",
+      "ui": {
+        "Start": "スタート",
+        "Load": "ロード",
+        "Save": "セーブ",
+        "Preferences": "設定",
+        "Prefs": "設定",
+        "About": "このゲームについて",
+        "Back": "戻る",
+        "History": "履歴",
+        "Skip": "スキップ",
+        "Auto": "オート",
+        "Q.Save": "クイックセーブ",
+        "Q.Load": "クイックロード",
+        "Menu": "メニュー",
+        "Main Menu": "メインメニュー",
+        "Start again": "最初からやり直す",
+        "The End": "おわり",
+        "Display": "表示",
+        "Fullscreen": "フルスクリーン",
+        "Language": "言語",
+        "Text Speed": "テキスト速度",
+        "Auto-Forward Time": "オート待機時間",
+        "Music Volume": "音楽の音量",
+        "Sound Volume": "効果音の音量",
+        "Voice Volume": "ボイスの音量",
+        "Page {}": "ページ {}",
+        "empty slot": "空きスロット",
+        "The dialogue history is empty.": "会話の履歴は空です。"
+      }
+    },
+    {
+      "code": "ko",
+      "name": "Korean",
+      "nativeName": "한국어",
+      "ui": {
+        "Start": "시작",
+        "Load": "불러오기",
+        "Save": "저장",
+        "Preferences": "환경설정",
+        "Prefs": "설정",
+        "About": "정보",
+        "Back": "뒤로",
+        "History": "기록",
+        "Skip": "건너뛰기",
+        "Auto": "자동",
+        "Q.Save": "빠른 저장",
+        "Q.Load": "빠른 불러오기",
+        "Menu": "메뉴",
+        "Main Menu": "메인 메뉴",
+        "Start again": "처음부터 다시 시작",
+        "The End": "끝",
+        "Display": "화면",
+        "Fullscreen": "전체 화면",
+        "Language": "언어",
+        "Text Speed": "텍스트 속도",
+        "Auto-Forward Time": "자동 진행 시간",
+        "Music Volume": "음악 음량",
+        "Sound Volume": "효과음 음량",
+        "Voice Volume": "음성 음량",
+        "Page {}": "{}페이지",
+        "empty slot": "빈 슬롯",
+        "The dialogue history is empty.": "대화 기록이 비어 있습니다."
+      }
+    },
+    {
+      "code": "lv",
+      "name": "Latvian",
+      "nativeName": "Latviešu",
+      "ui": {
+        "Start": "Sākt",
+        "Load": "Ielādēt",
+        "Save": "Saglabāt",
+        "Preferences": "Iestatījumi",
+        "Prefs": "Iest.",
+        "About": "Par spēli",
+        "Back": "Atpakaļ",
+        "History": "Vēsture",
+        "Skip": "Izlaist",
+        "Auto": "Auto",
+        "Q.Save": "Ātrā saglab.",
+        "Q.Load": "Ātrā ielāde",
+        "Menu": "Izvēlne",
+        "Main Menu": "Galvenā izvēlne",
+        "Start again": "Sākt no jauna",
+        "The End": "Beigas",
+        "Display": "Attēlojums",
+        "Fullscreen": "Pilnekrāna režīms",
+        "Language": "Valoda",
+        "Text Speed": "Teksta ātrums",
+        "Auto-Forward Time": "Automātiskās virzīšanas laiks",
+        "Music Volume": "Mūzikas skaļums",
+        "Sound Volume": "Skaņu skaļums",
+        "Voice Volume": "Balss skaļums",
+        "Page {}": "{}. lappuse",
+        "empty slot": "tukša vieta",
+        "The dialogue history is empty.": "Dialogu vēsture ir tukša."
+      }
+    },
+    {
+      "code": "lt",
+      "name": "Lithuanian",
+      "nativeName": "Lietuvių",
+      "ui": {
+        "Start": "Pradėti",
+        "Load": "Įkelti",
+        "Save": "Išsaugoti",
+        "Preferences": "Nustatymai",
+        "Prefs": "Nust.",
+        "About": "Apie",
+        "Back": "Atgal",
+        "History": "Istorija",
+        "Skip": "Praleisti",
+        "Auto": "Auto",
+        "Q.Save": "Greitas išsaug.",
+        "Q.Load": "Greitas įkėl.",
+        "Menu": "Meniu",
+        "Main Menu": "Pagrindinis meniu",
+        "Start again": "Pradėti iš naujo",
+        "The End": "Pabaiga",
+        "Display": "Vaizdas",
+        "Fullscreen": "Visas ekranas",
+        "Language": "Kalba",
+        "Text Speed": "Teksto greitis",
+        "Auto-Forward Time": "Automatinio tęsimo laikas",
+        "Music Volume": "Muzikos garsas",
+        "Sound Volume": "Garsų garsas",
+        "Voice Volume": "Balso garsas",
+        "Page {}": "{} puslapis",
+        "empty slot": "tuščia vieta",
+        "The dialogue history is empty.": "Dialogų istorija tuščia."
+      }
+    },
+    {
+      "code": "no",
+      "name": "Norwegian",
+      "nativeName": "Norsk",
+      "ui": {
+        "Start": "Start",
+        "Load": "Last inn",
+        "Save": "Lagre",
+        "Preferences": "Innstillinger",
+        "Prefs": "Innst.",
+        "About": "Om",
+        "Back": "Tilbake",
+        "History": "Historikk",
+        "Skip": "Hopp over",
+        "Auto": "Auto",
+        "Q.Save": "Hurtiglagre",
+        "Q.Load": "Hurtiglast",
+        "Menu": "Meny",
+        "Main Menu": "Hovedmeny",
+        "Start again": "Start på nytt",
+        "The End": "Slutt",
+        "Display": "Visning",
+        "Fullscreen": "Fullskjerm",
+        "Language": "Språk",
+        "Text Speed": "Tekstfart",
+        "Auto-Forward Time": "Tid for automatisk videre",
+        "Music Volume": "Musikkvolum",
+        "Sound Volume": "Lydvolum",
+        "Voice Volume": "Stemmevolum",
+        "Page {}": "Side {}",
+        "empty slot": "tom plass",
+        "The dialogue history is empty.": "Dialoghistorikken er tom."
+      }
+    },
+    {
+      "code": "fa",
+      "name": "Persian",
+      "nativeName": "فارسی",
+      "ui": {
+        "Start": "شروع",
+        "Load": "بارگذاری",
+        "Save": "ذخیره",
+        "Preferences": "تنظیمات",
+        "Prefs": "تنظیمات",
+        "About": "درباره",
+        "Back": "بازگشت",
+        "History": "تاریخچه",
+        "Skip": "رد کردن",
+        "Auto": "خودکار",
+        "Q.Save": "ذخیره سریع",
+        "Q.Load": "بارگذاری سریع",
+        "Menu": "منو",
+        "Main Menu": "منوی اصلی",
+        "Start again": "شروع دوباره",
+        "The End": "پایان",
+        "Display": "نمایش",
+        "Fullscreen": "تمام صفحه",
+        "Language": "زبان",
+        "Text Speed": "سرعت متن",
+        "Auto-Forward Time": "زمان پیشروی خودکار",
+        "Music Volume": "بلندی موسیقی",
+        "Sound Volume": "بلندی صداها",
+        "Voice Volume": "بلندی گفتار",
+        "Page {}": "صفحه {}",
+        "empty slot": "جایگاه خالی",
+        "The dialogue history is empty.": "تاریخچه گفتگو خالی است."
+      }
+    },
+    {
+      "code": "pl",
+      "name": "Polish",
+      "nativeName": "Polski",
+      "ui": {
+        "Start": "Start",
+        "Load": "Wczytaj",
+        "Save": "Zapisz",
+        "Preferences": "Ustawienia",
+        "Prefs": "Ustaw.",
+        "About": "O grze",
+        "Back": "Wstecz",
+        "History": "Historia",
+        "Skip": "Pomiń",
+        "Auto": "Auto",
+        "Q.Save": "Szybki zapis",
+        "Q.Load": "Szybki odczyt",
+        "Menu": "Menu",
+        "Main Menu": "Menu główne",
+        "Start again": "Zacznij od nowa",
+        "The End": "Koniec",
+        "Display": "Wyświetlanie",
+        "Fullscreen": "Pełny ekran",
+        "Language": "Język",
+        "Text Speed": "Szybkość tekstu",
+        "Auto-Forward Time": "Czas automatycznego przechodzenia",
+        "Music Volume": "Głośność muzyki",
+        "Sound Volume": "Głośność dźwięków",
+        "Voice Volume": "Głośność głosów",
+        "Page {}": "Strona {}",
+        "empty slot": "puste miejsce",
+        "The dialogue history is empty.": "Historia dialogów jest pusta."
+      }
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "nativeName": "Português",
+      "ui": {
+        "Start": "Iniciar",
+        "Load": "Carregar",
+        "Save": "Salvar",
+        "Preferences": "Preferências",
+        "Prefs": "Prefs.",
+        "About": "Sobre",
+        "Back": "Voltar",
+        "History": "Histórico",
+        "Skip": "Pular",
+        "Auto": "Auto",
+        "Q.Save": "Salv. rápido",
+        "Q.Load": "Carr. rápido",
+        "Menu": "Menu",
+        "Main Menu": "Menu principal",
+        "Start again": "Recomeçar",
+        "The End": "Fim",
+        "Display": "Exibição",
+        "Fullscreen": "Tela cheia",
+        "Language": "Idioma",
+        "Text Speed": "Velocidade do texto",
+        "Auto-Forward Time": "Tempo de avanço automático",
+        "Music Volume": "Volume da música",
+        "Sound Volume": "Volume dos sons",
+        "Voice Volume": "Volume das vozes",
+        "Page {}": "Página {}",
+        "empty slot": "espaço vazio",
+        "The dialogue history is empty.": "O histórico de diálogos está vazio."
+      }
+    },
+    {
+      "code": "ro",
+      "name": "Romanian",
+      "nativeName": "Română",
+      "ui": {
+        "Start": "Start",
+        "Load": "Încarcă",
+        "Save": "Salvează",
+        "Preferences": "Preferințe",
+        "Prefs": "Pref.",
+        "About": "Despre",
+        "Back": "Înapoi",
+        "History": "Istoric",
+        "Skip": "Sari peste",
+        "Auto": "Auto",
+        "Q.Save": "Salv. rapidă",
+        "Q.Load": "Înc. rapidă",
+        "Menu": "Meniu",
+        "Main Menu": "Meniu principal",
+        "Start again": "Începe din nou",
+        "The End": "Sfârșit",
+        "Display": "Afișare",
+        "Fullscreen": "Ecran complet",
+        "Language": "Limbă",
+        "Text Speed": "Viteza textului",
+        "Auto-Forward Time": "Timp de avans automat",
+        "Music Volume": "Volumul muzicii",
+        "Sound Volume": "Volumul sunetelor",
+        "Voice Volume": "Volumul vocii",
+        "Page {}": "Pagina {}",
+        "empty slot": "loc gol",
+        "The dialogue history is empty.": "Istoricul dialogurilor este gol."
+      }
+    },
+    {
+      "code": "ru",
+      "name": "Russian",
+      "nativeName": "Русский",
+      "ui": {
+        "Start": "Начать",
+        "Load": "Загрузить",
+        "Save": "Сохранить",
+        "Preferences": "Настройки",
+        "Prefs": "Настр.",
+        "About": "Об игре",
+        "Back": "Назад",
+        "History": "История",
+        "Skip": "Пропуск",
+        "Auto": "Авто",
+        "Q.Save": "Б.сохр.",
+        "Q.Load": "Б.загр.",
+        "Menu": "Меню",
+        "Main Menu": "Главное меню",
+        "Start again": "Начать заново",
+        "The End": "Конец",
+        "Display": "Экран",
+        "Fullscreen": "Во весь экран",
+        "Language": "Язык",
+        "Text Speed": "Скорость текста",
+        "Auto-Forward Time": "Время автопродолжения",
+        "Music Volume": "Громкость музыки",
+        "Sound Volume": "Громкость звуков",
+        "Voice Volume": "Громкость голоса",
+        "Page {}": "Страница {}",
+        "empty slot": "пустая ячейка",
+        "The dialogue history is empty.": "История диалогов пуста."
+      }
+    },
+    {
+      "code": "sr",
+      "name": "Serbian",
+      "nativeName": "Српски",
+      "ui": {
+        "Start": "Започни",
+        "Load": "Учитај",
+        "Save": "Сачувај",
+        "Preferences": "Подешавања",
+        "Prefs": "Подеш.",
+        "About": "О игри",
+        "Back": "Назад",
+        "History": "Историја",
+        "Skip": "Прескочи",
+        "Auto": "Аутоматски",
+        "Q.Save": "Брзо чување",
+        "Q.Load": "Брзо учитавање",
+        "Menu": "Мени",
+        "Main Menu": "Главни мени",
+        "Start again": "Почни изнова",
+        "The End": "Крај",
+        "Display": "Приказ",
+        "Fullscreen": "Цео екран",
+        "Language": "Језик",
+        "Text Speed": "Брзина текста",
+        "Auto-Forward Time": "Време аутоматског преласка",
+        "Music Volume": "Јачина музике",
+        "Sound Volume": "Јачина звукова",
+        "Voice Volume": "Јачина гласа",
+        "Page {}": "Страна {}",
+        "empty slot": "празно место",
+        "The dialogue history is empty.": "Историја дијалога је празна."
+      }
+    },
+    {
+      "code": "sk",
+      "name": "Slovak",
+      "nativeName": "Slovenčina",
+      "ui": {
+        "Start": "Štart",
+        "Load": "Načítať",
+        "Save": "Uložiť",
+        "Preferences": "Nastavenia",
+        "Prefs": "Nast.",
+        "About": "O hre",
+        "Back": "Späť",
+        "History": "História",
+        "Skip": "Preskočiť",
+        "Auto": "Auto",
+        "Q.Save": "Rýchle uloženie",
+        "Q.Load": "Rýchle načítanie",
+        "Menu": "Ponuka",
+        "Main Menu": "Hlavná ponuka",
+        "Start again": "Začať odznova",
+        "The End": "Koniec",
+        "Display": "Zobrazenie",
+        "Fullscreen": "Celá obrazovka",
+        "Language": "Jazyk",
+        "Text Speed": "Rýchlosť textu",
+        "Auto-Forward Time": "Čas automatického posunu",
+        "Music Volume": "Hlasitosť hudby",
+        "Sound Volume": "Hlasitosť zvukov",
+        "Voice Volume": "Hlasitosť hlasov",
+        "Page {}": "Strana {}",
+        "empty slot": "prázdne miesto",
+        "The dialogue history is empty.": "História dialógov je prázdna."
+      }
+    },
+    {
+      "code": "sl",
+      "name": "Slovenian",
+      "nativeName": "Slovenščina",
+      "ui": {
+        "Start": "Začni",
+        "Load": "Naloži",
+        "Save": "Shrani",
+        "Preferences": "Nastavitve",
+        "Prefs": "Nast.",
+        "About": "O igri",
+        "Back": "Nazaj",
+        "History": "Zgodovina",
+        "Skip": "Preskoči",
+        "Auto": "Samodejno",
+        "Q.Save": "Hitro shrani",
+        "Q.Load": "Hitro naloži",
+        "Menu": "Meni",
+        "Main Menu": "Glavni meni",
+        "Start again": "Začni znova",
+        "The End": "Konec",
+        "Display": "Prikaz",
+        "Fullscreen": "Celozaslonski način",
+        "Language": "Jezik",
+        "Text Speed": "Hitrost besedila",
+        "Auto-Forward Time": "Čas samodejnega nadaljevanja",
+        "Music Volume": "Glasnost glasbe",
+        "Sound Volume": "Glasnost zvokov",
+        "Voice Volume": "Glasnost glasov",
+        "Page {}": "Stran {}",
+        "empty slot": "prazno mesto",
+        "The dialogue history is empty.": "Zgodovina dialogov je prazna."
+      }
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "nativeName": "Español",
+      "ui": {
+        "Start": "Comenzar",
+        "Load": "Cargar",
+        "Save": "Guardar",
+        "Preferences": "Preferencias",
+        "Prefs": "Prefs.",
+        "About": "Acerca de",
+        "Back": "Atrás",
+        "History": "Historial",
+        "Skip": "Saltar",
+        "Auto": "Auto",
+        "Q.Save": "Guard. rápido",
+        "Q.Load": "Carg. rápido",
+        "Menu": "Menú",
+        "Main Menu": "Menú principal",
+        "Start again": "Empezar de nuevo",
+        "The End": "Fin",
+        "Display": "Pantalla",
+        "Fullscreen": "Pantalla completa",
+        "Language": "Idioma",
+        "Text Speed": "Velocidad del texto",
+        "Auto-Forward Time": "Tiempo de avance automático",
+        "Music Volume": "Volumen de la música",
+        "Sound Volume": "Volumen de los sonidos",
+        "Voice Volume": "Volumen de las voces",
+        "Page {}": "Página {}",
+        "empty slot": "espacio vacío",
+        "The dialogue history is empty.": "El historial de diálogos está vacío."
+      }
+    },
+    {
+      "code": "sv",
+      "name": "Swedish",
+      "nativeName": "Svenska",
+      "ui": {
+        "Start": "Starta",
+        "Load": "Ladda",
+        "Save": "Spara",
+        "Preferences": "Inställningar",
+        "Prefs": "Inst.",
+        "About": "Om",
+        "Back": "Tillbaka",
+        "History": "Historik",
+        "Skip": "Hoppa över",
+        "Auto": "Auto",
+        "Q.Save": "Snabbspara",
+        "Q.Load": "Snabbladda",
+        "Menu": "Meny",
+        "Main Menu": "Huvudmeny",
+        "Start again": "Börja om",
+        "The End": "Slut",
+        "Display": "Visning",
+        "Fullscreen": "Helskärm",
+        "Language": "Språk",
+        "Text Speed": "Texthastighet",
+        "Auto-Forward Time": "Tid för automatisk framåt",
+        "Music Volume": "Musikvolym",
+        "Sound Volume": "Ljudvolym",
+        "Voice Volume": "Röstvolym",
+        "Page {}": "Sida {}",
+        "empty slot": "tom plats",
+        "The dialogue history is empty.": "Dialoghistoriken är tom."
+      }
+    },
+    {
+      "code": "tr",
+      "name": "Turkish",
+      "nativeName": "Türkçe",
+      "ui": {
+        "Start": "Başla",
+        "Load": "Yükle",
+        "Save": "Kaydet",
+        "Preferences": "Tercihler",
+        "Prefs": "Terc.",
+        "About": "Hakkında",
+        "Back": "Geri",
+        "History": "Geçmiş",
+        "Skip": "Atla",
+        "Auto": "Otomatik",
+        "Q.Save": "Hızlı kayıt",
+        "Q.Load": "Hızlı yükle",
+        "Menu": "Menü",
+        "Main Menu": "Ana menü",
+        "Start again": "Baştan başla",
+        "The End": "Son",
+        "Display": "Görüntü",
+        "Fullscreen": "Tam ekran",
+        "Language": "Dil",
+        "Text Speed": "Metin hızı",
+        "Auto-Forward Time": "Otomatik ilerleme süresi",
+        "Music Volume": "Müzik sesi",
+        "Sound Volume": "Ses efektleri sesi",
+        "Voice Volume": "Konuşma sesi",
+        "Page {}": "Sayfa {}",
+        "empty slot": "boş yuva",
+        "The dialogue history is empty.": "Diyalog geçmişi boş."
+      }
+    },
+    {
+      "code": "uk",
+      "name": "Ukrainian",
+      "nativeName": "Українська",
+      "ui": {
+        "Start": "Почати",
+        "Load": "Завантажити",
+        "Save": "Зберегти",
+        "Preferences": "Налаштування",
+        "Prefs": "Налашт.",
+        "About": "Про гру",
+        "Back": "Назад",
+        "History": "Історія",
+        "Skip": "Пропуск",
+        "Auto": "Авто",
+        "Q.Save": "Ш.збер.",
+        "Q.Load": "Ш.завант.",
+        "Menu": "Меню",
+        "Main Menu": "Головне меню",
+        "Start again": "Почати спочатку",
+        "The End": "Кінець",
+        "Display": "Екран",
+        "Fullscreen": "На весь екран",
+        "Language": "Мова",
+        "Text Speed": "Швидкість тексту",
+        "Auto-Forward Time": "Час автопродовження",
+        "Music Volume": "Гучність музики",
+        "Sound Volume": "Гучність звуків",
+        "Voice Volume": "Гучність голосу",
+        "Page {}": "Сторінка {}",
+        "empty slot": "порожня комірка",
+        "The dialogue history is empty.": "Історія діалогів порожня."
+      }
+    },
+    {
+      "code": "vi",
+      "name": "Vietnamese",
+      "nativeName": "Tiếng Việt",
+      "ui": {
+        "Start": "Bắt đầu",
+        "Load": "Tải",
+        "Save": "Lưu",
+        "Preferences": "Tùy chọn",
+        "Prefs": "Tùy chọn",
+        "About": "Giới thiệu",
+        "Back": "Quay lại",
+        "History": "Lịch sử",
+        "Skip": "Bỏ qua",
+        "Auto": "Tự động",
+        "Q.Save": "Lưu nhanh",
+        "Q.Load": "Tải nhanh",
+        "Menu": "Menu",
+        "Main Menu": "Menu chính",
+        "Start again": "Bắt đầu lại",
+        "The End": "Kết thúc",
+        "Display": "Hiển thị",
+        "Fullscreen": "Toàn màn hình",
+        "Language": "Ngôn ngữ",
+        "Text Speed": "Tốc độ chữ",
+        "Auto-Forward Time": "Thời gian tự động chuyển",
+        "Music Volume": "Âm lượng nhạc",
+        "Sound Volume": "Âm lượng âm thanh",
+        "Voice Volume": "Âm lượng giọng nói",
+        "Page {}": "Trang {}",
+        "empty slot": "ô trống",
+        "The dialogue history is empty.": "Lịch sử hội thoại đang trống."
+      }
+    }
+  ]
+};
