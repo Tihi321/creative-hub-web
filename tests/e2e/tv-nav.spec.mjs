@@ -1,6 +1,6 @@
 // A9 (keyboard-only TV navigation at 1920x1080) and A14 (UI language toggle).
 import { test, expect } from '@playwright/test';
-import { SITE, loadCatalog, activeInfo, railsOnPage, pressUntil, pressTvBack } from './helpers.mjs';
+import { SITE, loadCatalog, activeInfo, railsOnPage, pressUntil, pressTvBack, siteReady } from './helpers.mjs';
 
 const { catalog } = loadCatalog();
 // a work that has a play, preferring the featured one
@@ -58,12 +58,14 @@ test('Enter opens the work, Escape returns home on the same tile, Play opens the
 
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(new RegExp(`/item/${playWork}/`));
+  await siteReady(page);
   await page.keyboard.press('Escape');
   await expect(page).not.toHaveURL(/\/item\//);
   await expect.poll(async () => (await activeInfo(page))?.work, { message: 'same tile focused after Escape' }).toBe(playWork);
 
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(new RegExp(`/item/${playWork}/`));
+  await siteReady(page);
   await pressUntil(page, 'ArrowDown', (i) => i.test === 'play', 12, 'play action').catch(async () => {
     await pressUntil(page, 'ArrowRight', (i) => i.test === 'play', 6, 'play action');
   });

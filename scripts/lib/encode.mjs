@@ -29,6 +29,7 @@ export const RECIPES = {
   png: 'png@1',
   jpeg: 'jpeg@1:q82',
   js: 'js@1',
+  playCss: 'play-css-urls@1',
   cover: 'cover-webp@1:q82',
   coverSvg: 'cover-svg@1',
 };
@@ -69,9 +70,36 @@ export function isMarkup(rel) {
   return /\.(x?html)$/i.test(rel);
 }
 
+export function isPlayCss(rel) {
+  return rel.startsWith('play/') && /\.css$/i.test(rel);
+}
+
+// VN builds put `url(fonts/X.ttf)` in `fonts/fonts.css`; a browser resolves it against the CSS file, so it
+// asks for `fonts/fonts/X.ttf`. In the copy, a url that does not resolve next to the CSS file but does once a
+// leading `fonts/` is dropped is rewritten. `exists(relPath)` tests a path relative to the CSS file's folder.
+export function fixCssFontUrls(css, exists) {
+  let changed = 0;
+  const out = css.replace(/url\(\s*(['"]?)([^'")]+)\1\s*\)/gi, (whole, q, u) => {
+    const t = u.trim();
+    if (/^(data:|[a-z][a-z0-9+.-]*:|\/|#)/i.test(t)) return whole;
+    const p = t.split(/[?#]/)[0];
+    const tail = t.slice(p.length);
+    if (!/^fonts\//i.test(p)) return whole;
+    let dec = p;
+    try { dec = decodeURI(p); } catch { /* keep raw */ }
+    if (exists(dec)) return whole;
+    const stripped = dec.replace(/^fonts\//i, '');
+    if (!exists(stripped)) return whole;
+    changed++;
+    return `url(${q}${p.replace(/^fonts\//i, '')}${tail}${q})`;
+  });
+  return { css: out, changed };
+}
+
 // Recipe string stored in the manifest. A bridge injection is part of it because the output differs.
 export function recipeFor(rel, bridge) {
   if (bridge && isMarkup(rel)) return `inject-bridge@1:${bridge.player}:${bridge.workId}`;
+  if (isPlayCss(rel)) return RECIPES.playCss;
   return RECIPES[kindOf(rel)];
 }
 
@@ -216,6 +244,13 @@ export async function processFile({ src, out, rel, bridge, srcHash, srcSize }) {
     if (bridge && isMarkup(rel)) {
       const text = fs.readFileSync(src, 'utf8');
       fs.writeFileSync(tmp, injectBridge(text, bridgeTag(rel, bridge), rel));
+      return await hashOut('encoded');
+    }
+    if (isPlayCss(rel)) {
+      const dir = path.dirname(src);
+      const fixed = fixCssFontUrls(fs.readFileSync(src, 'utf8'), (p) => fs.existsSync(path.join(dir, p)));
+      if (!fixed.changed) return await copy();
+      fs.writeFileSync(tmp, fixed.css);
       return await hashOut('encoded');
     }
     const kind = kindOf(rel);

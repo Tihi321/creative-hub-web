@@ -182,10 +182,10 @@ for (const file of allFiles.filter((f) => ext(f) === '.css')) {
     A.checked++;
     const r = checkUrl(file, m[2], { wantDirIndex: false });
     if (!r || !r.error) continue;
-    // inside a play, CSS url() is also accepted relative to the play root (plan T5); warn when only that works
+    // inside a play, a url() that resolves only from the play root is an error (publish rewrites such urls in the copy)
     const play = /^play\/[^/]+\//.exec(file);
     const alt = play && checkUrl(`${play[0]}index.html`, m[2], { wantDirIndex: false });
-    if (alt && !alt.error) A.warnings.push(`${file}: url(${m[2]}) resolves only from the play root; a browser requests it relative to the CSS file and gets a 404`);
+    if (alt && !alt.error) err('assets', `${file}: url(${m[2]}) resolves only from the play root; a browser requests it relative to the CSS file and gets a 404`);
     else err('assets', `${file}: url(${m[2]}) : ${r.error}`);
   }
 }

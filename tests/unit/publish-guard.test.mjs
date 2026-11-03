@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import { assertWritable, assertSourceOutsideRepo, upPrefix, bridgeTag } from '../../scripts/lib/encode.mjs';
+import { assertWritable, assertSourceOutsideRepo, upPrefix, bridgeTag, fixCssFontUrls } from '../../scripts/lib/encode.mjs';
 
 const publicDir = path.resolve('/repo/public');
 const manifestPath = path.resolve('/repo/content/publish-manifest.json');
@@ -27,4 +27,12 @@ test('bridge prefix follows the file depth under the site root', () => {
     bridgeTag('play/x/index.html', { player: 'vn', workId: 'w' }),
     '<script src="../../assets/hub-bridge.js" data-player="vn" data-back="../../item/w/"></script>',
   );
+});
+
+test('play CSS: a font url that only resolves without its leading fonts/ is rewritten, others stay', () => {
+  const exists = (p) => p === 'X.ttf' || p === 'fonts/Y.ttf';
+  const css = 'a{src:url("fonts/X.ttf")} b{src:url(fonts/Y.ttf)} c{src:url(data:font/ttf;base64,AA)} d{src:url(fonts/Z.ttf)}';
+  const r = fixCssFontUrls(css, exists);
+  assert.equal(r.changed, 1);
+  assert.equal(r.css, 'a{src:url("X.ttf")} b{src:url(fonts/Y.ttf)} c{src:url(data:font/ttf;base64,AA)} d{src:url(fonts/Z.ttf)}');
 });

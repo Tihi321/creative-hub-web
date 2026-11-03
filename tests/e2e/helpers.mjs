@@ -116,6 +116,11 @@ export async function pressUntil(page, key, pred, max = 12, what = 'target') {
   throw new Error(`pressUntil: ${what} not focused after ${max} x ${key}`);
 }
 
+/** Wait until site.js has bound its key handlers (main.js sets data-ready on <html>). */
+export function siteReady(page) {
+  return page.waitForSelector('html[data-ready]', { state: 'attached' });
+}
+
 /** Dispatch a TV remote Back key (webOS keyCode 461) on the page. */
 export function pressTvBack(page) {
   return page.evaluate(() => {

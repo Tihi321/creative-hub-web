@@ -1764,9 +1764,9 @@
       "srcSize": 71188
     },
     "play/circuit-breaker-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:circuit-breaker-2/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793102622200.7495,
@@ -2361,7 +2361,7 @@
     "play/circuit-breaker-vn/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:circuit-breaker-2/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793102633621.053,
@@ -2480,7 +2480,7 @@
     "play/deutsch-roleplay-a1-game/player.css": {
       "outHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
       "outSize": 1198182,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "edu:deutsch-roleplay-a1/build/player.css",
       "srcHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
       "srcMtimeMs": 1793618079487.444,
@@ -2581,7 +2581,7 @@
     "play/deutsch-roleplay-b2-game/player.css": {
       "outHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
       "outSize": 1198182,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "edu:deutsch-roleplay-b2/build/player.css",
       "srcHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
       "srcMtimeMs": 1793618079487.444,
@@ -3372,9 +3372,9 @@
       "srcSize": 71188
     },
     "play/echoes-in-the-deep-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:echoes-in-the-deep-2/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793111894247.7034,
@@ -3807,7 +3807,7 @@
     "play/echoes-in-the-deep-vn/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:echoes-in-the-deep-2/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793111900768.2422,
@@ -4160,7 +4160,7 @@
     "play/suncev-sustav-game/player.css": {
       "outHash": "86460fcb63a245c0820dde6e6c43ccd87ab82fba522474ff1255c7ffe6b3a0d9",
       "outSize": 1197912,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "edu:suncev-sustav/build/player.css",
       "srcHash": "86460fcb63a245c0820dde6e6c43ccd87ab82fba522474ff1255c7ffe6b3a0d9",
       "srcMtimeMs": 1793552004865.8984,
@@ -4204,9 +4204,9 @@
       "srcSize": 78928
     },
     "play/the-bell-and-the-bicycle-picture-book/fonts/fonts.css": {
-      "outHash": "18ce8b26d70ed22fa2e47ebbe86929e7ca8a2873b171901805e051562db52fd3",
-      "outSize": 308,
-      "recipe": "copy@1",
+      "outHash": "f5f27ee6dbd1cb6241ebc71059a67f87fa3d81b2e937ff4399aeffc0f37c3585",
+      "outSize": 296,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-bell-and-the-bicycle/game/game/fonts/fonts.css",
       "srcHash": "18ce8b26d70ed22fa2e47ebbe86929e7ca8a2873b171901805e051562db52fd3",
       "srcMtimeMs": 1793222901360.664,
@@ -4423,7 +4423,7 @@
     "play/the-bell-and-the-bicycle-picture-book/player.css": {
       "outHash": "0894294e9129541305f3fb3d2a85a08b2559b1d89f3d9c9c3137330aea467af3",
       "outSize": 22522,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-bell-and-the-bicycle/game/game/player.css",
       "srcHash": "0894294e9129541305f3fb3d2a85a08b2559b1d89f3d9c9c3137330aea467af3",
       "srcMtimeMs": 1793222904177.1934,
@@ -5115,9 +5115,9 @@
       "srcSize": 71188
     },
     "play/the-clockless-god-choices/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-clockless-god-2/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793651379410.4368,
@@ -6090,7 +6090,7 @@
     "play/the-clockless-god-choices/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-clockless-god-2/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793651395550.675,
@@ -6170,9 +6170,9 @@
       "srcSize": 71188
     },
     "play/the-clockless-god-linear/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-clockless-god-3/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1792923987504.5923,
@@ -7145,7 +7145,7 @@
     "play/the-clockless-god-linear/player.css": {
       "outHash": "c8b2ca92b2a3a5aa258ce90961a84b6ead910149f7d6e7ab347d021d95b82eb6",
       "outSize": 14303,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-clockless-god-3/game/game/player.css",
       "srcHash": "c8b2ca92b2a3a5aa258ce90961a84b6ead910149f7d6e7ab347d021d95b82eb6",
       "srcMtimeMs": 1792924003902.1245,
@@ -7468,9 +7468,9 @@
       "srcSize": 71188
     },
     "play/the-local-patch-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-local-patch-2/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793019439948.2776,
@@ -8029,7 +8029,7 @@
     "play/the-local-patch-vn/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-local-patch-2/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793019448262.0437,
@@ -8802,9 +8802,9 @@
       "srcSize": 71188
     },
     "play/the-salt-line-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-salt-line-2/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793120726505.531,
@@ -9372,7 +9372,7 @@
     "play/the-salt-line-vn/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-salt-line-2/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793120737833.2346,
@@ -10181,9 +10181,9 @@
       "srcSize": 71188
     },
     "play/the-silent-signal-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-silent-signal-2/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793053278858.7478,
@@ -10706,7 +10706,7 @@
     "play/the-silent-signal-vn/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-silent-signal-2/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793053287184.8955,
@@ -11380,9 +11380,9 @@
       "srcSize": 71188
     },
     "play/the-silent-summit-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-silent-summit-2/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793046898477.1482,
@@ -11806,7 +11806,7 @@
     "play/the-silent-summit-vn/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-silent-summit-2/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793046906868.7734,
@@ -11850,9 +11850,9 @@
       "srcSize": 78928
     },
     "play/the-snail-and-the-salad-picture-book/fonts/fonts.css": {
-      "outHash": "18ce8b26d70ed22fa2e47ebbe86929e7ca8a2873b171901805e051562db52fd3",
-      "outSize": 308,
-      "recipe": "copy@1",
+      "outHash": "f5f27ee6dbd1cb6241ebc71059a67f87fa3d81b2e937ff4399aeffc0f37c3585",
+      "outSize": 296,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-snail-and-the-salad/game/game/fonts/fonts.css",
       "srcHash": "18ce8b26d70ed22fa2e47ebbe86929e7ca8a2873b171901805e051562db52fd3",
       "srcMtimeMs": 1792959074182.8992,
@@ -12069,7 +12069,7 @@
     "play/the-snail-and-the-salad-picture-book/player.css": {
       "outHash": "0894294e9129541305f3fb3d2a85a08b2559b1d89f3d9c9c3137330aea467af3",
       "outSize": 22522,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-snail-and-the-salad/game/game/player.css",
       "srcHash": "0894294e9129541305f3fb3d2a85a08b2559b1d89f3d9c9c3137330aea467af3",
       "srcMtimeMs": 1792959075999.558,
@@ -12779,9 +12779,9 @@
       "srcSize": 51892
     },
     "play/the-soother-that-fell-into-dragon-land-choices/fonts/fonts.css": {
-      "outHash": "a9a61f03cafa497eb61566c5e00c216bb3f4bcb0067a6390d7371841f63f75b3",
-      "outSize": 163,
-      "recipe": "copy@1",
+      "outHash": "90a758d7a28004d82fc3c7ebc146995265309a55561dfb0e18e436161ccc1579",
+      "outSize": 157,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-soother-that-fell-into-dragon-land/game/game/fonts/fonts.css",
       "srcHash": "a9a61f03cafa497eb61566c5e00c216bb3f4bcb0067a6390d7371841f63f75b3",
       "srcMtimeMs": 1792937610980.072,
@@ -13160,7 +13160,7 @@
     "play/the-soother-that-fell-into-dragon-land-choices/player.css": {
       "outHash": "df0ba9dee0716a5970f48996796ab2ec7fcfabd313cdee69b8a094cd9f247803",
       "outSize": 15052,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-soother-that-fell-into-dragon-land/game/game/player.css",
       "srcHash": "df0ba9dee0716a5970f48996796ab2ec7fcfabd313cdee69b8a094cd9f247803",
       "srcMtimeMs": 1792937612580.5142,
@@ -13312,9 +13312,9 @@
       "srcSize": 71188
     },
     "play/the-trap-room-at-the-lanterna-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-trap-room-at-the-lanterna/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1792874501185.793,
@@ -13711,7 +13711,7 @@
     "play/the-trap-room-at-the-lanterna-vn/player.css": {
       "outHash": "c8b2ca92b2a3a5aa258ce90961a84b6ead910149f7d6e7ab347d021d95b82eb6",
       "outSize": 14303,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-trap-room-at-the-lanterna/game/game/player.css",
       "srcHash": "c8b2ca92b2a3a5aa258ce90961a84b6ead910149f7d6e7ab347d021d95b82eb6",
       "srcMtimeMs": 1792874505178.4368,
@@ -13926,9 +13926,9 @@
       "srcSize": 71188
     },
     "play/the-winter-garden-clock-vn/fonts/fonts.css": {
-      "outHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
-      "outSize": 323,
-      "recipe": "copy@1",
+      "outHash": "b54c236e971cb955dd5c2aac4d33dbc2b88af92c171f182e241b44a79fc5a90b",
+      "outSize": 311,
+      "recipe": "play-css-urls@1",
       "src": "vn:the-winter-garden-clock/game/game/fonts/fonts.css",
       "srcHash": "39506f2cd8414fe73f59ea8cc1f272a70b847e64d05c1f57571926ebe9505aa6",
       "srcMtimeMs": 1793725688071.975,
@@ -14505,7 +14505,7 @@
     "play/the-winter-garden-clock-vn/player.css": {
       "outHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "outSize": 22525,
-      "recipe": "copy@1",
+      "recipe": "play-css-urls@1",
       "src": "vn:the-winter-garden-clock/game/game/player.css",
       "srcHash": "1da10a4b5fac1db12e3edd81e4c61a8a13c5be57204f32f57763518b6e97edad",
       "srcMtimeMs": 1793725692226.3418,
@@ -18718,7 +18718,7 @@
       "files": 155,
       "kind": "play",
       "path": "play/circuit-breaker-vn/",
-      "size": 52496947,
+      "size": 52496935,
       "smoke": "ok",
       "workId": "circuit-breaker"
     },
@@ -18774,7 +18774,7 @@
       "files": 136,
       "kind": "play",
       "path": "play/echoes-in-the-deep-vn/",
-      "size": 47641811,
+      "size": 47641799,
       "smoke": "ok",
       "workId": "echoes-in-the-deep"
     },
@@ -18846,7 +18846,7 @@
       "files": 97,
       "kind": "play",
       "path": "play/the-bell-and-the-bicycle-picture-book/",
-      "size": 8815897,
+      "size": 8815885,
       "smoke": "ok",
       "workId": "the-bell-and-the-bicycle"
     },
@@ -18910,7 +18910,7 @@
       "files": 117,
       "kind": "play",
       "path": "play/the-clockless-god-choices/",
-      "size": 27846175,
+      "size": 27846163,
       "smoke": "ok",
       "workId": "the-clockless-god"
     },
@@ -18942,7 +18942,7 @@
       "files": 117,
       "kind": "play",
       "path": "play/the-clockless-god-linear/",
-      "size": 28715477,
+      "size": 28715465,
       "smoke": "ok",
       "workId": "the-clockless-god"
     },
@@ -19134,7 +19134,7 @@
       "files": 98,
       "kind": "play",
       "path": "play/the-local-patch-vn/",
-      "size": 24542609,
+      "size": 24542597,
       "smoke": "ok",
       "workId": "the-local-patch"
     },
@@ -19174,7 +19174,7 @@
       "files": 149,
       "kind": "play",
       "path": "play/the-salt-line-vn/",
-      "size": 56967382,
+      "size": 56967370,
       "smoke": "ok",
       "workId": "the-salt-line"
     },
@@ -19238,7 +19238,7 @@
       "files": 148,
       "kind": "play",
       "path": "play/the-silent-signal-vn/",
-      "size": 53860607,
+      "size": 53860595,
       "smoke": "ok",
       "workId": "the-silent-signal"
     },
@@ -19278,7 +19278,7 @@
       "files": 122,
       "kind": "play",
       "path": "play/the-silent-summit-vn/",
-      "size": 51553139,
+      "size": 51553127,
       "smoke": "ok",
       "workId": "the-silent-summit"
     },
@@ -19310,7 +19310,7 @@
       "files": 101,
       "kind": "play",
       "path": "play/the-snail-and-the-salad-picture-book/",
-      "size": 4916709,
+      "size": 4916697,
       "smoke": "ok",
       "workId": "the-snail-and-the-salad"
     },
@@ -19374,7 +19374,7 @@
       "files": 49,
       "kind": "play",
       "path": "play/the-soother-that-fell-into-dragon-land-choices/",
-      "size": 3241506,
+      "size": 3241500,
       "smoke": "ok",
       "workId": "the-soother-that-fell-into-dragon-land"
     },
@@ -19422,7 +19422,7 @@
       "files": 61,
       "kind": "play",
       "path": "play/the-trap-room-at-the-lanterna-vn/",
-      "size": 17057218,
+      "size": 17057206,
       "smoke": "ok",
       "workId": "the-trap-room-at-the-lanterna"
     },
@@ -19462,7 +19462,7 @@
       "files": 88,
       "kind": "play",
       "path": "play/the-winter-garden-clock-vn/",
-      "size": 16981799,
+      "size": 16981787,
       "smoke": "ok",
       "workId": "the-winter-garden-clock"
     },

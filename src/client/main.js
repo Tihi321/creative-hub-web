@@ -13,3 +13,5 @@ if (data) {
   initSpotlight(data);
 }
 initNav();
+// Ready signal for tests: key handlers are bound.
+document.documentElement.setAttribute('data-ready', '1');
