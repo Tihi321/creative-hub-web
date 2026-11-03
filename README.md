@@ -23,9 +23,10 @@ npm ci
 npx playwright install chromium   # only for publish's smoke check and the e2e tests
 ```
 
-The source folders are named by aliases in `content/sources.example.json`
-(`vn`, `scriptorium`, `translator`, `edu`). To use other paths on your machine, copy it to
-`content/sources.local.json` (ignored by git) and edit it.
+The source folders are named by aliases (`vn`, `scriptorium`, `translator`, `edu`).
+`content/sources.example.json` only holds placeholders, so publishing needs your own paths: copy it to
+`content/sources.local.json` (ignored by git) and replace each `<path to ...>` with the real folder on
+your machine. Building and checking the site do not need it; only `npm run publish` does.
 
 ## Add a work
 
