@@ -82,7 +82,9 @@ function next(cur, dir) {
   if (axis === 'x' && horizontal) {
     var list = items(group);
     var j = list.indexOf(cur) + (dir === 'right' ? 1 : -1);
-    return list[j] || null;
+    if (list[j] || !group.hasAttribute('data-nav-join')) return list[j] || null;
+    // a joined row (filter chips) continues into the row beside it when both sit on one line
+    return geometric(cur, dir, items(document).filter(function (el) { return groupOf(el) !== group; }));
   }
   var pool;
   if (horizontal) pool = axis === 'grid' ? items(group) : items(document);
@@ -140,7 +142,10 @@ function keepInView(el, instant) {
   var ref = (axisOf(group) === 'grid' ? el : el.closest('.rail-section')) || group || el;
   var vh = window.innerHeight;
   var y = window.pageYOffset;
-  if (r.top >= vh * 0.04 && r.bottom <= vh * (cov ? 1 : 0.97)) {
+  // in key mode the slim spotlight band covers the top once the panel is gone: keep focus below it
+  var mini = document.getElementById('spot-mini');
+  var topGuard = mini && root.classList.contains('keys') && !el.closest('#spot') ? mini.offsetHeight + vh * 0.02 : vh * 0.04;
+  if (r.top >= topGuard && r.bottom <= vh * (cov ? 1 : 0.97)) {
     // a tile whose cover is in view but whose caption runs off the bottom: scroll just enough to show the caption
     var er = el.getBoundingClientRect();
     if (cov && er.bottom > vh * 0.97 && er.height < vh * 0.9) {

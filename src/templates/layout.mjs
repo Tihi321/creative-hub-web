@@ -33,8 +33,8 @@ ${is404 ? `<script>${BASE_SCRIPT}</script>\n` : ''}<link rel="preload" href="${p
 <a class="brand" data-nav href="${home}">${bi(siteTitle)}</a>
 <div class="top-links">
 <button class="link-btn" type="button" data-nav data-test="lang-toggle">${t('switch_to')}</button>
-<a class="link-btn" data-nav href="${prefix}downloads/">${t('downloads')}</a>
-<a class="link-btn" data-nav href="${prefix}about/">${t('about')}</a>
+<a class="link-btn" data-nav href="${prefix}downloads/"${page === 'downloads' ? ' aria-current="page"' : ''}>${t('downloads')}</a>
+<a class="link-btn" data-nav href="${prefix}about/"${page === 'about' ? ' aria-current="page"' : ''}>${t('about')}</a>
 </div>
 </div>
 </header>

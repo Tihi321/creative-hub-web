@@ -18,6 +18,10 @@
  *      edu: arrows move focus among buttons and links when the player did not handle the key itself
  *      (bubble phase, only if not defaultPrevented); Enter/Space stay native.
  *      read: no assist, arrows scroll.
+ *   4. Auto focus (vn): when the main menu or the choice list becomes visible and nothing in it has focus,
+ *      its first button is focused, so a remote's OK starts the game or picks with one press. For the
+ *      choice list, Enter on that auto-focused button is ignored for a short grace time (and while the key
+ *      repeats) until an arrow moves, so someone pressing OK to skip text does not pick by accident.
  *
  * Source is ES2017-safe, has no dependencies, works in XHTML documents (elements are created in the
  * XHTML namespace, no innerHTML) and exposes only window.__hubBridge.
@@ -352,6 +356,44 @@
     return true;
   }
 
+  /* ---------- auto focus (vn) ---------- */
+
+  var AUTO_IDS = ['vno-screen-main-menu', 'vno-choice-overlay'];
+  var AUTO_GRACE_MS = 700;
+  var autoSeen = {};
+  var autoEl = null;
+  var autoAt = 0;
+  var sawPointer = false;
+
+  function anyScreenOpen() {
+    for (var i = 0; i < VN_SCREENS.length; i++) if (visibleContainer(VN_SCREENS[i])) return true;
+    return false;
+  }
+
+  function autoFocus() {
+    for (var i = 0; i < AUTO_IDS.length; i++) {
+      var id = AUTO_IDS[i];
+      var node = visibleContainer(id);
+      if (!node) {
+        autoSeen[id] = false;
+        continue;
+      }
+      if (autoSeen[id] || anyScreenOpen()) continue;
+      var a = document.activeElement;
+      if (a && (a === pill || (node.contains(a) && a !== node))) {
+        autoSeen[id] = true;
+        continue;
+      }
+      var list = collect(node, VN_SELECTOR, []);
+      if (!list.length) continue; // buttons not rendered yet: try again on the next tick
+      autoSeen[id] = true;
+      focusEl(list[0]);
+      if (!sawPointer) markKeyboard();
+      autoEl = id === 'vno-choice-overlay' ? list[0] : null;
+      autoAt = Date.now();
+    }
+  }
+
   /* ---------- key handlers ---------- */
 
   function onKeyCapture(e) {
@@ -393,6 +435,11 @@
     var dir = dirOf(e);
     if (list && list.length) {
       var cur = document.activeElement;
+      if (dir) autoEl = null;
+      if (autoEl && cur === autoEl && (e.key === 'Enter' || e.keyCode === 13) && (e.repeat || Date.now() - autoAt < AUTO_GRACE_MS)) {
+        swallow(e);
+        return;
+      }
       if (dir) {
         if (navigate(e, list, dir)) swallow(e);
         return;
@@ -458,6 +505,7 @@
   }
 
   function markPointer() {
+    sawPointer = true;
     unmarkKeyboard();
   }
 
@@ -468,6 +516,10 @@
     window.addEventListener('mousemove', onMouseMove, true);
     window.addEventListener('mousedown', markPointer, true);
     window.addEventListener('touchstart', onTouchStart, true);
+    if (player === 'vn') {
+      autoFocus();
+      window.setInterval(autoFocus, 250);
+    }
   }
 
   window.__hubBridge = {

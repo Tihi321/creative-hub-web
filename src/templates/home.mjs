@@ -47,18 +47,20 @@ export function homePage(ctx) {
   data.plural = Object.fromEntries(RAIL_TYPES.map((k) => [k, TYPE_LABELS[k].many]));
   data.f = site.featured;
 
-  const typeChips = [
+  const typeChips = ['<div class="chip-row" data-nav-group data-nav-axis="x" data-nav-join data-group="filter-type">',
     `<button class="chip" type="button" data-nav data-test="filter-type" data-id="all">${t('filter_all')}</button>`,
     ...RAIL_TYPES.filter((ty) => works.some((w) => shelfTypes(ctx.deriveTypes(w)).includes(ty))).map(
       (ty) => `<button class="chip" type="button" data-nav data-test="filter-type" data-id="${ty}">${bi(typeLabel(ty, true))}</button>`,
     ),
+    '</div>',
   ].join('\n');
   const present = new Set(works.flatMap((w) => ctx.deriveLanguages(w)));
-  const langChipsHtml = [
+  const langChipsHtml = ['<div class="chip-row" data-nav-group data-nav-axis="x" data-nav-join data-group="filter-lang">',
     `<button class="chip" type="button" data-nav data-test="filter-lang" data-id="all">${t('filter_all')}</button>`,
     ...FILTER_LANGS.filter((l) => present.has(l.id)).map(
       (l) => `<button class="chip" type="button" data-nav data-test="filter-lang" data-id="${l.id}">${esc(l.name)}</button>`,
     ),
+    '</div>',
   ].join('\n');
 
   const rails = RAIL_TYPES.map((ty) => {
@@ -87,7 +89,15 @@ ${list.map((w) => tileHtml(w, ctx, ty, prefix)).join('\n')}
 </div>
 </div>
 </section>
-<div class="filters" id="filters" data-nav-group data-nav-axis="x" data-group="filters">
+<div class="spot-mini" id="spot-mini" aria-hidden="true">
+<span class="spot-mini-cover" id="spot-mini-cover">${fd.bg ? `<img alt="" src="${esc(fd.bg)}">` : coverHtml(featured, ctx, { size: 480, prefix }).replace(/^<span class="cover">|<\/span>$/g, '')}</span>
+<div class="spot-mini-text">
+<p class="spot-mini-title" id="spot-mini-title">${bi(featured.title)}</p>
+<p class="spot-mini-meta" id="spot-mini-meta"><span class="spot-langs">${langChips(fd.l)}</span>${typeList(fTypes)}</p>
+<p class="spot-mini-blurb" id="spot-mini-blurb">${bi(featured.blurb)}</p>
+</div>
+</div>
+<div class="filters" id="filters">
 ${typeChips}
 <span class="filters-gap" aria-hidden="true"></span>
 ${langChipsHtml}

@@ -64,7 +64,8 @@ ${g.rows.map((d) => downloadRow(work, d, ctx, prefix)).join('\n')}
 <h1 class="work-title">${bi(work.title)}</h1>
 <p class="work-meta"><span class="work-langs">${langs.map((c) => `<span class="lc">${bi(langName(c))}</span>`).join('')}</span>${typeList(types)}</p>
 <p class="work-blurb">${bi(work.blurb)}</p>
-${plays || reads ? `<div class="actions">\n${plays}\n${reads}\n</div>` : ''}
+${plays ? `<div class="actions">\n${plays}\n</div>` : ''}
+${reads ? `<div class="actions">\n${reads}\n</div>` : ''}
 </div>
 </div>
 ${groups ? `<section class="downloads" aria-labelledby="dl-h"><h2 class="rail-title" id="dl-h">${t('downloads')}</h2>\n${groups}\n</section>` : ''}

@@ -51,11 +51,10 @@ for (const id of plays) {
       return;
     }
 
-    // VN: main menu button via ArrowDown, Enter starts
+    // VN: the bridge focuses the first main-menu button (Start) on its own; Enter starts
     await expect(page.locator(VN.mainMenu)).toBeVisible();
-    await page.keyboard.press('ArrowDown');
-    const inMenu = await page.evaluate((s) => !!document.activeElement && !!document.activeElement.closest(s) && document.activeElement.tagName === 'BUTTON', VN.mainMenu);
-    expect(inMenu, 'ArrowDown should focus a main-menu button (else: VN Studio ROADMAP row, D-pad navigation)').toBe(true);
+    const inMenu = () => page.evaluate((s) => !!document.activeElement && !!document.activeElement.closest(s) && document.activeElement.tagName === 'BUTTON', VN.mainMenu);
+    await expect.poll(inMenu, { message: 'the bridge should focus a main-menu button on load (else: VN Studio ROADMAP row, D-pad navigation)', timeout: 3000 }).toBe(true);
     await page.keyboard.press('Enter');
     await expect(page.locator(VN.mainMenu)).toHaveClass(new RegExp(VN.hiddenClass));
 
