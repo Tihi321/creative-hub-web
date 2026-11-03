@@ -46,6 +46,8 @@ html { font-size: 16px; background: var(--sea); -webkit-text-size-adjust: 100%; 
 @media (min-width: 1440px) { html { font-size: 20px; } }
 @media (min-width: 1920px) { html { font-size: 24px; } }
 html.tv { font-size: 24px; --padx: 5vw; --pady: 2.5vh; }
+/* key mode on a tablet-sized screen (a keyboard on an iPad): TV scale would not fit the header */
+@media (max-width: 1023px) { html.tv { font-size: 18px; } }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 body {
@@ -80,6 +82,7 @@ html.pointer a:focus, html.pointer button:focus {
 /* header */
 .top-bar { display: flex; align-items: center; justify-content: space-between; min-height: 2.8rem; }
 .brand {
+  white-space: nowrap;
   font-family: var(--display);
   font-weight: 700;
   font-size: 1.35rem;
@@ -98,6 +101,7 @@ html.pointer a:focus, html.pointer button:focus {
   padding: 0 1rem;
   position: relative;
   margin-left: 0.25rem;
+  white-space: nowrap;
   background: rgba(30, 74, 96, 0.55);
   border: 0;
   border-radius: 999px;
@@ -261,6 +265,9 @@ html.keys.mini-on .spot-mini {
 .spot-mini-meta { margin-top: 0.15rem; font-size: 0.85rem; line-height: 1.5; color: rgba(241, 236, 224, 0.82); }
 .spot-mini-blurb { font-size: 0.9rem; line-height: 1.35; color: rgba(241, 236, 224, 0.9); }
 
+/* under 900 wide a rail must still show a part-cut tile at the right edge */
+@media (max-width: 899px) { :root { --tile: 7.5rem; } }
+
 /* filters */
 .filters {
   margin: 0 calc(-1 * var(--padx));
@@ -293,8 +300,8 @@ html.keys.mini-on .spot-mini {
 .rail-scroller::-webkit-scrollbar { height: 8px; }
 .rail-scroller::-webkit-scrollbar-thumb { background: var(--quay); border-radius: 4px; }
 html.tv .rail-scroller::-webkit-scrollbar { display: none; }
-.rail-track { position: relative; display: flex; padding: 2.4rem var(--padx) 1.1rem; }
-.rail-track:after { content: ""; flex: 0 0 var(--padx); }
+.rail-track { position: relative; display: flex; align-items: flex-start; padding: 1.6rem var(--padx) 1.1rem calc(var(--padx) - 0.6rem); }
+.rail-track:after { content: ""; flex: 0 0 var(--padx); align-self: stretch; }
 
 .tile {
   position: relative;
@@ -339,7 +346,7 @@ html.tv .rail-scroller::-webkit-scrollbar { display: none; }
   top: 0;
   left: 0;
   width: var(--tile);
-  height: 2.4rem;
+  height: 2rem;
   pointer-events: none;
   opacity: 0;
   transform: translate3d(0, 0, 0);
@@ -351,7 +358,7 @@ html.tv .rail-scroller::-webkit-scrollbar { display: none; }
 
 /* filtered grid */
 .results-count { margin: 1.6rem 0 0; font-family: var(--display); font-size: 1.4rem; font-weight: 600; color: var(--foam); }
-.grid-wrap { position: relative; padding-top: 2.4rem; font-size: 0; }
+.grid-wrap { position: relative; padding-top: 1.6rem; margin-left: -0.6rem; font-size: 0; }
 .grid-wrap .tile { display: inline-block; vertical-align: top; margin: 0 0.5rem 2rem 0; }
 .grid-wrap .tile-title, .grid-wrap .tile-langs { font-size: 1.1rem; }
 .results-empty { padding: 2rem 0; }
@@ -362,9 +369,8 @@ html.tv .rail-scroller::-webkit-scrollbar { display: none; }
   display: inline-block;
   min-height: 48px;
   line-height: 48px;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0.9rem;
   padding: 0 1.1rem;
-  margin-left: -1.1rem;
   border-radius: 999px;
   background: rgba(30, 74, 96, 0.55);
   color: var(--foam);
@@ -419,7 +425,7 @@ html.tv .rail-scroller::-webkit-scrollbar { display: none; }
 .keys-row dd { margin: 0; flex: 1 1 0; }
 .table-wrap { overflow-x: auto; max-width: 64rem; }
 .dl-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-.dl-table th, .dl-table td { text-align: left; padding: 0.35rem 0.9rem; }
+.dl-table th, .dl-table td { text-align: left; padding: 0.35rem 0.9rem; line-height: 1.3; }
 .dl-table .dl-head th { color: var(--foam); font-weight: 700; padding-bottom: 0.4rem; }
 .dl-table tbody td { background: var(--quay); border-bottom: 2px solid var(--sea); }
 .dl-table .dl-work th { padding: 1.6rem 0 0.4rem; font-family: var(--display); font-weight: 600; font-size: 1.3rem; }

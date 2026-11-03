@@ -14,7 +14,7 @@ export function downloadsPage(ctx) {
               const entry = ctx.manifest.items && ctx.manifest.items[d.id];
               const size = entry ? fmtSize(entry.size) : null;
               return `<tr data-test="download" data-id="${esc(d.id)}" data-work="${esc(w.id)}"${entry ? ` data-size="${entry.size}"` : ''}>
-<td><a data-nav href="${esc(downloadHref(w, d, prefix))}" download="${esc(d.filename)}">${bi(d.label)}<span class="dl-fmt">, ${esc(d.format.toUpperCase())}</span></a></td>
+<td><a data-nav href="${esc(downloadHref(w, d, prefix))}" download="${esc(d.filename)}">${bi(d.label)}</a></td>
 <td>${groupTitle(g.group)}</td>
 <td>${bi(langName(d.language))}</td>
 <td class="fmt">${esc(d.format.toUpperCase())}</td>

@@ -30,7 +30,8 @@ for (const [w, h] of sizes) {
 
       // focus deep in a rail: keyboard only (also switches the page into key mode)
       await page.goto('/');
-      for (let i = 0; i < 3; i++) await page.keyboard.press('ArrowDown');
+      // Down until a tile has focus (touch sizes start with nothing focused, and chip rows may stack)
+      for (let i = 0; i < 8 && !(await page.evaluate(() => !!document.activeElement && document.activeElement.matches('[data-test="tile"]'))); i++) await page.keyboard.press('ArrowDown');
       for (let i = 0; i < 6; i++) await page.keyboard.press('ArrowRight');
       await page.waitForTimeout(400); // focus tween
       await shot('home-focus');

@@ -86,6 +86,7 @@
     'text-decoration:none;letter-spacing:0;opacity:0;pointer-events:none;' +
     '-webkit-transition:opacity .2s;transition:opacity .2s;}' +
     '.hubb-pill.hubb-on{opacity:1;pointer-events:auto;}' +
+    '@media (min-width:1280px){.hubb-pill{min-height:56px;padding:12px 30px;font-size:28px;}}' +
     '.hubb-pill:focus{opacity:1;outline:4px solid #F4B942;outline-offset:3px;}' +
     'html.hubb-kb #vno-container button:focus,html.hubb-kb #vno-container select:focus,' +
     'html.hubb-kb #vno-container input:focus,html.hubb-kb .vno-slot-card:focus,' +

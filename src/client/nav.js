@@ -156,6 +156,9 @@ function keepInView(el, instant) {
     return;
   }
   var want = r.bottom + y <= vh * (cov ? 1 : 0.97) ? 0 : ref.getBoundingClientRect().top + y - vh * 0.33;
+  // never leave the focused item's bottom (with its lifted outline) under the screen edge
+  var bottom = el.getBoundingClientRect().bottom + y + vh * 0.03;
+  if (bottom - want > vh && el.offsetHeight < vh * 0.8) want = bottom - vh;
   want = Math.max(0, want);
   if (instant) window.scrollTo(0, want);
   else tween('page', y, want, function (v) { window.scrollTo(0, v); });
