@@ -1,0 +1,6 @@
+{
+  "vn": "<path to VisualNovels/projects>",
+  "scriptorium": "<path to Scriptorium/books>",
+  "translator": "<path to BookTranslator/projects>",
+  "edu": "<path to EduGames/courses>"
+}

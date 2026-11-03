@@ -1,0 +1,5 @@
+# Source files: LF in the repo and the working copy.
+* text=auto eol=lf
+# Published copies are stored byte for byte (manifest hashes depend on it).
+public/** -text
+content/publish-manifest.json -text

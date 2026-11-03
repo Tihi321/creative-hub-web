@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "site": {
+    "title": { "hr": "Kućna knjižnica", "en": "Home Library" },
+    "tagline": { "hr": "Priče, knjige i igre iz naše radionice", "en": "Stories, books and games from our workshop" },
+    "budgetMB": 600,
+    "featured": "the-clockless-god"
+  },
+  "works": [
+    {
+      "id": "the-snail-and-the-salad",
+      "title": { "en": "The Snail and the Salad", "hr": "Puž i salata" },
+      "blurb": {
+        "en": "A small snail sets out across the garden to reach the biggest salad leaf. On the way she learns that slow is not the same as stuck.",
+        "hr": "Mali puž kreće preko vrta do najvećeg lista salate. Usput nauči da sporo nije isto što i zapelo."
+      },
+      "cover": "scriptorium:the-snail-and-the-salad/out/cover.png",
+      "order": 20,
+      "plays": [
+        { "id": "the-snail-and-the-salad-picture-book", "type": "picture-book",
+          "label": { "en": "Picture book", "hr": "Slikovnica" },
+          "languages": ["en", "de", "hr"], "source": "vn:the-snail-and-the-salad/game/game", "player": "vn" }
+      ],
+      "reads": [
+        { "id": "the-snail-and-the-salad-book", "label": { "en": "Book", "hr": "Knjiga" },
+          "languages": ["en"], "source": "scriptorium:the-snail-and-the-salad/out/reader", "entry": "index.html" }
+      ],
+      "downloads": [
+        { "id": "the-snail-and-the-salad-en-epub", "group": "book",
+          "label": { "en": "Book", "hr": "Knjiga" }, "language": "en", "format": "epub",
+          "source": "scriptorium:the-snail-and-the-salad/out/the-snail-and-the-salad.epub",
+          "filename": "the-snail-and-the-salad-en.epub" },
+        { "id": "the-snail-and-the-salad-vn-en-pdf", "group": "vn-export",
+          "label": { "en": "Picture book", "hr": "Slikovnica" }, "language": "en", "format": "pdf",
+          "source": "vn:the-snail-and-the-salad/export/the-snail-and-the-salad-en.pdf",
+          "filename": "the-snail-and-the-salad-picture-book-en.pdf" }
+      ]
+    },
+    {
+      "id": "the-clockless-god",
+      "title": { "en": "The Clockless God", "hr": "Bog bez sata" },
+      "blurb": {
+        "en": "In a town where time has stopped, a young clockmaker goes looking for the god who kept it moving. What she finds asks her to choose what the town should remember.",
+        "hr": "U gradu u kojem je vrijeme stalo mlada urarica traži boga koji ga je pokretao. Ono što pronađe traži od nje da odluči što će grad pamtiti."
+      },
+      "cover": "scriptorium:the-clockless-god/out/cover.png",
+      "order": 10,
+      "plays": [
+        { "id": "the-clockless-god-choices", "type": "choice-game",
+          "label": { "en": "Choices edition", "hr": "Izdanje s izborima" },
+          "languages": ["en"], "source": "vn:the-clockless-god-2/game/game", "player": "vn" }
+      ],
+      "reads": [
+        { "id": "the-clockless-god-book", "label": { "en": "Book", "hr": "Knjiga" },
+          "languages": ["en"], "source": "scriptorium:the-clockless-god/out/reader", "entry": "index.html" }
+      ],
+      "downloads": [
+        { "id": "the-clockless-god-en-epub", "group": "book",
+          "label": { "en": "Book", "hr": "Knjiga" }, "language": "en", "format": "epub",
+          "source": "scriptorium:the-clockless-god/out/the-clockless-god.epub",
+          "filename": "the-clockless-god-en.epub" },
+        { "id": "the-clockless-god-hr-epub", "group": "book",
+          "label": { "en": "Book, Croatian edition", "hr": "Knjiga, hrvatsko izdanje" }, "language": "hr", "format": "epub",
+          "source": "translator:the-clockless-god-hr-2945aa/output/the-clockless-god.hr.epub",
+          "filename": "the-clockless-god-hr.epub" }
+      ]
+    },
+    {
+      "id": "suncev-sustav",
+      "title": { "en": "The Solar System", "hr": "Sunčev sustav" },
+      "blurb": {
+        "en": "Explore the Sun, the planets and their moons room by room. Every answer comes with a short explanation.",
+        "hr": "Istraži Sunce, planete i njihove mjesece sobu po sobu. Svaki odgovor dolazi s kratkim objašnjenjem."
+      },
+      "order": 50,
+      "plays": [
+        { "id": "suncev-sustav-game", "type": "edu-game",
+          "label": { "en": "Learning game", "hr": "Igra za učenje" },
+          "languages": ["hr", "en"], "source": "edu:suncev-sustav/build", "player": "edu" }
+      ],
+      "reads": [],
+      "downloads": []
+    }
+  ]
+}
