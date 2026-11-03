@@ -139,8 +139,17 @@ function keepInView(el, instant) {
   var r = (cov || el).getBoundingClientRect();
   var ref = (axisOf(group) === 'grid' ? el : el.closest('.rail-section')) || group || el;
   var vh = window.innerHeight;
-  if (r.top >= vh * 0.04 && r.bottom <= vh * (cov ? 1 : 0.97)) return; // for a tile the cover counts, the caption may run off
   var y = window.pageYOffset;
+  if (r.top >= vh * 0.04 && r.bottom <= vh * (cov ? 1 : 0.97)) {
+    // a tile whose cover is in view but whose caption runs off the bottom: scroll just enough to show the caption
+    var er = el.getBoundingClientRect();
+    if (cov && er.bottom > vh * 0.97 && er.height < vh * 0.9) {
+      var small = y + er.bottom - vh * 0.97;
+      if (instant) window.scrollTo(0, small);
+      else tween('page', y, small, function (v) { window.scrollTo(0, v); });
+    }
+    return;
+  }
   var want = r.bottom + y <= vh * (cov ? 1 : 0.97) ? 0 : ref.getBoundingClientRect().top + y - vh * 0.33;
   want = Math.max(0, want);
   if (instant) window.scrollTo(0, want);

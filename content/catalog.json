@@ -458,21 +458,6 @@
       },
       "cover": "scriptorium:the-lighthouse-that-kept-lists/out/cover.png",
       "order": 50,
-      "plays": [
-        {
-          "id": "the-lighthouse-that-kept-lists-vn",
-          "type": "visual-novel",
-          "label": {
-            "en": "Visual novel",
-            "hr": "Vizualni roman"
-          },
-          "languages": [
-            "en"
-          ],
-          "source": "vn:the-lighthouse-that-kept-lists-vn/game/game",
-          "player": "vn"
-        }
-      ],
       "reads": [
         {
           "id": "the-lighthouse-that-kept-lists-book",
