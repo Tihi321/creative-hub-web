@@ -1,0 +1,1692 @@
+{
+  "version": 1,
+  "site": {
+    "title": {
+      "hr": "Kućna knjižnica",
+      "en": "Home Library"
+    },
+    "tagline": {
+      "hr": "Priče, slikovnice i igre iz naše kućne radionice",
+      "en": "Stories, picture books and games from our home workshop"
+    },
+    "budgetMB": 600,
+    "featured": "the-clockless-god"
+  },
+  "works": [
+    {
+      "id": "the-clockless-god",
+      "title": {
+        "en": "The Clockless God",
+        "hr": "Bezsatni bog"
+      },
+      "blurb": {
+        "en": "A Paris clockmaker wakes a day short among two hundred clocks stopped at nine. An Irish locksmith who talks too much and a restorer who is always right must stop a secret brotherhood from freezing the city's time during a solar eclipse. Read it, play it as a linear novel, or choose your own way through.",
+        "hr": "Pariški urar probudi se bez jednog dana među dvjesto satova zaustavljenih na devet. Irski bravar koji previše priča i restauratorica koja uvijek ima pravo moraju spriječiti tajno bratstvo da za vrijeme pomrčine Sunca zaustavi vrijeme cijelog grada. Čitajte, igrajte kao linearni roman ili sami birajte put."
+      },
+      "cover": "scriptorium:the-clockless-god/out/cover.png",
+      "order": 10,
+      "plays": [
+        {
+          "id": "the-clockless-god-choices",
+          "type": "choice-game",
+          "label": {
+            "en": "Choices edition",
+            "hr": "Izdanje s izborima"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-clockless-god-2/game/game",
+          "player": "vn"
+        },
+        {
+          "id": "the-clockless-god-linear",
+          "type": "visual-novel",
+          "label": {
+            "en": "Linear edition",
+            "hr": "Linearno izdanje"
+          },
+          "languages": [
+            "en",
+            "hr"
+          ],
+          "source": "vn:the-clockless-god-3/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-clockless-god-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-clockless-god/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-clockless-god-book-choices",
+          "label": {
+            "en": "Choices edition",
+            "hr": "Izdanje s izborima"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-clockless-god-2/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-clockless-god-book-linear",
+          "label": {
+            "en": "Linear edition",
+            "hr": "Linearno izdanje"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-clockless-god-3/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-clockless-god-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-clockless-god/out/the-clockless-god.epub",
+          "filename": "the-clockless-god-en.epub"
+        },
+        {
+          "id": "the-clockless-god-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:the-clockless-god-hr-2945aa/output/the-clockless-god.hr.epub",
+          "filename": "the-clockless-god-hr.epub"
+        },
+        {
+          "id": "the-clockless-god-choices-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Choices edition",
+            "hr": "Izdanje s izborima"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-clockless-god-2/out/the-clockless-god-2.epub",
+          "filename": "the-clockless-god-choices-en.epub"
+        },
+        {
+          "id": "the-clockless-god-linear-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Linear edition",
+            "hr": "Linearno izdanje"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-clockless-god-3/out/the-clockless-god-3.epub",
+          "filename": "the-clockless-god-linear-en.epub"
+        },
+        {
+          "id": "the-clockless-god-gamebook-en-epub",
+          "group": "gamebook",
+          "label": {
+            "en": "Gamebook",
+            "hr": "Knjiga-igra"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-clockless-god-2/out/the-clockless-god-2-gamebook.epub",
+          "filename": "the-clockless-god-gamebook-en.epub"
+        },
+        {
+          "id": "the-clockless-god-gamebook-en-pdf",
+          "group": "gamebook",
+          "label": {
+            "en": "Gamebook",
+            "hr": "Knjiga-igra"
+          },
+          "language": "en",
+          "format": "pdf",
+          "source": "scriptorium:the-clockless-god-2/out/the-clockless-god-2-gamebook.pdf",
+          "filename": "the-clockless-god-gamebook-en.pdf"
+        },
+        {
+          "id": "the-clockless-god-vn-en-epub",
+          "group": "vn-export",
+          "label": {
+            "en": "Choices edition, illustrated",
+            "hr": "Izdanje s izborima, ilustrirano"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "vn:the-clockless-god-2/export/the-clockless-god-2-en.epub",
+          "filename": "the-clockless-god-choices-illustrated-en.epub"
+        },
+        {
+          "id": "the-clockless-god-vn-en-pdf",
+          "group": "vn-export",
+          "label": {
+            "en": "Choices edition, illustrated",
+            "hr": "Izdanje s izborima, ilustrirano"
+          },
+          "language": "en",
+          "format": "pdf",
+          "source": "vn:the-clockless-god-2/export/the-clockless-god-2-en.pdf",
+          "filename": "the-clockless-god-choices-illustrated-en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "the-snail-and-the-salad",
+      "title": {
+        "en": "The Snail and the Salad",
+        "hr": "Puž i salata"
+      },
+      "blurb": {
+        "en": "A very small snail crosses the whole garden, slowly, slowly, slowly, to reach the best lettuce in the world. A picture book for small children, in English and Croatian, with a German and Croatian side-by-side edition to download.",
+        "hr": "Sasvim mali puž prelazi cijeli vrt, polako, polako, polako, do najbolje salate na svijetu. Slikovnica za malu djecu na hrvatskom i engleskom, s njemačko-hrvatskim izdanjem za preuzimanje."
+      },
+      "cover": "scriptorium:the-snail-and-the-salad/out/cover.png",
+      "order": 20,
+      "plays": [
+        {
+          "id": "the-snail-and-the-salad-picture-book",
+          "type": "picture-book",
+          "label": {
+            "en": "Picture book",
+            "hr": "Slikovnica"
+          },
+          "languages": [
+            "en",
+            "hr"
+          ],
+          "source": "vn:the-snail-and-the-salad/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-snail-and-the-salad-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-snail-and-the-salad/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-snail-and-the-salad-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-snail-and-the-salad/out/the-snail-and-the-salad.epub",
+          "filename": "the-snail-and-the-salad-en.epub"
+        },
+        {
+          "id": "the-snail-and-the-salad-vn-en-epub",
+          "group": "vn-export",
+          "label": {
+            "en": "Picture book",
+            "hr": "Slikovnica"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "vn:the-snail-and-the-salad/export/the-snail-and-the-salad-en.epub",
+          "filename": "the-snail-and-the-salad-picture-book-en.epub"
+        },
+        {
+          "id": "the-snail-and-the-salad-vn-en-pdf",
+          "group": "vn-export",
+          "label": {
+            "en": "Picture book",
+            "hr": "Slikovnica"
+          },
+          "language": "en",
+          "format": "pdf",
+          "source": "vn:the-snail-and-the-salad/export/the-snail-and-the-salad-en.pdf",
+          "filename": "the-snail-and-the-salad-picture-book-en.pdf"
+        },
+        {
+          "id": "the-snail-and-the-salad-vn-de-hr-epub",
+          "group": "vn-export",
+          "label": {
+            "en": "Picture book, German and Croatian side by side",
+            "hr": "Slikovnica, njemački i hrvatski usporedno"
+          },
+          "language": "de",
+          "format": "epub",
+          "source": "vn:the-snail-and-the-salad/export/the-snail-and-the-salad-de-hr.epub",
+          "filename": "the-snail-and-the-salad-picture-book-de-hr.epub"
+        },
+        {
+          "id": "the-snail-and-the-salad-vn-de-hr-pdf",
+          "group": "vn-export",
+          "label": {
+            "en": "Picture book, German and Croatian side by side",
+            "hr": "Slikovnica, njemački i hrvatski usporedno"
+          },
+          "language": "de",
+          "format": "pdf",
+          "source": "vn:the-snail-and-the-salad/export/the-snail-and-the-salad-de-hr.pdf",
+          "filename": "the-snail-and-the-salad-picture-book-de-hr.pdf"
+        }
+      ]
+    },
+    {
+      "id": "the-bell-and-the-bicycle",
+      "title": {
+        "en": "The Bell and the Bicycle",
+        "hr": "Zvonce i bicikl"
+      },
+      "blurb": {
+        "en": "Lana gets a shiny red bell for her blue bicycle. When it rolls away on her first ride through the park, she, Tomo and Kiki the dog look everywhere for it. A picture book for ages three to six.",
+        "hr": "Lana dobije sjajno crveno zvonce za svoj plavi bicikl. Kad se tijekom prve vožnje kroz park otkotrlja, ona, Tomo i pas Kiki traže ga posvuda. Slikovnica za djecu od tri do šest godina."
+      },
+      "cover": "scriptorium:the-bell-and-the-bicycle/out/cover.png",
+      "order": 30,
+      "plays": [
+        {
+          "id": "the-bell-and-the-bicycle-picture-book",
+          "type": "picture-book",
+          "label": {
+            "en": "Picture book",
+            "hr": "Slikovnica"
+          },
+          "languages": [
+            "en",
+            "hr"
+          ],
+          "source": "vn:the-bell-and-the-bicycle/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-bell-and-the-bicycle-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-bell-and-the-bicycle/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-bell-and-the-bicycle-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-bell-and-the-bicycle/out/the-bell-and-the-bicycle.epub",
+          "filename": "the-bell-and-the-bicycle-en.epub"
+        },
+        {
+          "id": "the-bell-and-the-bicycle-vn-en-epub",
+          "group": "vn-export",
+          "label": {
+            "en": "Picture book",
+            "hr": "Slikovnica"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "vn:the-bell-and-the-bicycle/export/the-bell-and-the-bicycle-en.epub",
+          "filename": "the-bell-and-the-bicycle-picture-book-en.epub"
+        },
+        {
+          "id": "the-bell-and-the-bicycle-vn-en-pdf",
+          "group": "vn-export",
+          "label": {
+            "en": "Picture book",
+            "hr": "Slikovnica"
+          },
+          "language": "en",
+          "format": "pdf",
+          "source": "vn:the-bell-and-the-bicycle/export/the-bell-and-the-bicycle-en.pdf",
+          "filename": "the-bell-and-the-bicycle-picture-book-en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "the-soother-that-fell-into-dragon-land",
+      "title": {
+        "en": "The Soother That Fell Into Dragon Land",
+        "hr": "Duda koja je pala u Zmajevsku zemlju"
+      },
+      "blurb": {
+        "en": "When Petra tosses her baby brother's soother over the mountains, it lands in Dragon Land. She must travel through a bright, silly world of dragons to bring it home, and your choices decide how the story ends.",
+        "hr": "Kad Petra baci dudu svog malog brata preko planina, ona završi u Zmajevskoj zemlji. Petra mora proputovati veselim, šašavim svijetom zmajeva da je vrati kući, a vaši izbori odlučuju kako će priča završiti."
+      },
+      "cover": "scriptorium:the-soother-that-fell-into-dragon-land/out/cover.png",
+      "order": 40,
+      "plays": [
+        {
+          "id": "the-soother-that-fell-into-dragon-land-choices",
+          "type": "choice-game",
+          "label": {
+            "en": "Choice story, three endings",
+            "hr": "Priča s izborima, tri kraja"
+          },
+          "languages": [
+            "en",
+            "hr"
+          ],
+          "source": "vn:the-soother-that-fell-into-dragon-land/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-soother-that-fell-into-dragon-land-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-soother-that-fell-into-dragon-land/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-soother-that-fell-into-dragon-land-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-soother-that-fell-into-dragon-land/out/the-soother-that-fell-into-dragon-land.epub",
+          "filename": "the-soother-that-fell-into-dragon-land-en.epub"
+        },
+        {
+          "id": "the-soother-that-fell-into-dragon-land-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:the-soother-that-fell-into-dragon-land-hr-df7eca/output/the-soother-that-fell-into-dragon-land.hr.epub",
+          "filename": "the-soother-that-fell-into-dragon-land-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-lighthouse-that-kept-lists",
+      "title": {
+        "en": "The Lighthouse That Kept Lists",
+        "hr": "Svjetionik koji je vodio popise"
+      },
+      "blurb": {
+        "en": "On a Dalmatian island in November, a decommissioned lighthouse starts printing lists in the night. A sceptical radio engineer has days to find out who is writing them before the harbour master signs the old station away. A warm comedy, told as a short story, a visual novel and a version written as a short film.",
+        "hr": "Na dalmatinskom otoku u studenom ugašeni svjetionik noću počinje tiskati popise. Skeptična radio-inženjerka ima nekoliko dana da otkrije tko ih piše prije nego što kapetan luke potpiše otpis stare postaje. Topla komedija, ispričana kao kratka priča, vizualni roman i verzija napisana kao kratki film."
+      },
+      "cover": "scriptorium:the-lighthouse-that-kept-lists/out/cover.png",
+      "order": 50,
+      "plays": [
+        {
+          "id": "the-lighthouse-that-kept-lists-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel",
+            "hr": "Vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-lighthouse-that-kept-lists-vn/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-lighthouse-that-kept-lists-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-lighthouse-that-kept-lists/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-lighthouse-that-kept-lists-book-film",
+          "label": {
+            "en": "Film edition",
+            "hr": "Filmsko izdanje"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-lighthouse-that-kept-lists-2/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-lighthouse-that-kept-lists-book-vn",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-lighthouse-that-kept-lists-vn/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-lighthouse-that-kept-lists-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-lighthouse-that-kept-lists/out/the-lighthouse-that-kept-lists.epub",
+          "filename": "the-lighthouse-that-kept-lists-en.epub"
+        },
+        {
+          "id": "the-lighthouse-that-kept-lists-film-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Film edition",
+            "hr": "Filmsko izdanje"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-lighthouse-that-kept-lists-2/out/the-lighthouse-that-kept-lists-2.epub",
+          "filename": "the-lighthouse-that-kept-lists-film-en.epub"
+        },
+        {
+          "id": "the-lighthouse-that-kept-lists-vn-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-lighthouse-that-kept-lists-vn/out/the-lighthouse-that-kept-lists-vn.epub",
+          "filename": "the-lighthouse-that-kept-lists-vn-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-trap-room-at-the-lanterna",
+      "title": {
+        "en": "The Trap Room at the Lanterna",
+        "hr": "Zamka u kazalištu Lanterna"
+      },
+      "blurb": {
+        "en": "On the last night of the season, a vain stage magician is found strangled beneath his own trapdoor. A precise inspector has until dawn to name the killer, in a puzzle mystery set in Trieste in 1926.",
+        "hr": "Posljednje večeri sezone ohol scenski mađioničar pronađen je zadavljen ispod vlastitog zaklopca na pozornici. Precizna inspektorica ima do zore imenovati ubojicu, u misteriju sa zagonetkama smještenom u Trst 1926. godine."
+      },
+      "cover": "scriptorium:the-trap-room-at-the-lanterna/out/cover.png",
+      "order": 60,
+      "plays": [
+        {
+          "id": "the-trap-room-at-the-lanterna-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Mystery visual novel",
+            "hr": "Misterij kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-trap-room-at-the-lanterna/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-trap-room-at-the-lanterna-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-trap-room-at-the-lanterna/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-trap-room-at-the-lanterna-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-trap-room-at-the-lanterna/out/the-trap-room-at-the-lanterna.epub",
+          "filename": "the-trap-room-at-the-lanterna-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-winter-garden-clock",
+      "title": {
+        "en": "The Winter Garden Clock",
+        "hr": "Sat u zimskom vrtu"
+      },
+      "blurb": {
+        "en": "At a private clock sale in Paris, the host dies in his frost-covered winter garden with every clock in the house stopped at nine. A locksmith and a restorer must name the killer, then climb a belfry where some keepers always lie. A mystery with puzzles.",
+        "hr": "Na privatnoj prodaji satova u Parizu domaćin umire u svom zaleđenom zimskom vrtu, a svi satovi u kući stali su na devet. Bravar i restauratorica moraju imenovati ubojicu, a zatim se popeti na zvonik u kojem neki čuvari uvijek lažu. Misterij sa zagonetkama."
+      },
+      "cover": "scriptorium:the-winter-garden-clock/out/cover.png",
+      "order": 70,
+      "plays": [
+        {
+          "id": "the-winter-garden-clock-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel with puzzles",
+            "hr": "Vizualni roman sa zagonetkama"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-winter-garden-clock/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-winter-garden-clock-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-winter-garden-clock/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-winter-garden-clock-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-winter-garden-clock/out/the-winter-garden-clock.epub",
+          "filename": "the-winter-garden-clock-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "suncev-sustav",
+      "title": {
+        "en": "The Solar System",
+        "hr": "Sunčev sustav"
+      },
+      "blurb": {
+        "en": "Explore the Sun, the planets and their moons in three units with 31 questions, short articles and retro game music. Made for children aged 8 to 10.",
+        "hr": "Istraži Sunce, planete i njihove mjesece kroz tri cjeline s 31 pitanjem, kratkim člancima i retro glazbom iz igara. Namijenjeno djeci od 8 do 10 godina."
+      },
+      "order": 80,
+      "plays": [
+        {
+          "id": "suncev-sustav-game",
+          "type": "edu-game",
+          "label": {
+            "en": "Learning game",
+            "hr": "Igra za učenje"
+          },
+          "languages": [
+            "hr",
+            "en"
+          ],
+          "source": "edu:suncev-sustav/build",
+          "player": "edu"
+        }
+      ]
+    },
+    {
+      "id": "deutsch-roleplay-a1",
+      "title": {
+        "en": "German Role-play, A1",
+        "hr": "Njemački kroz igru uloga, A1"
+      },
+      "blurb": {
+        "en": "German for beginners in four units, with 39 exercises, short articles, role-play scenes and listening clips. For Croatian and English speakers who are just starting German.",
+        "hr": "Njemački za početnike u četiri cjeline s 39 vježbi, kratkim člancima, scenama igranja uloga i slušanjem. Za govornike hrvatskog i engleskog koji tek počinju učiti njemački."
+      },
+      "order": 90,
+      "plays": [
+        {
+          "id": "deutsch-roleplay-a1-game",
+          "type": "edu-game",
+          "label": {
+            "en": "Learning game",
+            "hr": "Igra za učenje"
+          },
+          "languages": [
+            "de",
+            "en",
+            "hr"
+          ],
+          "source": "edu:deutsch-roleplay-a1/build",
+          "player": "edu"
+        }
+      ]
+    },
+    {
+      "id": "deutsch-roleplay-b2",
+      "title": {
+        "en": "German Role-play, B2",
+        "hr": "Njemački kroz igru uloga, B2"
+      },
+      "blurb": {
+        "en": "German for upper-intermediate learners in two units: four readings, 61 exercises, role-play scenes and listening clips. The topics are work, media and society.",
+        "hr": "Njemački za napredne učenike u dvije cjeline: četiri teksta za čitanje, 61 vježba, scene igranja uloga i slušanje. Teme su posao, mediji i društvo."
+      },
+      "order": 100,
+      "plays": [
+        {
+          "id": "deutsch-roleplay-b2-game",
+          "type": "edu-game",
+          "label": {
+            "en": "Learning game",
+            "hr": "Igra za učenje"
+          },
+          "languages": [
+            "de"
+          ],
+          "source": "edu:deutsch-roleplay-b2/build",
+          "player": "edu"
+        }
+      ]
+    },
+    {
+      "id": "the-local-patch",
+      "title": {
+        "en": "The Local Patch",
+        "hr": "Lokalna zakrpa"
+      },
+      "blurb": {
+        "en": "The laws of physics start to drift inside a sealed generation ship. A data scientist who reads the drift as patch notes from a Creator, a biologist and a security chief who calms riots with light have days to keep everyone alive.",
+        "hr": "Zakoni fizike počinju se mijenjati unutar zatvorenog generacijskog broda. Znanstvenik za podatke koji te promjene čita kao bilješke o zakrpi od Stvoritelja, biologinja i šef sigurnosti koji smiruje nemire svjetlom imaju nekoliko dana da sve održe na životu."
+      },
+      "cover": "scriptorium:the-local-patch/out/cover.png",
+      "order": 110,
+      "plays": [
+        {
+          "id": "the-local-patch-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel",
+            "hr": "Vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-local-patch-2/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-local-patch-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-local-patch/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-local-patch-book-vn",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-local-patch-2/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-local-patch-book-film",
+          "label": {
+            "en": "Film edition",
+            "hr": "Filmsko izdanje"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-local-patch-3/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-local-patch-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-local-patch/out/the-local-patch.epub",
+          "filename": "the-local-patch-en.epub"
+        },
+        {
+          "id": "the-local-patch-vn-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-local-patch-2/out/the-local-patch-2.epub",
+          "filename": "the-local-patch-vn-en.epub"
+        },
+        {
+          "id": "the-local-patch-film-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Film edition",
+            "hr": "Filmsko izdanje"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-local-patch-3/out/the-local-patch-3.epub",
+          "filename": "the-local-patch-film-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "circuit-breaker",
+      "title": {
+        "en": "Circuit Breaker",
+        "hr": "Prekidač"
+      },
+      "blurb": {
+        "en": "A record storm drowns the control room of Port Alaric, and seventeen-year-old apprentice electrician Sol must reset four buried breakers by hand. She crosses the flooded city by barge and on foot before the water reaches the hospital's emergency line.",
+        "hr": "Rekordna oluja potopi nadzornu sobu grada Port Alarica, a sedamnaestogodišnja električarska šegrtkinja Sol mora ručno ponovno uključiti četiri zatrpana prekidača. Poplavljenim gradom prolazi na teglenici i pješice prije nego što voda stigne do bolničke hitne mreže."
+      },
+      "cover": "scriptorium:circuit-breaker/out/cover.png",
+      "order": 120,
+      "plays": [
+        {
+          "id": "circuit-breaker-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel",
+            "hr": "Vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:circuit-breaker-2/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "circuit-breaker-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:circuit-breaker/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "circuit-breaker-book-vn",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:circuit-breaker-2/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "circuit-breaker-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:circuit-breaker/out/circuit-breaker.epub",
+          "filename": "circuit-breaker-en.epub"
+        },
+        {
+          "id": "circuit-breaker-vn-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:circuit-breaker-2/out/circuit-breaker-2.epub",
+          "filename": "circuit-breaker-vn-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "echoes-in-the-deep",
+      "title": {
+        "en": "Echoes in the Deep",
+        "hr": "Jeka u dubini"
+      },
+      "blurb": {
+        "en": "A rescue sub is crippled four kilometres down by a crystal organism that answers every sound with a louder one. Biologist Dr. Neve Okonkwo must persuade a divided crew to go silent and listen before the air runs out.",
+        "hr": "Spasilačka podmornica oštećena je četiri kilometra ispod površine zbog kristalnog organizma koji na svaki zvuk odgovara glasnijim. Biologinja dr. Neve Okonkwo mora uvjeriti podijeljenu posadu da utihne i posluša prije nego što ponestane zraka."
+      },
+      "cover": "scriptorium:echoes-in-the-deep/out/cover.png",
+      "order": 130,
+      "plays": [
+        {
+          "id": "echoes-in-the-deep-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel",
+            "hr": "Vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:echoes-in-the-deep-2/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "echoes-in-the-deep-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:echoes-in-the-deep/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "echoes-in-the-deep-book-vn",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:echoes-in-the-deep-2/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "echoes-in-the-deep-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:echoes-in-the-deep/out/echoes-in-the-deep.epub",
+          "filename": "echoes-in-the-deep-en.epub"
+        },
+        {
+          "id": "echoes-in-the-deep-vn-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:echoes-in-the-deep-2/out/echoes-in-the-deep-2.epub",
+          "filename": "echoes-in-the-deep-vn-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-salt-line",
+      "title": {
+        "en": "The Salt Line",
+        "hr": "Slana crta"
+      },
+      "blurb": {
+        "en": "A broke salvage-tug captain has forty hours to haul a grounded freighter off a reef before the storm surge poisons her town's water. But the freighter's master ran her aground on purpose.",
+        "hr": "Osiromašena kapetanica tegljača za spašavanje ima četrdeset sati da skine nasukani teretnjak s grebena prije nego što olujni val zatruje vodu njezina grada. No zapovjednica teretnjaka nasukala ga je namjerno."
+      },
+      "cover": "scriptorium:the-salt-line/out/cover.png",
+      "order": 140,
+      "plays": [
+        {
+          "id": "the-salt-line-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel",
+            "hr": "Vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-salt-line-2/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-salt-line-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-salt-line/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-salt-line-book-vn",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-salt-line-2/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-salt-line-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-salt-line/out/the-salt-line.epub",
+          "filename": "the-salt-line-en.epub"
+        },
+        {
+          "id": "the-salt-line-vn-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-salt-line-2/out/the-salt-line-2.epub",
+          "filename": "the-salt-line-vn-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-silent-signal",
+      "title": {
+        "en": "The Silent Signal",
+        "hr": "Tihi signal"
+      },
+      "blurb": {
+        "en": "A salvage-tug engineer sent to silence a mysterious radio pulse on a storm-battered island discovers it is her drowned brother's last message. It spells the coordinates of the wreck that proves who sank his ship.",
+        "hr": "Strojarica tegljača poslana da utiša tajanstveni radijski puls na olujom šibanom otoku otkriva da je to posljednja poruka njezina utopljenog brata. Puls otkriva koordinate olupine koja dokazuje tko je potopio njegov brod."
+      },
+      "cover": "scriptorium:the-silent-signal/out/cover.png",
+      "order": 150,
+      "plays": [
+        {
+          "id": "the-silent-signal-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel",
+            "hr": "Vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-silent-signal-2/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-silent-signal-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-silent-signal/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-silent-signal-book-vn",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-silent-signal-2/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-silent-signal-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-silent-signal/out/the-silent-signal.epub",
+          "filename": "the-silent-signal-en.epub"
+        },
+        {
+          "id": "the-silent-signal-vn-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-silent-signal-2/out/the-silent-signal-2.epub",
+          "filename": "the-silent-signal-vn-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-silent-summit",
+      "title": {
+        "en": "The Silent Summit",
+        "hr": "Tihi vrh"
+      },
+      "blurb": {
+        "en": "A deaf mountaineer leads a doubting team up a seven-thousand-metre peak to recover a lost bronze bell. When the weather closes in, the only way down is the vibration she can feel through the ice.",
+        "hr": "Gluha planinarka vodi sumnjičav tim na sedmotisućnjak kako bi vratila izgubljeno brončano zvono. Kad vrijeme zatvori put, jedini put prema dolje vodi preko podrhtavanja koje osjeća kroz led."
+      },
+      "cover": "scriptorium:the-silent-summit/out/cover.png",
+      "order": 160,
+      "plays": [
+        {
+          "id": "the-silent-summit-vn",
+          "type": "visual-novel",
+          "label": {
+            "en": "Visual novel",
+            "hr": "Vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "vn:the-silent-summit-2/game/game",
+          "player": "vn"
+        }
+      ],
+      "reads": [
+        {
+          "id": "the-silent-summit-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-silent-summit/out/reader",
+          "entry": "index.html"
+        },
+        {
+          "id": "the-silent-summit-book-vn",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-silent-summit-2/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-silent-summit-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-silent-summit/out/the-silent-summit.epub",
+          "filename": "the-silent-summit-en.epub"
+        },
+        {
+          "id": "the-silent-summit-vn-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Visual novel edition",
+            "hr": "Izdanje kao vizualni roman"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-silent-summit-2/out/the-silent-summit-2.epub",
+          "filename": "the-silent-summit-vn-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-hour-that-happens-twice",
+      "title": {
+        "en": "The Hour That Happens Twice",
+        "hr": "Sat koji se dogodi dvaput"
+      },
+      "blurb": {
+        "en": "A clock face marked HUIT leads a locksmith from Galway and a Paris restorer to Prague, where the voice of the national speaking clock has lost a day. A secret brotherhood plans to rob thousands of pensioners in the hour that happens twice. The second book about Dec and Inès.",
+        "hr": "Brojčanik s oznakom HUIT vodi bravara iz Galwaya i parišku restauratoricu u Prag, gdje je glas državnog govornog sata izgubio jedan dan. Tajno bratstvo planira opljačkati tisuće umirovljenika u satu koji se događa dvaput. Druga knjiga o Decu i Inès."
+      },
+      "cover": "scriptorium:the-hour-that-happens-twice/out/cover.png",
+      "order": 170,
+      "reads": [
+        {
+          "id": "the-hour-that-happens-twice-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-hour-that-happens-twice/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-hour-that-happens-twice-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-hour-that-happens-twice/out/the-hour-that-happens-twice.epub",
+          "filename": "the-hour-that-happens-twice-en.epub"
+        },
+        {
+          "id": "the-hour-that-happens-twice-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:the-hour-that-happens-twice-hr-9af646/output/the-hour-that-happens-twice.hr.epub",
+          "filename": "the-hour-that-happens-twice-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-clockwork-compass",
+      "title": {
+        "en": "The Clockwork Compass",
+        "hr": "Mehanički kompas"
+      },
+      "blurb": {
+        "en": "Wren inherits a brass compass that points not north but toward whatever has been lost. To keep it in her family she must cross the deadliest mountain range before a rival expedition gets there first.",
+        "hr": "Wren naslijedi mjedeni kompas koji ne pokazuje sjever, nego ono što je izgubljeno. Da ga zadrži u obitelji, mora prijeći najopasniji planinski lanac prije suparničke ekspedicije."
+      },
+      "cover": "scriptorium:the-clockwork-compass/out/cover.png",
+      "order": 180,
+      "reads": [
+        {
+          "id": "the-clockwork-compass-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-clockwork-compass/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-clockwork-compass-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-clockwork-compass/out/the-clockwork-compass.epub",
+          "filename": "the-clockwork-compass-en.epub"
+        },
+        {
+          "id": "the-clockwork-compass-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:the-clockwork-compass-hr-9541d6/output/the-clockwork-compass.hr.epub",
+          "filename": "the-clockwork-compass-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-iron-root",
+      "title": {
+        "en": "The Iron Root",
+        "hr": "Željezni korijen"
+      },
+      "blurb": {
+        "en": "A botanist barred from fieldwork returns to the valley that ended her career to find a root that cures a fever. She must decide whether saving a village means destroying the only place the plant can live.",
+        "hr": "Botaničarka kojoj je zabranjen terenski rad vraća se u dolinu koja joj je uništila karijeru kako bi pronašla korijen koji liječi groznicu. Mora odlučiti znači li spasiti selo uništiti jedino mjesto na kojem biljka može živjeti."
+      },
+      "cover": "scriptorium:the-iron-root/out/cover.png",
+      "order": 190,
+      "reads": [
+        {
+          "id": "the-iron-root-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-iron-root/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-iron-root-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-iron-root/out/the-iron-root.epub",
+          "filename": "the-iron-root-en.epub"
+        },
+        {
+          "id": "the-iron-root-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:the-iron-root-hr-113ede/output/the-iron-root.hr.epub",
+          "filename": "the-iron-root-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-saltwater-spy",
+      "title": {
+        "en": "The Saltwater Spy",
+        "hr": "Slanovodni špijun"
+      },
+      "blurb": {
+        "en": "A young marine biologist uses her knowledge of tides and sea life to infiltrate a smuggling ring hidden in an underwater base. If she fails, the reef she loves is lost.",
+        "hr": "Mlada morska biologinja koristi znanje o plimama i morskom životu kako bi se uvukla u krijumčarsku mrežu skrivenu u podvodnoj bazi. Ako ne uspije, izgubit će greben koji voli."
+      },
+      "cover": "scriptorium:the-saltwater-spy/out/cover.png",
+      "order": 200,
+      "reads": [
+        {
+          "id": "the-saltwater-spy-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-saltwater-spy/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-saltwater-spy-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-saltwater-spy/out/the-saltwater-spy.epub",
+          "filename": "the-saltwater-spy-en.epub"
+        },
+        {
+          "id": "the-saltwater-spy-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:the-saltwater-spy-hr-7a98ad/output/the-saltwater-spy.hr.epub",
+          "filename": "the-saltwater-spy-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-storm-chaser-s-secret",
+      "title": {
+        "en": "The Storm Chaser's Secret",
+        "hr": "Tajna lovca na oluje"
+      },
+      "blurb": {
+        "en": "A sixteen-year-old weather prodigy chasing a once-a-decade supercell finds that a rogue crew is steering the storm. She risks everything to trigger the lightning strike that can tear it apart.",
+        "hr": "Šesnaestogodišnja vremenska genijalka koja lovi superćelijsku oluju što se javlja jednom u desetljeće otkriva da oluju usmjerava odmetnuta ekipa. Riskira sve kako bi izazvala udar munje koji ju može raskinuti."
+      },
+      "cover": "scriptorium:the-storm-chaser-s-secret/out/cover.png",
+      "order": 210,
+      "reads": [
+        {
+          "id": "the-storm-chaser-s-secret-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-storm-chaser-s-secret/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-storm-chaser-s-secret-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-storm-chaser-s-secret/out/the-storm-chaser-s-secret.epub",
+          "filename": "the-storm-chaser-s-secret-en.epub"
+        },
+        {
+          "id": "the-storm-chaser-s-secret-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:the-storm-chaser-s-secret-hr-0d747a/output/the-storm-chaser-s-secret.hr.epub",
+          "filename": "the-storm-chaser-s-secret-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "windward-drift",
+      "title": {
+        "en": "Windward Drift",
+        "hr": "Vjetrovni zanos"
+      },
+      "blurb": {
+        "en": "A sailmaker attempts a solo crossing of an ocean where compasses fail, steering by wind and stars. To finish, she has to abandon the route she inherited and find her own.",
+        "hr": "Jedrarica pokušava sama preploviti ocean u kojem kompasi otkazuju, snalazeći se po vjetru i zvijezdama. Da bi stigla, mora napustiti naslijeđenu rutu i pronaći vlastitu."
+      },
+      "cover": "scriptorium:windward-drift/out/cover.png",
+      "order": 220,
+      "reads": [
+        {
+          "id": "windward-drift-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:windward-drift/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "windward-drift-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:windward-drift/out/windward-drift.epub",
+          "filename": "windward-drift-en.epub"
+        },
+        {
+          "id": "windward-drift-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:windward-drift-hr-431588/output/windward-drift.hr.epub",
+          "filename": "windward-drift-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "rust-and-ruin",
+      "title": {
+        "en": "Rust and Ruin",
+        "hr": "Rđa i ruševine"
+      },
+      "blurb": {
+        "en": "A structural engineer has six days before a tidal-river foundry is torn down. To rescue a forgotten archive she must read the collapsing building like a map, and trust her own judgement again.",
+        "hr": "Građevinska inženjerka ima šest dana prije rušenja ljevaonice na plimnoj rijeci. Da bi spasila zaboravljeni arhiv, mora čitati zgradu koja se ruši kao kartu i ponovno vjerovati vlastitoj prosudbi."
+      },
+      "cover": "scriptorium:rust-and-ruin/out/cover.png",
+      "order": 230,
+      "reads": [
+        {
+          "id": "rust-and-ruin-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:rust-and-ruin/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "rust-and-ruin-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:rust-and-ruin/out/rust-and-ruin.epub",
+          "filename": "rust-and-ruin-en.epub"
+        },
+        {
+          "id": "rust-and-ruin-book-hr-epub",
+          "group": "book",
+          "label": {
+            "en": "Book, Croatian edition",
+            "hr": "Knjiga, hrvatsko izdanje"
+          },
+          "language": "hr",
+          "format": "epub",
+          "source": "translator:rust-and-ruin-hr-05de83/output/rust-and-ruin.hr.epub",
+          "filename": "rust-and-ruin-hr.epub"
+        }
+      ]
+    },
+    {
+      "id": "the-umbrella-conductor",
+      "title": {
+        "en": "The Umbrella Conductor",
+        "hr": "Kondukterka kišobrana"
+      },
+      "blurb": {
+        "en": "A Zagreb tram conductor keeps every forgotten umbrella. On a wet November evening she finally meets the owner of the one she has carried longest, and learns why he never came to ask for it. A quiet bedtime story.",
+        "hr": "Zagrebačka kondukterka čuva svaki zaboravljeni kišobran. Jedne kišne studenoga večeri napokon upozna vlasnika onog koji nosi najduže i sazna zašto ga nikad nije došao tražiti. Tiha priča za laku noć."
+      },
+      "cover": "scriptorium:the-umbrella-conductor/out/cover.png",
+      "order": 240,
+      "reads": [
+        {
+          "id": "the-umbrella-conductor-book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:the-umbrella-conductor/out/reader",
+          "entry": "index.html"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "the-umbrella-conductor-book-en-epub",
+          "group": "book",
+          "label": {
+            "en": "Book",
+            "hr": "Knjiga"
+          },
+          "language": "en",
+          "format": "epub",
+          "source": "scriptorium:the-umbrella-conductor/out/the-umbrella-conductor.epub",
+          "filename": "the-umbrella-conductor-en.epub"
+        }
+      ]
+    },
+    {
+      "id": "france-als162",
+      "title": {
+        "en": "France's Atomic Clock on Air: The ALS162 Signal That Still Runs the Nation's Time",
+        "hr": "Francuski atomski sat u eteru: signal ALS162 koji još uvijek upravlja vremenom nacije"
+      },
+      "blurb": {
+        "en": "A single long-wave transmitter in Allouis keeps hundreds of thousands of clocks, from railway stations to hospital operating theatres, in step with atomic time. An article on who depends on it, how it can fail and whether France has a plan to replace it.",
+        "hr": "Jedan jedini dugovalni odašiljač u Allouisu drži u koraku s atomskim vremenom stotine tisuća satova, od željezničkih kolodvora do bolničkih operacijskih dvorana. Članak o tome tko ovisi o njemu, kako može zakazati i ima li Francuska plan zamjene."
+      },
+      "order": 250,
+      "reads": [
+        {
+          "id": "france-als162-article",
+          "label": {
+            "en": "Article",
+            "hr": "Članak"
+          },
+          "languages": [
+            "en"
+          ],
+          "source": "scriptorium:france-s-atomic-clock-on-air-the-als162-signal-t/out",
+          "entry": "article.html"
+        }
+      ]
+    }
+  ]
+}
