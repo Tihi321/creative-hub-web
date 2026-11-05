@@ -27,6 +27,7 @@
     volVoice: 90,
     storyTextSize: 100,
     uiLang: "en",
+    voiceMuted: false,
     schema: 2
   };
   let voiceActive = false;
@@ -36,6 +37,22 @@
   const puzzleHandlers = /* @__PURE__ */ new Map();
   const beatHandlers = /* @__PURE__ */ new Map();
   let dom = {};
+  const FOCUSABLE = "button, input, .vno-slot-card";
+  const TAP_BLOCK = "button, input, a, .vno-slot-card, .vno-screen, .vno-overlay, .vno-fullscreen-card, .vno-picker, .vno-pause-menu, .vno-hud-top, .vno-rotate-hint";
+  let pickerKind = "";
+  let pickerTrigger = null;
+  let pushedStates = 0;
+  let ignorePops = 0;
+  let autoFocusEl = null;
+  let autoFocusAt = 0;
+  const returnFocus = { screen: null, pause: null };
+  document.documentElement.setAttribute("data-vno-nav", "1");
+  window.VNO_NAV = {
+    version: 1,
+    focusFirst: function() {
+      return focusLayerFirst(topLayer(), false);
+    }
+  };
   function init() {
     cacheDom();
     setupVirtualStage();
@@ -107,6 +124,17 @@
     dom.prefUiLanguage = document.getElementById("vno-pref-ui-language");
     dom.prefUiLanguageRow = document.getElementById("vno-pref-row-ui-language");
     dom.prefStoryTextSize = document.getElementById("vno-pref-story-text-size");
+    dom.prefVoices = document.getElementById("vno-pref-voices");
+    dom.prefVoicesRow = document.getElementById("vno-pref-row-voices");
+    dom.voiceCluster = document.getElementById("vno-voice-cluster");
+    dom.voiceStop = document.getElementById("vno-voice-stop");
+    dom.voiceMute = document.getElementById("vno-voice-mute");
+    dom.picker = document.getElementById("vno-picker");
+    dom.pickerList = document.getElementById("vno-picker-list");
+    dom.pickerClose = document.getElementById("vno-picker-close");
+    dom.pauseMenu = document.getElementById("vno-pause-menu");
+    dom.quickMenu = document.getElementById("vno-quick-menu");
+    dom.rotateHint = document.getElementById("vno-rotate-hint");
     dom.audioMusic = document.getElementById("vno-audio-music");
     dom.audioAmbience = document.getElementById("vno-audio-ambience");
     dom.audioSfx = document.getElementById("vno-audio-sfx");
@@ -125,36 +153,44 @@
     dom.stage.style.transform = "translate(-50%, -50%) scale(" + scale + ")";
     dom.stage.style.left = "50%";
     dom.stage.style.top = "50%";
+    const k = isCoarsePointer() && scale > 0 ? Math.max(1, 48 / (40 * scale)) : 1;
+    setRootVar("--vno-hud-k", String(Math.round(k * 100) / 100));
+  }
+  function isCoarsePointer() {
+    try {
+      return typeof window.matchMedia === "function" && Boolean(window.matchMedia("(pointer: coarse)").matches);
+    } catch (err) {
+      return false;
+    }
+  }
+  function setRootVar(name, value) {
+    const root = document.documentElement;
+    if (!root || !root.style) return;
+    if (typeof root.style.setProperty === "function") root.style.setProperty(name, value);
+    else root.style[name] = value;
+  }
+  function unlockAutoplay() {
+    if (dom.audioMusic && dom.audioMusic.paused && dom.audioMusic.src) {
+      dom.audioMusic.play().catch(() => {
+      });
+    }
   }
   function setupAutoplayUnlock() {
-    const unlock = () => {
-      if (dom.audioMusic && dom.audioMusic.paused && dom.audioMusic.src) {
-        dom.audioMusic.play().catch(() => {
-        });
-      }
-    };
     ["click", "pointerdown", "keydown"].forEach((evt) => {
-      window.addEventListener(evt, unlock);
+      window.addEventListener(evt, unlockAutoplay);
     });
   }
-  function populateLanguageSelect(selectEl) {
-    if (!selectEl || !gameData || !gameData.languages) return;
-    selectEl.innerHTML = "";
-    gameData.languages.forEach((l) => {
-      const opt = document.createElement("option");
-      opt.value = l.code;
-      opt.textContent = l.nativeName && l.nativeName !== l.name ? l.nativeName + " (" + l.name + ")" : l.nativeName || l.name || l.code;
-      if (l.code === currentLang) opt.selected = true;
-      selectEl.appendChild(opt);
+  function languageLabel(l) {
+    return l && (l.nativeName || l.name || l.code) || "";
+  }
+  function updateLanguageButtons() {
+    if (!gameData) return;
+    const story = gameData.languages ? gameData.languages.find((l) => l.code === currentLang) : null;
+    [dom.stageLanguage, dom.prefLanguage].forEach((btn) => {
+      if (!btn) return;
+      btn.value = currentLang;
+      btn.textContent = story ? languageLabel(story) : currentLang;
     });
-  }
-  function getUiLanguages() {
-    if (!gameData) return [];
-    const list = gameData.uiLanguages;
-    if (!Array.isArray(list)) return [];
-    return list.filter((l) => Boolean(l && l.code));
-  }
-  function populateUiLanguageSelect(selectEl) {
     const row = dom.prefUiLanguageRow || document.getElementById("vno-pref-row-ui-language");
     const list = getUiLanguages();
     if (!list.length) {
@@ -162,18 +198,17 @@
       return;
     }
     if (row && row.classList) row.classList.remove("vno-hidden");
-    if (!selectEl) return;
-    selectEl.innerHTML = "";
-    list.forEach((l) => {
-      const opt = document.createElement("option");
-      opt.value = l.code;
-      opt.textContent = l.nativeName && l.nativeName !== l.name ? l.nativeName + " (" + l.name + ")" : l.nativeName || l.name || l.code;
-      if (l.code === settings.uiLang) opt.selected = true;
-      selectEl.appendChild(opt);
-    });
-    const label = ui("Interface Language", "Interface Language");
-    selectEl.title = label;
-    selectEl.setAttribute("aria-label", label);
+    const entry = list.find((l) => l.code === settings.uiLang);
+    if (dom.prefUiLanguage) {
+      dom.prefUiLanguage.value = settings.uiLang;
+      dom.prefUiLanguage.textContent = entry ? languageLabel(entry) : settings.uiLang;
+    }
+  }
+  function getUiLanguages() {
+    if (!gameData) return [];
+    const list = gameData.uiLanguages;
+    if (!Array.isArray(list)) return [];
+    return list.filter((l) => Boolean(l && l.code));
   }
   function normalizeUiLang() {
     const list = getUiLanguages();
@@ -202,9 +237,6 @@
     }
     if (pictureBook && dom.pageLayer) dom.pageLayer.classList.add("vno-hidden");
     normalizeUiLang();
-    populateLanguageSelect(dom.stageLanguage);
-    populateLanguageSelect(dom.prefLanguage);
-    populateUiLanguageSelect(dom.prefUiLanguage);
     updateLangBarVisibility();
     applyLanguageTypography();
     applyTextScale();
@@ -213,17 +245,12 @@
     if (gameData.audio && gameData.audio.music && gameData.audio.music.music_01) {
       playMusic("music_01");
     }
+    focusLayerFirst(topLayer(), true);
   }
   function switchLanguage(langCode) {
     if (!gameData || !gameData.editions || !gameData.editions[langCode]) return;
     currentLang = langCode;
     currentEdition = gameData.editions[langCode];
-    if (dom.stageLanguage && dom.stageLanguage.value !== langCode) {
-      dom.stageLanguage.value = langCode;
-    }
-    if (dom.prefLanguage && dom.prefLanguage.value !== langCode) {
-      dom.prefLanguage.value = langCode;
-    }
     applyLanguageTypography();
     updateUiStrings();
     refreshActiveScreens();
@@ -237,9 +264,6 @@
     }
     settings.uiLang = code;
     saveSettings();
-    if (dom.prefUiLanguage && dom.prefUiLanguage.value !== code) {
-      dom.prefUiLanguage.value = code;
-    }
     updateUiStrings();
     refreshActiveScreens();
   }
@@ -336,6 +360,60 @@
     const langLabel = ui("Language", "Language");
     if (dom.langBar) dom.langBar.title = langLabel;
     if (dom.stageLanguage) dom.stageLanguage.setAttribute("aria-label", langLabel);
+    setElemText("vno-pause-resume", ui("Resume", "Resume"));
+    setElemText("vno-pause-save", ui("Save", "Save"));
+    setElemText("vno-pause-load", ui("Load", "Load"));
+    setElemText("vno-pause-history", ui("History", "History"));
+    setElemText("vno-pause-prefs", ui("Preferences", "Preferences"));
+    setElemText("vno-pause-mainmenu", ui("Main Menu", "Main Menu"));
+    setElemText("vno-pref-label-voices", ui("Voices", "Voices"));
+    setElemText("vno-rotate-hint-text", ui("Rotate your device to landscape", "Rotate your device to landscape"));
+    if (dom.pickerClose) {
+      dom.pickerClose.title = closeLabel;
+      dom.pickerClose.setAttribute("aria-label", closeLabel);
+    }
+    updateLanguageButtons();
+    updateVoiceUi();
+  }
+  function hasVoiceFiles() {
+    const v = currentEdition && currentEdition.voice;
+    return Boolean(v && Object.keys(v).length > 0);
+  }
+  function updateVoiceUi() {
+    if (!dom.voiceCluster) return;
+    const has = hasVoiceFiles();
+    const muted = Boolean(settings.voiceMuted);
+    if (has) dom.voiceCluster.classList.remove("vno-hidden");
+    else dom.voiceCluster.classList.add("vno-hidden");
+    if (dom.prefVoicesRow) {
+      if (has) dom.prefVoicesRow.classList.remove("vno-hidden");
+      else dom.prefVoicesRow.classList.add("vno-hidden");
+    }
+    if (dom.voiceStop) {
+      const stopLabel = ui("Stop voice", "Stop voice");
+      if (!voiceActive && dom.voiceMute && document.activeElement === dom.voiceStop) focusEl(dom.voiceMute, false);
+      dom.voiceStop.disabled = !voiceActive;
+      dom.voiceStop.title = stopLabel;
+      dom.voiceStop.setAttribute("aria-label", stopLabel);
+    }
+    if (dom.voiceMute) {
+      const muteLabel = muted ? ui("Unmute voice", "Unmute voice") : ui("Mute voice", "Mute voice");
+      dom.voiceMute.setAttribute("aria-pressed", muted ? "true" : "false");
+      dom.voiceMute.title = muteLabel;
+      dom.voiceMute.setAttribute("aria-label", muteLabel);
+      dom.voiceMute.innerHTML = muted ? "&#128263;" : "&#128266;";
+    }
+    if (dom.prefVoices) dom.prefVoices.textContent = muted ? ui("Off", "Off") : ui("On", "On");
+  }
+  function setVoiceMuted(flag) {
+    settings.voiceMuted = Boolean(flag);
+    saveSettings();
+    if (settings.voiceMuted) stopVoice();
+    if (pictureBook && gameData && pageLayerVisible()) {
+      const entry = pictureBookPages()[pageIdx];
+      if (entry) updatePageReplay(entry.scene);
+    }
+    updateVoiceUi();
   }
   function storyTextScale() {
     return settingsNumber(settings.storyTextSize, 80, 140, 100) / 100;
@@ -478,6 +556,7 @@
     if (voiceActive === next) return;
     voiceActive = next;
     applyAudioVolumes();
+    updateVoiceUi();
   }
   function applyAudioVolumes() {
     if (dom.audioMusic) setVolumeSmooth(dom.audioMusic, channelGain(settings.volMusic) * (voiceActive ? 0.35 : 1));
@@ -487,17 +566,24 @@
   }
   function bindUiEvents() {
     if (dom.langBar) {
-      ["click", "mousedown", "mouseup", "touchstart", "keydown"].forEach((evt) => {
+      ["click", "mousedown", "mouseup", "touchstart"].forEach((evt) => {
         dom.langBar.addEventListener(evt, (e) => e.stopPropagation());
       });
     }
-    if (dom.stageLanguage) {
-      dom.stageLanguage.addEventListener("change", (e) => switchLanguage(e.target.value));
+    [dom.stageLanguage, dom.prefLanguage].forEach((btn) => {
+      if (btn) btn.addEventListener("click", () => openPicker("story", btn));
+    });
+    if (dom.prefUiLanguage) {
+      dom.prefUiLanguage.addEventListener("click", () => openPicker("ui", dom.prefUiLanguage));
     }
-    if (dom.prefLanguage) {
-      dom.prefLanguage.addEventListener("change", (e) => switchLanguage(e.target.value));
+    if (dom.picker) {
+      dom.picker.addEventListener("click", (e) => {
+        if (e && e.target === dom.picker) closePicker(true);
+      });
     }
-    dom.textboxContainer.addEventListener("click", onAdvanceClick);
+    if (dom.pickerClose) dom.pickerClose.addEventListener("click", () => closePicker(true));
+    dom.textboxContainer.addEventListener("click", onStageClick);
+    if (dom.stage) dom.stage.addEventListener("click", onStageClick);
     document.getElementById("vno-mm-start").addEventListener("click", startGame);
     document.getElementById("vno-mm-load").addEventListener("click", () => {
       if (pictureBook) {
@@ -517,12 +603,32 @@
     document.getElementById("vno-qm-qload").addEventListener("click", quickLoad);
     document.getElementById("vno-qm-prefs").addEventListener("click", () => openScreen(dom.screenPrefs));
     document.getElementById("vno-qm-menu").addEventListener("click", returnToMainMenu);
+    document.getElementById("vno-pause-resume").addEventListener("click", () => closePauseMenu(true));
+    document.getElementById("vno-pause-save").addEventListener("click", () => openSaveScreen(true));
+    document.getElementById("vno-pause-load").addEventListener("click", () => openSaveScreen(false));
+    document.getElementById("vno-pause-history").addEventListener("click", openHistoryScreen);
+    document.getElementById("vno-pause-prefs").addEventListener("click", () => openScreen(dom.screenPrefs));
+    document.getElementById("vno-pause-mainmenu").addEventListener("click", returnToMainMenu);
+    if (dom.pauseMenu) {
+      dom.pauseMenu.addEventListener("click", (e) => {
+        if (e && e.target === dom.pauseMenu) closePauseMenu(true);
+      });
+    }
+    if (dom.voiceStop) {
+      dom.voiceStop.addEventListener("click", () => {
+        stopVoice();
+        setVoiceActive(false);
+        updateVoiceUi();
+      });
+    }
+    if (dom.voiceMute) dom.voiceMute.addEventListener("click", () => setVoiceMuted(!settings.voiceMuted));
+    if (dom.prefVoices) dom.prefVoices.addEventListener("click", () => setVoiceMuted(!settings.voiceMuted));
+    if (dom.rotateHint) {
+      dom.rotateHint.addEventListener("click", () => dom.rotateHint.classList.add("vno-hidden"));
+    }
     document.querySelectorAll(".vno-screen-close").forEach((btn) => {
       btn.addEventListener("click", closeAllScreens);
     });
-    if (dom.prefUiLanguage) {
-      dom.prefUiLanguage.addEventListener("change", (e) => switchUiLanguage(e.target.value));
-    }
     document.getElementById("vno-pref-fullscreen").addEventListener("click", toggleFullscreen);
     bindRange("vno-pref-text-speed", "textSpeed");
     bindRange("vno-pref-auto-delay", "autoDelay");
@@ -593,58 +699,421 @@
     }
     return null;
   }
-  function closeScreenOnEscape(openScreen2) {
-    closeAllScreens();
-    let target = openScreen2 && openScreen2.querySelector ? openScreen2.querySelector(".vno-screen-close") : null;
-    if (!target && document.querySelectorAll) {
-      const closers = document.querySelectorAll(".vno-screen-close");
-      if (closers && closers.length) target = closers[0];
-    }
-    if (target && typeof target.focus === "function") target.focus();
+  function isShown(el) {
+    return Boolean(el && el.classList && !el.classList.contains("vno-hidden"));
   }
-  function bindKeyboardShortcuts() {
-    window.addEventListener("keydown", (e) => {
-      if (e && e.code === "Escape") {
-        const open = firstOpenScreen();
-        if (open) {
-          e.preventDefault();
-          closeScreenOnEscape(open);
-          return;
-        }
+  function usable(el) {
+    if (!el || el.disabled) return false;
+    if (typeof el.closest === "function" && el.closest(".vno-hidden")) return false;
+    return true;
+  }
+  function controlsIn(root) {
+    if (!root || typeof root.querySelectorAll !== "function") return [];
+    return Array.prototype.slice.call(root.querySelectorAll(FOCUSABLE)).filter(usable);
+  }
+  function activeControl() {
+    const a = document.activeElement;
+    return a && a !== document.body && a !== document.documentElement ? a : null;
+  }
+  function focusedIn(list) {
+    const a = document.activeElement;
+    return a && list.indexOf(a) >= 0 ? a : null;
+  }
+  function blurActive() {
+    const a = activeControl();
+    if (a && typeof a.blur === "function") a.blur();
+  }
+  function setKbMode(on) {
+    const root = document.documentElement;
+    if (!root || !root.classList) return;
+    if (on) root.classList.add("vno-kb");
+    else root.classList.remove("vno-kb");
+  }
+  function kbMode() {
+    const root = document.documentElement;
+    return Boolean(root && root.classList && root.classList.contains("vno-kb"));
+  }
+  function rectOf(el) {
+    if (!el || typeof el.getBoundingClientRect !== "function") return null;
+    const r = el.getBoundingClientRect();
+    if (!r) return null;
+    return { cx: r.left + r.width / 2, cy: r.top + r.height / 2, w: r.width, h: r.height };
+  }
+  function focusEl(el, auto) {
+    if (!el || typeof el.focus !== "function") return false;
+    try {
+      el.focus();
+    } catch (err) {
+      return false;
+    }
+    if (typeof el.scrollIntoView === "function" && typeof el.closest === "function" && el.closest(".vno-picker-list, .vno-screen-body, .vno-save-slots-grid")) {
+      try {
+        el.scrollIntoView({ block: "nearest" });
+      } catch (err) {
       }
-      if (e.target && (e.target.tagName === "SELECT" || e.target.tagName === "INPUT")) return;
-      if (dom.mainMenu && !dom.mainMenu.classList.contains("vno-hidden")) return;
-      if (pictureBook) {
-        if (e.code === "ArrowRight" || e.code === "Space" || e.code === "Enter") {
-          e.preventDefault();
-          nextPage();
-        } else if (e.code === "ArrowLeft" || e.code === "PageUp") {
-          e.preventDefault();
-          prevPage();
-        } else if (e.code === "Escape") {
-          e.preventDefault();
-          returnToMainMenu();
-        } else if (e.key === "f" || e.key === "F" || e.code === "F11") {
-          e.preventDefault();
-          toggleFullscreen();
-        }
+    }
+    if (auto) {
+      autoFocusEl = el;
+      autoFocusAt = Date.now();
+    }
+    return true;
+  }
+  function topLayer() {
+    if (isShown(dom.picker)) return { name: "picker", el: dom.picker };
+    const screen = firstOpenScreen();
+    if (screen) return { name: "screen", el: screen };
+    if (isShown(dom.pauseMenu)) return { name: "pause", el: dom.pauseMenu };
+    if (isShown(dom.puzzleOverlay)) return { name: "puzzle", el: dom.puzzleOverlay };
+    if (isShown(dom.choiceOverlay)) return { name: "choices", el: dom.choiceOverlay };
+    if (isShown(dom.endingCard)) return { name: "ending", el: dom.endingCard };
+    if (isShown(dom.mainMenu)) return { name: "menu", el: dom.mainMenu };
+    return { name: "game", el: dom.stage };
+  }
+  function pickerItems() {
+    const list = controlsIn(dom.pickerList);
+    return usable(dom.pickerClose) ? list.concat([dom.pickerClose]) : list;
+  }
+  function hudTopControls() {
+    return [dom.voiceStop, dom.voiceMute, dom.stageLanguage].filter(usable);
+  }
+  function hudControls() {
+    const top = hudTopControls();
+    if (pictureBook) return top.concat([dom.pageMenu, dom.pagePrev, dom.pageNext, dom.pageReplay].filter(usable));
+    return top.concat(controlsIn(dom.quickMenu));
+  }
+  function layerControls(top) {
+    if (top.name === "picker") return pickerItems();
+    if (top.name === "game") return hudControls();
+    if (top.name === "menu") return controlsIn(dom.mainMenu).concat(hudTopControls());
+    return controlsIn(top.el);
+  }
+  function hudEdgeTarget(dir, list) {
+    let best = null;
+    let bestRect = null;
+    list.forEach((el) => {
+      const r = rectOf(el);
+      if (!r) return;
+      if (!best) {
+        best = el;
+        bestRect = r;
         return;
       }
-      if (e.code === "Space" || e.code === "Enter") {
-        e.preventDefault();
-        onAdvanceClick();
-      } else if (e.code === "PageUp" || e.code === "ArrowLeft") {
-        e.preventDefault();
-        rollback();
-      } else if (e.code === "Escape") {
-        e.preventDefault();
-        if (!dom.screenPrefs.classList.contains("vno-hidden")) closeAllScreens();
-        else openScreen(dom.screenPrefs);
-      } else if (e.key === "f" || e.key === "F" || e.code === "F11") {
-        e.preventDefault();
-        toggleFullscreen();
+      const tie = Math.abs(r.cy - bestRect.cy) <= 4;
+      const better = dir === "up" ? r.cy < bestRect.cy - 4 || tie && r.cx > bestRect.cx : r.cy > bestRect.cy + 4 || tie && r.cx > bestRect.cx;
+      if (better) {
+        best = el;
+        bestRect = r;
       }
     });
+    return best || list[0] || null;
+  }
+  function preferredFocus(top, list) {
+    if (!list.length) return null;
+    for (let i = 0; i < list.length; i++) {
+      const el = list[i];
+      if (top.name === "picker" && el.getAttribute && el.getAttribute("aria-selected") === "true") return el;
+      if (top.name === "screen" && el.classList && !el.classList.contains("vno-screen-close")) return el;
+    }
+    if (top.name === "game") return hudEdgeTarget("up", list);
+    return list[0];
+  }
+  function focusLayerFirst(top, auto) {
+    return focusEl(preferredFocus(top, layerControls(top)), auto);
+  }
+  function spatialMove(cur, list, dir) {
+    const here = rectOf(cur);
+    if (!here) {
+      const at = list.indexOf(cur);
+      const step = dir === "left" || dir === "up" ? -1 : 1;
+      return list[at + step] || null;
+    }
+    let best = null;
+    let bestScore = Infinity;
+    list.forEach((el) => {
+      if (el === cur) return;
+      const r = rectOf(el);
+      if (!r || r.w <= 0 && r.h <= 0) return;
+      const dx = r.cx - here.cx;
+      const dy = r.cy - here.cy;
+      const primary = dir === "right" ? dx : dir === "left" ? -dx : dir === "down" ? dy : -dy;
+      const perp = dir === "left" || dir === "right" ? Math.abs(dy) : Math.abs(dx);
+      if (primary <= 2) return;
+      const score = primary + perp * 2;
+      if (score < bestScore) {
+        bestScore = score;
+        best = el;
+      }
+    });
+    return best;
+  }
+  function activate(el, e) {
+    if (e && e.repeat) return true;
+    if (el === autoFocusEl && Date.now() - autoFocusAt < 700 && typeof el.closest === "function" && el.closest("#vno-choice-overlay, #vno-ending-card")) return true;
+    if (el.tagName === "INPUT") return true;
+    if (typeof el.click === "function") el.click();
+    return true;
+  }
+  function restoreFocus(el, always) {
+    if (el && usable(el) && (always || kbMode())) {
+      focusEl(el, true);
+      return;
+    }
+    const top = topLayer();
+    if (top.name === "game") blurActive();
+    else focusLayerFirst(top, true);
+  }
+  function layerDepth() {
+    return (isShown(dom.picker) ? 1 : 0) + (firstOpenScreen() ? 1 : 0) + (isShown(dom.pauseMenu) ? 1 : 0);
+  }
+  function syncHistory() {
+    const h = window.history;
+    if (!h || typeof h.pushState !== "function") return;
+    const depth = layerDepth();
+    try {
+      while (pushedStates < depth) {
+        h.pushState({ vno: 1 }, "");
+        pushedStates++;
+      }
+      if (pushedStates > depth) {
+        const extra = pushedStates - depth;
+        pushedStates = depth;
+        ignorePops++;
+        h.go(-extra);
+      }
+    } catch (err) {
+    }
+  }
+  function onPopState() {
+    if (ignorePops > 0) {
+      ignorePops--;
+      return;
+    }
+    if (pushedStates > 0) pushedStates--;
+    closeTopLayer();
+  }
+  function closeTopLayer() {
+    const top = topLayer();
+    if (top.name === "picker") {
+      closePicker(true);
+      return true;
+    }
+    if (top.name === "screen") {
+      closeAllScreens();
+      restoreFocus(returnFocus.screen, false);
+      return true;
+    }
+    if (top.name === "pause") {
+      closePauseMenu(true);
+      return true;
+    }
+    return false;
+  }
+  function openPicker(kind, trigger) {
+    if (!gameData || !dom.picker || !dom.pickerList) return;
+    const list = kind === "ui" ? getUiLanguages() : gameData.languages || [];
+    if (!list.length) return;
+    const current = kind === "ui" ? settings.uiLang : currentLang;
+    pickerKind = kind;
+    pickerTrigger = trigger || null;
+    setElemText("vno-picker-title", kind === "ui" ? ui("Interface Language", "Interface Language") : ui("Story Language", "Story Language"));
+    dom.pickerList.innerHTML = "";
+    const cols = list.length <= 6 ? 1 : list.length <= 16 ? 2 : 3;
+    if (dom.pickerList.style) dom.pickerList.style.gridTemplateColumns = "repeat(" + cols + ", 380px)";
+    list.forEach((l) => {
+      const item = document.createElement("button");
+      item.setAttribute("type", "button");
+      item.className = "vno-picker-item";
+      item.setAttribute("role", "option");
+      item.value = l.code;
+      item.textContent = languageLabel(l);
+      if (l.name && l.name !== languageLabel(l)) item.title = l.name;
+      item.setAttribute("aria-selected", l.code === current ? "true" : "false");
+      item.addEventListener("click", () => pickLanguage(l.code));
+      dom.pickerList.appendChild(item);
+    });
+    dom.picker.classList.remove("vno-hidden");
+    syncHistory();
+    focusLayerFirst({ name: "picker", el: dom.picker }, true);
+  }
+  function closePicker(restore) {
+    if (!isShown(dom.picker)) return;
+    dom.picker.classList.add("vno-hidden");
+    const back = pickerTrigger;
+    pickerTrigger = null;
+    pickerKind = "";
+    syncHistory();
+    if (restore) restoreFocus(back, true);
+  }
+  function pickLanguage(code) {
+    const kind = pickerKind;
+    closePicker(true);
+    if (kind === "ui") switchUiLanguage(code);
+    else switchLanguage(code);
+  }
+  function openPauseMenu() {
+    if (!gameData || pictureBook || !dom.pauseMenu) return;
+    if (isShown(dom.mainMenu) || isShown(dom.pauseMenu) || isShown(dom.picker) || firstOpenScreen()) return;
+    returnFocus.pause = activeControl();
+    dom.pauseMenu.classList.remove("vno-hidden");
+    syncHistory();
+    focusLayerFirst({ name: "pause", el: dom.pauseMenu }, true);
+  }
+  function closePauseMenu(restore) {
+    if (!isShown(dom.pauseMenu)) return;
+    dom.pauseMenu.classList.add("vno-hidden");
+    syncHistory();
+    if (restore) restoreFocus(returnFocus.pause, false);
+  }
+  function keyAction(e) {
+    const k = e.key;
+    const kc = e.keyCode || e.which || 0;
+    if (k === "Escape" || k === "Esc" || k === "Backspace" || k === "GoBack" || k === "BrowserBack" || kc === 27 || kc === 8 || kc === 4 || kc === 461 || kc === 10009) return "back";
+    if (k === "Enter" || k === "Select" || kc === 13 || kc === 23 || kc === 29443) return "ok";
+    if (k === " " || k === "Spacebar" || kc === 32) return "space";
+    if (k === "ArrowLeft" || k === "Left" || kc === 37) return "left";
+    if (k === "ArrowUp" || k === "Up" || kc === 38) return "up";
+    if (k === "ArrowRight" || k === "Right" || kc === 39) return "right";
+    if (k === "ArrowDown" || k === "Down" || kc === 40) return "down";
+    if (k === "PageUp" || kc === 33) return "pageup";
+    if (k === "f" || k === "F" || k === "F11" || kc === 122) return "fullscreen";
+    return "";
+  }
+  function isArrow(act) {
+    return act === "left" || act === "right" || act === "up" || act === "down";
+  }
+  function onKeyDown(e) {
+    if (!e || e.defaultPrevented) return;
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    if (e.key !== "Shift" && e.key !== "Control" && e.key !== "Alt" && e.key !== "Meta") setKbMode(true);
+    const act = keyAction(e);
+    if (!act) return;
+    unlockAutoplay();
+    if (handleKey(act, e)) {
+      if (typeof e.preventDefault === "function") e.preventDefault();
+      if (typeof e.stopPropagation === "function") e.stopPropagation();
+    }
+  }
+  function handleKey(act, e) {
+    const top = topLayer();
+    if (top.name === "game") return handleGameKey(act, e);
+    if (act === "fullscreen") return false;
+    const list = layerControls(top);
+    const active = focusedIn(list);
+    if (act === "back") {
+      if (top.name === "menu") return false;
+      if (top.name === "picker" || top.name === "screen" || top.name === "pause") return closeTopLayer();
+      openPauseMenu();
+      return true;
+    }
+    if (isArrow(act)) {
+      autoFocusEl = null;
+      if (active && active.tagName === "INPUT" && (act === "left" || act === "right")) return false;
+      if (!list.length) return true;
+      if (!active) {
+        focusEl(preferredFocus(top, list), false);
+        return true;
+      }
+      const next = spatialMove(active, list, act);
+      if (next) {
+        focusEl(next, false);
+        return true;
+      }
+      if (act === "up" && top.name === "menu") {
+        blurActive();
+        return false;
+      }
+      return true;
+    }
+    if (act === "ok" || act === "space") {
+      if (!active) {
+        focusEl(preferredFocus(top, list), false);
+        return true;
+      }
+      return activate(active, e);
+    }
+    return false;
+  }
+  function handleGameKey(act, e) {
+    const list = hudControls();
+    const active = focusedIn(list);
+    if (active) {
+      if (act === "back") {
+        blurActive();
+        return true;
+      }
+      if (isArrow(act)) {
+        const next = spatialMove(active, list, act);
+        if (next) {
+          focusEl(next, false);
+          return true;
+        }
+        if (act === "up") {
+          blurActive();
+          return false;
+        }
+        return true;
+      }
+      if (act === "ok" || act === "space") return activate(active, e);
+    }
+    if (act === "fullscreen") {
+      toggleFullscreen();
+      return true;
+    }
+    if ((act === "ok" || act === "space") && isShown(dom.chapterCard)) {
+      dom.chapterCard.click();
+      return true;
+    }
+    if (pictureBook) {
+      if (act === "right" || act === "space" || act === "ok") {
+        nextPage();
+        return true;
+      }
+      if (act === "left" || act === "pageup") {
+        prevPage();
+        return true;
+      }
+      if (act === "back") {
+        returnToMainMenu();
+        return true;
+      }
+    } else {
+      if (act === "space" || act === "ok") {
+        onAdvanceClick();
+        return true;
+      }
+      if (act === "left" || act === "pageup") {
+        rollback();
+        return true;
+      }
+      if (act === "back") {
+        openPauseMenu();
+        return true;
+      }
+    }
+    if ((act === "up" || act === "down") && list.length) {
+      focusEl(hudEdgeTarget(act, list), false);
+      return true;
+    }
+    return false;
+  }
+  function onStageClick(e) {
+    if (pictureBook || !gameData) return;
+    if (e) {
+      if (e.__vnoTap) return;
+      e.__vnoTap = true;
+    }
+    const t = e ? e.target : null;
+    if (t && typeof t.closest === "function" && t.closest(TAP_BLOCK)) return;
+    if (isShown(dom.mainMenu) || isShown(dom.picker) || isShown(dom.pauseMenu) || firstOpenScreen()) return;
+    if (isShown(dom.puzzleOverlay) || isShown(dom.choiceOverlay) || isShown(dom.endingCard) || isShown(dom.chapterCard)) return;
+    onAdvanceClick();
+  }
+  function bindKeyboardShortcuts() {
+    document.addEventListener("keydown", onKeyDown);
+    ["mousedown", "touchstart", "pointerdown"].forEach((evt) => {
+      document.addEventListener(evt, () => setKbMode(false), true);
+    });
+    window.addEventListener("popstate", onPopState);
   }
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
@@ -692,6 +1161,7 @@
     if (gameData && gameData.audio && gameData.audio.music && gameData.audio.music.music_01) {
       playMusic("music_01");
     }
+    focusLayerFirst(topLayer(), true);
   }
   function playChapter(chIdx) {
     if (!gameData.chapters[chIdx]) {
@@ -951,6 +1421,8 @@
   }
   function showChoices(choices) {
     activeChoices = choices;
+    const before = controlsIn(dom.choiceContainer);
+    const keep = before.indexOf(document.activeElement);
     dom.choiceContainer.innerHTML = "";
     const ch = gameData.chapters[currentChapterIdx];
     const chNum = ch ? ch.number : currentChapterIdx + 1;
@@ -969,6 +1441,8 @@
       dom.choiceContainer.appendChild(btn);
     });
     dom.choiceOverlay.classList.remove("vno-hidden");
+    const now = controlsIn(dom.choiceContainer);
+    focusEl(now[keep >= 0 ? keep : 0], keep < 0);
   }
   function showEnding(msg) {
     activeEndingMsg = msg || "";
@@ -976,6 +1450,7 @@
     const localizedEnding = currentEdition && currentEdition.endings && ch && currentEdition.endings[ch.number] || msg || ui("The End", "The End");
     dom.endingCardText.textContent = localizedEnding;
     dom.endingCard.classList.remove("vno-hidden");
+    focusEl(controlsIn(dom.endingCard)[0], true);
   }
   function launchPuzzle(puzzleKey, onFail) {
     const pz = gameData.puzzles[puzzleKey];
@@ -1159,6 +1634,7 @@
     });
   }
   function playVoiceForBeat(beatId) {
+    if (settings.voiceMuted) return;
     if (!currentEdition || !currentEdition.voice || !currentEdition.voice[beatId]) return;
     const rel = currentEdition.voice[beatId];
     dom.audioVoice.src = rel;
@@ -1351,6 +1827,8 @@
       const raw = localStorage.getItem(key);
       const card = document.createElement("div");
       card.className = "vno-slot-card";
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
       if (raw) {
         const item = JSON.parse(raw);
         card.innerHTML = "<h4>Slot " + slotId + "</h4><p>" + new Date(item.timestamp).toLocaleString() + "</p><p>" + item.text + "...</p>";
@@ -1395,13 +1873,21 @@
     openScreen(dom.screenHistory);
   }
   function openScreen(screenEl) {
-    closeAllScreens();
+    const from = activeControl();
+    hideScreens();
     screenEl.classList.remove("vno-hidden");
+    returnFocus.screen = from;
+    syncHistory();
+    focusLayerFirst({ name: "screen", el: screenEl }, true);
   }
-  function closeAllScreens() {
-    [dom.screenSave, dom.screenPrefs, dom.screenHistory, dom.screenAbout].forEach((s) => {
+  function hideScreens() {
+    [dom.screenSave, dom.screenPrefs, dom.screenHistory, dom.screenAbout, dom.pauseMenu].forEach((s) => {
       if (s) s.classList.add("vno-hidden");
     });
+  }
+  function closeAllScreens() {
+    hideScreens();
+    syncHistory();
   }
   function pictureBookPages() {
     const pages = [];
@@ -1533,6 +2019,7 @@
     if (dom.endingCardText) dom.endingCardText.textContent = activeEndingMsg;
     if (dom.pageLayer) dom.pageLayer.classList.add("vno-hidden");
     if (dom.endingCard) dom.endingCard.classList.remove("vno-hidden");
+    focusEl(controlsIn(dom.endingCard)[0], true);
   }
   function pageVoiceClips(scene) {
     const clips = [];
@@ -1548,7 +2035,7 @@
   function updatePageReplay(scene) {
     pageVoices = pageVoiceClips(scene);
     pageVoiceIdx = 0;
-    const has = pageVoices.length > 0;
+    const has = pageVoices.length > 0 && !settings.voiceMuted;
     if (dom.pageReplay) {
       if (has) dom.pageReplay.classList.remove("vno-hidden");
       else dom.pageReplay.classList.add("vno-hidden");
@@ -1560,6 +2047,7 @@
     playNextPageVoiceClip();
   }
   function playNextPageVoiceClip() {
+    if (settings.voiceMuted) return;
     if (!pageVoices || pageVoiceIdx >= pageVoices.length) return;
     const rel = pageVoices[pageVoiceIdx];
     pageVoiceIdx++;
@@ -1607,6 +2095,7 @@
     settings.volVoice = settingsNumber(settings.volVoice, 0, 100, 90);
     settings.storyTextSize = settingsNumber(settings.storyTextSize, 80, 140, 100);
     if (typeof settings.uiLang !== "string" || !settings.uiLang) settings.uiLang = "en";
+    settings.voiceMuted = settings.voiceMuted === true;
     if (!stored || stored.schema === void 0 || stored.schema === null) {
       settings.volMusic = Math.min(settingsNumber(settings.volMusic, 0, 100, 48), 60);
       settings.schema = 2;

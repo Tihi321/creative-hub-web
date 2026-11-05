@@ -62,6 +62,22 @@
   padding: 0;
 }
 
+/* VNO-62: handleResize sets this on a coarse pointer so a HUD target is at least 48 CSS px after the stage scale (1 everywhere else) */
+:root {
+  --vno-hud-k: 1;
+}
+
+/* Keyboard and remote focus (Chrome 61 has no :focus-visible): the ring shows only after a key was used; a pointer removes vno-kb again */
+button:focus, input:focus, .vno-slot-card:focus {
+  outline: none;
+}
+
+.vno-kb :focus {
+  outline: 4px solid var(--vno-ui-focus, #8ab4ff);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 10px rgba(138,180,255,0.35);
+}
+
 body.vno-body {
   width: 100vw;
   height: 100vh;
@@ -101,6 +117,8 @@ body.vno-body {
   background-color: var(--vno-color-bg, #101018);
   transform-origin: center center;
   transform: translate(-50%, -50%) scale(1);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Layers */
@@ -328,9 +346,11 @@ body.vno-body {
   transition: color 0.15s, background 0.15s;
 }
 
-.vno-qm-btn:hover {
-  color: var(--vno-color-hover, #fff);
-  background: rgba(255,255,255,0.1);
+@media (hover: hover) {
+  .vno-qm-btn:hover {
+    color: var(--vno-color-hover, #fff);
+    background: rgba(255,255,255,0.1);
+  }
 }
 
 /* Choice Menu */
@@ -357,10 +377,12 @@ body.vno-body {
   transition: background 0.2s, color 0.2s, transform 0.1s;
 }
 
-.vno-choice-btn:hover {
-  background: var(--vno-choice-hover-bg, rgba(40,40,60,0.95));
-  color: var(--vno-choice-hover-text-color, #fff);
-  transform: scale(1.02);
+@media (hover: hover) {
+  .vno-choice-btn:hover {
+    background: var(--vno-choice-hover-bg, rgba(40,40,60,0.95));
+    color: var(--vno-choice-hover-text-color, #fff);
+    transform: scale(1.02);
+  }
 }
 
 /* Fullscreen Cards */
@@ -457,13 +479,10 @@ body.vno-body {
   cursor: pointer;
 }
 
-.vno-screen-close:hover {
-  background: var(--vno-ui-surface-2, rgba(255,255,255,0.14));
-}
-
-.vno-screen-close:focus-visible {
-  outline: 3px solid var(--vno-ui-focus, #8ab4ff);
-  outline-offset: 2px;
+@media (hover: hover) {
+  .vno-screen-close:hover {
+    background: var(--vno-ui-surface-2, rgba(255,255,255,0.14));
+  }
 }
 
 .vno-screen-close span {
@@ -537,10 +556,12 @@ body.vno-body {
   text-align: right;
 }
 
-.vno-menu-btn:hover, .vno-button:hover {
-  background: var(--vno-color-hover, #444);
-  color: var(--vno-color-selected, #fff);
-  border-color: var(--vno-color-accent, #888);
+@media (hover: hover) {
+  .vno-menu-btn:hover, .vno-button:hover {
+    background: var(--vno-color-hover, #444);
+    color: var(--vno-color-selected, #fff);
+    border-color: var(--vno-color-accent, #888);
+  }
 }
 
 /* Save Slots */
@@ -587,9 +608,11 @@ body.vno-body {
   justify-content: space-between;
 }
 
-.vno-slot-card:hover {
-  border-color: var(--vno-color-accent, #aaa);
-  background: rgba(255,255,255,0.05);
+@media (hover: hover) {
+  .vno-slot-card:hover {
+    border-color: var(--vno-color-accent, #aaa);
+    background: rgba(255,255,255,0.05);
+  }
 }
 
 /* Preferences */
@@ -653,11 +676,6 @@ body.vno-body {
   cursor: pointer;
 }
 
-.vno-pref-control input[type="range"]:focus-visible {
-  outline: 3px solid var(--vno-ui-focus, #8ab4ff);
-  outline-offset: 2px;
-}
-
 .vno-pref-value {
   min-width: 76px;
   text-align: right;
@@ -681,6 +699,7 @@ body.vno-body {
   font-family: var(--vno-font-interface, sans-serif);
   font-size: var(--vno-size-interface, 26px);
   cursor: pointer;
+  text-align: left;
   text-overflow: ellipsis;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23707080' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -688,19 +707,10 @@ body.vno-body {
   background-size: 16px;
 }
 
-.vno-select:focus-visible {
-  outline: 3px solid var(--vno-ui-focus, #8ab4ff);
-  outline-offset: 2px;
-}
-
-.vno-select option {
-  background: var(--vno-ui-control-bg, #222);
-  color: var(--vno-ui-control-text, #fff);
-}
-
 [dir="rtl"] .vno-select {
   padding: 10px 14px 10px 40px;
   background-position: left 14px center;
+  text-align: right;
 }
 
 @media (max-width: 900px) {
@@ -818,16 +828,71 @@ body.vno-body {
   z-index: 60;
 }
 
-/* Persistent Stage Language Bar */
-.vno-lang-bar {
+/* Top-right HUD (VNO-62): the voice cluster and the persistent stage language chip. Spacing uses margins (flex gap needs Chrome 84). */
+.vno-hud-top {
   position: absolute;
   top: 20px;
   right: 28px;
   z-index: 200;
+  display: flex;
+  align-items: center;
+}
+
+[dir="rtl"] .vno-hud-top {
+  right: auto;
+  left: 28px;
+}
+
+.vno-voice-cluster {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+[dir="rtl"] .vno-voice-cluster {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+.vno-hud-btn {
+  min-width: calc(40px * var(--vno-hud-k));
+  min-height: calc(40px * var(--vno-hud-k));
+  padding: 4px 12px;
+  background: var(--vno-ui-surface, rgba(0,0,0,0.7));
+  border: 1px solid var(--vno-ui-border, #555);
+  border-radius: 6px;
+  color: var(--vno-ui-text, #e8e8f2);
+  font-family: var(--vno-font-interface, sans-serif);
+  font-size: calc(22px * (1 + (var(--vno-hud-k) - 1) * 0.5));
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.vno-hud-btn + .vno-hud-btn {
+  margin-left: 8px;
+}
+
+[dir="rtl"] .vno-hud-btn + .vno-hud-btn {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.vno-hud-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.vno-hud-btn[aria-pressed="true"] {
+  border-color: var(--vno-color-accent, #8ab4ff);
+  color: var(--vno-color-accent, #8ab4ff);
+}
+
+/* Persistent Stage Language Bar (a chip that opens the language picker) */
+.vno-lang-bar {
   pointer-events: auto;
   display: flex;
   align-items: center;
-  gap: 8px;
   background: var(--vno-ui-surface, rgba(0,0,0,0.7));
   border: 1px solid var(--vno-ui-border, #555);
   border-radius: 6px;
@@ -836,15 +901,19 @@ body.vno-body {
 }
 
 [dir="rtl"] .vno-lang-bar {
-  right: auto;
-  left: 28px;
+  direction: rtl;
 }
 
 .vno-lang-bar-label {
   font-size: 20px;
   line-height: 1;
+  margin-right: 8px;
   color: var(--vno-ui-text, #e8e8f2);
-  cursor: pointer;
+}
+
+[dir="rtl"] .vno-lang-bar-label {
+  margin-right: 0;
+  margin-left: 8px;
 }
 
 .vno-lang-select {
@@ -852,22 +921,172 @@ body.vno-body {
   color: var(--vno-ui-text, #e8e8f2);
   border: none;
   font-family: var(--vno-font-interface, sans-serif);
-  font-size: 20px;
+  font-size: calc(20px * (1 + (var(--vno-hud-k) - 1) * 0.5));
+  min-height: calc(40px * var(--vno-hud-k));
+  min-width: calc(40px * var(--vno-hud-k));
   cursor: pointer;
-  outline: none;
-  padding-right: 4px;
+  padding: 0 4px;
   max-width: 380px;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.vno-lang-select:focus-visible {
-  outline: 3px solid var(--vno-ui-focus, #8ab4ff);
-  outline-offset: 2px;
+/* Language picker (VNO-62): one list on top of everything, 1-3 columns, scrolls with focus */
+.vno-picker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vno-ui-scrim, rgba(0,0,0,0.85));
 }
 
-.vno-lang-select option {
-  background: var(--vno-ui-control-bg, #181824);
+.vno-picker-panel {
+  display: flex;
+  flex-direction: column;
+  max-width: 96%;
+  max-height: 92%;
+  background: var(--vno-ui-surface, #181824);
+  color: var(--vno-ui-text, #fff);
+  border: 2px solid var(--vno-ui-border, #333);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+  padding-bottom: 24px;
+}
+
+.vno-picker-head {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--vno-ui-border, rgba(255,255,255,0.1));
+}
+
+.vno-picker-head h2 {
+  font-family: var(--vno-font-interface, sans-serif);
+  font-size: 40px;
+  margin-right: 24px;
+  color: var(--vno-ui-text, #e8e8f2);
+}
+
+.vno-picker-close {
+  flex: 0 0 auto;
+  min-width: calc(12px + 40px * var(--vno-hud-k));
+  min-height: calc(12px + 40px * var(--vno-hud-k));
+  border-radius: 999px;
+  border: 1px solid var(--vno-ui-border, #555);
+  background: transparent;
+  color: var(--vno-ui-text, #e8e8f2);
+  font-family: var(--vno-font-interface, sans-serif);
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.vno-picker-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-gap: 14px;
+  padding: 24px 30px 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+.vno-picker-item {
+  min-height: calc(64px * var(--vno-hud-k));
+  padding: 10px 20px;
+  background: var(--vno-ui-control-bg, #222);
   color: var(--vno-ui-control-text, #fff);
+  border: 1px solid var(--vno-ui-border, #555);
+  border-radius: 8px;
+  font-family: var(--vno-font-interface, sans-serif);
+  font-size: calc(30px * (1 + (var(--vno-hud-k) - 1) * 0.5));
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+[dir="rtl"] .vno-picker-item {
+  text-align: right;
+}
+
+.vno-picker-item[aria-selected="true"] {
+  border-color: var(--vno-color-accent, #8ab4ff);
+  background: var(--vno-ui-surface-2, rgba(255,255,255,0.14));
+  font-weight: bold;
+}
+
+.vno-picker-item[aria-selected="true"]::after {
+  content: " \2713";
+}
+
+@media (hover: hover) {
+  .vno-picker-item:hover {
+    background: var(--vno-ui-surface-2, rgba(255,255,255,0.14));
+  }
+}
+
+/* Pause menu (VNO-62): Back / Esc during play */
+.vno-pause-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.7);
+}
+
+.vno-pause-panel {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  padding: 32px;
+  background: var(--vno-ui-surface, #181824);
+  border: 2px solid var(--vno-ui-border, #333);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+}
+
+.vno-pause-panel .vno-menu-btn + .vno-menu-btn {
+  margin-top: 14px;
+}
+
+/* The rotate hint (VNO-62): only on a coarse pointer held upright, over the letterbox below the strip-sized stage */
+.vno-rotate-hint {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 60%;
+  z-index: 400;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  color: #fff;
+  font-family: var(--vno-font-interface, sans-serif);
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (pointer: coarse) and (orientation: portrait) {
+  .vno-rotate-hint {
+    display: flex;
+  }
 }
 
 /* Picture book (one full illustration on top, the page's caption below, page turns). Nothing of the visual-novel stage is visible. */
@@ -1009,8 +1228,10 @@ body.vno-picturebook .vno-page-layer {
   transition: color 0.15s ease;
 }
 
-.vno-page-nav:hover {
-  color: var(--vno-color-hover, #fff);
+@media (hover: hover) {
+  .vno-page-nav:hover {
+    color: var(--vno-color-hover, #fff);
+  }
 }
 
 .vno-page-nav:disabled {
@@ -1045,6 +1266,65 @@ body.vno-picturebook .vno-page-layer {
 @media (prefers-reduced-motion: reduce) {
   .vno-page-image {
     transition: none;
+  }
+}
+
+/* Touch (VNO-62): every target is at least 48 CSS px after the stage scale (--vno-hud-k, set by the player on a coarse pointer). The quick menu moves above the text box and the scene title to the top left, so the big buttons do not cover the dialogue. */
+@media (pointer: coarse) {
+  .vno-quick-menu {
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  [dir="rtl"] .vno-quick-menu {
+    right: auto;
+    left: 0;
+  }
+
+  .vno-qm-btn {
+    min-width: calc(40px * var(--vno-hud-k));
+    min-height: calc(40px * var(--vno-hud-k));
+    padding: 4px 14px;
+    font-size: calc(18px * (1 + (var(--vno-hud-k) - 1) * 0.5));
+  }
+
+  .vno-scene-title {
+    top: 20px;
+    left: 28px;
+    right: auto;
+    bottom: auto;
+    max-width: 40%;
+    text-align: left;
+  }
+
+  [dir="rtl"] .vno-scene-title {
+    left: auto;
+    right: 28px;
+    text-align: right;
+  }
+
+  .vno-menu-btn, .vno-button, .vno-select, .vno-page-btn, .vno-choice-btn, .vno-page-menu, .vno-page-nav {
+    min-height: calc(40px * var(--vno-hud-k));
+  }
+
+  .vno-page-nav {
+    min-width: calc(40px * var(--vno-hud-k));
+  }
+
+  .vno-menu-btn, .vno-button, .vno-select {
+    font-size: calc(26px * (1 + (var(--vno-hud-k) - 1) * 0.5));
+  }
+
+  .vno-screen-close {
+    min-width: calc(12px + 40px * var(--vno-hud-k));
+    min-height: calc(12px + 40px * var(--vno-hud-k));
+  }
+
+  .vno-pref-control input[type="range"] {
+    height: calc(24px * var(--vno-hud-k));
   }
 }
 
