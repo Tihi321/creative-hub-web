@@ -1338,7 +1338,15 @@ window.VNO_GAME_DATA = {
         "Story Language": "Jezik priče",
         "Story Text Size": "Veličina teksta priče",
         "Save Game": "Spremi igru",
-        "Load Game": "Učitaj igru"
+        "Load Game": "Učitaj igru",
+        "Stop voice": "Zaustavi glas",
+        "Mute voice": "Utišaj glas",
+        "Unmute voice": "Uključi glas",
+        "Voices": "Glasovi",
+        "On": "Uključeno",
+        "Off": "Isključeno",
+        "Resume": "Nastavi",
+        "Rotate your device to landscape": "Okrenite uređaj u vodoravni položaj"
       },
       "voice": {
         "ch01.s01.b002": "voice/hr/ch01.s01.b002.mp3",
@@ -1585,7 +1593,15 @@ window.VNO_GAME_DATA = {
         "Close": "Zatvori",
         "Interface Language": "Jezik sučelja",
         "Story Language": "Jezik priče",
-        "Story Text Size": "Veličina teksta priče"
+        "Story Text Size": "Veličina teksta priče",
+        "Stop voice": "Zaustavi glas",
+        "Mute voice": "Utišaj glas",
+        "Unmute voice": "Uključi glas",
+        "Voices": "Glasovi",
+        "On": "Uključeno",
+        "Off": "Isključeno",
+        "Resume": "Nastavi",
+        "Rotate your device to landscape": "Okrenite uređaj u vodoravni položaj"
       }
     },
     {

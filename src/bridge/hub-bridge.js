@@ -18,6 +18,11 @@
  *      edu: arrows move focus among buttons and links when the player did not handle the key itself
  *      (bubble phase, only if not defaultPrevented); Enter/Space stay native.
  *      read: no assist, arrows scroll.
+ *   Stand-down: when <html> has data-vno-nav="1" (new VN player builds, which do their own D-pad, focus
+ *   and Back handling and expose window.VNO_NAV.focusFirst), steps 3 and 4 are off for vn, Back keys are not
+ *   swallowed in capture, and the bridge only (a) handles keys whose target is its pill, (b) in the bubble
+ *   phase on window calls back() for a Back key, and focuses the pill on ArrowUp, when the player did not
+ *   handle the key. Builds without the flag keep the behaviour described here.
  *   4. Auto focus (vn): when the main menu or the choice list becomes visible and nothing in it has focus,
  *      its first button is focused, so a remote's OK starts the game or picks with one press. For the
  *      choice list, Enter on that auto-focused button is ignored for a short grace time (and while the key
@@ -299,7 +304,16 @@
     return !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey;
   }
 
+  /**
+   * True when the VN player handles the remote itself (it sets data-vno-nav="1" on <html> and exposes
+   * window.VNO_NAV). Checked at key time, not once at init, because the script order may vary.
+   */
+  function navOwned() {
+    return player === 'vn' && document.documentElement.getAttribute('data-vno-nav') === '1';
+  }
+
   function markKeyboard() {
+    if (navOwned()) return;
     var root = document.documentElement;
     if (!hasClass(root, 'hubb-kb')) root.setAttribute('class', ((root.getAttribute('class') || '') + ' hubb-kb').replace(/^\s+/, ''));
   }
@@ -372,6 +386,7 @@
   }
 
   function autoFocus() {
+    if (navOwned()) return;
     for (var i = 0; i < AUTO_IDS.length; i++) {
       var id = AUTO_IDS[i];
       var node = visibleContainer(id);
@@ -397,7 +412,32 @@
 
   /* ---------- key handlers ---------- */
 
+  /** Capture phase when the player owns navigation: only our own pill is handled here. */
+  function onKeyCaptureOwned(e) {
+    if (e.target !== pill) return;
+    if (e.key === 'Enter' || e.key === ' ' || e.keyCode === 13 || e.keyCode === 32) {
+      e.stopPropagation(); // the link is followed natively; the player must not also advance
+      return;
+    }
+    var d = dirOf(e);
+    if (!d || !plain(e)) return;
+    if (d === 'up') {
+      swallow(e);
+      return;
+    }
+    if (d === 'down' || d === 'right') {
+      swallow(e);
+      pill.blur();
+      var nav = window.VNO_NAV;
+      if (nav && typeof nav.focusFirst === 'function') nav.focusFirst();
+    }
+  }
+
   function onKeyCapture(e) {
+    if (navOwned()) {
+      onKeyCaptureOwned(e);
+      return;
+    }
     if (isBackKey(e)) {
       swallow(e);
       back();
@@ -470,7 +510,26 @@
     }
   }
 
+  /** Bubble phase when the player owns navigation: act only on keys the player left unhandled. */
+  function onKeyBubbleOwned(e) {
+    if (e.defaultPrevented) return;
+    if (isBackKey(e)) {
+      back();
+      return;
+    }
+    if (dirOf(e) === 'up' && plain(e)) {
+      var a = document.activeElement;
+      if (!a || a === document.body || a === document.documentElement) {
+        if (focusPill()) e.preventDefault();
+      }
+    }
+  }
+
   function onKeyBubble(e) {
+    if (navOwned()) {
+      onKeyBubbleOwned(e);
+      return;
+    }
     if (player === 'vn') return;
     if (e.defaultPrevented || !plain(e) || isBackKey(e)) return;
     var dir = dirOf(e);

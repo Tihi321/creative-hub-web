@@ -185,13 +185,13 @@
               <div id="vno-pref-row-ui-language" class="vno-pref-group">
                 <label id="vno-pref-label-ui-language" for="vno-pref-ui-language">Interface Language</label>
                 <div class="vno-pref-control">
-                  <select id="vno-pref-ui-language" class="vno-select" aria-label="Interface Language"></select>
+                  <button type="button" id="vno-pref-ui-language" class="vno-select" aria-haspopup="listbox" aria-label="Interface Language"></button>
                 </div>
               </div>
               <div class="vno-pref-group">
                 <label id="vno-pref-label-language" for="vno-pref-language">Story Language</label>
                 <div class="vno-pref-control">
-                  <select id="vno-pref-language" class="vno-select" aria-label="Story Language"></select>
+                  <button type="button" id="vno-pref-language" class="vno-select" aria-haspopup="listbox" aria-label="Story Language"></button>
                 </div>
               </div>
             </section>
@@ -242,6 +242,12 @@
                   <output id="vno-pref-vol-voice-value" class="vno-pref-value" for="vno-pref-vol-voice">90</output>
                 </div>
               </div>
+              <div id="vno-pref-row-voices" class="vno-pref-group vno-hidden">
+                <label id="vno-pref-label-voices" for="vno-pref-voices">Voices</label>
+                <div class="vno-pref-control">
+                  <button type="button" id="vno-pref-voices" class="vno-button">On</button>
+                </div>
+              </div>
             </section>
           </div>
         </div>
@@ -261,10 +267,39 @@
         </div>
       </div>
 
-      <!-- Persistent Stage Language Switcher (accessible on every screen) -->
-      <div id="vno-lang-bar" class="vno-lang-bar" title="Language">
-        <label for="vno-stage-language" id="vno-lang-bar-label" class="vno-lang-bar-label">&#127760;</label>
-        <select id="vno-stage-language" class="vno-lang-select" aria-label="Language"></select>
+      <!-- Pause menu: Back / Esc during play opens it (VNO-62) -->
+      <div id="vno-pause-menu" class="vno-pause-menu vno-hidden" role="dialog" aria-modal="true">
+        <div class="vno-pause-panel">
+          <button type="button" id="vno-pause-resume" class="vno-menu-btn">Resume</button>
+          <button type="button" id="vno-pause-save" class="vno-menu-btn">Save</button>
+          <button type="button" id="vno-pause-load" class="vno-menu-btn">Load</button>
+          <button type="button" id="vno-pause-history" class="vno-menu-btn">History</button>
+          <button type="button" id="vno-pause-prefs" class="vno-menu-btn">Preferences</button>
+          <button type="button" id="vno-pause-mainmenu" class="vno-menu-btn">Main Menu</button>
+        </div>
+      </div>
+
+      <!-- Top-right HUD: voice stop and mute (only when the game has voice files) and the persistent stage language chip (accessible on every screen) -->
+      <div id="vno-hud-top" class="vno-hud-top">
+        <div id="vno-voice-cluster" class="vno-voice-cluster vno-hidden">
+          <button type="button" id="vno-voice-stop" class="vno-hud-btn" title="Stop voice" aria-label="Stop voice" disabled>&#9632;</button>
+          <button type="button" id="vno-voice-mute" class="vno-hud-btn" title="Mute voice" aria-label="Mute voice" aria-pressed="false">&#128266;</button>
+        </div>
+        <div id="vno-lang-bar" class="vno-lang-bar" title="Language">
+          <span id="vno-lang-bar-label" class="vno-lang-bar-label" aria-hidden="true">&#127760;</span>
+          <button type="button" id="vno-stage-language" class="vno-lang-select" aria-haspopup="listbox" aria-label="Language"></button>
+        </div>
+      </div>
+
+      <!-- Language picker: one list for the chip and both Preferences rows (a native select does not open on a TV browser) -->
+      <div id="vno-picker" class="vno-picker vno-hidden" role="dialog" aria-modal="true">
+        <div class="vno-picker-panel">
+          <div class="vno-picker-head">
+            <h2 id="vno-picker-title">Language</h2>
+            <button type="button" id="vno-picker-close" class="vno-picker-close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div id="vno-picker-list" class="vno-picker-list" role="listbox"></div>
+        </div>
       </div>
 
       <!-- Audio Elements -->
@@ -273,6 +308,9 @@
       <audio id="vno-audio-sfx" preload="auto"></audio>
       <audio id="vno-audio-voice" preload="auto"></audio>
     </div>
+
+    <!-- Phone held upright: the 16:9 stage is a thin strip, so ask for landscape (shown by CSS on a coarse pointer in portrait; a tap dismisses it) -->
+    <div id="vno-rotate-hint" class="vno-rotate-hint"><span id="vno-rotate-hint-text">Rotate your device to landscape</span></div>
   </div>
 
   <script src="player.js"></script>
