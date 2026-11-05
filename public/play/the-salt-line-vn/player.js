@@ -236,6 +236,12 @@
       else document.body.classList.remove("vno-picturebook");
     }
     if (pictureBook && dom.pageLayer) dom.pageLayer.classList.add("vno-hidden");
+    ["vno-pause-save", "vno-pause-load", "vno-pause-history"].forEach((id) => {
+      const btn = document.getElementById(id);
+      if (!btn || !btn.classList) return;
+      if (pictureBook) btn.classList.add("vno-hidden");
+      else btn.classList.remove("vno-hidden");
+    });
     normalizeUiLang();
     updateLangBarVisibility();
     applyLanguageTypography();
@@ -862,8 +868,11 @@
     if (top.name === "game") blurActive();
     else focusLayerFirst(top, true);
   }
+  function inPlay() {
+    return Boolean(gameData && dom.mainMenu && !isShown(dom.mainMenu));
+  }
   function layerDepth() {
-    return (isShown(dom.picker) ? 1 : 0) + (firstOpenScreen() ? 1 : 0) + (isShown(dom.pauseMenu) ? 1 : 0);
+    return (inPlay() ? 1 : 0) + (isShown(dom.picker) ? 1 : 0) + (firstOpenScreen() ? 1 : 0) + (isShown(dom.pauseMenu) ? 1 : 0);
   }
   function syncHistory() {
     const h = window.history;
@@ -889,7 +898,11 @@
       return;
     }
     if (pushedStates > 0) pushedStates--;
-    closeTopLayer();
+    if (closeTopLayer()) return;
+    if (inPlay()) {
+      openPauseMenu();
+      syncHistory();
+    }
   }
   function closeTopLayer() {
     const top = topLayer();
@@ -951,7 +964,7 @@
     else switchLanguage(code);
   }
   function openPauseMenu() {
-    if (!gameData || pictureBook || !dom.pauseMenu) return;
+    if (!gameData || !dom.pauseMenu) return;
     if (isShown(dom.mainMenu) || isShown(dom.pauseMenu) || isShown(dom.picker) || firstOpenScreen()) return;
     returnFocus.pause = activeControl();
     dom.pauseMenu.classList.remove("vno-hidden");
@@ -1073,7 +1086,7 @@
         return true;
       }
       if (act === "back") {
-        returnToMainMenu();
+        openPauseMenu();
         return true;
       }
     } else {
@@ -1129,8 +1142,8 @@
       startPictureBook();
       return;
     }
-    closeAllScreens();
     dom.mainMenu.classList.add("vno-hidden");
+    closeAllScreens();
     dom.endingCard.classList.add("vno-hidden");
     dom.choiceOverlay.classList.add("vno-hidden");
     dom.puzzleOverlay.classList.add("vno-hidden");
@@ -1146,7 +1159,7 @@
     playChapter(0);
   }
   function returnToMainMenu() {
-    closeAllScreens();
+    hideScreens();
     dom.endingCard.classList.add("vno-hidden");
     dom.choiceOverlay.classList.add("vno-hidden");
     dom.puzzleOverlay.classList.add("vno-hidden");
@@ -1155,6 +1168,7 @@
     activeEndingMsg = null;
     activePuzzle = null;
     dom.mainMenu.classList.remove("vno-hidden");
+    syncHistory();
     if (dom.pageLayer) dom.pageLayer.classList.add("vno-hidden");
     stopVoice();
     hideSceneTitle();
@@ -1791,9 +1805,9 @@
     const raw = localStorage.getItem(key);
     if (!raw) return false;
     const data = JSON.parse(raw);
+    dom.mainMenu.classList.add("vno-hidden");
     closeAllScreens();
     if (pictureBook) {
-      dom.mainMenu.classList.add("vno-hidden");
       dom.endingCard.classList.add("vno-hidden");
       dom.choiceOverlay.classList.add("vno-hidden");
       if (data.lang) switchLanguage(data.lang);
@@ -1901,8 +1915,8 @@
     return !!(dom.pageLayer && !dom.pageLayer.classList.contains("vno-hidden"));
   }
   function startPictureBook() {
-    closeAllScreens();
     dom.mainMenu.classList.add("vno-hidden");
+    closeAllScreens();
     dom.endingCard.classList.add("vno-hidden");
     dom.choiceOverlay.classList.add("vno-hidden");
     dom.puzzleOverlay.classList.add("vno-hidden");
