@@ -79,3 +79,5 @@ src/          templates/, client/ (remote navigation), bridge/ (back-to-library 
               styles/, fonts/ (OFL), i18n/
 tests/        e2e/ (Playwright), unit/
 ```
+
+VN builds whose player sets `data-vno-nav="1"` on `<html>` (and exposes `window.VNO_NAV.focusFirst`) handle their own D-pad, focus and Back keys: the bridge then stands down (no candidate navigation, auto focus or Enter grace) and only handles its Library pill plus a late Back/ArrowUp fallback; builds without the flag keep the old bridge assist.

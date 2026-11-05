@@ -27,6 +27,18 @@ export const VN = {
   hiddenClass: 'vno-hidden',
   choiceOverlay: '#vno-choice-overlay',
   choiceButton: '#vno-choice-container .vno-choice-btn',
+  // new player (HUB-27): the flag, the shared language picker, voice controls, pause menu, rotate hint
+  navFlag: 'html[data-vno-nav="1"]',
+  dialogue: '#vno-dialogue-text',
+  langChip: '#vno-stage-language',
+  prefUiLang: '#vno-pref-ui-language',
+  picker: '#vno-picker',
+  pickerItem: '#vno-picker button.vno-picker-item',
+  voiceStop: '#vno-voice-stop',
+  voiceMute: '#vno-voice-mute',
+  pauseMenu: '#vno-pause-menu',
+  rotateHint: '#vno-rotate-hint',
+  quickMenuButton: '#vno-quick-menu .vno-qm-btn',
 };
 
 // Edu player (Edu Studio builds)

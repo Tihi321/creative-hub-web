@@ -26,6 +26,9 @@ export default defineConfig({
     { name: 'touch', testMatch: /touch\.spec\.mjs/, use: { ...base, hasTouch: true, isMobile: true, viewport: { width: 768, height: 1024 } } },
     { name: 'desktop', testMatch: /desktop\.spec\.mjs/, use: { ...base, viewport: { width: 1440, height: 900 } } },
     { name: 'players', testMatch: /players\.spec\.mjs/, use: { ...base, viewport: { width: 1280, height: 720 } } },
+    // VN player on a TV (remote keys) and on a phone (touch); both run only the vn-player spec (HUB-27)
+    { name: 'vn-tv', testMatch: /vn-player\.spec\.mjs/, grep: /@tv/, use: { ...base, viewport: { width: 1920, height: 1080 } } },
+    { name: 'vn-touch', testMatch: /vn-player\.spec\.mjs/, grep: /@touch/, use: { ...base, hasTouch: true, isMobile: true, viewport: { width: 844, height: 390 } } },
     ...(wantScreens
       ? [{ name: 'screens', testMatch: /screens\.spec\.mjs/, timeout: 180_000, use: { ...base, viewport: { width: 1920, height: 1080 } } }]
       : []),
