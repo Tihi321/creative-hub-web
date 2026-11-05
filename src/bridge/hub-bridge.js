@@ -327,6 +327,17 @@
     return e.keyCode === 461 || e.keyCode === 10009 || e.key === 'BrowserBack' || e.key === 'GoBack';
   }
 
+  /**
+   * Back for a player that owns navigation. The player handles Back/Esc/Backspace itself everywhere except on its
+   * main menu (where Back leaves the game), so any of them that reaches the bubble phase unhandled means "leave".
+   * An Android TV Chrome remote may send keyCode 4 for Back instead of 461/10009.
+   */
+  function isOwnedBackKey(e) {
+    if (isBackKey(e)) return true;
+    if (!plain(e)) return false;
+    return e.keyCode === 4 || e.keyCode === 27 || e.keyCode === 8 || e.key === 'Escape' || e.key === 'Esc' || e.key === 'Backspace';
+  }
+
   function isRange(node) {
     return node.tagName.toUpperCase() === 'INPUT' && node.type === 'range';
   }
@@ -513,7 +524,7 @@
   /** Bubble phase when the player owns navigation: act only on keys the player left unhandled. */
   function onKeyBubbleOwned(e) {
     if (e.defaultPrevented) return;
-    if (isBackKey(e)) {
+    if (isOwnedBackKey(e)) {
       back();
       return;
     }

@@ -213,17 +213,43 @@ const BANNED = [
   [/:where\(/g, ':where() (Chrome 88)'],
   [/backdrop-filter/g, 'backdrop-filter (slow or unsupported on TV browsers)'],
 ];
-const siteCss = 'assets/site.css';
-if (allFiles.includes(siteCss)) {
-  const css = read(siteCss).replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' '));
-  C.checked++;
-  for (const [re, label] of BANNED) {
-    for (const m of css.matchAll(re)) {
-      const line = css.slice(0, m.index).split('\n').length;
-      err('css', `${siteCss}:${line}: ${label}`);
+/** Offsets of min() declarations whose previous declaration in the same block does not set the same property to a fixed value (min() is Chrome 79). */
+function minWithoutFallback(css) {
+  const found = [];
+  let prev = null;
+  for (const m of css.matchAll(/([{};])|([^{};]+)/g)) {
+    if (m[1]) {
+      if (m[1] !== ';') prev = null;
+      continue;
     }
+    const decl = m[2];
+    const prop = decl.includes(':') ? decl.slice(0, decl.indexOf(':')).trim() : '';
+    const at = decl.search(/\bmin\(/);
+    if (at >= 0 && prop && !(prev && prev.prop === prop && !/\bmin\(/.test(prev.text))) found.push(m.index + at);
+    prev = prop ? { prop, text: decl } : null;
   }
-} else err('css', `${siteCss} missing`);
+  return found;
+}
+const checkCss = (file, minNeedsFallback) => {
+  const css = read(file).replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' '));
+  C.checked++;
+  const lineOf = (index) => css.slice(0, index).split('\n').length;
+  for (const [re, label] of BANNED) {
+    for (const m of css.matchAll(re)) err('css', `${file}:${lineOf(m.index)}: ${label}`);
+  }
+  if (!minNeedsFallback) return;
+  for (const index of minWithoutFallback(css)) err('css', `${file}:${lineOf(index)}: min() without a fixed fallback declaration of the same property on the line before (Chrome 79)`);
+};
+const siteCss = 'assets/site.css';
+if (allFiles.includes(siteCss)) checkCss(siteCss, false);
+else err('css', `${siteCss} missing`);
+// the VN player's own CSS runs on the same old TV browsers (the Edu players ship their own minified CSS: not checked here)
+const vnPlayerCss = (file) => {
+  const m = /^play\/([^/]+)\/player\.css$/.exec(file);
+  const root = m && parsedCache.get(`play/${m[1]}/index.html`);
+  return Boolean(root && root.querySelectorAll('script').some((s) => s.attributes['data-player'] === 'vn'));
+};
+for (const file of allFiles.filter(vnPlayerCss)) checkCss(file, true);
 for (const file of htmlFiles.filter((f) => !f.startsWith('play/') && !f.startsWith('read/'))) {
   const root = parsedCache.get(file);
   if (!root) continue;

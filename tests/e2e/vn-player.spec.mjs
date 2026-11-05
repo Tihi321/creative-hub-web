@@ -133,6 +133,32 @@ test.describe('remote keys', () => {
     await expect(page).toHaveURL(BACK);
   });
 
+  test('Android Back (history navigation) opens the pause menu in play and leaves only from the main menu', { tag: '@tv' }, async ({ page }) => {
+    await page.goto('item/the-clockless-god/'); // the page before the play, as a visitor arrives
+    await page.goto(PLAY);
+    await expect(page.locator(VN.mainMenu)).toBeVisible();
+    await expect.poll(() => activeId(page)).toMatch(/^vno-mm-/);
+    const url = page.url();
+    await page.keyboard.press('Enter'); // Start
+    await expect(page.locator(VN.mainMenu)).toHaveClass(new RegExp(VN.hiddenClass));
+
+    // plain play: history Back opens the pause menu and stays on the page; it does so again after Resume
+    await page.goBack();
+    await expect(page.locator(VN.pauseMenu)).toBeVisible();
+    expect(page.url()).toBe(url);
+    await page.locator('#vno-pause-resume').click();
+    await expect(page.locator(VN.pauseMenu)).toBeHidden();
+    await page.goBack();
+    await expect(page.locator(VN.pauseMenu)).toBeVisible();
+    expect(page.url()).toBe(url);
+
+    // Main Menu drops the story's history entries: the next Back leaves for the page before
+    await page.locator('#vno-pause-mainmenu').click();
+    await expect(page.locator(VN.mainMenu)).toBeVisible();
+    await page.goBack();
+    await expect(page).toHaveURL(BACK);
+  });
+
   test('Enter on a focused button clicks once and does not also advance', { tag: '@tv' }, async ({ page }) => {
     await page.goto(PLAY);
     await expect(page.locator(VN.mainMenu)).toBeVisible();
@@ -154,6 +180,32 @@ test.describe('remote keys', () => {
     await page.keyboard.press('Escape');
     await expect(page.locator('#vno-screen-history')).toBeHidden();
     expect(await settledText(page), 'dialogue did not advance').toBe(text);
+  });
+
+  test('Enter on a focused choice picks it once and does not also advance the next chapter', { tag: '@tv' }, async ({ page }) => {
+    await startGame(page, 'play/the-clockless-god-choices/');
+    // advance with Enter until the first choice appears (the player focuses it)
+    const choiceShown = () => page.evaluate((s) => !document.querySelector(s).classList.contains('vno-hidden'), VN.choiceOverlay);
+    for (let i = 0; i < 400 && !(await choiceShown()); i++) {
+      await page.keyboard.press('Enter');
+      await page.waitForTimeout(20);
+    }
+    await expect(page.locator(VN.choiceOverlay)).toBeVisible();
+    await expect.poll(() => page.evaluate((s) => !!document.activeElement.closest(s), VN.choiceOverlay), { message: 'a choice has focus' }).toBe(true);
+    await page.waitForTimeout(900); // past the short pause that keeps a held OK from picking the choice at once
+    const chapter = await page.evaluate(() => window.VNOEngine.getState().chapterIdx);
+    await page.evaluate((s) => {
+      window.__clicks = 0;
+      document.addEventListener('click', (e) => { if (e.target.closest(s)) window.__clicks++; }, true);
+    }, VN.choiceButton);
+
+    await page.keyboard.press('Enter');
+    await expect(page.locator(VN.choiceOverlay)).toBeHidden();
+    expect(await page.evaluate(() => window.__clicks), 'Enter on the choice clicks once').toBe(1);
+    // the target chapter starts at its card (beat -1): the same key did not also advance past it
+    const state = await page.evaluate(() => window.VNOEngine.getState());
+    expect(state.chapterIdx, 'the choice led to another chapter').not.toBe(chapter);
+    expect(state.beatIdx, 'the new chapter did not advance').toBe(-1);
   });
 });
 
