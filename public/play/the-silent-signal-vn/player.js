@@ -107,7 +107,6 @@
     dom.namebox = document.getElementById("vno-namebox");
     dom.speakerName = document.getElementById("vno-speaker-name");
     dom.dialogueText = document.getElementById("vno-dialogue-text");
-    dom.indicator = document.getElementById("vno-typewriter-indicator");
     dom.choiceOverlay = document.getElementById("vno-choice-overlay");
     dom.choiceContainer = document.getElementById("vno-choice-container");
     dom.puzzleOverlay = document.getElementById("vno-puzzle-overlay");
@@ -491,7 +490,10 @@
   }
   function fitDialogue() {
     if (!dom.dialogueText || !dom.textbox) return;
+    const done = dom.dialogueText.classList.contains("vno-line-done");
+    dom.dialogueText.classList.remove("vno-line-done");
     fitTextBlock(dom.dialogueText, dom.textbox, baseFontPx(dom.dialogueText, 33 * storyTextScale()), 14);
+    if (done) dom.dialogueText.classList.add("vno-line-done");
   }
   function refreshActiveScreens() {
     if (!gameData) return;
@@ -1390,18 +1392,19 @@
   }
   function startTypewriter(htmlText) {
     clearInterval(typewriterTimer);
-    dom.indicator.classList.add("vno-hidden");
+    dom.dialogueText.classList.remove("vno-line-done");
     currentFullText = htmlText;
     dom.dialogueText.innerHTML = htmlText;
     fitDialogue();
     if (settings.textSpeed >= 100) {
       isTyping = false;
-      dom.indicator.classList.remove("vno-hidden");
+      dom.dialogueText.classList.add("vno-line-done");
       return;
     }
     isTyping = true;
     let charIdx = 0;
     const plain = htmlText.replace(/<[^>]+>/g, "");
+    dom.dialogueText.textContent = "";
     const interval = Math.max(10, 100 - settings.textSpeed);
     typewriterTimer = setInterval(() => {
       charIdx++;
@@ -1417,7 +1420,7 @@
     isTyping = false;
     dom.dialogueText.innerHTML = currentFullText;
     fitDialogue();
-    dom.indicator.classList.remove("vno-hidden");
+    dom.dialogueText.classList.add("vno-line-done");
   }
   function finishChapter(ch) {
     if (ch.choices && ch.choices.length > 0) {
@@ -1435,6 +1438,7 @@
   }
   function showChoices(choices) {
     activeChoices = choices;
+    dom.dialogueText.classList.remove("vno-line-done");
     const before = controlsIn(dom.choiceContainer);
     const keep = before.indexOf(document.activeElement);
     dom.choiceContainer.innerHTML = "";
@@ -1736,7 +1740,7 @@
     if (isTyping) {
       clearInterval(typewriterTimer);
       isTyping = false;
-      if (dom.indicator) dom.indicator.classList.remove("vno-hidden");
+      dom.dialogueText.classList.add("vno-line-done");
     }
     currentFullText = htmlText;
     dom.dialogueText.innerHTML = htmlText;
