@@ -306,18 +306,26 @@ body.vno-body {
   direction: rtl;
 }
 
-.vno-indicator {
-  position: absolute;
-  right: 30px;
-  bottom: 15px;
-  font-size: 24px;
-  color: var(--vno-color-accent, #fff);
-  animation: vno-bounce 1s infinite;
+/* Continue marker (VNO-64): a quiet pulsing triangle that follows the last word of a finished line. It is a pseudo-element, so it adds no DOM and never reaches the auto-fit. */
+.vno-dialogue-text.vno-line-done::after {
+  content: '\00a0\25BC';
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1;
+  opacity: 0.7;
+  color: inherit;
+  animation: vno-bounce 1.2s ease-in-out infinite;
 }
 
 @keyframes vno-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%, 100% { transform: translateY(0); opacity: 0.45; }
+  50% { transform: translateY(-3px); opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vno-dialogue-text.vno-line-done::after {
+    animation: none;
+  }
 }
 
 /* Quick Menu */
