@@ -732,6 +732,35 @@
       ]
     },
     {
+      "id": "deutsch-a1-pilot",
+      "title": {
+        "en": "German for Beginners, A1",
+        "hr": "Njemački za početnike, A1"
+      },
+      "blurb": {
+        "en": "German from the first word in four units with 46 exercises, short articles, a castle to explore and a small adventure game. For Croatian and English speakers starting German.",
+        "hr": "Njemački od prve riječi u četiri cjeline s 46 vježbi, kratkim člancima, dvorcem za istraživanje i malom pustolovnom igrom. Za govornike hrvatskog i engleskog koji počinju učiti njemački."
+      },
+      "order": 105,
+      "plays": [
+        {
+          "id": "deutsch-a1-pilot-game",
+          "type": "edu-game",
+          "label": {
+            "en": "Learning game",
+            "hr": "Igra za učenje"
+          },
+          "languages": [
+            "de",
+            "en",
+            "hr"
+          ],
+          "source": "edu:deutsch-a1-pilot/build",
+          "player": "edu"
+        }
+      ]
+    },
+    {
       "id": "the-local-patch",
       "title": {
         "en": "The Local Patch",

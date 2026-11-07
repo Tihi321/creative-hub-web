@@ -5,6 +5,10 @@
       "960": "covers/circuit-breaker-960.webp",
       "type": "webp"
     },
+    "deutsch-a1-pilot": {
+      "path": "covers/deutsch-a1-pilot.svg",
+      "type": "svg"
+    },
     "deutsch-roleplay-a1": {
       "path": "covers/deutsch-roleplay-a1.svg",
       "type": "svg"
@@ -140,6 +144,11 @@
       "srcHash": "52e4daff260795336ad95bce6f5b13870fb291d81c07ae7c11da92d8e7185a59",
       "srcMtimeMs": 1793015524792.3865,
       "srcSize": 225518
+    },
+    "covers/deutsch-a1-pilot.svg": {
+      "outHash": "64f80df225d29b59ac6f1d9438d66cdd4726914362485ba167e0494b437b93f5",
+      "outSize": 996,
+      "recipe": "cover-svg@1"
     },
     "covers/deutsch-roleplay-a1.svg": {
       "outHash": "e8c3c6a4314c6d4d6822ec9ee6091a78ca0cc27864b8e4c7e014315fe13e5ee9",
@@ -2377,6 +2386,368 @@
       "srcMtimeMs": 1794003512580.6926,
       "srcSize": 98854
     },
+    "play/deutsch-a1-pilot-game/assets/mus-boss/v1.ogg": {
+      "outHash": "0c9bebce55727b3718c6b35d39b4acaeab06f5e60beef3211334adae66210754",
+      "outSize": 448174,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-boss/v1.ogg",
+      "srcHash": "c4a557a2f3e84d670585aa32cc3e1b4bbcb4d163acc472dbd55939041338d6db",
+      "srcMtimeMs": 1794064233701.5503,
+      "srcSize": 1161861
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-castle/v1.ogg": {
+      "outHash": "647d4eeea8fe42e3a2761033d3a818689046f5c7809bb9f7e202013b7ecabac2",
+      "outSize": 653223,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-castle/v1.ogg",
+      "srcHash": "17ca9651e46f4d7ad6c138079f7a0a4c3b79badbb2654bcb4a0ea86ba3578c05",
+      "srcMtimeMs": 1794064238793.5115,
+      "srcSize": 1652887
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-end/v1.ogg": {
+      "outHash": "e5c48fa7c84611a675669bb7e4a6fbb89f7d7646e34168a610c2b1eec44d05e0",
+      "outSize": 793914,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-end/v1.ogg",
+      "srcHash": "5560f08bfa341c1647cd3c375aa9f77c8419cf97bf4b6d1a330c8d9e863f5414",
+      "srcMtimeMs": 1794064236501.6018,
+      "srcSize": 1902217
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-menu/v1.ogg": {
+      "outHash": "2b2c79c08f9ad14539223fcc9be99d2e7a6a68fcf72b1a4913263cf75178e57c",
+      "outSize": 658156,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-menu/v1.ogg",
+      "srcHash": "87e1bc5a62f7864f0081de1fb73b3f3b3253036b053349e72cdb3bc3f45011c7",
+      "srcMtimeMs": 1794064222172.264,
+      "srcSize": 1807398
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-rpg-battle/v1.ogg": {
+      "outHash": "0eb542e94235a3d3077e6cb0add78e16252135d2300c38243de3b0bd5edb60d7",
+      "outSize": 484093,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-rpg-battle/v1.ogg",
+      "srcHash": "fd5fbd59f4e615db2ee0163ad0fc07c4406344f1c916f9027c51d1a937f49cd1",
+      "srcMtimeMs": 1794064242958.462,
+      "srcSize": 1329458
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-rpg-overworld/v1.ogg": {
+      "outHash": "0a24831048bc9eaeb22e4db32616f46c10d3c0ba591d41f00a7605b58ca47cbb",
+      "outSize": 550291,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-rpg-overworld/v1.ogg",
+      "srcHash": "32e0a4608d22f4b1afd2eaf156e686703c96540bc2820289f7c5cc162936d267",
+      "srcMtimeMs": 1794064240983.1233,
+      "srcSize": 1617174
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-unit-u1/v1.ogg": {
+      "outHash": "8dd10e745d577934850a9edfd3fbdd41b860f6a9ee638ecf992f4ba2a8964613",
+      "outSize": 685508,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-unit-u1/v1.ogg",
+      "srcHash": "001865f984226accb6f69a122b79b888bd67d17005293eaca3891e7e141f08cd",
+      "srcMtimeMs": 1794064224610.6858,
+      "srcSize": 1822225
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-unit-u2/v1.ogg": {
+      "outHash": "5049d47b7a834bc1e84bdb6f810aa12d01b6716cda71f93c22c5aa3506a0f24e",
+      "outSize": 642483,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-unit-u2/v1.ogg",
+      "srcHash": "cce5c3b9c9824e60d004b2a76162839f3315bf7f3d220d7e6785a8c9cfc24ad2",
+      "srcMtimeMs": 1794064226998.349,
+      "srcSize": 1786805
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-unit-u3/v1.ogg": {
+      "outHash": "4f831d9f0aa63e9d1da2c31c93d570e033f2b9e5d03d73364e0ceecfb5aceb37",
+      "outSize": 707547,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-unit-u3/v1.ogg",
+      "srcHash": "c1c95f236dff62948d709552160daca54c6673688286671c922e4cb49473b26c",
+      "srcMtimeMs": 1794064229558.4973,
+      "srcSize": 2006621
+    },
+    "play/deutsch-a1-pilot-game/assets/mus-unit-u4/v1.ogg": {
+      "outHash": "8f38a781ef4dfe5905bbe9dba3ed3deb756a6b7da044c46c61f855a0f390b360",
+      "outSize": 637934,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/mus-unit-u4/v1.ogg",
+      "srcHash": "e807a03803cc04a01382f3460f7903ad01b9297799ea64c1e2897b490659d6fa",
+      "srcMtimeMs": 1794064232053.2297,
+      "srcSize": 1755030
+    },
+    "play/deutsch-a1-pilot-game/assets/sfx-boss/v1.ogg": {
+      "outHash": "8a4535bed4c0c5029f663162139308c704865e7fea80faf06e242e2369576010",
+      "outSize": 12870,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/sfx-boss/v1.ogg",
+      "srcHash": "d93c2abb811684e4012dc099aad9121c0834e412e9b3e7080edb7c23e654b951",
+      "srcMtimeMs": 1794064243874.1226,
+      "srcSize": 25516
+    },
+    "play/deutsch-a1-pilot-game/assets/sfx-combo/v1.ogg": {
+      "outHash": "80ddcce0c679b918a79c97312e63523361908ae2dfaa4ba7b4f9b2c2a03c5976",
+      "outSize": 20791,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/sfx-combo/v1.ogg",
+      "srcHash": "d8a94266d75ca6db012c69452dbe39ee56e4839132af71ddfdf1ac1b0126e982",
+      "srcMtimeMs": 1794064243699.5903,
+      "srcSize": 42834
+    },
+    "play/deutsch-a1-pilot-game/assets/sfx-correct/v1.ogg": {
+      "outHash": "d6c61cca076a4af26ed4fc4bc6f957350ca43ab17e3e749a13c3713f334921fe",
+      "outSize": 12875,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/sfx-correct/v1.ogg",
+      "srcHash": "ca2efa05c9f0b21ce12ef5dca240848f9939c2a6f53d9468ca5de2bb104abc7a",
+      "srcMtimeMs": 1794064243522.5798,
+      "srcSize": 25707
+    },
+    "play/deutsch-a1-pilot-game/assets/sfx-level-up/v1.ogg": {
+      "outHash": "0f452bddc04f3b0964aa6875e0cc4ac7730799166e5996c3d972be498e5b044e",
+      "outSize": 17231,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/sfx-level-up/v1.ogg",
+      "srcHash": "86a95b04a26b4e113e418ccc356ecc7665f7013370abc5ad970fa94a547404f2",
+      "srcMtimeMs": 1794064243793.9968,
+      "srcSize": 34188
+    },
+    "play/deutsch-a1-pilot-game/assets/sfx-wrong/v1.ogg": {
+      "outHash": "256be9615e91bc9cd35bc14b6a1449634c82bdeae82aa3afe606cac30aeabcd6",
+      "outSize": 11800,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-a1-pilot/build/assets/sfx-wrong/v1.ogg",
+      "srcHash": "a6c8ef29776e63a76697ff3722650283f7bc7fdaa7321331eb724dc716b8d948",
+      "srcMtimeMs": 1794064243603.0588,
+      "srcSize": 22744
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u1-q5-listen-transcript/v1.mp3": {
+      "outHash": "db1cda95c3bebf0a3e315b58d10b2989ba2a7f6679a18aacdec8b6875b34fbb4",
+      "outSize": 10866,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u1-q5-listen-transcript/v1.mp3",
+      "srcHash": "db1cda95c3bebf0a3e315b58d10b2989ba2a7f6679a18aacdec8b6875b34fbb4",
+      "srcMtimeMs": 1793553079212.9773,
+      "srcSize": 10866
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u1-q7-opt-a/v1.mp3": {
+      "outHash": "3f909d6f82def30d91b75d29e6cdb51d86cd56dfb880aedeb0af0f8bc25e58b9",
+      "outSize": 11911,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u1-q7-opt-a/v1.mp3",
+      "srcHash": "3f909d6f82def30d91b75d29e6cdb51d86cd56dfb880aedeb0af0f8bc25e58b9",
+      "srcMtimeMs": 1793553079226.5088,
+      "srcSize": 11911
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u2-q11-listen-transcript/v1.mp3": {
+      "outHash": "2fbd2f8ca97cd658368fc6e7f2e581136efc657a89a980fc2a27c5aecd9ba055",
+      "outSize": 10240,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u2-q11-listen-transcript/v1.mp3",
+      "srcHash": "2fbd2f8ca97cd658368fc6e7f2e581136efc657a89a980fc2a27c5aecd9ba055",
+      "srcMtimeMs": 1793553079250.2864,
+      "srcSize": 10240
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u2-q9-opt-a/v1.mp3": {
+      "outHash": "b6508f3f58e67c3a98526d3457a20fe34913bb327c2f9b18265d39be39d9078b",
+      "outSize": 12538,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u2-q9-opt-a/v1.mp3",
+      "srcHash": "b6508f3f58e67c3a98526d3457a20fe34913bb327c2f9b18265d39be39d9078b",
+      "srcMtimeMs": 1793553079237.136,
+      "srcSize": 12538
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u3-q3-listen-transcript/v1.mp3": {
+      "outHash": "828646be3608f3c1233f1acaa440e512322dd4f834b05f45475803e039fbc1cd",
+      "outSize": 10866,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u3-q3-listen-transcript/v1.mp3",
+      "srcHash": "828646be3608f3c1233f1acaa440e512322dd4f834b05f45475803e039fbc1cd",
+      "srcMtimeMs": 1793553079262.3687,
+      "srcSize": 10866
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u3-q8-opt-a/v1.mp3": {
+      "outHash": "053c5506904b6598a0c07e4dcd44c4cbe684c6c80145b37e21afc8906668b3ed",
+      "outSize": 11493,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u3-q8-opt-a/v1.mp3",
+      "srcHash": "053c5506904b6598a0c07e4dcd44c4cbe684c6c80145b37e21afc8906668b3ed",
+      "srcMtimeMs": 1793553079276.1333,
+      "srcSize": 11493
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u4-q1-listen-transcript/v1.mp3": {
+      "outHash": "ffeb36cf4df6ebb7de1167a7a9acaff00d489b8cee2d5e7af5095f95c5a52719",
+      "outSize": 10866,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u4-q1-listen-transcript/v1.mp3",
+      "srcHash": "ffeb36cf4df6ebb7de1167a7a9acaff00d489b8cee2d5e7af5095f95c5a52719",
+      "srcMtimeMs": 1793553079291.6692,
+      "srcSize": 10866
+    },
+    "play/deutsch-a1-pilot-game/assets/voice-de-item-u4-q2-opt-a/v1.mp3": {
+      "outHash": "39a327d1ce51a4fabcbc8f0f39592a555c935f4a50e31e26808ffbe805eddd7c",
+      "outSize": 10866,
+      "recipe": "mp3@1:96k",
+      "src": "edu:deutsch-a1-pilot/build/assets/voice-de-item-u4-q2-opt-a/v1.mp3",
+      "srcHash": "39a327d1ce51a4fabcbc8f0f39592a555c935f4a50e31e26808ffbe805eddd7c",
+      "srcMtimeMs": 1793553079302.642,
+      "srcSize": 10866
+    },
+    "play/deutsch-a1-pilot-game/game-data.js": {
+      "jsTarget": "chrome61",
+      "outHash": "cd2bdd2020c829caf87dce22b16f44d211e096990d6ce26e98f2afb7c51ce95f",
+      "outSize": 93861,
+      "recipe": "js@1",
+      "src": "edu:deutsch-a1-pilot/build/game-data.js",
+      "srcHash": "d75efa7a96d7de7cfa1ef37d72072d13417456556f9fa35c976cc2eaae664ad2",
+      "srcMtimeMs": 1794068436224.349,
+      "srcSize": 88711
+    },
+    "play/deutsch-a1-pilot-game/game-data.json": {
+      "outHash": "5ba313bb5bd5f9c6efc471a3abb1120149648ba208c132f13d952bbe406c3a54",
+      "outSize": 123473,
+      "recipe": "copy@1",
+      "src": "edu:deutsch-a1-pilot/build/game-data.json",
+      "srcHash": "5ba313bb5bd5f9c6efc471a3abb1120149648ba208c132f13d952bbe406c3a54",
+      "srcMtimeMs": 1794068436214.046,
+      "srcSize": 123473
+    },
+    "play/deutsch-a1-pilot-game/index.html": {
+      "outHash": "816fe829aa2b0430d09a53e0d83eae8c60b48b7c18fe7d677964abddcb0dcaf2",
+      "outSize": 565,
+      "recipe": "inject-bridge@1:edu:deutsch-a1-pilot",
+      "src": "edu:deutsch-a1-pilot/build/index.html",
+      "srcHash": "0fd93352be3d59ce071b088f1d7b982a2618339dc0f29162ac1f94d2803f5a60",
+      "srcMtimeMs": 1794068436205.0088,
+      "srcSize": 455
+    },
+    "play/deutsch-a1-pilot-game/player.css": {
+      "outHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "outSize": 1201502,
+      "recipe": "play-css-urls@1",
+      "src": "edu:deutsch-a1-pilot/build/player.css",
+      "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 1201502
+    },
+    "play/deutsch-a1-pilot-game/player.js": {
+      "jsTarget": "chrome61",
+      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
+      "outSize": 839533,
+      "recipe": "js@1",
+      "src": "edu:deutsch-a1-pilot/build/player.js",
+      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 631697
+    },
+    "play/deutsch-roleplay-a1-game/assets/mus-boss/v1.ogg": {
+      "outHash": "fa5e2bfc1424e19cc847b33a81f85ccbe57e765aa686a110295d3f2876b93316",
+      "outSize": 468232,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/mus-boss/v1.ogg",
+      "srcHash": "ae46c3dd577ffcc93b3eae1b3ab163bd60a6eff24967dc641c31e809b6fe771e",
+      "srcMtimeMs": 1794064178081.1965,
+      "srcSize": 1159829
+    },
+    "play/deutsch-roleplay-a1-game/assets/mus-end/v1.ogg": {
+      "outHash": "a7b8e5cccd0bfe97d9ab2fcb9f294c96b5a399c850aa14b06033f3f3695c1740",
+      "outSize": 786746,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/mus-end/v1.ogg",
+      "srcHash": "46580184c91e95daf9a2e313c0cb87f9f3e1bd5617dec751124d46ccfbd462e7",
+      "srcMtimeMs": 1794064180857.566,
+      "srcSize": 2008714
+    },
+    "play/deutsch-roleplay-a1-game/assets/mus-menu/v1.ogg": {
+      "outHash": "b6dd3b57d2ff61a88158583d6c8874bfd1203bad79abcd2b338397ae92efa1ed",
+      "outSize": 647778,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/mus-menu/v1.ogg",
+      "srcHash": "a3abc4b6ccc0b6702a6f567622cdc25a7784f08ef85f2404fd73988a0ff0537f",
+      "srcMtimeMs": 1794064166809.553,
+      "srcSize": 1733593
+    },
+    "play/deutsch-roleplay-a1-game/assets/mus-unit-u1/v1.ogg": {
+      "outHash": "e74195cb4796ade21bf909af5bacd4b1378a5b5525f74ff0acfddc782db18033",
+      "outSize": 647563,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/mus-unit-u1/v1.ogg",
+      "srcHash": "712cbc37b2834b1bcc6fe7648d851339e146ba106f686e8895d492068a902080",
+      "srcMtimeMs": 1794064169107.7144,
+      "srcSize": 1758464
+    },
+    "play/deutsch-roleplay-a1-game/assets/mus-unit-u2/v1.ogg": {
+      "outHash": "019f984cf1514e7896f3df4f32cab72688baa85a5a5e5c6195196577789fa413",
+      "outSize": 636136,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/mus-unit-u2/v1.ogg",
+      "srcHash": "37dd3af47afb44c1675105c18c79d8a8be7d7cd6ae13966cb22ca8844d0996aa",
+      "srcMtimeMs": 1794064171571.1924,
+      "srcSize": 1736942
+    },
+    "play/deutsch-roleplay-a1-game/assets/mus-unit-u3/v1.ogg": {
+      "outHash": "c9478086c241e981b634cf2a81a06665412d7f8a22445033faa4f7ea70be0a72",
+      "outSize": 726490,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/mus-unit-u3/v1.ogg",
+      "srcHash": "140b0a2f56b78bc13e44cc1df09be86743950e0c26061e6d9d98c35a61db1623",
+      "srcMtimeMs": 1794064174135.2834,
+      "srcSize": 1986804
+    },
+    "play/deutsch-roleplay-a1-game/assets/mus-unit-u4/v1.ogg": {
+      "outHash": "d36f4df6aa403f73a715e0dc37eeb1b03fc72200524539788cca5fdca0751095",
+      "outSize": 630984,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/mus-unit-u4/v1.ogg",
+      "srcHash": "34d35d8ff2901af063a20d2f1ae2b0a308f61c2bf183a13f2a5cbcd6c99d4158",
+      "srcMtimeMs": 1794064176517.663,
+      "srcSize": 1682431
+    },
+    "play/deutsch-roleplay-a1-game/assets/sfx-boss/v1.ogg": {
+      "outHash": "ba33bd6a91b66d1fbfacd9c7e882b6f0fe2dec36ad9f7c94cccb160e8ee4a965",
+      "outSize": 12600,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/sfx-boss/v1.ogg",
+      "srcHash": "1f4c7f7a728425de56058f5a5b5b0d0fe5bafa980342bd9d76074c744fc528e5",
+      "srcMtimeMs": 1794064191271.169,
+      "srcSize": 25499
+    },
+    "play/deutsch-roleplay-a1-game/assets/sfx-combo/v1.ogg": {
+      "outHash": "02db478b141dc4bad025fef64d7311a8f217bb63c16ce7e0a3958c63c85c3388",
+      "outSize": 19508,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/sfx-combo/v1.ogg",
+      "srcHash": "6b0bc9fa676326668b7d95a41b69c8ed27b0cf78ff4e42ce7c78dbf9df0d4be5",
+      "srcMtimeMs": 1794064191089.3977,
+      "srcSize": 41346
+    },
+    "play/deutsch-roleplay-a1-game/assets/sfx-correct/v1.ogg": {
+      "outHash": "d6c61cca076a4af26ed4fc4bc6f957350ca43ab17e3e749a13c3713f334921fe",
+      "outSize": 12875,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/sfx-correct/v1.ogg",
+      "srcHash": "cbcb2f8fd9ffb8c77b35f6c05cbd1f357ba0f14f7f6b72af3dee182b0f718e25",
+      "srcMtimeMs": 1794064190906.6675,
+      "srcSize": 25707
+    },
+    "play/deutsch-roleplay-a1-game/assets/sfx-level-up/v1.ogg": {
+      "outHash": "0f452bddc04f3b0964aa6875e0cc4ac7730799166e5996c3d972be498e5b044e",
+      "outSize": 17231,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/sfx-level-up/v1.ogg",
+      "srcHash": "3125ff962fe633aba2e5971a08581b26f0b931fd93e5b93a0e48054ce7e3c270",
+      "srcMtimeMs": 1794064191183.8635,
+      "srcSize": 34188
+    },
+    "play/deutsch-roleplay-a1-game/assets/sfx-wrong/v1.ogg": {
+      "outHash": "a0e99825cdc82e4134e4cebf6b633b25ec3715c19a4764ba3aac282d47e0a936",
+      "outSize": 10366,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-a1/build/assets/sfx-wrong/v1.ogg",
+      "srcHash": "985a309f9d5576e6fbff4d84ccbd084cbf37123ffa54371e677bea4986a9db04",
+      "srcMtimeMs": 1794064190988.4116,
+      "srcSize": 22650
+    },
     "play/deutsch-roleplay-a1-game/assets/voice-de-item-rp-u1-1-opt-a/v1.mp3": {
       "outHash": "60a165d35e3768c60bb61954e79adecc9cee080b87e5c9f1d69886d27a02d420",
       "outSize": 12538,
@@ -2451,22 +2822,22 @@
     },
     "play/deutsch-roleplay-a1-game/game-data.js": {
       "jsTarget": "chrome61",
-      "outHash": "a310528322d83b9216ec49e63a7f45564ddef1913e18da019748d6fe8e5ac658",
-      "outSize": 136934,
+      "outHash": "0665edb4cb39eca8e42bf20bdfae6ae65805ac8bd539a3d4738f33f6eac96fe0",
+      "outSize": 142960,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-a1/build/game-data.js",
-      "srcHash": "21548df436635998d1ca58c5f143f761d17b7402646d2106c48c9bcd762660d5",
-      "srcMtimeMs": 1793620035528.1038,
-      "srcSize": 130218
+      "srcHash": "2915c3703b55de793ef10b44f27cd15316f92c630d3d7b4a70110ba7a74824c6",
+      "srcMtimeMs": 1794068431928.043,
+      "srcSize": 135830
     },
     "play/deutsch-roleplay-a1-game/game-data.json": {
-      "outHash": "bda205c708126a344e217532af93e302704ed0edd4faa09f0c766380b308e835",
-      "outSize": 179096,
+      "outHash": "7d55757ab403df297220a53096605b0e3a8a170729ee74e7795c5dc8c4b4a75a",
+      "outSize": 186952,
       "recipe": "copy@1",
       "src": "edu:deutsch-roleplay-a1/build/game-data.json",
-      "srcHash": "bda205c708126a344e217532af93e302704ed0edd4faa09f0c766380b308e835",
-      "srcMtimeMs": 1793620035523.5017,
-      "srcSize": 179096
+      "srcHash": "7d55757ab403df297220a53096605b0e3a8a170729ee74e7795c5dc8c4b4a75a",
+      "srcMtimeMs": 1794068431922.512,
+      "srcSize": 186952
     },
     "play/deutsch-roleplay-a1-game/index.html": {
       "outHash": "ca2015dddb651d0ed9f15d3ec8f8405332aa26a956b4353c1d97bed4b706348c",
@@ -2474,27 +2845,117 @@
       "recipe": "inject-bridge@1:edu:deutsch-roleplay-a1",
       "src": "edu:deutsch-roleplay-a1/build/index.html",
       "srcHash": "67c1a20179513e09561781dbffe9fce36c7cb1f73b0b8e5ecb4d98fa624b4f8c",
-      "srcMtimeMs": 1793620035519.3152,
+      "srcMtimeMs": 1794068431903.4158,
       "srcSize": 468
     },
     "play/deutsch-roleplay-a1-game/player.css": {
-      "outHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
-      "outSize": 1198182,
+      "outHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "outSize": 1201502,
       "recipe": "play-css-urls@1",
       "src": "edu:deutsch-roleplay-a1/build/player.css",
-      "srcHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
-      "srcMtimeMs": 1793618079487.444,
-      "srcSize": 1198182
+      "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 1201502
     },
     "play/deutsch-roleplay-a1-game/player.js": {
       "jsTarget": "chrome61",
-      "outHash": "2ba7b18d27d6ebe57f6a9db70bc7213cb1d377e88e33fc96962e8b661d8b2f29",
-      "outSize": 830405,
+      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
+      "outSize": 839533,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-a1/build/player.js",
-      "srcHash": "edf9a4134de6743b77fc3238640a323d8dbb3c6491b3b95c6b16d08be90ba765",
-      "srcMtimeMs": 1793618079485.4146,
-      "srcSize": 624912
+      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 631697
+    },
+    "play/deutsch-roleplay-b2-game/assets/mus-boss/v1.ogg": {
+      "outHash": "01849c44e7ad6e67a59a35879342ae27c2576d87eaba1822dfb38196c0458b52",
+      "outSize": 512933,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/mus-boss/v1.ogg",
+      "srcHash": "09d5042e799210ef1a70eee206873a450c425eba78757fed17ea51a7f3f96798",
+      "srcMtimeMs": 1794064214286.8171,
+      "srcSize": 1358740
+    },
+    "play/deutsch-roleplay-b2-game/assets/mus-end/v1.ogg": {
+      "outHash": "0a89800018413399253033f02fbb11ced15db53ca17bb4e631d86cc892b0628c",
+      "outSize": 813749,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/mus-end/v1.ogg",
+      "srcHash": "7701748e82c27522661aff953a75630a3305a1f52116382186f2f832b8be0f67",
+      "srcMtimeMs": 1794064217247.3645,
+      "srcSize": 2186089
+    },
+    "play/deutsch-roleplay-b2-game/assets/mus-menu/v1.ogg": {
+      "outHash": "9b80d891c19b16081919583a673509a047fbdd4293ce2d346495e0811bf11b7a",
+      "outSize": 654916,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/mus-menu/v1.ogg",
+      "srcHash": "4516dc12e1bad03ecf5d3213a55459dd4a88ce9c31150b0d16105460d5ff6723",
+      "srcMtimeMs": 1794064207968.2185,
+      "srcSize": 1829229
+    },
+    "play/deutsch-roleplay-b2-game/assets/mus-unit-u1/v1.ogg": {
+      "outHash": "d740870189f1d202844cb0fde1a4c93ea96522ce77e595fc7c8266e6aa88a89f",
+      "outSize": 621188,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/mus-unit-u1/v1.ogg",
+      "srcHash": "1e3d5ac56381b5be8a6e9734b7124a1e15f5d6d72e508abf174a2ff006d0839b",
+      "srcMtimeMs": 1794064210185.3333,
+      "srcSize": 1557320
+    },
+    "play/deutsch-roleplay-b2-game/assets/mus-unit-u2/v1.ogg": {
+      "outHash": "b5b4b3a937f6afd057ad504553c0aebc6a9964e34ee6f97ba1297144c64ba814",
+      "outSize": 657602,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/mus-unit-u2/v1.ogg",
+      "srcHash": "f1ed87cb72bda1e43b82f0846739888b046223f1688c2d24ba90b7ed2cdf3622",
+      "srcMtimeMs": 1794064212520.6152,
+      "srcSize": 1700950
+    },
+    "play/deutsch-roleplay-b2-game/assets/sfx-boss/v1.ogg": {
+      "outHash": "ba33bd6a91b66d1fbfacd9c7e882b6f0fe2dec36ad9f7c94cccb160e8ee4a965",
+      "outSize": 12600,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/sfx-boss/v1.ogg",
+      "srcHash": "21ca264e48585a42bcb3b8fb424eca141ad7280a20979650385535263b90084c",
+      "srcMtimeMs": 1794064218264.22,
+      "srcSize": 25499
+    },
+    "play/deutsch-roleplay-b2-game/assets/sfx-combo/v1.ogg": {
+      "outHash": "c8e848bbe43abe223ec95c4c51dbd974393dd970af6b2a926335391fe75eef1a",
+      "outSize": 19105,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/sfx-combo/v1.ogg",
+      "srcHash": "143d725dff21c9a6bb1b6d20f39ca00921c019cf59e7fd6cdd85c97bc5549799",
+      "srcMtimeMs": 1794064218085.3643,
+      "srcSize": 40320
+    },
+    "play/deutsch-roleplay-b2-game/assets/sfx-correct/v1.ogg": {
+      "outHash": "27cd400eaaedc438b42246c4b3bce56bcbffc2b1429f8a33561c22f853624bb6",
+      "outSize": 12787,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/sfx-correct/v1.ogg",
+      "srcHash": "90508a70dbfd94ce0cb231cb8bc13ac1669da3951a9f137bc912cc655a77dd50",
+      "srcMtimeMs": 1794064217902.366,
+      "srcSize": 25605
+    },
+    "play/deutsch-roleplay-b2-game/assets/sfx-level-up/v1.ogg": {
+      "outHash": "9e55399ebfb8ea7eb5c0c476bfad5fcc7f7968c69a4daf479cc401e6e91cb2c0",
+      "outSize": 15740,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/sfx-level-up/v1.ogg",
+      "srcHash": "c3cc8b5f2253e2d32ff21e45ef56e0d19f33ee2efe77534d215bf545a03ace91",
+      "srcMtimeMs": 1794064218179.1465,
+      "srcSize": 34321
+    },
+    "play/deutsch-roleplay-b2-game/assets/sfx-wrong/v1.ogg": {
+      "outHash": "a085d7c825a7b594e4b91c24730b8d944671b128a206fd8d67ef1bc77150772e",
+      "outSize": 11882,
+      "recipe": "ogg@1:q2",
+      "src": "edu:deutsch-roleplay-b2/build/assets/sfx-wrong/v1.ogg",
+      "srcHash": "9ff57b5c2eca08b5c853046b8d7c874f308b2c56fe032db7ded8db51568e99f2",
+      "srcMtimeMs": 1794064217987.0193,
+      "srcSize": 22688
     },
     "play/deutsch-roleplay-b2-game/assets/voice-de-item-rp-u1-2-opt-a/v1.mp3": {
       "outHash": "9f5fda0a2e0cb15517b1a119374818667e172fa44f289733d20f5fa241cf2f31",
@@ -2552,22 +3013,22 @@
     },
     "play/deutsch-roleplay-b2-game/game-data.js": {
       "jsTarget": "chrome61",
-      "outHash": "8868b51977dcb8ea17395e07117c0f5c3cd7981d72b79eb351f9373fd2ece107",
-      "outSize": 235882,
+      "outHash": "2eb2f712d61b8103c265b760570bb342509b33ffd9db14b4cdf00837fbbb6767",
+      "outSize": 240795,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-b2/build/game-data.js",
-      "srcHash": "c40557095f19fc3263d64f3cc325eb4adad638a03cdf6545526ddfd5b260c132",
-      "srcMtimeMs": 1793627459145.161,
-      "srcSize": 224763
+      "srcHash": "a20070a7de9c4965c0c453289bc023deaf1cd31be19e54cf2540eb29278802d4",
+      "srcMtimeMs": 1794068433769.6047,
+      "srcSize": 229336
     },
     "play/deutsch-roleplay-b2-game/game-data.json": {
-      "outHash": "ac621ba24306210e43e1e498b487ddc9be41c5996aa82b9fb313b9080a5e8063",
-      "outSize": 307672,
+      "outHash": "d911f7b7cf29bb5f6114243b3e0db9aeb109447b5d055989edbcd03624ce83f1",
+      "outSize": 314079,
       "recipe": "copy@1",
       "src": "edu:deutsch-roleplay-b2/build/game-data.json",
-      "srcHash": "ac621ba24306210e43e1e498b487ddc9be41c5996aa82b9fb313b9080a5e8063",
-      "srcMtimeMs": 1793627459143.1497,
-      "srcSize": 307672
+      "srcHash": "d911f7b7cf29bb5f6114243b3e0db9aeb109447b5d055989edbcd03624ce83f1",
+      "srcMtimeMs": 1794068433762.0847,
+      "srcSize": 314079
     },
     "play/deutsch-roleplay-b2-game/index.html": {
       "outHash": "6a4799656f8c6149f4da44897c9ac6bf6682178491e1b20a45c33bfbd250bf68",
@@ -2575,27 +3036,27 @@
       "recipe": "inject-bridge@1:edu:deutsch-roleplay-b2",
       "src": "edu:deutsch-roleplay-b2/build/index.html",
       "srcHash": "b0f890a8db6a73d29648a321658465bc099d95444325943157b8d3d8c8150aa5",
-      "srcMtimeMs": 1793627459136.623,
+      "srcMtimeMs": 1794068433749.9548,
       "srcSize": 467
     },
     "play/deutsch-roleplay-b2-game/player.css": {
-      "outHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
-      "outSize": 1198182,
+      "outHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "outSize": 1201502,
       "recipe": "play-css-urls@1",
       "src": "edu:deutsch-roleplay-b2/build/player.css",
-      "srcHash": "8dea8c7a07f8094a02dde3d9004bbb6af8d3c8ce2470b048539adbc9faa9585b",
-      "srcMtimeMs": 1793618079487.444,
-      "srcSize": 1198182
+      "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 1201502
     },
     "play/deutsch-roleplay-b2-game/player.js": {
       "jsTarget": "chrome61",
-      "outHash": "2ba7b18d27d6ebe57f6a9db70bc7213cb1d377e88e33fc96962e8b661d8b2f29",
-      "outSize": 830405,
+      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
+      "outSize": 839533,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-b2/build/player.js",
-      "srcHash": "edf9a4134de6743b77fc3238640a323d8dbb3c6491b3b95c6b16d08be90ba765",
-      "srcMtimeMs": 1793618079485.4146,
-      "srcSize": 624912
+      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 631697
     },
     "play/echoes-in-the-deep-vn/audio/amb_alarms_raised_voices_rising.mp3": {
       "outHash": "a48c91b66689e26a9cc4338b3e10df2ac26e3aaed01f733ba31495cbed92d645",
@@ -4131,21 +4592,21 @@
     },
     "play/suncev-sustav-game/game-data.js": {
       "jsTarget": "chrome61",
-      "outHash": "bae81be187234e12b97eac33b635c51e6c2f64b05860771f5e9e5d75a0e080ca",
+      "outHash": "9d1bd0b5e4af7c2eaf0104dbf3d4937c0eedf2062f6db933cd1f148052b8346f",
       "outSize": 85004,
       "recipe": "js@1",
       "src": "edu:suncev-sustav/build/game-data.js",
-      "srcHash": "1737979985c0a3f060063ef74e49fe625b2afc39b843597759ff10f9de1e0012",
-      "srcMtimeMs": 1793552628564.355,
+      "srcHash": "ff1a9e25b63d01614f59d76288c07c6dfdc74b3de9e13159c39b5210585dc1b1",
+      "srcMtimeMs": 1794068070735.2888,
       "srcSize": 80762
     },
     "play/suncev-sustav-game/game-data.json": {
-      "outHash": "e07cb938126d950b7b0a211c1dc2288f5431f0f85c686cb9960c99a3ce3ac1f4",
+      "outHash": "b83eb3148492424d8e81712126a08b7a5667a5f71042d90f49cab899608a041b",
       "outSize": 107594,
       "recipe": "copy@1",
       "src": "edu:suncev-sustav/build/game-data.json",
-      "srcHash": "e07cb938126d950b7b0a211c1dc2288f5431f0f85c686cb9960c99a3ce3ac1f4",
-      "srcMtimeMs": 1793552628561.8486,
+      "srcHash": "b83eb3148492424d8e81712126a08b7a5667a5f71042d90f49cab899608a041b",
+      "srcMtimeMs": 1794068070730.7583,
       "srcSize": 107594
     },
     "play/suncev-sustav-game/index.html": {
@@ -4154,27 +4615,27 @@
       "recipe": "inject-bridge@1:edu:suncev-sustav",
       "src": "edu:suncev-sustav/build/index.html",
       "srcHash": "82152cce0485ee16d127dbe2948c989d01aa71e33402da7fefc026f344d6a600",
-      "srcMtimeMs": 1793552628555.8103,
+      "srcMtimeMs": 1794068070724.2349,
       "srcSize": 458
     },
     "play/suncev-sustav-game/player.css": {
-      "outHash": "86460fcb63a245c0820dde6e6c43ccd87ab82fba522474ff1255c7ffe6b3a0d9",
-      "outSize": 1197912,
+      "outHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "outSize": 1201502,
       "recipe": "play-css-urls@1",
       "src": "edu:suncev-sustav/build/player.css",
-      "srcHash": "86460fcb63a245c0820dde6e6c43ccd87ab82fba522474ff1255c7ffe6b3a0d9",
-      "srcMtimeMs": 1793552004865.8984,
-      "srcSize": 1197912
+      "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 1201502
     },
     "play/suncev-sustav-game/player.js": {
       "jsTarget": "chrome61",
-      "outHash": "547cf5055cdff27c3855e41da77f01298d9b6ffa79c644c6dd8b257933eb4cfa",
-      "outSize": 824857,
+      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
+      "outSize": 839533,
       "recipe": "js@1",
       "src": "edu:suncev-sustav/build/player.js",
-      "srcHash": "476e63a14b9cc08a0bd281ff7e1b838f8ed8b32dde1d189b06cf831d4a520e5b",
-      "srcMtimeMs": 1793552004865.8984,
-      "srcSize": 621338
+      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
+      "srcMtimeMs": 1794067951175.5388,
+      "srcSize": 631697
     },
     "play/the-bell-and-the-bicycle-picture-book/audio/music_01.ogg": {
       "outHash": "98a6d31edfb822c3daa2740bd7a0c2e8243946a7abf64dbe033627be088744f6",
@@ -18730,19 +19191,27 @@
       "smoke": null,
       "workId": "circuit-breaker"
     },
+    "deutsch-a1-pilot-game": {
+      "files": 28,
+      "kind": "play",
+      "path": "play/deutsch-a1-pilot-game/",
+      "size": 8685470,
+      "smoke": "ok",
+      "workId": "deutsch-a1-pilot"
+    },
     "deutsch-roleplay-a1-game": {
-      "files": 13,
+      "files": 25,
       "kind": "play",
       "path": "play/deutsch-roleplay-a1-game/",
-      "size": 2452817,
+      "size": 7095656,
       "smoke": "ok",
       "workId": "deutsch-roleplay-a1"
     },
     "deutsch-roleplay-b2-game": {
-      "files": 11,
+      "files": 21,
       "kind": "play",
       "path": "play/deutsch-roleplay-b2-game/",
-      "size": 2748888,
+      "size": 6105158,
       "smoke": "ok",
       "workId": "deutsch-roleplay-b2"
     },
@@ -18822,7 +19291,7 @@
       "files": 39,
       "kind": "play",
       "path": "play/suncev-sustav-game/",
-      "size": 6718381,
+      "size": 6736647,
       "smoke": "ok",
       "workId": "suncev-sustav"
     },

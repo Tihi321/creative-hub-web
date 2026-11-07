@@ -2,7 +2,7 @@
   "format": "edu-game",
   "version": 1,
   "slug": "deutsch-roleplay-a1",
-  "builtAt": "2026-11-02T11:47:15.512Z",
+  "builtAt": "2026-11-07T16:20:31.892Z",
   "engine": "0.0.1",
   "pack": {
     "schema": 1,
@@ -2738,9 +2738,166 @@
         "kind": "audio",
         "file": "assets/voice-de-item-rp-u4-2-opt-a/v1.mp3",
         "alt": "asset.voice-de-item-rp-u4-2-opt-a.alt"
+      },
+      {
+        "id": "mus-menu",
+        "kind": "audio",
+        "file": "assets/mus-menu/v1.ogg",
+        "alt": "asset.mus-menu.alt"
+      },
+      {
+        "id": "mus-unit-u1",
+        "kind": "audio",
+        "file": "assets/mus-unit-u1/v1.ogg",
+        "alt": "asset.mus-unit-u1.alt"
+      },
+      {
+        "id": "mus-unit-u2",
+        "kind": "audio",
+        "file": "assets/mus-unit-u2/v1.ogg",
+        "alt": "asset.mus-unit-u2.alt"
+      },
+      {
+        "id": "mus-unit-u3",
+        "kind": "audio",
+        "file": "assets/mus-unit-u3/v1.ogg",
+        "alt": "asset.mus-unit-u3.alt"
+      },
+      {
+        "id": "mus-unit-u4",
+        "kind": "audio",
+        "file": "assets/mus-unit-u4/v1.ogg",
+        "alt": "asset.mus-unit-u4.alt"
+      },
+      {
+        "id": "mus-boss",
+        "kind": "audio",
+        "file": "assets/mus-boss/v1.ogg",
+        "alt": "asset.mus-boss.alt"
+      },
+      {
+        "id": "mus-end",
+        "kind": "audio",
+        "file": "assets/mus-end/v1.ogg",
+        "alt": "asset.mus-end.alt"
+      },
+      {
+        "id": "sfx-correct",
+        "kind": "audio",
+        "file": "assets/sfx-correct/v1.ogg",
+        "alt": "asset.sfx-correct.alt"
+      },
+      {
+        "id": "sfx-wrong",
+        "kind": "audio",
+        "file": "assets/sfx-wrong/v1.ogg",
+        "alt": "asset.sfx-wrong.alt"
+      },
+      {
+        "id": "sfx-combo",
+        "kind": "audio",
+        "file": "assets/sfx-combo/v1.ogg",
+        "alt": "asset.sfx-combo.alt"
+      },
+      {
+        "id": "sfx-level-up",
+        "kind": "audio",
+        "file": "assets/sfx-level-up/v1.ogg",
+        "alt": "asset.sfx-level-up.alt"
+      },
+      {
+        "id": "sfx-boss",
+        "kind": "audio",
+        "file": "assets/sfx-boss/v1.ogg",
+        "alt": "asset.sfx-boss.alt"
       }
     ],
-    "cues": [],
+    "cues": [
+      {
+        "id": "cue-music-menu",
+        "on": "music:menu",
+        "asset": "mus-menu",
+        "loop": true,
+        "volume": 0.45
+      },
+      {
+        "id": "cue-music-unit-u1",
+        "on": "music:unit-u1",
+        "asset": "mus-unit-u1",
+        "loop": true,
+        "volume": 0.45
+      },
+      {
+        "id": "cue-music-unit-u2",
+        "on": "music:unit-u2",
+        "asset": "mus-unit-u2",
+        "loop": true,
+        "volume": 0.45
+      },
+      {
+        "id": "cue-music-unit-u3",
+        "on": "music:unit-u3",
+        "asset": "mus-unit-u3",
+        "loop": true,
+        "volume": 0.45
+      },
+      {
+        "id": "cue-music-unit-u4",
+        "on": "music:unit-u4",
+        "asset": "mus-unit-u4",
+        "loop": true,
+        "volume": 0.45
+      },
+      {
+        "id": "cue-music-boss",
+        "on": "music:boss",
+        "asset": "mus-boss",
+        "loop": true,
+        "volume": 0.45
+      },
+      {
+        "id": "cue-music-end",
+        "on": "music:end",
+        "asset": "mus-end",
+        "loop": true,
+        "volume": 0.45
+      },
+      {
+        "id": "cue-sfx-correct",
+        "on": "correct",
+        "asset": "sfx-correct",
+        "loop": false,
+        "volume": 0.8
+      },
+      {
+        "id": "cue-sfx-wrong",
+        "on": "wrong",
+        "asset": "sfx-wrong",
+        "loop": false,
+        "volume": 0.8
+      },
+      {
+        "id": "cue-sfx-combo",
+        "on": "combo",
+        "asset": "sfx-combo",
+        "loop": false,
+        "volume": 0.8
+      },
+      {
+        "id": "cue-sfx-level-up",
+        "on": "level-up",
+        "asset": "sfx-level-up",
+        "loop": false,
+        "volume": 0.8
+      },
+      {
+        "id": "cue-sfx-boss",
+        "on": "boss",
+        "asset": "sfx-boss",
+        "loop": false,
+        "volume": 0.8
+      }
+    ],
     "encyclopedia": {
       "articles": [
         {
@@ -3152,6 +3309,38 @@
           "u2"
         ],
         "verbsPerUnit": 6
+      },
+      "audio": {
+        "loops": {
+          "mus-menu": {
+            "startSec": 0,
+            "endSec": 93.333333
+          },
+          "mus-unit-u1": {
+            "startSec": 0,
+            "endSec": 87.272744
+          },
+          "mus-unit-u2": {
+            "startSec": 0,
+            "endSec": 86.153832
+          },
+          "mus-unit-u3": {
+            "startSec": 0,
+            "endSec": 96
+          },
+          "mus-unit-u4": {
+            "startSec": 0,
+            "endSec": 91.428571
+          },
+          "mus-boss": {
+            "startSec": 0,
+            "endSec": 60
+          },
+          "mus-end": {
+            "startSec": 0,
+            "endSec": 101.818186
+          }
+        }
       }
     }
   },
@@ -3344,7 +3533,19 @@
         "item.u1-q2-listen.transcript": "Guten Tag",
         "item.rp-u2-1-listen.transcript": "Ich wohne in Zagreb.",
         "item.u3-q6-listen.transcript": "einundzwanzig",
-        "item.u4-q2-listen.transcript": "die Mutter"
+        "item.u4-q2-listen.transcript": "die Mutter",
+        "asset.mus-menu.alt": "Sanfte Chiptune-Musik auf dem Startbildschirm",
+        "asset.mus-unit-u1.alt": "Fröhliche Chiptune-Musik während der Runde von Einheit 1",
+        "asset.mus-unit-u2.alt": "Fröhliche Chiptune-Musik während der Runde von Einheit 2",
+        "asset.mus-unit-u3.alt": "Fröhliche Chiptune-Musik während der Runde von Einheit 3",
+        "asset.mus-unit-u4.alt": "Fröhliche Chiptune-Musik während der Runde von Einheit 4",
+        "asset.mus-boss.alt": "Spannende, aber freundliche Chiptune-Musik in der Schlussrunde",
+        "asset.mus-end.alt": "Warme Chiptune-Musik auf dem Endbildschirm",
+        "asset.sfx-correct.alt": "Ein heller Klang für eine richtige Antwort",
+        "asset.sfx-wrong.alt": "Ein sanfter tiefer Klang für eine falsche Antwort",
+        "asset.sfx-combo.alt": "Ein funkelnder Klang für eine Reihe richtiger Antworten",
+        "asset.sfx-level-up.alt": "Eine fröhliche Fanfare am Ende einer Runde",
+        "asset.sfx-boss.alt": "Ein dramatischer Klang am Ende der Schlussrunde"
       },
       "accepted": {
         "item.u1-q2.answer": [
@@ -3863,7 +4064,19 @@
         "item.u1-q3.text": "From about 6 p.m. people say Guten {{g1}}.",
         "item.u1-q5.group.g2": "Going to bed",
         "item.u1-q6.text": "When someone is going to bed, people say {{g1}}.",
-        "item.u1-q9.text": "When you are not sure, the safest choice is {{g1}}."
+        "item.u1-q9.text": "When you are not sure, the safest choice is {{g1}}.",
+        "asset.mus-menu.alt": "Gentle chiptune music on the title screen",
+        "asset.mus-unit-u1.alt": "Cheerful chiptune music during the round of unit 1",
+        "asset.mus-unit-u2.alt": "Cheerful chiptune music during the round of unit 2",
+        "asset.mus-unit-u3.alt": "Cheerful chiptune music during the round of unit 3",
+        "asset.mus-unit-u4.alt": "Cheerful chiptune music during the round of unit 4",
+        "asset.mus-boss.alt": "Tense but friendly chiptune music during the final round",
+        "asset.mus-end.alt": "Warm chiptune music on the end screen",
+        "asset.sfx-correct.alt": "A bright sound for a right answer",
+        "asset.sfx-wrong.alt": "A soft low sound for a wrong answer",
+        "asset.sfx-combo.alt": "A sparkly sound for a row of right answers",
+        "asset.sfx-level-up.alt": "A happy fanfare at the end of a round",
+        "asset.sfx-boss.alt": "A dramatic sound at the end of the final round"
       }
     },
     "hr": {
@@ -4271,7 +4484,19 @@
         "item.u1-q3.text": "Od otprilike 18 sati kaže se Guten {{g1}}.",
         "item.u1-q5.group.g2": "Odlazak na spavanje",
         "item.u1-q6.text": "Kad netko ide spavati, kaže se {{g1}}.",
-        "item.u1-q9.text": "Kad nisi siguran, najsigurniji izbor je {{g1}}."
+        "item.u1-q9.text": "Kad nisi siguran, najsigurniji izbor je {{g1}}.",
+        "asset.mus-menu.alt": "Nježna chiptune glazba na početnom zaslonu",
+        "asset.mus-unit-u1.alt": "Vesela chiptune glazba tijekom runde 1. cjeline",
+        "asset.mus-unit-u2.alt": "Vesela chiptune glazba tijekom runde 2. cjeline",
+        "asset.mus-unit-u3.alt": "Vesela chiptune glazba tijekom runde 3. cjeline",
+        "asset.mus-unit-u4.alt": "Vesela chiptune glazba tijekom runde 4. cjeline",
+        "asset.mus-boss.alt": "Napeta ali prijateljska chiptune glazba tijekom završne runde",
+        "asset.mus-end.alt": "Topla chiptune glazba na završnom zaslonu",
+        "asset.sfx-correct.alt": "Svijetli zvuk za točan odgovor",
+        "asset.sfx-wrong.alt": "Tihi niski zvuk za netočan odgovor",
+        "asset.sfx-combo.alt": "Zvjezdani zvuk za niz točnih odgovora",
+        "asset.sfx-level-up.alt": "Vesela fanfara na kraju runde",
+        "asset.sfx-boss.alt": "Dramatičan zvuk na kraju završne runde"
       }
     }
   },
@@ -4284,7 +4509,19 @@
     "voice-de-item-u3-q6-listen-transcript": "assets/voice-de-item-u3-q6-listen-transcript/v1.mp3",
     "voice-de-item-rp-u3-1-opt-a": "assets/voice-de-item-rp-u3-1-opt-a/v1.mp3",
     "voice-de-item-u4-q2-listen-transcript": "assets/voice-de-item-u4-q2-listen-transcript/v1.mp3",
-    "voice-de-item-rp-u4-2-opt-a": "assets/voice-de-item-rp-u4-2-opt-a/v1.mp3"
+    "voice-de-item-rp-u4-2-opt-a": "assets/voice-de-item-rp-u4-2-opt-a/v1.mp3",
+    "mus-menu": "assets/mus-menu/v1.ogg",
+    "mus-unit-u1": "assets/mus-unit-u1/v1.ogg",
+    "mus-unit-u2": "assets/mus-unit-u2/v1.ogg",
+    "mus-unit-u3": "assets/mus-unit-u3/v1.ogg",
+    "mus-unit-u4": "assets/mus-unit-u4/v1.ogg",
+    "mus-boss": "assets/mus-boss/v1.ogg",
+    "mus-end": "assets/mus-end/v1.ogg",
+    "sfx-correct": "assets/sfx-correct/v1.ogg",
+    "sfx-wrong": "assets/sfx-wrong/v1.ogg",
+    "sfx-combo": "assets/sfx-combo/v1.ogg",
+    "sfx-level-up": "assets/sfx-level-up/v1.ogg",
+    "sfx-boss": "assets/sfx-boss/v1.ogg"
   },
   "shell": "quiz-arena"
 }
