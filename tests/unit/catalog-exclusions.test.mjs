@@ -16,7 +16,9 @@ test('catalog has no excluded slugs or files', () => {
       if (e.source) slugs.push(String(e.source).replace(/^[^:]*:/, '').split('/')[0]);
     }
   }
-  const bad = slugs.filter((s) => s && (/^hub/i.test(s) || /-(smoke|pilot|test)$/i.test(s)));
+  // The user chose to publish deutsch-a1-pilot on 2026-11-07; the allowlist names only it and its play id.
+  const allowed = new Set(['deutsch-a1-pilot', 'deutsch-a1-pilot-game']);
+  const bad = slugs.filter((s) => s && !allowed.has(s) && (/^hub/i.test(s) || /-(smoke|pilot|test)$/i.test(s)));
   assert.deepEqual(bad, []);
   assert.doesNotMatch(raw, /rovelli|final\.mp4/i);
 });

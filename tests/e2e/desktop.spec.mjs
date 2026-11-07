@@ -36,7 +36,7 @@ test('type and language filters in the query string', async ({ page }) => {
   await page.goto('/?lang=de');
   const de = await gridWorks(page);
   expect(de).toEqual(want((w) => workLanguages(w).has('de')));
-  if (isReal) expect(de).toEqual(['deutsch-roleplay-a1', 'deutsch-roleplay-b2', 'the-snail-and-the-salad']);
+  if (isReal) expect(de).toEqual(['deutsch-a1-pilot', 'deutsch-roleplay-a1', 'deutsch-roleplay-b2', 'the-snail-and-the-salad']);
 });
 
 test('download rows show format and size equal to the manifest', async ({ page }) => {
