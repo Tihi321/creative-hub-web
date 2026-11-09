@@ -10,8 +10,10 @@
  *      top edge and while it has focus. When hidden it only has opacity 0 and pointer-events none, so it
  *      stays in the tab order: it is the first focusable element of the page (Tab reaches it, and Enter
  *      follows its link). ArrowUp reaches it as well: from the top of a menu, or when nothing is focused.
+ *      In the edu player the pill sits top-centre (its Title page control is top-left, its audio button top-right).
  *   2. TV Back keys (keyCode 461 webOS, 10009 Tizen, key BrowserBack / GoBack) go to data-back.
- *      Escape and Backspace are never touched (the games use them).
+ *      Escape and Backspace are never touched (the games use them). While the edu audio panel
+ *      ([data-testid="audio-panel"]) is open the bridge does not leave: the player closes the panel first.
  *   3. D-pad assist. vn: while the main menu, an open settings/save/history/about screen, the ending
  *      card or the choice list is visible, arrows move focus spatially among its buttons and Enter clicks
  *      the focused one (capture phase, propagation stopped so the player does not also advance).
@@ -147,6 +149,12 @@
     pill.style.top = '4%';
     pill.style.top = 'max(4%, env(safe-area-inset-top))';
     pill.style.left = 'max(5%, env(safe-area-inset-left))';
+    if (player === 'edu') {
+      // the Edu player has its Title page control top-left and the audio button top-right: the pill sits top-centre
+      pill.style.left = '50%';
+      pill.style.webkitTransform = 'translateX(-50%)';
+      pill.style.transform = 'translateX(-50%)';
+    }
     pill.addEventListener('click', function (e) {
       if (!backUrl) {
         e.preventDefault();
@@ -323,6 +331,11 @@
     if (hasClass(root, 'hubb-kb')) root.setAttribute('class', (root.getAttribute('class') || '').replace(/\s*hubb-kb/g, ''));
   }
 
+  /** The Edu player's audio panel (data-testid audio-panel) is open: it closes itself on Back/Escape, so the bridge must not leave the game. */
+  function audioPanelOpen() {
+    return !!document.querySelector('[data-testid="audio-panel"]');
+  }
+
   function isBackKey(e) {
     return e.keyCode === 461 || e.keyCode === 10009 || e.key === 'BrowserBack' || e.key === 'GoBack';
   }
@@ -450,6 +463,7 @@
       return;
     }
     if (isBackKey(e)) {
+      if (audioPanelOpen()) return; // the player closes the panel first
       swallow(e);
       back();
       return;
@@ -525,6 +539,7 @@
   function onKeyBubbleOwned(e) {
     if (e.defaultPrevented) return;
     if (isOwnedBackKey(e)) {
+      if (audioPanelOpen()) return;
       back();
       return;
     }
