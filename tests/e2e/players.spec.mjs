@@ -74,3 +74,23 @@ for (const id of plays) {
     await expect(overlay, 'choice made: list hidden').toHaveClass(new RegExp(VN.hiddenClass));
   });
 }
+
+// WEB-05: Back (TV remote) with the Edu audio panel open must not leave the game; the player closes the panel first.
+test('edu: Back with the audio panel open stays in the game, the Library pill is not top-left', async ({ page }) => {
+  let found = false;
+  for (const id of plays) {
+    await page.goto(`/play/${id}/index.html`);
+    if (!(await isEdu(page)) || !(await page.locator('[data-testid="audio-settings"]').count())) continue;
+    found = true;
+    const left = await page.locator('#hubb-pill').evaluate((el) => el.getBoundingClientRect().left);
+    expect(left, 'the pill is not at the top-left corner, where the Title page control is').toBeGreaterThan(page.viewportSize().width * 0.3);
+    await page.locator('[data-testid="audio-settings"]').click();
+    await page.locator('[data-testid="audio-panel"]').waitFor();
+    const url = page.url();
+    await page.evaluate(() => (document.activeElement || document.body).dispatchEvent(new KeyboardEvent('keydown', { key: 'BrowserBack', keyCode: 461, bubbles: true, cancelable: true })));
+    await page.waitForTimeout(500);
+    expect(page.url(), 'still on the game page').toBe(url);
+    break;
+  }
+  test.skip(!found, 'no published edu game with the audio panel');
+});
