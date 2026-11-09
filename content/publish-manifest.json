@@ -2595,21 +2595,21 @@
     },
     "play/deutsch-a1-pilot-game/game-data.js": {
       "jsTarget": "chrome61",
-      "outHash": "cd2bdd2020c829caf87dce22b16f44d211e096990d6ce26e98f2afb7c51ce95f",
+      "outHash": "7ef8f38134ac65dd7856748ac59de5cf3ef9aa059797f1a6a8a34d03c3cef0f0",
       "outSize": 93861,
       "recipe": "js@1",
       "src": "edu:deutsch-a1-pilot/build/game-data.js",
-      "srcHash": "d75efa7a96d7de7cfa1ef37d72072d13417456556f9fa35c976cc2eaae664ad2",
-      "srcMtimeMs": 1794068436224.349,
+      "srcHash": "b0d046a56a137974488e7e819849a499951e8526c316829641fd2710b563a204",
+      "srcMtimeMs": 1794260468455.4927,
       "srcSize": 88711
     },
     "play/deutsch-a1-pilot-game/game-data.json": {
-      "outHash": "5ba313bb5bd5f9c6efc471a3abb1120149648ba208c132f13d952bbe406c3a54",
+      "outHash": "ef84af6fe14840527d1b08a9077461bcb55d483dc4d32052c9acda5fc7731ee8",
       "outSize": 123473,
       "recipe": "copy@1",
       "src": "edu:deutsch-a1-pilot/build/game-data.json",
-      "srcHash": "5ba313bb5bd5f9c6efc471a3abb1120149648ba208c132f13d952bbe406c3a54",
-      "srcMtimeMs": 1794068436214.046,
+      "srcHash": "ef84af6fe14840527d1b08a9077461bcb55d483dc4d32052c9acda5fc7731ee8",
+      "srcMtimeMs": 1794260468452.975,
       "srcSize": 123473
     },
     "play/deutsch-a1-pilot-game/index.html": {
@@ -2618,7 +2618,7 @@
       "recipe": "inject-bridge@1:edu:deutsch-a1-pilot",
       "src": "edu:deutsch-a1-pilot/build/index.html",
       "srcHash": "0fd93352be3d59ce071b088f1d7b982a2618339dc0f29162ac1f94d2803f5a60",
-      "srcMtimeMs": 1794068436205.0088,
+      "srcMtimeMs": 1794260468448.0698,
       "srcSize": 455
     },
     "play/deutsch-a1-pilot-game/player.css": {
@@ -2627,18 +2627,18 @@
       "recipe": "play-css-urls@1",
       "src": "edu:deutsch-a1-pilot/build/player.css",
       "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
-      "srcMtimeMs": 1794067951175.5388,
+      "srcMtimeMs": 1794260417037.8833,
       "srcSize": 1201502
     },
     "play/deutsch-a1-pilot-game/player.js": {
       "jsTarget": "chrome61",
-      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
-      "outSize": 839533,
+      "outHash": "0cd0386cd0aef2ea2d56672362269c22ed750ce9b8f319b5a14a9dbb1d0a81c8",
+      "outSize": 840530,
       "recipe": "js@1",
       "src": "edu:deutsch-a1-pilot/build/player.js",
-      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
-      "srcMtimeMs": 1794067951175.5388,
-      "srcSize": 631697
+      "srcHash": "76876850d40f7017e885fdd472abdbe019937aa1e0346bab773b377e687261a1",
+      "srcMtimeMs": 1794260417037.8833,
+      "srcSize": 632438
     },
     "play/deutsch-roleplay-a1-game/assets/mus-boss/v1.ogg": {
       "outHash": "fa5e2bfc1424e19cc847b33a81f85ccbe57e765aa686a110295d3f2876b93316",
@@ -2822,21 +2822,21 @@
     },
     "play/deutsch-roleplay-a1-game/game-data.js": {
       "jsTarget": "chrome61",
-      "outHash": "0665edb4cb39eca8e42bf20bdfae6ae65805ac8bd539a3d4738f33f6eac96fe0",
+      "outHash": "2acff6dd838e5a6419d81e75bb344cf77f3545ab5f8cb6daea2322c9fec823d0",
       "outSize": 142960,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-a1/build/game-data.js",
-      "srcHash": "2915c3703b55de793ef10b44f27cd15316f92c630d3d7b4a70110ba7a74824c6",
-      "srcMtimeMs": 1794068431928.043,
+      "srcHash": "162a621ed189039940cc494b896dece679153d282883b40831f5ca0dc698eb19",
+      "srcMtimeMs": 1794260466930.7097,
       "srcSize": 135830
     },
     "play/deutsch-roleplay-a1-game/game-data.json": {
-      "outHash": "7d55757ab403df297220a53096605b0e3a8a170729ee74e7795c5dc8c4b4a75a",
+      "outHash": "57f6c385e0ba46acd861d286b4ab2f676591873400bde3b281a70f8060f7aa9e",
       "outSize": 186952,
       "recipe": "copy@1",
       "src": "edu:deutsch-roleplay-a1/build/game-data.json",
-      "srcHash": "7d55757ab403df297220a53096605b0e3a8a170729ee74e7795c5dc8c4b4a75a",
-      "srcMtimeMs": 1794068431922.512,
+      "srcHash": "57f6c385e0ba46acd861d286b4ab2f676591873400bde3b281a70f8060f7aa9e",
+      "srcMtimeMs": 1794260466928.1946,
       "srcSize": 186952
     },
     "play/deutsch-roleplay-a1-game/index.html": {
@@ -2845,7 +2845,7 @@
       "recipe": "inject-bridge@1:edu:deutsch-roleplay-a1",
       "src": "edu:deutsch-roleplay-a1/build/index.html",
       "srcHash": "67c1a20179513e09561781dbffe9fce36c7cb1f73b0b8e5ecb4d98fa624b4f8c",
-      "srcMtimeMs": 1794068431903.4158,
+      "srcMtimeMs": 1794260466922.8152,
       "srcSize": 468
     },
     "play/deutsch-roleplay-a1-game/player.css": {
@@ -2854,18 +2854,18 @@
       "recipe": "play-css-urls@1",
       "src": "edu:deutsch-roleplay-a1/build/player.css",
       "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
-      "srcMtimeMs": 1794067951175.5388,
+      "srcMtimeMs": 1794260417037.8833,
       "srcSize": 1201502
     },
     "play/deutsch-roleplay-a1-game/player.js": {
       "jsTarget": "chrome61",
-      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
-      "outSize": 839533,
+      "outHash": "0cd0386cd0aef2ea2d56672362269c22ed750ce9b8f319b5a14a9dbb1d0a81c8",
+      "outSize": 840530,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-a1/build/player.js",
-      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
-      "srcMtimeMs": 1794067951175.5388,
-      "srcSize": 631697
+      "srcHash": "76876850d40f7017e885fdd472abdbe019937aa1e0346bab773b377e687261a1",
+      "srcMtimeMs": 1794260417037.8833,
+      "srcSize": 632438
     },
     "play/deutsch-roleplay-b2-game/assets/mus-boss/v1.ogg": {
       "outHash": "01849c44e7ad6e67a59a35879342ae27c2576d87eaba1822dfb38196c0458b52",
@@ -3013,21 +3013,21 @@
     },
     "play/deutsch-roleplay-b2-game/game-data.js": {
       "jsTarget": "chrome61",
-      "outHash": "2eb2f712d61b8103c265b760570bb342509b33ffd9db14b4cdf00837fbbb6767",
+      "outHash": "55a071fe7094dbb4ae260a8aadbd83ff593d6f5dea714da2fc34f236e4a5b994",
       "outSize": 240795,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-b2/build/game-data.js",
-      "srcHash": "a20070a7de9c4965c0c453289bc023deaf1cd31be19e54cf2540eb29278802d4",
-      "srcMtimeMs": 1794068433769.6047,
+      "srcHash": "bae52f0ca4569132c525bbcfc36b088950ebee872a98e6eb3df29b9b5aaac4a6",
+      "srcMtimeMs": 1794260467708.1516,
       "srcSize": 229336
     },
     "play/deutsch-roleplay-b2-game/game-data.json": {
-      "outHash": "d911f7b7cf29bb5f6114243b3e0db9aeb109447b5d055989edbcd03624ce83f1",
+      "outHash": "3158012050a83a379673493a34f56a7d5577f5048c7515877a8e07e861d22d26",
       "outSize": 314079,
       "recipe": "copy@1",
       "src": "edu:deutsch-roleplay-b2/build/game-data.json",
-      "srcHash": "d911f7b7cf29bb5f6114243b3e0db9aeb109447b5d055989edbcd03624ce83f1",
-      "srcMtimeMs": 1794068433762.0847,
+      "srcHash": "3158012050a83a379673493a34f56a7d5577f5048c7515877a8e07e861d22d26",
+      "srcMtimeMs": 1794260467703.5315,
       "srcSize": 314079
     },
     "play/deutsch-roleplay-b2-game/index.html": {
@@ -3036,7 +3036,7 @@
       "recipe": "inject-bridge@1:edu:deutsch-roleplay-b2",
       "src": "edu:deutsch-roleplay-b2/build/index.html",
       "srcHash": "b0f890a8db6a73d29648a321658465bc099d95444325943157b8d3d8c8150aa5",
-      "srcMtimeMs": 1794068433749.9548,
+      "srcMtimeMs": 1794260467698.2354,
       "srcSize": 467
     },
     "play/deutsch-roleplay-b2-game/player.css": {
@@ -3045,18 +3045,18 @@
       "recipe": "play-css-urls@1",
       "src": "edu:deutsch-roleplay-b2/build/player.css",
       "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
-      "srcMtimeMs": 1794067951175.5388,
+      "srcMtimeMs": 1794260417037.8833,
       "srcSize": 1201502
     },
     "play/deutsch-roleplay-b2-game/player.js": {
       "jsTarget": "chrome61",
-      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
-      "outSize": 839533,
+      "outHash": "0cd0386cd0aef2ea2d56672362269c22ed750ce9b8f319b5a14a9dbb1d0a81c8",
+      "outSize": 840530,
       "recipe": "js@1",
       "src": "edu:deutsch-roleplay-b2/build/player.js",
-      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
-      "srcMtimeMs": 1794067951175.5388,
-      "srcSize": 631697
+      "srcHash": "76876850d40f7017e885fdd472abdbe019937aa1e0346bab773b377e687261a1",
+      "srcMtimeMs": 1794260417037.8833,
+      "srcSize": 632438
     },
     "play/echoes-in-the-deep-vn/audio/amb_alarms_raised_voices_rising.mp3": {
       "outHash": "a48c91b66689e26a9cc4338b3e10df2ac26e3aaed01f733ba31495cbed92d645",
@@ -4592,21 +4592,21 @@
     },
     "play/suncev-sustav-game/game-data.js": {
       "jsTarget": "chrome61",
-      "outHash": "9d1bd0b5e4af7c2eaf0104dbf3d4937c0eedf2062f6db933cd1f148052b8346f",
+      "outHash": "2adf0db5feb3bd762fcb1c402e4b7d2f79723f3bd9a8406fd09772a11bef2ac5",
       "outSize": 85004,
       "recipe": "js@1",
       "src": "edu:suncev-sustav/build/game-data.js",
-      "srcHash": "ff1a9e25b63d01614f59d76288c07c6dfdc74b3de9e13159c39b5210585dc1b1",
-      "srcMtimeMs": 1794068070735.2888,
+      "srcHash": "f0ced87addf2286f2bee7938bbde88c79597add2ed73da140f119c2cb54738dd",
+      "srcMtimeMs": 1794260466109.686,
       "srcSize": 80762
     },
     "play/suncev-sustav-game/game-data.json": {
-      "outHash": "b83eb3148492424d8e81712126a08b7a5667a5f71042d90f49cab899608a041b",
+      "outHash": "cb4087c60e578ac90fed303ed9d8381b3a2b9b25d7a0b4b0c237abfb5f8d41e8",
       "outSize": 107594,
       "recipe": "copy@1",
       "src": "edu:suncev-sustav/build/game-data.json",
-      "srcHash": "b83eb3148492424d8e81712126a08b7a5667a5f71042d90f49cab899608a041b",
-      "srcMtimeMs": 1794068070730.7583,
+      "srcHash": "cb4087c60e578ac90fed303ed9d8381b3a2b9b25d7a0b4b0c237abfb5f8d41e8",
+      "srcMtimeMs": 1794260466106.676,
       "srcSize": 107594
     },
     "play/suncev-sustav-game/index.html": {
@@ -4615,7 +4615,7 @@
       "recipe": "inject-bridge@1:edu:suncev-sustav",
       "src": "edu:suncev-sustav/build/index.html",
       "srcHash": "82152cce0485ee16d127dbe2948c989d01aa71e33402da7fefc026f344d6a600",
-      "srcMtimeMs": 1794068070724.2349,
+      "srcMtimeMs": 1794260466101.0642,
       "srcSize": 458
     },
     "play/suncev-sustav-game/player.css": {
@@ -4624,18 +4624,18 @@
       "recipe": "play-css-urls@1",
       "src": "edu:suncev-sustav/build/player.css",
       "srcHash": "d8df9caaf1973266cc37201f757067c02c9ec4fdf3a2a16d90bb7b1775378779",
-      "srcMtimeMs": 1794067951175.5388,
+      "srcMtimeMs": 1794260417037.8833,
       "srcSize": 1201502
     },
     "play/suncev-sustav-game/player.js": {
       "jsTarget": "chrome61",
-      "outHash": "c896230d17ee94ea5cc626a50fccbf80a709ae36f1ed7c9ea5830b0fbc43b377",
-      "outSize": 839533,
+      "outHash": "0cd0386cd0aef2ea2d56672362269c22ed750ce9b8f319b5a14a9dbb1d0a81c8",
+      "outSize": 840530,
       "recipe": "js@1",
       "src": "edu:suncev-sustav/build/player.js",
-      "srcHash": "47d7e9c516bf9a1936d0aa2c8c32ed4e5af9a8c86235e7ef9ecff3631ac3d0c2",
-      "srcMtimeMs": 1794067951175.5388,
-      "srcSize": 631697
+      "srcHash": "76876850d40f7017e885fdd472abdbe019937aa1e0346bab773b377e687261a1",
+      "srcMtimeMs": 1794260417037.8833,
+      "srcSize": 632438
     },
     "play/the-bell-and-the-bicycle-picture-book/audio/music_01.ogg": {
       "outHash": "98a6d31edfb822c3daa2740bd7a0c2e8243946a7abf64dbe033627be088744f6",
@@ -19195,7 +19195,7 @@
       "files": 28,
       "kind": "play",
       "path": "play/deutsch-a1-pilot-game/",
-      "size": 8685470,
+      "size": 8686467,
       "smoke": "ok",
       "workId": "deutsch-a1-pilot"
     },
@@ -19203,7 +19203,7 @@
       "files": 25,
       "kind": "play",
       "path": "play/deutsch-roleplay-a1-game/",
-      "size": 7095656,
+      "size": 7096653,
       "smoke": "ok",
       "workId": "deutsch-roleplay-a1"
     },
@@ -19211,7 +19211,7 @@
       "files": 21,
       "kind": "play",
       "path": "play/deutsch-roleplay-b2-game/",
-      "size": 6105158,
+      "size": 6106155,
       "smoke": "ok",
       "workId": "deutsch-roleplay-b2"
     },
@@ -19291,7 +19291,7 @@
       "files": 39,
       "kind": "play",
       "path": "play/suncev-sustav-game/",
-      "size": 6736647,
+      "size": 6737644,
       "smoke": "ok",
       "workId": "suncev-sustav"
     },
