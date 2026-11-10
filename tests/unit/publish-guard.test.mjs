@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import { assertWritable, assertSourceOutsideRepo, upPrefix, bridgeTag, fixCssFontUrls } from '../../scripts/lib/encode.mjs';
+import { assertWritable, assertSourceOutsideRepo, upPrefix, bridgeTag, fixCssFontUrls, isMusic, recipeFor, audioPlan } from '../../scripts/lib/encode.mjs';
 
 const publicDir = path.resolve('/repo/public');
 const manifestPath = path.resolve('/repo/content/publish-manifest.json');
@@ -36,3 +36,16 @@ test('play CSS: a font url that only resolves without its leading fonts/ is rewr
   assert.equal(r.changed, 1);
   assert.equal(r.css, 'a{src:url("X.ttf")} b{src:url(fonts/Y.ttf)} c{src:url(data:font/ttf;base64,AA)} d{src:url(fonts/Z.ttf)}');
 });
+
+test('music gets its own audio recipe and threshold; speech and SFX keep q2 / 96k', () => {
+  assert.equal(isMusic('play/g/assets/mus-menu/v1.ogg'), true);
+  assert.equal(isMusic('play/b/audio/music_01.mp3'), true);
+  assert.equal(isMusic('play/g/assets/sfx-click/v1.ogg'), false);
+  assert.equal(isMusic('play/b/audio/voice_01.ogg'), false);
+  assert.equal(recipeFor('play/g/assets/mus-menu/v1.ogg'), 'ogg-music@1:q5');
+  assert.equal(recipeFor('play/b/audio/music_01.mp3'), 'mp3-music@1:160k');
+  assert.equal(recipeFor('play/g/assets/vo-1/v1.ogg'), 'ogg@1:q2');
+  assert.equal(audioPlan('play/g/assets/mus-menu/v1.ogg', 'ogg').threshold, 192);
+  assert.equal(audioPlan('play/g/assets/vo-1/v1.ogg', 'ogg').threshold, 112);
+}
+);

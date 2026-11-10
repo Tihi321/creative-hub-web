@@ -2,7 +2,7 @@
   "format": "edu-game",
   "version": 1,
   "slug": "deutsch-roleplay-b2",
-  "builtAt": "2026-11-09T21:41:07.689Z",
+  "builtAt": "2026-11-10T12:13:22.963Z",
   "engine": "0.0.1",
   "pack": {
     "schema": 1,
@@ -5140,31 +5140,31 @@
       {
         "id": "mus-menu",
         "kind": "audio",
-        "file": "assets/mus-menu/v1.ogg",
+        "file": "assets/mus-menu/v2.mp3",
         "alt": "asset.mus-menu.alt"
       },
       {
         "id": "mus-unit-u1",
         "kind": "audio",
-        "file": "assets/mus-unit-u1/v1.ogg",
+        "file": "assets/mus-unit-u1/v2.mp3",
         "alt": "asset.mus-unit-u1.alt"
       },
       {
         "id": "mus-unit-u2",
         "kind": "audio",
-        "file": "assets/mus-unit-u2/v1.ogg",
+        "file": "assets/mus-unit-u2/v2.mp3",
         "alt": "asset.mus-unit-u2.alt"
       },
       {
         "id": "mus-boss",
         "kind": "audio",
-        "file": "assets/mus-boss/v1.ogg",
+        "file": "assets/mus-boss/v2.mp3",
         "alt": "asset.mus-boss.alt"
       },
       {
         "id": "mus-end",
         "kind": "audio",
-        "file": "assets/mus-end/v1.ogg",
+        "file": "assets/mus-end/v2.mp3",
         "alt": "asset.mus-end.alt"
       },
       {
@@ -5501,23 +5501,23 @@
         "loops": {
           "mus-menu": {
             "startSec": 0,
-            "endSec": 93.333333
+            "endSec": 86.908
           },
           "mus-unit-u1": {
             "startSec": 0,
-            "endSec": 87.272744
+            "endSec": 86.908
           },
           "mus-unit-u2": {
             "startSec": 0,
-            "endSec": 86.153832
+            "endSec": 86.908
           },
           "mus-boss": {
             "startSec": 0,
-            "endSec": 70
+            "endSec": 66.939
           },
           "mus-end": {
             "startSec": 0,
-            "endSec": 116.363651
+            "endSec": 86.908
           }
         }
       }
@@ -5897,7 +5897,13 @@
         "asset.sfx-wrong.alt": "Ein sanfter tiefer Klang für eine falsche Antwort",
         "asset.sfx-combo.alt": "Ein funkelnder Klang für eine Reihe richtiger Antworten",
         "asset.sfx-level-up.alt": "Eine fröhliche Fanfare am Ende einer Runde",
-        "asset.sfx-boss.alt": "Ein dramatischer Klang am Ende der Schlussrunde"
+        "asset.sfx-boss.alt": "Ein dramatischer Klang am Ende der Schlussrunde",
+        "asset.voice-de-item-u1-q19-listen-transcript.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-rp-u1-2-opt-a.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-rp-u1-4-opt-a.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u2-q18-opt-d.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-rp-u2-2-opt-a.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-rp-u2-4-opt-a.alt": "Snimka fraze za slušanje"
       },
       "accepted": {
         "item.u1-q5.gap.g1": [
@@ -7334,16 +7340,16 @@
         "rp.w.sei.gloss": "(da) je – Konjunktiv I od sein",
         "rp.w.habe.gloss": "(da) ima – Konjunktiv I od haben",
         "rp.w.komme.gloss": "(da) dolazi – Konjunktiv I od kommen",
-        "asset.mus-menu.alt": "Nježna chiptune glazba na početnom zaslonu",
-        "asset.mus-unit-u1.alt": "Vesela chiptune glazba tijekom runde 1. cjeline",
-        "asset.mus-unit-u2.alt": "Vesela chiptune glazba tijekom runde 2. cjeline",
-        "asset.mus-boss.alt": "Napeta ali prijateljska chiptune glazba tijekom završne runde",
-        "asset.mus-end.alt": "Topla chiptune glazba na završnom zaslonu",
-        "asset.sfx-correct.alt": "Svijetli zvuk za točan odgovor",
-        "asset.sfx-wrong.alt": "Tihi niski zvuk za netočan odgovor",
-        "asset.sfx-combo.alt": "Zvjezdani zvuk za niz točnih odgovora",
-        "asset.sfx-level-up.alt": "Vesela fanfara na kraju runde",
-        "asset.sfx-boss.alt": "Dramatičan zvuk na kraju završne runde"
+        "asset.mus-menu.alt": "The menu music of the game about German at B2: work, media and society",
+        "asset.mus-unit-u1.alt": "The music of unit-u1 of the game about German at B2: work, media and society",
+        "asset.mus-unit-u2.alt": "The music of unit-u2 of the game about German at B2: work, media and society",
+        "asset.mus-boss.alt": "The boss music of the game about German at B2: work, media and society",
+        "asset.mus-end.alt": "The end music of the game about German at B2: work, media and society",
+        "asset.sfx-correct.alt": "The sound for a correct answer",
+        "asset.sfx-wrong.alt": "The sound for a wrong answer",
+        "asset.sfx-combo.alt": "The sound for a combo",
+        "asset.sfx-level-up.alt": "The sound for finishing a unit",
+        "asset.sfx-boss.alt": "The sound for finishing the boss round"
       },
       "accepted": {
         "item.u1-q7.answer": [
@@ -7373,11 +7379,11 @@
     "voice-de-item-u2-q18-opt-d": "assets/voice-de-item-u2-q18-opt-d/v1.mp3",
     "voice-de-item-rp-u2-2-opt-a": "assets/voice-de-item-rp-u2-2-opt-a/v1.mp3",
     "voice-de-item-rp-u2-4-opt-a": "assets/voice-de-item-rp-u2-4-opt-a/v1.mp3",
-    "mus-menu": "assets/mus-menu/v1.ogg",
-    "mus-unit-u1": "assets/mus-unit-u1/v1.ogg",
-    "mus-unit-u2": "assets/mus-unit-u2/v1.ogg",
-    "mus-boss": "assets/mus-boss/v1.ogg",
-    "mus-end": "assets/mus-end/v1.ogg",
+    "mus-menu": "assets/mus-menu/v2.mp3",
+    "mus-unit-u1": "assets/mus-unit-u1/v2.mp3",
+    "mus-unit-u2": "assets/mus-unit-u2/v2.mp3",
+    "mus-boss": "assets/mus-boss/v2.mp3",
+    "mus-end": "assets/mus-end/v2.mp3",
     "sfx-correct": "assets/sfx-correct/v1.ogg",
     "sfx-wrong": "assets/sfx-wrong/v1.ogg",
     "sfx-combo": "assets/sfx-combo/v1.ogg",

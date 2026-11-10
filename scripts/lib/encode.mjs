@@ -15,6 +15,12 @@ sharp.cache(false);
 // ---- tunables (one place) ----
 export const AUDIO_TARGET_KBPS = 96; // fallback if the budget is ever exceeded: 80
 export const AUDIO_THRESHOLD_KBPS = 112;
+// Music only (HUB-33): re-encoded when the source is above 192 kbps, else copied. Fallback if the budget is
+// exceeded: q4 / 128k (set MUSIC_OGG_Q, MUSIC_MP3_KBPS and MUSIC_OGG_EST_KBPS together).
+export const MUSIC_THRESHOLD_KBPS = 192;
+export const MUSIC_OGG_Q = 5;
+export const MUSIC_MP3_KBPS = 160;
+export const MUSIC_OGG_EST_KBPS = 160; // q5 nominal; sparse material comes out lower, so this is conservative
 export const MAX_W = 1920;
 export const MAX_H = 1080;
 export const JS_TARGETS = ['chrome61', 'chrome64', 'chrome80'];
@@ -25,6 +31,8 @@ export const RECIPES = {
   copy: 'copy@1',
   mp3: `mp3@1:${AUDIO_TARGET_KBPS}k`,
   ogg: `ogg@1:q2`,
+  oggMusic: `ogg-music@1:q${MUSIC_OGG_Q}`,
+  mp3Music: `mp3-music@1:${MUSIC_MP3_KBPS}k`,
   webp: 'webp@1:q80',
   png: 'png@1',
   jpeg: 'jpeg@1:q82',
@@ -66,6 +74,11 @@ export function kindOf(rel) {
   }
 }
 
+// Music tracks: Edu `assets/mus-*/` and VN `audio/music_NN.*`. Speech and SFX are not music.
+export function isMusic(rel) {
+  return /\/assets\/mus-[^/]+\//.test(rel) || /\/audio\/music_\d+\./.test(rel);
+}
+
 export function isMarkup(rel) {
   return /\.(x?html)$/i.test(rel);
 }
@@ -100,7 +113,18 @@ export function fixCssFontUrls(css, exists) {
 export function recipeFor(rel, bridge) {
   if (bridge && isMarkup(rel)) return `inject-bridge@1:${bridge.player}:${bridge.workId}`;
   if (isPlayCss(rel)) return RECIPES.playCss;
-  return RECIPES[kindOf(rel)];
+  const kind = kindOf(rel);
+  if (isMusic(rel) && kind === 'ogg') return RECIPES.oggMusic;
+  if (isMusic(rel) && kind === 'mp3') return RECIPES.mp3Music;
+  return RECIPES[kind];
+}
+
+// Re-encode threshold and target for one audio file (music has its own, higher ones).
+export function audioPlan(rel, kind) {
+  if (isMusic(rel)) {
+    return { threshold: MUSIC_THRESHOLD_KBPS, targetKbps: kind === 'mp3' ? MUSIC_MP3_KBPS : MUSIC_OGG_EST_KBPS, music: true };
+  }
+  return { threshold: AUDIO_THRESHOLD_KBPS, targetKbps: AUDIO_TARGET_KBPS, music: false };
 }
 
 // ---- bridge tag ----
@@ -190,7 +214,8 @@ export async function estimateOutSize(rel, srcSize, srcPath) {
   const kind = kindOf(rel);
   if (kind === 'mp3' || kind === 'ogg') {
     const kbps = await probeBitrateKbps(srcPath);
-    if (kbps > AUDIO_THRESHOLD_KBPS) return Math.round(srcSize * (AUDIO_TARGET_KBPS / kbps));
+    const plan = audioPlan(rel, kind);
+    if (kbps > plan.threshold) return Math.round(srcSize * (plan.targetKbps / kbps));
     return srcSize;
   }
   return Math.round(srcSize * (DRY_RATIO[kind] ?? 1));
@@ -198,10 +223,10 @@ export async function estimateOutSize(rel, srcSize, srcPath) {
 
 const BITEXACT = ['-map_metadata', '-1', '-fflags', '+bitexact', '-flags:a', '+bitexact'];
 
-async function encodeAudio(src, tmp, kind) {
+async function encodeAudio(src, tmp, kind, music = false) {
   const codec = kind === 'mp3'
-    ? ['-c:a', 'libmp3lame', '-b:a', `${AUDIO_TARGET_KBPS}k`, '-f', 'mp3']
-    : ['-c:a', 'libvorbis', '-q:a', '2', '-f', 'ogg'];
+    ? ['-c:a', 'libmp3lame', '-b:a', `${music ? MUSIC_MP3_KBPS : AUDIO_TARGET_KBPS}k`, '-f', 'mp3']
+    : ['-c:a', 'libvorbis', '-q:a', String(music ? MUSIC_OGG_Q : 2), '-f', 'ogg'];
   await run('ffmpeg', ['-v', 'error', '-nostdin', '-y', '-i', src, '-map', '0:a', ...codec, ...BITEXACT, tmp]);
 }
 
@@ -256,8 +281,9 @@ export async function processFile({ src, out, rel, bridge, srcHash, srcSize }) {
     const kind = kindOf(rel);
     if (kind === 'mp3' || kind === 'ogg') {
       const kbps = await probeBitrateKbps(src);
-      if (!(kbps > AUDIO_THRESHOLD_KBPS)) return await copy();
-      await encodeAudio(src, tmp, kind);
+      const plan = audioPlan(rel, kind);
+      if (!(kbps > plan.threshold)) return await copy();
+      await encodeAudio(src, tmp, kind, plan.music);
       if (fs.statSync(tmp).size >= srcSize) { fs.rmSync(tmp); return await copy(); }
       return await hashOut('encoded');
     }
