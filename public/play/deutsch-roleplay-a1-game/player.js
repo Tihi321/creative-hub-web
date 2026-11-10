@@ -3160,7 +3160,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const t of Ha) Va.set(t.code, t);
   }
   xk(), Ha.map((t) => t.code);
-  const tt = E().regex(/^[a-z]{2,3}(-[a-z0-9]{2,8})?$/, "a language code such as en, hr, de or pt-br"), Ek = ["comfy", "pixel-studio-draw", "hand", "flow"], Ak = ["builtin", "pixel-studio"], Tk = ["comfy", "chiptune", "flow"], Ik = ["auto", "gemini", "vibetts", "comfy"], Mk = ["nes", "gb", "genesis", "snes", "pce", "ps1", "dreamcast"], Ok = ["none", "ordered", "floyd"], Nk = F({ width: L().int().min(16).max(512).optional(), height: L().int().min(16).max(512).optional(), dither: Y(Ok).optional(), outline: J().optional() });
+  const tt = E().regex(/^[a-z]{2,3}(-[a-z0-9]{2,8})?$/, "a language code such as en, hr, de or pt-br"), Ek = ["comfy", "pixel-studio-draw", "hand", "flow"], Ak = ["builtin", "pixel-studio"], Tk = ["comfy", "chiptune", "flow"], Ik = ["auto", "gemini", "vibetts", "comfy"], Mk = ["nes", "gb", "genesis", "snes", "pce", "ps1", "dreamcast", "gm"], Ok = ["none", "ordered", "floyd"], Nk = F({ width: L().int().min(16).max(512).optional(), height: L().int().min(16).max(512).optional(), dither: Y(Ok).optional(), outline: J().optional() });
   function Pk(t) {
     if (!t || typeof t != "object" || Array.isArray(t)) return t;
     const e = (n) => typeof n == "string" && (n.startsWith("gemini:") || n.startsWith("windows:")), s = {};
@@ -3188,18 +3188,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   F({ art: dn.shape.art, music: dn.shape.music, voice: dn.shape.voice, sound: dn.shape.sound });
   const Dk = /* @__PURE__ */ new Set(["music", "sfx", "ambience"]), Lk = "voice";
   [...Dk];
-  const Ck = Y(["background", "sheet", "sprite", "cover", "cg", "illustration", "tileset", "music", "sfx", "ambience", "voiceRef", "voice"]), Zk = F({ n: L().int().positive(), file: E(), createdAt: E(), seed: L().nullable(), engine: E(), prompt: E(), loopStartSec: L().nullable().optional(), loopEndSec: L().nullable().optional(), remote: F({ provider: Y(["flow", "flow-music"]), id: E(), project: E().optional() }).optional(), songFile: E().optional(), nativeFile: E().optional(), warnings: N(E()).optional(), custom: J().optional() }), Uk = F({ id: E(), kind: Ck, prompt: E(), negative: E().optional(), engine: E(), seed: L().nullable(), size: F({ w: L().int().positive(), h: L().int().positive() }).nullable(), refs: N(E()).optional(), versions: N(Zk), selected: L().int().positive().nullable(), source: Y(["generated", "custom"]), customFile: E().optional(), locked: J(), promptByHand: J().optional(), alt: E().optional(), style: Y(["illustrated", "pixel"]).optional(), provider: Y(["comfy", "flow"]).optional(), fit: F({ w: L().int().positive(), h: L().int().positive() }).optional(), voice: F({ lang: tt, key: E(), role: Y(["listening", "narration", "passage"]), text: E(), hash: E(), provider: E().optional(), imported: J().optional() }).optional(), placeholder: F({ file: E(), reason: E() }).optional(), review: F({ status: Y(["pending", "approved", "rejected"]), note: E().optional(), version: L().int().positive().optional(), rounds: L().int().nonnegative().optional() }).optional() });
-  F({ assets: N(Uk) });
-  const Bk = 1, P = E().regex(/^[A-Za-z0-9][A-Za-z0-9_-]*$/, "an id: letters, digits, - and _"), C = E().regex(/^[A-Za-z0-9][A-Za-z0-9_.:-]*$/, "a text key: letters, digits, . : - and _"), Fk = ["remember", "understand", "apply", "analyze", "evaluate", "create"], Li = ["A1", "A2", "B1", "B2", "C1", "C2"], Kk = ["ignore", "warn", "strict"];
+  const Ck = Y(["background", "sheet", "sprite", "cover", "cg", "illustration", "tileset", "music", "sfx", "ambience", "voiceRef", "voice"]), Zk = F({ texture: E().optional(), lead: E().optional(), pad: E().optional(), bass: E().optional(), bpm: L().optional(), key: E().optional(), scale: E().optional(), form: E().optional() }), Uk = F({ n: L().int().positive(), file: E(), createdAt: E(), seed: L().nullable(), engine: E(), prompt: E(), loopStartSec: L().nullable().optional(), loopEndSec: L().nullable().optional(), remote: F({ provider: Y(["flow", "flow-music"]), id: E(), project: E().optional() }).optional(), fingerprint: Zk.optional(), songFile: E().optional(), nativeFile: E().optional(), warnings: N(E()).optional(), custom: J().optional() }), Bk = F({ id: E(), kind: Ck, prompt: E(), negative: E().optional(), engine: E(), seed: L().nullable(), size: F({ w: L().int().positive(), h: L().int().positive() }).nullable(), refs: N(E()).optional(), versions: N(Uk), selected: L().int().positive().nullable(), source: Y(["generated", "custom"]), customFile: E().optional(), locked: J(), promptByHand: J().optional(), alt: E().optional(), style: Y(["illustrated", "pixel"]).optional(), provider: Y(["comfy", "flow"]).optional(), fit: F({ w: L().int().positive(), h: L().int().positive() }).optional(), voice: F({ lang: tt, key: E(), role: Y(["listening", "narration", "passage"]), text: E(), hash: E(), provider: E().optional(), imported: J().optional() }).optional(), placeholder: F({ file: E(), reason: E() }).optional(), review: F({ status: Y(["pending", "approved", "rejected"]), note: E().optional(), version: L().int().positive().optional(), rounds: L().int().nonnegative().optional() }).optional() });
+  F({ assets: N(Bk) });
+  const Fk = 1, P = E().regex(/^[A-Za-z0-9][A-Za-z0-9_-]*$/, "an id: letters, digits, - and _"), C = E().regex(/^[A-Za-z0-9][A-Za-z0-9_.:-]*$/, "a text key: letters, digits, . : - and _"), Kk = ["remember", "understand", "apply", "analyze", "evaluate", "create"], Li = ["A1", "A2", "B1", "B2", "C1", "C2"], qk = ["ignore", "warn", "strict"];
   U({ schema: se(1).default(1), lang: tt, strings: Q(C, E()), accepted: Q(C, N(E().min(1)).min(1)).optional() });
-  const ye = { id: P, objective: P, prompt: C, explanation: C, didYouKnow: C.optional(), hint: C.optional(), asset: P.optional(), difficulty: L().int().min(1).max(5).default(3), tags: N(E()).default([]), extensions: Q(E(), Et()).optional() }, Ci = U({ id: P, text: C, why: C.optional() }), Ja = U({ ...ye, kind: se("mcq"), options: N(Ci).min(2).max(8), answer: P, shuffle: J().default(true) }), Qa = U({ ...ye, kind: se("true-false"), answer: J(), why: C.optional() }), Xa = U({ ...ye, kind: se("multi-select"), options: N(Ci).min(2).max(10), answers: N(P).min(1), shuffle: J().default(true) }), ec = U({ ...ye, kind: se("cloze"), text: C, gaps: N(U({ id: P, answer: C, bank: N(C).optional() })).min(1), strictDiacritics: J().optional() }), tc = U({ ...ye, kind: se("conjugation"), verb: C, tense: P, forms: N(U({ person: P, label: C, answer: C, given: J().default(false) })).min(2).max(7), ask: L().int().min(1).optional(), strictDiacritics: J().optional() }), sc = U({ ...ye, kind: se("typed"), answer: C, strictDiacritics: J().optional() }), nc = U({ ...ye, kind: se("match-pairs"), pairs: N(U({ id: P, left: C, right: C })).min(2).max(8) }), ic = U({ ...ye, kind: se("order"), items: N(U({ id: P, text: C, when: C.optional() })).min(2).max(10), timeline: J().default(false) }), rc = U({ ...ye, kind: se("sort-groups"), groups: N(U({ id: P, title: C })).min(2).max(5), items: N(U({ id: P, text: C, group: P, why: C.optional() })).min(2).max(12) }), qk = Ni("type", [U({ type: se("circle"), cx: L(), cy: L(), r: L().positive() }), U({ type: se("rect"), x: L(), y: L(), w: L().positive(), h: L().positive() }), U({ type: se("poly"), points: N(At([L(), L()])).min(3) })]), oc = U({ ...ye, kind: se("hotspot"), asset: P, width: L().positive(), height: L().positive(), regions: N(U({ id: P, label: C, shape: qk, why: C.optional() })).min(2), answer: P }), ac = U({ ...ye, kind: se("listening"), asset: P, transcript: C, mode: Y(["choose", "type"]), options: N(Ci).min(2).max(8).optional(), answer: E().min(1), shuffle: J().default(true), strictDiacritics: J().optional() }).superRefine((t, e) => {
+  const ye = { id: P, objective: P, prompt: C, explanation: C, didYouKnow: C.optional(), hint: C.optional(), asset: P.optional(), difficulty: L().int().min(1).max(5).default(3), tags: N(E()).default([]), extensions: Q(E(), Et()).optional() }, Ci = U({ id: P, text: C, why: C.optional() }), Ja = U({ ...ye, kind: se("mcq"), options: N(Ci).min(2).max(8), answer: P, shuffle: J().default(true) }), Qa = U({ ...ye, kind: se("true-false"), answer: J(), why: C.optional() }), Xa = U({ ...ye, kind: se("multi-select"), options: N(Ci).min(2).max(10), answers: N(P).min(1), shuffle: J().default(true) }), ec = U({ ...ye, kind: se("cloze"), text: C, gaps: N(U({ id: P, answer: C, bank: N(C).optional() })).min(1), strictDiacritics: J().optional() }), tc = U({ ...ye, kind: se("conjugation"), verb: C, tense: P, forms: N(U({ person: P, label: C, answer: C, given: J().default(false) })).min(2).max(7), ask: L().int().min(1).optional(), strictDiacritics: J().optional() }), sc = U({ ...ye, kind: se("typed"), answer: C, strictDiacritics: J().optional() }), nc = U({ ...ye, kind: se("match-pairs"), pairs: N(U({ id: P, left: C, right: C })).min(2).max(8) }), ic = U({ ...ye, kind: se("order"), items: N(U({ id: P, text: C, when: C.optional() })).min(2).max(10), timeline: J().default(false) }), rc = U({ ...ye, kind: se("sort-groups"), groups: N(U({ id: P, title: C })).min(2).max(5), items: N(U({ id: P, text: C, group: P, why: C.optional() })).min(2).max(12) }), Gk = Ni("type", [U({ type: se("circle"), cx: L(), cy: L(), r: L().positive() }), U({ type: se("rect"), x: L(), y: L(), w: L().positive(), h: L().positive() }), U({ type: se("poly"), points: N(At([L(), L()])).min(3) })]), oc = U({ ...ye, kind: se("hotspot"), asset: P, width: L().positive(), height: L().positive(), regions: N(U({ id: P, label: C, shape: Gk, why: C.optional() })).min(2), answer: P }), ac = U({ ...ye, kind: se("listening"), asset: P, transcript: C, mode: Y(["choose", "type"]), options: N(Ci).min(2).max(8).optional(), answer: E().min(1), shuffle: J().default(true), strictDiacritics: J().optional() }).superRefine((t, e) => {
     t.mode === "choose" && !t.options && e.addIssue({ code: "custom", path: ["options"], message: "a choose listening item needs options" }), t.mode === "type" && t.options && e.addIssue({ code: "custom", path: ["options"], message: "a type listening item has no options" });
   }), cc = U({ ...ye, kind: se("flashcard"), back: C, backAsset: P.optional() }), lc = U({ ...ye, kind: se("crossword"), words: N(U({ id: P, answer: C, clue: C })).min(3).max(20), seed: L().int(), maxSize: L().int().min(5).max(30).default(15) }), uc = U({ ...ye, kind: se("word-search"), words: N(U({ id: P, answer: C })).min(2).max(20), seed: L().int(), size: L().int().min(5).max(30).optional(), directions: Y(["forward", "diagonal", "all"]).default("diagonal") });
   Ni("kind", [Ja, Qa, Xa, ec, sc, nc, ic, rc, oc, ac, cc, lc, uc, tc]);
-  const Gk = nk({ ...ye, kind: E().min(1) }), Wk = U({ id: P, title: C, summary: C.optional(), requires: N(P).default([]) }), Hk = U({ id: P, unit: P, bloom: Y(Fk), text: C, facts: N(P).default([]) }), Vk = U({ id: P, kind: Y(["image", "audio"]), file: E().min(1), alt: C }), Yk = U({ id: P, on: E().min(1), asset: P, loop: J().default(false), volume: L().min(0).max(1).default(1) }), Jk = U({ id: P, title: C, body: C, citations: N(P).default([]), asset: P.optional(), related: N(P).default([]), unit: P.optional() }), Qk = U({ id: P, claim: C.optional(), source: E().min(1), url: Rg().optional() });
-  U({ schema: se(Bk), id: P, slug: E().regex(/^[a-z0-9][a-z0-9-]*$/, "a slug: lower-case letters, digits and -"), sourceLang: tt, languages: N(tt).min(1), targetLang: tt.optional(), subject: E().min(1), audience: E().min(1), cefr: Y(Li).optional(), matching: U({ diacritics: Y(Kk).default("ignore"), typos: J().default(true) }).default({ diacritics: "ignore", typos: true }), units: N(Wk).min(1), objectives: N(Hk).min(1), items: N(Gk), shells: U({ enabled: N(E().min(1)).default(["quiz-arena"]), config: Q(E(), Q(E(), Et())).default({}) }).default({ enabled: ["quiz-arena"], config: {} }), assets: N(Vk).default([]), cues: N(Yk).default([]), encyclopedia: U({ articles: N(Jk).default([]) }).default({ articles: [] }), factbase: N(Qk).default([]), extensions: Q(E(), Et()).default({}) });
+  const Wk = nk({ ...ye, kind: E().min(1) }), Hk = U({ id: P, title: C, summary: C.optional(), requires: N(P).default([]) }), Vk = U({ id: P, unit: P, bloom: Y(Kk), text: C, facts: N(P).default([]) }), Yk = U({ id: P, kind: Y(["image", "audio"]), file: E().min(1), alt: C }), Jk = U({ id: P, on: E().min(1), asset: P, loop: J().default(false), volume: L().min(0).max(1).default(1) }), Qk = U({ id: P, title: C, body: C, citations: N(P).default([]), asset: P.optional(), related: N(P).default([]), unit: P.optional() }), Xk = U({ id: P, claim: C.optional(), source: E().min(1), url: Rg().optional() });
+  U({ schema: se(Fk), id: P, slug: E().regex(/^[a-z0-9][a-z0-9-]*$/, "a slug: lower-case letters, digits and -"), sourceLang: tt, languages: N(tt).min(1), targetLang: tt.optional(), subject: E().min(1), audience: E().min(1), cefr: Y(Li).optional(), matching: U({ diacritics: Y(qk).default("ignore"), typos: J().default(true) }).default({ diacritics: "ignore", typos: true }), units: N(Hk).min(1), objectives: N(Vk).min(1), items: N(Wk), shells: U({ enabled: N(E().min(1)).default(["quiz-arena"]), config: Q(E(), Q(E(), Et())).default({}) }).default({ enabled: ["quiz-arena"], config: {} }), assets: N(Yk).default([]), cues: N(Jk).default([]), encyclopedia: U({ articles: N(Qk).default([]) }).default({ articles: [] }), factbase: N(Xk).default([]), extensions: Q(E(), Et()).default({}) });
   const hn = (t, e) => t.objectives.filter((s) => s.unit === e), dc = (t, e) => t.items.filter((s) => s.objective === e);
-  function Xk(t, e) {
+  function eb(t, e) {
     var _a3;
     return (_a3 = t.objectives.find((s) => s.id === e.objective)) == null ? void 0 : _a3.unit;
   }
@@ -3241,7 +3241,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return r[i.length];
   }
-  function eb(t) {
+  function tb(t) {
     const e = (i) => i.replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/Ä/g, "Ae").replace(/Ö/g, "Oe").replace(/Ü/g, "Ue"), s = (i) => i.replace(/ß/g, "ss").replace(/ẞ/g, "SS"), n = /* @__PURE__ */ new Set([e(s(t)), s(t), e(t)]);
     return n.delete(t), [...n];
   }
@@ -3250,7 +3250,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = pc(t), n = pc(e);
     return s.length !== n.length ? false : n.some((i, r) => (r > 0 || n.length === 1) && fc(i) && !fc(s[r]));
   }
-  function tb(t, e, s = {}) {
+  function sb(t, e, s = {}) {
     var _a3, _b3, _c2;
     const n = (_a3 = s.diacritics) != null ? _a3 : "ignore", i = s.typos !== false, r = (_b3 = s.minTypoLength) != null ? _b3 : 4, o = (_c2 = e[0]) != null ? _c2 : null, a = s.lang === "de", c = (k, b) => ({ correct: false, exact: false, typo: false, diacritics: false, matched: b, canonical: o, distance: k }), l = Pe(t);
     if (!l) return c(1 / 0, null);
@@ -3260,7 +3260,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const b = Pe(k);
       if (!b) continue;
       if (b === l) return { correct: true, exact: true, typo: false, diacritics: false, matched: k, canonical: o, distance: 0, ...a && mc(t, k) ? { caps: true } : {} };
-      a && g === null && eb(k).some((y) => Pe(y) === l) && (g = k);
+      a && g === null && tb(k).some((y) => Pe(y) === l) && (g = k);
       const v = Pe(k, { fold: true });
       if (v === u) {
         f != null ? f : f = k;
@@ -3274,7 +3274,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return g !== null ? { correct: true, exact: false, typo: false, diacritics: false, matched: g, canonical: o, distance: 0, translit: true, ...mc(t, g) ? { caps: true } : {} } : f !== null ? n === "strict" ? { correct: false, exact: false, typo: false, diacritics: true, matched: f, canonical: o, distance: 0 } : { correct: true, exact: false, typo: false, diacritics: n === "warn", matched: f, canonical: o, distance: 0 } : m ? { correct: true, exact: false, typo: true, diacritics: false, matched: m.a, canonical: o, distance: m.d } : c(p, h);
   }
-  function sb(t, e, s) {
+  function nb(t, e, s) {
     if (t === true) return "strict";
     if (t === false) return "ignore";
     const n = e != null ? e : "ignore";
@@ -3337,7 +3337,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return s.length > 1 && s.every((n, i) => n === t[i]) && s.push(s.shift()), s;
   }
   const nt = (t, e) => "".concat(t, ",").concat(e);
-  function nb(t, e, s, n, i) {
+  function ib(t, e, s, n, i) {
     const r = i === "down" ? 1 : 0, o = i === "across" ? 1 : 0;
     if (t.has(nt(s - r, n - o)) || t.has(nt(s + e.length * r, n + e.length * o))) return -1;
     let a = 0;
@@ -3366,7 +3366,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return { r0: e, r1: s, c0: n, c1: i };
   }
-  function ib(t, e, s, n) {
+  function rb(t, e, s, n) {
     const i = Gt(e, "crossword", s), r = [...t];
     s > 0 ? i.shuffle(r) : r.sort((p, f) => f.letters.length - p.letters.length || p.id.localeCompare(f.id));
     const o = /* @__PURE__ */ new Map(), a = [];
@@ -3385,7 +3385,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           const v = Array.from(b.letters), w = b.dir === "across" ? "down" : "across";
           for (let y = 0; y < v.length; y++) for (let $ = 0; $ < m.length; $++) {
             if (v[y] !== m[$]) continue;
-            const x = b.dir === "across" ? b.r - $ : b.r + y, _ = b.dir === "across" ? b.c + y : b.c - $, z = nb(o, m, x, _, w);
+            const x = b.dir === "across" ? b.r - $ : b.r + y, _ = b.dir === "across" ? b.c + y : b.c - $, z = ib(o, m, x, _, w);
             if (z < 1) continue;
             const O = w === "down" ? 1 : 0, R = w === "across" ? 1 : 0, S = Bi(o), A = Math.min(S.r0, x), j = Math.max(S.r1, x + (m.length - 1) * O), I = Math.min(S.c0, _), D = Math.max(S.c1, _ + (m.length - 1) * R);
             j - A + 1 > n || D - I + 1 > n || g.push({ r: x, c: _, dir: w, n: z, area: (j - A + 1) * (D - I + 1) });
@@ -3404,7 +3404,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const h = o.size > 0 ? Bi(o) : { r0: 0, r1: -1, c0: 0, c1: -1 };
     return { placed: a, unplaced: c.map((p) => p.id), area: (h.r1 - h.r0 + 1) * (h.c1 - h.c0 + 1) };
   }
-  function rb(t, e, s = {}) {
+  function ob(t, e, s = {}) {
     var _a3, _b3;
     const n = (_a3 = s.maxSize) != null ? _a3 : 15, i = [], r = [], o = /* @__PURE__ */ new Set();
     for (const k of t) {
@@ -3414,7 +3414,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     let a = null;
     const c = Math.max(1, (_b3 = s.attempts) != null ? _b3 : 24);
     for (let k = 0; k < c && i.length > 0; k++) {
-      const b = ib(i, e, k, n);
+      const b = rb(i, e, k, n);
       if ((!a || b.unplaced.length < a.unplaced.length || b.unplaced.length === a.unplaced.length && b.area < a.area) && (a = b), a.unplaced.length === 0 && k >= 8) break;
     }
     if (!a) return { width: 0, height: 0, cells: [], entries: [], unplaced: r };
@@ -3436,7 +3436,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return m.sort((k, b) => k.number - b.number || (k.dir === "across" ? -1 : 1)), { width: p, height: h, cells: f, entries: m, unplaced: [...r, ...a.unplaced] };
   }
-  function ob(t, e) {
+  function ab(t, e) {
     const s = [], n = new Map(t.entries.map((a) => [a.id, a]));
     for (const a of e) {
       const c = kt(a.answer), l = n.get(a.id);
@@ -3479,36 +3479,36 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return s;
   }
-  function ab(t) {
+  function cb(t) {
     return { across: t.entries.filter((e) => e.dir === "across"), down: t.entries.filter((e) => e.dir === "down") };
   }
-  const pn = ["again", "hard", "good", "easy"], gc = (t) => typeof t == "string" && pn.includes(t), Fi = 864e5, cb = 1.3, lb = 2.5, ub = { again: 2, hard: 3, good: 4, easy: 5 }, kc = (t) => typeof t == "number" ? t : t.getTime(), db = (t) => Math.round(t * 100) / 100;
+  const pn = ["again", "hard", "good", "easy"], gc = (t) => typeof t == "string" && pn.includes(t), Fi = 864e5, lb = 1.3, ub = 2.5, db = { again: 2, hard: 3, good: 4, easy: 5 }, kc = (t) => typeof t == "number" ? t : t.getTime(), hb = (t) => Math.round(t * 100) / 100;
   function bc(t, e = 0) {
-    return { id: t, ease: lb, interval: 0, reps: 0, lapses: 0, due: kc(e), last: null };
+    return { id: t, ease: ub, interval: 0, reps: 0, lapses: 0, due: kc(e), last: null };
   }
   function vc(t, e, s) {
-    const n = kc(s), i = ub[e], r = Math.max(cb, db(t.ease + (0.1 - (5 - i) * (0.08 + (5 - i) * 0.02))));
+    const n = kc(s), i = db[e], r = Math.max(lb, hb(t.ease + (0.1 - (5 - i) * (0.08 + (5 - i) * 0.02))));
     if (i < 3) return { ...t, ease: r, interval: 1, reps: 0, lapses: t.lapses + 1, due: n + Fi, last: n };
     const o = t.reps + 1, a = o === 1 ? 1 : o === 2 ? 6 : Math.round(t.interval * r);
     return { ...t, ease: r, interval: a, reps: o, due: n + a * Fi, last: n };
   }
-  function hb(t) {
+  function pb(t) {
     return t.last === null ? "new" : t.reps < 3 ? "learning" : t.interval >= 21 ? "mature" : "young";
   }
-  const wc = () => ({ answered: 0, pending: [], misses: {} }), pb = (t) => Math.min(4, 1 + Math.max(1, t));
-  function fb(t, e, s) {
+  const wc = () => ({ answered: 0, pending: [], misses: {} }), fb = (t) => Math.min(4, 1 + Math.max(1, t));
+  function mb(t, e, s) {
     var _a3;
     const n = t.answered + 1, i = t.pending.filter((o) => o.id !== e);
     if (s !== "again") return { answered: n, pending: i, misses: t.misses };
     const r = ((_a3 = t.misses[e]) != null ? _a3 : 0) + 1;
-    return { answered: n, pending: [...i, { id: e, dueAt: n + pb(r), misses: r }], misses: { ...t.misses, [e]: r } };
+    return { answered: n, pending: [...i, { id: e, dueAt: n + fb(r), misses: r }], misses: { ...t.misses, [e]: r } };
   }
-  const mb = { forward: [[0, 1], [1, 0]], diagonal: [[0, 1], [1, 0], [1, 1], [-1, 1]], all: [[0, 1], [1, 0], [1, 1], [-1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1]] };
-  function gb(t) {
+  const gb = { forward: [[0, 1], [1, 0]], diagonal: [[0, 1], [1, 0], [1, 1], [-1, 1]], all: [[0, 1], [1, 0], [1, 1], [-1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1]] };
+  function kb(t) {
     const e = t.reduce((s, n) => s + n, 0);
     return Math.max(6, ...t, Math.ceil(Math.sqrt(e * 2.4)));
   }
-  function kb(t, e, s, n, i) {
+  function bb(t, e, s, n, i) {
     const r = Gt(n, "wordsearch", e, i), o = Array.from({ length: e }, () => Array(e).fill(null)), a = [], c = [], l = [...t].sort((u, h) => h.letters.length - u.letters.length || u.id.localeCompare(h.id));
     for (const u of l) {
       let h = false;
@@ -3528,18 +3528,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return { cells: o, placements: a, unplaced: c };
   }
-  function bb(t, e, s = {}) {
+  function vb(t, e, s = {}) {
     var _a3, _b3, _c2, _d2, _e2;
-    const n = mb[(_a3 = s.directions) != null ? _a3 : "diagonal"], i = [], r = [], o = /* @__PURE__ */ new Set();
+    const n = gb[(_a3 = s.directions) != null ? _a3 : "diagonal"], i = [], r = [], o = /* @__PURE__ */ new Set();
     for (const k of t) {
       const b = Array.from(kt(k.answer));
       b.length < 2 || o.has(k.id) ? r.push(k.id) : i.push({ id: k.id, letters: b }), o.add(k.id);
     }
-    const a = (_b3 = s.size) != null ? _b3 : gb(i.map((k) => k.letters.length)), c = s.size ? [s.size] : [a, a + 1, a + 2, a + 3];
+    const a = (_b3 = s.size) != null ? _b3 : kb(i.map((k) => k.letters.length)), c = s.size ? [s.size] : [a, a + 1, a + 2, a + 3];
     let l = null, u = a;
     for (const k of c) {
       for (let b = 0; b < 12; b++) {
-        const v = kb(i.filter((y) => y.letters.length <= k), k, n, e, b), w = [...v.unplaced, ...i.filter((y) => y.letters.length > k).map((y) => y.id)];
+        const v = bb(i.filter((y) => y.letters.length <= k), k, n, e, b), w = [...v.unplaced, ...i.filter((y) => y.letters.length > k).map((y) => y.id)];
         if ((!l || w.length < l.unplaced.length) && (l = { ...v, unplaced: w }, u = k), l.unplaced.length === 0) break;
       }
       if (l && l.unplaced.length === 0) break;
@@ -3563,7 +3563,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const e = Array.from(t.answer).length - 1;
     return { start: [t.row, t.col], end: [t.row + t.dr * e, t.col + t.dc * e] };
   }
-  function vb(t, e) {
+  function wb(t, e) {
     const s = [];
     (t.cells.length !== t.size || t.cells.some((n) => n.length !== t.size)) && s.push("the grid is not square");
     for (const n of e) {
@@ -3581,31 +3581,31 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const i = e === 0 ? 0 : t / e, r = e > 0 && t === e;
     return { correct: r, partial: !r && t > 0, score: i, expected: s, ...n ? { detail: n } : {} };
   };
-  function wb(t, e) {
+  function yb(t, e) {
     if (typeof e != "string") return ve(t.answer);
     const s = e === t.answer;
     return { correct: s, score: s ? 1 : 0, expected: t.answer };
   }
-  function yb(t, e) {
+  function Sb(t, e) {
     if (typeof e != "boolean") return ve(t.answer);
     const s = e === t.answer;
     return { correct: s, score: s ? 1 : 0, expected: t.answer };
   }
-  function Sb(t, e) {
+  function $b(t, e) {
     const s = [...t.answers].sort();
     if (!$c(e)) return ve(s);
     const n = new Set(e), i = s.filter((c) => n.has(c)).length, r = [...n].filter((c) => !t.answers.includes(c)).length, o = i === s.length && r === 0, a = Math.max(0, (i - r) / s.length);
     return { correct: o, partial: !o && a > 0, score: a, expected: s };
   }
   function fn(t, e, s, n, i = false) {
-    const r = s.text.accepted(e), o = tb(t, r, { diacritics: sb(n, s.diacritics, s.lang), typos: i ? false : s.typos, lang: s.lang });
+    const r = s.text.accepted(e), o = sb(t, r, { diacritics: nb(n, s.diacritics, s.lang), typos: i ? false : s.typos, lang: s.lang });
     return { correct: o.correct, score: o.correct ? 1 : 0, expected: o.canonical, ...o.typo ? { typo: true } : {}, ...o.diacritics ? { diacritics: true } : {}, ...o.translit ? { translit: true } : {}, ...o.caps ? { caps: true } : {} };
   }
-  function $b(t, e, s) {
+  function zb(t, e, s) {
     var _a3;
     return typeof e != "string" ? ve((_a3 = s.text.canonical(t.answer)) != null ? _a3 : null) : fn(e, t.answer, s, t.strictDiacritics);
   }
-  function zb(t, e, s) {
+  function _b(t, e, s) {
     var _a3;
     const n = Object.fromEntries(t.gaps.map((u) => {
       var _a4;
@@ -3620,11 +3620,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return { ...Mt(Object.values(i).filter(Boolean).length, t.gaps.length, n, i), ...r ? { typo: true } : {}, ...o ? { diacritics: true } : {}, ...a ? { translit: true } : {}, ...c ? { caps: true } : {} };
   }
-  function _b(t) {
+  function jb(t) {
     const e = t.forms.filter((s) => !s.given);
     return t.ask === void 0 ? e : e.slice(0, t.ask);
   }
-  function jb(t, e, s) {
+  function xb(t, e, s) {
     var _a3;
     const n = Object.fromEntries(t.forms.map((p) => {
       var _a4;
@@ -3641,14 +3641,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return { ...Mt(Object.values(a).filter(Boolean).length, r.length, n, a), ...c ? { diacritics: true } : {}, ...l ? { translit: true } : {}, ...u ? { caps: true } : {} };
   }
-  function xb(t, e) {
+  function Eb(t, e) {
     const s = Object.fromEntries(t.pairs.map((i) => [i.id, i.id]));
     if (!It(e)) return ve(s);
     const n = {};
     for (const i of t.pairs) n[i.id] = e[i.id] === i.id;
     return Mt(Object.values(n).filter(Boolean).length, t.pairs.length, s, n);
   }
-  function Eb(t, e) {
+  function Ab(t, e) {
     const s = t.items.map((i) => i.id);
     if (!$c(e) || e.length !== s.length || new Set(e).size !== s.length || e.some((i) => !s.includes(i))) return ve(s);
     const n = {};
@@ -3656,17 +3656,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       n[i] = e[r] === i;
     }), Mt(Object.values(n).filter(Boolean).length, s.length, s, n);
   }
-  function Ab(t, e) {
+  function Tb(t, e) {
     return gs(t.items.map((s) => s.id), Gt(e, t.id, "order"));
   }
-  function Tb(t, e) {
+  function Ib(t, e) {
     const s = Object.fromEntries(t.items.map((i) => [i.id, i.group]));
     if (!It(e)) return ve(s);
     const n = {};
     for (const i of t.items) n[i.id] = e[i.id] === i.group;
     return Mt(Object.values(n).filter(Boolean).length, t.items.length, s, n);
   }
-  function Ib(t, e, s) {
+  function Mb(t, e, s) {
     if (t.type === "circle") return (e - t.cx) ** 2 + (s - t.cy) ** 2 <= t.r ** 2;
     if (t.type === "rect") return e >= t.x && e <= t.x + t.w && s >= t.y && s <= t.y + t.h;
     let n = false;
@@ -3679,9 +3679,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }
   function zc(t, e, s) {
     var _a3;
-    return (_a3 = t.regions.find((n) => Ib(n.shape, e, s))) == null ? void 0 : _a3.id;
+    return (_a3 = t.regions.find((n) => Mb(n.shape, e, s))) == null ? void 0 : _a3.id;
   }
-  function Mb(t, e) {
+  function Ob(t, e) {
     var _a3;
     let s;
     if (typeof e == "string") s = e;
@@ -3690,7 +3690,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const n = s === t.answer;
     return { correct: n, score: n ? 1 : 0, expected: t.answer };
   }
-  function Ob(t, e, s) {
+  function Nb(t, e, s) {
     var _a3;
     if (t.mode === "choose") {
       if (typeof e != "string") return ve(t.answer);
@@ -3699,7 +3699,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return typeof e != "string" ? ve((_a3 = s.text.canonical(t.answer)) != null ? _a3 : null) : fn(e, t.answer, s, t.strictDiacritics);
   }
-  function Nb(t, e) {
+  function Pb(t, e) {
     return gc(e) ? e === "again" ? { correct: false, score: 0, expected: null } : e === "hard" ? { correct: true, partial: true, score: 0.6, expected: null } : { correct: true, score: 1, expected: null } : ve(null);
   }
   function _c(t, e) {
@@ -3707,9 +3707,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const i = e.text.canonical(n.answer);
       return i ? [{ id: n.id, answer: i }] : [];
     });
-    return { grid: rb(s, t.seed, { maxSize: t.maxSize }), words: s };
+    return { grid: ob(s, t.seed, { maxSize: t.maxSize }), words: s };
   }
-  function Pb(t, e, s) {
+  function Rb(t, e, s) {
     const n = Object.fromEntries(t.words.map((r) => {
       var _a3;
       return [r.id, (_a3 = s.text.canonical(r.answer)) != null ? _a3 : null];
@@ -3727,9 +3727,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const i = e.text.canonical(n.answer);
       return i ? [{ id: n.id, answer: i }] : [];
     });
-    return { grid: bb(s, t.seed, { size: t.size, directions: t.directions }), words: s };
+    return { grid: vb(s, t.seed, { size: t.size, directions: t.directions }), words: s };
   }
-  const Rb = (t) => It(t) && Array.isArray(t.start) && Array.isArray(t.end) && t.start.length === 2 && t.end.length === 2 && [...t.start, ...t.end].every((e) => Number.isInteger(e));
+  const Db = (t) => It(t) && Array.isArray(t.start) && Array.isArray(t.end) && t.start.length === 2 && t.end.length === 2 && [...t.start, ...t.end].every((e) => Number.isInteger(e));
   function jc(t, e, s) {
     const n = /* @__PURE__ */ new Set();
     for (const i of s) {
@@ -3743,9 +3743,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return [...n];
   }
-  function Db(t, e, s) {
+  function Lb(t, e, s) {
     const n = t.words.map((c) => c.id);
-    if (!Array.isArray(e) || !e.every(Rb)) return ve(n);
+    if (!Array.isArray(e) || !e.every(Db)) return ve(n);
     const { grid: i, words: r } = mn(t, s), o = new Set(jc(i, r, e)), a = Object.fromEntries(n.map((c) => [c, o.has(c)]));
     return Mt(o.size, n.length, n, a);
   }
@@ -3754,7 +3754,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return { text: t.text, diacritics: (_a3 = t.pack.matching) == null ? void 0 : _a3.diacritics, typos: (_b3 = t.pack.matching) == null ? void 0 : _b3.typos, lang: (_d2 = (_c2 = t.targetLang) != null ? _c2 : t.pack.targetLang) != null ? _d2 : t.text.lang };
   }
   const ks = /* @__PURE__ */ new Map();
-  function Lb(t, e = {}) {
+  function Cb(t, e = {}) {
     if (ks.has(t.kind) && !e.replace) throw new Error('item kind "'.concat(t.kind, '" is already registered'));
     ks.set(t.kind, t);
   }
@@ -3767,7 +3767,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return { correct: false, score: 0, expected: n.keyOf(t), invalid: true };
     }
   }
-  const Cb = (t, e) => {
+  const Zb = (t, e) => {
     var _a3;
     return (_a3 = ks.get(t.kind)) == null ? void 0 : _a3.solve(t, e);
   };
@@ -3807,9 +3807,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return i && i.kind !== s ? [{ code: "ASSET_KIND", path: n, message: 'asset "'.concat(e, '" is ').concat(i.kind, ", this item needs ").concat(s) }] : [];
   }
   function je(t) {
-    Lb(t);
+    Cb(t);
   }
-  je({ kind: "mcq", form: "Multiple choice", recall: false, schema: Ja, check: (t, e) => wb(t, e), keyOf: (t) => t.answer, solve: (t) => t.answer, textRefs: (t) => [..._e(t), ...t.options.flatMap((e, s) => [...te("options[".concat(s, "].text"), e.text), ...te("options[".concat(s, "].why"), e.why)])], validate: (t) => [...Fe(t.options, "options"), ...t.options.some((e) => e.id === t.answer) ? [] : [{ code: "UNKNOWN_OPTION", path: "answer", message: 'the answer "'.concat(t.answer, '" is not one of the options') }]], distractors: (t) => t.options.flatMap((e, s) => e.id === t.answer ? [] : [{ path: "options[".concat(s, "].why"), id: e.id, why: e.why }]) }), je({ kind: "true-false", form: "True or false", recall: false, schema: Qa, check: (t, e) => yb(t, e), keyOf: (t) => t.answer, solve: (t) => t.answer, textRefs: (t) => [..._e(t), ...te("why", t.why)] }), je({ kind: "multi-select", form: "Select all that apply", recall: false, schema: Xa, check: (t, e) => Sb(t, e), keyOf: (t) => [...t.answers].sort(), solve: (t) => [...t.answers], textRefs: (t) => [..._e(t), ...t.options.flatMap((e, s) => [...te("options[".concat(s, "].text"), e.text), ...te("options[".concat(s, "].why"), e.why)])], validate: (t) => [...Fe(t.options, "options"), ...t.answers.flatMap((e, s) => t.options.some((n) => n.id === e) ? [] : [{ code: "UNKNOWN_OPTION", path: "answers[".concat(s, "]"), message: 'the answer "'.concat(e, '" is not one of the options') }])], distractors: (t) => t.options.flatMap((e, s) => t.answers.includes(e.id) ? [] : [{ path: "options[".concat(s, "].why"), id: e.id, why: e.why }]) }), je({ kind: "cloze", form: "Fill the gap", recall: true, schema: ec, check: (t, e, s) => zb(t, e, s), keyOf: (t) => Object.fromEntries(t.gaps.map((e) => [e.id, e.answer])), solve: (t, e) => Object.fromEntries(t.gaps.map((s) => {
+  je({ kind: "mcq", form: "Multiple choice", recall: false, schema: Ja, check: (t, e) => yb(t, e), keyOf: (t) => t.answer, solve: (t) => t.answer, textRefs: (t) => [..._e(t), ...t.options.flatMap((e, s) => [...te("options[".concat(s, "].text"), e.text), ...te("options[".concat(s, "].why"), e.why)])], validate: (t) => [...Fe(t.options, "options"), ...t.options.some((e) => e.id === t.answer) ? [] : [{ code: "UNKNOWN_OPTION", path: "answer", message: 'the answer "'.concat(t.answer, '" is not one of the options') }]], distractors: (t) => t.options.flatMap((e, s) => e.id === t.answer ? [] : [{ path: "options[".concat(s, "].why"), id: e.id, why: e.why }]) }), je({ kind: "true-false", form: "True or false", recall: false, schema: Qa, check: (t, e) => Sb(t, e), keyOf: (t) => t.answer, solve: (t) => t.answer, textRefs: (t) => [..._e(t), ...te("why", t.why)] }), je({ kind: "multi-select", form: "Select all that apply", recall: false, schema: Xa, check: (t, e) => $b(t, e), keyOf: (t) => [...t.answers].sort(), solve: (t) => [...t.answers], textRefs: (t) => [..._e(t), ...t.options.flatMap((e, s) => [...te("options[".concat(s, "].text"), e.text), ...te("options[".concat(s, "].why"), e.why)])], validate: (t) => [...Fe(t.options, "options"), ...t.answers.flatMap((e, s) => t.options.some((n) => n.id === e) ? [] : [{ code: "UNKNOWN_OPTION", path: "answers[".concat(s, "]"), message: 'the answer "'.concat(e, '" is not one of the options') }])], distractors: (t) => t.options.flatMap((e, s) => t.answers.includes(e.id) ? [] : [{ path: "options[".concat(s, "].why"), id: e.id, why: e.why }]) }), je({ kind: "cloze", form: "Fill the gap", recall: true, schema: ec, check: (t, e, s) => _b(t, e, s), keyOf: (t) => Object.fromEntries(t.gaps.map((e) => [e.id, e.answer])), solve: (t, e) => Object.fromEntries(t.gaps.map((s) => {
     var _a3;
     return [s.id, (_a3 = e.text.canonical(s.answer)) != null ? _a3 : ""];
   })), textRefs: (t) => [..._e(t), ...te("text", t.text), ...t.gaps.flatMap((e, s) => [...te("gaps[".concat(s, "].answer"), e.answer, "accepted"), ...e.bank ? [...te("gaps[".concat(s, "].answer"), e.answer), ...e.bank.flatMap((n, i) => te("gaps[".concat(s, "].bank[").concat(i, "]"), n))] : []])], validate: (t, e) => {
@@ -3822,10 +3822,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (i !== void 0) for (const r of t.gaps) i.includes("{{".concat(r.id, "}}")) || s.push({ code: "MISSING_GAP_MARKER", path: "text", message: 'the text in "'.concat(n, '" has no {{').concat(r.id, "}} marker") });
     }
     return s;
-  } }), je({ kind: "typed", form: "Type the answer", recall: true, schema: sc, check: (t, e, s) => $b(t, e, s), keyOf: (t) => t.answer, solve: (t, e) => {
+  } }), je({ kind: "typed", form: "Type the answer", recall: true, schema: sc, check: (t, e, s) => zb(t, e, s), keyOf: (t) => t.answer, solve: (t, e) => {
     var _a3;
     return (_a3 = e.text.canonical(t.answer)) != null ? _a3 : "";
-  }, textRefs: (t) => [..._e(t), ...te("answer", t.answer, "accepted")] }), je({ kind: "match-pairs", form: "Match the pairs", recall: false, schema: nc, check: (t, e) => xb(t, e), keyOf: (t) => Object.fromEntries(t.pairs.map((e) => [e.id, e.id])), solve: (t) => Object.fromEntries(t.pairs.map((e) => [e.id, e.id])), textRefs: (t) => [..._e(t), ...t.pairs.flatMap((e, s) => [...te("pairs[".concat(s, "].left"), e.left), ...te("pairs[".concat(s, "].right"), e.right)])], validate: (t) => Fe(t.pairs, "pairs") }), je({ kind: "order", form: "Put in order", recall: true, schema: ic, check: (t, e) => Eb(t, e), keyOf: (t) => t.items.map((e) => e.id), solve: (t) => t.items.map((e) => e.id), textRefs: (t) => [..._e(t), ...t.items.flatMap((e, s) => [...te("items[".concat(s, "].text"), e.text), ...te("items[".concat(s, "].when"), e.when)])], validate: (t) => Fe(t.items, "items") }), je({ kind: "sort-groups", form: "Sort into groups", recall: true, schema: rc, check: (t, e) => Tb(t, e), keyOf: (t) => Object.fromEntries(t.items.map((e) => [e.id, e.group])), solve: (t) => Object.fromEntries(t.items.map((e) => [e.id, e.group])), textRefs: (t) => [..._e(t), ...t.groups.flatMap((e, s) => te("groups[".concat(s, "].title"), e.title)), ...t.items.flatMap((e, s) => [...te("items[".concat(s, "].text"), e.text), ...te("items[".concat(s, "].why"), e.why)])], validate: (t) => [...Fe(t.groups, "groups"), ...Fe(t.items, "items"), ...t.items.flatMap((e, s) => t.groups.some((n) => n.id === e.group) ? [] : [{ code: "UNKNOWN_GROUP", path: "items[".concat(s, "].group"), message: 'the group "'.concat(e.group, '" does not exist') }])] }), je({ kind: "hotspot", form: "Find it on the picture", recall: true, schema: oc, check: (t, e) => Mb(t, e), keyOf: (t) => t.answer, solve: (t) => t.answer, textRefs: (t) => [..._e(t), ...t.regions.flatMap((e, s) => [...te("regions[".concat(s, "].label"), e.label), ...te("regions[".concat(s, "].why"), e.why)])], validate: (t, e) => [...Fe(t.regions, "regions"), ...t.regions.some((s) => s.id === t.answer) ? [] : [{ code: "UNKNOWN_REGION", path: "answer", message: 'the answer "'.concat(t.answer, '" is not one of the regions') }], ...Ac(e, t.asset, "image", "asset")] }), je({ kind: "listening", form: "Listen and answer", recall: false, schema: ac, check: (t, e, s) => Ob(t, e, s), keyOf: (t) => t.answer, solve: (t, e) => {
+  }, textRefs: (t) => [..._e(t), ...te("answer", t.answer, "accepted")] }), je({ kind: "match-pairs", form: "Match the pairs", recall: false, schema: nc, check: (t, e) => Eb(t, e), keyOf: (t) => Object.fromEntries(t.pairs.map((e) => [e.id, e.id])), solve: (t) => Object.fromEntries(t.pairs.map((e) => [e.id, e.id])), textRefs: (t) => [..._e(t), ...t.pairs.flatMap((e, s) => [...te("pairs[".concat(s, "].left"), e.left), ...te("pairs[".concat(s, "].right"), e.right)])], validate: (t) => Fe(t.pairs, "pairs") }), je({ kind: "order", form: "Put in order", recall: true, schema: ic, check: (t, e) => Ab(t, e), keyOf: (t) => t.items.map((e) => e.id), solve: (t) => t.items.map((e) => e.id), textRefs: (t) => [..._e(t), ...t.items.flatMap((e, s) => [...te("items[".concat(s, "].text"), e.text), ...te("items[".concat(s, "].when"), e.when)])], validate: (t) => Fe(t.items, "items") }), je({ kind: "sort-groups", form: "Sort into groups", recall: true, schema: rc, check: (t, e) => Ib(t, e), keyOf: (t) => Object.fromEntries(t.items.map((e) => [e.id, e.group])), solve: (t) => Object.fromEntries(t.items.map((e) => [e.id, e.group])), textRefs: (t) => [..._e(t), ...t.groups.flatMap((e, s) => te("groups[".concat(s, "].title"), e.title)), ...t.items.flatMap((e, s) => [...te("items[".concat(s, "].text"), e.text), ...te("items[".concat(s, "].why"), e.why)])], validate: (t) => [...Fe(t.groups, "groups"), ...Fe(t.items, "items"), ...t.items.flatMap((e, s) => t.groups.some((n) => n.id === e.group) ? [] : [{ code: "UNKNOWN_GROUP", path: "items[".concat(s, "].group"), message: 'the group "'.concat(e.group, '" does not exist') }])] }), je({ kind: "hotspot", form: "Find it on the picture", recall: true, schema: oc, check: (t, e) => Ob(t, e), keyOf: (t) => t.answer, solve: (t) => t.answer, textRefs: (t) => [..._e(t), ...t.regions.flatMap((e, s) => [...te("regions[".concat(s, "].label"), e.label), ...te("regions[".concat(s, "].why"), e.why)])], validate: (t, e) => [...Fe(t.regions, "regions"), ...t.regions.some((s) => s.id === t.answer) ? [] : [{ code: "UNKNOWN_REGION", path: "answer", message: 'the answer "'.concat(t.answer, '" is not one of the regions') }], ...Ac(e, t.asset, "image", "asset")] }), je({ kind: "listening", form: "Listen and answer", recall: false, schema: ac, check: (t, e, s) => Nb(t, e, s), keyOf: (t) => t.answer, solve: (t, e) => {
     var _a3;
     return t.mode === "choose" ? t.answer : (_a3 = e.text.canonical(t.answer)) != null ? _a3 : "";
   }, textRefs: (t) => {
@@ -3837,7 +3837,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }, distractors: (t) => {
     var _a3;
     return t.mode === "choose" ? ((_a3 = t.options) != null ? _a3 : []).flatMap((e, s) => e.id === t.answer ? [] : [{ path: "options[".concat(s, "].why"), id: e.id, why: e.why }]) : [];
-  } }), je({ kind: "flashcard", form: "Flashcard", recall: true, schema: cc, check: (t, e) => Nb(t, e), keyOf: () => null, solve: () => "good", textRefs: (t) => [..._e(t), ...te("back", t.back)], validate: (t, e) => t.backAsset && !e.assets.has(t.backAsset) ? [{ code: "UNKNOWN_ASSET", path: "backAsset", message: 'unknown asset "'.concat(t.backAsset, '"') }] : [] }), je({ kind: "crossword", form: "Crossword", recall: true, schema: lc, check: (t, e, s) => Pb(t, e, s), keyOf: (t) => Object.fromEntries(t.words.map((e) => [e.id, e.answer])), solve: (t, e) => Object.fromEntries(t.words.map((s) => {
+  } }), je({ kind: "flashcard", form: "Flashcard", recall: true, schema: cc, check: (t, e) => Pb(t, e), keyOf: () => null, solve: () => "good", textRefs: (t) => [..._e(t), ...te("back", t.back)], validate: (t, e) => t.backAsset && !e.assets.has(t.backAsset) ? [{ code: "UNKNOWN_ASSET", path: "backAsset", message: 'unknown asset "'.concat(t.backAsset, '"') }] : [] }), je({ kind: "crossword", form: "Crossword", recall: true, schema: lc, check: (t, e, s) => Rb(t, e, s), keyOf: (t) => Object.fromEntries(t.words.map((e) => [e.id, e.answer])), solve: (t, e) => Object.fromEntries(t.words.map((s) => {
     var _a3;
     return [s.id, (_a3 = e.text.canonical(s.answer)) != null ? _a3 : ""];
   })), textRefs: (t) => [..._e(t), ...t.words.flatMap((e, s) => [...te("words[".concat(s, "].answer"), e.answer, "accepted"), ...te("words[".concat(s, "].clue"), e.clue)])], validate: (t, e) => {
@@ -3847,42 +3847,42 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (t.words.some((a) => !i.text.canonical(a.answer))) continue;
       const { grid: r, words: o } = _c(t, i);
       r.unplaced.length > 0 && s.push({ code: "PUZZLE_UNPLACED", path: "words", message: 'in "'.concat(n, '" the crossword cannot place: ').concat(r.unplaced.join(", ")) });
-      for (const a of ob(r, o)) s.push({ code: "PUZZLE_INVALID", path: "words", message: 'in "'.concat(n, '": ').concat(a) });
+      for (const a of ab(r, o)) s.push({ code: "PUZZLE_INVALID", path: "words", message: 'in "'.concat(n, '": ').concat(a) });
     }
     return s;
-  } }), je({ kind: "conjugation", form: "Conjugate the verb", recall: true, schema: tc, check: (t, e, s) => jb(t, e, s), keyOf: (t) => Object.fromEntries(t.forms.filter((e) => !e.given).map((e) => [e.person, e.answer])), solve: (t, e) => Object.fromEntries(_b(t).map((s) => {
+  } }), je({ kind: "conjugation", form: "Conjugate the verb", recall: true, schema: tc, check: (t, e, s) => xb(t, e, s), keyOf: (t) => Object.fromEntries(t.forms.filter((e) => !e.given).map((e) => [e.person, e.answer])), solve: (t, e) => Object.fromEntries(jb(t).map((s) => {
     var _a3;
     return [s.person, (_a3 = e.text.canonical(s.answer)) != null ? _a3 : ""];
   })), textRefs: (t) => [..._e(t), ...te("verb", t.verb), ...t.forms.flatMap((e, s) => [...te("forms[".concat(s, "].label"), e.label), ...te("forms[".concat(s, "].answer"), e.answer, "accepted")])], validate: (t) => {
     const e = [];
     return t.forms.filter((n) => !n.given).length === 0 && e.push({ code: "CONJ_NOTHING_ASKED", path: "forms", message: "every form is given: the item asks nothing" }), e;
-  } }), je({ kind: "word-search", form: "Word search", recall: true, schema: uc, check: (t, e, s) => Db(t, e, s), keyOf: (t) => t.words.map((e) => e.id), solve: (t, e) => mn(t, e).grid.placements.map(Sc), textRefs: (t) => [..._e(t), ...t.words.flatMap((e, s) => te("words[".concat(s, "].answer"), e.answer, "accepted"))], validate: (t, e) => {
+  } }), je({ kind: "word-search", form: "Word search", recall: true, schema: uc, check: (t, e, s) => Lb(t, e, s), keyOf: (t) => t.words.map((e) => e.id), solve: (t, e) => mn(t, e).grid.placements.map(Sc), textRefs: (t) => [..._e(t), ...t.words.flatMap((e, s) => te("words[".concat(s, "].answer"), e.answer, "accepted"))], validate: (t, e) => {
     const s = Fe(t.words, "words");
     for (const n of e.languages) {
       const i = Ec(e, n);
       if (t.words.some((a) => !i.text.canonical(a.answer))) continue;
       const { grid: r, words: o } = mn(t, i);
       r.unplaced.length > 0 && s.push({ code: "PUZZLE_UNPLACED", path: "words", message: 'in "'.concat(n, '" the word search cannot place: ').concat(r.unplaced.join(", ")) });
-      for (const a of vb(r, o)) s.push({ code: "PUZZLE_INVALID", path: "words", message: 'in "'.concat(n, '": ').concat(a) });
+      for (const a of wb(r, o)) s.push({ code: "PUZZLE_INVALID", path: "words", message: 'in "'.concat(n, '": ').concat(a) });
     }
     return s;
   } }), [...ks.keys()];
-  const Zb = 0.7, Ub = 0.85, Tc = (t = 3) => ({ window: [], difficulty: t });
-  function Bb(t) {
+  const Ub = 0.7, Bb = 0.85, Tc = (t = 3) => ({ window: [], difficulty: t });
+  function Fb(t) {
     return t.length === 0 ? null : t.filter(Boolean).length / t.length;
   }
-  function Fb(t, e = {}) {
+  function Kb(t, e = {}) {
     var _a3, _b3;
-    return t < ((_a3 = e.low) != null ? _a3 : Zb) ? "low" : t > ((_b3 = e.high) != null ? _b3 : Ub) ? "high" : "in";
+    return t < ((_a3 = e.low) != null ? _a3 : Ub) ? "low" : t > ((_b3 = e.high) != null ? _b3 : Bb) ? "high" : "in";
   }
-  function Kb(t, e, s = {}) {
+  function qb(t, e, s = {}) {
     var _a3, _b3, _c2, _d2;
-    const n = (_a3 = s.windowSize) != null ? _a3 : 10, i = [...t.window, e].slice(-n), r = Bb(i);
+    const n = (_a3 = s.windowSize) != null ? _a3 : 10, i = [...t.window, e].slice(-n), r = Fb(i);
     if (r === null || i.length < ((_b3 = s.minSamples) != null ? _b3 : 4)) return { window: i, difficulty: t.difficulty };
-    const o = (_c2 = s.minDifficulty) != null ? _c2 : 1, a = (_d2 = s.maxDifficulty) != null ? _d2 : 5, c = Fb(r, s), l = c === "low" ? Math.max(o, t.difficulty - 1) : c === "high" ? Math.min(a, t.difficulty + 1) : t.difficulty;
+    const o = (_c2 = s.minDifficulty) != null ? _c2 : 1, a = (_d2 = s.maxDifficulty) != null ? _d2 : 5, c = Kb(r, s), l = c === "low" ? Math.max(o, t.difficulty - 1) : c === "high" ? Math.min(a, t.difficulty + 1) : t.difficulty;
     return l === t.difficulty ? { window: i, difficulty: l } : { window: [], difficulty: l };
   }
-  function qb(t, e, s, n = []) {
+  function Gb(t, e, s, n = []) {
     let i = t.filter((l) => !n.includes(l.id));
     if (i.length === 0 && (i = [...t]), i.length === 0) return null;
     const r = (l) => Math.abs(l.difficulty - e.difficulty);
@@ -3899,14 +3899,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return o.filter((l) => l.w > 0).at(-1).c;
   }
-  const Ki = 1, Gb = ["murdle", "knights", "testimony", "logic", "quiz"], kn = ["easy", "medium", "hard"], ce = E().regex(/^[a-z][a-z0-9]*$/, "an item id such as s1, w2, p3"), qi = /^[a-z][a-z0-9_]*$/, Wb = F({ id: E().regex(/^c\d+$/, "a clue id such as c1"), type: Y(["is", "not", "either"]), a: ce, b: et([ce, At([ce, ce])]), descr: N(ce).optional() }), Gi = F({ rule: E(), cell: At([ce, ce]).optional(), value: E(), clue: E().optional(), from: N(At([ce, ce])).optional(), who: E().optional(), statement: E().optional() }).passthrough(), Ic = F({ steps: L().int(), score: L(), rules: Q(E(), L()) }), Hb = Ic, bn = { format: se(Ki), seed: L().int().optional(), band: Y(kn).optional(), difficulty: Hb, steps: N(Gi) }, Vb = F({ ...bn, kind: se("murdle"), size: L().int().min(3).max(5), categories: N(F({ key: E(), items: N(ce).min(3) })).min(3).max(4), descr: Q(E(), E()).optional(), solution: Q(E(), Q(E(), ce)), clues: N(Wb).min(1), murder: F({ place: ce, answer: F({ suspect: ce, weapon: ce, place: ce, motive: ce.optional() }) }) }), Ot = E().regex(/^k\d+$/, "a speaker id such as k1"), vn = Sk(() => et([F({ type: Y(["knight", "knave"]), who: Ot }), F({ type: Y(["same", "diff"]), a: Ot, b: Ot }), F({ type: Y(["some_knave", "all_knight"]), of: N(Ot).min(1) }), F({ type: se("exactly"), k: L().int().min(0), of: N(Ot).min(1) }), F({ type: se("not"), c: vn }), F({ type: Y(["and", "or"]), a: vn, b: vn })])), Yb = F({ ...bn, kind: se("knights"), size: L().int().min(2).max(5), speakers: N(Ot).min(2).max(5), statements: N(F({ id: E().regex(/^t\d+$/, "a statement id such as t1"), speaker: Ot, claim: vn })).min(1), solution: Q(E(), Y(["knight", "knave"])) }), wn = F({ key: E().regex(/^[a-z][a-z0-9_]*$/, "a key such as clock"), value: E().min(1) }), Jb = F({ ...bn, kind: se("testimony"), size: L().int().min(2).max(10), witness: se("wit"), keys: N(F({ key: wn.shape.key, label: E().optional(), values: N(E().min(1)).min(2), item: E().optional(), claim: E().optional(), fact: E().optional() })).min(1), statements: N(F({ id: E().regex(/^t\d+$/, "a statement id such as t1"), claims: N(wn).min(1), press: F({ claims: N(wn).min(1) }).optional() })).min(2), evidence: N(F({ id: E().regex(/^e\d+$/, "an evidence id such as e1"), facts: N(wn).min(1) })).min(1), solution: F({ statement: E(), evidence: E(), press: J().optional() }) }), Qb = F({ id: E().regex(/^c\d+$/, "a clue id such as c1"), type: Y(["is", "not", "either", "neither", "oneof", "before", "after", "apart"]), a: et([ce, At([ce, ce])]), b: et([ce, At([ce, ce])]), n: L().int().min(1).optional() }), Xb = F({ ...bn, kind: se("logic"), size: L().int().min(3).max(5), categories: N(F({ key: E(), items: N(ce).min(3), ref: E().optional() })).min(3).max(5), ordinal: F({ category: E(), unit: E().optional() }), hardTrans: L().int().optional(), solution: Q(E(), Q(E(), ce)), clues: N(Qb).min(1) }), ev = F({ id: E().regex(qi), options: N(E().regex(qi)).min(2).max(6), answer: E().regex(qi) }).superRefine((t, e) => {
+  const Ki = 1, Wb = ["murdle", "knights", "testimony", "logic", "quiz"], kn = ["easy", "medium", "hard"], ce = E().regex(/^[a-z][a-z0-9]*$/, "an item id such as s1, w2, p3"), qi = /^[a-z][a-z0-9_]*$/, Hb = F({ id: E().regex(/^c\d+$/, "a clue id such as c1"), type: Y(["is", "not", "either"]), a: ce, b: et([ce, At([ce, ce])]), descr: N(ce).optional() }), Gi = F({ rule: E(), cell: At([ce, ce]).optional(), value: E(), clue: E().optional(), from: N(At([ce, ce])).optional(), who: E().optional(), statement: E().optional() }).passthrough(), Ic = F({ steps: L().int(), score: L(), rules: Q(E(), L()) }), Vb = Ic, bn = { format: se(Ki), seed: L().int().optional(), band: Y(kn).optional(), difficulty: Vb, steps: N(Gi) }, Yb = F({ ...bn, kind: se("murdle"), size: L().int().min(3).max(5), categories: N(F({ key: E(), items: N(ce).min(3) })).min(3).max(4), descr: Q(E(), E()).optional(), solution: Q(E(), Q(E(), ce)), clues: N(Hb).min(1), murder: F({ place: ce, answer: F({ suspect: ce, weapon: ce, place: ce, motive: ce.optional() }) }) }), Ot = E().regex(/^k\d+$/, "a speaker id such as k1"), vn = Sk(() => et([F({ type: Y(["knight", "knave"]), who: Ot }), F({ type: Y(["same", "diff"]), a: Ot, b: Ot }), F({ type: Y(["some_knave", "all_knight"]), of: N(Ot).min(1) }), F({ type: se("exactly"), k: L().int().min(0), of: N(Ot).min(1) }), F({ type: se("not"), c: vn }), F({ type: Y(["and", "or"]), a: vn, b: vn })])), Jb = F({ ...bn, kind: se("knights"), size: L().int().min(2).max(5), speakers: N(Ot).min(2).max(5), statements: N(F({ id: E().regex(/^t\d+$/, "a statement id such as t1"), speaker: Ot, claim: vn })).min(1), solution: Q(E(), Y(["knight", "knave"])) }), wn = F({ key: E().regex(/^[a-z][a-z0-9_]*$/, "a key such as clock"), value: E().min(1) }), Qb = F({ ...bn, kind: se("testimony"), size: L().int().min(2).max(10), witness: se("wit"), keys: N(F({ key: wn.shape.key, label: E().optional(), values: N(E().min(1)).min(2), item: E().optional(), claim: E().optional(), fact: E().optional() })).min(1), statements: N(F({ id: E().regex(/^t\d+$/, "a statement id such as t1"), claims: N(wn).min(1), press: F({ claims: N(wn).min(1) }).optional() })).min(2), evidence: N(F({ id: E().regex(/^e\d+$/, "an evidence id such as e1"), facts: N(wn).min(1) })).min(1), solution: F({ statement: E(), evidence: E(), press: J().optional() }) }), Xb = F({ id: E().regex(/^c\d+$/, "a clue id such as c1"), type: Y(["is", "not", "either", "neither", "oneof", "before", "after", "apart"]), a: et([ce, At([ce, ce])]), b: et([ce, At([ce, ce])]), n: L().int().min(1).optional() }), ev = F({ ...bn, kind: se("logic"), size: L().int().min(3).max(5), categories: N(F({ key: E(), items: N(ce).min(3), ref: E().optional() })).min(3).max(5), ordinal: F({ category: E(), unit: E().optional() }), hardTrans: L().int().optional(), solution: Q(E(), Q(E(), ce)), clues: N(Xb).min(1) }), tv = F({ id: E().regex(qi), options: N(E().regex(qi)).min(2).max(6), answer: E().regex(qi) }).superRefine((t, e) => {
     t.options.includes(t.answer) || e.addIssue({ code: Di.custom, path: ["answer"], message: 'answer "'.concat(t.answer, '" is not in options') });
-  }), tv = F({ format: se(Ki).optional(), band: Y(kn).optional(), steps: N(Gi).optional(), kind: se("quiz"), seed: L().int(), questions: N(ev).min(1).max(10), solution: Q(E(), E()), difficulty: Ic }).superRefine((t, e) => {
+  }), sv = F({ format: se(Ki).optional(), band: Y(kn).optional(), steps: N(Gi).optional(), kind: se("quiz"), seed: L().int(), questions: N(tv).min(1).max(10), solution: Q(E(), E()), difficulty: Ic }).superRefine((t, e) => {
     const s = /* @__PURE__ */ new Set();
     for (const n of t.questions) s.has(n.id) && e.addIssue({ code: Di.custom, path: ["questions"], message: 'duplicate question id "'.concat(n.id, '"') }), s.add(n.id), t.solution[n.id] !== n.answer && e.addIssue({ code: Di.custom, path: ["solution", n.id], message: 'solution["'.concat(n.id, '"] must match question answer "').concat(n.answer, '"') });
-  }), Mc = Ni("kind", [Vb, Yb, Jb, Xb, tv]);
-  La(Mc, F({ names: Q(E(), E()), text: Q(E(), E()) })), F({ unique: J(), solutions: L().int(), deducible: J(), band: Y(kn).nullable(), score: L(), steps: N(Gi), rules: Q(E(), L()) }), F({ key: E().regex(/^[a-z][a-z0-9_]*$/, "lowercase letters, digits and underscores, starting with a letter"), kind: Y(Gb), data: Mc, names: Q(E(), E()), text: Q(E(), E()), links: Q(E(), F({ type: Y(["character", "place", "image"]), key: E() })).optional(), clueAt: Q(E(), E()).optional(), onFail: F({ mode: Y(["retry", "continue", "chapter"]), to: L().int().positive().optional(), maxTries: L().int().positive().optional() }).optional(), hints: J().optional(), verified: F({ unique: J(), deducible: J(), score: L(), textChecked: J(), by: E() }) }), F({ names: Q(E(), E()), text: Q(E(), E()) }), et([F({ id: E(), type: Y(["is", "not", "either", "neither", "oneof", "before", "after", "apart"]), a: et([E(), N(E()).length(2)]), b: et([E(), N(E()).length(2)]), n: L().int().optional() }), F({ id: E(), speaker: E(), claim: Q(E(), Et()) }), F({ id: E(), truthTellers: E(), liars: E() }), F({ id: E(), claims: N(F({ key: E(), value: E() })).optional(), facts: N(F({ key: E(), value: E() })).optional() }).refine((t) => t.claims !== void 0 || t.facts !== void 0, "testimony entry needs claims or facts"), F({ id: E(), prompt: E().optional(), options: N(E()).optional(), answer: E().optional() }).passthrough()]);
-  const We = Ki, Vt = ["clue", "elim", "last", "either", "order", "trans"], sv = { clue: 1, elim: 1, last: 2, either: 2, order: 2, trans: 3 }, bs = kn, Oc = ["clue", "elim", "last"];
+  }), Mc = Ni("kind", [Yb, Jb, Qb, ev, sv]);
+  La(Mc, F({ names: Q(E(), E()), text: Q(E(), E()) })), F({ unique: J(), solutions: L().int(), deducible: J(), band: Y(kn).nullable(), score: L(), steps: N(Gi), rules: Q(E(), L()) }), F({ key: E().regex(/^[a-z][a-z0-9_]*$/, "lowercase letters, digits and underscores, starting with a letter"), kind: Y(Wb), data: Mc, names: Q(E(), E()), text: Q(E(), E()), links: Q(E(), F({ type: Y(["character", "place", "image"]), key: E() })).optional(), clueAt: Q(E(), E()).optional(), onFail: F({ mode: Y(["retry", "continue", "chapter"]), to: L().int().positive().optional(), maxTries: L().int().positive().optional() }).optional(), hints: J().optional(), verified: F({ unique: J(), deducible: J(), score: L(), textChecked: J(), by: E() }) }), F({ names: Q(E(), E()), text: Q(E(), E()) }), et([F({ id: E(), type: Y(["is", "not", "either", "neither", "oneof", "before", "after", "apart"]), a: et([E(), N(E()).length(2)]), b: et([E(), N(E()).length(2)]), n: L().int().optional() }), F({ id: E(), speaker: E(), claim: Q(E(), Et()) }), F({ id: E(), truthTellers: E(), liars: E() }), F({ id: E(), claims: N(F({ key: E(), value: E() })).optional(), facts: N(F({ key: E(), value: E() })).optional() }).refine((t) => t.claims !== void 0 || t.facts !== void 0, "testimony entry needs claims or facts"), F({ id: E(), prompt: E().optional(), options: N(E()).optional(), answer: E().optional() }).passthrough()]);
+  const We = Ki, Vt = ["clue", "elim", "last", "either", "order", "trans"], nv = { clue: 1, elim: 1, last: 2, either: 2, order: 2, trans: 3 }, bs = kn, Oc = ["clue", "elim", "last"];
   class Z extends Error {
     constructor(e) {
       super(e), this.name = "PuzzleError";
@@ -4025,7 +4025,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const r of Pc(i)) if (!n.has(r)) throw new Z("clue ".concat((_a3 = i.id) != null ? _a3 : "", " names the unknown item ").concat(r));
     }
   }
-  const Jt = "knight", ws = "knave", nv = { direct: 1, split: 4 }, Dc = ["Aldo", "Brin", "Cass", "Dara", "Evo"];
+  const Jt = "knight", ws = "knave", iv = { direct: 1, split: 4 }, Dc = ["Aldo", "Brin", "Cass", "Dara", "Evo"];
   function ys(t) {
     const e = t.type;
     if (e === "knight" || e === "knave") return /* @__PURE__ */ new Set([t.who]);
@@ -4052,7 +4052,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     if (s === "or") return rt(t.a, e) || rt(t.b, e);
     throw new Z('unknown claim type "'.concat(s, '"'));
   }
-  function* iv(t) {
+  function* rv(t) {
     const e = t.length, s = 1 << e;
     for (let n = 0; n < s; n++) {
       const i = {};
@@ -4060,22 +4060,22 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       yield i;
     }
   }
-  function rv(t, e) {
+  function ov(t, e) {
     return t.every((s) => e[s.speaker] === rt(s.claim, e));
   }
-  function ov(t, e = 2, s) {
+  function av(t, e = 2, s) {
     const n = s != null ? s : t.statements;
     let i = 0;
-    for (const r of iv(t.speakers)) if (rv(n, r) && (i++, i >= e)) break;
+    for (const r of rv(t.speakers)) if (ov(n, r) && (i++, i >= e)) break;
     return i;
   }
-  const Sn = ov;
+  const Sn = av;
   function Lc(t) {
     const e = {};
     for (const [s, n] of Object.entries(t.solution)) e[s] = n === Jt;
     return e;
   }
-  function av(t, e) {
+  function cv(t, e) {
     const s = Array.from(/* @__PURE__ */ new Set([t.speaker, ...ys(t.claim)])).sort(), n = s.filter((o) => e[o] === void 0), i = [], r = 1 << n.length;
     for (let o = 0; o < r; o++) {
       const a = {};
@@ -4090,7 +4090,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (; n; ) {
       n = false;
       for (const i of t) {
-        const [r, o] = av(i, e);
+        const [r, o] = cv(i, e);
         if (r.length === 0) return i.id;
         for (const a of o) {
           const c = new Set(r.map((l) => l[a]));
@@ -4109,11 +4109,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const o of s) i[o.rule] = ((_a3 = i[o.rule]) != null ? _a3 : 0) + 1;
     const r = Object.entries(i).reduce((o, [a, c]) => {
       var _a4;
-      return o + ((_a4 = nv[a]) != null ? _a4 : 1) * c;
+      return o + ((_a4 = iv[a]) != null ? _a4 : 1) * c;
     }, 0);
     return { solved: n && Object.keys(e).length === t.speakers.length, steps: s, rules: i, score: r, splits: (_b3 = i.split) != null ? _b3 : 0 };
   }
-  function cv(t, e) {
+  function lv(t, e) {
     const s = e != null ? e : t.statements, n = [], i = {};
     if (Vi(s, i, n) !== null) return Ss(t, i, n, false);
     for (; Object.keys(i).length < t.speakers.length; ) {
@@ -4138,14 +4138,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const r = Lc(t), o = t.speakers.every((a) => i[a] === r[a]);
     return Ss(t, i, n, o);
   }
-  const Cc = cv;
-  function lv(t) {
+  const Cc = lv;
+  function uv(t) {
     var _a3;
     const e = (_a3 = t.splits) != null ? _a3 : 0;
     return e === 0 ? "easy" : e === 1 ? "medium" : "hard";
   }
-  const uv = lv;
-  function dv(t) {
+  const dv = uv;
+  function hv(t) {
     var _a3, _b3;
     if (t.format !== void 0 && t.format !== We) throw new Z("unknown puzzle format ".concat(t.format));
     if (t.kind !== "knights") throw new Z("not a knights puzzle");
@@ -4159,8 +4159,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const i of ys(n.claim)) if (!e.includes(i)) throw new Z("statement ".concat(n.id, " names the unknown speaker ").concat(i));
     }
   }
-  function hv(t) {
-    dv(t);
+  function pv(t) {
+    hv(t);
     const e = Lc(t);
     for (const n of t.statements) if (e[n.speaker] !== rt(n.claim, e)) throw new Z("statement ".concat(n.id, " does not hold in the solution"));
     if (Sn(t, 2) !== 1) throw new Z("the puzzle does not have exactly one solution");
@@ -4168,7 +4168,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     if (!s.solved) throw new Z("the puzzle cannot be solved without guessing");
     return s;
   }
-  function pv(t) {
+  function fv(t) {
     return t.length === 0 ? "" : t.length === 1 ? t[0] : t.slice(0, -1).join(", ") + " and " + t[t.length - 1];
   }
   function $n(t) {
@@ -4178,7 +4178,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Qt(t, e, s) {
     const n = e.type;
     let i = "";
-    if (e.of && (i = e.of.length === t.speakers.length && e.of.every((o) => t.speakers.includes(o)) ? "us" : pv(e.of.map((o) => s[o]))), n === "knight") return "".concat(s[e.who], " is a knight");
+    if (e.of && (i = e.of.length === t.speakers.length && e.of.every((o) => t.speakers.includes(o)) ? "us" : fv(e.of.map((o) => s[o]))), n === "knight") return "".concat(s[e.who], " is a knight");
     if (n === "knave") return "".concat(s[e.who], " is a knave");
     if (n === "same") return "".concat(s[e.a], " and ").concat(s[e.b], " are the same kind");
     if (n === "diff") return "".concat(s[e.a], " and ").concat(s[e.b], " are different kinds");
@@ -4190,7 +4190,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     if (n === "or") return "Either ".concat($n(Qt(t, e.a, s)), ", or ").concat($n(Qt(t, e.b, s)));
     throw new Z("no sentence for a ".concat(n, " claim"));
   }
-  function fv(t, e, s) {
+  function mv(t, e, s) {
     return "".concat(s[e.speaker], ' says: "').concat(Qt(t, e.claim, s), '."');
   }
   function Zc(t) {
@@ -4205,10 +4205,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Uc(t, e) {
     const s = Zc(t);
     t.names = s, t.text = {};
-    for (const n of t.statements) t.text[n.id] = fv(t, n, s);
+    for (const n of t.statements) t.text[n.id] = mv(t, n, s);
     return t.text.intro = "On this island knights always tell the truth and knaves always lie. Who is a knight and who is a knave?", t;
   }
-  function mv(t, e, s = 2) {
+  function gv(t, e, s = 2) {
     const n = [];
     for (let i = s; i <= e.length; i++) {
       const r = 1 << e.length;
@@ -4224,11 +4224,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return t.shuffle(n), n.slice(0, 8);
   }
-  function gv(t, e, s) {
+  function kv(t, e, s) {
     const n = [];
     for (const i of e) n.push({ type: "knight", who: i }), n.push({ type: "knave", who: i });
     for (let i = 0; i < e.length; i++) for (let r = i + 1; r < e.length; r++) n.push({ type: "same", a: e[i], b: e[r] }), n.push({ type: "diff", a: e[i], b: e[r] });
-    if (s !== "easy") for (const i of mv(t, e)) {
+    if (s !== "easy") for (const i of gv(t, e)) {
       n.push({ type: "some_knave", of: i }), n.push({ type: "all_knight", of: i });
       for (let r = 0; r <= i.length; r++) n.push({ type: "exactly", k: r, of: i });
     }
@@ -4245,7 +4245,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function zn(t, e) {
     return { ...t, statements: e.map((s, n) => ({ ...s, id: "t".concat(n + 1) })) };
   }
-  function kv(t = 3, e = 0, s = "medium", n = 400) {
+  function bv(t = 3, e = 0, s = "medium", n = 400) {
     if (t < 2 || t > 5) throw new Z("Knights and Knaves has 2 to 5 speakers, not ".concat(t));
     if (!bs.includes(s)) throw new Z('unknown band "'.concat(s, '" (easy, medium or hard)'));
     const i = new st("vno-puzzles:knights:".concat(e, ":").concat(s, ":").concat(t)), r = Array.from({ length: t }, (o, a) => "k".concat(a + 1));
@@ -4254,7 +4254,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const v of r) a[v] = i.random() < 0.5;
       if (t >= 3 && (Object.values(a).every(Boolean) || !Object.values(a).some(Boolean))) continue;
       const c = [];
-      for (const v of gv(i, r, s)) for (const w of r) a[w] === rt(v, a) && !((v.type === "knight" || v.type === "knave") && v.who === w) && c.push({ speaker: w, claim: v });
+      for (const v of kv(i, r, s)) for (const w of r) a[w] === rt(v, a) && !((v.type === "knight" || v.type === "knave") && v.who === w) && c.push({ speaker: w, claim: v });
       i.shuffle(c);
       const l = {};
       for (const v of r) l[v] = a[v] ? Jt : ws;
@@ -4281,15 +4281,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (new Set(g.map((v) => v.speaker)).size !== r.length) continue;
       i.shuffle(g);
       const k = zn(u, g), b = Cc(k);
-      if (!(!b.solved || uv(b) !== s)) return k.difficulty = { steps: b.steps.length, score: b.score, rules: b.rules }, k.steps = b.steps, Uc(k);
+      if (!(!b.solved || dv(b) !== s)) return k.difficulty = { steps: b.steps.length, score: b.score, rules: b.rules }, k.steps = b.steps, Uc(k);
     }
     throw new Z("no ".concat(s, " knights puzzle found for seed ").concat(e, " in ").concat(n, " tries"));
   }
-  function bv(t, e) {
+  function vv(t, e) {
     const s = t.speakers.filter((n) => e[n] !== t.solution[n]);
     return { correct: s.length === 0, wrong: s };
   }
-  const _n = [{ key: "clock", label: "the hour the clock struck", values: ["nine", "ten", "eleven", "twelve"], item: "pocket watch", claim: "I heard the clock strike {v} just before the scream", fact: "It is stopped, and it reads {v} o'clock" }, { key: "door", label: "the state of the study door", values: ["locked", "open", "ajar"], item: "key log", claim: "The study door was {v} when I passed it", fact: "It says the study door was {v} that evening" }, { key: "lamp", label: "the hall lamp", values: ["lit", "dark", "dim"], item: "photograph", claim: "The lamp in the hall was {v}", fact: "It shows the hall lamp {v}" }, { key: "weather", label: "the weather that night", values: ["raining", "dry", "foggy"], item: "weather report", claim: "It was {v} outside", fact: "It says it was {v} that night" }, { key: "weapon", label: "what lay on the table", values: ["rope", "candlestick", "poison", "dagger"], item: "inventory", claim: "I saw the {v} on the table", fact: "It lists the {v} on the table" }, { key: "guest", label: "who left first", values: ["the doctor", "the colonel", "the cook"], item: "guest list", claim: "{v} left first", fact: "It shows {v} leaving first" }, { key: "window", label: "the library window", values: ["shut", "broken", "wide open"], item: "repair bill", claim: "The library window was {v}", fact: "It records the library window as {v}" }, { key: "shoes", label: "the shoes by the door", values: ["muddy", "polished", "missing"], item: "boot print", claim: "The shoes by the door were {v}", fact: "It shows the shoes by the door {v}" }], vv = Object.fromEntries(_n.map((t) => [t.key, t])), wv = { easy: [4, 3], medium: [5, 4], hard: [6, 5] }, yv = "Mr Halloran";
+  const _n = [{ key: "clock", label: "the hour the clock struck", values: ["nine", "ten", "eleven", "twelve"], item: "pocket watch", claim: "I heard the clock strike {v} just before the scream", fact: "It is stopped, and it reads {v} o'clock" }, { key: "door", label: "the state of the study door", values: ["locked", "open", "ajar"], item: "key log", claim: "The study door was {v} when I passed it", fact: "It says the study door was {v} that evening" }, { key: "lamp", label: "the hall lamp", values: ["lit", "dark", "dim"], item: "photograph", claim: "The lamp in the hall was {v}", fact: "It shows the hall lamp {v}" }, { key: "weather", label: "the weather that night", values: ["raining", "dry", "foggy"], item: "weather report", claim: "It was {v} outside", fact: "It says it was {v} that night" }, { key: "weapon", label: "what lay on the table", values: ["rope", "candlestick", "poison", "dagger"], item: "inventory", claim: "I saw the {v} on the table", fact: "It lists the {v} on the table" }, { key: "guest", label: "who left first", values: ["the doctor", "the colonel", "the cook"], item: "guest list", claim: "{v} left first", fact: "It shows {v} leaving first" }, { key: "window", label: "the library window", values: ["shut", "broken", "wide open"], item: "repair bill", claim: "The library window was {v}", fact: "It records the library window as {v}" }, { key: "shoes", label: "the shoes by the door", values: ["muddy", "polished", "missing"], item: "boot print", claim: "The shoes by the door were {v}", fact: "It shows the shoes by the door {v}" }], wv = Object.fromEntries(_n.map((t) => [t.key, t])), yv = { easy: [4, 3], medium: [5, 4], hard: [6, 5] }, Sv = "Mr Halloran";
   function Yi(t) {
     const e = /* @__PURE__ */ new Set();
     for (const s of t || []) e.add("".concat(s.key, "|").concat(s.value));
@@ -4311,7 +4311,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const s of t.statements) for (const n of Ji(s)) for (const i of t.evidence) for (const r of i.facts) r.key === n.key && r.value === n.value && e++;
     return e;
   }
-  function Sv(t) {
+  function $v(t) {
     var _a3, _b3;
     const e = [], s = {};
     for (const o of t.statements) {
@@ -4334,11 +4334,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const o of t.evidence) for (const a of o.facts) r[a.key] && e.push("".concat(r[a.key], " and ").concat(o.id, " show the same fact (").concat(a.key, ")")), r[a.key] = o.id;
     return e;
   }
-  function $v(t, e) {
+  function zv(t, e) {
     return (e != null ? e : Qi(t)).some((i) => i.press) ? Xi(t) >= 4 ? "hard" : "medium" : "easy";
   }
-  const Bc = $v;
-  function zv(t) {
+  const Bc = zv;
+  function _v(t) {
     if (t.format !== void 0 && t.format !== We) throw new Z("not a testimony puzzle of format ".concat(We));
     if (t.kind !== "testimony") throw new Z("not a testimony puzzle");
     const e = {};
@@ -4362,16 +4362,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const i = t.solution || {};
     if (!s.has(i.statement) || !n.has(i.evidence)) throw new Z("the solution names a statement or evidence that is not there");
   }
-  function _v(t, e) {
+  function jv(t, e) {
     const s = [{ rule: "look", statement: e.statement, who: e.evidence, value: e.key }];
     return e.press && s.push({ rule: "press", statement: e.statement, value: "" }), s.push({ rule: "present", statement: e.statement, who: e.evidence, value: "" }), s;
   }
   function Fc(t) {
-    zv(t);
-    const e = Qi(t), s = t.solution, n = e.length === 1 && e[0].statement === s.statement && e[0].evidence === s.evidence && e[0].press === !!s.press, i = e.length === 1 ? _v(t, e[0]) : [], r = t.statements.length * t.evidence.length + Xi(t) + (e.length > 0 && e.some((o) => o.press) ? 3 : 0);
+    _v(t);
+    const e = Qi(t), s = t.solution, n = e.length === 1 && e[0].statement === s.statement && e[0].evidence === s.evidence && e[0].press === !!s.press, i = e.length === 1 ? jv(t, e[0]) : [], r = t.statements.length * t.evidence.length + Xi(t) + (e.length > 0 && e.some((o) => o.press) ? 3 : 0);
     return { unique: e.length === 1, solutions: e.length, deducible: n, band: n ? Bc(t, e) : null, steps: i, score: r, rules: { clash: e.length, near: Xi(t) } };
   }
-  function jv(t) {
+  function xv(t) {
     const e = Fc(t);
     if (!e.unique) throw new Z("the testimony has ".concat(e.solutions, " clashes, not one"));
     if (!e.deducible) throw new Z("the clash is not the pair the solution names");
@@ -4386,14 +4386,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = er(t, e.key), i = ((_a3 = s.claim) != null ? _a3 : "The ".concat(s.key, " is {v}")).replace("{v}", e.value);
     return i.length > 0 ? i[0].toUpperCase() + i.slice(1) : i;
   }
-  function xv(t, e) {
+  function Ev(t, e) {
     var _a3;
     const s = er(t, e.key);
     return ((_a3 = s.fact) != null ? _a3 : "The ".concat(s.key, " is {v}")).replace("{v}", e.value);
   }
   function qc(t) {
     var _a3, _b3, _c2, _d2, _e2;
-    const e = (_a3 = t.names) != null ? _a3 : {}, s = { wit: (_b3 = e.wit) != null ? _b3 : yv }, n = {};
+    const e = (_a3 = t.names) != null ? _a3 : {}, s = { wit: (_b3 = e.wit) != null ? _b3 : Sv }, n = {};
     for (const i of t.evidence) {
       const o = (_c2 = er(t, i.facts[0].key).item) != null ? _c2 : i.id;
       n[o] = ((_d2 = n[o]) != null ? _d2 : 0) + 1, s[i.id] = (_e2 = e[i.id]) != null ? _e2 : n[o] === 1 ? o : "".concat(o, " ").concat(n[o]);
@@ -4410,17 +4410,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const o = ((_a3 = r.press) == null ? void 0 : _a3.claims) || [];
       o.length > 0 && (i["".concat(r.id, ".press")] = "Now that you ask. ".concat(o.map((a) => Kc(t, a)).join(". "), "."));
     }
-    for (const r of t.evidence) i[r.id] = "".concat(s[r.id], ": ").concat(r.facts.map((o) => xv(t, o)).join(". "), ".");
+    for (const r of t.evidence) i[r.id] = "".concat(s[r.id], ": ").concat(r.facts.map((o) => Ev(t, o)).join(". "), ".");
     return t.text = i, t;
   }
-  function Ev(t, e = 0, s = "medium", n = 200) {
+  function Av(t, e = 0, s = "medium", n = 200) {
     if (!bs.includes(s)) throw new Z('unknown band "'.concat(s, '" (easy, medium or hard)'));
-    const [i, r] = wv[s], o = new st("vno-puzzles:testimony:".concat(e, ":").concat(s));
+    const [i, r] = yv[s], o = new st("vno-puzzles:testimony:".concat(e, ":").concat(s));
     for (let a = 0; a < n; a++) {
       const c = {};
       for (const S of _n) c[S.key] = o.choice(S.values);
       const l = _n.map((S) => S.key), u = (S, A = true) => {
-        const j = vv[S].values, I = A ? c[S] : o.choice(j.filter((D) => D !== c[S]));
+        const j = wv[S].values, I = A ? c[S] : o.choice(j.filter((D) => D !== c[S]));
         return { key: S, value: I };
       }, h = o.choice(l), p = s !== "easy", f = l.filter((S) => S !== h), m = o.randrange(i), g = o.sample(f, p ? i : i - 1), k = new Set(g), b = [], v = p ? [h] : [];
       for (let S = 0; S < i; S++) {
@@ -4456,7 +4456,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const S of b) for (const A of Ji(S)) _.add(A.key);
       for (const S of y) for (const A of S.facts) _.add(A.key);
       const z = { format: We, kind: "testimony", size: i, seed: e, band: s, witness: "wit", keys: _n.filter((S) => _.has(S.key)).map((S) => ({ ...S })), statements: b, evidence: y, solution: { statement: $, evidence: x, press: p } };
-      if (Sv(z).length > 0) continue;
+      if ($v(z).length > 0) continue;
       const O = Qi(z);
       if (O.length !== 1 || O[0].statement !== $ || O[0].evidence !== x || Bc(z, O) !== s) continue;
       const R = Fc(z);
@@ -4464,12 +4464,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     throw new Z("no ".concat(s, " testimony found for seed ").concat(e, " in ").concat(n, " tries"));
   }
-  const Av = [{ prompt: "Who was observed in the grand library shortly before the grandfather clock struck nine?", correct: "Colonel Ash", distractors: ["Doctor Birch", "Miss Cole", "Lady Dunn", "Mr Frost"] }, { prompt: "Which weapon was retrieved from the locked conservatory display case?", correct: "antique dagger", distractors: ["silver candlestick", "braided rope", "heavy vase", "vial of poison"] }, { prompt: "Where was the secret passage behind the book shelves discovered?", correct: "study", distractors: ["wine cellar", "ballroom", "billiard room", "observatory"] }, { prompt: "What piece of physical evidence directly contradicted the witness testimony?", correct: "stopped pocket watch", distractors: ["torn letter", "muddy boot print", "forged will", "broken seal"] }, { prompt: "Which motive was confirmed by the intercepted encrypted ledger?", correct: "blackmail", distractors: ["jealousy", "inheritance", "professional rivalry", "political revenge"] }, { prompt: "What unusual scent was noted lingering near the crime scene?", correct: "bitter almonds", distractors: ["burnt pipe tobacco", "damp earth", "lavender water", "kerosene"] }, { prompt: "Who was the last person seen leaving through the side garden gate?", correct: "the hooded courier", distractors: ["the estate groundskeeper", "the evening maid", "the carriage driver", "the visiting doctor"] }, { prompt: "What item was found concealed beneath the floorboards in the attic?", correct: "brass key", distractors: ["leather diary", "ruby pendant", "stained handkerchief", "wax seal stamp"] }, { prompt: "At what time did the station train arrive on the night of the incident?", correct: "ten forty-five", distractors: ["nine fifteen", "eleven thirty", "midnight sharp", "ten o clock"] }, { prompt: "Which room had its window latch deliberately forced open from the inside?", correct: "parlor", distractors: ["scullery", "music room", "dining hall", "guest bedroom"] }];
-  function Tv(t) {
+  const Tv = [{ prompt: "Who was observed in the grand library shortly before the grandfather clock struck nine?", correct: "Colonel Ash", distractors: ["Doctor Birch", "Miss Cole", "Lady Dunn", "Mr Frost"] }, { prompt: "Which weapon was retrieved from the locked conservatory display case?", correct: "antique dagger", distractors: ["silver candlestick", "braided rope", "heavy vase", "vial of poison"] }, { prompt: "Where was the secret passage behind the book shelves discovered?", correct: "study", distractors: ["wine cellar", "ballroom", "billiard room", "observatory"] }, { prompt: "What piece of physical evidence directly contradicted the witness testimony?", correct: "stopped pocket watch", distractors: ["torn letter", "muddy boot print", "forged will", "broken seal"] }, { prompt: "Which motive was confirmed by the intercepted encrypted ledger?", correct: "blackmail", distractors: ["jealousy", "inheritance", "professional rivalry", "political revenge"] }, { prompt: "What unusual scent was noted lingering near the crime scene?", correct: "bitter almonds", distractors: ["burnt pipe tobacco", "damp earth", "lavender water", "kerosene"] }, { prompt: "Who was the last person seen leaving through the side garden gate?", correct: "the hooded courier", distractors: ["the estate groundskeeper", "the evening maid", "the carriage driver", "the visiting doctor"] }, { prompt: "What item was found concealed beneath the floorboards in the attic?", correct: "brass key", distractors: ["leather diary", "ruby pendant", "stained handkerchief", "wax seal stamp"] }, { prompt: "At what time did the station train arrive on the night of the incident?", correct: "ten forty-five", distractors: ["nine fifteen", "eleven thirty", "midnight sharp", "ten o clock"] }, { prompt: "Which room had its window latch deliberately forced open from the inside?", correct: "parlor", distractors: ["scullery", "music room", "dining hall", "guest bedroom"] }];
+  function Iv(t) {
     var _a3;
     return (_a3 = t.names) != null ? _a3 : {};
   }
-  function Iv(t, e) {
+  function Mv(t, e) {
     var _a3, _b3, _c2, _d2, _e2;
     const s = { ...(_a3 = t.names) != null ? _a3 : {} };
     for (const i of t.questions || []) for (const r of i.options || []) s[r] || (s[r] = r);
@@ -4477,9 +4477,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const i of t.questions || []) n[i.id] = (_e2 = (_d2 = t.text) == null ? void 0 : _d2[i.id]) != null ? _e2 : "Question ".concat(i.id);
     return { names: s, text: n };
   }
-  function Mv(t = 0, e, s = "medium") {
+  function Ov(t = 0, e, s = "medium") {
     if (!bs.includes(s)) throw new Z('unknown band "'.concat(s, '" (easy, medium or hard)'));
-    const i = Math.max(1, Math.min(10, e != null ? e : s === "easy" ? 3 : s === "medium" ? 4 : 5)), r = new st("vno-puzzles:quiz:".concat(t, ":").concat(s, ":").concat(i)), o = s === "easy" ? 2 : s === "medium" ? 3 : 4, a = r.sample(Av, i), c = [], l = {}, u = {}, h = { intro: "Answer the following questions carefully based on the investigation." };
+    const i = Math.max(1, Math.min(10, e != null ? e : s === "easy" ? 3 : s === "medium" ? 4 : 5)), r = new st("vno-puzzles:quiz:".concat(t, ":").concat(s, ":").concat(i)), o = s === "easy" ? 2 : s === "medium" ? 3 : 4, a = r.sample(Tv, i), c = [], l = {}, u = {}, h = { intro: "Answer the following questions carefully based on the investigation." };
     for (let g = 0; g < a.length; g++) {
       const k = a[g], b = "q".concat(g + 1);
       h[b] = k.prompt;
@@ -4496,7 +4496,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const p = s === "hard" ? 3 : s === "medium" ? 2 : 1, f = c.map((g) => ({ rule: "answer", who: g.id, value: g.answer })), m = { steps: i, score: i * p, rules: { quiz: i } };
     return { format: We, kind: "quiz", seed: t, band: s, questions: c, solution: l, difficulty: m, steps: f, names: u, text: h };
   }
-  function Ov(t) {
+  function Nv(t) {
     var _a3;
     if (t.format !== void 0 && t.format !== We) throw new Z("unknown puzzle format ".concat(t.format));
     if (t.kind !== "quiz") throw new Z("not a quiz puzzle");
@@ -4509,22 +4509,22 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (((_a3 = t.solution) == null ? void 0 : _a3[s.id]) !== s.answer) throw new Z('solution["'.concat(s.id, '"] must match question answer "').concat(s.answer, '"'));
     }
   }
-  function Nv(t) {
+  function Pv(t) {
     var _a3, _b3, _c2, _d2, _e2, _f2;
-    Ov(t);
+    Nv(t);
     const e = (_a3 = t.steps) != null ? _a3 : t.questions.map((r) => ({ rule: "answer", who: r.id, value: r.answer })), s = (_c2 = (_b3 = t.difficulty) == null ? void 0 : _b3.score) != null ? _c2 : t.questions.length * 2, n = (_e2 = (_d2 = t.difficulty) == null ? void 0 : _d2.rules) != null ? _e2 : { quiz: t.questions.length };
     return { unique: true, solutions: 1, deducible: true, band: (_f2 = t.band) != null ? _f2 : "medium", steps: e, score: s, rules: n };
   }
-  function Pv(t) {
-    return Nv(t);
+  function Rv(t) {
+    return Pv(t);
   }
-  function Rv(t, e) {
+  function Dv(t, e) {
     const s = [];
     for (const n of t.questions) e[n.id] !== n.answer && s.push(n.id);
     return { correct: s.length === 0, wrong: s, score: t.questions.length - s.length, total: t.questions.length };
   }
   const Wc = ["before", "after", "apart"];
-  function Dv(t, e, s, n) {
+  function Lv(t, e, s, n) {
     const i = t.categories, r = i[0].items, o = yn(t), a = [];
     for (let g = 1; g < i.length; g++) for (const k of i[g].items) a.push([g, k]);
     const c = {};
@@ -4554,7 +4554,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return a.length > 0 && m(0), f;
   }
   function jn(t, e = 2, s) {
-    return Dv(t, t.clues, e);
+    return Lv(t, t.clues, e);
   }
   class Hc {
     constructor(e, s) {
@@ -4586,7 +4586,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return i;
     }
   }
-  function* Lv(t) {
+  function* Cv(t) {
     for (const e of t.clues) {
       const s = e.type;
       if (s === "is") yield [t.key(e.a, e.b), 1, { clue: e.id }];
@@ -4601,7 +4601,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
     }
   }
-  function* Cv(t) {
+  function* Zv(t) {
     for (const [e, s] of t.state.entries()) {
       if (s !== 1) continue;
       const [n, i] = e.split("|"), r = t.cats[t.idx[i]];
@@ -4610,7 +4610,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const a of o) a !== n && (yield [t.key(a, i), -1, { from: [[n, i]] }]);
     }
   }
-  function* Zv(t) {
+  function* Uv(t) {
     for (let e = 0; e < t.cats.length; e++) for (let s = e + 1; s < t.cats.length; s++) {
       for (const n of t.cats[e]) {
         const i = t.cats[s].map((o) => t.key(n, o)), r = i.filter((o) => t.state.get(o) === 0);
@@ -4622,7 +4622,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
     }
   }
-  function* Uv(t) {
+  function* Bv(t) {
     for (const e of t.clues) if (e.type === "either") {
       const [s, n] = e.b;
       t.get(e.a, s) === -1 && (yield [t.key(e.a, n), 1, { clue: e.id, from: [t.key(e.a, s).split("|")] }]), t.get(e.a, n) === -1 && (yield [t.key(e.a, s), 1, { clue: e.id, from: [t.key(e.a, n).split("|")] }]);
@@ -4632,7 +4632,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (a.some((c) => t.state.get(c) === -1)) for (const c of o) yield [c, 1, { clue: e.id, from: a.filter((l) => t.state.get(l) === -1).map((l) => l.split("|")) }];
     }
   }
-  function* Bv(t) {
+  function* Fv(t) {
     if (!t.ordinal) return;
     const e = t.ordinal;
     for (const s of t.clues) {
@@ -4664,7 +4664,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
     }
   }
-  function* Fv(t) {
+  function* Kv(t) {
     for (const [e, s] of t.state.entries()) {
       if (s !== 1) continue;
       const [n, i] = e.split("|"), r = [[n, i], [i, n]];
@@ -4674,7 +4674,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
     }
   }
-  const Vc = { clue: Lv, elim: Cv, last: Zv, either: Uv, order: Bv, trans: Fv };
+  const Vc = { clue: Cv, elim: Zv, last: Uv, either: Bv, order: Fv, trans: Kv };
   function bt(t, e, s = Vt) {
     var _a3;
     const n = e != null ? e : t.clues, i = new Hc(t, n), r = [];
@@ -4715,7 +4715,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const [f, m] of Object.entries(u)) m > 0 && (h[f] = m);
     const p = Object.entries(u).reduce((f, [m, g]) => {
       var _a4;
-      return f + ((_a4 = sv[m]) != null ? _a4 : 1) * g;
+      return f + ((_a4 = nv[m]) != null ? _a4 : 1) * g;
     }, 0);
     return { solved: l, contradiction: o, grid: c, steps: r, rules: h, score: p };
   }
@@ -4753,8 +4753,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = e != null ? e : bt(t);
     return { steps: s.steps.length, score: s.score, rules: s.rules };
   }
-  const $s = { intro: "The bakery delivered one order each day. Work out which delivery was which.", categories: [{ key: "day", ref: "the {n} delivery", names: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], prefix: "d" }, { key: "customer", ref: "the delivery to {n}", names: ["Ana", "Boris", "Cleo", "Dino", "Eva"], prefix: "c" }, { key: "cake", ref: "the {n} delivery", names: ["lemon cake", "poppy roll", "plum tart", "honey bun", "rye loaf"], prefix: "k" }, { key: "town", ref: "the delivery to {n}", names: ["Oakville", "Pinebrook", "Riverton", "Stonegate", "Wheatley"], prefix: "t" }], unit: "days" }, Jc = [3, 4, 5], Kv = { 3: 3, 4: 6, 5: 10 };
-  function qv(t) {
+  const $s = { intro: "The bakery delivered one order each day. Work out which delivery was which.", categories: [{ key: "day", ref: "the {n} delivery", names: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], prefix: "d" }, { key: "customer", ref: "the delivery to {n}", names: ["Ana", "Boris", "Cleo", "Dino", "Eva"], prefix: "c" }, { key: "cake", ref: "the {n} delivery", names: ["lemon cake", "poppy roll", "plum tart", "honey bun", "rye loaf"], prefix: "k" }, { key: "town", ref: "the delivery to {n}", names: ["Oakville", "Pinebrook", "Riverton", "Stonegate", "Wheatley"], prefix: "t" }], unit: "days" }, Jc = [3, 4, 5], qv = { 3: 3, 4: 6, 5: 10 };
+  function Gv(t) {
     var _a3, _b3;
     const e = (_a3 = t.names) != null ? _a3 : {}, s = {};
     for (let n = 0; n < t.categories.length; n++) {
@@ -4766,11 +4766,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return s;
   }
-  const Gv = qv;
+  const Wv = Gv;
   function Qc(t) {
     return $s.intro;
   }
-  function Wv(t, e) {
+  function Hv(t, e) {
     const s = [];
     for (const o of $s.categories) s.push({ key: o.key, items: Array.from({ length: e }, (a, c) => "".concat(o.prefix).concat(c + 1)), ref: o.ref });
     const n = [];
@@ -4789,7 +4789,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Xc(t, e, s) {
     return e.indexOf(t[s]);
   }
-  function Hv(t, e, s, n) {
+  function Vv(t, e, s, n) {
     const i = e[0].items, r = [];
     for (let a = 0; a < e.length; a++) for (const c of e[a].items) r.push([a, c]);
     const o = [];
@@ -4825,16 +4825,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return t.shuffle(o), o;
   }
-  function Vv(t) {
+  function Yv(t) {
     return t === "easy" ? xn("easy", { ordinal: true }) : t === "medium" ? [...xn("easy", { ordinal: true }), "either"] : xn("hard");
   }
-  function Yv(t) {
+  function Jv(t) {
     return t.map((e, s) => ({ ...e, id: "c".concat(s + 1) }));
   }
   function En(t, e) {
-    return { ...t, clues: Yv(e) };
+    return { ...t, clues: Jv(e) };
   }
-  function Jv(t, e, s, n) {
+  function Qv(t, e, s, n) {
     const i = [...e], r = Array.from({ length: i.length }, (a, c) => c);
     n.shuffle(r);
     const o = /* @__PURE__ */ new Set();
@@ -4844,28 +4844,28 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return i.filter((a, c) => !o.has(c));
   }
-  function Qv(t = 4, e = 0, s = "medium", n = 200) {
+  function Xv(t = 4, e = 0, s = "medium", n = 200) {
     if (!Jc.includes(t)) throw new Z("logic grids have ".concat(Jc.join(" or "), " items per category, not ").concat(t));
     if (!bs.includes(s)) throw new Z('unknown band "'.concat(s, '" (easy, medium or hard)'));
     const i = new st("vno-puzzles:logic:".concat(e, ":").concat(s, ":").concat(t));
     for (let r = 0; r < n; r++) {
-      const [o, a] = Wv(i, t), c = { format: We, kind: "logic", size: t, seed: e, band: s, categories: o, solution: a, ordinal: { category: o[0].key, unit: $s.unit }, hardTrans: Kv[t] }, l = Vv(s), u = Nt({ ...c }), h = Hv(i, o, u, s), p = [];
+      const [o, a] = Hv(i, t), c = { format: We, kind: "logic", size: t, seed: e, band: s, categories: o, solution: a, ordinal: { category: o[0].key, unit: $s.unit }, hardTrans: qv[t] }, l = Yv(s), u = Nt({ ...c }), h = Vv(i, o, u, s), p = [];
       for (const k of h) if (p.push(k), p.length % 3 === 0 && Xt(En(c, p), void 0, l)) break;
       if (!Xt(En(c, p), void 0, l)) continue;
-      const f = Jv(c, p, l, i);
+      const f = Qv(c, p, l, i);
       i.shuffle(f);
       const m = En(c, f), g = bt(m);
-      if (!(!g.solved || tr(m, g) !== s || jn(m, 2) !== 1) && !(s === "medium" && !f.some((k) => k.type === "either" || k.type === "oneof"))) return m.difficulty = Yc(m, g), m.steps = g.steps, Xv(m);
+      if (!(!g.solved || tr(m, g) !== s || jn(m, 2) !== 1) && !(s === "medium" && !f.some((k) => k.type === "either" || k.type === "oneof"))) return m.difficulty = Yc(m, g), m.steps = g.steps, ew(m);
     }
     throw new Z("no ".concat(s, " logic grid found for seed ").concat(e, " in ").concat(n, " tries"));
   }
-  function Xv(t, e) {
-    const s = Gv(t);
+  function ew(t, e) {
+    const s = Wv(t);
     t.names = s, t.text = {};
     for (const n of t.clues) t.text[n.id] = sr(t, n, s);
     return t.text.intro = Qc(), t;
   }
-  function ew(t) {
+  function tw(t) {
     Rc(t);
     const e = Nt(t), s = yn(t);
     for (const i of t.clues) if (!Wi(i, e, s)) throw new Z("clue ".concat(i.id, " is false in the solution"));
@@ -4874,12 +4874,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     if (!n.solved) throw new Z("the puzzle cannot be solved by deduction alone");
     return n;
   }
-  const tw = { suspect: ["Colonel Ash", "Doctor Birch", "Miss Cole", "Lady Dunn", "Mr Frost"], weapon: ["rope", "candlestick", "poison", "dagger", "vase"], place: ["library", "kitchen", "garden", "cellar", "study"], motive: ["jealousy", "greed", "revenge", "fear", "love"] }, sw = { suspect: ["the tall guest", "the left-handed guest", "the youngest guest", "the quiet guest", "the guest in grey"], weapon: ["the heavy weapon", "the metal weapon", "the sharp weapon", "the silent weapon", "the fragile weapon"], place: ["the room upstairs", "the room by the stairs", "the room with the fire", "the room below ground", "the room facing east"] };
+  const sw = { suspect: ["Colonel Ash", "Doctor Birch", "Miss Cole", "Lady Dunn", "Mr Frost"], weapon: ["rope", "candlestick", "poison", "dagger", "vase"], place: ["library", "kitchen", "garden", "cellar", "study"], motive: ["jealousy", "greed", "revenge", "fear", "love"] }, nw = { suspect: ["the tall guest", "the left-handed guest", "the youngest guest", "the quiet guest", "the guest in grey"], weapon: ["the heavy weapon", "the metal weapon", "the sharp weapon", "the silent weapon", "the fragile weapon"], place: ["the room upstairs", "the room by the stairs", "the room with the fire", "the room below ground", "the room facing east"] };
   function An(t) {
     var _a3, _b3, _c2, _d2, _e2;
     if (t.kind === "knights") return Zc(t);
     if (t.kind === "testimony") return qc(t);
-    if (t.kind === "quiz") return Tv(t);
+    if (t.kind === "quiz") return Iv(t);
     if (t.kind === "logic") {
       const n = (_a3 = t.names) != null ? _a3 : {}, i = {};
       for (let r = 0; r < t.categories.length; r++) {
@@ -4893,7 +4893,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     const e = (_c2 = t.names) != null ? _c2 : {}, s = {};
     for (const n of t.categories) {
-      const i = (_d2 = tw[n.key]) != null ? _d2 : [];
+      const i = (_d2 = sw[n.key]) != null ? _d2 : [];
       for (let r = 0; r < n.items.length; r++) {
         const o = n.items[r];
         s[o] = (_e2 = e[o]) != null ? _e2 : r < i.length ? i[r] : o;
@@ -4901,11 +4901,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return s;
   }
-  function nw(t) {
+  function iw(t) {
     var _a3;
     const e = {};
     for (const s of t.categories) {
-      const n = (_a3 = sw[s.key]) != null ? _a3 : [];
+      const n = (_a3 = nw[s.key]) != null ? _a3 : [];
       for (let i = 0; i < s.items.length; i++) i < n.length && (e[s.items[i]] = n[i]);
     }
     return e;
@@ -4913,34 +4913,34 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function He(t) {
     return t.length > 0 ? t[0].toUpperCase() + t.slice(1) : t;
   }
-  function iw(t, e) {
+  function rw(t, e) {
     return t === "suspect" || t === "motive" ? e : "the ".concat(e);
   }
-  const rw = { "suspect,weapon": ["{X} had {Y}.", "{X} did not have {Y}."], "suspect,place": ["{X} was in {Y}.", "{X} was not in {Y}."], "suspect,motive": ["{X} acted out of {Y}.", "{X} did not act out of {Y}."], "weapon,place": ["Whoever had {X} was in {Y}.", "Whoever had {X} was not in {Y}."], "weapon,motive": ["Whoever had {X} acted out of {Y}.", "Whoever had {X} did not act out of {Y}."], "place,motive": ["Whoever was in {X} acted out of {Y}.", "Whoever was in {X} did not act out of {Y}."] }, ow = { "suspect,place": "{A} was either in {B1} or {B2}.", "suspect,weapon": "{A} had either {B1} or {B2}.", "weapon,place": "{A} was either in {B1} or {B2}.", "weapon,suspect": "Either {B1} or {B2} had {A}.", "place,suspect": "Either {B1} or {B2} was in {A}.", "place,weapon": "Either {B1} or {B2} was in {A}.", "suspect,motive": "{A} acted out of either {B1} or {B2}.", "motive,suspect": "Either {B1} or {B2} acted out of {A}.", "weapon,motive": "Whoever had {A} acted out of either {B1} or {B2}.", "motive,weapon": "Whoever acted out of {A} had either {B1} or {B2}.", "place,motive": "Whoever was in {A} acted out of either {B1} or {B2}.", "motive,place": "Whoever acted out of {A} was either in {B1} or {B2}." };
-  function aw(t, e, s) {
+  const ow = { "suspect,weapon": ["{X} had {Y}.", "{X} did not have {Y}."], "suspect,place": ["{X} was in {Y}.", "{X} was not in {Y}."], "suspect,motive": ["{X} acted out of {Y}.", "{X} did not act out of {Y}."], "weapon,place": ["Whoever had {X} was in {Y}.", "Whoever had {X} was not in {Y}."], "weapon,motive": ["Whoever had {X} acted out of {Y}.", "Whoever had {X} did not act out of {Y}."], "place,motive": ["Whoever was in {X} acted out of {Y}.", "Whoever was in {X} did not act out of {Y}."] }, aw = { "suspect,place": "{A} was either in {B1} or {B2}.", "suspect,weapon": "{A} had either {B1} or {B2}.", "weapon,place": "{A} was either in {B1} or {B2}.", "weapon,suspect": "Either {B1} or {B2} had {A}.", "place,suspect": "Either {B1} or {B2} was in {A}.", "place,weapon": "Either {B1} or {B2} was in {A}.", "suspect,motive": "{A} acted out of either {B1} or {B2}.", "motive,suspect": "Either {B1} or {B2} acted out of {A}.", "weapon,motive": "Whoever had {A} acted out of either {B1} or {B2}.", "motive,weapon": "Whoever acted out of {A} had either {B1} or {B2}.", "place,motive": "Whoever was in {A} acted out of either {B1} or {B2}.", "motive,place": "Whoever acted out of {A} was either in {B1} or {B2}." };
+  function cw(t, e, s) {
     var _a3, _b3;
     const n = (_a3 = t.descr) != null ? _a3 : {}, i = new Set((_b3 = e.descr) != null ? _b3 : []);
     function r(b) {
-      return i.has(b) && n[b] ? n[b] : iw(Yt(t, b), s[b]);
+      return i.has(b) && n[b] ? n[b] : rw(Yt(t, b), s[b]);
     }
     const o = e.a, a = Array.isArray(e.b) ? e.b : [e.b], c = Yt(t, o), l = Yt(t, a[0]);
     if (e.type === "either") {
-      const b = ow["".concat(c, ",").concat(l)];
+      const b = aw["".concat(c, ",").concat(l)];
       if (!b) throw new Error("no sentence for an either clue of ".concat(c, " and ").concat(l));
       return He(b.replace("{A}", r(o)).replace("{B1}", r(a[0])).replace("{B2}", r(a[1])));
     }
-    const u = vs(t), [h, p] = u[o] < u[a[0]] ? [o, a[0]] : [a[0], o], f = Yt(t, h), m = Yt(t, p), g = rw["".concat(f, ",").concat(m)];
+    const u = vs(t), [h, p] = u[o] < u[a[0]] ? [o, a[0]] : [a[0], o], f = Yt(t, h), m = Yt(t, p), g = ow["".concat(f, ",").concat(m)];
     if (!g) throw new Error("no sentence for a ".concat(e.type, " clue of ").concat(c, " and ").concat(l));
     const k = e.type === "not" ? g[1] : g[0];
     return He(k.replace("{X}", r(h)).replace("{Y}", r(p)));
   }
-  function cw(t, e, s) {
+  function lw(t, e, s) {
     var _a3, _b3;
     return ((_a3 = t.categories[vs(t)[e]].ref) != null ? _a3 : "{n}").replace("{n}", (_b3 = s[e]) != null ? _b3 : e);
   }
-  function lw(t, e, s) {
+  function uw(t, e, s) {
     var _a3, _b3;
-    const n = e.type, i = (_b3 = (_a3 = t.ordinal) == null ? void 0 : _a3.unit) != null ? _b3 : "", r = (c) => cw(t, c, s), o = e.a, a = e.b;
+    const n = e.type, i = (_b3 = (_a3 = t.ordinal) == null ? void 0 : _a3.unit) != null ? _b3 : "", r = (c) => lw(t, c, s), o = e.a, a = e.b;
     if (n === "is") return He("".concat(r(o), " is ").concat(r(a), "."));
     if (n === "not") return He("".concat(r(o), " is not ").concat(r(a), "."));
     if (n === "either") return He("".concat(r(o), " is either ").concat(r(a[0]), " or ").concat(r(a[1]), "."));
@@ -4954,13 +4954,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function sr(t, e, s) {
     var _a3;
     const n = (_a3 = s != null ? s : t.names) != null ? _a3 : An(t);
-    return t.kind === "logic" ? lw(t, e, n) : aw(t, e, n);
+    return t.kind === "logic" ? uw(t, e, n) : cw(t, e, n);
   }
-  function uw(t, e) {
+  function dw(t, e) {
     var _a3;
     return "The body was found in the ".concat(((_a3 = e != null ? e : t.names) != null ? _a3 : An(t))[t.murder.place], ".");
   }
-  function dw(t, e) {
+  function hw(t, e) {
     if (t.kind === "knights") return Uc(t);
     if (t.kind === "logic") {
       const n = An(t);
@@ -4970,17 +4970,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     if (t.kind === "testimony") return Gc(t);
     if (t.kind === "quiz") {
-      const n = Iv(t);
+      const n = Mv(t);
       return t.names = n.names, t.text = n.text, t;
     }
     const s = An(t);
     t.names = s, t.text = {};
     for (const n of t.clues) t.text[n.id] = sr(t, n, s);
-    return t.murder && (t.text.murder = uw(t, s)), t;
+    return t.murder && (t.text.murder = dw(t, s)), t;
   }
-  const el = ["suspect", "weapon", "place"], hw = { suspect: "s", weapon: "w", place: "p", motive: "m" }, tl = [3, 4];
-  function pw(t, e, s = false) {
-    const i = (s ? [...el, "motive"] : [...el]).map((a) => ({ key: a, items: Array.from({ length: e }, (c, l) => "".concat(hw[a]).concat(l + 1)) })), r = [];
+  const el = ["suspect", "weapon", "place"], pw = { suspect: "s", weapon: "w", place: "p", motive: "m" }, tl = [3, 4];
+  function fw(t, e, s = false) {
+    const i = (s ? [...el, "motive"] : [...el]).map((a) => ({ key: a, items: Array.from({ length: e }, (c, l) => "".concat(pw[a]).concat(l + 1)) })), r = [];
     for (let a = 1; a < i.length; a++) {
       const c = [...i[a].items];
       t.shuffle(c), r.push(c);
@@ -4993,7 +4993,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return [i, o];
   }
-  function fw(t, e, s, n) {
+  function mw(t, e, s, n) {
     const i = [], r = [];
     for (let o = 0; o < e.length; o++) for (const a of e[o].items) r.push([o, a]);
     for (let o = 0; o < r.length; o++) for (let a = o + 1; a < r.length; a++) {
@@ -5010,13 +5010,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return t.shuffle(i), i;
   }
-  function mw(t) {
+  function gw(t) {
     return t.map((e, s) => ({ ...e, id: "c".concat(s + 1) }));
   }
   function zs(t, e) {
-    return { ...t, clues: mw(e) };
+    return { ...t, clues: gw(e) };
   }
-  function gw(t, e, s, n) {
+  function kw(t, e, s, n) {
     const i = [...e], r = Array.from({ length: i.length }, (a, c) => c);
     n.shuffle(r);
     const o = /* @__PURE__ */ new Set();
@@ -5026,21 +5026,21 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return i.filter((a, c) => !o.has(c));
   }
-  function kw(t, e, s) {
-    const n = nw(e), i = [];
+  function bw(t, e, s) {
+    const n = iw(e), i = [];
     for (const r of s) {
       const a = [r.a].concat(Array.isArray(r.b) ? r.b : [r.b]).filter((c) => n[c] && t.random() < 0.5);
       i.push(a.length > 0 ? { ...r, descr: a } : r);
     }
     return [i, n];
   }
-  function bw(t, e, s = 0, n = "medium", i = 200, r = false, o = false) {
+  function vw(t, e, s = 0, n = "medium", i = 200, r = false, o = false) {
     var _a3, _b3, _c2, _d2, _e2, _f2, _g2, _h2;
     let a = "murdle", c = 3, l = 0, u = "medium", h = 200, p = false, f = false, m;
-    if (typeof t == "object" && t !== null ? (a = (_a3 = t.kind) != null ? _a3 : "murdle", c = (_b3 = t.size) != null ? _b3 : null, l = (_c2 = t.seed) != null ? _c2 : 0, u = (_d2 = t.band) != null ? _d2 : "medium", h = (_e2 = t.maxTries) != null ? _e2 : 200, p = (_f2 = t.motive) != null ? _f2 : false, f = (_g2 = t.attrs) != null ? _g2 : false, m = t.count) : typeof t == "string" && (a = t, c = null, l = s, u = n, h = i, p = r, f = o), c == null && (c = (_h2 = { murdle: 3, logic: 4, knights: 3, testimony: 3, quiz: 4 }[a]) != null ? _h2 : 3), a === "logic") return Qv(c, l, u, h);
-    if (a === "knights") return kv(c, l, u, h);
-    if (a === "testimony") return Ev(c, l, u, h);
-    if (a === "quiz") return Mv(l, m != null ? m : c, u);
+    if (typeof t == "object" && t !== null ? (a = (_a3 = t.kind) != null ? _a3 : "murdle", c = (_b3 = t.size) != null ? _b3 : null, l = (_c2 = t.seed) != null ? _c2 : 0, u = (_d2 = t.band) != null ? _d2 : "medium", h = (_e2 = t.maxTries) != null ? _e2 : 200, p = (_f2 = t.motive) != null ? _f2 : false, f = (_g2 = t.attrs) != null ? _g2 : false, m = t.count) : typeof t == "string" && (a = t, c = null, l = s, u = n, h = i, p = r, f = o), c == null && (c = (_h2 = { murdle: 3, logic: 4, knights: 3, testimony: 3, quiz: 4 }[a]) != null ? _h2 : 3), a === "logic") return Xv(c, l, u, h);
+    if (a === "knights") return bv(c, l, u, h);
+    if (a === "testimony") return Av(c, l, u, h);
+    if (a === "quiz") return Ov(l, m != null ? m : c, u);
     if (a !== "murdle") throw new Z('unknown puzzle kind "'.concat(a, '" (murdle, logic, knights, testimony or quiz)'));
     if (!tl.includes(c)) throw new Z("murdle makes puzzles of ".concat(tl.join(" or "), " items per category, not ").concat(c));
     if (!bs.includes(u)) throw new Z('unknown band "'.concat(u, '" (easy, medium or hard)'));
@@ -5048,7 +5048,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     (c !== 3 || p || f) && (g += ":".concat(c).concat(p ? "m" : "").concat(f ? "a" : ""));
     const k = new st(g), b = xn(u);
     for (let v = 0; v < h; v++) {
-      const [w, y] = pw(k, c, p), $ = { format: We, kind: a, size: c, seed: l, band: u, categories: w, solution: y }, x = Nt({ ...$ }), _ = fw(k, w, x, u), z = [];
+      const [w, y] = fw(k, c, p), $ = { format: We, kind: a, size: c, seed: l, band: u, categories: w, solution: y }, x = Nt({ ...$ }), _ = mw(k, w, x, u), z = [];
       let O = 0;
       for (const I of _) {
         if (I.type === "is" && u === "medium") {
@@ -5058,25 +5058,25 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         if (z.push(I), Xt(zs($, z), void 0, b)) break;
       }
       if (!Xt(zs($, z), void 0, b)) continue;
-      const R = gw($, z, b, k);
+      const R = kw($, z, b, k);
       let S = zs($, R), A = bt(S);
       if (!A.solved || tr(S, A) !== u || (k.shuffle(R), S = zs($, R), A = bt(S), !A.solved || tr(S, A) !== u || jn(S, 2) !== 1)) continue;
       if (f) {
-        const [I, D] = kw(k, S, S.clues);
+        const [I, D] = bw(k, S, S.clues);
         S.clues = I, S.descr = D;
       }
       const j = k.choice(w[2].items);
-      return S.murder = { place: j }, S.murder.answer = Hi(S), S.difficulty = Yc(S, A), S.steps = A.steps, dw(S);
+      return S.murder = { place: j }, S.murder.answer = Hi(S), S.difficulty = Yc(S, A), S.steps = A.steps, hw(S);
     }
     throw new Z("no ".concat(u, " puzzle found for seed ").concat(l, " in ").concat(h, " tries"));
   }
-  function vw(t) {
+  function ww(t) {
     var _a3;
     const e = (_a3 = t.kind) != null ? _a3 : "murdle";
-    if (e === "knights") return hv(t);
-    if (e === "logic") return ew(t);
-    if (e === "testimony") return jv(t);
-    if (e === "quiz") return Pv(t);
+    if (e === "knights") return pv(t);
+    if (e === "logic") return tw(t);
+    if (e === "testimony") return xv(t);
+    if (e === "quiz") return Rv(t);
     Rc(t);
     const s = Nt(t), n = yn(t);
     for (const r of t.clues) if (!Wi(r, s, n)) throw new Z("clue ".concat(r.id, " is false in the solution"));
@@ -5092,12 +5092,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return t;
   }
-  function ww(t, e) {
+  function yw(t, e) {
     var _a3, _b3, _c2;
     const s = sl(e), n = { ...t }, i = (_b3 = (_a3 = n[e]) != null ? _a3 : n[s]) != null ? _b3 : "", o = (_c2 = { "": "no", no: "yes", yes: "" }[i]) != null ? _c2 : "";
     return o ? (n[e] = o, n[s] = o) : (delete n[e], delete n[s]), n;
   }
-  function yw(t, e, s) {
+  function Sw(t, e, s) {
     var _a3;
     const n = sl(s);
     if (((_a3 = e[s]) != null ? _a3 : e[n]) !== "yes") return { ...e };
@@ -5116,16 +5116,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return s;
   }
-  function Sw(t, e) {
+  function $w(t, e) {
     const s = Hi(t), n = [];
     for (const i of Object.keys(s)) e[i] !== s[i] && n.push(i);
     return { correct: n.length === 0, wrong: n };
   }
-  function $w(t, e) {
+  function zw(t, e) {
     var _a3;
-    if (t.kind === "knights") return bv(t, e);
+    if (t.kind === "knights") return vv(t, e);
     if (t.kind === "quiz") {
-      const r = Rv(t, e);
+      const r = Dv(t, e);
       return { correct: r.correct, wrong: r.wrong };
     }
     const s = nr(t), n = it(t), i = [];
@@ -5135,20 +5135,20 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return { correct: i.length === 0, wrong: i };
   }
-  const zw = ["murdle", "logic"], _w = ["easy", "medium", "hard"], ir = [3, 4], jw = 8, nl = /* @__PURE__ */ new Map();
+  const _w = ["murdle", "logic"], jw = ["easy", "medium", "hard"], ir = [3, 4], xw = 8, nl = /* @__PURE__ */ new Map();
   function il(t, e) {
     const s = "".concat(t.kind, ":").concat(t.size, ":").concat(t.seed, ":").concat(t.band);
     {
       const r = nl.get(s);
       if (r) return r;
     }
-    const n = ((r) => bw(r));
+    const n = ((r) => vw(r));
     let i = new Z("no seed tried");
-    for (let r = 0; r < jw; r++) {
+    for (let r = 0; r < xw; r++) {
       const o = t.seed + r;
       try {
         const a = n({ kind: t.kind, size: t.size, seed: o, band: t.band });
-        vw(a);
+        ww(a);
         const c = { puzzle: a, seed: o, skipped: r };
         return e || nl.set(s, c), c;
       } catch (a) {
@@ -5157,9 +5157,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     throw i instanceof Error ? i : new Z(String(i));
   }
-  const xw = (t) => t.categories.map((e) => e.key), Ew = (t) => t.categories.flatMap((e) => e.items), rr = (t, e) => Yt(t, e);
+  const Ew = (t) => t.categories.map((e) => e.key), Aw = (t) => t.categories.flatMap((e) => e.items), rr = (t, e) => Yt(t, e);
   function or(t) {
-    return t.kind !== "murdle" ? [] : xw(t).filter((e) => e !== "place");
+    return t.kind !== "murdle" ? [] : Ew(t).filter((e) => e !== "place");
   }
   function rl(t) {
     if (t.kind !== "murdle" || !t.murder) return null;
@@ -5167,11 +5167,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const n of or(t)) s[n] = e[n];
     return s;
   }
-  function Aw(t) {
+  function Tw(t) {
     const e = nr(t);
     return it(t).filter((s) => e[s] === "yes");
   }
-  function Tw(t) {
+  function Iw(t) {
     const e = [];
     for (let s = 0; s < t.categories.length; s++) for (let n = s + 1; n < t.categories.length; n++) e.push({ rows: t.categories[s], cols: t.categories[n], key: "".concat(t.categories[s].key, "-").concat(t.categories[n].key) });
     return e;
@@ -5180,17 +5180,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     var _a3, _b3;
     const [s, n] = Re(e);
     return (_b3 = (_a3 = t[e]) != null ? _a3 : t["".concat(s, ",").concat(n)]) != null ? _b3 : "";
-  }, Iw = (t, e) => ww(t, e), Mw = (t, e, s) => yw(t, e, s);
+  }, Mw = (t, e) => yw(t, e), Ow = (t, e, s) => Sw(t, e, s);
   function ol(t, e) {
     return it(t).filter((s) => vt(e, s) === "yes").map((s) => Re(s));
   }
-  function Ow(t, e, s) {
+  function Nw(t, e, s) {
     var _a3, _b3;
     if (t.kind === "murdle") {
-      const i = { ...e, place: (_b3 = (_a3 = t.murder) == null ? void 0 : _a3.place) != null ? _b3 : "" }, r = Sw(t, i);
+      const i = { ...e, place: (_b3 = (_a3 = t.murder) == null ? void 0 : _a3.place) != null ? _b3 : "" }, r = $w(t, i);
       return { correct: r.correct, wrong: r.wrong.filter((o) => o !== "place") };
     }
-    const n = $w(t, s);
+    const n = zw(t, s);
     return { correct: n.correct, wrong: n.wrong };
   }
   const al = { is: { "suspect,weapon": "{X} had {Y}.", "suspect,place": "{X} was in {Y}.", "suspect,motive": "{X} acted out of {Y}.", "weapon,place": "Whoever had {X} was in {Y}.", "weapon,motive": "Whoever had {X} acted out of {Y}.", "place,motive": "Whoever was in {X} acted out of {Y}." }, not: { "suspect,weapon": "{X} did not have {Y}.", "suspect,place": "{X} was not in {Y}.", "suspect,motive": "{X} did not act out of {Y}.", "weapon,place": "Whoever had {X} was not in {Y}.", "weapon,motive": "Whoever had {X} did not act out of {Y}.", "place,motive": "Whoever was in {X} did not act out of {Y}." }, either: { "suspect,place": "{A} was either in {B1} or {B2}.", "suspect,weapon": "{A} had either {B1} or {B2}.", "weapon,place": "{A} was either in {B1} or {B2}.", "weapon,suspect": "Either {B1} or {B2} had {A}.", "place,suspect": "Either {B1} or {B2} was in {A}.", "place,weapon": "Either {B1} or {B2} was in {A}.", "suspect,motive": "{A} acted out of either {B1} or {B2}.", "motive,suspect": "Either {B1} or {B2} acted out of {A}.", "weapon,motive": "Whoever had {A} acted out of either {B1} or {B2}.", "motive,weapon": "Whoever acted out of {A} had either {B1} or {B2}.", "place,motive": "Whoever was in {A} acted out of either {B1} or {B2}.", "motive,place": "Whoever acted out of {A} was either in {B1} or {B2}." }, isAny: "{X} goes with {Y}.", notAny: "{X} does not go with {Y}.", eitherAny: "{A} goes with either {B1} or {B2}.", logic: { is: "{A} goes with {B}.", not: "{A} does not go with {B}.", either: "{A} goes with either {B1} or {B2}.", neither: "{A} goes with neither {B1} nor {B2}.", oneof: "Of {A1} and {A2}, one goes with {B1} and the other with {B2}.", before: "{A} came before {B}.", after: "{A} came after {B}.", apart: "{A} and {B} are exactly {n} places apart." }, hint: { wrong: "Look again at {A} and {B}.", clue: "Clue {n} says: {text}", yes: "So {A} goes with {B}.", no: "So {A} cannot go with {B}.", elim: "{F0} goes with {F1}, so {A} cannot go with {B}.", last: "Everything else for {A} is ruled out, so {A} goes with {B}.", either: "One of the two is ruled out, so {A} goes with {B}.", order: "Counting the places in order, that rules out {A} {B}.", trans: "{A} and {B} are linked through {M}, so {A} {verb} {B}.", verbYes: "goes with", verbNo: "cannot go with", accuse: "The grid is complete. Make your accusation.", more: "The clues you have turned say no more. Turn another clue card." }, articles: true }, cl = { en: al, hr: { is: {}, not: {}, either: {}, isAny: "{X} i {Y} idu zajedno.", notAny: "{X} i {Y} ne idu zajedno.", eitherAny: "{A} ide zajedno s jednim od ovih dvoje: {B1} ili {B2}.", logic: { is: "{A} i {B} idu zajedno.", not: "{A} i {B} ne idu zajedno.", either: "{A} ide zajedno s jednim od ovih dvoje: {B1} ili {B2}.", neither: "{A} ne ide zajedno ni s jednim od ovih dvoje: {B1}, {B2}.", oneof: "Od ove dvije stvari, {A1} i {A2}, jedna ide uz {B1}, a druga uz {B2}.", before: "Redoslijed: {A}, a zatim {B}.", after: "Redoslijed: {B}, a zatim {A}.", apart: "{A} i {B}: u redoslijedu ih dijeli točno {n}." }, hint: { wrong: "Pogledaj ponovno: {A} i {B}.", clue: "Trag {n}: {text}", yes: "Zato {A} i {B} idu zajedno.", no: "Zato {A} i {B} ne idu zajedno.", elim: "{F0} i {F1} idu zajedno, pa {A} i {B} ne idu zajedno.", last: "Sve drugo za {A} je isključeno, pa {A} i {B} idu zajedno.", either: "Jedno od dvoje je isključeno, pa {A} i {B} idu zajedno.", order: "Brojanje u redoslijedu isključuje: {A}, {B}.", trans: "{A} i {B} povezani su preko: {M}, pa {verb}.", verbYes: "idu zajedno", verbNo: "ne idu zajedno", accuse: "Mreža je gotova. Podigni optužbu.", more: "Okrenuti tragovi ne govore više. Okreni još jedan trag." }, articles: false } }, ar = (t) => {
@@ -5243,7 +5243,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const l = (m) => t.categories.findIndex((g) => g.items.includes(m)), [u, h] = l(a) < l(c[0]) ? [a, c[0]] : [c[0], a], f = (_c2 = (e.type === "not" ? i.not : i.is)[ll(t, u, h)]) != null ? _c2 : e.type === "not" ? i.notAny : i.isAny;
     return Ke(ge(f, { X: r(u), Y: r(h) }));
   }
-  function Nw(t, e, s, n, i) {
+  function Pw(t, e, s, n, i) {
     var _a3;
     const r = ar(i).hint, o = (u, h = false) => h ? Ke(Tn(t, u, n, i)) : Tn(t, u, n, i), a = nr(t);
     for (const u of it(t)) {
@@ -5278,8 +5278,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return c.length < t.clues.length ? { kind: "more", cell: "", text: r.more } : { kind: "accuse", cell: "", text: r.accuse };
   }
-  const De = E().min(1).max(64).regex(/^[A-Za-z0-9][A-Za-z0-9_.-]*$/, "an id of letters, digits, dots, dashes and underscores"), Ve = E().min(1), Pw = U({ kind: Y(zw).default("murdle"), size: L().int().min(ir[0]).max(ir[ir.length - 1]).default(3), seed: L().int().min(0).default(1), band: Y(_w).default("easy"), names: Q(E(), Ve), aliases: Q(E(), Ve).default({}), labels: Q(E(), Ve).default({}), items: N(De).min(1) }), Rw = U({ id: De, unit: De.optional(), title: Ve, story: Ve, case: Pw }), Dw = U({ id: De, name: Ve, x: L(), y: L() }), Lw = U({ from: De, to: De, item: De, decoys: N(De).max(5), clue: Ve.optional() }), Cw = U({ unit: De.optional(), final: J().default(false), suspect: Ve, title: Ve.optional(), story: Ve.optional(), start: De, places: N(Dw).min(2), route: N(Lw).min(1), map: De, width: L().positive().default(800), height: L().positive().default(600) }), Zw = U({ rooms: N(Rw).min(1), final: De.optional(), chase: Cw.optional() }), Uw = ["DET_UNIT_NO_ROOM", "DET_ROOM_UNIT_MISSING", "DET_FINAL_MISSING", "DET_PUZZLE_INVALID", "DET_PUZZLE_NOT_UNIQUE", "DET_PUZZLE_UNSOLVABLE", "DET_NAME_MISSING", "DET_CLUE_ITEM_MISSING", "DET_TOO_FEW_CLUE_ITEMS", "DET_CHASE_PLACE_MISSING", "DET_CHASE_ROUTE_BROKEN", "DET_CHASE_ITEM_MISSING", "DET_CHASE_FEW_DECOYS", "DET_ALIAS_NOT_FACT"], dl = (t) => t.route[t.route.length - 1].to, Bw = (t) => t.rooms.find((e) => e.id === t.final), hl = (t) => ({ kind: t.kind, size: t.size, seed: t.seed, band: t.band });
-  function Fw(t) {
+  const De = E().min(1).max(64).regex(/^[A-Za-z0-9][A-Za-z0-9_.-]*$/, "an id of letters, digits, dots, dashes and underscores"), Ve = E().min(1), Rw = U({ kind: Y(_w).default("murdle"), size: L().int().min(ir[0]).max(ir[ir.length - 1]).default(3), seed: L().int().min(0).default(1), band: Y(jw).default("easy"), names: Q(E(), Ve), aliases: Q(E(), Ve).default({}), labels: Q(E(), Ve).default({}), items: N(De).min(1) }), Dw = U({ id: De, unit: De.optional(), title: Ve, story: Ve, case: Rw }), Lw = U({ id: De, name: Ve, x: L(), y: L() }), Cw = U({ from: De, to: De, item: De, decoys: N(De).max(5), clue: Ve.optional() }), Zw = U({ unit: De.optional(), final: J().default(false), suspect: Ve, title: Ve.optional(), story: Ve.optional(), start: De, places: N(Lw).min(2), route: N(Cw).min(1), map: De, width: L().positive().default(800), height: L().positive().default(600) }), Uw = U({ rooms: N(Dw).min(1), final: De.optional(), chase: Zw.optional() }), Bw = ["DET_UNIT_NO_ROOM", "DET_ROOM_UNIT_MISSING", "DET_FINAL_MISSING", "DET_PUZZLE_INVALID", "DET_PUZZLE_NOT_UNIQUE", "DET_PUZZLE_UNSOLVABLE", "DET_NAME_MISSING", "DET_CLUE_ITEM_MISSING", "DET_TOO_FEW_CLUE_ITEMS", "DET_CHASE_PLACE_MISSING", "DET_CHASE_ROUTE_BROKEN", "DET_CHASE_ITEM_MISSING", "DET_CHASE_FEW_DECOYS", "DET_ALIAS_NOT_FACT"], dl = (t) => t.route[t.route.length - 1].to, Fw = (t) => t.rooms.find((e) => e.id === t.final), hl = (t) => ({ kind: t.kind, size: t.size, seed: t.seed, band: t.band });
+  function Kw(t) {
     const e = [], s = (n, i) => {
       i && e.push({ path: n, key: i, role: "string" });
     };
@@ -5290,7 +5290,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const [r, o] of Object.entries(n.case.labels)) s("rooms[".concat(i, "].case.labels.").concat(r), o);
     }), t.chase && (s("chase.suspect", t.chase.suspect), s("chase.title", t.chase.title), s("chase.story", t.chase.story), t.chase.places.forEach((n, i) => s("chase.places[".concat(i, "].name"), n.name)), t.chase.route.forEach((n, i) => s("chase.route[".concat(i, "].clue"), n.clue))), e;
   }
-  function Kw(t, e) {
+  function qw(t, e) {
     const s = [], n = new Set(e.items.map((o) => o.id)), i = new Set(e.units.map((o) => o.id)), r = /* @__PURE__ */ new Set();
     return t.rooms.forEach((o, a) => {
       r.has(o.id) && s.push({ code: "DUPLICATE_ID", path: "rooms[".concat(a, "].id"), message: 'the room id "'.concat(o.id, '" is used twice') }), r.add(o.id), o.unit !== void 0 && !i.has(o.unit) && s.push({ code: "UNKNOWN_UNIT", path: "rooms[".concat(a, "].unit"), message: 'unknown unit "'.concat(o.unit, '"') }), o.case.items.forEach((c, l) => {
@@ -5300,8 +5300,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       n.has(o.item) || s.push({ code: "UNKNOWN_ITEM", path: "chase.route[".concat(a, "].item"), message: 'unknown item "'.concat(o.item, '"') });
     })), s;
   }
-  const qw = (t) => t.chase ? [{ path: "chase.map", id: t.chase.map }] : [];
-  function Gw(t, e) {
+  const Gw = (t) => t.chase ? [{ path: "chase.map", id: t.chase.map }] : [];
+  function Ww(t, e) {
     const s = [], n = (i) => {
       if (typeof i == "string") {
         const r = e(i);
@@ -5310,7 +5310,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     };
     return n(t), s;
   }
-  function Ww(t, e, s = {}) {
+  function Hw(t, e, s = {}) {
     var _a3, _b3;
     if (!t) return [];
     const n = [], i = (h, p, f, m = {}) => {
@@ -5332,7 +5332,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         const v = b instanceof Error ? b.message : String(b);
         /exactly one solution/i.test(v) ? i("DET_PUZZLE_NOT_UNIQUE", f, 'the puzzle of room "'.concat(h.id, '" does not have exactly one solution (').concat(v, ")")) : /deduction/i.test(v) ? i("DET_PUZZLE_UNSOLVABLE", f, 'the puzzle of room "'.concat(h.id, '" cannot be solved by deduction alone (').concat(v, ")")) : i("DET_PUZZLE_INVALID", f, "no ".concat(m.kind, " puzzle of size ").concat(m.size, ", band ").concat(m.band, " could be made from seed ").concat(m.seed, " (").concat(v, ")"));
       }
-      if (g) for (const b of Ew(g.puzzle)) m.names[b] || i("DET_NAME_MISSING", "".concat(f, ".names"), 'the entity "'.concat(b, '" of the puzzle of room "').concat(h.id, '" has no name'));
+      if (g) for (const b of Aw(g.puzzle)) m.names[b] || i("DET_NAME_MISSING", "".concat(f, ".names"), 'the entity "'.concat(b, '" of the puzzle of room "').concat(h.id, '" has no name'));
       const k = /* @__PURE__ */ new Set();
       m.items.forEach((b, v) => {
         a.has(b) ? k.add(b) : i("DET_CLUE_ITEM_MISSING", "".concat(f, ".items[").concat(v, "]"), 'the clue item "'.concat(b, '" does not exist'));
@@ -5343,7 +5343,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           const $ = e.resolvers[y], x = $ == null ? void 0 : $.text(w);
           if (!$ || !x) continue;
           const _ = Pe(x, { fold: true });
-          [...k].some((O) => Gw(a.get(O), (R) => $.text(R)).some((R) => Pe(R, { fold: true }).includes(_))) || i("DET_ALIAS_NOT_FACT", "".concat(f, ".aliases.").concat(b), 'the alias "'.concat((_a4 = $.text(v)) != null ? _a4 : v, '" stands for "').concat(x, '", but no item of room "').concat(h.id, '" asks about it (').concat(y, ")"), { severity: "warning", lang: y });
+          [...k].some((O) => Ww(a.get(O), (R) => $.text(R)).some((R) => Pe(R, { fold: true }).includes(_))) || i("DET_ALIAS_NOT_FACT", "".concat(f, ".aliases.").concat(b), 'the alias "'.concat((_a4 = $.text(v)) != null ? _a4 : v, '" stands for "').concat(x, '", but no item of room "').concat(h.id, '" asks about it (').concat(y, ")"), { severity: "warning", lang: y });
         }
       }
     });
@@ -5364,16 +5364,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return n;
   }
-  const Hw = { id: "detective", theme: "noir", requiresSection: true, schema: Zw, textRefs: (t) => Fw(t), assetRefs: qw, validate: Kw, lint: (t, e) => Ww(t, e), codes: Uw, warnings: ["DET_ALIAS_NOT_FACT"] }, Vw = U({ id: P, year: L().int().refine((t) => t !== 0, "there is no year 0"), label: C, text: C.optional(), article: P.optional() }), Yw = U({ id: P, x: L(), y: L(), label: C, article: P }), Jw = U({ asset: P, width: L().positive(), height: L().positive(), places: N(Yw).default([]) }), Qw = U({ id: P, clue: C, article: P, item: P, collectible: C }), Xw = U({ id: P, unit: P, title: C, intro: C.optional(), steps: N(Qw) }), ey = ["n", "v", "adj", "adv", "prep", "conj", "phrase"], ty = U({ id: P, term: C, lemma: C.optional(), gloss: C, pos: Y(ey).optional(), note: C.optional() }), pl = U({ timeline: N(Vw).default([]), map: Jw.optional(), hunts: N(Xw).default([]), glossary: Q(E(), N(ty)).default({}), reader: J().default(false) }), sy = /* @__PURE__ */ new Set(["the", "and", "for", "are", "was", "its", "with", "from", "that", "this"]), _s = (t) => Pe(t, { fold: true });
-  function ny(t, e) {
-    const s = new Set(t.split(" ").filter(Boolean)), n = [...s], i = _s(e).split(" ").filter((r) => r.length > 2 || /^\d+$/.test(r)).filter((r) => !sy.has(r));
+  const Vw = { id: "detective", theme: "noir", requiresSection: true, schema: Uw, textRefs: (t) => Kw(t), assetRefs: Gw, validate: qw, lint: (t, e) => Hw(t, e), codes: Bw, warnings: ["DET_ALIAS_NOT_FACT"] }, Yw = U({ id: P, year: L().int().refine((t) => t !== 0, "there is no year 0"), label: C, text: C.optional(), article: P.optional() }), Jw = U({ id: P, x: L(), y: L(), label: C, article: P }), Qw = U({ asset: P, width: L().positive(), height: L().positive(), places: N(Jw).default([]) }), Xw = U({ id: P, clue: C, article: P, item: P, collectible: C }), ey = U({ id: P, unit: P, title: C, intro: C.optional(), steps: N(Xw) }), ty = ["n", "v", "adj", "adv", "prep", "conj", "phrase"], sy = U({ id: P, term: C, lemma: C.optional(), gloss: C, pos: Y(ty).optional(), note: C.optional() }), pl = U({ timeline: N(Yw).default([]), map: Qw.optional(), hunts: N(ey).default([]), glossary: Q(E(), N(sy)).default({}), reader: J().default(false) }), ny = /* @__PURE__ */ new Set(["the", "and", "for", "are", "was", "its", "with", "from", "that", "this"]), _s = (t) => Pe(t, { fold: true });
+  function iy(t, e) {
+    const s = new Set(t.split(" ").filter(Boolean)), n = [...s], i = _s(e).split(" ").filter((r) => r.length > 2 || /^\d+$/.test(r)).filter((r) => !ny.has(r));
     return i.length === 0 ? true : i.every((r) => {
       if (/^\d+$/.test(r)) return s.has(r);
       const o = r.length >= 7 ? r.slice(0, r.length - 2) : r.length >= 5 ? r.slice(0, r.length - 1) : r;
       return n.some((a) => a.startsWith(o));
     });
   }
-  function iy(t, e) {
+  function ry(t, e) {
     var _a3, _b3;
     const s = t, n = (r) => typeof r == "string" ? e.hasAccepted(r) ? e.accepted(r) : e.text(r) ? [e.text(r)] : [] : [], i = (r) => {
       var _a4;
@@ -5400,25 +5400,25 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
   }
   function fl(t, e, s) {
-    const n = iy(t, s);
+    const n = ry(t, s);
     if (!n) return null;
     const i = _s(e.bodyKeys.map((r) => {
       var _a3;
       return (_a3 = s.text(r)) != null ? _a3 : "";
     }).join(" "));
-    return n.every((r) => r.length === 0 || r.some((o) => ny(i, o)));
+    return n.every((r) => r.length === 0 || r.some((o) => iy(i, o)));
   }
-  function ry(t) {
+  function oy(t) {
     const e = t.normalize("NFKC").toLowerCase(), s = /(\d{1,4})/.exec(e);
     if (!s) return;
     const n = Number(s[1]);
     return !Number.isFinite(n) || n === 0 ? void 0 : /\bbce?\b|\bb\.c\.|\bpr\.?\s*kr|\bpr\.?\s*n\.?\s*e\b|\bprije\s+krista/.test(e) ? -n : n;
   }
-  const oy = { mcq: 0, typed: 1, cloze: 2, "true-false": 3, listening: 4, hotspot: 5, "multi-select": 6, flashcard: 7, "match-pairs": 8, order: 9, "sort-groups": 10, crossword: 11, "word-search": 12 }, ml = (t, e) => {
+  const ay = { mcq: 0, typed: 1, cloze: 2, "true-false": 3, listening: 4, hotspot: 5, "multi-select": 6, flashcard: 7, "match-pairs": 8, order: 9, "sort-groups": 10, crossword: 11, "word-search": 12 }, ml = (t, e) => {
     var _a3;
     return (_a3 = t.objectives.find((s) => s.id === e.objective)) == null ? void 0 : _a3.unit;
   }, gl = (t) => t.flatMap((e) => e.split(/\n+/)).map((e) => e.trim()).filter(Boolean);
-  function ay(t, e = vl(t)) {
+  function cy(t, e = vl(t)) {
     const s = Tt(t.units), n = (i) => {
       const r = i.unit ? s.indexOf(i.unit) : -1;
       return r < 0 ? s.length : r;
@@ -5447,7 +5447,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const i of t.units) if (!e.some((r) => r.unit === i.id)) for (const r of t.objectives.filter((o) => o.unit === i.id)) s.push({ id: "auto-".concat(r.id), titleKey: r.text, bodyKeys: [r.text, ...r.facts.map((o) => n.get(o)).filter((o) => !!o)], unit: i.id, citations: r.facts, related: [], virtual: true });
     return s;
   }
-  function cy(t, e, s) {
+  function ly(t, e, s) {
     const n = [], i = new Map(t.objectives.map((r) => [r.id, new Set(r.facts)]));
     for (const r of Tt(t.units)) {
       const o = t.items.filter((u) => ml(t, u) === r);
@@ -5459,7 +5459,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           return u.virtual ? k.objective === u.id.slice(5) : [...(_a3 = i.get(k.objective)) != null ? _a3 : []].some((b) => h.has(b));
         }), f = (p.length > 0 ? p : o).filter((k) => !c.has(k.id)), m = (k) => {
           var _a3;
-          return (fl(k, u, s) === false ? 100 : 0) + ((_a3 = oy[k.kind]) != null ? _a3 : 20) + (p.includes(k) ? 0 : 40);
+          return (fl(k, u, s) === false ? 100 : 0) + ((_a3 = ay[k.kind]) != null ? _a3 : 20) + (p.includes(k) ? 0 : 40);
         }, g = [...f, ...o.filter((k) => !c.has(k.id) && !f.includes(k))].sort((k, b) => m(k) - m(b))[0];
         g && (c.add(g.id), l.push({ id: "s-".concat(u.id), article: u.id, item: g.id }));
       }
@@ -5467,7 +5467,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return n;
   }
-  function ly(t, e = 2) {
+  function uy(t, e = 2) {
     const s = [...new Set(t.map((i) => i.unit))], n = [];
     for (const i of s) {
       const r = t.filter((a) => a.unit === i).flatMap((a) => a.steps), o = e >= 2 && r.length >= 2 ? [r[0], r[r.length - 1]] : r.slice(0, 1);
@@ -5475,16 +5475,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return n;
   }
-  function uy(t, e, s) {
+  function dy(t, e, s) {
     var _a3, _b3;
     const n = [];
     for (const i of t.items) if (!(i.kind !== "order" || i.timeline !== true)) for (const r of i.items) {
-      const o = r.when ? s.text(r.when) : void 0, a = o ? ry(o) : void 0;
+      const o = r.when ? s.text(r.when) : void 0, a = o ? oy(o) : void 0;
       if (a === void 0) continue;
       const c = _s((_a3 = s.text(r.text)) != null ? _a3 : ""), l = (_b3 = e.find((u) => {
         var _a4;
         return !u.virtual && c.includes(_s((_a4 = s.text(u.titleKey)) != null ? _a4 : "\0"));
-      })) != null ? _b3 : e.find((u) => !u.virtual && dy(c, _s(u.bodyKeys.map((h) => {
+      })) != null ? _b3 : e.find((u) => !u.virtual && hy(c, _s(u.bodyKeys.map((h) => {
         var _a4;
         return (_a4 = s.text(h)) != null ? _a4 : "";
       }).join(" "))) >= 2);
@@ -5492,24 +5492,24 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return n.sort((i, r) => i.year - r.year);
   }
-  const dy = (t, e) => {
+  const hy = (t, e) => {
     const s = new Set(e.split(" "));
     return t.split(" ").filter((n) => n.length >= 5 && s.has(n)).length;
   };
-  function hy(t) {
+  function py(t) {
     const e = t.assets.find((s) => s.kind === "image");
     return e ? { asset: e.id, width: 0, height: 0, places: [], auto: true } : void 0;
   }
   function wl(t, e, s) {
-    const n = vl(t), i = e && e.hunts.length > 0 ? e.hunts.map((a) => ({ id: a.id, unit: a.unit, title: a.title, ...a.intro ? { intro: a.intro } : {}, steps: a.steps.map((c) => ({ ...c })), auto: false })) : cy(t, n, s), r = e && e.timeline.length > 0 ? [...e.timeline].map((a) => ({ id: a.id, year: a.year, label: a.label, ...a.text ? { text: a.text } : {}, ...a.article ? { article: a.article } : {} })).sort((a, c) => a.year - c.year) : uy(t, n, s), o = (e == null ? void 0 : e.map) ? { asset: e.map.asset, width: e.map.width, height: e.map.height, places: e.map.places.map((a) => ({ ...a })), auto: false } : hy(t);
-    return { articles: n, hunts: i, timeline: r, ...o ? { map: o } : {}, finalSteps: ly(i) };
+    const n = vl(t), i = e && e.hunts.length > 0 ? e.hunts.map((a) => ({ id: a.id, unit: a.unit, title: a.title, ...a.intro ? { intro: a.intro } : {}, steps: a.steps.map((c) => ({ ...c })), auto: false })) : ly(t, n, s), r = e && e.timeline.length > 0 ? [...e.timeline].map((a) => ({ id: a.id, year: a.year, label: a.label, ...a.text ? { text: a.text } : {}, ...a.article ? { article: a.article } : {} })).sort((a, c) => a.year - c.year) : dy(t, n, s), o = (e == null ? void 0 : e.map) ? { asset: e.map.asset, width: e.map.width, height: e.map.height, places: e.map.places.map((a) => ({ ...a })), auto: false } : py(t);
+    return { articles: n, hunts: i, timeline: r, ...o ? { map: o } : {}, finalSteps: uy(i) };
   }
-  const py = (t) => t;
-  function fy(t, e) {
+  const fy = (t) => t;
+  function my(t, e) {
     const s = [], n = new Set(e.units.map((c) => c.id)), i = (c, l, u) => {
       const h = /* @__PURE__ */ new Set();
       l.forEach((p, f) => {
-        h.has(p) && s.push({ code: "DUPLICATE_ID", path: py("".concat(u, "[").concat(f, "].id")), message: "the ".concat(c, ' id "').concat(p, '" is used twice') }), h.add(p);
+        h.has(p) && s.push({ code: "DUPLICATE_ID", path: fy("".concat(u, "[").concat(f, "].id")), message: "the ".concat(c, ' id "').concat(p, '" is used twice') }), h.add(p);
       });
     };
     i("hunt", t.hunts.map((c) => c.id), "hunts"), i("timeline event", t.timeline.map((c) => c.id), "timeline"), t.map && i("place", t.map.places.map((c) => c.id), "map.places");
@@ -5522,7 +5522,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const [c, l] of Object.entries(t.glossary)) a.has(c) || s.push({ code: "UNKNOWN_ARTICLE", path: "glossary.".concat(c), message: 'the glossary belongs to the article "'.concat(c, '", which does not exist') }), i("gloss entry", l.map((u) => u.id), "glossary.".concat(c));
     return s;
   }
-  const my = (t, e) => {
+  const gy = (t, e) => {
     var _a3;
     const s = [], { pack: n } = e, i = (_a3 = e.resolvers[n.sourceLang]) != null ? _a3 : Object.values(e.resolvers)[0], r = wl(n, t, i), o = new Map(r.articles.map((u) => [u.id, u])), a = new Map(n.items.map((u) => [u.id, u])), c = new Map(n.assets.map((u) => [u.id, u]));
     r.hunts.forEach((u, h) => {
@@ -5553,9 +5553,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         o.has(p.article) || s.push({ code: "ENC_MAP_ARTICLE_MISSING", path: "map.places[".concat(f, "].article"), message: 'the place "'.concat(p.id, '" opens the article "').concat(p.article, '", which does not exist') }), u.width > 0 && u.height > 0 && (p.x < 0 || p.x > u.width || p.y < 0 || p.y > u.height) && s.push({ code: "ENC_MAP_PLACE_OUTSIDE", path: "map.places[".concat(f, "]"), message: 'the place "'.concat(p.id, '" (').concat(p.x, ", ").concat(p.y, ") is outside the ").concat(u.width, " x ").concat(u.height, " image") });
       });
     }
-    return s.push(...gy(t, e, i)), s;
+    return s.push(...ky(t, e, i)), s;
   };
-  function gy(t, e, s) {
+  function ky(t, e, s) {
     var _a3;
     const n = [], i = new Map(e.pack.encyclopedia.articles.map((r) => {
       var _a4;
@@ -5578,18 +5578,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return n;
   }
-  const ky = { id: "encyclopedia", theme: "parchment", requiresSection: false, schema: pl, textRefs: (t) => {
+  const by = { id: "encyclopedia", theme: "parchment", requiresSection: false, schema: pl, textRefs: (t) => {
     var _a3, _b3;
     return [...t.timeline.flatMap((e, s) => [{ path: "timeline[".concat(s, "].label"), key: e.label, role: "string" }, ...e.text ? [{ path: "timeline[".concat(s, "].text"), key: e.text, role: "string" }] : []]), ...((_b3 = (_a3 = t.map) == null ? void 0 : _a3.places) != null ? _b3 : []).map((e, s) => ({ path: "map.places[".concat(s, "].label"), key: e.label, role: "string" })), ...t.hunts.flatMap((e, s) => [{ path: "hunts[".concat(s, "].title"), key: e.title, role: "string" }, ...e.intro ? [{ path: "hunts[".concat(s, "].intro"), key: e.intro, role: "string" }] : [], ...e.steps.flatMap((n, i) => [{ path: "hunts[".concat(s, "].steps[").concat(i, "].clue"), key: n.clue, role: "string" }, { path: "hunts[".concat(s, "].steps[").concat(i, "].collectible"), key: n.collectible, role: "string" }])]), ...Object.entries(t.glossary).flatMap(([e, s]) => s.flatMap((n, i) => {
       const r = "glossary.".concat(e, "[").concat(i, "]");
       return [{ path: "".concat(r, ".term"), key: n.term, role: "string" }, { path: "".concat(r, ".gloss"), key: n.gloss, role: "string" }, ...n.lemma ? [{ path: "".concat(r, ".lemma"), key: n.lemma, role: "string" }] : [], ...n.note ? [{ path: "".concat(r, ".note"), key: n.note, role: "string" }] : []];
     }))];
-  }, assetRefs: (t) => t.map ? [{ path: "map.asset", id: t.map.asset }] : [], validate: fy, lint: my, codes: ["GLOSS_TERM_NOT_IN_TEXT", "GLOSS_DUPLICATE", "GLOSS_COVERAGE", "ENC_HUNT_TARGET_MISSING", "ENC_HUNT_ITEM_MISSING", "ENC_HUNT_ITEM_DUPLICATE", "ENC_UNIT_NO_HUNT", "ENC_HUNT_EMPTY", "ENC_TIMELINE_ARTICLE_MISSING", "ENC_MAP_ARTICLE_MISSING", "ENC_MAP_PLACE_OUTSIDE", "ENC_MAP_NO_IMAGE", "ENC_ANSWER_NOT_IN_ARTICLE", "ENC_HUNT_ITEM_OTHER_UNIT"], warnings: ["ENC_ANSWER_NOT_IN_ARTICLE", "ENC_HUNT_ITEM_OTHER_UNIT", "GLOSS_COVERAGE"] }, by = U({ name: C, line: C, hint: C.optional(), right: C.optional(), wrong: C.optional(), portrait: P.optional() }), vy = U({ to: P, items: N(P).default([]) }), wy = U({ id: P, name: C, description: C.optional(), character: by.optional(), doors: N(vy).default([]), key: J().default(false), objective: P.optional(), asset: P.optional() }), yy = U({ id: P, unit: P, name: C, description: C.optional(), entry: P, rooms: N(wy).min(1) }), Sy = U({ name: C.optional(), description: C.optional(), size: L().int().min(3).max(20).default(8) }), $y = U({ torches: L().int().min(0).max(9).default(3), wings: N(yy).default([]), throne: Sy.optional() }), zy = ["MAZE_WING_UNIT_MISSING", "MAZE_ENTRY_MISSING", "MAZE_DOOR_TARGET_MISSING", "MAZE_DOOR_ITEM_MISSING", "MAZE_OBJECTIVE_MISSING", "MAZE_DUPLICATE", "MAZE_UNIT_NO_WING", "MAZE_DOOR_NO_ITEMS", "MAZE_ROOM_UNREACHABLE", "MAZE_NO_KEY_ROOM", "MAZE_KEY_UNREACHABLE", "MAZE_KEY_AT_ENTRY", "MAZE_DEAD_END", "MAZE_DOOR_ITEM_OTHER_UNIT", "MAZE_TOO_FEW_TORCHES"], _y = ["MAZE_DOOR_ITEM_OTHER_UNIT", "MAZE_TOO_FEW_TORCHES"], yl = 3, jy = 8, xy = 4, Le = (t) => ({ ui: t }), Ey = (t) => t ? { key: t } : void 0, Ay = (t, e) => t ? { name: { key: t.name }, line: { key: t.line }, ...t.hint ? { hint: { key: t.hint } } : {}, ...t.right ? { right: { key: t.right } } : {}, ...t.wrong ? { wrong: { key: t.wrong } } : {}, ...t.portrait ? { portrait: t.portrait } : {}, look: e % 6 } : void 0, Sl = (t, e) => ({ name: Le("maze.auto.".concat(t, ".name")), line: Le("maze.auto.".concat(t, ".line")), right: Le("maze.auto.".concat(t, ".right")), wrong: Le("maze.auto.".concat(t, ".wrong")), look: e % 6 }), $l = ["maze.auto.gallery", "maze.auto.gallery2", "maze.auto.gallery3"];
-  function Ty(t, e, s = e) {
+  }, assetRefs: (t) => t.map ? [{ path: "map.asset", id: t.map.asset }] : [], validate: my, lint: gy, codes: ["GLOSS_TERM_NOT_IN_TEXT", "GLOSS_DUPLICATE", "GLOSS_COVERAGE", "ENC_HUNT_TARGET_MISSING", "ENC_HUNT_ITEM_MISSING", "ENC_HUNT_ITEM_DUPLICATE", "ENC_UNIT_NO_HUNT", "ENC_HUNT_EMPTY", "ENC_TIMELINE_ARTICLE_MISSING", "ENC_MAP_ARTICLE_MISSING", "ENC_MAP_PLACE_OUTSIDE", "ENC_MAP_NO_IMAGE", "ENC_ANSWER_NOT_IN_ARTICLE", "ENC_HUNT_ITEM_OTHER_UNIT"], warnings: ["ENC_ANSWER_NOT_IN_ARTICLE", "ENC_HUNT_ITEM_OTHER_UNIT", "GLOSS_COVERAGE"] }, vy = U({ name: C, line: C, hint: C.optional(), right: C.optional(), wrong: C.optional(), portrait: P.optional() }), wy = U({ to: P, items: N(P).default([]) }), yy = U({ id: P, name: C, description: C.optional(), character: vy.optional(), doors: N(wy).default([]), key: J().default(false), objective: P.optional(), asset: P.optional() }), Sy = U({ id: P, unit: P, name: C, description: C.optional(), entry: P, rooms: N(yy).min(1) }), $y = U({ name: C.optional(), description: C.optional(), size: L().int().min(3).max(20).default(8) }), zy = U({ torches: L().int().min(0).max(9).default(3), wings: N(Sy).default([]), throne: $y.optional() }), _y = ["MAZE_WING_UNIT_MISSING", "MAZE_ENTRY_MISSING", "MAZE_DOOR_TARGET_MISSING", "MAZE_DOOR_ITEM_MISSING", "MAZE_OBJECTIVE_MISSING", "MAZE_DUPLICATE", "MAZE_UNIT_NO_WING", "MAZE_DOOR_NO_ITEMS", "MAZE_ROOM_UNREACHABLE", "MAZE_NO_KEY_ROOM", "MAZE_KEY_UNREACHABLE", "MAZE_KEY_AT_ENTRY", "MAZE_DEAD_END", "MAZE_DOOR_ITEM_OTHER_UNIT", "MAZE_TOO_FEW_TORCHES"], jy = ["MAZE_DOOR_ITEM_OTHER_UNIT", "MAZE_TOO_FEW_TORCHES"], yl = 3, xy = 8, Ey = 4, Le = (t) => ({ ui: t }), Ay = (t) => t ? { key: t } : void 0, Ty = (t, e) => t ? { name: { key: t.name }, line: { key: t.line }, ...t.hint ? { hint: { key: t.hint } } : {}, ...t.right ? { right: { key: t.right } } : {}, ...t.wrong ? { wrong: { key: t.wrong } } : {}, ...t.portrait ? { portrait: t.portrait } : {}, look: e % 6 } : void 0, Sl = (t, e) => ({ name: Le("maze.auto.".concat(t, ".name")), line: Le("maze.auto.".concat(t, ".line")), right: Le("maze.auto.".concat(t, ".right")), wrong: Le("maze.auto.".concat(t, ".wrong")), look: e % 6 }), $l = ["maze.auto.gallery", "maze.auto.gallery2", "maze.auto.gallery3"];
+  function Iy(t, e, s = e) {
     var _a3, _b3, _c2;
     const n = t.units.find((h) => h.id === e), i = hn(t, e).map((h) => ({ o: h, items: dc(t, h.id).map((p) => p.id) })).filter((h) => h.items.length > 0), r = [...new Set(i.flatMap((h) => h.items))], o = [{ id: "hall", name: Le("maze.auto.hall"), pool: [], who: "gate", key: false, description: Le("maze.auto.hall.desc") }];
     i.forEach((h, p) => o.push({ id: "r-".concat(h.o.id), name: { key: h.o.text }, pool: h.items, who: p % 2 === 0 ? "scholar" : "archivist", key: false }));
-    for (let h = 0; o.length < xy; h++) o.push({ id: "gallery-".concat(h + 1), name: Le($l[h % $l.length]), pool: r, who: "scholar", key: false });
+    for (let h = 0; o.length < Ey; h++) o.push({ id: "gallery-".concat(h + 1), name: Le($l[h % $l.length]), pool: r, who: "scholar", key: false });
     o.push({ id: "key", name: Le("maze.auto.keyroom"), pool: r, who: "keeper", key: true, description: Le("maze.auto.keyroom.desc") });
     const a = o.map((h, p) => {
       const f = o[p + 1];
@@ -5599,26 +5599,26 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const h = (_b3 = (_a3 = l.doors[0]) == null ? void 0 : _a3.items) != null ? _b3 : r;
       a.push({ id: "side", name: Le("maze.auto.side"), description: Le("maze.auto.side.desc"), character: Sl("archivist", 3), doors: [{ to: u.id, items: h }], key: false }), l.doors.push({ to: "side", items: h });
     }
-    return { id: s, unit: e, name: (_c2 = Ey(n == null ? void 0 : n.title)) != null ? _c2 : Le("maze.auto.wing"), entry: "hall", rooms: a, auto: true };
+    return { id: s, unit: e, name: (_c2 = Ay(n == null ? void 0 : n.title)) != null ? _c2 : Le("maze.auto.wing"), entry: "hall", rooms: a, auto: true };
   }
-  const Iy = (t, e, s) => {
+  const My = (t, e, s) => {
     const n = new Set(t.items.map((o) => o.id)), i = new Map(e.rooms.map((o) => [o.id, o])), r = (o) => {
       var _a3, _b3;
       const a = o.items.length > 0 ? o.items : ((_a3 = i.get(o.to)) == null ? void 0 : _a3.objective) ? dc(t, (_b3 = i.get(o.to)) == null ? void 0 : _b3.objective).map((c) => c.id) : [];
       return [...new Set(a)].filter((c) => n.has(c));
     };
     return { id: e.id, unit: e.unit, name: { key: e.name }, ...e.description ? { description: { key: e.description } } : {}, entry: e.entry, auto: false, rooms: e.rooms.map((o, a) => {
-      const c = Ay(o.character, s * 3 + a);
+      const c = Ty(o.character, s * 3 + a);
       return { id: o.id, name: { key: o.name }, ...o.description ? { description: { key: o.description } } : {}, ...c ? { character: c } : {}, doors: o.doors.map((l) => ({ to: l.to, items: r(l) })), key: o.key, ...o.asset ? { asset: o.asset } : {} };
     }) };
   };
   function zl(t, e) {
     var _a3, _b3, _c2;
-    const s = ((_a3 = e == null ? void 0 : e.wings) != null ? _a3 : []).map((u, h) => Iy(t, u, h)), n = new Set(s.map((u) => u.unit)), i = new Set(s.map((u) => u.id)), r = t.units.filter((u) => !n.has(u.id)).map((u) => Ty(t, u.id, i.has(u.id) ? "".concat(u.id, "-auto") : u.id)), o = Tt(t.units), a = (u) => {
+    const s = ((_a3 = e == null ? void 0 : e.wings) != null ? _a3 : []).map((u, h) => My(t, u, h)), n = new Set(s.map((u) => u.unit)), i = new Set(s.map((u) => u.id)), r = t.units.filter((u) => !n.has(u.id)).map((u) => Iy(t, u.id, i.has(u.id) ? "".concat(u.id, "-auto") : u.id)), o = Tt(t.units), a = (u) => {
       const h = o.indexOf(u.unit);
       return h < 0 ? o.length : h;
     }, c = [...s, ...r].map((u, h) => ({ w: u, i: h })).sort((u, h) => a(u.w) - a(h.w) || u.i - h.i).map((u) => u.w), l = e == null ? void 0 : e.throne;
-    return { torches: (_b3 = e == null ? void 0 : e.torches) != null ? _b3 : yl, wings: c, throne: { ...(l == null ? void 0 : l.name) ? { name: { key: l.name } } : {}, ...(l == null ? void 0 : l.description) ? { description: { key: l.description } } : {}, size: (_c2 = l == null ? void 0 : l.size) != null ? _c2 : jy } };
+    return { torches: (_b3 = e == null ? void 0 : e.torches) != null ? _b3 : yl, wings: c, throne: { ...(l == null ? void 0 : l.name) ? { name: { key: l.name } } : {}, ...(l == null ? void 0 : l.description) ? { description: { key: l.description } } : {}, size: (_c2 = l == null ? void 0 : l.size) != null ? _c2 : xy } };
   }
   const In = (t, e) => "".concat(t, ">").concat(e), wt = (t, e) => t.rooms.find((s) => s.id === e), js = (t) => t.rooms.filter((e) => e.key).map((e) => e.id);
   function _l(t, e) {
@@ -5662,25 +5662,25 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (let h = 0; h + 1 < l.length; h++) s.has(In(l[h], l[h + 1])) || u++;
     return { from: e, found: true, path: l, next: (_d2 = l[1]) != null ? _d2 : null, locked: u };
   }
-  const My = (t, e) => t ? [{ path: "".concat(e, ".name"), key: t.name, role: "string" }, { path: "".concat(e, ".line"), key: t.line, role: "string" }, ...t.hint ? [{ path: "".concat(e, ".hint"), key: t.hint, role: "string" }] : [], ...t.right ? [{ path: "".concat(e, ".right"), key: t.right, role: "string" }] : [], ...t.wrong ? [{ path: "".concat(e, ".wrong"), key: t.wrong, role: "string" }] : []] : [];
-  function Oy(t) {
+  const Oy = (t, e) => t ? [{ path: "".concat(e, ".name"), key: t.name, role: "string" }, { path: "".concat(e, ".line"), key: t.line, role: "string" }, ...t.hint ? [{ path: "".concat(e, ".hint"), key: t.hint, role: "string" }] : [], ...t.right ? [{ path: "".concat(e, ".right"), key: t.right, role: "string" }] : [], ...t.wrong ? [{ path: "".concat(e, ".wrong"), key: t.wrong, role: "string" }] : []] : [];
+  function Ny(t) {
     var _a3, _b3;
     const e = [];
     return t.wings.forEach((s, n) => {
       e.push({ path: "wings[".concat(n, "].name"), key: s.name, role: "string" }), s.description && e.push({ path: "wings[".concat(n, "].description"), key: s.description, role: "string" }), s.rooms.forEach((i, r) => {
         const o = "wings[".concat(n, "].rooms[").concat(r, "]");
-        e.push({ path: "".concat(o, ".name"), key: i.name, role: "string" }), i.description && e.push({ path: "".concat(o, ".description"), key: i.description, role: "string" }), e.push(...My(i.character, "".concat(o, ".character")));
+        e.push({ path: "".concat(o, ".name"), key: i.name, role: "string" }), i.description && e.push({ path: "".concat(o, ".description"), key: i.description, role: "string" }), e.push(...Oy(i.character, "".concat(o, ".character")));
       });
     }), ((_a3 = t.throne) == null ? void 0 : _a3.name) && e.push({ path: "throne.name", key: t.throne.name, role: "string" }), ((_b3 = t.throne) == null ? void 0 : _b3.description) && e.push({ path: "throne.description", key: t.throne.description, role: "string" }), e;
   }
-  function Ny(t) {
+  function Py(t) {
     const e = [];
     return t.wings.forEach((s, n) => s.rooms.forEach((i, r) => {
       var _a3;
       i.asset && e.push({ path: "wings[".concat(n, "].rooms[").concat(r, "].asset"), id: i.asset }), ((_a3 = i.character) == null ? void 0 : _a3.portrait) && e.push({ path: "wings[".concat(n, "].rooms[").concat(r, "].character.portrait"), id: i.character.portrait });
     })), e;
   }
-  function Py(t, e) {
+  function Ry(t, e) {
     const s = [], n = new Set(e.units.map((a) => a.id)), i = new Set(e.items.map((a) => a.id)), r = new Set(e.objectives.map((a) => a.id)), o = /* @__PURE__ */ new Set();
     return t.wings.forEach((a, c) => {
       const l = "wings[".concat(c, "]");
@@ -5700,7 +5700,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       });
     }), s;
   }
-  const Ry = (t, e, s, n) => {
+  const Dy = (t, e, s, n) => {
     const i = new Set(t.rooms.map((a) => a.id));
     if (!i.has(t.entry)) return;
     const r = js(t), o = _l(t, t.entry);
@@ -5726,7 +5726,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       o.has(a.id) && !jl(t, a.id) && s.push({ code: "MAZE_DEAD_END", path: "".concat(e, ".rooms[").concat(c, "]"), message: 'from the room "'.concat(a.id, '" no door leads on to a key room: a learner who walks in is stuck') });
     });
   };
-  function Dy(t, e) {
+  function Ly(t, e) {
     var _a3, _b3;
     const s = [], { pack: n } = e;
     ((_a3 = t == null ? void 0 : t.torches) != null ? _a3 : yl) < 1 && s.push({ code: "MAZE_TOO_FEW_TORCHES", severity: "warning", path: "torches", message: "with fewer than 1 torch the first wrong answer already sends the learner back to the entrance" });
@@ -5734,11 +5734,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const o of n.units) i.length > 0 && !i.some((a) => a.unit === o.id) && s.push({ code: "MAZE_UNIT_NO_WING", path: "wings", message: 'no wing of the section covers the unit "'.concat(o.id, '": the castle builds an automatic wing for it, but a unit no authored wing covers is easy to forget') });
     return r.wings.forEach((o) => {
       const a = o.auto ? -1 : i.findIndex((c) => c.id === o.id);
-      Ry(o, a < 0 ? "auto[".concat(o.id, "]") : "wings[".concat(a, "]"), s, n);
+      Dy(o, a < 0 ? "auto[".concat(o.id, "]") : "wings[".concat(a, "]"), s, n);
     }), s;
   }
-  const Ly = { id: "mindmaze", theme: "castle", requiresSection: false, schema: $y, textRefs: Oy, assetRefs: Ny, validate: Py, lint: Dy, codes: zy, warnings: _y }, Cy = /* @__PURE__ */ new Set(["du", "dich", "dir", "dein", "deine", "deinen", "deinem", "deiner", "deines", "bist", "hast", "kannst", "willst", "musst", "sollst", "darfst", "möchtest", "wirst"]), Zy = /* @__PURE__ */ new Set(["Sie", "Ihr", "Ihre", "Ihren", "Ihrem", "Ihrer", "Ihres"]);
-  function Uy(t) {
+  const Cy = { id: "mindmaze", theme: "castle", requiresSection: false, schema: zy, textRefs: Ny, assetRefs: Py, validate: Ry, lint: Ly, codes: _y, warnings: jy }, Zy = /* @__PURE__ */ new Set(["du", "dich", "dir", "dein", "deine", "deinen", "deinem", "deiner", "deines", "bist", "hast", "kannst", "willst", "musst", "sollst", "darfst", "möchtest", "wirst"]), Uy = /* @__PURE__ */ new Set(["Sie", "Ihr", "Ihre", "Ihren", "Ihrem", "Ihrer", "Ihres"]);
+  function By(t) {
     var _a3;
     const e = { du: false, sie: false };
     let s = true, n = 0;
@@ -5746,11 +5746,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const r = t.slice(n, i.index);
       /[.!?:]/.test(r) && (s = true), n = ((_a3 = i.index) != null ? _a3 : 0) + i[0].length;
       const o = i[0];
-      Cy.has(o.toLowerCase()) ? e.du = true : (o === "Ihnen" || !s && Zy.has(o)) && (e.sie = true), s = false;
+      Zy.has(o.toLowerCase()) ? e.du = true : (o === "Ihnen" || !s && Uy.has(o)) && (e.sie = true), s = false;
     }
     return e;
   }
-  const By = U({ id: P, name: C, learner: J().default(false), portrait: P.optional() }), Fy = U({ id: P, say: P, text: C, translation: C.optional(), audio: P.optional(), listen: J().default(false), next: P.nullable() }), Ky = U({ id: P, reply: P, help: C.optional(), youSay: C.optional(), next: P.nullable() }), qy = et([Fy, Ky]), Gy = U({ id: P, unit: P.optional(), title: C, setting: C.optional(), cefr: Y(Li).optional(), start: P, lines: N(qy).min(1) }), Wy = U({ id: P, text: C, gloss: C, item: P }), El = U({ speakers: N(By).default([]), scenes: N(Gy).default([]), garden: N(Wy).default([]), finale: P.optional(), theme: E().optional() }), qe = (t) => "reply" in t, Se = (t) => "say" in t, $e = (t, e) => e == null ? void 0 : t.lines.find((s) => s.id === e);
+  const Fy = U({ id: P, name: C, learner: J().default(false), portrait: P.optional() }), Ky = U({ id: P, say: P, text: C, translation: C.optional(), audio: P.optional(), listen: J().default(false), next: P.nullable() }), qy = U({ id: P, reply: P, help: C.optional(), youSay: C.optional(), next: P.nullable() }), Gy = et([Ky, qy]), Wy = U({ id: P, unit: P.optional(), title: C, setting: C.optional(), cefr: Y(Li).optional(), start: P, lines: N(Gy).min(1) }), Hy = U({ id: P, text: C, gloss: C, item: P }), El = U({ speakers: N(Fy).default([]), scenes: N(Wy).default([]), garden: N(Hy).default([]), finale: P.optional(), theme: E().optional() }), qe = (t) => "reply" in t, Se = (t) => "say" in t, $e = (t, e) => e == null ? void 0 : t.lines.find((s) => s.id === e);
   function xs(t) {
     var _a3;
     const e = [], s = /* @__PURE__ */ new Set();
@@ -5764,7 +5764,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return { path: e, ends: true };
   }
   const Es = (t, e) => t.scenes.filter((s) => s.unit === e && s.id !== t.finale);
-  function Hy(t) {
+  function Vy(t) {
     var _a3;
     if (!t) return false;
     const e = t;
@@ -5780,7 +5780,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return false;
     }
   }
-  const Vy = 0.5, Yy = [6, 14], Jy = [2, 6], Al = new Map(Li.map((t, e) => [t, e])), Qy = ["RP_UNIT_NO_SCENE", "RP_SCENE_UNIT_MISSING", "RP_START_MISSING", "RP_NEXT_MISSING", "RP_NO_END", "RP_LINE_UNREACHABLE", "RP_SPEAKER_MISSING", "RP_REPLY_ITEM_MISSING", "RP_SCENE_NO_REPLY", "RP_GARDEN_ITEM_MISSING", "RP_FINALE_MISSING", "RP_TEXT_NOT_TARGET", "RP_REPLY_NOT_PRODUCTION", "RP_CEFR_ABOVE_COURSE", "RP_REPLY_NO_HELP", "RP_UNIT_VOCAB_UNUSED", "RP_SCENE_LENGTH", "RP_SAY_GIVES_ANSWER", "RP_REGISTER_MIXED"], Xy = ["RP_TEXT_NOT_TARGET", "RP_REPLY_NOT_PRODUCTION", "RP_CEFR_ABOVE_COURSE", "RP_REPLY_NO_HELP", "RP_UNIT_VOCAB_UNUSED", "RP_SCENE_LENGTH", "RP_SAY_GIVES_ANSWER", "RP_REGISTER_MIXED"];
+  const Yy = 0.5, Jy = [6, 14], Qy = [2, 6], Al = new Map(Li.map((t, e) => [t, e])), Xy = ["RP_UNIT_NO_SCENE", "RP_SCENE_UNIT_MISSING", "RP_START_MISSING", "RP_NEXT_MISSING", "RP_NO_END", "RP_LINE_UNREACHABLE", "RP_SPEAKER_MISSING", "RP_REPLY_ITEM_MISSING", "RP_SCENE_NO_REPLY", "RP_GARDEN_ITEM_MISSING", "RP_FINALE_MISSING", "RP_TEXT_NOT_TARGET", "RP_REPLY_NOT_PRODUCTION", "RP_CEFR_ABOVE_COURSE", "RP_REPLY_NO_HELP", "RP_UNIT_VOCAB_UNUSED", "RP_SCENE_LENGTH", "RP_SAY_GIVES_ANSWER", "RP_REGISTER_MIXED"], e0 = ["RP_TEXT_NOT_TARGET", "RP_REPLY_NOT_PRODUCTION", "RP_CEFR_ABOVE_COURSE", "RP_REPLY_NO_HELP", "RP_UNIT_VOCAB_UNUSED", "RP_SCENE_LENGTH", "RP_SAY_GIVES_ANSWER", "RP_REGISTER_MIXED"];
   function Tl(t, e) {
     var _a3, _b3;
     if (!t) return [];
@@ -5799,7 +5799,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
   }
   const Mn = (t) => Pe(t, { fold: true });
-  function e0(t) {
+  function t0(t) {
     const e = [], s = (n, i) => {
       i && e.push({ path: n, key: i, role: "string" });
     };
@@ -5812,13 +5812,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       s("garden[".concat(i, "].text"), n.text), s("garden[".concat(i, "].gloss"), n.gloss);
     }), e;
   }
-  function t0(t) {
+  function s0(t) {
     const e = [];
     return t.speakers.forEach((s, n) => s.portrait && e.push({ path: "speakers[".concat(n, "].portrait"), id: s.portrait })), t.scenes.forEach((s, n) => s.lines.forEach((i, r) => {
       Se(i) && i.audio && e.push({ path: "scenes[".concat(n, "].lines[").concat(r, "].audio"), id: i.audio });
     })), e;
   }
-  function s0(t) {
+  function n0(t) {
     const e = [], s = (n, i, r) => {
       const o = /* @__PURE__ */ new Set();
       n.forEach((a, c) => {
@@ -5827,7 +5827,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     };
     return s(t.speakers.map((n) => n.id), (n) => "speakers[".concat(n, "].id"), "speaker"), s(t.scenes.map((n) => n.id), (n) => "scenes[".concat(n, "].id"), "scene"), t.scenes.forEach((n, i) => s(n.lines.map((r) => r.id), (r) => "scenes[".concat(i, "].lines[").concat(r, "].id"), 'line of scene "'.concat(n.id, '"'))), s(t.garden.map((n) => n.id), (n) => "garden[".concat(n, "].id"), "garden word"), e;
   }
-  function n0(t, e) {
+  function i0(t, e) {
     var _a3, _b3, _c2;
     if (!t) return [];
     const { pack: s } = e, n = [], i = (f, m, g) => {
@@ -5858,7 +5858,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       k.forEach((_) => {
         _.help || r("RP_REPLY_NO_HELP", "".concat(g, ".lines[").concat(f.lines.indexOf(_), "].help"), 'the reply "'.concat(_.id, '" has no help: after a miss the other speaker has nothing to say'));
       });
-      const [b, v] = Yy, [w, y] = Jy;
+      const [b, v] = Jy, [w, y] = Qy;
       if ((f.lines.length < b || f.lines.length > v || k.length < w || k.length > y) && r("RP_SCENE_LENGTH", "".concat(g, ".lines"), 'the scene "'.concat(f.id, '" has ').concat(f.lines.length, " lines and ").concat(k.length, " turns for the learner; a scene runs ").concat(b, " to ").concat(v, " lines with ").concat(w, " to ").concat(y, " turns")), !p) return;
       const $ = k.flatMap((_) => Tl(o.get(_.reply), p)), x = new Set($.map(Mn));
       for (const _ of f.lines) {
@@ -5872,7 +5872,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         }), ...$, ...k.map((O) => {
           var _a4;
           return O.youSay ? (_a4 = p.text(O.youSay)) != null ? _a4 : "" : "";
-        })].map(Uy);
+        })].map(By);
         z.some((O) => O.du) && z.some((O) => O.sie) && r("RP_REGISTER_MIXED", "".concat(g, ".lines"), 'the scene "'.concat(f.id, '" addresses people with both du and Sie: one scene keeps one register'));
       }
     }), p) for (const f of s.units) {
@@ -5885,23 +5885,23 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         const w = p.text(v.text);
         return w !== void 0 && k.includes(" ".concat(Mn(w), " "));
       }).length;
-      b / g.length < Vy && r("RP_UNIT_VOCAB_UNUSED", "scenes", 'the scenes of the unit "'.concat(f.id, '" use ').concat(b, " of its ").concat(g.length, " garden words: the conversation hardly practises what the unit teaches"));
+      b / g.length < Yy && r("RP_UNIT_VOCAB_UNUSED", "scenes", 'the scenes of the unit "'.concat(f.id, '" use ').concat(b, " of its ").concat(g.length, " garden words: the conversation hardly practises what the unit teaches"));
     }
     for (const f of s.units) {
       const g = Es(t, f.id).flatMap((k) => k.lines.filter(qe)).map((k) => o.get(k.reply)).filter((k) => !!k);
-      g.length > 0 && !g.some(Hy) && r("RP_REPLY_NOT_PRODUCTION", "scenes", 'every reply of the scenes of the unit "'.concat(f.id, '" is a choice: the learner never types the language'));
+      g.length > 0 && !g.some(Vy) && r("RP_REPLY_NOT_PRODUCTION", "scenes", 'every reply of the scenes of the unit "'.concat(f.id, '" is a choice: the learner never types the language'));
     }
     return t.garden.forEach((f, m) => {
       o.has(f.item) || i("RP_GARDEN_ITEM_MISSING", "garden[".concat(m, "].item"), 'the word "'.concat(f.id, '" is watered with the item "').concat(f.item, '", which does not exist')), l && !l.strings[f.text] && r("RP_TEXT_NOT_TARGET", "garden[".concat(m, "].text"), 'the word "'.concat(f.id, '" is "').concat(f.text, '", which is not in the ').concat(s.targetLang, " catalog"));
     }), n;
   }
-  const i0 = { id: "roleplay", theme: "postcard", requiresSection: true, schema: El, textRefs: e0, assetRefs: t0, validate: s0, lint: n0, codes: Qy, warnings: Xy }, Il = (t, e) => {
+  const r0 = { id: "roleplay", theme: "postcard", requiresSection: true, schema: El, textRefs: t0, assetRefs: s0, validate: n0, lint: i0, codes: Xy, warnings: e0 }, Il = (t, e) => {
     const s = t.items.find((n) => n.id === e.item);
-    return s ? Xk(t, s) : void 0;
-  }, r0 = "#.,T~@NBG", o0 = "#T~", On = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] }, Nn = ["up", "down", "left", "right"], Ce = (t) => "".concat(t[0], ",").concat(t[1]), ot = (t, e) => t[0] === e[0] && t[1] === e[1], Pn = (t, e) => Math.abs(t[0] - e[0]) + Math.abs(t[1] - e[1]), cr = (t, e) => Pn(t, e) === 1, es = (t, e) => {
+    return s ? eb(t, s) : void 0;
+  }, o0 = "#.,T~@NBG", a0 = "#T~", On = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] }, Nn = ["up", "down", "left", "right"], Ce = (t) => "".concat(t[0], ",").concat(t[1]), ot = (t, e) => t[0] === e[0] && t[1] === e[1], Pn = (t, e) => Math.abs(t[0] - e[0]) + Math.abs(t[1] - e[1]), cr = (t, e) => Pn(t, e) === 1, es = (t, e) => {
     var _a3;
     return e[1] >= 0 ? (_a3 = t[e[1]]) == null ? void 0 : _a3[e[0]] : void 0;
-  }, As = (t, e = false) => t !== void 0 && (t === "G" ? e : !o0.includes(t));
+  }, As = (t, e = false) => t !== void 0 && (t === "G" ? e : !a0.includes(t));
   function Ml(t) {
     const e = Math.max(0, ...t.map((r) => r.length));
     let s = null, n = null;
@@ -5909,7 +5909,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return t.forEach((r, o) => {
       for (let a = 0; a < r.length; a++) {
         const c = r[a];
-        r0.includes(c) || i.add(c), c === "@" && !s && (s = [a, o]), c === "G" && !n && (n = [a, o]);
+        o0.includes(c) || i.add(c), c === "@" && !s && (s = [a, o]), c === "G" && !n && (n = [a, o]);
       }
     }), { w: e, h: t.length, rows: [...t], ragged: t.some((r) => {
       var _a3, _b3;
@@ -5917,7 +5917,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }), start: s, gate: n, unknown: [...i] };
   }
   const Rn = (t, e) => [t[0] + On[e][0], t[1] + On[e][1]];
-  function a0(t, e, s = {}) {
+  function c0(t, e, s = {}) {
     var _a3;
     const n = /* @__PURE__ */ new Set([Ce(e)]), i = [e];
     for (let r = 0; r < i.length; r++) {
@@ -5953,19 +5953,19 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return Ol(t, e, (i) => cr(i, s), n);
   }
   function Dn(t, e, s, n, i = false) {
-    const r = new Set(n.filter((a) => !ot(a, s)).map(Ce)), o = a0(t, e, { blocked: r, gateOpen: i });
+    const r = new Set(n.filter((a) => !ot(a, s)).map(Ce)), o = c0(t, e, { blocked: r, gateOpen: i });
     return o.has(Ce(s)) ? true : Nn.some((a) => o.has(Ce(Rn(s, a))));
   }
-  const Pl = 16, Rl = 11, c0 = (t) => Nn.map((e) => Rn(t, e));
-  function l0(t, e) {
+  const Pl = 16, Rl = 11, l0 = (t) => Nn.map((e) => Rn(t, e));
+  function u0(t, e) {
     const s = Math.max(0, Math.min(4, Math.floor(e)));
     for (let n = 0; n < 6; n++) {
-      const i = u0("".concat(t, "#").concat(n), s, n >= 3);
+      const i = d0("".concat(t, "#").concat(n), s, n >= 3);
       if (i) return i;
     }
-    return d0(s);
+    return h0(s);
   }
-  function u0(t, e, s) {
+  function d0(t, e, s) {
     const n = new st("rpg-map:".concat(t)), i = Pl, r = Rl, o = Array.from({ length: r }, (j, I) => Array.from({ length: i }, (D, G) => G === 0 || I === 0 || G === i - 1 || I === r - 1 ? "#" : ".")), a = (j, I) => {
       const D = o[j[1]];
       D && (D[j[0]] = I);
@@ -6000,7 +6000,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const j = /* @__PURE__ */ new Map();
       for (const I of k) {
         const [D, G] = I.split(",").map(Number);
-        for (const B of c0([D, G])) l(B) && !k.has(Ce(B)) && !ot(B, u) && j.set(Ce(B), B);
+        for (const B of l0([D, G])) l(B) && !k.has(Ce(B)) && !ot(B, u) && j.set(Ce(B), B);
       }
       return [...j.values()].filter((I) => Pn(I, u) >= 2 && Pn(I, f) >= 2);
     })(), y = [], $ = (j, I) => {
@@ -6023,12 +6023,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const R = o.map((j) => j.join("")), S = [_, z, ...O];
     return S.every((j) => Dn(R, u, j, S)) && Dn(R, u, p, S, true) ? { rows: R, start: u, npc: _, foes: O, boss: z, gate: p } : null;
   }
-  function d0(t) {
+  function h0(t) {
     const e = Pl, s = Rl, n = Array.from({ length: s }, (l, u) => Array.from({ length: e }, (h, p) => p === 0 || u === 0 || p === e - 1 || u === s - 1 ? "#" : ".")), i = [1, 5], r = [e - 1, 5], o = [3, 3], a = [e - 4, 3], c = Array.from({ length: t }, (l, u) => [4 + u * 2, 7]);
     return n[5][e - 1] = "G", n[3][3] = "N", n[3][e - 4] = "B", n[5][1] = "@", { rows: n.map((l) => l.join("")), start: i, npc: o, foes: c, boss: a, gate: r };
   }
-  const Dl = 200, Ll = 400, Cl = 800, Zl = 10, lr = At([L().int().min(0).max(99), L().int().min(0).max(99)]), ur = (t) => L().int().min(10).max(5e3).default(t), h0 = U({ id: P, name: C, at: lr, lines: N(C).default([]), quest: J().default(false), portrait: P.optional() }), p0 = U({ id: P, name: C, at: lr, hp: ur(Dl), items: N(P).default([]), sprite: P.optional() }), f0 = U({ id: P, name: C, at: lr, hp: ur(Ll), sprite: P.optional() }), m0 = U({ id: P, unit: P, name: C, map: N(E().min(1).regex(/^[#.,T~@NBG]+$/, "map characters are # . , T ~ @ N B G")).min(3).max(40), npcs: N(h0).default([]), foes: N(p0).default([]), boss: f0 }), g0 = U({ hero: U({ name: C }).optional(), story: U({ intro: N(C).default([]), outro: N(C).default([]) }).default({ intro: [], outro: [] }), tileset: P.optional(), sprites: U({ hero: P.optional(), npc: P.optional(), foe: P.optional(), boss: P.optional() }).optional(), areas: N(m0).default([]), finalBoss: U({ name: C.optional(), hp: ur(Cl), size: L().int().min(4).max(20).default(Zl) }).optional() });
-  function k0(t) {
+  const Dl = 200, Ll = 400, Cl = 800, Zl = 10, lr = At([L().int().min(0).max(99), L().int().min(0).max(99)]), ur = (t) => L().int().min(10).max(5e3).default(t), p0 = U({ id: P, name: C, at: lr, lines: N(C).default([]), quest: J().default(false), portrait: P.optional() }), f0 = U({ id: P, name: C, at: lr, hp: ur(Dl), items: N(P).default([]), sprite: P.optional() }), m0 = U({ id: P, name: C, at: lr, hp: ur(Ll), sprite: P.optional() }), g0 = U({ id: P, unit: P, name: C, map: N(E().min(1).regex(/^[#.,T~@NBG]+$/, "map characters are # . , T ~ @ N B G")).min(3).max(40), npcs: N(p0).default([]), foes: N(f0).default([]), boss: m0 }), k0 = U({ hero: U({ name: C }).optional(), story: U({ intro: N(C).default([]), outro: N(C).default([]) }).default({ intro: [], outro: [] }), tileset: P.optional(), sprites: U({ hero: P.optional(), npc: P.optional(), foe: P.optional(), boss: P.optional() }).optional(), areas: N(g0).default([]), finalBoss: U({ name: C.optional(), hp: ur(Cl), size: L().int().min(4).max(20).default(Zl) }).optional() });
+  function b0(t) {
     var _a3, _b3;
     for (let e = 0; e < t.length; e++) for (let s = 0; s < ((_b3 = (_a3 = t[e]) == null ? void 0 : _a3.length) != null ? _b3 : 0); s++) if (As(es(t, [s, e]))) return [s, e];
     return [0, 0];
@@ -6036,20 +6036,20 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Ul(t) {
     var _a3;
     const e = Ml(t.map);
-    return { id: t.id, unitId: t.unit, nameKey: t.name, rows: [...t.map], start: (_a3 = e.start) != null ? _a3 : k0(t.map), gate: e.gate, npcs: t.npcs.map((s) => ({ id: s.id, nameKey: s.name, at: s.at, lines: [...s.lines], quest: s.quest, ...s.portrait ? { portrait: s.portrait } : {} })), foes: t.foes.map((s, n) => ({ id: s.id, nameKey: s.name, at: s.at, hp: s.hp, items: [...s.items], n: n + 1, ...s.sprite ? { sprite: s.sprite } : {} })), boss: { id: t.boss.id, nameKey: t.boss.name, at: t.boss.at, hp: t.boss.hp, ...t.boss.sprite ? { sprite: t.boss.sprite } : {} }, auto: false };
+    return { id: t.id, unitId: t.unit, nameKey: t.name, rows: [...t.map], start: (_a3 = e.start) != null ? _a3 : b0(t.map), gate: e.gate, npcs: t.npcs.map((s) => ({ id: s.id, nameKey: s.name, at: s.at, lines: [...s.lines], quest: s.quest, ...s.portrait ? { portrait: s.portrait } : {} })), foes: t.foes.map((s, n) => ({ id: s.id, nameKey: s.name, at: s.at, hp: s.hp, items: [...s.items], n: n + 1, ...s.sprite ? { sprite: s.sprite } : {} })), boss: { id: t.boss.id, nameKey: t.boss.name, at: t.boss.at, hp: t.boss.hp, ...t.boss.sprite ? { sprite: t.boss.sprite } : {} }, auto: false };
   }
   function dr(t, e) {
     const s = new Set(hn(t, e).map((n) => n.id));
     return t.items.filter((n) => s.has(n.objective)).map((n) => n.id);
   }
-  const b0 = 4;
-  function v0(t, e) {
-    const s = hn(t, e), n = Math.max(1, Math.min(b0, s.length)), i = Array.from({ length: n }, () => []);
+  const v0 = 4;
+  function w0(t, e) {
+    const s = hn(t, e), n = Math.max(1, Math.min(v0, s.length)), i = Array.from({ length: n }, () => []);
     s.forEach((o, a) => {
       const c = i[a % n];
       for (const l of t.items) l.objective === o.id && c.push(l.id);
     });
-    const r = l0("".concat(t.id, ":").concat(e), n);
+    const r = u0("".concat(t.id, ":").concat(e), n);
     return { id: e, unitId: e, rows: r.rows, start: r.start, gate: r.gate, npcs: [{ id: "n-".concat(e), at: r.npc, lines: [], quest: true }], foes: r.foes.map((o, a) => {
       var _a3;
       return { id: "f-".concat(e, "-").concat(a + 1), at: o, hp: Dl, items: (_a3 = i[a]) != null ? _a3 : [], n: a + 1 };
@@ -6060,11 +6060,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = new Set(t.units.map((c) => c.id)), n = ((_a3 = e == null ? void 0 : e.areas) != null ? _a3 : []).filter((c) => s.has(c.unit)).map(Ul), i = new Set(n.map((c) => c.unitId)), r = Tt(t.units), o = /* @__PURE__ */ new Map();
     for (const c of n) o.set(c.unitId, [...(_b3 = o.get(c.unitId)) != null ? _b3 : [], c]);
     const a = [];
-    for (const c of r) o.has(c) ? a.push(...o.get(c)) : i.has(c) || a.push(v0(t, c));
+    for (const c of r) o.has(c) ? a.push(...o.get(c)) : i.has(c) || a.push(w0(t, c));
     return { areas: a, ...(e == null ? void 0 : e.hero) ? { heroNameKey: e.hero.name } : {}, intro: (_c2 = e == null ? void 0 : e.story.intro) != null ? _c2 : [], outro: (_d2 = e == null ? void 0 : e.story.outro) != null ? _d2 : [], finalBoss: { ...((_e2 = e == null ? void 0 : e.finalBoss) == null ? void 0 : _e2.name) ? { nameKey: e.finalBoss.name } : {}, hp: (_g2 = (_f2 = e == null ? void 0 : e.finalBoss) == null ? void 0 : _f2.hp) != null ? _g2 : Cl, size: (_i2 = (_h2 = e == null ? void 0 : e.finalBoss) == null ? void 0 : _h2.size) != null ? _i2 : Zl }, ...(e == null ? void 0 : e.tileset) ? { tileset: e.tileset } : {}, sprites: (_j = e == null ? void 0 : e.sprites) != null ? _j : {}, authored: e !== void 0 };
   }
-  const w0 = ["RPG_AREA_UNIT_MISSING", "RPG_UNIT_NO_AREA", "RPG_MAP_RAGGED", "RPG_MAP_NO_START", "RPG_MAP_UNREACHABLE", "RPG_SPOT_BLOCKED", "RPG_NO_QUEST_GIVER", "RPG_FOE_ITEM_MISSING", "RPG_FOE_NO_ITEMS", "RPG_DIALOGUE_EMPTY", "RPG_QUEST_UNWINNABLE"], Fl = ["RPG_FOE_ITEM_OTHER_UNIT", "RPG_NO_STORY"];
-  function y0(t) {
+  const y0 = ["RPG_AREA_UNIT_MISSING", "RPG_UNIT_NO_AREA", "RPG_MAP_RAGGED", "RPG_MAP_NO_START", "RPG_MAP_UNREACHABLE", "RPG_SPOT_BLOCKED", "RPG_NO_QUEST_GIVER", "RPG_FOE_ITEM_MISSING", "RPG_FOE_NO_ITEMS", "RPG_DIALOGUE_EMPTY", "RPG_QUEST_UNWINNABLE"], Fl = ["RPG_FOE_ITEM_OTHER_UNIT", "RPG_NO_STORY"];
+  function S0(t) {
     var _a3, _b3;
     const e = [], s = (n, i) => {
       i && e.push({ path: n, key: i, role: "string" });
@@ -6075,7 +6075,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }), n.foes.forEach((r, o) => s("areas[".concat(i, "].foes[").concat(o, "].name"), r.name)), s("areas[".concat(i, "].boss.name"), n.boss.name);
     }), e;
   }
-  function S0(t) {
+  function $0(t) {
     var _a3;
     const e = [];
     t.tileset && e.push({ path: "tileset", id: t.tileset });
@@ -6084,7 +6084,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       s.npcs.forEach((i, r) => i.portrait && e.push({ path: "areas[".concat(n, "].npcs[").concat(r, "].portrait"), id: i.portrait })), s.foes.forEach((i, r) => i.sprite && e.push({ path: "areas[".concat(n, "].foes[").concat(r, "].sprite"), id: i.sprite })), s.boss.sprite && e.push({ path: "areas[".concat(n, "].boss.sprite"), id: s.boss.sprite });
     }), e;
   }
-  function $0(t, e) {
+  function z0(t, e) {
     const s = [], n = new Set(e.units.map((r) => r.id)), i = new Set(e.items.map((r) => r.id));
     return t.areas.forEach((r, o) => {
       n.has(r.unit) || s.push({ code: "UNKNOWN_UNIT", path: "areas[".concat(o, "].unit"), message: 'the area "'.concat(r.id, '" names the unit "').concat(r.unit, '", which does not exist') }), r.foes.forEach((a, c) => a.items.forEach((l, u) => !i.has(l) && s.push({ code: "UNKNOWN_ITEM", path: "areas[".concat(o, "].foes[").concat(c, "].items[").concat(u, "]"), message: 'the foe "'.concat(a.id, '" asks the item "').concat(l, '", which does not exist') })));
@@ -6114,7 +6114,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }), f.length === 0 && n("RPG_QUEST_UNWINNABLE", p, 'the foe "'.concat(u.id, '" cannot be beaten: none of its items can be asked'));
     }), r && o.size === 0 && n("RPG_QUEST_UNWINNABLE", "".concat(e, ".boss"), 'the boss "'.concat(t.boss.id, '" cannot be beaten: the unit "').concat(t.unitId, '" has no items to ask'));
   }
-  function z0(t, e) {
+  function _0(t, e) {
     const s = [], n = (o, a, c, l) => s.push({ code: o, path: a, message: c, ...l ? { severity: l } : {} }), i = e.pack;
     if (t === void 0 || t.areas.length === 0) Bl(i, t).areas.forEach((a, c) => Kl(a, "areas[".concat(c, "]"), e, n));
     else {
@@ -6128,17 +6128,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const r = t !== void 0 && (t.tileset !== void 0 || t.sprites !== void 0) && t.areas.length === 0 && !t.hero && !t.finalBoss;
     return t !== void 0 && !r && t.story.intro.length === 0 && n("RPG_NO_STORY", "story.intro", "the section has no frame story (no intro lines)", "warning"), i.items.length === 0 && n("RPG_QUEST_UNWINNABLE", "finalBoss", "the final boss cannot be beaten: the course has no items to ask"), s;
   }
-  const _0 = { id: "rpg", theme: "pixel", requiresSection: false, schema: g0, textRefs: y0, assetRefs: S0, validate: $0, lint: z0, codes: [...w0, ...Fl], warnings: Fl }, Ln = new Map([ky, Ly, _0, i0, Hw].map((t) => [t.id, t]));
+  const j0 = { id: "rpg", theme: "pixel", requiresSection: false, schema: k0, textRefs: S0, assetRefs: $0, validate: z0, lint: _0, codes: [...y0, ...Fl], warnings: Fl }, Ln = new Map([by, Cy, j0, r0, Vw].map((t) => [t.id, t]));
   [...Ln.keys()];
-  const j0 = (t, e) => t.shells.config[e], x0 = (t) => t.reduce((e, s) => typeof s == "number" ? "".concat(e, "[").concat(s, "]") : e ? "".concat(e, ".").concat(String(s)) : String(s), "");
-  function E0(t, e) {
-    const s = Ln.get(e), n = j0(t, e);
+  const x0 = (t, e) => t.shells.config[e], E0 = (t) => t.reduce((e, s) => typeof s == "number" ? "".concat(e, "[").concat(s, "]") : e ? "".concat(e, ".").concat(String(s)) : String(s), "");
+  function A0(t, e) {
+    const s = Ln.get(e), n = x0(t, e);
     if (!s || n === void 0) return { present: false };
     const i = s.schema.safeParse(n);
-    return i.success ? { present: true, ok: true, data: i.data } : { present: true, ok: false, issues: i.error.issues.map((r) => ({ path: x0(r.path), message: r.message })) };
+    return i.success ? { present: true, ok: true, data: i.data } : { present: true, ok: false, issues: i.error.issues.map((r) => ({ path: E0(r.path), message: r.message })) };
   }
-  function A0(t, e) {
-    const s = E0(t, e);
+  function T0(t, e) {
+    const s = A0(t, e);
     return s.present && s.ok ? s.data : void 0;
   }
   [...[...Ln.values()].flatMap((t) => t.codes)], [...[...Ln.values()].flatMap((t) => {
@@ -6150,7 +6150,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = t.filter((n) => !e.includes(n.id));
     return (_b3 = (_a3 = s.find((n) => n.why)) != null ? _a3 : s[0]) == null ? void 0 : _b3.id;
   };
-  function T0(t) {
+  function I0(t) {
     var _a3, _b3, _c2;
     switch (t.kind) {
       case "mcq": {
@@ -6200,7 +6200,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return;
     }
   }
-  function I0(t) {
+  function M0(t) {
     const e = (s) => {
       const n = window.EDU_GAME_DATA, i = n == null ? void 0 : n.pack.items.find((o) => o.id === s);
       if (!n || !i) return;
@@ -6216,10 +6216,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           return [r.person, (_a3 = n.ctx.text.canonical(r.answer)) != null ? _a3 : ""];
         }));
       }
-      return n ? Cb(n.item, n.ctx) : void 0;
+      return n ? Zb(n.item, n.ctx) : void 0;
     }, wrong(s) {
       const n = e(s);
-      return n ? T0(n.item) : void 0;
+      return n ? I0(n.item) : void 0;
     } };
   }
   function d(t, e = {}, ...s) {
@@ -6246,26 +6246,26 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Ms(t, e, s = 700) {
     t.classList.remove(e), t.offsetWidth, t.classList.add(e), window.setTimeout(() => t.classList.remove(e), s);
   }
-  const M0 = "http://www.w3.org/2000/svg";
+  const O0 = "http://www.w3.org/2000/svg";
   function de(t, e = {}, ...s) {
-    const n = document.createElementNS(M0, t);
+    const n = document.createElementNS(O0, t);
     for (const [i, r] of Object.entries(e)) r !== void 0 && n.setAttribute(i === "testid" ? "data-testid" : i, String(r));
     for (const i of s) n.appendChild(i);
     return n;
   }
-  const O0 = { "title.tagline": "Chalkboard quiz arena", start: "Start", continue: "Continue", language: "Language", timer: "Timed questions", "timer.hint": "About {s} seconds per question. Typing questions are never timed.", sound: "Sounds", reduceAudio: "Reduce audio", "reduceAudio.hint": "No music, and quieter sound effects.", "audio.settings": "Sound settings", "audio.title": "Sound settings", "audio.music": "Music", "audio.sfx": "Sound effects", "audio.voice": "Voices", "audio.mute": "Sound off", "audio.close": "Close", speak: "Speak", "speak.setting": "Speak your answers", "speak.privacy.web": "Uses your browser speech recognition; in Chrome and Edge the audio goes to the browser vendor. Typing always works.", "speak.privacy.local": "Speech is recognised on this computer; nothing is sent away. Typing always works.", "speak.listening": "Listening. Press the button again or Escape to stop.", "speak.thinking": "Working out what you said.", "speak.heard": "Heard: {text}. You can edit it before you check.", "speak.err.denied": "The microphone is not allowed. Type your answer instead.", "speak.err.no-speech": "Nothing was heard. Try again or type your answer.", "speak.err.unavailable": "Speech recognition is not available right now. Type your answer instead.", "speak.err.failed": "Could not recognise that. Try again or type your answer.", export: "Export progress", import: "Import progress", reset: "Reset progress", "reset.confirm": "Erase all saved progress for this course?", "reset.yes": "Yes, erase", "reset.no": "Keep it", "reset.done": "Progress erased.", "import.ok": "Progress imported.", "import.bad": "This file is not progress for this course: {why}", "export.done": "Progress file saved.", "storage.off": "Saving is off in this browser: progress is kept only until you close the page. Use Export to keep it.", "map.title": "Choose a unit", "map.stars": "{n} of {total} stars", "map.requires": "Needs: {units}", "map.locked": "Locked", "map.unitStars": "{n} of 3 stars", "map.items": "{n} questions", "map.boss": "Boss round", "map.boss.locked": "Master every unit (2 stars) to face the boss.", "map.boss.ready": "Questions from every unit, harder.", "map.review": "Review misses ({n})", "map.verbs": "Verb drill ({n} due)", menu: "Title screen", round: "Round {n}", question: "Question {i} of {n}", retry: "Second try", leave: "Leave round", score: "Score", combo: "Combo", time: "Time", hint: "Hint", submit: "Check", next: "Next", results: "See results", flip: "Show the answer", "selfcheck.hint": "Compare what you wrote or said with the model answer, then grade yourself. The program does not check it.", "grade.again": "Again", "grade.hard": "Hard", "grade.good": "Good", "grade.easy": "Easy", "grade.ask": "How well did you know it?", "answer.type": "Your answer", "gap.n": "Gap {n}", letters: "Special letters", play: "Play the sound", "play.again": "Play again", "audio.fail": "The sound could not be played.", transcript: "It says:", "order.up": "Move {item} up", "order.down": "Move {item} down", "order.first": "earliest", "order.last": "latest", "sort.assign": "{item}: put in {group}", "pairs.pick": "Pick one on each side to pair them. Pick a paired one again to undo.", "multi.hint": "Select all that apply, then check.", "cross.across": "Across", "cross.down": "Down", "cross.word": "Word {n}", "cross.cell": "Row {r}, column {c}", "ws.found": "Found {n} of {total}", "ws.pick": "Pick the first and the last letter of a word.", "ws.done": "Done", "hotspot.pick": "Pick the right place on the picture.", picture: "Picture", "verdict.correct": "Correct!", "verdict.partial": "Nearly there", "verdict.wrong": "Not quite", "verdict.timeout": "Time is up", "praise.1": "Spot on!", "praise.2": "Nicely done!", "praise.3": "You nailed it!", "praise.4": "Right!", "praise.5": "Great work!", "fb.why": "Why that is not it", "fb.explain": "The idea", "fb.answer": "The answer", "fb.dyk": "Did you know?", "fb.typo": "Accepted, but mind the spelling: {a}", "fb.accents": "Accepted, but mind the accents: {a}", "fb.accents.strict": "Almost! Check the accents: {a}", "fb.note.translit": "Accepted. The umlaut is written ä / ö / ü and ß; ae / oe / ue / ss is the keyboard spelling: {a}", "fb.note.caps": "Accepted. German nouns start with a capital letter: {a}", "fb.note.umlaut": "Almost: check the umlaut: {a}", "fb.invalid": "No answer was given.", "fb.true": "True", "fb.false": "False", "fb.missed": "You missed: {a}", "fb.matched": "Right pairs: {n} of {total}", "fb.detail.order": "In the right place: {n} of {total}", "fb.detail.sort": "Sorted right: {n} of {total}", "fb.detail.gaps": "Gaps right: {n} of {total}", "fb.detail.words": "Words right: {n} of {total}", "fb.detail.forms": "Forms right: {n} of {total}", "conj.tense.praesens": "Present", "conj.tense.perfekt": "Perfect", "conj.tense.praeteritum": "Simple past", "conj.tense.futur1": "Future", "conj.tense.imperativ": "Imperative", "conj.tense.konjunktiv2": "Subjunctive II", "conj.tense.passiv-praesens": "Passive, present", "conj.tense.passiv-praeteritum": "Passive, simple past", "conj.tense.perfekt-passiv": "Passive, perfect", "conj.tense.konjunktiv2-vergangenheit": "Subjunctive II, past", "conj.tense.konjunktiv1": "Subjunctive I", "conj.tense.konjunktiv1-vergangenheit": "Subjunctive I, past", "summary.title": "Round complete", "summary.accuracy": "{n}% right first time", "summary.score": "Score {n}", "summary.combo": "Best combo {n}", "summary.unlocked": "Unlocked: {units}", "summary.bossLocked": "The boss round is open!", "summary.again": "Play the round again", "summary.back": "Back to the map", "summary.finish": "Finish the course", "summary.needStars": "Two stars unlock the next units.", "summary.bossFail": "The boss held out. Review and try again.", "summary.perfect": "Perfect round!", review: "Review misses", "review.title": "Review misses", "review.empty": "Nothing to review. Everything you missed is already learned.", "review.practice": "Practise these", "review.back": "Back to the map", "review.answer": "The answer", "end.title": "Course complete!", "end.sub": "You mastered every unit and beat the boss.", "end.stars": "Stars", "end.score": "Total score", "end.accuracy": "Answered right first time: {n}%", "end.again": "Play again", "end.title.screen": "Back to the title", loading: "Loading...", error: "The game could not start.", "a11y.skip": "Skip to the question", stars: "{n} of 3 stars", burst: "Combo x{n}!", "start.choose": "Choose how to play", "mode.quiz-arena.name": "Quiz arena", "mode.quiz-arena.blurb": "Timed rounds of mixed questions", "mode.encyclopedia.name": "Encyclopedia", "mode.encyclopedia.blurb": "Read articles and explore the topic", "mode.mindmaze.name": "MindMaze castle", "mode.mindmaze.blurb": "Open the doors of a castle with right answers", "mode.rpg.name": "RPG quest", "mode.rpg.blurb": "A pixel adventure powered by your answers", "mode.roleplay.name": "Role-play", "mode.roleplay.blurb": "Talk your way through everyday dialogues", "mode.detective.name": "Detective", "mode.detective.blurb": "Solve cases from the clues you learned", "question.lead": "Question", "review.none": "Nothing to review yet.", "class.assignment": "Assignment from your teacher", "class.target": "Reach {n} stars in: {units}", "class.allUnits": "all units", "class.due": "Due: {date}", "class.yourName": "Your name", "class.send": "Send to my teacher", "class.sent": "Result file saved. Send it to your teacher.", "class.needName": "Type your name first.", "class.assigned": "Assigned", "reader.title": "Reader", "reader.nav": "Reader", "reader.open": "Open the reader", "reader.continue": "Continue reading", "reader.toc": "Chapters", "reader.chapter": "Chapter {n}", "reader.progress": "Chapter {n} of {total}", "reader.chapterRead": "read", "reader.prev": "Previous chapter", "reader.next": "Next chapter", "reader.hint": "Tap an underlined word to see what it means. The left and right arrow keys change chapter.", "reader.read": "You have read this chapter.", "reader.last": "That was the last chapter.", "reader.practice": "Practise this text", "reader.empty": "This course has no readings.", "reader.leave": "Back to the text", "gloss.panel": "Words in this text", "gloss.deck": "In my deck", "gloss.deck.for": 'Keep "{term}" in my vocabulary deck', "gloss.close": "Close the explanation", "gloss.pos.n": "noun", "gloss.pos.v": "verb", "gloss.pos.adj": "adjective", "gloss.pos.adv": "adverb", "gloss.pos.prep": "preposition", "gloss.pos.conj": "conjunction", "gloss.pos.phrase": "phrase", "passage.show": "Read the text", "passage.hide": "Hide the text", "passage.title": "The text" }, fr = { hr: { "title.tagline": "Kviz na školskoj ploči", start: "Započni", continue: "Nastavi", language: "Jezik", timer: "Pitanja na vrijeme", "timer.hint": "Oko {s} sekundi po pitanju. Pitanja s upisivanjem nikad nisu na vrijeme.", sound: "Zvukovi", reduceAudio: "Smanji zvuk", "reduceAudio.hint": "Bez glazbe, a zvučni efekti su tiši.", "audio.settings": "Postavke zvuka", "audio.title": "Postavke zvuka", "audio.music": "Glazba", "audio.sfx": "Zvučni efekti", "audio.voice": "Glasovi", "audio.mute": "Isključi zvuk", "audio.close": "Zatvori", speak: "Govori", "speak.setting": "Govori odgovore", "speak.privacy.web": "Koristi prepoznavanje govora u pregledniku; u Chromeu i Edgeu zvuk ide pružatelju preglednika. Upisivanje uvijek radi.", "speak.privacy.local": "Govor se prepoznaje na ovom računalu; ništa se ne šalje dalje. Upisivanje uvijek radi.", "speak.listening": "Slušam. Ponovo pritisni gumb ili Escape za kraj.", "speak.thinking": "Provjeravam što si rekao.", "speak.heard": "Čuo sam: {text}. Možeš to urediti prije provjere.", "speak.err.denied": "Mikrofon nije dopušten. Umjesto toga upiši odgovor.", "speak.err.no-speech": "Ništa se nije čulo. Pokušaj ponovo ili upiši odgovor.", "speak.err.unavailable": "Prepoznavanje govora trenutno nije dostupno. Umjesto toga upiši odgovor.", "speak.err.failed": "Nisam to prepoznao. Pokušaj ponovo ili upiši odgovor.", export: "Izvezi napredak", import: "Uvezi napredak", reset: "Obriši napredak", "reset.confirm": "Obrisati sav spremljeni napredak za ovaj tečaj?", "reset.yes": "Da, obriši", "reset.no": "Zadrži", "reset.done": "Napredak je obrisan.", "import.ok": "Napredak je uvezen.", "import.bad": "Ova datoteka nije napredak za ovaj tečaj: {why}", "export.done": "Datoteka napretka je spremljena.", "storage.off": "Spremanje je isključeno u ovom pregledniku: napredak traje dok ne zatvoriš stranicu. Koristi izvoz da ga sačuvaš.", "map.title": "Odaberi cjelinu", "map.stars": "{n} od {total} zvjezdica", "map.requires": "Treba: {units}", "map.locked": "Zaključano", "map.unitStars": "{n} od 3 zvjezdice", "map.items": "{n} pitanja", "map.boss": "Završni izazov", "map.boss.locked": "Savladaj svaku cjelinu (2 zvjezdice) da bi došao do izazova.", "map.boss.ready": "Pitanja iz svih cjelina, teža.", "map.review": "Ponovi pogreške ({n})", "map.verbs": "Vježba glagola ({n} za ponoviti)", menu: "Početni zaslon", round: "Runda {n}", question: "Pitanje {i} od {n}", retry: "Drugi pokušaj", leave: "Napusti rundu", score: "Bodovi", combo: "Niz", time: "Vrijeme", hint: "Pomoć", submit: "Provjeri", next: "Dalje", results: "Prikaži rezultat", flip: "Prikaži odgovor", "selfcheck.hint": "Usporedi što si napisao ili rekao s uzornim odgovorom, pa se sam ocijeni. Program to ne provjerava.", "grade.again": "Opet", "grade.hard": "Teško", "grade.good": "Dobro", "grade.easy": "Lako", "grade.ask": "Koliko si dobro znao/la?", "answer.type": "Tvoj odgovor", "gap.n": "Praznina {n}", letters: "Posebna slova", play: "Pusti zvuk", "play.again": "Pusti ponovno", "audio.fail": "Zvuk se nije mogao pustiti.", transcript: "Piše:", "order.up": "Pomakni {item} gore", "order.down": "Pomakni {item} dolje", "order.first": "najranije", "order.last": "najkasnije", "sort.assign": "{item}: stavi u {group}", "pairs.pick": "Odaberi po jedno sa svake strane da ih spojiš. Ponovno odaberi spojeno da poništiš.", "multi.hint": "Odaberi sve točne odgovore, pa provjeri.", "cross.across": "Vodoravno", "cross.down": "Okomito", "cross.word": "Riječ {n}", "cross.cell": "Redak {r}, stupac {c}", "ws.found": "Pronađeno {n} od {total}", "ws.pick": "Odaberi prvo i zadnje slovo riječi.", "ws.done": "Gotovo", "hotspot.pick": "Odaberi pravo mjesto na slici.", picture: "Slika", "verdict.correct": "Točno!", "verdict.partial": "Skoro", "verdict.wrong": "Nije baš", "verdict.timeout": "Vrijeme je isteklo", "praise.1": "U sridu!", "praise.2": "Lijepo!", "praise.3": "Savršeno!", "praise.4": "Točno tako!", "praise.5": "Odlično!", "fb.why": "Zašto to nije to", "fb.explain": "Ideja", "fb.answer": "Odgovor", "fb.dyk": "Jesi li znao/la?", "fb.typo": "Prihvaćeno, ali pazi na pravopis: {a}", "fb.accents": "Prihvaćeno, ali pazi na kvačice: {a}", "fb.accents.strict": "Skoro! Provjeri kvačice: {a}", "fb.note.translit": "Prihvaćeno. Umlaut se piše ä / ö / ü i ß; ae / oe / ue / ss je zapis za tipkovnicu: {a}", "fb.note.caps": "Prihvaćeno. Njemačke imenice pišu se velikim početnim slovom: {a}", "fb.note.umlaut": "Skoro: provjeri umlaut: {a}", "fb.invalid": "Nije dan odgovor.", "fb.true": "Točno", "fb.false": "Netočno", "fb.missed": "Propustio/la si: {a}", "fb.matched": "Točni parovi: {n} od {total}", "fb.detail.order": "Na pravom mjestu: {n} od {total}", "fb.detail.sort": "Točno razvrstano: {n} od {total}", "fb.detail.gaps": "Točne praznine: {n} od {total}", "fb.detail.words": "Točne riječi: {n} od {total}", "fb.detail.forms": "Točni oblici: {n} od {total}", "conj.tense.praesens": "Prezent", "conj.tense.perfekt": "Perfekt", "conj.tense.praeteritum": "Preterit", "conj.tense.futur1": "Futur I.", "conj.tense.imperativ": "Imperativ", "conj.tense.konjunktiv2": "Konjunktiv II.", "conj.tense.passiv-praesens": "Pasiv, prezent", "conj.tense.passiv-praeteritum": "Pasiv, preterit", "conj.tense.perfekt-passiv": "Pasiv, perfekt", "conj.tense.konjunktiv2-vergangenheit": "Konjunktiv II., prošlost", "conj.tense.konjunktiv1": "Konjunktiv I.", "conj.tense.konjunktiv1-vergangenheit": "Konjunktiv I., prošlost", "summary.title": "Runda je gotova", "summary.accuracy": "{n}% točno iz prvog pokušaja", "summary.score": "Bodovi {n}", "summary.combo": "Najbolji niz {n}", "summary.unlocked": "Otključano: {units}", "summary.bossLocked": "Završni izazov je otvoren!", "summary.again": "Igraj rundu ponovno", "summary.back": "Natrag na kartu", "summary.finish": "Završi tečaj", "summary.needStars": "Dvije zvjezdice otključavaju sljedeće cjeline.", "summary.bossFail": "Izazov je izdržao. Ponovi pa pokušaj opet.", "summary.perfect": "Savršena runda!", review: "Ponovi pogreške", "review.title": "Ponavljanje pogrešaka", "review.empty": "Nema se što ponavljati. Sve što si pogriješio/la već znaš.", "review.practice": "Vježbaj ih", "review.back": "Natrag na kartu", "review.answer": "Odgovor", "end.title": "Tečaj je završen!", "end.sub": "Savladao/la si svaku cjelinu i pobijedio/la izazov.", "end.stars": "Zvjezdice", "end.score": "Ukupni bodovi", "end.accuracy": "Točno iz prvog pokušaja: {n}%", "end.again": "Igraj ponovno", "end.title.screen": "Natrag na početak", loading: "Učitavanje...", error: "Igra se nije mogla pokrenuti.", "a11y.skip": "Preskoči na pitanje", stars: "{n} od 3 zvjezdice", burst: "Niz x{n}!", "start.choose": "Odaberi način igranja", "mode.quiz-arena.name": "Kviz", "mode.quiz-arena.blurb": "Vremenski krugovi mješovitih pitanja", "mode.encyclopedia.name": "Enciklopedija", "mode.encyclopedia.blurb": "Čitaj članke i istraži temu", "mode.mindmaze.name": "Dvorac MindMaze", "mode.mindmaze.blurb": "Otvaraj vrata dvorca točnim odgovorima", "mode.rpg.name": "RPG pustolovina", "mode.rpg.blurb": "Pikselna pustolovina pokretana tvojim odgovorima", "mode.roleplay.name": "Igra uloga", "mode.roleplay.blurb": "Razgovaraj kroz svakodnevne dijaloge", "mode.detective.name": "Detektiv", "mode.detective.blurb": "Riješi slučajeve na temelju naučenog", "question.lead": "Pitanje", "review.none": "Još nema ničega za ponavljanje.", "class.assignment": "Zadatak od učitelja", "class.target": "Dosegni {n} zvjezdice u: {units}", "class.allUnits": "svim cjelinama", "class.due": "Rok: {date}", "class.yourName": "Tvoje ime", "class.send": "Pošalji učitelju", "class.sent": "Datoteka s rezultatom je spremljena. Pošalji je učitelju.", "class.needName": "Prvo upiši svoje ime.", "class.assigned": "Zadano", "reader.title": "Čitanje", "reader.nav": "Čitanje", "reader.open": "Otvori čitanje", "reader.continue": "Nastavi čitati", "reader.toc": "Poglavlja", "reader.chapter": "Poglavlje {n}", "reader.progress": "Poglavlje {n} od {total}", "reader.chapterRead": "pročitano", "reader.prev": "Prethodno poglavlje", "reader.next": "Sljedeće poglavlje", "reader.hint": "Dodirni podcrtanu riječ da vidiš što znači. Lijeva i desna strelica mijenjaju poglavlje.", "reader.read": "Pročitao/la si ovo poglavlje.", "reader.last": "To je bilo posljednje poglavlje.", "reader.practice": "Vježbaj ovaj tekst", "reader.empty": "Ovaj tečaj nema tekstova za čitanje.", "reader.leave": "Natrag na tekst", "gloss.panel": "Riječi u ovom tekstu", "gloss.deck": "U mojem špilu", "gloss.deck.for": 'Zadrži "{term}" u mojem špilu rječnika', "gloss.close": "Zatvori objašnjenje", "gloss.pos.n": "imenica", "gloss.pos.v": "glagol", "gloss.pos.adj": "pridjev", "gloss.pos.adv": "prilog", "gloss.pos.prep": "prijedlog", "gloss.pos.conj": "veznik", "gloss.pos.phrase": "izraz", "passage.show": "Pročitaj tekst", "passage.hide": "Sakrij tekst", "passage.title": "Tekst" }, de: { "title.tagline": "Quiz an der Schultafel", start: "Starten", continue: "Weiter", language: "Sprache", timer: "Fragen mit Zeitlimit", "timer.hint": "Etwa {s} Sekunden pro Frage. Fragen zum Tippen haben nie ein Zeitlimit.", sound: "Töne", reduceAudio: "Ton reduzieren", "reduceAudio.hint": "Keine Musik und leisere Effekte.", "audio.settings": "Toneinstellungen", "audio.title": "Toneinstellungen", "audio.music": "Musik", "audio.sfx": "Soundeffekte", "audio.voice": "Stimmen", "audio.mute": "Ton aus", "audio.close": "Schließen", speak: "Sprechen", "speak.setting": "Antworten sprechen", "speak.privacy.web": "Nutzt die Spracherkennung deines Browsers; in Chrome und Edge geht das Audio an den Browser-Hersteller. Tippen funktioniert immer.", "speak.privacy.local": "Die Sprache wird auf diesem Computer erkannt; nichts wird verschickt. Tippen funktioniert immer.", "speak.listening": "Ich höre zu. Drücke die Taste noch einmal oder Escape zum Beenden.", "speak.thinking": "Ich werte aus, was du gesagt hast.", "speak.heard": "Verstanden: {text}. Du kannst es vor dem Prüfen ändern.", "speak.err.denied": "Das Mikrofon ist nicht erlaubt. Tippe stattdessen deine Antwort.", "speak.err.no-speech": "Es war nichts zu hören. Versuche es noch einmal oder tippe deine Antwort.", "speak.err.unavailable": "Die Spracherkennung ist gerade nicht verfügbar. Tippe stattdessen deine Antwort.", "speak.err.failed": "Das konnte nicht erkannt werden. Versuche es noch einmal oder tippe deine Antwort.", export: "Fortschritt exportieren", import: "Fortschritt importieren", reset: "Fortschritt zurücksetzen", "reset.confirm": "Den gesamten gespeicherten Fortschritt für diesen Kurs löschen?", "reset.yes": "Ja, löschen", "reset.no": "Behalten", "reset.done": "Fortschritt gelöscht.", "import.ok": "Fortschritt importiert.", "import.bad": "Diese Datei ist kein Fortschritt für diesen Kurs: {why}", "export.done": "Fortschrittsdatei gespeichert.", "storage.off": "Speichern ist in diesem Browser aus: Der Fortschritt bleibt nur, bis du die Seite schließt. Nutze „Exportieren“, um ihn zu behalten.", "map.title": "Wähle eine Einheit", "map.stars": "{n} von {total} Sternen", "map.requires": "Benötigt: {units}", "map.locked": "Gesperrt", "map.unitStars": "{n} von 3 Sternen", "map.items": "{n} Fragen", "map.boss": "Endgegner-Runde", "map.boss.locked": "Meistere jede Einheit (2 Sterne), um dich dem Endgegner zu stellen.", "map.boss.ready": "Fragen aus allen Einheiten, schwieriger.", "map.review": "Fehler wiederholen ({n})", "map.verbs": "Verbtraining ({n} fällig)", menu: "Titelbildschirm", round: "Runde {n}", question: "Frage {i} von {n}", retry: "Zweiter Versuch", leave: "Runde verlassen", score: "Punkte", combo: "Serie", time: "Zeit", hint: "Tipp", submit: "Prüfen", next: "Weiter", results: "Ergebnis ansehen", flip: "Antwort zeigen", "selfcheck.hint": "Vergleiche, was du geschrieben oder gesagt hast, mit der Musterantwort und bewerte dich dann selbst. Das Programm prüft es nicht.", "grade.again": "Nochmal", "grade.hard": "Schwer", "grade.good": "Gut", "grade.easy": "Leicht", "grade.ask": "Wie gut wusstest du es?", "answer.type": "Deine Antwort", "gap.n": "Lücke {n}", letters: "Sonderzeichen", play: "Ton abspielen", "play.again": "Noch einmal abspielen", "audio.fail": "Der Ton konnte nicht abgespielt werden.", transcript: "Es heißt:", "order.up": "{item} nach oben", "order.down": "{item} nach unten", "order.first": "am frühesten", "order.last": "am spätesten", "sort.assign": "{item}: in „{group}“ legen", "pairs.pick": "Wähle auf jeder Seite einen Eintrag, um sie zu verbinden. Wähle ein verbundenes Paar noch einmal, um es zu lösen.", "multi.hint": "Wähle alles Zutreffende aus und prüfe dann.", "cross.across": "Waagerecht", "cross.down": "Senkrecht", "cross.word": "Wort {n}", "cross.cell": "Zeile {r}, Spalte {c}", "ws.found": "{n} von {total} gefunden", "ws.pick": "Wähle den ersten und den letzten Buchstaben eines Wortes.", "ws.done": "Fertig", "hotspot.pick": "Wähle die richtige Stelle auf dem Bild.", picture: "Bild", "verdict.correct": "Richtig!", "verdict.partial": "Fast geschafft", "verdict.wrong": "Nicht ganz", "verdict.timeout": "Die Zeit ist um", "praise.1": "Genau richtig!", "praise.2": "Gut gemacht!", "praise.3": "Perfekt gelöst!", "praise.4": "Stimmt!", "praise.5": "Super Leistung!", "fb.why": "Warum das nicht stimmt", "fb.explain": "Die Idee", "fb.answer": "Die Antwort", "fb.dyk": "Wusstest du schon?", "fb.typo": "Akzeptiert, aber achte auf die Schreibweise: {a}", "fb.accents": "Akzeptiert, aber achte auf die Akzente: {a}", "fb.accents.strict": "Fast! Prüfe die Akzente: {a}", "fb.note.translit": "Akzeptiert. Umlaute schreibt man ä / ö / ü und ß; ae / oe / ue / ss ist die Tastatur-Schreibweise: {a}", "fb.note.caps": "Akzeptiert. Deutsche Nomen schreibt man groß: {a}", "fb.note.umlaut": "Fast: Prüfe den Umlaut: {a}", "fb.invalid": "Es wurde keine Antwort gegeben.", "fb.true": "Richtig", "fb.false": "Falsch", "fb.missed": "Das hast du verpasst: {a}", "fb.matched": "Richtige Paare: {n} von {total}", "fb.detail.order": "An der richtigen Stelle: {n} von {total}", "fb.detail.sort": "Richtig sortiert: {n} von {total}", "fb.detail.gaps": "Richtige Lücken: {n} von {total}", "fb.detail.words": "Richtige Wörter: {n} von {total}", "fb.detail.forms": "Richtige Formen: {n} von {total}", "conj.tense.praesens": "Präsens", "conj.tense.perfekt": "Perfekt", "conj.tense.praeteritum": "Präteritum", "conj.tense.futur1": "Futur I", "conj.tense.imperativ": "Imperativ", "conj.tense.konjunktiv2": "Konjunktiv II", "conj.tense.passiv-praesens": "Passiv, Präsens", "conj.tense.passiv-praeteritum": "Passiv, Präteritum", "conj.tense.perfekt-passiv": "Passiv, Perfekt", "conj.tense.konjunktiv2-vergangenheit": "Konjunktiv II, Vergangenheit", "conj.tense.konjunktiv1": "Konjunktiv I", "conj.tense.konjunktiv1-vergangenheit": "Konjunktiv I, Vergangenheit", "summary.title": "Runde geschafft", "summary.accuracy": "{n} % gleich beim ersten Mal richtig", "summary.score": "Punkte: {n}", "summary.combo": "Beste Serie: {n}", "summary.unlocked": "Freigeschaltet: {units}", "summary.bossLocked": "Die Endgegner-Runde ist offen!", "summary.again": "Runde noch einmal spielen", "summary.back": "Zurück zur Karte", "summary.finish": "Kurs abschließen", "summary.needStars": "Zwei Sterne schalten die nächsten Einheiten frei.", "summary.bossFail": "Der Endgegner hat standgehalten. Wiederhole und versuche es noch einmal.", "summary.perfect": "Perfekte Runde!", review: "Fehler wiederholen", "review.title": "Fehler wiederholen", "review.empty": "Nichts zu wiederholen. Alles, was du verpasst hast, ist schon gelernt.", "review.practice": "Diese üben", "review.back": "Zurück zur Karte", "review.answer": "Die Antwort", "end.title": "Kurs abgeschlossen!", "end.sub": "Du hast jede Einheit gemeistert und den Endgegner besiegt.", "end.stars": "Sterne", "end.score": "Gesamtpunkte", "end.accuracy": "Gleich beim ersten Mal richtig: {n} %", "end.again": "Noch einmal spielen", "end.title.screen": "Zurück zum Titel", loading: "Lädt …", error: "Das Spiel konnte nicht starten.", "a11y.skip": "Zur Frage springen", stars: "{n} von 3 Sternen", burst: "Serie x{n}!", "start.choose": "Wähle, wie du spielen möchtest", "mode.quiz-arena.name": "Quiz-Arena", "mode.quiz-arena.blurb": "Runden mit gemischten Fragen auf Zeit", "mode.encyclopedia.name": "Enzyklopädie", "mode.encyclopedia.blurb": "Artikel lesen und das Thema erkunden", "mode.mindmaze.name": "MindMaze-Schloss", "mode.mindmaze.blurb": "Öffne die Türen eines Schlosses mit richtigen Antworten", "mode.rpg.name": "Rollenspiel-Abenteuer", "mode.rpg.blurb": "Ein Pixel-Abenteuer, angetrieben von deinen Antworten", "mode.roleplay.name": "Rollenspiel-Dialoge", "mode.roleplay.blurb": "Meistere Alltagsgespräche im Dialog", "mode.detective.name": "Detektiv", "mode.detective.blurb": "Löse Fälle mit den Hinweisen, die du gelernt hast", "question.lead": "Frage", "review.none": "Noch nichts zu wiederholen.", "class.assignment": "Aufgabe von deiner Lehrkraft", "class.target": "Erreiche {n} Sterne in: {units}", "class.allUnits": "allen Einheiten", "class.due": "Fällig: {date}", "class.yourName": "Dein Name", "class.send": "An meine Lehrkraft senden", "class.sent": "Ergebnisdatei gespeichert. Schicke sie deiner Lehrkraft.", "class.needName": "Gib zuerst deinen Namen ein.", "class.assigned": "Zugewiesen", "reader.title": "Leser", "reader.nav": "Leser", "reader.open": "Leser öffnen", "reader.continue": "Weiterlesen", "reader.toc": "Kapitel", "reader.chapter": "Kapitel {n}", "reader.progress": "Kapitel {n} von {total}", "reader.chapterRead": "gelesen", "reader.prev": "Vorheriges Kapitel", "reader.next": "Nächstes Kapitel", "reader.hint": "Tippe auf ein unterstrichenes Wort, um die Bedeutung zu sehen. Mit den Pfeiltasten links und rechts wechselst du das Kapitel.", "reader.read": "Du hast dieses Kapitel gelesen.", "reader.last": "Das war das letzte Kapitel.", "reader.practice": "Diesen Text üben", "reader.empty": "Dieser Kurs hat keine Lesetexte.", "reader.leave": "Zurück zum Text", "gloss.panel": "Wörter in diesem Text", "gloss.deck": "In meinem Stapel", "gloss.deck.for": "„{term}“ in meinem Vokabelstapel behalten", "gloss.close": "Erklärung schließen", "gloss.pos.n": "Nomen", "gloss.pos.v": "Verb", "gloss.pos.adj": "Adjektiv", "gloss.pos.adv": "Adverb", "gloss.pos.prep": "Präposition", "gloss.pos.conj": "Konjunktion", "gloss.pos.phrase": "Wendung", "passage.show": "Den Text lesen", "passage.hide": "Text ausblenden", "passage.title": "Der Text" } };
+  const N0 = { "title.tagline": "Chalkboard quiz arena", start: "Start", continue: "Continue", language: "Language", timer: "Timed questions", "timer.hint": "About {s} seconds per question. Typing questions are never timed.", sound: "Sounds", reduceAudio: "Reduce audio", "reduceAudio.hint": "No music, and quieter sound effects.", "audio.settings": "Sound settings", "audio.title": "Sound settings", "audio.music": "Music", "audio.sfx": "Sound effects", "audio.voice": "Voices", "audio.mute": "Sound off", "audio.close": "Close", speak: "Speak", "speak.setting": "Speak your answers", "speak.privacy.web": "Uses your browser speech recognition; in Chrome and Edge the audio goes to the browser vendor. Typing always works.", "speak.privacy.local": "Speech is recognised on this computer; nothing is sent away. Typing always works.", "speak.listening": "Listening. Press the button again or Escape to stop.", "speak.thinking": "Working out what you said.", "speak.heard": "Heard: {text}. You can edit it before you check.", "speak.err.denied": "The microphone is not allowed. Type your answer instead.", "speak.err.no-speech": "Nothing was heard. Try again or type your answer.", "speak.err.unavailable": "Speech recognition is not available right now. Type your answer instead.", "speak.err.failed": "Could not recognise that. Try again or type your answer.", export: "Export progress", import: "Import progress", reset: "Reset progress", "reset.confirm": "Erase all saved progress for this course?", "reset.yes": "Yes, erase", "reset.no": "Keep it", "reset.done": "Progress erased.", "import.ok": "Progress imported.", "import.bad": "This file is not progress for this course: {why}", "export.done": "Progress file saved.", "storage.off": "Saving is off in this browser: progress is kept only until you close the page. Use Export to keep it.", "map.title": "Choose a unit", "map.stars": "{n} of {total} stars", "map.requires": "Needs: {units}", "map.locked": "Locked", "map.unitStars": "{n} of 3 stars", "map.items": "{n} questions", "map.boss": "Boss round", "map.boss.locked": "Master every unit (2 stars) to face the boss.", "map.boss.ready": "Questions from every unit, harder.", "map.review": "Review misses ({n})", "map.verbs": "Verb drill ({n} due)", menu: "Title screen", round: "Round {n}", question: "Question {i} of {n}", retry: "Second try", leave: "Leave round", score: "Score", combo: "Combo", time: "Time", hint: "Hint", submit: "Check", next: "Next", results: "See results", flip: "Show the answer", "selfcheck.hint": "Compare what you wrote or said with the model answer, then grade yourself. The program does not check it.", "grade.again": "Again", "grade.hard": "Hard", "grade.good": "Good", "grade.easy": "Easy", "grade.ask": "How well did you know it?", "answer.type": "Your answer", "gap.n": "Gap {n}", letters: "Special letters", play: "Play the sound", "play.again": "Play again", "audio.fail": "The sound could not be played.", transcript: "It says:", "order.up": "Move {item} up", "order.down": "Move {item} down", "order.first": "earliest", "order.last": "latest", "sort.assign": "{item}: put in {group}", "pairs.pick": "Pick one on each side to pair them. Pick a paired one again to undo.", "multi.hint": "Select all that apply, then check.", "cross.across": "Across", "cross.down": "Down", "cross.word": "Word {n}", "cross.cell": "Row {r}, column {c}", "ws.found": "Found {n} of {total}", "ws.pick": "Pick the first and the last letter of a word.", "ws.done": "Done", "hotspot.pick": "Pick the right place on the picture.", picture: "Picture", "verdict.correct": "Correct!", "verdict.partial": "Nearly there", "verdict.wrong": "Not quite", "verdict.timeout": "Time is up", "praise.1": "Spot on!", "praise.2": "Nicely done!", "praise.3": "You nailed it!", "praise.4": "Right!", "praise.5": "Great work!", "fb.why": "Why that is not it", "fb.explain": "The idea", "fb.answer": "The answer", "fb.dyk": "Did you know?", "fb.typo": "Accepted, but mind the spelling: {a}", "fb.accents": "Accepted, but mind the accents: {a}", "fb.accents.strict": "Almost! Check the accents: {a}", "fb.note.translit": "Accepted. The umlaut is written ä / ö / ü and ß; ae / oe / ue / ss is the keyboard spelling: {a}", "fb.note.caps": "Accepted. German nouns start with a capital letter: {a}", "fb.note.umlaut": "Almost: check the umlaut: {a}", "fb.invalid": "No answer was given.", "fb.true": "True", "fb.false": "False", "fb.missed": "You missed: {a}", "fb.matched": "Right pairs: {n} of {total}", "fb.detail.order": "In the right place: {n} of {total}", "fb.detail.sort": "Sorted right: {n} of {total}", "fb.detail.gaps": "Gaps right: {n} of {total}", "fb.detail.words": "Words right: {n} of {total}", "fb.detail.forms": "Forms right: {n} of {total}", "conj.tense.praesens": "Present", "conj.tense.perfekt": "Perfect", "conj.tense.praeteritum": "Simple past", "conj.tense.futur1": "Future", "conj.tense.imperativ": "Imperative", "conj.tense.konjunktiv2": "Subjunctive II", "conj.tense.passiv-praesens": "Passive, present", "conj.tense.passiv-praeteritum": "Passive, simple past", "conj.tense.perfekt-passiv": "Passive, perfect", "conj.tense.konjunktiv2-vergangenheit": "Subjunctive II, past", "conj.tense.konjunktiv1": "Subjunctive I", "conj.tense.konjunktiv1-vergangenheit": "Subjunctive I, past", "summary.title": "Round complete", "summary.accuracy": "{n}% right first time", "summary.score": "Score {n}", "summary.combo": "Best combo {n}", "summary.unlocked": "Unlocked: {units}", "summary.bossLocked": "The boss round is open!", "summary.again": "Play the round again", "summary.back": "Back to the map", "summary.finish": "Finish the course", "summary.needStars": "Two stars unlock the next units.", "summary.bossFail": "The boss held out. Review and try again.", "summary.perfect": "Perfect round!", review: "Review misses", "review.title": "Review misses", "review.empty": "Nothing to review. Everything you missed is already learned.", "review.practice": "Practise these", "review.back": "Back to the map", "review.answer": "The answer", "end.title": "Course complete!", "end.sub": "You mastered every unit and beat the boss.", "end.stars": "Stars", "end.score": "Total score", "end.accuracy": "Answered right first time: {n}%", "end.again": "Play again", "end.title.screen": "Back to the title", loading: "Loading...", error: "The game could not start.", "a11y.skip": "Skip to the question", stars: "{n} of 3 stars", burst: "Combo x{n}!", "start.choose": "Choose how to play", "mode.quiz-arena.name": "Quiz arena", "mode.quiz-arena.blurb": "Timed rounds of mixed questions", "mode.encyclopedia.name": "Encyclopedia", "mode.encyclopedia.blurb": "Read articles and explore the topic", "mode.mindmaze.name": "MindMaze castle", "mode.mindmaze.blurb": "Open the doors of a castle with right answers", "mode.rpg.name": "RPG quest", "mode.rpg.blurb": "A pixel adventure powered by your answers", "mode.roleplay.name": "Role-play", "mode.roleplay.blurb": "Talk your way through everyday dialogues", "mode.detective.name": "Detective", "mode.detective.blurb": "Solve cases from the clues you learned", "question.lead": "Question", "review.none": "Nothing to review yet.", "class.assignment": "Assignment from your teacher", "class.target": "Reach {n} stars in: {units}", "class.allUnits": "all units", "class.due": "Due: {date}", "class.yourName": "Your name", "class.send": "Send to my teacher", "class.sent": "Result file saved. Send it to your teacher.", "class.needName": "Type your name first.", "class.assigned": "Assigned", "reader.title": "Reader", "reader.nav": "Reader", "reader.open": "Open the reader", "reader.continue": "Continue reading", "reader.toc": "Chapters", "reader.chapter": "Chapter {n}", "reader.progress": "Chapter {n} of {total}", "reader.chapterRead": "read", "reader.prev": "Previous chapter", "reader.next": "Next chapter", "reader.hint": "Tap an underlined word to see what it means. The left and right arrow keys change chapter.", "reader.read": "You have read this chapter.", "reader.last": "That was the last chapter.", "reader.practice": "Practise this text", "reader.empty": "This course has no readings.", "reader.leave": "Back to the text", "gloss.panel": "Words in this text", "gloss.deck": "In my deck", "gloss.deck.for": 'Keep "{term}" in my vocabulary deck', "gloss.close": "Close the explanation", "gloss.pos.n": "noun", "gloss.pos.v": "verb", "gloss.pos.adj": "adjective", "gloss.pos.adv": "adverb", "gloss.pos.prep": "preposition", "gloss.pos.conj": "conjunction", "gloss.pos.phrase": "phrase", "passage.show": "Read the text", "passage.hide": "Hide the text", "passage.title": "The text" }, fr = { hr: { "title.tagline": "Kviz na školskoj ploči", start: "Započni", continue: "Nastavi", language: "Jezik", timer: "Pitanja na vrijeme", "timer.hint": "Oko {s} sekundi po pitanju. Pitanja s upisivanjem nikad nisu na vrijeme.", sound: "Zvukovi", reduceAudio: "Smanji zvuk", "reduceAudio.hint": "Bez glazbe, a zvučni efekti su tiši.", "audio.settings": "Postavke zvuka", "audio.title": "Postavke zvuka", "audio.music": "Glazba", "audio.sfx": "Zvučni efekti", "audio.voice": "Glasovi", "audio.mute": "Isključi zvuk", "audio.close": "Zatvori", speak: "Govori", "speak.setting": "Govori odgovore", "speak.privacy.web": "Koristi prepoznavanje govora u pregledniku; u Chromeu i Edgeu zvuk ide pružatelju preglednika. Upisivanje uvijek radi.", "speak.privacy.local": "Govor se prepoznaje na ovom računalu; ništa se ne šalje dalje. Upisivanje uvijek radi.", "speak.listening": "Slušam. Ponovo pritisni gumb ili Escape za kraj.", "speak.thinking": "Provjeravam što si rekao.", "speak.heard": "Čuo sam: {text}. Možeš to urediti prije provjere.", "speak.err.denied": "Mikrofon nije dopušten. Umjesto toga upiši odgovor.", "speak.err.no-speech": "Ništa se nije čulo. Pokušaj ponovo ili upiši odgovor.", "speak.err.unavailable": "Prepoznavanje govora trenutno nije dostupno. Umjesto toga upiši odgovor.", "speak.err.failed": "Nisam to prepoznao. Pokušaj ponovo ili upiši odgovor.", export: "Izvezi napredak", import: "Uvezi napredak", reset: "Obriši napredak", "reset.confirm": "Obrisati sav spremljeni napredak za ovaj tečaj?", "reset.yes": "Da, obriši", "reset.no": "Zadrži", "reset.done": "Napredak je obrisan.", "import.ok": "Napredak je uvezen.", "import.bad": "Ova datoteka nije napredak za ovaj tečaj: {why}", "export.done": "Datoteka napretka je spremljena.", "storage.off": "Spremanje je isključeno u ovom pregledniku: napredak traje dok ne zatvoriš stranicu. Koristi izvoz da ga sačuvaš.", "map.title": "Odaberi cjelinu", "map.stars": "{n} od {total} zvjezdica", "map.requires": "Treba: {units}", "map.locked": "Zaključano", "map.unitStars": "{n} od 3 zvjezdice", "map.items": "{n} pitanja", "map.boss": "Završni izazov", "map.boss.locked": "Savladaj svaku cjelinu (2 zvjezdice) da bi došao do izazova.", "map.boss.ready": "Pitanja iz svih cjelina, teža.", "map.review": "Ponovi pogreške ({n})", "map.verbs": "Vježba glagola ({n} za ponoviti)", menu: "Početni zaslon", round: "Runda {n}", question: "Pitanje {i} od {n}", retry: "Drugi pokušaj", leave: "Napusti rundu", score: "Bodovi", combo: "Niz", time: "Vrijeme", hint: "Pomoć", submit: "Provjeri", next: "Dalje", results: "Prikaži rezultat", flip: "Prikaži odgovor", "selfcheck.hint": "Usporedi što si napisao ili rekao s uzornim odgovorom, pa se sam ocijeni. Program to ne provjerava.", "grade.again": "Opet", "grade.hard": "Teško", "grade.good": "Dobro", "grade.easy": "Lako", "grade.ask": "Koliko si dobro znao/la?", "answer.type": "Tvoj odgovor", "gap.n": "Praznina {n}", letters: "Posebna slova", play: "Pusti zvuk", "play.again": "Pusti ponovno", "audio.fail": "Zvuk se nije mogao pustiti.", transcript: "Piše:", "order.up": "Pomakni {item} gore", "order.down": "Pomakni {item} dolje", "order.first": "najranije", "order.last": "najkasnije", "sort.assign": "{item}: stavi u {group}", "pairs.pick": "Odaberi po jedno sa svake strane da ih spojiš. Ponovno odaberi spojeno da poništiš.", "multi.hint": "Odaberi sve točne odgovore, pa provjeri.", "cross.across": "Vodoravno", "cross.down": "Okomito", "cross.word": "Riječ {n}", "cross.cell": "Redak {r}, stupac {c}", "ws.found": "Pronađeno {n} od {total}", "ws.pick": "Odaberi prvo i zadnje slovo riječi.", "ws.done": "Gotovo", "hotspot.pick": "Odaberi pravo mjesto na slici.", picture: "Slika", "verdict.correct": "Točno!", "verdict.partial": "Skoro", "verdict.wrong": "Nije baš", "verdict.timeout": "Vrijeme je isteklo", "praise.1": "U sridu!", "praise.2": "Lijepo!", "praise.3": "Savršeno!", "praise.4": "Točno tako!", "praise.5": "Odlično!", "fb.why": "Zašto to nije to", "fb.explain": "Ideja", "fb.answer": "Odgovor", "fb.dyk": "Jesi li znao/la?", "fb.typo": "Prihvaćeno, ali pazi na pravopis: {a}", "fb.accents": "Prihvaćeno, ali pazi na kvačice: {a}", "fb.accents.strict": "Skoro! Provjeri kvačice: {a}", "fb.note.translit": "Prihvaćeno. Umlaut se piše ä / ö / ü i ß; ae / oe / ue / ss je zapis za tipkovnicu: {a}", "fb.note.caps": "Prihvaćeno. Njemačke imenice pišu se velikim početnim slovom: {a}", "fb.note.umlaut": "Skoro: provjeri umlaut: {a}", "fb.invalid": "Nije dan odgovor.", "fb.true": "Točno", "fb.false": "Netočno", "fb.missed": "Propustio/la si: {a}", "fb.matched": "Točni parovi: {n} od {total}", "fb.detail.order": "Na pravom mjestu: {n} od {total}", "fb.detail.sort": "Točno razvrstano: {n} od {total}", "fb.detail.gaps": "Točne praznine: {n} od {total}", "fb.detail.words": "Točne riječi: {n} od {total}", "fb.detail.forms": "Točni oblici: {n} od {total}", "conj.tense.praesens": "Prezent", "conj.tense.perfekt": "Perfekt", "conj.tense.praeteritum": "Preterit", "conj.tense.futur1": "Futur I.", "conj.tense.imperativ": "Imperativ", "conj.tense.konjunktiv2": "Konjunktiv II.", "conj.tense.passiv-praesens": "Pasiv, prezent", "conj.tense.passiv-praeteritum": "Pasiv, preterit", "conj.tense.perfekt-passiv": "Pasiv, perfekt", "conj.tense.konjunktiv2-vergangenheit": "Konjunktiv II., prošlost", "conj.tense.konjunktiv1": "Konjunktiv I.", "conj.tense.konjunktiv1-vergangenheit": "Konjunktiv I., prošlost", "summary.title": "Runda je gotova", "summary.accuracy": "{n}% točno iz prvog pokušaja", "summary.score": "Bodovi {n}", "summary.combo": "Najbolji niz {n}", "summary.unlocked": "Otključano: {units}", "summary.bossLocked": "Završni izazov je otvoren!", "summary.again": "Igraj rundu ponovno", "summary.back": "Natrag na kartu", "summary.finish": "Završi tečaj", "summary.needStars": "Dvije zvjezdice otključavaju sljedeće cjeline.", "summary.bossFail": "Izazov je izdržao. Ponovi pa pokušaj opet.", "summary.perfect": "Savršena runda!", review: "Ponovi pogreške", "review.title": "Ponavljanje pogrešaka", "review.empty": "Nema se što ponavljati. Sve što si pogriješio/la već znaš.", "review.practice": "Vježbaj ih", "review.back": "Natrag na kartu", "review.answer": "Odgovor", "end.title": "Tečaj je završen!", "end.sub": "Savladao/la si svaku cjelinu i pobijedio/la izazov.", "end.stars": "Zvjezdice", "end.score": "Ukupni bodovi", "end.accuracy": "Točno iz prvog pokušaja: {n}%", "end.again": "Igraj ponovno", "end.title.screen": "Natrag na početak", loading: "Učitavanje...", error: "Igra se nije mogla pokrenuti.", "a11y.skip": "Preskoči na pitanje", stars: "{n} od 3 zvjezdice", burst: "Niz x{n}!", "start.choose": "Odaberi način igranja", "mode.quiz-arena.name": "Kviz", "mode.quiz-arena.blurb": "Vremenski krugovi mješovitih pitanja", "mode.encyclopedia.name": "Enciklopedija", "mode.encyclopedia.blurb": "Čitaj članke i istraži temu", "mode.mindmaze.name": "Dvorac MindMaze", "mode.mindmaze.blurb": "Otvaraj vrata dvorca točnim odgovorima", "mode.rpg.name": "RPG pustolovina", "mode.rpg.blurb": "Pikselna pustolovina pokretana tvojim odgovorima", "mode.roleplay.name": "Igra uloga", "mode.roleplay.blurb": "Razgovaraj kroz svakodnevne dijaloge", "mode.detective.name": "Detektiv", "mode.detective.blurb": "Riješi slučajeve na temelju naučenog", "question.lead": "Pitanje", "review.none": "Još nema ničega za ponavljanje.", "class.assignment": "Zadatak od učitelja", "class.target": "Dosegni {n} zvjezdice u: {units}", "class.allUnits": "svim cjelinama", "class.due": "Rok: {date}", "class.yourName": "Tvoje ime", "class.send": "Pošalji učitelju", "class.sent": "Datoteka s rezultatom je spremljena. Pošalji je učitelju.", "class.needName": "Prvo upiši svoje ime.", "class.assigned": "Zadano", "reader.title": "Čitanje", "reader.nav": "Čitanje", "reader.open": "Otvori čitanje", "reader.continue": "Nastavi čitati", "reader.toc": "Poglavlja", "reader.chapter": "Poglavlje {n}", "reader.progress": "Poglavlje {n} od {total}", "reader.chapterRead": "pročitano", "reader.prev": "Prethodno poglavlje", "reader.next": "Sljedeće poglavlje", "reader.hint": "Dodirni podcrtanu riječ da vidiš što znači. Lijeva i desna strelica mijenjaju poglavlje.", "reader.read": "Pročitao/la si ovo poglavlje.", "reader.last": "To je bilo posljednje poglavlje.", "reader.practice": "Vježbaj ovaj tekst", "reader.empty": "Ovaj tečaj nema tekstova za čitanje.", "reader.leave": "Natrag na tekst", "gloss.panel": "Riječi u ovom tekstu", "gloss.deck": "U mojem špilu", "gloss.deck.for": 'Zadrži "{term}" u mojem špilu rječnika', "gloss.close": "Zatvori objašnjenje", "gloss.pos.n": "imenica", "gloss.pos.v": "glagol", "gloss.pos.adj": "pridjev", "gloss.pos.adv": "prilog", "gloss.pos.prep": "prijedlog", "gloss.pos.conj": "veznik", "gloss.pos.phrase": "izraz", "passage.show": "Pročitaj tekst", "passage.hide": "Sakrij tekst", "passage.title": "Tekst" }, de: { "title.tagline": "Quiz an der Schultafel", start: "Starten", continue: "Weiter", language: "Sprache", timer: "Fragen mit Zeitlimit", "timer.hint": "Etwa {s} Sekunden pro Frage. Fragen zum Tippen haben nie ein Zeitlimit.", sound: "Töne", reduceAudio: "Ton reduzieren", "reduceAudio.hint": "Keine Musik und leisere Effekte.", "audio.settings": "Toneinstellungen", "audio.title": "Toneinstellungen", "audio.music": "Musik", "audio.sfx": "Soundeffekte", "audio.voice": "Stimmen", "audio.mute": "Ton aus", "audio.close": "Schließen", speak: "Sprechen", "speak.setting": "Antworten sprechen", "speak.privacy.web": "Nutzt die Spracherkennung deines Browsers; in Chrome und Edge geht das Audio an den Browser-Hersteller. Tippen funktioniert immer.", "speak.privacy.local": "Die Sprache wird auf diesem Computer erkannt; nichts wird verschickt. Tippen funktioniert immer.", "speak.listening": "Ich höre zu. Drücke die Taste noch einmal oder Escape zum Beenden.", "speak.thinking": "Ich werte aus, was du gesagt hast.", "speak.heard": "Verstanden: {text}. Du kannst es vor dem Prüfen ändern.", "speak.err.denied": "Das Mikrofon ist nicht erlaubt. Tippe stattdessen deine Antwort.", "speak.err.no-speech": "Es war nichts zu hören. Versuche es noch einmal oder tippe deine Antwort.", "speak.err.unavailable": "Die Spracherkennung ist gerade nicht verfügbar. Tippe stattdessen deine Antwort.", "speak.err.failed": "Das konnte nicht erkannt werden. Versuche es noch einmal oder tippe deine Antwort.", export: "Fortschritt exportieren", import: "Fortschritt importieren", reset: "Fortschritt zurücksetzen", "reset.confirm": "Den gesamten gespeicherten Fortschritt für diesen Kurs löschen?", "reset.yes": "Ja, löschen", "reset.no": "Behalten", "reset.done": "Fortschritt gelöscht.", "import.ok": "Fortschritt importiert.", "import.bad": "Diese Datei ist kein Fortschritt für diesen Kurs: {why}", "export.done": "Fortschrittsdatei gespeichert.", "storage.off": "Speichern ist in diesem Browser aus: Der Fortschritt bleibt nur, bis du die Seite schließt. Nutze „Exportieren“, um ihn zu behalten.", "map.title": "Wähle eine Einheit", "map.stars": "{n} von {total} Sternen", "map.requires": "Benötigt: {units}", "map.locked": "Gesperrt", "map.unitStars": "{n} von 3 Sternen", "map.items": "{n} Fragen", "map.boss": "Endgegner-Runde", "map.boss.locked": "Meistere jede Einheit (2 Sterne), um dich dem Endgegner zu stellen.", "map.boss.ready": "Fragen aus allen Einheiten, schwieriger.", "map.review": "Fehler wiederholen ({n})", "map.verbs": "Verbtraining ({n} fällig)", menu: "Titelbildschirm", round: "Runde {n}", question: "Frage {i} von {n}", retry: "Zweiter Versuch", leave: "Runde verlassen", score: "Punkte", combo: "Serie", time: "Zeit", hint: "Tipp", submit: "Prüfen", next: "Weiter", results: "Ergebnis ansehen", flip: "Antwort zeigen", "selfcheck.hint": "Vergleiche, was du geschrieben oder gesagt hast, mit der Musterantwort und bewerte dich dann selbst. Das Programm prüft es nicht.", "grade.again": "Nochmal", "grade.hard": "Schwer", "grade.good": "Gut", "grade.easy": "Leicht", "grade.ask": "Wie gut wusstest du es?", "answer.type": "Deine Antwort", "gap.n": "Lücke {n}", letters: "Sonderzeichen", play: "Ton abspielen", "play.again": "Noch einmal abspielen", "audio.fail": "Der Ton konnte nicht abgespielt werden.", transcript: "Es heißt:", "order.up": "{item} nach oben", "order.down": "{item} nach unten", "order.first": "am frühesten", "order.last": "am spätesten", "sort.assign": "{item}: in „{group}“ legen", "pairs.pick": "Wähle auf jeder Seite einen Eintrag, um sie zu verbinden. Wähle ein verbundenes Paar noch einmal, um es zu lösen.", "multi.hint": "Wähle alles Zutreffende aus und prüfe dann.", "cross.across": "Waagerecht", "cross.down": "Senkrecht", "cross.word": "Wort {n}", "cross.cell": "Zeile {r}, Spalte {c}", "ws.found": "{n} von {total} gefunden", "ws.pick": "Wähle den ersten und den letzten Buchstaben eines Wortes.", "ws.done": "Fertig", "hotspot.pick": "Wähle die richtige Stelle auf dem Bild.", picture: "Bild", "verdict.correct": "Richtig!", "verdict.partial": "Fast geschafft", "verdict.wrong": "Nicht ganz", "verdict.timeout": "Die Zeit ist um", "praise.1": "Genau richtig!", "praise.2": "Gut gemacht!", "praise.3": "Perfekt gelöst!", "praise.4": "Stimmt!", "praise.5": "Super Leistung!", "fb.why": "Warum das nicht stimmt", "fb.explain": "Die Idee", "fb.answer": "Die Antwort", "fb.dyk": "Wusstest du schon?", "fb.typo": "Akzeptiert, aber achte auf die Schreibweise: {a}", "fb.accents": "Akzeptiert, aber achte auf die Akzente: {a}", "fb.accents.strict": "Fast! Prüfe die Akzente: {a}", "fb.note.translit": "Akzeptiert. Umlaute schreibt man ä / ö / ü und ß; ae / oe / ue / ss ist die Tastatur-Schreibweise: {a}", "fb.note.caps": "Akzeptiert. Deutsche Nomen schreibt man groß: {a}", "fb.note.umlaut": "Fast: Prüfe den Umlaut: {a}", "fb.invalid": "Es wurde keine Antwort gegeben.", "fb.true": "Richtig", "fb.false": "Falsch", "fb.missed": "Das hast du verpasst: {a}", "fb.matched": "Richtige Paare: {n} von {total}", "fb.detail.order": "An der richtigen Stelle: {n} von {total}", "fb.detail.sort": "Richtig sortiert: {n} von {total}", "fb.detail.gaps": "Richtige Lücken: {n} von {total}", "fb.detail.words": "Richtige Wörter: {n} von {total}", "fb.detail.forms": "Richtige Formen: {n} von {total}", "conj.tense.praesens": "Präsens", "conj.tense.perfekt": "Perfekt", "conj.tense.praeteritum": "Präteritum", "conj.tense.futur1": "Futur I", "conj.tense.imperativ": "Imperativ", "conj.tense.konjunktiv2": "Konjunktiv II", "conj.tense.passiv-praesens": "Passiv, Präsens", "conj.tense.passiv-praeteritum": "Passiv, Präteritum", "conj.tense.perfekt-passiv": "Passiv, Perfekt", "conj.tense.konjunktiv2-vergangenheit": "Konjunktiv II, Vergangenheit", "conj.tense.konjunktiv1": "Konjunktiv I", "conj.tense.konjunktiv1-vergangenheit": "Konjunktiv I, Vergangenheit", "summary.title": "Runde geschafft", "summary.accuracy": "{n} % gleich beim ersten Mal richtig", "summary.score": "Punkte: {n}", "summary.combo": "Beste Serie: {n}", "summary.unlocked": "Freigeschaltet: {units}", "summary.bossLocked": "Die Endgegner-Runde ist offen!", "summary.again": "Runde noch einmal spielen", "summary.back": "Zurück zur Karte", "summary.finish": "Kurs abschließen", "summary.needStars": "Zwei Sterne schalten die nächsten Einheiten frei.", "summary.bossFail": "Der Endgegner hat standgehalten. Wiederhole und versuche es noch einmal.", "summary.perfect": "Perfekte Runde!", review: "Fehler wiederholen", "review.title": "Fehler wiederholen", "review.empty": "Nichts zu wiederholen. Alles, was du verpasst hast, ist schon gelernt.", "review.practice": "Diese üben", "review.back": "Zurück zur Karte", "review.answer": "Die Antwort", "end.title": "Kurs abgeschlossen!", "end.sub": "Du hast jede Einheit gemeistert und den Endgegner besiegt.", "end.stars": "Sterne", "end.score": "Gesamtpunkte", "end.accuracy": "Gleich beim ersten Mal richtig: {n} %", "end.again": "Noch einmal spielen", "end.title.screen": "Zurück zum Titel", loading: "Lädt …", error: "Das Spiel konnte nicht starten.", "a11y.skip": "Zur Frage springen", stars: "{n} von 3 Sternen", burst: "Serie x{n}!", "start.choose": "Wähle, wie du spielen möchtest", "mode.quiz-arena.name": "Quiz-Arena", "mode.quiz-arena.blurb": "Runden mit gemischten Fragen auf Zeit", "mode.encyclopedia.name": "Enzyklopädie", "mode.encyclopedia.blurb": "Artikel lesen und das Thema erkunden", "mode.mindmaze.name": "MindMaze-Schloss", "mode.mindmaze.blurb": "Öffne die Türen eines Schlosses mit richtigen Antworten", "mode.rpg.name": "Rollenspiel-Abenteuer", "mode.rpg.blurb": "Ein Pixel-Abenteuer, angetrieben von deinen Antworten", "mode.roleplay.name": "Rollenspiel-Dialoge", "mode.roleplay.blurb": "Meistere Alltagsgespräche im Dialog", "mode.detective.name": "Detektiv", "mode.detective.blurb": "Löse Fälle mit den Hinweisen, die du gelernt hast", "question.lead": "Frage", "review.none": "Noch nichts zu wiederholen.", "class.assignment": "Aufgabe von deiner Lehrkraft", "class.target": "Erreiche {n} Sterne in: {units}", "class.allUnits": "allen Einheiten", "class.due": "Fällig: {date}", "class.yourName": "Dein Name", "class.send": "An meine Lehrkraft senden", "class.sent": "Ergebnisdatei gespeichert. Schicke sie deiner Lehrkraft.", "class.needName": "Gib zuerst deinen Namen ein.", "class.assigned": "Zugewiesen", "reader.title": "Leser", "reader.nav": "Leser", "reader.open": "Leser öffnen", "reader.continue": "Weiterlesen", "reader.toc": "Kapitel", "reader.chapter": "Kapitel {n}", "reader.progress": "Kapitel {n} von {total}", "reader.chapterRead": "gelesen", "reader.prev": "Vorheriges Kapitel", "reader.next": "Nächstes Kapitel", "reader.hint": "Tippe auf ein unterstrichenes Wort, um die Bedeutung zu sehen. Mit den Pfeiltasten links und rechts wechselst du das Kapitel.", "reader.read": "Du hast dieses Kapitel gelesen.", "reader.last": "Das war das letzte Kapitel.", "reader.practice": "Diesen Text üben", "reader.empty": "Dieser Kurs hat keine Lesetexte.", "reader.leave": "Zurück zum Text", "gloss.panel": "Wörter in diesem Text", "gloss.deck": "In meinem Stapel", "gloss.deck.for": "„{term}“ in meinem Vokabelstapel behalten", "gloss.close": "Erklärung schließen", "gloss.pos.n": "Nomen", "gloss.pos.v": "Verb", "gloss.pos.adj": "Adjektiv", "gloss.pos.adv": "Adverb", "gloss.pos.prep": "Präposition", "gloss.pos.conj": "Konjunktion", "gloss.pos.phrase": "Wendung", "passage.show": "Den Text lesen", "passage.hide": "Text ausblenden", "passage.title": "Der Text" } };
   function Os(t, e) {
     var _a3, _b3, _c2;
     const s = (_c2 = (_b3 = fr[t]) != null ? _b3 : fr[(_a3 = t.split("-")[0]) != null ? _a3 : ""]) != null ? _c2 : {};
     return (n, i) => {
       var _a4, _b4;
-      let r = (_b4 = (_a4 = e == null ? void 0 : e.strings["ui.".concat(n)]) != null ? _a4 : s[n]) != null ? _b4 : O0[n];
+      let r = (_b4 = (_a4 = e == null ? void 0 : e.strings["ui.".concat(n)]) != null ? _a4 : s[n]) != null ? _b4 : N0[n];
       if (i) for (const [o, a] of Object.entries(i)) r = r.split("{".concat(o, "}")).join(String(a));
       return r;
     };
   }
   [...Object.keys(fr)];
-  const Gl = { hr: ["č", "ć", "š", "ž", "đ"], de: ["ä", "ö", "ü", "ß"], es: ["á", "é", "í", "ó", "ú", "ñ", "¿", "¡"], fr: ["é", "è", "ê", "à", "ç", "ô", "î"] }, N0 = /\s*\[(\d+(?:\s*[,–-]\s*\d+)*)\]/g, Wl = /^#{1,6}\s+/;
+  const Gl = { hr: ["č", "ć", "š", "ž", "đ"], de: ["ä", "ö", "ü", "ß"], es: ["á", "é", "í", "ó", "ú", "ñ", "¿", "¡"], fr: ["é", "è", "ê", "à", "ç", "ô", "î"] }, P0 = /\s*\[(\d+(?:\s*[,–-]\s*\d+)*)\]/g, Wl = /^#{1,6}\s+/;
   function mr(t) {
     return t.map((e) => {
       var _a3, _b3;
@@ -6277,14 +6277,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         }
         const o = r === 0 && s ? i.text.replace(Wl, "") : i.text;
         let a = 0;
-        for (const c of o.matchAll(N0)) c.index > a && n.push({ text: o.slice(a, c.index) }), n.push({ text: c[1].replace(/\s+/g, ""), cite: true }), a = c.index + c[0].length;
+        for (const c of o.matchAll(P0)) c.index > a && n.push({ text: o.slice(a, c.index) }), n.push({ text: c[1].replace(/\s+/g, ""), cite: true }), a = c.index + c[0].length;
         a < o.length && n.push({ text: o.slice(a) });
       }), { runs: n, heading: s };
     });
   }
-  const P0 = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  function R0(t, e) {
-    const s = new RegExp("(?<![\\p{L}\\p{N}])".concat(P0(e), "(?![\\p{L}\\p{N}])"), "u").exec(t);
+  const R0 = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  function D0(t, e) {
+    const s = new RegExp("(?<![\\p{L}\\p{N}])".concat(R0(e), "(?![\\p{L}\\p{N}])"), "u").exec(t);
     if (s) return { start: s.index, end: s.index + s[0].length };
     const n = t.indexOf(e);
     return n < 0 ? null : { start: n, end: n + e.length };
@@ -6298,7 +6298,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         for (let a = 0; a < o.length; a++) {
           const c = o[a];
           if (c.link || c.gloss || c.cite) continue;
-          const l = R0(c.text, i.term);
+          const l = D0(c.text, i.term);
           if (!l) continue;
           const u = [];
           l.start > 0 && u.push({ text: c.text.slice(0, l.start) }), u.push({ text: c.text.slice(l.start, l.end), gloss: i }), l.end < c.text.length && u.push({ text: c.text.slice(l.end) }), o.splice(a, 1, ...u), r = true;
@@ -6309,14 +6309,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return s;
   }
   let Hl = 0;
-  const D0 = (t, e) => e ? t("gloss.pos.".concat(e)) : "";
+  const L0 = (t, e) => e ? t("gloss.pos.".concat(e)) : "";
   function kr(t) {
     const e = "gloss-pop-".concat(++Hl), s = d("strong", { class: "gloss-lemma", testid: "gloss-lemma" }), n = d("span", { class: "gloss-pos", testid: "gloss-pos" }), i = d("p", { class: "gloss-text", testid: "gloss-text" }), r = d("p", { class: "gloss-note", testid: "gloss-note" });
     let o = null;
     const a = d("div", { class: "gloss-pop", id: e, role: "status", testid: "gloss-popover", hidden: true }, d("div", { class: "gloss-head" }, s, n), i, r, T("gloss-close", "×", () => c.hide(), { class: "gloss-close", "aria-label": t("gloss.close") })), c = { el: a, show(l, u) {
       var _a3, _b3;
       if (o === l && !a.hidden) return c.hide();
-      c.hide(), o = l, s.textContent = (_a3 = u.lemma) != null ? _a3 : u.term, n.textContent = D0(t, u.pos), n.hidden = !u.pos, i.textContent = u.gloss, r.textContent = (_b3 = u.note) != null ? _b3 : "", r.hidden = !u.note, a.hidden = false, l.setAttribute("aria-expanded", "true");
+      c.hide(), o = l, s.textContent = (_a3 = u.lemma) != null ? _a3 : u.term, n.textContent = L0(t, u.pos), n.hidden = !u.pos, i.textContent = u.gloss, r.textContent = (_b3 = u.note) != null ? _b3 : "", r.hidden = !u.note, a.hidden = false, l.setAttribute("aria-expanded", "true");
       const h = a.parentElement;
       if (h) {
         const p = l.getBoundingClientRect(), f = h.getBoundingClientRect(), m = Math.min(a.offsetWidth || 280, f.width);
@@ -6332,14 +6332,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
     }), c;
   }
-  function L0(t, e, s = {}) {
+  function C0(t, e, s = {}) {
     const n = "gloss-d-".concat(++Hl), i = T("gloss-".concat(t.id), t.term, () => e.show(i, t), { class: "gloss".concat(s.off ? " is-off" : ""), "aria-expanded": "false", "aria-controls": e.el.id, "aria-describedby": n });
     return i.addEventListener("keydown", (r) => {
       r.key === "Escape" && e.hide();
     }), [i, d("span", { class: "sr-only", id: n }, ": ".concat(t.gloss))];
   }
   function br(t, e, s, n, i = false) {
-    return d(i ? "h3" : "p", i ? { class: "enc-subhead" } : {}, t.map((r) => r.cite ? d("sup", { class: "enc-cite" }, r.text) : r.gloss ? L0(r.gloss, e, { off: (n == null ? void 0 : n.has(r.gloss.id)) === true }) : r.link && s ? s(r.link, r.text) : r.text));
+    return d(i ? "h3" : "p", i ? { class: "enc-subhead" } : {}, t.map((r) => r.cite ? d("sup", { class: "enc-cite" }, r.text) : r.gloss ? C0(r.gloss, e, { off: (n == null ? void 0 : n.has(r.gloss.id)) === true }) : r.link && s ? s(r.link, r.text) : r.text));
   }
   function Cn(t, e, s) {
     return s === false ? [...e] : gs(e, t.rng);
@@ -6368,8 +6368,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = t.data.pack.assets.find((i) => i.id === e), n = t.assetUrl(e);
     return !s || s.kind !== "image" || !n ? null : d("figure", { class: "item-figure" }, d("img", { src: n, alt: t.assetAlt(e), testid: "item-image", loading: "eager" }));
   }
-  let C0 = 0;
-  function Z0(t, e) {
+  let Z0 = 0;
+  function U0(t, e) {
     var _a3, _b3, _c2, _d2;
     const s = bl(t.item);
     if (!s) return null;
@@ -6382,7 +6382,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (y === void 0 || $ === void 0) return [];
       const x = w.lemma ? t.text.text(w.lemma) : void 0, _ = w.note ? t.text.text(w.note) : void 0;
       return [{ id: w.id, term: y, gloss: $, ...x ? { lemma: x } : {}, ...w.pos ? { pos: w.pos } : {}, ..._ ? { note: _ } : {} }];
-    }), p = "passage-".concat(++C0), f = kr(t.ui), m = mr(l.map((w) => [{ text: w }])), g = gr(m.map((w) => w.runs), h), k = d("div", { class: "passage-panel gloss-scope", id: p, role: "region", "aria-label": "".concat(t.ui("passage.title"), ": ").concat(t.text.t(i.title)), testid: "passage-panel", hidden: !e }, d("p", { class: "passage-title" }, t.text.t(i.title)), g.map((w, y) => {
+    }), p = "passage-".concat(++Z0), f = kr(t.ui), m = mr(l.map((w) => [{ text: w }])), g = gr(m.map((w) => w.runs), h), k = d("div", { class: "passage-panel gloss-scope", id: p, role: "region", "aria-label": "".concat(t.ui("passage.title"), ": ").concat(t.text.t(i.title)), testid: "passage-panel", hidden: !e }, d("p", { class: "passage-title" }, t.text.t(i.title)), g.map((w, y) => {
       var _a4;
       return br(w, f, void 0, void 0, (_a4 = m[y]) == null ? void 0 : _a4.heading);
     }), f.el), b = T("passage-toggle", "", () => v(k.hidden), { class: "btn btn-small btn-ghost passage-toggle", "aria-controls": p });
@@ -6391,9 +6391,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return v(e), d("div", { class: "passage", testid: "passage", "data-article": i.id }, b, k);
   }
-  function U0(t) {
+  function B0(t) {
     return { ...t, render(e) {
-      const s = t.render(e), n = Z0(e, e.passageOpen === true);
+      const s = t.render(e), n = U0(e, e.passageOpen === true);
       return n ? { el: d("div", { class: "with-passage" }, n, s.el), focus: () => s.focus(), reveal: (i, r) => s.reveal(i, r), ...s.key ? { key: (i) => {
         var _a3, _b3;
         return (_b3 = (_a3 = s.key) == null ? void 0 : _a3.call(s, i)) != null ? _b3 : false;
@@ -6403,63 +6403,63 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       } } : s;
     } };
   }
-  const B0 = "1.0.0";
-  function F0(t = typeof location > "u" ? "" : location.search) {
+  const F0 = "1.0.0";
+  function K0(t = typeof location > "u" ? "" : location.search) {
     const e = new URLSearchParams(t).get("seed"), s = e === null ? NaN : Number(e);
     return Number.isInteger(s) && s >= 0 && s < 2 ** 31 ? s : Math.floor(Math.random() * 2 ** 31);
   }
   const Yl = (t) => "edu-studio:shell:".concat(t);
-  function K0(t, e, s = Ws) {
+  function q0(t, e, s = Ws) {
     const n = (r) => Array.isArray(e) ? e.includes(r) : e.has(r), i = [...new Set(t)].filter(n);
     return i.length > 0 ? i : n(s) ? [s] : [];
   }
-  function q0(t) {
+  function G0(t) {
     const e = new URLSearchParams(t.search).get("shell");
     for (const s of [e, t.saved, t.dataShell]) if (s && t.playable.includes(s)) return s;
     return t.playable[0];
   }
-  const G0 = (t) => {
+  const W0 = (t) => {
     try {
       return window.localStorage.getItem(t);
     } catch (e) {
       return null;
     }
-  }, W0 = (t, e) => {
+  }, H0 = (t, e) => {
     try {
       window.localStorage.setItem(t, e);
     } catch (e2) {
     }
-  }, H0 = (t) => {
+  }, V0 = (t) => {
     const e = t;
     return !!e && e.format === Wd && typeof e.pack == "object" && e.pack !== null && typeof e.catalogs == "object" && e.catalogs !== null;
   };
-  function V0() {
+  function Y0() {
     const t = /* @__PURE__ */ new Map(), e = /* @__PURE__ */ new Map();
     let s = { screen: "loading", shell: "", lang: "", seed: 0, combo: 0, score: 0, reviewQueue: [], mastery: {}, finished: false, steps: 0 }, n = null, i = null, r = null, o = null, a = 0;
-    const c = () => r ? K0(r.pack.shells.enabled, [...t.keys()], r.shell || Ws) : [], l = (p, f, m = "en") => {
+    const c = () => r ? q0(r.pack.shells.enabled, [...t.keys()], r.shell || Ws) : [], l = (p, f, m = "en") => {
       s = { ...s, screen: "error" };
       const g = Os(m);
       p && (p.classList.add("edu-stage"), p.setAttribute("data-edu-theme", "chalkboard"), Ts(p), p.appendChild(d("div", { class: "edu-error", role: "alert", testid: "error" }, d("h1", {}, g("error")), d("p", {}, f)))), console.error("[EduEngine] ".concat(f));
-    }, u = { version: B0, registerShell(p, f) {
+    }, u = { version: F0, registerShell(p, f) {
       t.set(p, f);
     }, registerItemKind(p, f) {
-      e.set(p, U0(f));
+      e.set(p, B0(f));
     }, getState() {
       return JSON.parse(JSON.stringify(s));
-    }, debug: Object.defineProperty(I0(() => s), "shell", { enumerable: true, get: () => i != null ? i : void 0 }), playableShells: () => c(), start() {
+    }, debug: Object.defineProperty(M0(() => s), "shell", { enumerable: true, get: () => i != null ? i : void 0 }), playableShells: () => c(), start() {
       if (n) return;
       o = document.getElementById(ro);
       const p = window.EDU_GAME_DATA;
       if (!o) return l(null, "the page has no #".concat(ro, " element"));
-      if (!H0(p)) return l(o, "game-data.js did not define window.EDU_GAME_DATA");
-      r = p, a = F0();
-      const f = q0({ search: typeof location > "u" ? "" : location.search, playable: c(), saved: G0(Yl(r.pack.id)), dataShell: r.shell || Ws });
+      if (!V0(p)) return l(o, "game-data.js did not define window.EDU_GAME_DATA");
+      r = p, a = K0();
+      const f = G0({ search: typeof location > "u" ? "" : location.search, playable: c(), saved: W0(Yl(r.pack.id)), dataShell: r.shell || Ws });
       if (!f) return l(o, 'no shell "'.concat(r.shell || Ws, '" is registered'), r.defaultLang);
       h(f);
     }, switchShell(p) {
       var _a3;
       if (!(!r || !o || !n || !c().includes(p))) {
-        W0(Yl(r.pack.id), p);
+        H0(Yl(r.pack.id), p);
         try {
           (_a3 = n.unmount) == null ? void 0 : _a3.call(n);
         } catch (f) {
@@ -6504,13 +6504,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const [u, h] of i) h.disabled = true, u === s ? at(h, true, t) : u === String(l) && at(h, false, t);
     } };
   }
-  const Y0 = { kind: "mcq", render(t) {
+  const J0 = { kind: "mcq", render(t) {
     const e = t.item, s = Cn(t, e.options, e.shuffle).map((n) => ({ id: n.id, text: t.text.t(n.text) }));
     return wr(t, s, e.answer);
-  } }, J0 = { kind: "true-false", render(t) {
+  } }, Q0 = { kind: "true-false", render(t) {
     const e = t.item;
     return wr(t, [{ id: "true", text: t.ui("fb.true") }, { id: "false", text: t.ui("fb.false") }], String(e.answer), (s) => s === "true");
-  } }, Q0 = { kind: "multi-select", render(t) {
+  } }, X0 = { kind: "multi-select", render(t) {
     const e = t.item, s = Cn(t, e.options, e.shuffle), n = /* @__PURE__ */ new Set(), i = /* @__PURE__ */ new Map();
     let r = false;
     const o = () => {
@@ -6569,16 +6569,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       s.key === "Escape" && e.button.getAttribute("aria-pressed") === "true" && (s.preventDefault(), s.stopPropagation(), e.stop());
     });
   }
-  const X0 = /* @__PURE__ */ new Set(["praesens", "perfekt", "praeteritum", "futur1", "imperativ", "konjunktiv2", "passiv-praesens", "passiv-praeteritum", "perfekt-passiv", "konjunktiv2-vergangenheit", "konjunktiv1", "konjunktiv1-vergangenheit"]);
-  function eS(t, e) {
+  const eS = /* @__PURE__ */ new Set(["praesens", "perfekt", "praeteritum", "futur1", "imperativ", "konjunktiv2", "passiv-praesens", "passiv-praeteritum", "perfekt-passiv", "konjunktiv2-vergangenheit", "konjunktiv1", "konjunktiv1-vergangenheit"]);
+  function tS(t, e) {
     const s = t.forms.filter((i) => !i.given).map((i) => i.person);
     if (t.ask === void 0 || t.ask >= s.length) return s;
     const n = new Set(gs(s, e.rng).slice(0, t.ask));
     return s.filter((i) => n.has(i));
   }
-  const tS = { kind: "conjugation", render(t) {
+  const sS = { kind: "conjugation", render(t) {
     var _a3, _b3, _c2;
-    const e = t.item, s = new Set(eS(e, t)), n = /* @__PURE__ */ new Map(), i = /* @__PURE__ */ new Map();
+    const e = t.item, s = new Set(tS(e, t)), n = /* @__PURE__ */ new Map(), i = /* @__PURE__ */ new Map();
     let r = false, o = null;
     const a = e.forms.filter((y) => s.has(y.person)).map((y) => y.person), c = () => a.every((y) => {
       var _a4, _b4;
@@ -6607,7 +6607,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const _ = d("td", { class: "conj-result", testid: "conj-".concat(y.person, "-result"), "aria-live": "polite" }), z = d("tr", { class: "conj-row" }, d("th", { scope: "row", class: "conj-label" }, $), d("td", { class: "conj-cell" }, x), _);
       i.set(y.person, z), h.appendChild(z);
     }
-    const p = "conj.tense.".concat(e.tense), f = X0.has(e.tense) ? t.ui(p) : e.tense, m = d("div", { class: "conj-head" }, d("p", { class: "conj-verb", testid: "conj-verb", lang: (_c2 = t.data.pack.targetLang) != null ? _c2 : t.lang }, t.text.t(e.verb)), d("span", { class: "badge conj-tense", testid: "conj-tense" }, f)), g = d("table", { class: "conj-table", "aria-label": "".concat(t.text.t(e.verb), ", ").concat(f) }, h), k = T("check", t.ui("submit"), u, { class: "btn btn-primary", disabled: true }), b = vr(t, () => {
+    const p = "conj.tense.".concat(e.tense), f = eS.has(e.tense) ? t.ui(p) : e.tense, m = d("div", { class: "conj-head" }, d("p", { class: "conj-verb", testid: "conj-verb", lang: (_c2 = t.data.pack.targetLang) != null ? _c2 : t.lang }, t.text.t(e.verb)), d("span", { class: "badge conj-tense", testid: "conj-tense" }, f)), g = d("table", { class: "conj-table", "aria-label": "".concat(t.text.t(e.verb), ", ").concat(f) }, h), k = T("check", t.ui("submit"), u, { class: "btn btn-primary", disabled: true }), b = vr(t, () => {
       var _a4, _b4;
       return (_b4 = o != null ? o : n.get((_a4 = a[0]) != null ? _a4 : "")) != null ? _b4 : null;
     }), v = yr(t, () => {
@@ -6632,7 +6632,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         !O && R && z.appendChild(d("span", { class: "conj-answer", testid: "conj-answer-".concat(x) }, R));
       }
     } };
-  } }, Sr = "_", xe = (t, e) => "".concat(t, ",").concat(e), Ql = (t) => Zi(t).toUpperCase().replace(/[^A-Z0-9]/g, ""), sS = { kind: "crossword", render(t) {
+  } }, Sr = "_", xe = (t, e) => "".concat(t, ",").concat(e), Ql = (t) => Zi(t).toUpperCase().replace(/[^A-Z0-9]/g, ""), nS = { kind: "crossword", render(t) {
     var _a3, _b3, _c2;
     const e = t.item, { grid: s } = _c(e, t.check), n = new Map(e.words.map((S) => [S.id, t.text.t(S.clue)])), i = /* @__PURE__ */ new Map(), r = /* @__PURE__ */ new Map(), o = /* @__PURE__ */ new Map(), a = (S) => Array.from({ length: S.length }, (A, j) => [S.row + (S.dir === "down" ? j : 0), S.col + (S.dir === "across" ? j : 0)]);
     for (const S of s.entries) for (const [A, j] of a(S)) o.set(xe(A, j), [...(_a3 = o.get(xe(A, j))) != null ? _a3 : [], S]);
@@ -6702,7 +6702,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     const y = s.entries[0] ? r.get(xe(s.entries[0].row, s.entries[0].col)) : void 0;
     y && v(y);
-    const $ = /* @__PURE__ */ new Map(), { across: x, down: _ } = ab(s), z = (S, A) => d("section", { class: "cw-clues" }, d("h2", {}, A), d("ol", {}, S.map((j) => {
+    const $ = /* @__PURE__ */ new Map(), { across: x, down: _ } = cb(s), z = (S, A) => d("section", { class: "cw-clues" }, d("h2", {}, A), d("ol", {}, S.map((j) => {
       var _a4, _b4;
       const I = d("input", { type: "text", class: "word-input", maxlength: j.length, autocomplete: "off", autocapitalize: "characters", autocorrect: "off", spellcheck: "false", testid: "word-".concat(j.id), "aria-label": "".concat(j.number, " ").concat(t.ui(j.dir === "across" ? "cross.across" : "cross.down"), ": ").concat((_a4 = n.get(j.id)) != null ? _a4 : "", " (").concat(j.length, ")") });
       u.set(j.id, I), I.addEventListener("focus", () => {
@@ -6747,7 +6747,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         }).join("")), j && at(j, ((_c3 = S.detail) == null ? void 0 : _c3[A.id]) === true, t);
       }
     } };
-  } }, nS = { kind: "flashcard", ownsPrompt: true, render(t) {
+  } }, iS = { kind: "flashcard", ownsPrompt: true, render(t) {
     const e = t.item;
     let s = false, n = false;
     const i = t.item.asset && t.assetUrl(t.item.asset) ? d("img", { class: "flash-img", src: t.assetUrl(t.item.asset), alt: t.assetAlt(t.item.asset) }) : null, r = e.backAsset && t.assetUrl(e.backAsset) ? d("img", { class: "flash-img", src: t.assetUrl(e.backAsset), alt: t.assetAlt(e.backAsset) }) : null, o = d("span", { class: "flash-face flash-front", testid: "flash-front" }, d("span", { class: "flash-text" }, t.text.t(e.prompt)), i), a = d("span", { class: "flash-face flash-back", testid: "flash-back", "aria-hidden": "true" }, d("span", { class: "flash-text" }, t.text.t(e.back)), r), c = d("span", { class: "sr-only" }, " — ".concat(t.ui("flip"))), l = T("flip", [d("span", { class: "flash-inner" }, o, a), c], () => m(), { class: "flash-card" }), u = /* @__PURE__ */ new Map();
@@ -6768,17 +6768,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (const [v, w] of u) w.disabled = true, w.setAttribute("aria-pressed", String(v === b)), v === b && w.classList.add("is-chosen");
     } };
   } };
-  function iS(t) {
+  function rS(t) {
     return t.type === "circle" ? de("circle", { cx: t.cx, cy: t.cy, r: t.r }) : t.type === "rect" ? de("rect", { x: t.x, y: t.y, width: t.w, height: t.h, rx: 4 }) : de("polygon", { points: t.points.map(([e, s]) => "".concat(e, ",").concat(s)).join(" ") });
   }
-  const rS = { kind: "hotspot", render(t) {
+  const oS = { kind: "hotspot", render(t) {
     const e = t.item, s = t.assetUrl(e.asset);
     let n = false;
     const i = de("svg", { class: "hotspot-svg", viewBox: "0 0 ".concat(e.width, " ").concat(e.height), role: "group", "aria-label": t.assetAlt(e.asset) || t.ui("picture"), testid: "hotspot" });
     s && i.appendChild(de("image", { href: s, x: 0, y: 0, width: e.width, height: e.height, preserveAspectRatio: "xMidYMid meet" }));
     const r = /* @__PURE__ */ new Map();
     for (const l of e.regions) {
-      const u = iS(l.shape);
+      const u = rS(l.shape);
       u.classList.add("region"), u.setAttribute("data-region", l.id), u.setAttribute("data-testid", "region-".concat(l.id)), u.setAttribute("role", "button"), u.setAttribute("tabindex", "0"), u.setAttribute("aria-label", t.text.t(l.label)), u.addEventListener("keydown", (h) => {
         (h.key === "Enter" || h.key === " ") && (h.preventDefault(), o(l.id));
       }), r.set(l.id, u), i.appendChild(u);
@@ -6822,7 +6822,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const r = vr(t, () => s), o = yr(t, () => s);
     return Jl(s, o), { el: d("div", { class: "typed" }, d("div", { class: "typed-row" }, s, o == null ? void 0 : o.button, n), o == null ? void 0 : o.status, r), input: s, submit: n, mic: o };
   }
-  const oS = [Y0, J0, Q0, { kind: "cloze", render(t) {
+  const aS = [J0, Q0, X0, { kind: "cloze", render(t) {
     const e = t.item, s = /* @__PURE__ */ new Map(), n = /* @__PURE__ */ new Map(), i = /* @__PURE__ */ new Map();
     let r = false, o = null;
     const a = () => e.gaps.every((z) => {
@@ -6979,7 +6979,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     } };
   } }, { kind: "order", render(t) {
     const e = t.item, s = new Map(e.items.map((p) => [p.id, p]));
-    let n = Ab(e, t.seed), i = false, r = -1;
+    let n = Tb(e, t.seed), i = false, r = -1;
     const o = d("ol", { class: "order-list", "aria-label": t.text.t(e.prompt), testid: "order-list" }), a = (p, f, m, g) => {
       var _a3;
       if (i || f < 0 || f >= n.length || p === f) return;
@@ -7065,7 +7065,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         }
       }
     } };
-  } }, rS, { kind: "listening", render(t) {
+  } }, oS, { kind: "listening", render(t) {
     var _a3;
     const e = t.item, s = t.assetUrl(e.asset), n = d("audio", { preload: "auto", testid: "audio", ...s ? { src: s } : {} }), i = d("p", { class: "audio-status", role: "status" });
     let r = false;
@@ -7104,7 +7104,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       var _a4, _b3;
       (_a4 = c.mic) == null ? void 0 : _a4.stop(), n.pause(), (_b3 = t.duck) == null ? void 0 : _b3.call(t, false);
     } };
-  } }, nS, sS, { kind: "word-search", render(t) {
+  } }, iS, nS, { kind: "word-search", render(t) {
     var _a3, _b3, _c2, _d2;
     const e = t.item, { grid: s, words: n } = mn(t.item, t.check), i = [], r = /* @__PURE__ */ new Set(), o = [];
     let a = null, c = [0, 0], l = false;
@@ -7191,8 +7191,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
       for (const x of e.words) r.has(x.id) || ((_b4 = b.get(x.id)) == null ? void 0 : _b4.classList.add("is-missed"));
     } };
-  } }, tS], aS = (t, e) => "".concat(t, "/").concat(e);
-  function cS(t) {
+  } }, sS], cS = (t, e) => "".concat(t, "/").concat(e);
+  function lS(t) {
     var _a3;
     const e = (_a3 = t.extensions) == null ? void 0 : _a3.gloss;
     if (typeof e != "object" || e === null) return null;
@@ -7200,19 +7200,19 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return typeof s.article == "string" && typeof s.entry == "string" ? { article: s.article, entry: s.entry } : null;
   }
   function tu(t, e) {
-    const s = cS(t);
-    return s !== null && e.has(aS(s.article, s.entry));
+    const s = lS(t);
+    return s !== null && e.has(cS(s.article, s.entry));
   }
-  function lS(t, e) {
+  function uS(t, e) {
     const s = new Set(e);
     return new Set(t.filter((n) => tu(n, s)).map((n) => n.id));
   }
-  const su = "edu-student-result", nu = 1, $r = 60, uS = 400, dS = /^[A-Za-z0-9][A-Za-z0-9_.:-]{0,79}$/, Zn = E().regex(dS), zr = E().max(40).regex(/^\d{4}-\d{2}-\d{2}(T[0-9:.]+(Z|[+-]\d{2}:?\d{2})?)?$/, "an ISO date such as 2026-11-20").refine((t) => Number.isFinite(Date.parse(t)), "not a real date"), hS = F({ id: E().min(1).max(60), title: E().min(1).max(120), units: N(Zn).max(200).default([]), targetStars: L().int().min(1).max(3).default(2), due: zr.optional(), message: E().max(uS).optional(), createdAt: zr });
-  function pS(t) {
+  const su = "edu-student-result", nu = 1, $r = 60, dS = 400, hS = /^[A-Za-z0-9][A-Za-z0-9_.:-]{0,79}$/, Zn = E().regex(hS), zr = E().max(40).regex(/^\d{4}-\d{2}-\d{2}(T[0-9:.]+(Z|[+-]\d{2}:?\d{2})?)?$/, "an ISO date such as 2026-11-20").refine((t) => Number.isFinite(Date.parse(t)), "not a real date"), pS = F({ id: E().min(1).max(60), title: E().min(1).max(120), units: N(Zn).max(200).default([]), targetStars: L().int().min(1).max(3).default(2), due: zr.optional(), message: E().max(dS).optional(), createdAt: zr });
+  function fS(t) {
     var _a3;
     const e = (_a3 = t == null ? void 0 : t.classroom) == null ? void 0 : _a3.assignment;
     if (e == null) return null;
-    const s = hS.safeParse(e);
+    const s = pS.safeParse(e);
     return s.success ? s.data : null;
   }
   function iu(t, e) {
@@ -7221,7 +7221,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const n = s.filter((i) => e.units.includes(i));
     return n.length ? n : s;
   }
-  const ru = F({ stars: L().int().min(0).max(3), best: L().min(0).max(1), rounds: L().int().min(0).max(1e6) }), fS = F({ schema: se(nu), kind: se(su), courseId: E().min(1).max(120), assignmentId: E().min(1).max(60).optional(), student: F({ name: E().min(1).max($r), id: E().min(1).max(80) }), exportedAt: zr, units: Q(Zn, ru), boss: ru, answered: L().int().min(0).max(1e9), right: L().int().min(0).max(1e9), queue: N(Zn).max(2e3), missed: Q(Zn, L().int().min(1).max(1e5)), playSeconds: L().int().min(0).max(36e6) });
+  const ru = F({ stars: L().int().min(0).max(3), best: L().min(0).max(1), rounds: L().int().min(0).max(1e6) }), mS = F({ schema: se(nu), kind: se(su), courseId: E().min(1).max(120), assignmentId: E().min(1).max(60).optional(), student: F({ name: E().min(1).max($r), id: E().min(1).max(80) }), exportedAt: zr, units: Q(Zn, ru), boss: ru, answered: L().int().min(0).max(1e9), right: L().int().min(0).max(1e9), queue: N(Zn).max(2e3), missed: Q(Zn, L().int().min(1).max(1e5)), playSeconds: L().int().min(0).max(36e6) });
   function ts(t) {
     return typeof t != "string" ? "" : t.replace(/[\u0000-\u001f\u007f-\u009f]/g, " ").replace(/\s+/g, " ").trim().slice(0, $r).trim();
   }
@@ -7229,7 +7229,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     var _a3, _b3, _c2, _d2, _e2, _f2;
     return { stars: Math.max((_a3 = t == null ? void 0 : t.stars) != null ? _a3 : 0, (_b3 = e == null ? void 0 : e.stars) != null ? _b3 : 0), best: Math.max((_c2 = t == null ? void 0 : t.best) != null ? _c2 : 0, (_d2 = e == null ? void 0 : e.best) != null ? _d2 : 0), rounds: ((_e2 = t == null ? void 0 : t.rounds) != null ? _e2 : 0) + ((_f2 = e == null ? void 0 : e.rounds) != null ? _f2 : 0) };
   };
-  function mS(t, e, s) {
+  function gS(t, e, s) {
     var _a3, _b3, _c2, _d2, _e2;
     const n = {};
     let i = Un(e.boss, void 0);
@@ -7243,9 +7243,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const [l, u] of Object.entries(e.cards)) r.has(l) && u.lapses > 0 && (a[l] = u.lapses);
     for (const l of o) a[l] = Math.max(1, (_c2 = a[l]) != null ? _c2 : 0);
     const c = Math.max(0, Math.round(e.answered));
-    return fS.parse({ schema: nu, kind: su, courseId: t.id, ...s.assignmentId ? { assignmentId: s.assignmentId } : {}, student: { name: ts(s.name) || "Student", id: s.id }, exportedAt: ((_d2 = s.now) != null ? _d2 : /* @__PURE__ */ new Date()).toISOString(), units: n, boss: i, answered: c, right: Math.min(c, Math.max(0, Math.round(e.right))), queue: o, missed: a, playSeconds: Math.max(0, Math.round((_e2 = e.playSeconds) != null ? _e2 : 0)) });
+    return mS.parse({ schema: nu, kind: su, courseId: t.id, ...s.assignmentId ? { assignmentId: s.assignmentId } : {}, student: { name: ts(s.name) || "Student", id: s.id }, exportedAt: ((_d2 = s.now) != null ? _d2 : /* @__PURE__ */ new Date()).toISOString(), units: n, boss: i, answered: c, right: Math.min(c, Math.max(0, Math.round(e.right))), queue: o, missed: a, playSeconds: Math.max(0, Math.round((_e2 = e.playSeconds) != null ? _e2 : 0)) });
   }
-  const _r = 1, ou = "edu-progress", gS = 2, au = 36e4, kS = 2e5, cu = () => ({ units: {}, boss: Bn(), finished: false }), Bn = () => ({ stars: 0, best: 0, rounds: 0 });
+  const _r = 1, ou = "edu-progress", kS = 2, au = 36e4, bS = 2e5, cu = () => ({ units: {}, boss: Bn(), finished: false }), Bn = () => ({ stars: 0, best: 0, rounds: 0 });
   function Ps(t) {
     return { version: _r, pack: t, units: {}, boss: Bn(), cards: {}, queue: [], score: 0, bestCombo: 0, answered: 0, right: 0, settings: { timer: false, sound: true, reduceAudio: false, speak: true, musicVolume: 100, sfxVolume: 100, voiceVolume: 100 }, updatedAt: 0, shells: {} };
   }
@@ -7254,7 +7254,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }
   const Fn = (t, e) => {
     var _a3, _b3;
-    return ((_b3 = (_a3 = t.units[e]) == null ? void 0 : _a3.stars) != null ? _b3 : 0) >= gS;
+    return ((_b3 = (_a3 = t.units[e]) == null ? void 0 : _a3.stars) != null ? _b3 : 0) >= kS;
   };
   function Kn(t, e, s) {
     const n = t.units.find((i) => i.id === s);
@@ -7287,11 +7287,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const e = (_a3 = t.shells.encyclopedia) == null ? void 0 : _a3.data, s = typeof e == "object" && e !== null && !Array.isArray(e) ? e.glossOff : void 0;
     return new Set(Array.isArray(s) ? s.filter((n) => typeof n == "string") : []);
   }
-  const bS = (t) => JSON.stringify({ format: ou, version: _r, pack: t.pack, progress: t }, null, 2), Ye = (t) => typeof t == "object" && t !== null && !Array.isArray(t), Er = (t) => typeof t == "number" && Number.isFinite(t) ? Math.min(100, Math.max(0, Math.round(t))) : 100, ss = (t, e, s, n) => typeof t == "number" && Number.isFinite(t) ? Math.min(s, Math.max(e, t)) : n, ct = (t, e, s, n) => Math.round(ss(t, e, s, n));
+  const vS = (t) => JSON.stringify({ format: ou, version: _r, pack: t.pack, progress: t }, null, 2), Ye = (t) => typeof t == "object" && t !== null && !Array.isArray(t), Er = (t) => typeof t == "number" && Number.isFinite(t) ? Math.min(100, Math.max(0, Math.round(t))) : 100, ss = (t, e, s, n) => typeof t == "number" && Number.isFinite(t) ? Math.min(s, Math.max(e, t)) : n, ct = (t, e, s, n) => Math.round(ss(t, e, s, n));
   function qn(t) {
     return Ye(t) ? { stars: ct(t.stars, 0, 3, 0), best: ss(t.best, 0, 1, 0), rounds: ct(t.rounds, 0, 1e6, 0) } : Bn();
   }
-  function vS(t, e) {
+  function wS(t, e) {
     if (!Ye(e)) return null;
     const s = bc(t, 0);
     return { id: t, ease: ss(e.ease, 1.3, 5, s.ease), interval: ss(e.interval, 0, 36500, 0), reps: ct(e.reps, 0, 1e4, 0), lapses: ct(e.lapses, 0, 1e4, 0), due: ss(e.due, 0, 864e13, 0), last: typeof e.last == "number" && Number.isFinite(e.last) ? e.last : null };
@@ -7314,7 +7314,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const o = new Set(e.items.map((a) => a.id));
     if (Ye(n.cards)) for (const [a, c] of Object.entries(n.cards)) {
       if (!o.has(a)) continue;
-      const l = vS(a, c);
+      const l = wS(a, c);
       l && (i.cards[a] = l);
     }
     if (Array.isArray(n.queue) && (i.queue = [...new Set(n.queue.filter((a) => typeof a == "string" && o.has(a)))]), i.score = ct(n.score, 0, 1e9, 0), i.bestCombo = ct(n.bestCombo, 0, 1e5, 0), i.answered = ct(n.answered, 0, 1e9, 0), i.right = Math.min(i.answered, ct(n.right, 0, 1e9, 0)), Ye(n.settings) && (i.settings = { timer: n.settings.timer === true, sound: n.settings.sound !== false, reduceAudio: n.settings.reduceAudio === true, speak: n.settings.speak !== false, musicVolume: Er(n.settings.musicVolume), sfxVolume: Er(n.settings.sfxVolume), voiceVolume: Er(n.settings.voiceVolume), ...typeof n.settings.lang == "string" ? { lang: n.settings.lang } : {}, ...ts(n.settings.name) ? { name: ts(n.settings.name) } : {}, ...typeof n.settings.studentId == "string" && /^[A-Za-z0-9_-]{6,64}$/.test(n.settings.studentId) ? { studentId: n.settings.studentId } : {} }), n.playSeconds !== void 0 && (i.playSeconds = ct(n.playSeconds, 0, au, 0)), i.updatedAt = ss(n.updatedAt, 0, 864e13, 0), Ye(n.shells)) for (const [a, c] of Object.entries(n.shells)) {
@@ -7323,14 +7323,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (Ye(c.units)) for (const [u, h] of Object.entries(c.units)) r.has(u) && (l.units[u] = qn(h));
       if (l.boss = qn(c.boss), l.finished = c.finished === true, c.data !== void 0) try {
         const u = JSON.stringify(c.data);
-        u !== void 0 && u.length <= kS && (l.data = JSON.parse(u));
+        u !== void 0 && u.length <= bS && (l.data = JSON.parse(u));
       } catch (e2) {
       }
       i.shells[a] = l;
     }
     return { ok: true, progress: i };
   }
-  const bu = (t) => t.answered > 0 || Object.keys(t.units).length > 0 || t.boss.rounds > 0, wS = (t, e) => {
+  const bu = (t) => t.answered > 0 || Object.keys(t.units).length > 0 || t.boss.rounds > 0, yS = (t, e) => {
     const s = t.shells[e];
     return !!s && (Object.keys(s.units).length > 0 || s.boss.rounds > 0 || s.finished || s.data !== void 0);
   }, Ar = (t) => "edu-studio:progress:".concat(t);
@@ -7377,11 +7377,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return null;
     }
   }
-  const Tr = (t) => pS(t.extensions), yu = (t, e) => {
+  const Tr = (t) => fS(t.extensions), yu = (t, e) => {
     const s = Tr(t);
     return !!s && iu(t, s).includes(e);
   };
-  function yS() {
+  function SS() {
     const t = new Uint8Array(12);
     try {
       crypto.getRandomValues(t);
@@ -7390,27 +7390,27 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return Array.from(t, (e) => e.toString(16).padStart(2, "0")).join("");
   }
-  const SS = (t) => t.normalize("NFKD").replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "student";
-  function $S(t) {
+  const $S = (t) => t.normalize("NFKD").replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "student";
+  function zS(t) {
     const e = new Date(t);
     return Number.isFinite(e.getTime()) ? e.toLocaleDateString() : t.slice(0, 10);
   }
-  function zS(t) {
+  function _S(t) {
     var _a3;
     const e = Tr(t.pack);
     let s = t.getProgress();
     const n = ts(s.settings.name);
     if (!n) return t.say(t.ui("class.needName"), "bad");
-    const i = (_a3 = s.settings.studentId) != null ? _a3 : yS();
+    const i = (_a3 = s.settings.studentId) != null ? _a3 : SS();
     i !== s.settings.studentId && (s = { ...s, settings: { ...s.settings, studentId: i } }, t.setProgress(s), t.save());
     try {
-      const r = mS(t.pack, s, { name: n, id: i, ...e ? { assignmentId: e.id } : {} }), o = new Blob([JSON.stringify(r, null, 2)], { type: "application/json" }), a = URL.createObjectURL(o), c = d("a", { href: a, download: "".concat(t.pack.slug, "-").concat(SS(n), "-result.json"), class: "sr-only" });
+      const r = gS(t.pack, s, { name: n, id: i, ...e ? { assignmentId: e.id } : {} }), o = new Blob([JSON.stringify(r, null, 2)], { type: "application/json" }), a = URL.createObjectURL(o), c = d("a", { href: a, download: "".concat(t.pack.slug, "-").concat($S(n), "-result.json"), class: "sr-only" });
       document.body.appendChild(c), c.click(), c.remove(), window.setTimeout(() => URL.revokeObjectURL(a), 2e3), t.say(t.ui("class.sent"), "ok");
     } catch (r) {
       t.say(String(r instanceof Error ? r.message : r), "bad");
     }
   }
-  function _S(t) {
+  function jS(t) {
     var _a3;
     const e = Tr(t.pack);
     if (!e) return null;
@@ -7423,7 +7423,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     } }), a = d("p", { class: "assignment-message", testid: "assignment-message" });
     e.message && (a.textContent = e.message);
     const c = d("h2", { class: "assignment-title" });
-    return c.textContent = e.title, d("section", { class: "assignment-banner", testid: "assignment-banner", "aria-label": s("class.assignment") }, d("p", { class: "eyebrow" }, s("class.assignment")), c, d("p", { class: "assignment-target", testid: "assignment-target" }, r), e.due ? d("p", { class: "assignment-due", testid: "assignment-due" }, s("class.due", { date: $S(e.due) })) : null, e.message ? a : null, d("div", { class: "student-box" }, d("label", { class: "student-label" }, d("span", {}, s("class.yourName")), o), T("send-teacher", s("class.send"), () => zS(t), { class: "btn btn-small" })));
+    return c.textContent = e.title, d("section", { class: "assignment-banner", testid: "assignment-banner", "aria-label": s("class.assignment") }, d("p", { class: "eyebrow" }, s("class.assignment")), c, d("p", { class: "assignment-target", testid: "assignment-target" }, r), e.due ? d("p", { class: "assignment-due", testid: "assignment-due" }, s("class.due", { date: zS(e.due) })) : null, e.message ? a : null, d("div", { class: "student-box" }, d("label", { class: "student-label" }, d("span", {}, s("class.yourName")), o), T("send-teacher", s("class.send"), () => _S(t), { class: "btn btn-small" })));
   }
   class Su {
     constructor(e, s, n) {
@@ -7459,7 +7459,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.flush();
     }
   }
-  const jS = 0.4, xS = 0.3, $u = 400, zu = 40, _u = 180, ES = 60, AS = { "level-up": ["level-up", "unit-complete"], "unit-complete": ["unit-complete", "level-up"] }, ju = ["pointerdown", "keydown", "touchstart"], Rs = (t) => Math.min(1, Math.max(0, t));
+  const xS = 0.4, ES = 0.3, $u = 400, zu = 40, _u = 180, AS = 60, TS = { "level-up": ["level-up", "unit-complete"], "unit-complete": ["unit-complete", "level-up"] }, ju = ["pointerdown", "keydown", "touchstart"], Rs = (t) => Math.min(1, Math.max(0, t));
   function Pt(t) {
     return ((typeof t == "number" && Number.isFinite(t) ? Math.min(100, Math.max(0, t)) : 100) / 100) ** 1.6;
   }
@@ -7509,7 +7509,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
     }
     volumeOf(e) {
-      return Rs(e.cueVolume * Pt(this.o.settings().musicVolume) * (this.ducked ? xS : 1));
+      return Rs(e.cueVolume * Pt(this.o.settings().musicVolume) * (this.ducked ? ES : 1));
     }
     setArea(e) {
       this.wanted = e, this.apply();
@@ -7541,7 +7541,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const o = (_a3 = this.o.loops) == null ? void 0 : _a3[n.asset];
       o && o.endSec > o.startSec && (r.loopTimer = setInterval(() => {
         i.currentTime >= o.endSec - 0.05 && (i.currentTime = o.startSec);
-      }, ES)), this.attempt(i), this.fadeTo(r, this.volumeOf(r), $u);
+      }, AS)), this.attempt(i), this.fadeTo(r, this.volumeOf(r), $u);
     }
     stopTrack(e) {
       const s = this.track;
@@ -7580,12 +7580,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       var _a3;
       const s = this.o.settings();
       if (!s.sound || Pt(s.sfxVolume) === 0) return;
-      const n = (_a3 = AS[e]) != null ? _a3 : [e];
+      const n = (_a3 = TS[e]) != null ? _a3 : [e];
       for (const i of this.o.cues.filter((r) => n.includes(r.on) && !r.loop)) {
         const r = this.o.assets[i.asset];
         if (r) try {
           const o = this.create(r);
-          o.volume = Rs(i.volume * Pt(s.sfxVolume) * (s.reduceAudio ? jS : 1)), o.addEventListener("error", () => this.report(r)), this.attempt(o);
+          o.volume = Rs(i.volume * Pt(s.sfxVolume) * (s.reduceAudio ? xS : 1)), o.addEventListener("error", () => this.report(r)), this.attempt(o);
         } catch (e2) {
           this.report(r);
         }
@@ -7595,12 +7595,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (this.wanted = null, this.clip = null, this.stopTrack(true), this.gesture) for (const e of ju) this.gesture.removeEventListener(e, this.onGesture, { capture: true });
     }
   }
-  const TS = /\.(mp3|ogg|wav|m4a|opus)(\?.*)?$/i, Au = (t) => TS.test(t) || t.startsWith("data:audio/");
+  const IS = /\.(mp3|ogg|wav|m4a|opus)(\?.*)?$/i, Au = (t) => IS.test(t) || t.startsWith("data:audio/");
   function Tu(t, e) {
     const s = new Set(t.map((n) => n.asset));
     return { music: t.some((n) => n.on.startsWith("music:")), sfx: t.some((n) => !n.on.startsWith("music:") && !n.loop), voice: Object.entries(e).some(([n, i]) => Au(i) && !s.has(n)) };
   }
-  const Iu = (t, e) => t.length > 0 || Object.values(e).some(Au), IS = [{ key: "musicVolume", id: "setting-music-volume", label: "audio.music", channel: "music" }, { key: "sfxVolume", id: "setting-sfx-volume", label: "audio.sfx", channel: "sfx" }, { key: "voiceVolume", id: "setting-voice-volume", label: "audio.voice", channel: "voice" }], MS = (t) => t instanceof HTMLInputElement && t.type === "range", OS = (t) => t.key === "Escape" || t.key === "BrowserBack" || t.key === "GoBack" || t.keyCode === 4 || t.keyCode === 461 || t.keyCode === 10009;
+  const Iu = (t, e) => t.length > 0 || Object.values(e).some(Au), MS = [{ key: "musicVolume", id: "setting-music-volume", label: "audio.music", channel: "music" }, { key: "sfxVolume", id: "setting-sfx-volume", label: "audio.sfx", channel: "sfx" }, { key: "voiceVolume", id: "setting-voice-volume", label: "audio.voice", channel: "voice" }], OS = (t) => t instanceof HTMLInputElement && t.type === "range", NS = (t) => t.key === "Escape" || t.key === "BrowserBack" || t.key === "GoBack" || t.keyCode === 4 || t.keyCode === 461 || t.keyCode === 10009;
   class Mu {
     constructor(e) {
       __publicField(this, "host");
@@ -7613,7 +7613,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         const s = this.panelEl;
         if (!this.isOpen || !(s == null ? void 0 : s.isConnected)) return this.unlisten();
         const n = e.target instanceof Node && s.contains(e.target);
-        if (OS(e)) {
+        if (NS(e)) {
           e.stopPropagation(), e.preventDefault(), this.close();
           return;
         }
@@ -7662,7 +7662,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     showPanel() {
       const e = this.app;
       if (!e) return;
-      const s = this.host.ui, n = IS.filter((u) => this.host.channels[u.channel]).map((u) => this.sliderRow(u)), i = this.host.settings().sound, r = T("audio-mute", s("audio.mute"), () => {
+      const s = this.host.ui, n = MS.filter((u) => this.host.channels[u.channel]).map((u) => this.sliderRow(u)), i = this.host.settings().sound, r = T("audio-mute", s("audio.mute"), () => {
         var _a3;
         const u = !this.host.settings().sound;
         this.host.update({ sound: u }), this.host.refresh(), r.setAttribute("aria-pressed", String(!u));
@@ -7694,7 +7694,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return false;
       const n = e.target;
       if (e.key === "Enter" && n instanceof HTMLInputElement && n.type === "checkbox") return e.stopPropagation(), e.preventDefault(), n.click(), true;
-      const i = !MS(n), r = e.key === "ArrowDown" || e.key === "ArrowRight" && i ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" && i ? -1 : 0;
+      const i = !OS(n), r = e.key === "ArrowDown" || e.key === "ArrowRight" && i ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" && i ? -1 : 0;
       if (!r) return false;
       const o = [...s.querySelectorAll("input, button")].filter((a) => !a.disabled);
       return e.stopPropagation(), e.preventDefault(), (_a3 = o[o.indexOf(n) + r]) == null ? void 0 : _a3.focus({ preventScroll: true }), true;
@@ -7706,7 +7706,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.listening && (this.listening = false, window.removeEventListener("keydown", this.onKey, true));
     }
   }
-  const Ou = (t) => typeof t == "object" && t !== null && !Array.isArray(t) ? t : {}, NS = (t, e) => t.replace(/\{\{([^}]+)\}\}/g, (s, n) => e(n));
+  const Ou = (t) => typeof t == "object" && t !== null && !Array.isArray(t) ? t : {}, PS = (t, e) => t.replace(/\{\{([^}]+)\}\}/g, (s, n) => e(n));
   function Ds(t, e) {
     var _a3;
     const { text: s, ui: n } = e, i = (r) => s.t(r);
@@ -7726,7 +7726,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           var _a4;
           return [a.id, (_a4 = s.canonical(a.answer)) != null ? _a4 : "?"];
         }));
-        return [NS(i(r.text), (a) => {
+        return [PS(i(r.text), (a) => {
           var _a4;
           return (_a4 = o.get(a)) != null ? _a4 : "?";
         })];
@@ -7777,7 +7777,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return [];
     }
   }
-  function PS(t, e, s) {
+  function RS(t, e, s) {
     var _a3, _b3, _c2, _d2;
     const n = (i) => i && s.hasText(i) ? [s.t(i)] : [];
     switch (t.kind) {
@@ -7812,25 +7812,25 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return [];
     }
   }
-  const RS = (t) => t === "order" ? "fb.detail.order" : t === "sort-groups" ? "fb.detail.sort" : t === "cloze" ? "fb.detail.gaps" : t === "conjugation" ? "fb.detail.forms" : t === "crossword" || t === "word-search" ? "fb.detail.words" : "fb.matched";
+  const DS = (t) => t === "order" ? "fb.detail.order" : t === "sort-groups" ? "fb.detail.sort" : t === "cloze" ? "fb.detail.gaps" : t === "conjugation" ? "fb.detail.forms" : t === "crossword" || t === "word-search" ? "fb.detail.words" : "fb.matched";
   function Nu(t, e, s, n, i = false) {
     var _a3;
     const { text: r, ui: o } = n, a = i ? "timeout" : s.correct ? "correct" : s.partial ? "partial" : "wrong", c = o("praise.".concat(n.rng.randint(1, 5))), l = a === "correct" ? s.typo || s.diacritics || s.translit || s.caps ? o("verdict.correct") : c : o(a === "timeout" ? "verdict.timeout" : a === "partial" ? "verdict.partial" : "verdict.wrong"), u = Ds(t, n), h = [], p = typeof s.expected == "string" ? s.expected : u.join(" ");
     s.typo && h.push(o("fb.typo", { a: p })), s.diacritics && h.push(o(s.correct ? "fb.accents" : "fb.accents.strict", { a: p })), s.translit && h.push(o("fb.note.translit", { a: p })), s.caps && h.push(o("fb.note.caps", { a: p }));
     const f = s.detail && !s.correct && !i ? Object.values(s.detail) : void 0;
-    return { verdict: a, title: l, whys: s.correct || i ? [] : PS(t, e, r), explanation: (_a3 = r.text(t.explanation)) != null ? _a3 : "", answer: s.correct && t.kind !== "flashcard" && !(t.kind === "order" && t.timeline) ? [] : u, ...s.correct && t.didYouKnow && r.hasText(t.didYouKnow) ? { dyk: r.t(t.didYouKnow) } : {}, notes: h, ...f && f.length > 1 ? { detail: o(RS(t.kind), { n: f.filter(Boolean).length, total: f.length }) } : {} };
+    return { verdict: a, title: l, whys: s.correct || i ? [] : RS(t, e, r), explanation: (_a3 = r.text(t.explanation)) != null ? _a3 : "", answer: s.correct && t.kind !== "flashcard" && !(t.kind === "order" && t.timeline) ? [] : u, ...s.correct && t.didYouKnow && r.hasText(t.didYouKnow) ? { dyk: r.t(t.didYouKnow) } : {}, notes: h, ...f && f.length > 1 ? { detail: o(DS(t.kind), { n: f.filter(Boolean).length, total: f.length }) } : {} };
   }
-  const DS = /^https?:\/\/(127\.0\.0\.1|localhost|\[::1\])(:\d{1,5})?(\/.*)?$/i, LS = F({ enabled: J().optional(), whisperUrl: E().regex(DS).optional() });
-  function CS(t, e) {
-    const s = t == null ? void 0 : t.speaking, n = LS.safeParse(s && typeof s == "object" ? s : {}), i = n.success ? n.data : {}, r = e ? i.enabled !== false : false;
+  const LS = /^https?:\/\/(127\.0\.0\.1|localhost|\[::1\])(:\d{1,5})?(\/.*)?$/i, CS = F({ enabled: J().optional(), whisperUrl: E().regex(LS).optional() });
+  function ZS(t, e) {
+    const s = t == null ? void 0 : t.speaking, n = CS.safeParse(s && typeof s == "object" ? s : {}), i = n.success ? n.data : {}, r = e ? i.enabled !== false : false;
     return { enabled: r, ...r && i.whisperUrl ? { whisperUrl: i.whisperUrl } : {} };
   }
-  function ZS(t) {
+  function US(t) {
     var _a3;
     const e = t;
     return (_a3 = e.SpeechRecognition) != null ? _a3 : e.webkitSpeechRecognition;
   }
-  function US(t, e) {
+  function BS(t, e) {
     return { kind: "web", lang: e, start(s) {
       let n, i = "", r = false;
       try {
@@ -7854,7 +7854,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     } };
   }
   const Ir = 16e3;
-  function BS(t) {
+  function FS(t) {
     var _a3;
     const e = t[0];
     if (!e) return new Float32Array(0);
@@ -7864,7 +7864,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (let n = 0; n < s.length; n++) s[n] = s[n] / t.length;
     return s;
   }
-  function FS(t, e, s) {
+  function KS(t, e, s) {
     if (e === s || t.length === 0) return t;
     const n = Math.max(1, Math.round(t.length * s / e)), i = new Float32Array(n), r = e / s;
     for (let o = 0; o < n; o++) {
@@ -7873,8 +7873,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return i;
   }
-  function KS(t, e) {
-    const s = FS(BS(t), e, Ir), n = s.length * 2, i = new ArrayBuffer(44 + n), r = new DataView(i), o = (a, c) => {
+  function qS(t, e) {
+    const s = KS(FS(t), e, Ir), n = s.length * 2, i = new ArrayBuffer(44 + n), r = new DataView(i), o = (a, c) => {
       for (let l = 0; l < c.length; l++) r.setUint8(a + l, c.charCodeAt(l));
     };
     o(0, "RIFF"), r.setUint32(4, 36 + n, true), o(8, "WAVE"), o(12, "fmt "), r.setUint32(16, 16, true), r.setUint16(20, 1, true), r.setUint16(22, 1, true), r.setUint32(24, Ir, true), r.setUint32(28, Ir * 2, true), r.setUint16(32, 2, true), r.setUint16(34, 16, true), o(36, "data"), r.setUint32(40, n, true);
@@ -7891,7 +7891,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.code = e;
     }
   }
-  async function qS(t, e, s, n = {}) {
+  async function GS(t, e, s, n = {}) {
     var _a3, _b3;
     const i = (_a3 = n.fetchImpl) != null ? _a3 : fetch, r = new AbortController(), o = setTimeout(() => r.abort(), (_b3 = n.timeoutMs) != null ? _b3 : 3e4);
     try {
@@ -7906,19 +7906,19 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       clearTimeout(o);
     }
   }
-  const GS = 3e4;
-  function WS(t) {
+  const WS = 3e4;
+  function HS(t) {
     var _a3, _b3, _c2;
     const e = t;
     return !!((_a3 = e.AudioContext) != null ? _a3 : e.webkitAudioContext) && !!((_c2 = (_b3 = t.navigator) == null ? void 0 : _b3.mediaDevices) == null ? void 0 : _c2.getUserMedia);
   }
-  function HS(t) {
+  function VS(t) {
     const e = new Float32Array(t.reduce((n, i) => n + i.length, 0));
     let s = 0;
     for (const n of t) e.set(n, s), s += n.length;
     return e;
   }
-  function VS(t, e, s) {
+  function YS(t, e, s) {
     return { kind: "whisper", lang: s, start(n) {
       var _a3;
       const i = t, r = (_a3 = i.AudioContext) != null ? _a3 : i.webkitAudioContext, o = [];
@@ -7934,7 +7934,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         if (p(), o.length === 0) return n.onState("error", "no-speech");
         n.onState("thinking");
         try {
-          const g = await qS(e, KS([HS(o)], m), s);
+          const g = await GS(e, qS([VS(o)], m), s);
           g && n.onText(g), g ? n.onState("idle") : n.onState("error", "no-speech");
         } catch (g) {
           n.onState("error", g instanceof Ls ? g.code : "failed");
@@ -7949,7 +7949,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             h || o.push(new Float32Array(g.inputBuffer.getChannelData(0)));
           }, m.connect(l), l.connect(c.destination), u = setTimeout(() => {
             f();
-          }, GS);
+          }, WS);
         } catch (m) {
           h = true, p(), n.onState("error", m.name === "NotAllowedError" ? "denied" : "unavailable");
         }
@@ -7959,17 +7959,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     } };
   }
   function Pu(t, e, s) {
-    const n = CS(e, s);
+    const n = ZS(e, s);
     if (!n.enabled || !s) return;
-    if (n.whisperUrl && WS(t)) return VS(t, n.whisperUrl, s);
-    const i = ZS(t);
-    return i ? US(i, s) : void 0;
+    if (n.whisperUrl && HS(t)) return YS(t, n.whisperUrl, s);
+    const i = US(t);
+    return i ? BS(i, s) : void 0;
   }
-  const YS = 2, JS = 7, QS = 10, XS = 30, Mr = (t, e, s, n) => typeof t == "number" && Number.isFinite(t) ? Math.min(s, Math.max(e, Math.round(t))) : n;
+  const JS = 2, QS = 7, XS = 10, e1 = 30, Mr = (t, e, s, n) => typeof t == "number" && Number.isFinite(t) ? Math.min(s, Math.max(e, Math.round(t))) : n;
   function Or(t) {
     var _a3;
     const e = (_a3 = t.shells.config["quiz-arena"]) != null ? _a3 : {};
-    return { roundLength: Mr(e.roundLength, 3, 12, JS), bossLength: Mr(e.bossLength, 4, 20, QS), timerSeconds: Mr(e.timerSeconds, 5, 120, XS) };
+    return { roundLength: Mr(e.roundLength, 3, 12, QS), bossLength: Mr(e.bossLength, 4, 20, XS), timerSeconds: Mr(e.timerSeconds, 5, 120, e1) };
   }
   function Nr(t, e) {
     const s = new Set(hn(t, e).map((n) => n.id));
@@ -7980,13 +7980,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = t.items.find((n) => n.id === e);
     return (_a3 = t.objectives.find((n) => n.id === (s == null ? void 0 : s.objective))) == null ? void 0 : _a3.unit;
   };
-  function e1(t) {
+  function t1(t) {
     var _a3, _b3;
     const e = (_b3 = (_a3 = t.extensions) == null ? void 0 : _a3.language) == null ? void 0 : _b3.verbUnits;
     return Array.isArray(e) ? e.filter((s) => typeof s == "string") : [];
   }
   function Pr(t) {
-    const e = new Set(e1(t));
+    const e = new Set(t1(t));
     if (e.size === 0) return [];
     const s = new Set(t.objectives.filter((n) => e.has(n.unit)).map((n) => n.id));
     return t.items.filter((n) => n.kind === "conjugation" && s.has(n.objective));
@@ -7994,16 +7994,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Du(t, e, s) {
     return Pr(t).filter((n) => Gn(e[n.id], s)).length;
   }
-  function t1(t, e, s, n) {
+  function s1(t, e, s, n) {
     const i = Pr(t), r = i.filter((l) => Gn(e[l.id], s)).sort((l, u) => e[l.id].due - e[u.id].due), o = i.filter((l) => e[l.id] === void 0 || e[l.id].last === null), a = new Set([...r, ...o].map((l) => l.id)), c = i.filter((l) => !a.has(l.id)).sort((l, u) => e[l.id].ease - e[u.id].ease);
     return [...r, ...o, ...c].slice(0, Math.max(0, n)).map((l) => l.id);
   }
-  function s1(t, e, s = {}) {
+  function n1(t, e, s = {}) {
     var _a3, _b3, _c2, _d2, _e2, _f2;
     const n = Or(t), i = (_a3 = s.exclude) != null ? _a3 : /* @__PURE__ */ new Set();
     let r, o;
     if (e === "unit") r = Nr(t, (_b3 = s.unitId) != null ? _b3 : "").map((a) => a.id).filter((a) => !i.has(a)), o = Math.min(n.roundLength, r.length);
-    else if (e === "verbs") r = t1(t, (_c2 = s.cards) != null ? _c2 : {}, (_d2 = s.now) != null ? _d2 : 0, n.roundLength), o = r.length;
+    else if (e === "verbs") r = s1(t, (_c2 = s.cards) != null ? _c2 : {}, (_d2 = s.now) != null ? _d2 : 0, n.roundLength), o = r.length;
     else if (e === "boss") r = t.items.map((a) => a.id).filter((a) => !i.has(a)), o = Math.min(n.bossLength, r.length);
     else {
       const a = new Set(t.items.map((c) => c.id));
@@ -8011,7 +8011,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return { kind: e, ...s.unitId ? { unitId: s.unitId } : {}, size: o, pool: r, asked: [], session: wc(), adaptive: Tc((_f2 = s.difficulty) != null ? _f2 : e === "boss" ? 4 : 3), results: [], dueTaken: 0 };
   }
-  function n1(t, e = {}) {
+  function i1(t, e = {}) {
     var _a3, _b3, _c2;
     const s = [...new Set(t)], n = (_a3 = e.kind) != null ? _a3 : "unit";
     return { kind: n, ...e.unitId ? { unitId: e.unitId } : {}, size: Math.max(0, Math.min((_b3 = e.size) != null ? _b3 : s.length, s.length)), pool: s, asked: [], session: wc(), adaptive: Tc((_c2 = e.difficulty) != null ? _c2 : n === "boss" ? 4 : 3), results: [], dueTaken: 0 };
@@ -8024,7 +8024,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       let l = t.pool.map((m) => r.get(m)).filter((m) => m !== void 0);
       const u = l.filter((m) => Gn(n[m.id], i));
       u.length > 0 && t.dueTaken < Math.ceil(t.size / 2) && (l = u);
-      const h = o ? r.get(o.id) : void 0, p = h ? l.filter((m) => m.id === h.id || m.kind === h.kind || t.kind === "boss" && Ru(e, m.id) === Ru(e, h.id)).map((m) => m.id) : [], f = t.kind === "verbs" ? l[0] : qb(l.map((m) => ({ id: m.id, difficulty: m.difficulty })), t.adaptive, s, p);
+      const h = o ? r.get(o.id) : void 0, p = h ? l.filter((m) => m.id === h.id || m.kind === h.kind || t.kind === "boss" && Ru(e, m.id) === Ru(e, h.id)).map((m) => m.id) : [], f = t.kind === "verbs" ? l[0] : Gb(l.map((m) => ({ id: m.id, difficulty: m.difficulty })), t.adaptive, s, p);
       if (f) return { id: f.id, retry: false };
     }
     const c = [...t.session.pending].sort((l, u) => l.dueAt - u.dueAt)[0];
@@ -8032,10 +8032,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }
   function Rr(t, e, s, n, i, r = {}, o = 0) {
     var _a3;
-    let a = fb(t.session, e.id, i);
-    ((_a3 = a.misses[e.id]) != null ? _a3 : 0) > YS && (a = { ...a, pending: a.pending.filter((l) => l.id !== e.id) });
+    let a = mb(t.session, e.id, i);
+    ((_a3 = a.misses[e.id]) != null ? _a3 : 0) > JS && (a = { ...a, pending: a.pending.filter((l) => l.id !== e.id) });
     const c = !e.retry;
-    return { ...t, session: a, adaptive: Kb(t.adaptive, n.correct), pool: c ? t.pool.filter((l) => l !== e.id) : t.pool, asked: c ? [...t.asked, e.id] : t.asked, dueTaken: c && Gn(r[e.id], o) ? t.dueTaken + 1 : t.dueTaken, results: [...t.results, { id: e.id, kind: s.kind, retry: e.retry, correct: n.correct, score: n.score, grade: i }] };
+    return { ...t, session: a, adaptive: qb(t.adaptive, n.correct), pool: c ? t.pool.filter((l) => l !== e.id) : t.pool, asked: c ? [...t.asked, e.id] : t.asked, dueTaken: c && Gn(r[e.id], o) ? t.dueTaken + 1 : t.dueTaken, results: [...t.results, { id: e.id, kind: s.kind, retry: e.retry, correct: n.correct, score: n.score, grade: i }] };
   }
   function Dr(t) {
     const e = t.results.filter((s) => !s.retry);
@@ -8045,7 +8045,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Cu(t, e, s) {
     return t.kind === "flashcard" && gc(e) ? e : s.correct ? s.partial || s.typo || s.diacritics ? "hard" : "good" : t.kind === "conjugation" && s.partial && s.score >= 0.5 ? "hard" : "again";
   }
-  function i1(t) {
+  function r1(t) {
     var _a3;
     return t.kind === "flashcard" || t.kind === "crossword" || t.kind === "word-search" || t.kind === "typed" || t.kind === "conjugation" ? false : t.kind === "listening" ? t.mode !== "type" : t.kind === "cloze" ? ((_a3 = t.gaps) != null ? _a3 : []).every((e) => e.bank !== void 0) : true;
   }
@@ -8063,22 +8063,22 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return o;
     };
   }
-  function r1(t, e, s, n) {
+  function o1(t, e, s, n) {
     return e ? d("label", { class: "toggle" }, d("input", { type: "checkbox", testid: "setting-speak", ...s ? { checked: true } : {}, onchange: (i) => n(i.target.checked) }), d("span", { class: "toggle-text" }, d("b", {}, t("speak.setting")), d("small", { testid: "speak-privacy" }, t(e.kind === "whisper" ? "speak.privacy.local" : "speak.privacy.web")))) : null;
   }
-  const Ze = (t, e = {}) => de("path", { d: t, ...e }), Bu = (t, e, s, n = {}) => de("circle", { cx: t, cy: e, r: s, ...n }), o1 = { "quiz-arena": () => [Bu(16, 17, 11), Ze("M16 10v7l4 3"), Ze("M13 3h6")], encyclopedia: () => [Ze("M16 8c-3-2-7-2.5-11-2v18c4-.5 8 0 11 2 3-2 7-2.5 11-2V6c-4-.5-8 0-11 2z"), Ze("M16 8v18")], mindmaze: () => [Ze("M5 27V9h4v3h4V9h6v3h4V9h4v18z"), Ze("M13 27v-7a3 3 0 0 1 6 0v7")], rpg: () => [Ze("M7 25 22 10l3-6 3 3-6 3L7 25"), Ze("M5 27l3-3M9 21l3 3")], roleplay: () => [Ze("M4 6h15a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H11l-4 4v-4H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"), Ze("M24 12h2a2 2 0 0 1 2 2v7a1 1 0 0 1-1 1h-3v3l-4-3h-5")], detective: () => [Bu(13, 13, 8), Ze("M19 19l9 9")] };
-  function a1(t) {
+  const Ze = (t, e = {}) => de("path", { d: t, ...e }), Bu = (t, e, s, n = {}) => de("circle", { cx: t, cy: e, r: s, ...n }), a1 = { "quiz-arena": () => [Bu(16, 17, 11), Ze("M16 10v7l4 3"), Ze("M13 3h6")], encyclopedia: () => [Ze("M16 8c-3-2-7-2.5-11-2v18c4-.5 8 0 11 2 3-2 7-2.5 11-2V6c-4-.5-8 0-11 2z"), Ze("M16 8v18")], mindmaze: () => [Ze("M5 27V9h4v3h4V9h6v3h4V9h4v18z"), Ze("M13 27v-7a3 3 0 0 1 6 0v7")], rpg: () => [Ze("M7 25 22 10l3-6 3 3-6 3L7 25"), Ze("M5 27l3-3M9 21l3 3")], roleplay: () => [Ze("M4 6h15a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H11l-4 4v-4H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"), Ze("M24 12h2a2 2 0 0 1 2 2v7a1 1 0 0 1-1 1h-3v3l-4-3h-5")], detective: () => [Bu(13, 13, 8), Ze("M19 19l9 9")] };
+  function c1(t) {
     var _a3, _b3;
-    const e = de("svg", { viewBox: "0 0 32 32", width: 32, height: 32, fill: "none", stroke: "currentColor", "stroke-width": 2, "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true", focusable: "false", class: "mode-icon" }), s = (_b3 = (_a3 = o1[t]) == null ? void 0 : _a3.call(o1)) != null ? _b3 : [Ze("M16 4l3.7 7.8 8.3 1-6.1 5.8 1.6 8.4L16 22.8 8.5 27l1.6-8.4L4 12.8l8.3-1z")];
+    const e = de("svg", { viewBox: "0 0 32 32", width: 32, height: 32, fill: "none", stroke: "currentColor", "stroke-width": 2, "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true", focusable: "false", class: "mode-icon" }), s = (_b3 = (_a3 = a1[t]) == null ? void 0 : _a3.call(a1)) != null ? _b3 : [Ze("M16 4l3.7 7.8 8.3 1-6.1 5.8 1.6 8.4L16 22.8 8.5 27l1.6-8.4L4 12.8l8.3-1z")];
     for (const n of s) e.appendChild(n);
     return e;
   }
-  const c1 = "menu";
+  const l1 = "menu";
   function Wn(t, e, s) {
-    const n = e === "title" ? c1 : s;
+    const n = e === "title" ? l1 : s;
     t.getAttribute("data-edu-theme") !== n && t.setAttribute("data-edu-theme", n);
   }
-  const l1 = (t) => {
+  const u1 = (t) => {
     try {
       const e = new Intl.DisplayNames([t], { type: "language" }).of(t);
       return e ? e.charAt(0).toLocaleUpperCase(t) + e.slice(1) : t.toUpperCase();
@@ -8088,16 +8088,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }, Cr = (t, e) => {
     const s = t(e);
     return s && s !== e ? s : void 0;
-  }, u1 = (t, e) => {
+  }, d1 = (t, e) => {
     var _a3;
     return (_a3 = Cr(t, "mode.".concat(e, ".name"))) != null ? _a3 : e;
   }, ns = () => ({ confirmReset: false, message: null });
-  function d1(t) {
+  function h1(t) {
     if (t.shells.length < 2) return null;
     const e = t.ui;
     return d("div", { class: "mode-picker", role: "group", "aria-label": e("start.choose"), testid: "shell-picker" }, d("p", { class: "mode-picker-label", "aria-hidden": "true" }, e("start.choose")), d("div", { class: "mode-grid" }, t.shells.map((s) => {
       var _a3;
-      return T("shell-".concat(s), [d("span", { class: "mode-pictogram" }, a1(s)), d("span", { class: "mode-text" }, d("b", { class: "mode-name" }, u1(e, s)), d("small", { class: "mode-blurb" }, (_a3 = Cr(e, "mode.".concat(s, ".blurb"))) != null ? _a3 : "")), d("span", { class: "mode-dot", "aria-hidden": "true" })], () => {
+      return T("shell-".concat(s), [d("span", { class: "mode-pictogram" }, c1(s)), d("span", { class: "mode-text" }, d("b", { class: "mode-name" }, d1(e, s)), d("small", { class: "mode-blurb" }, (_a3 = Cr(e, "mode.".concat(s, ".blurb"))) != null ? _a3 : "")), d("span", { class: "mode-dot", "aria-hidden": "true" })], () => {
         s !== t.shellId && t.switchShell(s);
       }, { class: "mode-card", "data-mode": s, "aria-pressed": String(s === t.shellId) });
     })));
@@ -8111,13 +8111,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       n.message = { text: y, kind: $ }, s();
     }, c = (y) => {
       t.progress = { ...t.progress, settings: { ...t.progress.settings, ...y } }, t.save();
-    }, l = r.languages.length > 1 ? d("div", { class: "lang-picker", role: "group", "aria-label": i("language"), testid: "lang-picker" }, r.languages.map((y) => T("lang-".concat(y), l1(y), () => {
+    }, l = r.languages.length > 1 ? d("div", { class: "lang-picker", role: "group", "aria-label": i("language"), testid: "lang-picker" }, r.languages.map((y) => T("lang-".concat(y), u1(y), () => {
       t.setLang(y), s();
     }, { class: "chip", "aria-pressed": String(y === t.lang), lang: y }))) : null, u = r.cues.length ? Fu("setting-sound", i("sound"), null, !!t.progress.settings.sound, (y) => {
       c({ sound: y }), t.refreshAudio();
     }) : null, h = r.cues.length ? Fu("setting-reduce-audio", i("reduceAudio"), i("reduceAudio.hint"), !!t.progress.settings.reduceAudio, (y) => {
       c({ reduceAudio: y }), t.refreshAudio();
-    }) : null, p = r1(i, t.speechService, t.progress.settings.speak !== false, (y) => c({ speak: y })), f = d("input", { type: "file", accept: "application/json,.json", class: "sr-only", testid: "import-file", tabindex: "-1", "aria-label": i("import"), onchange: (y) => {
+    }) : null, p = o1(i, t.speechService, t.progress.settings.speak !== false, (y) => c({ speak: y })), f = d("input", { type: "file", accept: "application/json,.json", class: "sr-only", testid: "import-file", tabindex: "-1", "aria-label": i("import"), onchange: (y) => {
       var _a4;
       const $ = (_a4 = y.target.files) == null ? void 0 : _a4[0];
       $ && $.text().then((x) => {
@@ -8129,7 +8129,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }, () => a(i("import.bad", { why: "unreadable" }), "bad"));
     } }), m = () => {
       try {
-        const y = new Blob([bS(t.progress)], { type: "application/json" }), $ = URL.createObjectURL(y), x = d("a", { href: $, download: "".concat(r.slug, "-progress.json"), class: "sr-only" });
+        const y = new Blob([vS(t.progress)], { type: "application/json" }), $ = URL.createObjectURL(y), x = d("a", { href: $, download: "".concat(r.slug, "-progress.json"), class: "sr-only" });
         document.body.appendChild(x), x.click(), x.remove(), window.setTimeout(() => URL.revokeObjectURL($), 2e3), a(i("export.done"), "ok");
       } catch (y) {
         a(String(y instanceof Error ? y.message : y), "bad");
@@ -8143,11 +8143,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }, { class: "btn btn-small btn-ghost" }), k = r.subject.charAt(0).toLocaleUpperCase() + r.subject.slice(1), b = n.message;
     n.message = null;
     const v = e.settings || u || h || p ? d("div", { class: "settings" }, (_a3 = e.settings) != null ? _a3 : null, u, h, p) : null, w = Cr(i, "mode.".concat(t.shellId, ".blurb"));
-    return d("section", { class: "title-screen start-screen shell-title shell-title-".concat(t.shellId) }, d("header", { class: "start-head" }, w ? d("p", { class: "eyebrow", testid: "mode-blurb" }, w) : null, d("h1", { class: "screen-title", tabindex: "-1", testid: "course-title" }, o), o.toLocaleLowerCase() === r.subject.toLocaleLowerCase() ? null : d("p", { class: "subject", testid: "course-subject" }, k), d("p", { class: "audience" }, r.audience)), _S({ pack: r, ui: i, unitTitle: (y) => t.unitTitle(y), getProgress: () => t.progress, setProgress: (y) => {
+    return d("section", { class: "title-screen start-screen shell-title shell-title-".concat(t.shellId) }, d("header", { class: "start-head" }, w ? d("p", { class: "eyebrow", testid: "mode-blurb" }, w) : null, d("h1", { class: "screen-title", tabindex: "-1", testid: "course-title" }, o), o.toLocaleLowerCase() === r.subject.toLocaleLowerCase() ? null : d("p", { class: "subject", testid: "course-subject" }, k), d("p", { class: "audience" }, r.audience)), jS({ pack: r, ui: i, unitTitle: (y) => t.unitTitle(y), getProgress: () => t.progress, setProgress: (y) => {
       t.progress = y;
-    }, save: () => t.save(), say: a }), l, d1(t), v, d("div", { class: "actions actions-center" }, T("start", (_b3 = e.startLabel) != null ? _b3 : t.started ? i("continue") : i("start"), () => e.onStart(), { class: "btn btn-primary btn-big", ...n.confirmReset ? {} : { "data-autofocus": "" } })), d("div", { class: "progress-tools", role: "group", "aria-label": i("export") + " / " + i("import") }, T("export", i("export"), m, { class: "btn btn-small btn-ghost" }), T("import", i("import"), () => f.click(), { class: "btn btn-small btn-ghost" }), f, g), b ? d("p", { class: "message message-".concat(b.kind), role: "status", testid: "title-message" }, b.text) : null, t.persistent ? null : d("p", { class: "message message-bad", testid: "storage-warning" }, i("storage.off")));
+    }, save: () => t.save(), say: a }), l, h1(t), v, d("div", { class: "actions actions-center" }, T("start", (_b3 = e.startLabel) != null ? _b3 : t.started ? i("continue") : i("start"), () => e.onStart(), { class: "btn btn-primary btn-big", ...n.confirmReset ? {} : { "data-autofocus": "" } })), d("div", { class: "progress-tools", role: "group", "aria-label": i("export") + " / " + i("import") }, T("export", i("export"), m, { class: "btn btn-small btn-ghost" }), T("import", i("import"), () => f.click(), { class: "btn btn-small btn-ghost" }), f, g), b ? d("p", { class: "message message-".concat(b.kind), role: "status", testid: "title-message" }, b.text) : null, t.persistent ? null : d("p", { class: "message message-bad", testid: "storage-warning" }, i("storage.off")));
   }
-  const h1 = (t, e) => {
+  const p1 = (t, e) => {
     var _a3;
     const s = t.pack.languages;
     if (e && s.includes(e)) return e;
@@ -8157,8 +8157,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (r) return r;
     }
     return s.includes(t.defaultLang) ? t.defaultLang : s[0];
-  }, p1 = /* @__PURE__ */ new Set(["hotspot", "listening", "flashcard"]);
-  function f1(t, e) {
+  }, f1 = /* @__PURE__ */ new Set(["hotspot", "listening", "flashcard"]);
+  function m1(t, e) {
     return t === "end" ? "end" : e.roundKind === "boss" ? "boss" : t !== "title" && e.roundKind !== "review" && e.unitId ? "unit-".concat(e.unitId) : "menu";
   }
   class Cs {
@@ -8196,7 +8196,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         e.defaultPrevented || this.questionKeys && this.questionKeys(e) || this.questionKeys || ((_a3 = this.keyHandler) == null ? void 0 : _a3.call(this, e));
       });
       __publicField(this, "speechMade", null);
-      this.host = e, this.data = e.data, this.pack = e.data.pack, this.shellId = s.shellId, this.theme = s.theme, this.strings = s.strings, this.store = new vu(this.pack, wu()), this.progress = this.store.load(), this.rng = Gt(e.seed, s.shellId), this.lang = h1(this.data, this.progress.settings.lang), this.text = Ht(this.data.catalogs, this.lang, this.pack.targetLang), this.ui = Os(this.lang, this.data.catalogs[this.lang]), this.s = Uu(this.strings, this.lang, this.data.catalogs[this.lang]), this.check = Wt({ pack: this.pack, text: this.text }), this.audioMenu = new Mu({ ui: (n, i) => this.ui(n, i), channels: Tu(this.pack.cues, this.data.assets), settings: () => this.progress.settings, update: (n) => {
+      this.host = e, this.data = e.data, this.pack = e.data.pack, this.shellId = s.shellId, this.theme = s.theme, this.strings = s.strings, this.store = new vu(this.pack, wu()), this.progress = this.store.load(), this.rng = Gt(e.seed, s.shellId), this.lang = p1(this.data, this.progress.settings.lang), this.text = Ht(this.data.catalogs, this.lang, this.pack.targetLang), this.ui = Os(this.lang, this.data.catalogs[this.lang]), this.s = Uu(this.strings, this.lang, this.data.catalogs[this.lang]), this.check = Wt({ pack: this.pack, text: this.text }), this.audioMenu = new Mu({ ui: (n, i) => this.ui(n, i), channels: Tu(this.pack.cues, this.data.assets), settings: () => this.progress.settings, update: (n) => {
         this.progress = { ...this.progress, settings: { ...this.progress.settings, ...n } }, this.save();
       }, refresh: () => this.audio.refresh() }), this.applyLang();
     }
@@ -8231,7 +8231,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return e || this.pack.subject.charAt(0).toLocaleUpperCase() + this.pack.subject.slice(1);
     }
     section() {
-      return A0(this.pack, this.shellId);
+      return T0(this.pack, this.shellId);
     }
     get speechService() {
       return this.speechMade === null && (this.speechMade = Pu(window, this.pack.extensions, this.pack.targetLang)), this.speechMade;
@@ -8257,7 +8257,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.setSp({ ...this.sp, data: JSON.parse(JSON.stringify(e != null ? e : null)) });
     }
     get started() {
-      return wS(this.progress, this.shellId) || bu(this.progress);
+      return yS(this.progress, this.shellId) || bu(this.progress);
     }
     view() {
       const e = this.sp;
@@ -8329,7 +8329,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     startRun(e, s = {}) {
       const n = e.filter((i) => this.canAsk(this.item(i)));
-      return n1(n, s);
+      return i1(n, s);
     }
     next(e) {
       return Lu(e, this.pack, this.rng, this.progress.cards, Date.now());
@@ -8342,7 +8342,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     publish(e = this.screen, s = this.extra) {
       var _a3, _b3;
-      this.screen = e, this.extra = s, this.pack.cues.length && this.audio.setArea(f1(e, s)), this.host.publish(Zu({ screen: e, shell: this.shellId, lang: this.lang, seed: this.host.seed, ...s.roundKind ? { roundKind: s.roundKind, roundSize: (_a3 = s.roundSize) != null ? _a3 : 0, ...s.roundNumber ? { roundNumber: s.roundNumber } : {} } : {}, ...s.unitId ? { unitId: s.unitId } : {}, ...s.item ? { itemId: s.item.id, itemKind: s.item.kind, itemIndex: (_b3 = s.item.index) != null ? _b3 : 0 } : {}, ...s.lastResult ? { lastResult: s.lastResult } : {}, ...s.context ? { context: s.context } : {}, ...s.view ? { view: s.view } : {}, combo: this.combo, score: this.progress.score, reviewQueue: this.progress.queue, mastery: this.mastery(), finished: this.finished, steps: this.steps }));
+      this.screen = e, this.extra = s, this.pack.cues.length && this.audio.setArea(m1(e, s)), this.host.publish(Zu({ screen: e, shell: this.shellId, lang: this.lang, seed: this.host.seed, ...s.roundKind ? { roundKind: s.roundKind, roundSize: (_a3 = s.roundSize) != null ? _a3 : 0, ...s.roundNumber ? { roundNumber: s.roundNumber } : {} } : {}, ...s.unitId ? { unitId: s.unitId } : {}, ...s.item ? { itemId: s.item.id, itemKind: s.item.kind, itemIndex: (_b3 = s.item.index) != null ? _b3 : 0 } : {}, ...s.lastResult ? { lastResult: s.lastResult } : {}, ...s.context ? { context: s.context } : {}, ...s.view ? { view: s.view } : {}, combo: this.combo, score: this.progress.score, reviewQueue: this.progress.queue, mastery: this.mastery(), finished: this.finished, steps: this.steps }));
     }
     render(e, s, n = {}, i = {}) {
       var _a3, _b3;
@@ -8383,7 +8383,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }, { class: "btn btn-small btn-ghost", "aria-expanded": "false" }) : null, f = e.onLeave ? T("leave", "‹ ".concat((_a3 = e.leaveLabel) != null ? _a3 : i("leave")), () => {
       var _a4;
       r == null ? void 0 : r.close(), (_a4 = e.onLeave) == null ? void 0 : _a4.call(e);
-    }, { class: "btn btn-small btn-ghost" }) : null, m = d("p", { class: "q-meta", testid: "question-number" }, e.retry ? d("span", { class: "tag tag-retry", testid: "retry-tag" }, i("retry")) : null, (_b3 = e.lead) != null ? _b3 : null), g = n.ownsPrompt ? d("h1", { class: "sr-only" }, typeof e.lead == "string" ? e.lead : i("question.lead")) : d("h1", { class: "prompt", testid: "prompt", tabindex: "-1" }, t.text.t(s.prompt)), k = t.itemContext(s, o), b = p1.has(s.kind) ? null : Vl(k), v = d("div", { class: "item-body kind-".concat(s.kind), testid: "item-body", "data-kind": s.kind }, a.el), w = d("div", { class: "feedback-slot", "aria-live": "polite" }), y = d("section", { class: "question shell-question context-".concat(e.context), "aria-label": t.text.t(s.prompt) }, f || e.hud ? d("header", { class: "shell-hud" }, f, (_c2 = e.hud) != null ? _c2 : null) : null, m, g, b, p, h, v, w), $ = () => {
+    }, { class: "btn btn-small btn-ghost" }) : null, m = d("p", { class: "q-meta", testid: "question-number" }, e.retry ? d("span", { class: "tag tag-retry", testid: "retry-tag" }, i("retry")) : null, (_b3 = e.lead) != null ? _b3 : null), g = n.ownsPrompt ? d("h1", { class: "sr-only" }, typeof e.lead == "string" ? e.lead : i("question.lead")) : d("h1", { class: "prompt", testid: "prompt", tabindex: "-1" }, t.text.t(s.prompt)), k = t.itemContext(s, o), b = f1.has(s.kind) ? null : Vl(k), v = d("div", { class: "item-body kind-".concat(s.kind), testid: "item-body", "data-kind": s.kind }, a.el), w = d("div", { class: "feedback-slot", "aria-live": "polite" }), y = d("section", { class: "question shell-question context-".concat(e.context), "aria-label": t.text.t(s.prompt) }, f || e.hud ? d("header", { class: "shell-hud" }, f, (_c2 = e.hud) != null ? _c2 : null) : null, m, g, b, p, h, v, w), $ = () => {
       var _a4;
       t.questionKeys === R && (t.questionKeys = null), (_a4 = a.destroy) == null ? void 0 : _a4.call(a);
     };
@@ -8417,7 +8417,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const S = t.host.root.querySelector("#edu-main");
     return (S == null ? void 0 : S.contains(document.activeElement)) || ((_d2 = S == null ? void 0 : S.querySelector("[data-autofocus], .prompt")) == null ? void 0 : _d2.focus()), r;
   }
-  function m1(t) {
+  function g1(t) {
     return { pack: t.pack, get ui() {
       return t.ui;
     }, shellId: t.shellId, shells: t.host.shells, switchShell: (e) => t.host.switchShell(e), courseTitle: () => t.courseTitle(), unitTitle: (e) => t.unitTitle(e), get lang() {
@@ -8435,7 +8435,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     } };
   }
   function Zs(t, e, s, n) {
-    return Ku(m1(t), e, s, n);
+    return Ku(g1(t), e, s, n);
   }
   function Us(t, e) {
     var _a3, _b3;
@@ -8450,7 +8450,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Zr() {
     return be("svg", { class: "det-mag-svg", viewBox: "0 0 40 40", "aria-hidden": "true", focusable: "false" }, be("circle", { class: "mg-ring", cx: 17, cy: 17, r: 10 }), be("path", { class: "mg-handle", d: "M25 25 L35 35" }));
   }
-  function g1(t, e, s, n) {
+  function k1(t, e, s, n) {
     const i = de("svg", { class: "det-strings", "aria-hidden": "true", focusable: "false" }), r = /* @__PURE__ */ new Map(), o = t.categories.map((f) => d("div", { class: "det-cork-col", "data-category": f.key }, d("h3", { class: "det-cork-label" }, s(f.key)), d("ul", { class: "det-cork-list" }, f.items.map((m) => {
       const g = d("li", { class: "det-pinned", "data-entity": m, testid: "board-entity-".concat(m) }, d("span", { class: "det-pin", "aria-hidden": "true" }), e(m));
       return r.set(m, g), g;
@@ -8483,16 +8483,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       p == null ? void 0 : p.disconnect(), u && cancelAnimationFrame(u);
     } };
   }
-  const k1 = { "": "", no: "✕", yes: "✓" };
-  function b1(t, e, s, n, i, r) {
+  const b1 = { "": "", no: "✕", yes: "✓" };
+  function v1(t, e, s, n, i, r) {
     const o = /* @__PURE__ */ new Map(), a = (h, p, f) => {
       const m = o.get(h);
       if (!m) return;
       const [g, k] = Re(h), b = vt(p, h);
       m.setAttribute("data-mark", b === "" ? "blank" : b), m.setAttribute("aria-label", i.cell(s(g), s(k), i.mark(b))), m.toggleAttribute("data-hinted", h === f);
       const v = m.querySelector(".det-glyph");
-      v && (v.textContent = k1[b]);
-    }, c = Tw(t).map((h) => d("figure", { class: "det-table-wrap" }, d("figcaption", { class: "det-table-cap" }, i.caption(n(h.rows.key), n(h.cols.key))), d("table", { class: "det-table", testid: "grid-".concat(h.key) }, d("thead", {}, d("tr", {}, d("td", { class: "det-corner" }), h.cols.items.map((p) => d("th", { scope: "col", class: "det-col" }, s(p))))), d("tbody", {}, h.rows.items.map((p) => d("tr", {}, d("th", { scope: "row", class: "det-row" }, s(p)), h.cols.items.map((f) => {
+      v && (v.textContent = b1[b]);
+    }, c = Iw(t).map((h) => d("figure", { class: "det-table-wrap" }, d("figcaption", { class: "det-table-cap" }, i.caption(n(h.rows.key), n(h.cols.key))), d("table", { class: "det-table", testid: "grid-".concat(h.key) }, d("thead", {}, d("tr", {}, d("td", { class: "det-corner" }), h.cols.items.map((p) => d("th", { scope: "col", class: "det-col" }, s(p))))), d("tbody", {}, h.rows.items.map((p) => d("tr", {}, d("th", { scope: "row", class: "det-row" }, s(p)), h.cols.items.map((f) => {
       const m = "".concat(p, "|").concat(f), g = d("button", { type: "button", class: "det-cell", testid: "cell-".concat(p, "-").concat(f), "data-cell": m, onclick: () => r(m) }, d("span", { class: "det-glyph", "aria-hidden": "true" }));
       return o.set(m, g), d("td", { class: "det-td" }, g);
     }))))))), l = d("div", { class: "det-grid", testid: "grid" }, c), u = (h, p = "") => {
@@ -8500,7 +8500,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     };
     return u(e), { el: l, update: u };
   }
-  function v1(t) {
+  function w1(t) {
     const e = new Map(t.places.map((a) => [a.id, a])), s = (a, c) => "".concat((a / c * 100).toFixed(2), "%"), n = (a) => a === t.here ? "here" : t.trail.includes(a) ? "visited" : t.options.includes(a) ? "option" : "other", i = t.trail.flatMap((a) => {
       const c = e.get(a);
       return c ? ["".concat(c.x, ",").concat(c.y)] : [];
@@ -8510,51 +8510,51 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     });
     return d("div", { class: "det-map", testid: "map", style: "aspect-ratio:".concat(t.width, " / ").concat(t.height) }, t.src ? d("img", { class: "det-map-img", src: t.src, alt: t.alt, draggable: "false" }) : d("div", { class: "det-map-img", role: "img", "aria-label": t.alt }), r, o);
   }
-  function w1(t, e) {
+  function y1(t, e) {
     return { roomId: e, cards: Array.from({ length: t }, () => null), run: null, seen: [], firstTry: {}, marks: {}, hints: 0, accusation: {}, wrongAccusations: 0, solved: false };
   }
-  const Gu = (t) => t.cards.flatMap((e, s) => e === null ? [s + 1] : []), Bs = (t) => t.cards.filter((e) => e !== null).length, y1 = (t) => t.cards.flatMap((e, s) => e === null ? [] : ["c".concat(s + 1)]), S1 = (t) => t.cards.filter((e) => e !== null), $1 = (t, e) => {
-    const s = new Set(S1(e));
+  const Gu = (t) => t.cards.flatMap((e, s) => e === null ? [s + 1] : []), Bs = (t) => t.cards.filter((e) => e !== null).length, S1 = (t) => t.cards.flatMap((e, s) => e === null ? [] : ["c".concat(s + 1)]), $1 = (t) => t.cards.filter((e) => e !== null), z1 = (t, e) => {
+    const s = new Set($1(e));
     return t.filter((n) => !s.has(n));
   };
-  function z1(t) {
+  function _1(t) {
     const e = Object.values(t.firstTry);
     return e.length === 0 ? 0 : e.reduce((s, n) => s + n, 0) / e.length;
   }
-  function _1(t, e, s, n, i) {
+  function j1(t, e, s, n, i) {
     const r = !t.seen.includes(s);
     return { ...t, seen: r ? [...t.seen, s] : t.seen, firstTry: r ? { ...t.firstTry, [s]: i } : t.firstTry, cards: n ? t.cards.map((o, a) => a === e - 1 ? s : o) : t.cards };
   }
-  function j1(t, e, s) {
+  function x1(t, e, s) {
     if (Gu(e).length > 0) return { kind: "cards" };
     if (t.kind === "murdle" && or(t).some((i) => !e.accusation[i])) return { kind: "pick" };
     const n = s(e.accusation, e.marks);
     return n.correct ? { kind: "right" } : { kind: "wrong", wrong: n.wrong };
   }
-  const x1 = 8, E1 = 2, Wu = 1;
+  const E1 = 8, A1 = 2, Wu = 1;
   function Hu(t, e) {
     const s = [...new Set(t.decoys.filter((n) => n !== t.to))].slice(0, 3);
     return e.shuffle([t.to, ...s]);
   }
-  function A1(t, e) {
+  function T1(t, e) {
     return { at: t.start, leg: 0, hours: 0, heard: false, options: Hu(t.route[0], e), cold: 0, coldHere: false, trail: [t.start], caught: false, scores: [], firstChoice: true };
   }
   function Vu(t, e, s) {
     return { ...t, heard: true, hours: t.hours + (e ? 0 : Wu), scores: [...t.scores, s] };
   }
-  function T1(t, e, s, n) {
+  function I1(t, e, s, n) {
     const i = e.route[t.leg];
     if (s !== i.to) return { right: false, state: { ...t, hours: t.hours + Wu, cold: t.cold + 1, coldHere: true, scores: t.firstChoice ? [...t.scores, 0] : t.scores, firstChoice: false } };
     const r = t.leg + 1, o = r >= e.route.length;
-    return { right: true, state: { ...t, at: i.to, leg: r, hours: t.hours + E1, heard: false, coldHere: false, trail: [...t.trail, i.to], caught: o, scores: t.firstChoice ? [...t.scores, 1] : t.scores, firstChoice: true, options: o ? [] : Hu(e.route[r], n) } };
+    return { right: true, state: { ...t, at: i.to, leg: r, hours: t.hours + A1, heard: false, coldHere: false, trail: [...t.trail, i.to], caught: o, scores: t.firstChoice ? [...t.scores, 1] : t.scores, firstChoice: true, options: o ? [] : Hu(e.route[r], n) } };
   }
-  const I1 = (t) => t.scores.length === 0 ? 0 : t.scores.reduce((e, s) => e + s, 0) / t.scores.length;
+  const M1 = (t) => t.scores.length === 0 ? 0 : t.scores.reduce((e, s) => e + s, 0) / t.scores.length;
   function is(t) {
-    const e = x1 + t, s = e % 24, n = Math.floor(e / 24) + 1, i = "".concat(String(s).padStart(2, "0"), ":00");
+    const e = E1 + t, s = e % 24, n = Math.floor(e / 24) + 1, i = "".concat(String(s).padStart(2, "0"), ":00");
     return n > 1 ? "".concat(i, " (+").concat(n - 1, ")") : i;
   }
-  const M1 = { en: { "det.tagline": "A case file to crack", "det.intro": "Every locked door has a case on it. Turn the clue cards by answering questions, work out who did it, and the door opens.", "det.office.title": "The case board", "det.office.lead": "Pick a case. A solved case opens the next door.", "det.office.rooms": "Escape rooms", "det.room.open": "Open the file", "det.room.again": "Reopen the case", "det.room.solved": "Solved", "det.room.locked": "Locked: solve {unit} with 2 stars first.", "det.room.final": "The final room", "det.room.final.locked": "Locked: master every room first.", "det.room.stars": "{n} of 3 stars", "det.finish": "Close the file", "det.finish.hint": "Solve the final challenge to close the file.", "det.finish.ready": "The final challenge is done. The file can be closed.", "det.office.progress": "{n} of {total} rooms solved", "det.room.resume": "Resume the case", "det.case.broken": "This case could not be made. Pick another one.", "det.grid.caption": "{rows} and {cols}", "det.chase.resume": "Continue the chase", "det.back": "Back to the case board", "det.title.screen": "Title screen", "det.case.crime": "The crime happened in {place}.", "det.case.clues": "Clue cards", "det.case.turned": "{n} of {total} clues turned", "det.case.no.cards": "Every card is face-up. Mark the grid, then accuse.", "det.clue.n": "Clue {n}", "det.clue.turn": "Turn over", "det.clue.down": "Clue {n}, face down. Answer a question to turn it over.", "det.clue.up": "Clue {n}, face up.", "det.clue.fact": "The fact from your answer", "det.case.grid": "The grid", "det.case.grid.help": "Press a cell: one press crosses it out, two mean yes, three clear it.", "det.mark.blank": "unknown", "det.mark.no": "no", "det.mark.yes": "yes", "det.cell.label": "{a} and {b}: {state}", "det.board.title": "The cork board", "det.board.help": "Every yes in the grid becomes a red string between the two.", "det.hint": "Ask for a hint", "det.hint.used": "Hints used: {n}", "det.accuse.title": "Your accusation", "det.accuse.row": "Who or what is it? {category}", "det.accuse.submit": "Make the accusation", "det.accuse.submit.grid": "Check the grid", "det.accuse.grid": "Fill the grid with the clues until every yes is marked, then check it.", "det.accuse.cards": "The file is incomplete: turn every clue card first. The case stays open.", "det.accuse.pick": "Choose one for every row first.", "det.accuse.wrong": "Not quite: look again at {what}. The case stays open.", "det.accuse.wrong.grid": "Something in the grid is not right. Check it against the clues. The case stays open.", "det.cat.suspect": "the suspect", "det.cat.weapon": "the weapon", "det.cat.place": "the place", "det.cat.motive": "the motive", "det.cat.suspect.label": "Suspect", "det.cat.weapon.label": "Weapon", "det.cat.place.label": "Place", "det.cat.motive.label": "Motive", "det.case.leave": "Back to the board", "det.case.nofacts": "No clue item could be asked, so the card turns by itself.", "det.hud.clue": "Clue {n} of {total}", "det.effect.up": "Clue {n} turns face-up.", "det.effect.down": "The card stays face-down. This one will be asked again.", "det.next.up": "Read the clue", "det.next.down": "Back to the case", "det.solved.title": "Case solved", "det.solved.stamp": "Solved", "det.solved.who": "The answer: {what}", "det.solved.door": "The door swings open.", "det.solved.door.final": "The final door swings open.", "det.solved.unlocked": "Now open: {units}", "det.solved.stars": "Stars for this case", "det.solved.accuracy": "First-try clue answers: {n} %", "det.solved.hints": "Hints used: {n}", "det.solved.facts": "What the clues rested on", "det.solved.more": "Two stars open the next doors. Solve the case again for more.", "det.solved.again": "Solve it again", "det.chase.title": "The chase", "det.chase.lead": "The suspect is on the run. At each place a witness saw something: answer the question to hear it, then pick where the suspect went.", "det.chase.start": "Start the chase", "det.chase.again": "Chase again", "det.chase.locked": "Locked: master {unit} first.", "det.chase.caught.tag": "Caught", "det.chase.suspect": "On the run: {who}", "det.chase.at": "You are in {place}.", "det.chase.clock": "Clock", "det.chase.clock.label": "The clock shows {time}", "det.chase.ask": "Question the witness", "det.chase.witness": "The witness says", "det.chase.heard": "Where did she go?", "det.chase.travel": "Travel to {place}", "det.chase.cold": "A cold trail: the suspect did not go to {place}. It costs an hour and you are back in {back}.", "det.chase.warm": "You follow the trail to {place}.", "det.chase.hazy": "The witness took a while to remember: that cost an hour.", "det.chase.map": "A map of the places in the chase", "det.chase.legs": "Leg {n} of {total}", "det.chase.leave": "Leave the chase", "det.chase.effect.right": "The witness remembers it clearly.", "det.chase.effect.wrong": "The witness is hazy: an hour is lost.", "det.chase.next": "Hear the witness", "det.caught.title": "The chase is over", "det.caught.text": "{who} is caught in {place}.", "det.caught.clock": "The chase took until {time}.", "det.caught.cold": "Cold trails: {n}", "det.caught.stars": "Stars for the chase", "det.caught.accuracy": "First-try answers on the chase: {n} %", "det.caught.facts": "The places on the trail", "det.caught.again": "Chase again for more stars", "det.end.title": "File closed", "det.end.sub": "Every door is open and the suspect is caught.", "det.end.rooms": "Rooms solved: {n} of {total}" }, hr: { "det.tagline": "Dosje za razrješavanje", "det.intro": "Na svakim zaključanim vratima čeka slučaj. Okreni karte s tragovima odgovarajući na pitanja, otkrij tko je to učinio i vrata se otvaraju.", "det.office.title": "Ploča slučajeva", "det.office.lead": "Odaberi slučaj. Riješen slučaj otvara sljedeća vrata.", "det.office.rooms": "Sobe za bijeg", "det.room.open": "Otvori dosje", "det.room.again": "Ponovno otvori slučaj", "det.room.solved": "Riješeno", "det.room.locked": "Zaključano: prvo riješi {unit} s 2 zvjezdice.", "det.room.final": "Završna soba", "det.room.final.locked": "Zaključano: prvo svladaj sve sobe.", "det.room.stars": "{n} od 3 zvjezdice", "det.finish": "Zatvori dosje", "det.finish.hint": "Riješi završni izazov da zatvoriš dosje.", "det.finish.ready": "Završni izazov je gotov. Dosje se može zatvoriti.", "det.office.progress": "Riješeno soba: {n} od {total}", "det.room.resume": "Nastavi slučaj", "det.case.broken": "Ovaj slučaj nije mogao biti sastavljen. Odaberi drugi.", "det.grid.caption": "{rows} i {cols}", "det.chase.resume": "Nastavi potjeru", "det.back": "Natrag na ploču slučajeva", "det.title.screen": "Naslovni zaslon", "det.case.crime": "Zločin se dogodio ovdje: {place}.", "det.case.clues": "Karte s tragovima", "det.case.turned": "Okrenuto tragova: {n} od {total}", "det.case.no.cards": "Sve su karte okrenute. Ispuni mrežu pa optuži.", "det.clue.n": "Trag {n}", "det.clue.turn": "Okreni", "det.clue.down": "Trag {n}, okrenut licem prema dolje. Odgovori na pitanje da ga okreneš.", "det.clue.up": "Trag {n}, okrenut licem prema gore.", "det.clue.fact": "Činjenica iz tvog odgovora", "det.case.grid": "Mreža", "det.case.grid.help": "Pritisni polje: jedan pritisak ga prekriži, dva znače da, tri ga brišu.", "det.mark.blank": "nepoznato", "det.mark.no": "ne", "det.mark.yes": "da", "det.cell.label": "{a} i {b}: {state}", "det.board.title": "Pluta s uzicama", "det.board.help": 'Svako "da" u mreži postaje crvena uzica između to dvoje.', "det.hint": "Zatraži nagovještaj", "det.hint.used": "Iskorišteni nagovještaji: {n}", "det.accuse.title": "Tvoja optužba", "det.accuse.row": "Tko ili što je to? {category}", "det.accuse.submit": "Podigni optužbu", "det.accuse.submit.grid": "Provjeri mrežu", "det.accuse.grid": 'Ispuni mrežu tragovima dok nije označeno svako "da", pa je provjeri.', "det.accuse.cards": "Dosje nije potpun: prvo okreni sve karte s tragovima. Slučaj ostaje otvoren.", "det.accuse.pick": "Prvo odaberi po jedno u svakom retku.", "det.accuse.wrong": "Nije baš: pogledaj ponovno ovo: {what}. Slučaj ostaje otvoren.", "det.accuse.wrong.grid": "Nešto u mreži nije točno. Provjeri je prema tragovima. Slučaj ostaje otvoren.", "det.cat.suspect": "osumnjičenik", "det.cat.weapon": "oružje", "det.cat.place": "mjesto", "det.cat.motive": "motiv", "det.cat.suspect.label": "Osumnjičenik", "det.cat.weapon.label": "Oružje", "det.cat.place.label": "Mjesto", "det.cat.motive.label": "Motiv", "det.case.leave": "Natrag na ploču", "det.case.nofacts": "Nijedno pitanje za trag nije moglo biti postavljeno pa se karta okreće sama.", "det.hud.clue": "Trag {n} od {total}", "det.effect.up": "Trag {n} se okreće.", "det.effect.down": "Karta ostaje okrenuta prema dolje. Ovo će se pitati ponovno.", "det.next.up": "Pročitaj trag", "det.next.down": "Natrag na slučaj", "det.solved.title": "Slučaj riješen", "det.solved.stamp": "Riješeno", "det.solved.who": "Odgovor: {what}", "det.solved.door": "Vrata se otvaraju.", "det.solved.door.final": "Završna vrata se otvaraju.", "det.solved.unlocked": "Sada otvoreno: {units}", "det.solved.stars": "Zvjezdice za ovaj slučaj", "det.solved.accuracy": "Točni odgovori iz prvog pokušaja: {n} %", "det.solved.hints": "Iskorišteni nagovještaji: {n}", "det.solved.facts": "Na čemu su se tragovi temeljili", "det.solved.more": "Dvije zvjezdice otvaraju sljedeća vrata. Riješi slučaj ponovno za više.", "det.solved.again": "Riješi ponovno", "det.chase.title": "Potjera", "det.chase.lead": "Osumnjičenik je u bijegu. Na svakom mjestu svjedok je nešto vidio: odgovori na pitanje da ga čuješ, pa odaberi kamo je osumnjičenik otišao.", "det.chase.start": "Započni potjeru", "det.chase.again": "Ponovno u potjeru", "det.chase.locked": "Zaključano: prvo svladaj {unit}.", "det.chase.caught.tag": "Uhvaćen", "det.chase.suspect": "U bijegu: {who}", "det.chase.at": "Nalaziš se ovdje: {place}.", "det.chase.clock": "Sat", "det.chase.clock.label": "Sat pokazuje {time}", "det.chase.ask": "Ispitaj svjedoka", "det.chase.witness": "Svjedok kaže", "det.chase.heard": "Kamo je otišla?", "det.chase.travel": "Otputuj: {place}", "det.chase.cold": "Hladan trag: osumnjičenik nije otišao ovamo: {place}. To košta sat vremena i vraćaš se ovamo: {back}.", "det.chase.warm": "Slijediš trag ovamo: {place}.", "det.chase.hazy": "Svjedok se dugo prisjećao: to je koštalo sat vremena.", "det.chase.map": "Karta mjesta u potjeri", "det.chase.legs": "Dionica {n} od {total}", "det.chase.leave": "Napusti potjeru", "det.chase.effect.right": "Svjedok se jasno sjeća.", "det.chase.effect.wrong": "Svjedok je zbunjen: sat vremena je izgubljeno.", "det.chase.next": "Saslušaj svjedoka", "det.caught.title": "Potjera je gotova", "det.caught.text": "Uhvaćen je: {who}. Mjesto: {place}.", "det.caught.clock": "Potjera je trajala do {time}.", "det.caught.cold": "Hladni tragovi: {n}", "det.caught.stars": "Zvjezdice za potjeru", "det.caught.accuracy": "Točni odgovori iz prvog pokušaja u potjeri: {n} %", "det.caught.facts": "Mjesta na tragu", "det.caught.again": "Potjera ponovno za više zvjezdica", "det.end.title": "Dosje zatvoren", "det.end.sub": "Sva su vrata otvorena i osumnjičenik je uhvaćen.", "det.end.rooms": "Riješeno soba: {n} od {total}" }, de: { "det.tagline": "Eine Fallakte zum Knacken", "det.intro": "Hinter jeder verschlossenen Tür wartet ein Fall. Drehe die Hinweiskarten um, indem du Fragen beantwortest, finde heraus, wer es war, und die Tür öffnet sich.", "det.office.title": "Die Falltafel", "det.office.lead": "Wähle einen Fall. Ein gelöster Fall öffnet die nächste Tür.", "det.office.rooms": "Rätselräume", "det.room.open": "Die Akte öffnen", "det.room.again": "Den Fall neu aufrollen", "det.room.solved": "Gelöst", "det.room.locked": "Gesperrt: Löse zuerst {unit} mit 2 Sternen.", "det.room.final": "Der letzte Raum", "det.room.final.locked": "Gesperrt: Meistere zuerst jeden Raum.", "det.room.stars": "{n} von 3 Sternen", "det.finish": "Die Akte schließen", "det.finish.hint": "Löse die letzte Aufgabe, um die Akte zu schließen.", "det.finish.ready": "Die letzte Aufgabe ist geschafft. Die Akte kann geschlossen werden.", "det.office.progress": "{n} von {total} Räumen gelöst", "det.room.resume": "Den Fall fortsetzen", "det.case.broken": "Dieser Fall konnte nicht erstellt werden. Wähle einen anderen.", "det.grid.caption": "{rows} und {cols}", "det.chase.resume": "Die Verfolgung fortsetzen", "det.back": "Zurück zur Falltafel", "det.title.screen": "Titelbildschirm", "det.case.crime": "Das Verbrechen geschah in: {place}.", "det.case.clues": "Hinweiskarten", "det.case.turned": "{n} von {total} Hinweisen umgedreht", "det.case.no.cards": "Jede Karte liegt offen. Markiere das Raster und erhebe dann Anklage.", "det.clue.n": "Hinweis {n}", "det.clue.turn": "Umdrehen", "det.clue.down": "Hinweis {n}, verdeckt. Beantworte eine Frage, um ihn umzudrehen.", "det.clue.up": "Hinweis {n}, aufgedeckt.", "det.clue.fact": "Die Tatsache aus deiner Antwort", "det.case.grid": "Das Raster", "det.case.grid.help": "Drücke auf ein Feld: Einmal streicht es durch, zweimal bedeutet ja, dreimal löscht es.", "det.mark.blank": "unbekannt", "det.mark.no": "nein", "det.mark.yes": "ja", "det.cell.label": "{a} und {b}: {state}", "det.board.title": "Die Pinnwand", "det.board.help": "Jedes Ja im Raster wird zu einem roten Faden zwischen den beiden.", "det.hint": "Um einen Tipp bitten", "det.hint.used": "Genutzte Tipps: {n}", "det.accuse.title": "Deine Anklage", "det.accuse.row": "Wer oder was ist es? {category}", "det.accuse.submit": "Anklage erheben", "det.accuse.submit.grid": "Das Raster prüfen", "det.accuse.grid": "Fülle das Raster mit den Hinweisen, bis jedes Ja markiert ist, und prüfe es dann.", "det.accuse.cards": "Die Akte ist unvollständig: Drehe zuerst jede Hinweiskarte um. Der Fall bleibt offen.", "det.accuse.pick": "Wähle zuerst für jede Zeile eine Antwort.", "det.accuse.wrong": "Nicht ganz: Sieh dir noch einmal {what} an. Der Fall bleibt offen.", "det.accuse.wrong.grid": "Im Raster stimmt etwas nicht. Prüfe es anhand der Hinweise. Der Fall bleibt offen.", "det.cat.suspect": "den Verdächtigen", "det.cat.weapon": "die Tatwaffe", "det.cat.place": "den Ort", "det.cat.motive": "das Motiv", "det.cat.suspect.label": "Verdächtiger", "det.cat.weapon.label": "Tatwaffe", "det.cat.place.label": "Ort", "det.cat.motive.label": "Motiv", "det.case.leave": "Zurück zur Tafel", "det.case.nofacts": "Zu diesem Hinweis konnte keine Frage gestellt werden, deshalb dreht sich die Karte von selbst um.", "det.hud.clue": "Hinweis {n} von {total}", "det.effect.up": "Hinweis {n} wird aufgedeckt.", "det.effect.down": "Die Karte bleibt verdeckt. Diese Frage kommt noch einmal.", "det.next.up": "Den Hinweis lesen", "det.next.down": "Zurück zum Fall", "det.solved.title": "Fall gelöst", "det.solved.stamp": "Gelöst", "det.solved.who": "Die Antwort: {what}", "det.solved.door": "Die Tür schwingt auf.", "det.solved.door.final": "Die letzte Tür schwingt auf.", "det.solved.unlocked": "Jetzt offen: {units}", "det.solved.stars": "Sterne für diesen Fall", "det.solved.accuracy": "Hinweisantworten beim ersten Versuch: {n} %", "det.solved.hints": "Genutzte Tipps: {n}", "det.solved.facts": "Worauf die Hinweise beruhten", "det.solved.more": "Zwei Sterne öffnen die nächsten Türen. Löse den Fall noch einmal für mehr.", "det.solved.again": "Noch einmal lösen", "det.chase.title": "Die Verfolgung", "det.chase.lead": "Der Verdächtige ist auf der Flucht. An jedem Ort hat ein Zeuge etwas gesehen: Beantworte die Frage, um es zu hören, und wähle dann, wohin der Verdächtige gegangen ist.", "det.chase.start": "Die Verfolgung starten", "det.chase.again": "Noch einmal verfolgen", "det.chase.locked": "Gesperrt: Meistere zuerst {unit}.", "det.chase.caught.tag": "Gefasst", "det.chase.suspect": "Auf der Flucht: {who}", "det.chase.at": "Du bist in {place}.", "det.chase.clock": "Uhr", "det.chase.clock.label": "Die Uhr zeigt {time}", "det.chase.ask": "Den Zeugen befragen", "det.chase.witness": "Der Zeuge sagt", "det.chase.heard": "Wohin ist sie gegangen?", "det.chase.travel": "Nach {place} reisen", "det.chase.cold": "Eine kalte Spur: Der Verdächtige ist nicht nach {place} gegangen. Das kostet eine Stunde, und du bist zurück in {back}.", "det.chase.warm": "Du folgst der Spur nach {place}.", "det.chase.hazy": "Der Zeuge hat sich nur langsam erinnert: Das hat eine Stunde gekostet.", "det.chase.map": "Eine Karte der Orte der Verfolgung", "det.chase.legs": "Etappe {n} von {total}", "det.chase.leave": "Die Verfolgung verlassen", "det.chase.effect.right": "Der Zeuge erinnert sich genau.", "det.chase.effect.wrong": "Der Zeuge ist unsicher: Eine Stunde geht verloren.", "det.chase.next": "Den Zeugen anhören", "det.caught.title": "Die Verfolgung ist vorbei", "det.caught.text": "{who} wird in {place} gefasst.", "det.caught.clock": "Die Verfolgung dauerte bis {time}.", "det.caught.cold": "Kalte Spuren: {n}", "det.caught.stars": "Sterne für die Verfolgung", "det.caught.accuracy": "Antworten beim ersten Versuch in der Verfolgung: {n} %", "det.caught.facts": "Die Orte auf der Spur", "det.caught.again": "Noch einmal verfolgen für mehr Sterne", "det.end.title": "Akte geschlossen", "det.end.sub": "Jede Tür ist offen und der Verdächtige ist gefasst.", "det.end.rooms": "Gelöste Räume: {n} von {total}" } }, Yu = "detective", O1 = "noir", N1 = "-", P1 = (t) => t.length > 0 ? t[0].toLocaleUpperCase() + t.slice(1) : t, R1 = { rooms: [] };
-  class D1 {
+  const O1 = { en: { "det.tagline": "A case file to crack", "det.intro": "Every locked door has a case on it. Turn the clue cards by answering questions, work out who did it, and the door opens.", "det.office.title": "The case board", "det.office.lead": "Pick a case. A solved case opens the next door.", "det.office.rooms": "Escape rooms", "det.room.open": "Open the file", "det.room.again": "Reopen the case", "det.room.solved": "Solved", "det.room.locked": "Locked: solve {unit} with 2 stars first.", "det.room.final": "The final room", "det.room.final.locked": "Locked: master every room first.", "det.room.stars": "{n} of 3 stars", "det.finish": "Close the file", "det.finish.hint": "Solve the final challenge to close the file.", "det.finish.ready": "The final challenge is done. The file can be closed.", "det.office.progress": "{n} of {total} rooms solved", "det.room.resume": "Resume the case", "det.case.broken": "This case could not be made. Pick another one.", "det.grid.caption": "{rows} and {cols}", "det.chase.resume": "Continue the chase", "det.back": "Back to the case board", "det.title.screen": "Title screen", "det.case.crime": "The crime happened in {place}.", "det.case.clues": "Clue cards", "det.case.turned": "{n} of {total} clues turned", "det.case.no.cards": "Every card is face-up. Mark the grid, then accuse.", "det.clue.n": "Clue {n}", "det.clue.turn": "Turn over", "det.clue.down": "Clue {n}, face down. Answer a question to turn it over.", "det.clue.up": "Clue {n}, face up.", "det.clue.fact": "The fact from your answer", "det.case.grid": "The grid", "det.case.grid.help": "Press a cell: one press crosses it out, two mean yes, three clear it.", "det.mark.blank": "unknown", "det.mark.no": "no", "det.mark.yes": "yes", "det.cell.label": "{a} and {b}: {state}", "det.board.title": "The cork board", "det.board.help": "Every yes in the grid becomes a red string between the two.", "det.hint": "Ask for a hint", "det.hint.used": "Hints used: {n}", "det.accuse.title": "Your accusation", "det.accuse.row": "Who or what is it? {category}", "det.accuse.submit": "Make the accusation", "det.accuse.submit.grid": "Check the grid", "det.accuse.grid": "Fill the grid with the clues until every yes is marked, then check it.", "det.accuse.cards": "The file is incomplete: turn every clue card first. The case stays open.", "det.accuse.pick": "Choose one for every row first.", "det.accuse.wrong": "Not quite: look again at {what}. The case stays open.", "det.accuse.wrong.grid": "Something in the grid is not right. Check it against the clues. The case stays open.", "det.cat.suspect": "the suspect", "det.cat.weapon": "the weapon", "det.cat.place": "the place", "det.cat.motive": "the motive", "det.cat.suspect.label": "Suspect", "det.cat.weapon.label": "Weapon", "det.cat.place.label": "Place", "det.cat.motive.label": "Motive", "det.case.leave": "Back to the board", "det.case.nofacts": "No clue item could be asked, so the card turns by itself.", "det.hud.clue": "Clue {n} of {total}", "det.effect.up": "Clue {n} turns face-up.", "det.effect.down": "The card stays face-down. This one will be asked again.", "det.next.up": "Read the clue", "det.next.down": "Back to the case", "det.solved.title": "Case solved", "det.solved.stamp": "Solved", "det.solved.who": "The answer: {what}", "det.solved.door": "The door swings open.", "det.solved.door.final": "The final door swings open.", "det.solved.unlocked": "Now open: {units}", "det.solved.stars": "Stars for this case", "det.solved.accuracy": "First-try clue answers: {n} %", "det.solved.hints": "Hints used: {n}", "det.solved.facts": "What the clues rested on", "det.solved.more": "Two stars open the next doors. Solve the case again for more.", "det.solved.again": "Solve it again", "det.chase.title": "The chase", "det.chase.lead": "The suspect is on the run. At each place a witness saw something: answer the question to hear it, then pick where the suspect went.", "det.chase.start": "Start the chase", "det.chase.again": "Chase again", "det.chase.locked": "Locked: master {unit} first.", "det.chase.caught.tag": "Caught", "det.chase.suspect": "On the run: {who}", "det.chase.at": "You are in {place}.", "det.chase.clock": "Clock", "det.chase.clock.label": "The clock shows {time}", "det.chase.ask": "Question the witness", "det.chase.witness": "The witness says", "det.chase.heard": "Where did she go?", "det.chase.travel": "Travel to {place}", "det.chase.cold": "A cold trail: the suspect did not go to {place}. It costs an hour and you are back in {back}.", "det.chase.warm": "You follow the trail to {place}.", "det.chase.hazy": "The witness took a while to remember: that cost an hour.", "det.chase.map": "A map of the places in the chase", "det.chase.legs": "Leg {n} of {total}", "det.chase.leave": "Leave the chase", "det.chase.effect.right": "The witness remembers it clearly.", "det.chase.effect.wrong": "The witness is hazy: an hour is lost.", "det.chase.next": "Hear the witness", "det.caught.title": "The chase is over", "det.caught.text": "{who} is caught in {place}.", "det.caught.clock": "The chase took until {time}.", "det.caught.cold": "Cold trails: {n}", "det.caught.stars": "Stars for the chase", "det.caught.accuracy": "First-try answers on the chase: {n} %", "det.caught.facts": "The places on the trail", "det.caught.again": "Chase again for more stars", "det.end.title": "File closed", "det.end.sub": "Every door is open and the suspect is caught.", "det.end.rooms": "Rooms solved: {n} of {total}" }, hr: { "det.tagline": "Dosje za razrješavanje", "det.intro": "Na svakim zaključanim vratima čeka slučaj. Okreni karte s tragovima odgovarajući na pitanja, otkrij tko je to učinio i vrata se otvaraju.", "det.office.title": "Ploča slučajeva", "det.office.lead": "Odaberi slučaj. Riješen slučaj otvara sljedeća vrata.", "det.office.rooms": "Sobe za bijeg", "det.room.open": "Otvori dosje", "det.room.again": "Ponovno otvori slučaj", "det.room.solved": "Riješeno", "det.room.locked": "Zaključano: prvo riješi {unit} s 2 zvjezdice.", "det.room.final": "Završna soba", "det.room.final.locked": "Zaključano: prvo svladaj sve sobe.", "det.room.stars": "{n} od 3 zvjezdice", "det.finish": "Zatvori dosje", "det.finish.hint": "Riješi završni izazov da zatvoriš dosje.", "det.finish.ready": "Završni izazov je gotov. Dosje se može zatvoriti.", "det.office.progress": "Riješeno soba: {n} od {total}", "det.room.resume": "Nastavi slučaj", "det.case.broken": "Ovaj slučaj nije mogao biti sastavljen. Odaberi drugi.", "det.grid.caption": "{rows} i {cols}", "det.chase.resume": "Nastavi potjeru", "det.back": "Natrag na ploču slučajeva", "det.title.screen": "Naslovni zaslon", "det.case.crime": "Zločin se dogodio ovdje: {place}.", "det.case.clues": "Karte s tragovima", "det.case.turned": "Okrenuto tragova: {n} od {total}", "det.case.no.cards": "Sve su karte okrenute. Ispuni mrežu pa optuži.", "det.clue.n": "Trag {n}", "det.clue.turn": "Okreni", "det.clue.down": "Trag {n}, okrenut licem prema dolje. Odgovori na pitanje da ga okreneš.", "det.clue.up": "Trag {n}, okrenut licem prema gore.", "det.clue.fact": "Činjenica iz tvog odgovora", "det.case.grid": "Mreža", "det.case.grid.help": "Pritisni polje: jedan pritisak ga prekriži, dva znače da, tri ga brišu.", "det.mark.blank": "nepoznato", "det.mark.no": "ne", "det.mark.yes": "da", "det.cell.label": "{a} i {b}: {state}", "det.board.title": "Pluta s uzicama", "det.board.help": 'Svako "da" u mreži postaje crvena uzica između to dvoje.', "det.hint": "Zatraži nagovještaj", "det.hint.used": "Iskorišteni nagovještaji: {n}", "det.accuse.title": "Tvoja optužba", "det.accuse.row": "Tko ili što je to? {category}", "det.accuse.submit": "Podigni optužbu", "det.accuse.submit.grid": "Provjeri mrežu", "det.accuse.grid": 'Ispuni mrežu tragovima dok nije označeno svako "da", pa je provjeri.', "det.accuse.cards": "Dosje nije potpun: prvo okreni sve karte s tragovima. Slučaj ostaje otvoren.", "det.accuse.pick": "Prvo odaberi po jedno u svakom retku.", "det.accuse.wrong": "Nije baš: pogledaj ponovno ovo: {what}. Slučaj ostaje otvoren.", "det.accuse.wrong.grid": "Nešto u mreži nije točno. Provjeri je prema tragovima. Slučaj ostaje otvoren.", "det.cat.suspect": "osumnjičenik", "det.cat.weapon": "oružje", "det.cat.place": "mjesto", "det.cat.motive": "motiv", "det.cat.suspect.label": "Osumnjičenik", "det.cat.weapon.label": "Oružje", "det.cat.place.label": "Mjesto", "det.cat.motive.label": "Motiv", "det.case.leave": "Natrag na ploču", "det.case.nofacts": "Nijedno pitanje za trag nije moglo biti postavljeno pa se karta okreće sama.", "det.hud.clue": "Trag {n} od {total}", "det.effect.up": "Trag {n} se okreće.", "det.effect.down": "Karta ostaje okrenuta prema dolje. Ovo će se pitati ponovno.", "det.next.up": "Pročitaj trag", "det.next.down": "Natrag na slučaj", "det.solved.title": "Slučaj riješen", "det.solved.stamp": "Riješeno", "det.solved.who": "Odgovor: {what}", "det.solved.door": "Vrata se otvaraju.", "det.solved.door.final": "Završna vrata se otvaraju.", "det.solved.unlocked": "Sada otvoreno: {units}", "det.solved.stars": "Zvjezdice za ovaj slučaj", "det.solved.accuracy": "Točni odgovori iz prvog pokušaja: {n} %", "det.solved.hints": "Iskorišteni nagovještaji: {n}", "det.solved.facts": "Na čemu su se tragovi temeljili", "det.solved.more": "Dvije zvjezdice otvaraju sljedeća vrata. Riješi slučaj ponovno za više.", "det.solved.again": "Riješi ponovno", "det.chase.title": "Potjera", "det.chase.lead": "Osumnjičenik je u bijegu. Na svakom mjestu svjedok je nešto vidio: odgovori na pitanje da ga čuješ, pa odaberi kamo je osumnjičenik otišao.", "det.chase.start": "Započni potjeru", "det.chase.again": "Ponovno u potjeru", "det.chase.locked": "Zaključano: prvo svladaj {unit}.", "det.chase.caught.tag": "Uhvaćen", "det.chase.suspect": "U bijegu: {who}", "det.chase.at": "Nalaziš se ovdje: {place}.", "det.chase.clock": "Sat", "det.chase.clock.label": "Sat pokazuje {time}", "det.chase.ask": "Ispitaj svjedoka", "det.chase.witness": "Svjedok kaže", "det.chase.heard": "Kamo je otišla?", "det.chase.travel": "Otputuj: {place}", "det.chase.cold": "Hladan trag: osumnjičenik nije otišao ovamo: {place}. To košta sat vremena i vraćaš se ovamo: {back}.", "det.chase.warm": "Slijediš trag ovamo: {place}.", "det.chase.hazy": "Svjedok se dugo prisjećao: to je koštalo sat vremena.", "det.chase.map": "Karta mjesta u potjeri", "det.chase.legs": "Dionica {n} od {total}", "det.chase.leave": "Napusti potjeru", "det.chase.effect.right": "Svjedok se jasno sjeća.", "det.chase.effect.wrong": "Svjedok je zbunjen: sat vremena je izgubljeno.", "det.chase.next": "Saslušaj svjedoka", "det.caught.title": "Potjera je gotova", "det.caught.text": "Uhvaćen je: {who}. Mjesto: {place}.", "det.caught.clock": "Potjera je trajala do {time}.", "det.caught.cold": "Hladni tragovi: {n}", "det.caught.stars": "Zvjezdice za potjeru", "det.caught.accuracy": "Točni odgovori iz prvog pokušaja u potjeri: {n} %", "det.caught.facts": "Mjesta na tragu", "det.caught.again": "Potjera ponovno za više zvjezdica", "det.end.title": "Dosje zatvoren", "det.end.sub": "Sva su vrata otvorena i osumnjičenik je uhvaćen.", "det.end.rooms": "Riješeno soba: {n} od {total}" }, de: { "det.tagline": "Eine Fallakte zum Knacken", "det.intro": "Hinter jeder verschlossenen Tür wartet ein Fall. Drehe die Hinweiskarten um, indem du Fragen beantwortest, finde heraus, wer es war, und die Tür öffnet sich.", "det.office.title": "Die Falltafel", "det.office.lead": "Wähle einen Fall. Ein gelöster Fall öffnet die nächste Tür.", "det.office.rooms": "Rätselräume", "det.room.open": "Die Akte öffnen", "det.room.again": "Den Fall neu aufrollen", "det.room.solved": "Gelöst", "det.room.locked": "Gesperrt: Löse zuerst {unit} mit 2 Sternen.", "det.room.final": "Der letzte Raum", "det.room.final.locked": "Gesperrt: Meistere zuerst jeden Raum.", "det.room.stars": "{n} von 3 Sternen", "det.finish": "Die Akte schließen", "det.finish.hint": "Löse die letzte Aufgabe, um die Akte zu schließen.", "det.finish.ready": "Die letzte Aufgabe ist geschafft. Die Akte kann geschlossen werden.", "det.office.progress": "{n} von {total} Räumen gelöst", "det.room.resume": "Den Fall fortsetzen", "det.case.broken": "Dieser Fall konnte nicht erstellt werden. Wähle einen anderen.", "det.grid.caption": "{rows} und {cols}", "det.chase.resume": "Die Verfolgung fortsetzen", "det.back": "Zurück zur Falltafel", "det.title.screen": "Titelbildschirm", "det.case.crime": "Das Verbrechen geschah in: {place}.", "det.case.clues": "Hinweiskarten", "det.case.turned": "{n} von {total} Hinweisen umgedreht", "det.case.no.cards": "Jede Karte liegt offen. Markiere das Raster und erhebe dann Anklage.", "det.clue.n": "Hinweis {n}", "det.clue.turn": "Umdrehen", "det.clue.down": "Hinweis {n}, verdeckt. Beantworte eine Frage, um ihn umzudrehen.", "det.clue.up": "Hinweis {n}, aufgedeckt.", "det.clue.fact": "Die Tatsache aus deiner Antwort", "det.case.grid": "Das Raster", "det.case.grid.help": "Drücke auf ein Feld: Einmal streicht es durch, zweimal bedeutet ja, dreimal löscht es.", "det.mark.blank": "unbekannt", "det.mark.no": "nein", "det.mark.yes": "ja", "det.cell.label": "{a} und {b}: {state}", "det.board.title": "Die Pinnwand", "det.board.help": "Jedes Ja im Raster wird zu einem roten Faden zwischen den beiden.", "det.hint": "Um einen Tipp bitten", "det.hint.used": "Genutzte Tipps: {n}", "det.accuse.title": "Deine Anklage", "det.accuse.row": "Wer oder was ist es? {category}", "det.accuse.submit": "Anklage erheben", "det.accuse.submit.grid": "Das Raster prüfen", "det.accuse.grid": "Fülle das Raster mit den Hinweisen, bis jedes Ja markiert ist, und prüfe es dann.", "det.accuse.cards": "Die Akte ist unvollständig: Drehe zuerst jede Hinweiskarte um. Der Fall bleibt offen.", "det.accuse.pick": "Wähle zuerst für jede Zeile eine Antwort.", "det.accuse.wrong": "Nicht ganz: Sieh dir noch einmal {what} an. Der Fall bleibt offen.", "det.accuse.wrong.grid": "Im Raster stimmt etwas nicht. Prüfe es anhand der Hinweise. Der Fall bleibt offen.", "det.cat.suspect": "den Verdächtigen", "det.cat.weapon": "die Tatwaffe", "det.cat.place": "den Ort", "det.cat.motive": "das Motiv", "det.cat.suspect.label": "Verdächtiger", "det.cat.weapon.label": "Tatwaffe", "det.cat.place.label": "Ort", "det.cat.motive.label": "Motiv", "det.case.leave": "Zurück zur Tafel", "det.case.nofacts": "Zu diesem Hinweis konnte keine Frage gestellt werden, deshalb dreht sich die Karte von selbst um.", "det.hud.clue": "Hinweis {n} von {total}", "det.effect.up": "Hinweis {n} wird aufgedeckt.", "det.effect.down": "Die Karte bleibt verdeckt. Diese Frage kommt noch einmal.", "det.next.up": "Den Hinweis lesen", "det.next.down": "Zurück zum Fall", "det.solved.title": "Fall gelöst", "det.solved.stamp": "Gelöst", "det.solved.who": "Die Antwort: {what}", "det.solved.door": "Die Tür schwingt auf.", "det.solved.door.final": "Die letzte Tür schwingt auf.", "det.solved.unlocked": "Jetzt offen: {units}", "det.solved.stars": "Sterne für diesen Fall", "det.solved.accuracy": "Hinweisantworten beim ersten Versuch: {n} %", "det.solved.hints": "Genutzte Tipps: {n}", "det.solved.facts": "Worauf die Hinweise beruhten", "det.solved.more": "Zwei Sterne öffnen die nächsten Türen. Löse den Fall noch einmal für mehr.", "det.solved.again": "Noch einmal lösen", "det.chase.title": "Die Verfolgung", "det.chase.lead": "Der Verdächtige ist auf der Flucht. An jedem Ort hat ein Zeuge etwas gesehen: Beantworte die Frage, um es zu hören, und wähle dann, wohin der Verdächtige gegangen ist.", "det.chase.start": "Die Verfolgung starten", "det.chase.again": "Noch einmal verfolgen", "det.chase.locked": "Gesperrt: Meistere zuerst {unit}.", "det.chase.caught.tag": "Gefasst", "det.chase.suspect": "Auf der Flucht: {who}", "det.chase.at": "Du bist in {place}.", "det.chase.clock": "Uhr", "det.chase.clock.label": "Die Uhr zeigt {time}", "det.chase.ask": "Den Zeugen befragen", "det.chase.witness": "Der Zeuge sagt", "det.chase.heard": "Wohin ist sie gegangen?", "det.chase.travel": "Nach {place} reisen", "det.chase.cold": "Eine kalte Spur: Der Verdächtige ist nicht nach {place} gegangen. Das kostet eine Stunde, und du bist zurück in {back}.", "det.chase.warm": "Du folgst der Spur nach {place}.", "det.chase.hazy": "Der Zeuge hat sich nur langsam erinnert: Das hat eine Stunde gekostet.", "det.chase.map": "Eine Karte der Orte der Verfolgung", "det.chase.legs": "Etappe {n} von {total}", "det.chase.leave": "Die Verfolgung verlassen", "det.chase.effect.right": "Der Zeuge erinnert sich genau.", "det.chase.effect.wrong": "Der Zeuge ist unsicher: Eine Stunde geht verloren.", "det.chase.next": "Den Zeugen anhören", "det.caught.title": "Die Verfolgung ist vorbei", "det.caught.text": "{who} wird in {place} gefasst.", "det.caught.clock": "Die Verfolgung dauerte bis {time}.", "det.caught.cold": "Kalte Spuren: {n}", "det.caught.stars": "Sterne für die Verfolgung", "det.caught.accuracy": "Antworten beim ersten Versuch in der Verfolgung: {n} %", "det.caught.facts": "Die Orte auf der Spur", "det.caught.again": "Noch einmal verfolgen für mehr Sterne", "det.end.title": "Akte geschlossen", "det.end.sub": "Jede Tür ist offen und der Verdächtige ist gefasst.", "det.end.rooms": "Gelöste Räume: {n} von {total}" } }, Yu = "detective", N1 = "noir", P1 = "-", R1 = (t) => t.length > 0 ? t[0].toLocaleUpperCase() + t.slice(1) : t, D1 = { rooms: [] };
+  class L1 {
     constructor(e) {
       __publicField(this, "host");
       __publicField(this, "session");
@@ -8567,7 +8567,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       __publicField(this, "chaseNotice", null);
       __publicField(this, "cork", null);
       var _a3;
-      this.host = e, this.session = new Cs(e, { shellId: Yu, theme: O1, strings: M1 }), this.section = (_a3 = this.session.section()) != null ? _a3 : R1;
+      this.host = e, this.session = new Cs(e, { shellId: Yu, theme: N1, strings: O1 }), this.section = (_a3 = this.session.section()) != null ? _a3 : D1;
     }
     get s() {
       return this.session.s;
@@ -8638,7 +8638,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     caseOf(e, s) {
       const n = this.cases.get(e.id);
       if (n) return n;
-      const i = w1(s.clues.length, e.id);
+      const i = y1(s.clues.length, e.id);
       return this.cases.set(e.id, i), i;
     }
     built(e) {
@@ -8651,7 +8651,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     solution() {
       const e = this.room, s = e ? this.built(e) : null;
       if (!e || !s) return null;
-      const n = s.puzzle, i = this.cases.get(e.id), r = rl(n), o = Aw(n);
+      const n = s.puzzle, i = this.cases.get(e.id), r = rl(n), o = Tw(n);
       return { room: e.id, kind: n.kind, accusation: r, accuse: r ? Object.entries(r).map(([a, c]) => "accuse-".concat(a, "-").concat(c)) : [], yes: o, cells: o.map((a) => {
         const [c, l] = Re(a);
         return "cell-".concat(c, "-").concat(l);
@@ -8713,16 +8713,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         if (B == null) return d("li", { class: "det-card is-down", "data-state": "down" }, T("clue-".concat(G), [d("span", { class: "det-card-art" }, Zr()), d("span", { class: "det-card-no" }, i("det.clue.n", { n: G })), d("span", { class: "det-card-act" }, i("det.clue.turn"))], () => this.turnCard(e, G), { class: "det-card-btn" }));
         const H = this.factOf(n.item(B));
         return d("li", { class: "det-card is-up", "data-state": "up", testid: "clue-".concat(G), tabindex: "-1", ...s === G ? { "data-autofocus": "" } : {} }, d("h3", { class: "det-card-no" }, i("det.clue.n", { n: G })), d("p", { class: "det-clue-text" }, ul(o, I, u, n.lang)), H ? d("p", { class: "det-clue-fact" }, d("span", { class: "det-fact-label" }, i("det.clue.fact")), " ", H) : null);
-      }), k = { mark: (I) => i(I === "yes" ? "det.mark.yes" : I === "no" ? "det.mark.no" : "det.mark.blank"), cell: (I, D, G) => i("det.cell.label", { a: I, b: D, state: G }), caption: (I, D) => i("det.grid.caption", { rows: I, cols: D }) }, b = d("p", { class: "det-hint-text", testid: "hint-text", role: "status", hidden: true }), v = b1(o, a.marks, c, l, k, (I) => {
+      }), k = { mark: (I) => i(I === "yes" ? "det.mark.yes" : I === "no" ? "det.mark.no" : "det.mark.blank"), cell: (I, D, G) => i("det.cell.label", { a: I, b: D, state: G }), caption: (I, D) => i("det.grid.caption", { rows: I, cols: D }) }, b = d("p", { class: "det-hint-text", testid: "hint-text", role: "status", hidden: true }), v = v1(o, a.marks, c, l, k, (I) => {
         var _a3;
-        let D = Iw(a.marks, I);
-        vt(D, I) === "yes" && (D = Mw(o, D, I)), h({ ...a, marks: D }), p = "", v.update(D), (_a3 = this.cork) == null ? void 0 : _a3.update(D);
+        let D = Mw(a.marks, I);
+        vt(D, I) === "yes" && (D = Ow(o, D, I)), h({ ...a, marks: D }), p = "", v.update(D), (_a3 = this.cork) == null ? void 0 : _a3.update(D);
         const [G, B] = Re(I);
         n.live(k.cell(c(G), c(B), k.mark(vt(D, I)))), f();
-      }), w = g1(o, c, l, a.marks);
+      }), w = k1(o, c, l, a.marks);
       this.cork = w;
       const y = T("hint", "💡 ".concat(i("det.hint")), () => {
-        const I = Nw(o, y1(a), a.marks, u, n.lang);
+        const I = Pw(o, S1(a), a.marks, u, n.lang);
         h({ ...a, hints: a.hints + 1 }), b.hidden = false, b.textContent = I.text, p = I.kind === "step" || I.kind === "wrong" ? I.cell : "", v.update(a.marks, p), $.textContent = i("det.hint.used", { n: a.hints }), f();
       }, { class: "btn btn-small" }), $ = d("span", { class: "det-hint-count", testid: "hint-count" }, i("det.hint.used", { n: a.hints })), x = /* @__PURE__ */ new Map(), _ = d("p", { class: "det-accuse-message", testid: "accuse-message", role: "status", hidden: true }), z = (I, D) => {
         _.hidden = false, _.className = "det-accuse-message message message-bad", _.textContent = I;
@@ -8739,7 +8739,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         })));
       }), S = T("accuse-submit", o.kind === "murdle" ? i("det.accuse.submit") : i("det.accuse.submit.grid"), () => {
         var _a3;
-        const I = j1(o, a, (D, G) => Ow(o, D, G));
+        const I = x1(o, a, (D, G) => Nw(o, D, G));
         if (I.kind === "cards") return z(i("det.accuse.cards"));
         if (I.kind === "pick") return z(i("det.accuse.pick"));
         if (I.kind === "wrong") return h({ ...a, wrongAccusations: a.wrongAccusations + 1 }), z(o.kind === "murdle" ? i("det.accuse.wrong", { what: I.wrong.map((D) => this.categoryWords(D, l)).join(", ") }) : i("det.accuse.wrong.grid")), n.live((_a3 = _.textContent) != null ? _a3 : ""), f();
@@ -8760,18 +8760,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (!r || !o) return this.caseScreen(e);
       const a = o.cards.length, c = e.unit ? "unit" : "boss";
       let l = o.run, u = l ? n.next(l) : null;
-      u || (l = n.startRun($1(e.case.items, o), { kind: c, ...e.unit ? { unitId: e.unit } : {} }), u = n.next(l));
+      u || (l = n.startRun(z1(e.case.items, o), { kind: c, ...e.unit ? { unitId: e.unit } : {} }), u = n.next(l));
       const h = u ? n.item(u.id) : void 0;
-      if (!l || !u || !n.canAsk(h)) return this.cases.set(e.id, { ...o, run: l, cards: o.cards.map((g, k) => k === s - 1 ? N1 : g) }), this.caseScreen(e, s);
+      if (!l || !u || !n.canAsk(h)) return this.cases.set(e.id, { ...o, run: l, cards: o.cards.map((g, k) => k === s - 1 ? P1 : g) }), this.caseScreen(e, s);
       this.cases.set(e.id, { ...o, run: l });
       const p = l, f = u, m = d("div", { class: "det-hud" }, d("span", { class: "det-hud-card" }, Zr()), d("div", { class: "det-hud-text" }, d("p", { class: "det-hud-room" }, n.t(e.title)), d("p", { class: "det-hud-count" }, i("det.case.turned", { n: Bs(o), total: a }))));
       lt(n, { item: h, context: "clue", retry: f.retry, hud: m, lead: d("span", {}, i("det.hud.clue", { n: s, total: a })), ...e.unit ? { unitId: e.unit } : {}, roundKind: c, roundSize: p.size, index: p.results.length, view: () => this.caseView(e), leaveLabel: i("det.case.leave"), onLeave: () => this.caseScreen(e), onAnswered: (g) => {
-        const k = this.cases.get(e.id), b = _1({ ...k, run: n.record(p, f, g) }, s, h.id, g.result.correct, g.result.score);
+        const k = this.cases.get(e.id), b = j1({ ...k, run: n.record(p, f, g) }, s, h.id, g.result.correct, g.result.score);
         this.cases.set(e.id, b);
       }, effect: (g) => g.result.correct ? { text: i("det.effect.up", { n: s }), tone: "good" } : { text: i("det.effect.down"), tone: "bad" }, nextLabel: (g) => g.result.correct ? i("det.next.up") : i("det.next.down"), onNext: (g) => this.caseScreen(e, g.result.correct ? s : void 0) });
     }
     solved(e, s, n) {
-      const i = this.session, r = this.s, o = z1(n), a = i.recordUnit(e.unit ? { unitId: e.unit } : { boss: true }, o), c = this.saved();
+      const i = this.session, r = this.s, o = _1(n), a = i.recordUnit(e.unit ? { unitId: e.unit } : { boss: true }, o), c = this.saved();
       c.solved.includes(e.id) || this.save({ ...c, solved: [...c.solved, e.id] }), i.playCue(e.unit ? "unit-complete" : "boss");
       const l = this.nameOf(e), u = this.labelOf(e), h = rl(s), p = h ? Object.entries(h).map(([v, w]) => "".concat(u(v), ": ").concat(l(w))).join("; ") : "", f = a.unlocked.map((v) => i.unitTitle(v)), m = Math.round(o * 100), g = n.cards.flatMap((v, w) => {
         const y = this.factOf(v ? i.item(v) : void 0);
@@ -8785,7 +8785,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     startChase() {
       const e = this.section.chase;
       if (!e) return this.office();
-      (!this.chase || this.chase.caught) && (this.chase = A1(e, this.session.rng), this.coldPlaces = /* @__PURE__ */ new Set(), this.chaseNotice = null), this.chaseScreen();
+      (!this.chase || this.chase.caught) && (this.chase = T1(e, this.session.rng), this.coldPlaces = /* @__PURE__ */ new Set(), this.chaseNotice = null), this.chaseScreen();
     }
     placeName(e, s) {
       const n = e.places.find((i) => i.id === s);
@@ -8805,7 +8805,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     chaseScreen() {
       const e = this.session, s = this.s, n = this.section.chase, i = this.chase;
       this.disposeCork();
-      const r = n.route[i.leg], o = e.pack.assets.find((f) => f.id === n.map), a = v1({ src: e.data.assets[n.map], alt: o ? e.t(o.alt) : s("det.chase.map"), width: n.width, height: n.height, places: n.places.map((f) => ({ id: f.id, name: e.t(f.name), x: f.x, y: f.y })), trail: i.trail, options: i.heard ? i.options : [], here: i.at }), c = this.chaseNotice, l = c ? d("p", { class: "message ".concat(c.kind === "warm" ? "message-ok" : "message-bad"), role: "status", testid: "chase-notice", "data-kind": c.kind }, c.kind === "cold" ? s("det.chase.cold", { place: c.place, back: c.back }) : c.kind === "warm" ? s("det.chase.warm", { place: c.place }) : s("det.chase.hazy")) : null, u = i.heard && r ? i.options : [], h = r ? i.heard ? d("div", { class: "det-travel-panel" }, d("figure", { class: "det-witness", testid: "witness-line" }, d("figcaption", {}, s("det.chase.witness")), d("blockquote", {}, this.witnessText(n, i.leg))), d("h2", { class: "det-h2" }, s("det.chase.heard")), d("ul", { class: "det-travel", testid: "travel" }, u.map((f, m) => d("li", {}, T("travel-".concat(f), this.s("det.chase.travel", { place: this.placeName(n, f) }), () => this.go(f), { class: "btn det-go".concat(this.coldPlaces.has(f) ? " is-cold" : ""), ...this.coldPlaces.has(f) ? { disabled: true, "data-cold": "true" } : {}, ...m === u.findIndex((g) => !this.coldPlaces.has(g)) ? { "data-autofocus": "" } : {} }))))) : d("div", { class: "det-witness-panel" }, d("p", { class: "det-here", testid: "chase-here" }, s("det.chase.at", { place: this.placeName(n, i.at) })), T("ask-witness", s("det.chase.ask"), () => this.askWitness(), { class: "btn btn-primary btn-big", "data-autofocus": "" })) : null, p = d("section", { class: "chase-screen det-chase" }, d("div", { class: "topbar" }, T("to-office", "‹ ".concat(s("det.chase.leave")), () => this.office(), { class: "btn btn-small btn-ghost" }), d("span", { class: "det-clock", testid: "clock", role: "timer", "aria-label": s("det.chase.clock.label", { time: is(i.hours) }) }, d("span", { class: "det-clock-label" }, s("det.chase.clock")), " ", is(i.hours))), d("h1", { class: "screen-title", tabindex: "-1", testid: "chase-title" }, e.t(n.title) || s("det.chase.title")), d("p", { class: "subject", testid: "chase-suspect" }, s("det.chase.suspect", { who: e.t(n.suspect) })), d("p", { class: "det-legs", testid: "chase-legs" }, s("det.chase.legs", { n: Math.min(i.leg + 1, n.route.length), total: n.route.length })), d("div", { class: "det-chase-layout" }, a, d("div", { class: "det-chase-side" }, l, h)));
+      const r = n.route[i.leg], o = e.pack.assets.find((f) => f.id === n.map), a = w1({ src: e.data.assets[n.map], alt: o ? e.t(o.alt) : s("det.chase.map"), width: n.width, height: n.height, places: n.places.map((f) => ({ id: f.id, name: e.t(f.name), x: f.x, y: f.y })), trail: i.trail, options: i.heard ? i.options : [], here: i.at }), c = this.chaseNotice, l = c ? d("p", { class: "message ".concat(c.kind === "warm" ? "message-ok" : "message-bad"), role: "status", testid: "chase-notice", "data-kind": c.kind }, c.kind === "cold" ? s("det.chase.cold", { place: c.place, back: c.back }) : c.kind === "warm" ? s("det.chase.warm", { place: c.place }) : s("det.chase.hazy")) : null, u = i.heard && r ? i.options : [], h = r ? i.heard ? d("div", { class: "det-travel-panel" }, d("figure", { class: "det-witness", testid: "witness-line" }, d("figcaption", {}, s("det.chase.witness")), d("blockquote", {}, this.witnessText(n, i.leg))), d("h2", { class: "det-h2" }, s("det.chase.heard")), d("ul", { class: "det-travel", testid: "travel" }, u.map((f, m) => d("li", {}, T("travel-".concat(f), this.s("det.chase.travel", { place: this.placeName(n, f) }), () => this.go(f), { class: "btn det-go".concat(this.coldPlaces.has(f) ? " is-cold" : ""), ...this.coldPlaces.has(f) ? { disabled: true, "data-cold": "true" } : {}, ...m === u.findIndex((g) => !this.coldPlaces.has(g)) ? { "data-autofocus": "" } : {} }))))) : d("div", { class: "det-witness-panel" }, d("p", { class: "det-here", testid: "chase-here" }, s("det.chase.at", { place: this.placeName(n, i.at) })), T("ask-witness", s("det.chase.ask"), () => this.askWitness(), { class: "btn btn-primary btn-big", "data-autofocus": "" })) : null, p = d("section", { class: "chase-screen det-chase" }, d("div", { class: "topbar" }, T("to-office", "‹ ".concat(s("det.chase.leave")), () => this.office(), { class: "btn btn-small btn-ghost" }), d("span", { class: "det-clock", testid: "clock", role: "timer", "aria-label": s("det.chase.clock.label", { time: is(i.hours) }) }, d("span", { class: "det-clock-label" }, s("det.chase.clock")), " ", is(i.hours))), d("h1", { class: "screen-title", tabindex: "-1", testid: "chase-title" }, e.t(n.title) || s("det.chase.title")), d("p", { class: "subject", testid: "chase-suspect" }, s("det.chase.suspect", { who: e.t(n.suspect) })), d("p", { class: "det-legs", testid: "chase-legs" }, s("det.chase.legs", { n: Math.min(i.leg + 1, n.route.length), total: n.route.length })), d("div", { class: "det-chase-layout" }, a, d("div", { class: "det-chase-side" }, l, h)));
       e.render("chase", p, { ...n.unit ? { unitId: n.unit } : {}, view: this.chaseView() });
     }
     askWitness() {
@@ -8819,15 +8819,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }, effect: (c) => c.result.correct ? { text: s("det.chase.effect.right"), tone: "good" } : { text: s("det.chase.effect.wrong"), tone: "bad" }, nextLabel: s("det.chase.next"), onNext: () => this.chaseScreen() });
     }
     go(e) {
-      const s = this.session, n = this.section.chase, i = this.chase, r = T1(i, n, e, s.rng);
+      const s = this.session, n = this.section.chase, i = this.chase, r = I1(i, n, e, s.rng);
       if (this.chase = r.state, !r.right) return this.coldPlaces.add(e), this.chaseNotice = { kind: "cold", place: this.placeName(n, e), back: this.placeName(n, i.at) }, s.live(this.s("det.chase.cold", { place: this.placeName(n, e), back: this.placeName(n, i.at) })), this.chaseScreen();
       if (this.coldPlaces = /* @__PURE__ */ new Set(), r.state.caught) return this.caught();
       this.chaseNotice = { kind: "warm", place: this.placeName(n, e), back: "" }, this.chaseScreen();
     }
     caught() {
-      const e = this.session, s = this.s, n = this.section.chase, i = this.chase, r = I1(i), o = e.recordUnit(n.unit ? { unitId: n.unit } : { boss: true }, r);
+      const e = this.session, s = this.s, n = this.section.chase, i = this.chase, r = M1(i), o = e.recordUnit(n.unit ? { unitId: n.unit } : { boss: true }, r);
       this.save({ ...this.saved(), caught: true }), e.playCue(n.unit ? "unit-complete" : "boss"), this.chaseNotice = null;
-      const a = Math.round(r * 100), c = o.unlocked.map((u) => e.unitTitle(u)), l = d("section", { class: "caught-screen det-solved det-caught" }, d("p", { class: "det-stamp", "aria-hidden": "true" }, s("det.chase.caught.tag")), d("h1", { class: "screen-title", tabindex: "-1", testid: "caught-title" }, s("det.caught.title")), d("p", { class: "subject", testid: "caught-text" }, s("det.caught.text", { who: P1(e.t(n.suspect)), place: this.placeName(n, dl(n)) })), e.stars(o.stars, "chase-stars"), d("p", { class: "big-number", testid: "chase-accuracy" }, s("det.caught.accuracy", { n: a })), d("p", { class: "det-note", testid: "caught-clock" }, s("det.caught.clock", { time: is(i.hours) })), d("p", { class: "det-note", testid: "caught-cold" }, s("det.caught.cold", { n: i.cold })), c.length > 0 ? d("p", { class: "message", testid: "caught-unlocked" }, s("det.solved.unlocked", { units: c.join(", ") })) : null, d("div", { class: "det-facts" }, d("h2", { class: "det-h2" }, s("det.caught.facts")), d("ol", { class: "det-trail", testid: "caught-trail" }, i.trail.map((u) => d("li", {}, this.placeName(n, u))))), d("div", { class: "actions actions-center" }, T("to-office", s("det.back"), () => this.office(), { class: "btn btn-primary btn-big", "data-autofocus": "" }), o.stars < 3 ? T("chase-again", s("det.caught.again"), () => this.restartChase(), { class: "btn btn-big" }) : null));
+      const a = Math.round(r * 100), c = o.unlocked.map((u) => e.unitTitle(u)), l = d("section", { class: "caught-screen det-solved det-caught" }, d("p", { class: "det-stamp", "aria-hidden": "true" }, s("det.chase.caught.tag")), d("h1", { class: "screen-title", tabindex: "-1", testid: "caught-title" }, s("det.caught.title")), d("p", { class: "subject", testid: "caught-text" }, s("det.caught.text", { who: R1(e.t(n.suspect)), place: this.placeName(n, dl(n)) })), e.stars(o.stars, "chase-stars"), d("p", { class: "big-number", testid: "chase-accuracy" }, s("det.caught.accuracy", { n: a })), d("p", { class: "det-note", testid: "caught-clock" }, s("det.caught.clock", { time: is(i.hours) })), d("p", { class: "det-note", testid: "caught-cold" }, s("det.caught.cold", { n: i.cold })), c.length > 0 ? d("p", { class: "message", testid: "caught-unlocked" }, s("det.solved.unlocked", { units: c.join(", ") })) : null, d("div", { class: "det-facts" }, d("h2", { class: "det-h2" }, s("det.caught.facts")), d("ol", { class: "det-trail", testid: "caught-trail" }, i.trail.map((u) => d("li", {}, this.placeName(n, u))))), d("div", { class: "actions actions-center" }, T("to-office", s("det.back"), () => this.office(), { class: "btn btn-primary btn-big", "data-autofocus": "" }), o.stars < 3 ? T("chase-again", s("det.caught.again"), () => this.restartChase(), { class: "btn btn-big" }) : null));
       e.render("caught", l, { ...n.unit ? { unitId: n.unit } : {}, view: { stars: o.stars, accuracy: a, hours: i.hours, clock: is(i.hours), cold: i.cold, trail: i.trail, unlocked: o.unlocked } });
     }
     restartChase() {
@@ -8838,24 +8838,24 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const e = this.session, s = this.s;
       e.finish(), this.disposeCork();
       const n = this.rooms(), i = this.saved(), r = n.filter((o) => i.solved.includes(o.id)).length;
-      e.render("end", Us(e, { title: s("det.end.title"), sub: s("det.end.sub"), stats: d("p", { class: "subject", testid: "end-rooms" }, s("det.end.rooms", { n: r, total: n.length })), onAgain: () => this.office(), onTitle: () => this.title() }), { view: { solved: r, total: n.length, caught: i.caught, final: (_b3 = (_a3 = Bw(this.section)) == null ? void 0 : _a3.id) != null ? _b3 : null } });
+      e.render("end", Us(e, { title: s("det.end.title"), sub: s("det.end.sub"), stats: d("p", { class: "subject", testid: "end-rooms" }, s("det.end.rooms", { n: r, total: n.length })), onAgain: () => this.office(), onTitle: () => this.title() }), { view: { solved: r, total: n.length, caught: i.caught, final: (_b3 = (_a3 = Fw(this.section)) == null ? void 0 : _a3.id) != null ? _b3 : null } });
     }
   }
   const Ju = /* @__PURE__ */ (() => {
     let t = null;
     return { id: Yu, mount(e) {
-      t = new D1(e), t.mount();
+      t = new L1(e), t.mount();
     }, unmount() {
       t == null ? void 0 : t.unmount(), t = null;
     } };
-  })(), L1 = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  function C1(t, e, s) {
+  })(), C1 = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  function Z1(t, e, s) {
     const n = s.filter((r) => r.id !== e && r.title.trim().length >= 3).map((r) => ({ id: r.id, title: r.title.trim() })).sort((r, o) => o.title.length - r.title.length), i = /* @__PURE__ */ new Set();
     return t.map((r) => {
       const o = [];
       for (const l of n) {
         if (i.has(l.id)) continue;
-        const h = new RegExp("(?<![\\p{L}\\p{N}])".concat(L1(l.title), "(?![\\p{L}\\p{N}])"), "iu").exec(r);
+        const h = new RegExp("(?<![\\p{L}\\p{N}])".concat(C1(l.title), "(?![\\p{L}\\p{N}])"), "iu").exec(r);
         if (!h) continue;
         const p = h.index, f = p + h[0].length;
         o.some((m) => p < m.end && f > m.start) || (o.push({ start: p, end: f, id: l.id }), i.add(l.id));
@@ -8867,7 +8867,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return c < r.length && a.push({ text: r.slice(c) }), a.length > 0 ? a : [{ text: r }];
     });
   }
-  const Z1 = (t) => [...new Set(t.flat().flatMap((e) => e.link ? [e.link] : []))], Ur = (t) => Pe(t, { fold: true });
+  const U1 = (t) => [...new Set(t.flat().flatMap((e) => e.link ? [e.link] : []))], Ur = (t) => Pe(t, { fold: true });
   function Qu(t, e, s = 8) {
     const n = Ur(t);
     if (n.replace(/ /g, "").length < 2) return [];
@@ -8888,7 +8888,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return t.title;
   }
   const ed = () => ({ found: [], read: [] }), Hn = (t, e) => Array.isArray(t) ? [...new Set(t.filter((s) => typeof s == "string" && e.has(s)))] : [];
-  function U1(t, e, s, n = /* @__PURE__ */ new Set()) {
+  function B1(t, e, s, n = /* @__PURE__ */ new Set()) {
     if (typeof t != "object" || t === null) return ed();
     const i = t, r = { found: Hn(i.found, e), read: Hn(i.read, s) }, o = i.reader;
     if (typeof o == "object" && o !== null) {
@@ -8898,18 +8898,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const a = Hn(i.glossOff, n);
     return a.length > 0 && (r.glossOff = a), r;
   }
-  const B1 = (t, e) => t.found.includes(e) ? t : { ...t, found: [...t.found, e] }, td = (t, e) => t.read.includes(e) ? t : { ...t, read: [...t.read, e] };
-  function F1(t, e, s) {
+  const F1 = (t, e) => t.found.includes(e) ? t : { ...t, found: [...t.found, e] }, td = (t, e) => t.read.includes(e) ? t : { ...t, read: [...t.read, e] };
+  function K1(t, e, s) {
     var _a3;
     const n = (_a3 = t.reader) != null ? _a3 : { scroll: 0, done: [] }, i = Math.min(1, Math.max(0, s));
     return n.chapter === e && Math.abs(n.scroll - i) < 5e-3 ? t : { ...t, reader: { ...n, chapter: e, scroll: i } };
   }
-  function K1(t, e) {
+  function q1(t, e) {
     var _a3;
     const s = (_a3 = t.reader) != null ? _a3 : { scroll: 0, done: [] };
     return s.done.includes(e) ? t : { ...t, reader: { ...s, done: [...s.done, e] } };
   }
-  function q1(t, e, s) {
+  function G1(t, e, s) {
     var _a3;
     const n = (_a3 = t.glossOff) != null ? _a3 : [];
     if (s) {
@@ -8919,14 +8919,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return n.includes(e) ? t : { ...t, glossOff: [...n, e] };
   }
-  const sd = (t, e) => "".concat(t, "/").concat(e), G1 = { en: { "enc.tagline": "An illustrated encyclopedia to explore", "enc.open": "Open the book", "enc.continue": "Continue reading", "enc.nav.label": "Parts of the book", "enc.nav.title": "Title page", "enc.nav.index": "Index", "enc.nav.timeline": "Timeline", "enc.nav.map": "Map", "enc.nav.codex": "Codex", "enc.nav.hunts": "Hunts", "enc.masthead.sub": "Browse the articles, follow the links, then go hunting for the answers.", "enc.stat.found": "Collected", "enc.stat.stars": "Stars", "enc.stat.read": "Read", "enc.search.label": "Search the encyclopedia", "enc.search.placeholder": "A word, then Enter", "enc.search.none": 'No article matches "{q}".', "enc.search.count": "{n} found. Press Enter to open the first.", "enc.search.results": "Search results", "enc.index": "Index of articles", "enc.chapter": "Chapter {n}", "enc.locked": 'The hunts of this chapter open when you have mastered "{unit}". The articles are free to read.', "enc.readMark": "read", "enc.other": "More articles", "enc.plate": "Plate", "enc.back": "Back", "enc.seeAlso": "See also", "enc.sources": "Sources", "enc.openSource": "Open the source in a new tab", "enc.audio.play": "Listen", "enc.audio.stop": "Stop listening", "reader.listen": "Listen to paragraph {n}", "reader.listen.stop": "Stop paragraph {n}", "reader.listenAll": "Listen to the whole text", "reader.listenAll.stop": "Stop listening", "enc.runhead": "Article", "enc.collect": "Collect: {name}", "enc.collect.hint": "This page answers your clue.", "enc.clue.label": "Clue {n} of {total}", "enc.clue.bar": "Your hunt: {title}", "enc.clue.retry": "Back again. Read this page more closely.", "enc.clue.drop": "Put the hunt aside", "enc.tl.title": "Timeline", "enc.tl.intro": "Events along a ruler, true to scale. Use the left and right arrow keys to move between them.", "enc.tl.box": "Timeline of events", "enc.tl.read": "Read the article", "enc.tl.empty": "There are no dated events yet.", "enc.bc": "BC", "enc.map.title": "Map", "enc.map.intro": "Brass pins mark the places of the articles. Choose a pin, or a name from the list below it.", "enc.map.places": "Places on this map", "enc.map.none": "No places are marked on this map yet.", "enc.map.box": "The map", "enc.codex.title": "Codex", "enc.codex.intro": "Everything you have collected on your hunts, and the fact each one taught you.", "enc.codex.count": "{found} of {total} collected", "enc.codex.unknown": "Not found yet", "enc.codex.taught": "It taught you", "enc.codex.read": 'Read "{title}"', "enc.codex.empty": "Start a hunt to fill this page.", "enc.hunts.title": "Scavenger hunts", "enc.hunts.intro": "Each hunt gives you a clue. Find the article, collect the thing, and answer its question. Read first: the answer is in the article.", "enc.hunt.clues": "Clues: {n}", "enc.hunt.found": "{found} of {n} collected", "enc.hunt.start": "Start the hunt", "enc.hunt.again": "Hunt again", "enc.hunt.locked": 'Locked: master "{unit}" first.', "enc.hunt.empty": "No clues in this hunt.", "enc.hunt.final": "The grand hunt", "enc.hunt.final.intro": "Clues from every chapter, mixed up. Show that you remember.", "enc.hunt.final.locked": "Opens when every chapter is mastered.", "enc.hunt.auto": "Hunt: {unit}", "enc.hunt.auto.intro": "Find the pages and collect what they hold.", "enc.auto.clue": "Find the article about {title}.", "enc.auto.name": "Bookmark: {title}", "enc.res.title": "The hunt is over", "enc.res.good": "Well hunted! You collected {n} of {total}.", "enc.res.more": "You collected {n} of {total}. Read the articles again and hunt once more to master this chapter.", "enc.res.unlocked": "New hunts are open: {units}.", "enc.res.final": "The grand hunt is done. The book is yours.", "enc.finish": "Close the book", "enc.hud": "Hunt: {title}", "enc.lead": "To collect: {name}", "enc.q.back": "Back to the article", "enc.turn": "Turn the page", "enc.fx.found": "Collected: {name}. It is in your codex.", "enc.fx.again": "{name} is already in your codex. This answer counts for the hunt.", "enc.fx.missed": "Not collected yet. Read the article again: the clue comes back.", "enc.end.title": "Encyclopedia mastered!", "enc.end.sub": "You hunted through every chapter of the book.", "enc.end.stats": "Collected {found} of {total}. Articles read: {read} of {articles}." }, hr: { "enc.tagline": "Ilustrirana enciklopedija za istraživanje", "enc.open": "Otvori knjigu", "enc.continue": "Nastavi čitati", "enc.nav.label": "Dijelovi knjige", "enc.nav.title": "Naslovnica", "enc.nav.index": "Kazalo", "enc.nav.timeline": "Vremenska crta", "enc.nav.map": "Karta", "enc.nav.codex": "Kodeks", "enc.nav.hunts": "Potrage", "enc.masthead.sub": "Listaj članke, prati poveznice, a zatim kreni u potragu za odgovorima.", "enc.stat.found": "Skupljeno", "enc.stat.stars": "Zvjezdice", "enc.stat.read": "Pročitano", "enc.search.label": "Pretraži enciklopediju", "enc.search.placeholder": "Riječ, pa Enter", "enc.search.none": 'Nijedan članak ne odgovara upitu "{q}".', "enc.search.count": "Pronađeno: {n}. Pritisni Enter da otvoriš prvi.", "enc.search.results": "Rezultati pretrage", "enc.index": "Kazalo članaka", "enc.chapter": "Poglavlje {n}", "enc.locked": 'Potrage ovog poglavlja otvaraju se kad savladaš cjelinu "{unit}". Članke možeš čitati slobodno.', "enc.readMark": "pročitano", "enc.other": "Ostali članci", "enc.plate": "Ilustracija", "enc.back": "Natrag", "enc.seeAlso": "Vidi i", "enc.sources": "Izvori", "enc.openSource": "Otvori izvor u novoj kartici", "enc.audio.play": "Poslušaj", "enc.audio.stop": "Zaustavi slušanje", "reader.listen": "Poslušaj odlomak {n}", "reader.listen.stop": "Zaustavi odlomak {n}", "reader.listenAll": "Poslušaj cijeli tekst", "reader.listenAll.stop": "Zaustavi slušanje", "enc.runhead": "Članak", "enc.collect": "Uzmi: {name}", "enc.collect.hint": "Ova stranica odgovara na tvoj trag.", "enc.clue.label": "Trag {n} od {total}", "enc.clue.bar": "Tvoja potraga: {title}", "enc.clue.retry": "Opet na redu. Pročitaj ovu stranicu pažljivije.", "enc.clue.drop": "Odloži potragu", "enc.tl.title": "Vremenska crta", "enc.tl.intro": "Događaji na ravnalu, u mjerilu. Lijevom i desnom strelicom prelaziš s jednog na drugi.", "enc.tl.box": "Vremenska crta događaja", "enc.tl.read": "Pročitaj članak", "enc.tl.empty": "Još nema datiranih događaja.", "enc.bc": "pr. Kr.", "enc.map.title": "Karta", "enc.map.intro": "Mjedene pribadače označavaju mjesta iz članaka. Odaberi pribadaču ili ime s popisa ispod karte.", "enc.map.places": "Mjesta na karti", "enc.map.none": "Na ovoj karti još nema označenih mjesta.", "enc.map.box": "Karta", "enc.codex.title": "Kodeks", "enc.codex.intro": "Sve što si skupio u potragama i činjenica koju te je svaki predmet naučio.", "enc.codex.count": "Skupljeno {found} od {total}", "enc.codex.unknown": "Još nije pronađeno", "enc.codex.taught": "Naučio te je", "enc.codex.read": 'Pročitaj "{title}"', "enc.codex.empty": "Započni potragu da ispuniš ovu stranicu.", "enc.hunts.title": "Potrage", "enc.hunts.intro": "Svaka potraga daje trag. Pronađi članak, uzmi predmet i odgovori na njegovo pitanje. Prvo čitaj: odgovor je u članku.", "enc.hunt.clues": "Tragova: {n}", "enc.hunt.found": "Skupljeno {found} od {n}", "enc.hunt.start": "Kreni u potragu", "enc.hunt.again": "Potraži ponovno", "enc.hunt.locked": 'Zaključano: prvo savladaj cjelinu "{unit}".', "enc.hunt.empty": "Ova potraga nema tragova.", "enc.hunt.final": "Velika potraga", "enc.hunt.final.intro": "Tragovi iz svih poglavlja, pomiješani. Pokaži da pamtiš.", "enc.hunt.final.locked": "Otvara se kad su sva poglavlja savladana.", "enc.hunt.auto": "Potraga: {unit}", "enc.hunt.auto.intro": "Pronađi stranice i skupi što skrivaju.", "enc.auto.clue": "Pronađi članak o temi: {title}.", "enc.auto.name": "Straničnik: {title}", "enc.res.title": "Potraga je gotova", "enc.res.good": "Dobra potraga! Skupio/la si {n} od {total}.", "enc.res.more": "Skupio/la si {n} od {total}. Pročitaj članke ponovno i potraži još jednom da savladaš ovo poglavlje.", "enc.res.unlocked": "Otvorene su nove potrage: {units}.", "enc.res.final": "Velika potraga je gotova. Knjiga je tvoja.", "enc.finish": "Zatvori knjigu", "enc.hud": "Potraga: {title}", "enc.lead": "Za uzeti: {name}", "enc.q.back": "Natrag na članak", "enc.turn": "Okreni stranicu", "enc.fx.found": "Skupljeno: {name}. Nalazi se u tvom kodeksu.", "enc.fx.again": "{name} već imaš u kodeksu. Ovaj odgovor se ipak računa za potragu.", "enc.fx.missed": "Još nije skupljeno. Pročitaj članak ponovno: trag se vraća.", "enc.end.title": "Enciklopedija savladana!", "enc.end.sub": "Proveo/la si potragu kroz svako poglavlje knjige.", "enc.end.stats": "Skupljeno {found} od {total}. Pročitanih članaka: {read} od {articles}." }, de: { "enc.tagline": "Eine bebilderte Enzyklopädie zum Entdecken", "enc.open": "Das Buch öffnen", "enc.continue": "Weiterlesen", "enc.nav.label": "Teile des Buches", "enc.nav.title": "Titelseite", "enc.nav.index": "Register", "enc.nav.timeline": "Zeitleiste", "enc.nav.map": "Karte", "enc.nav.codex": "Kodex", "enc.nav.hunts": "Schnitzeljagden", "enc.masthead.sub": "Blättere durch die Artikel, folge den Verweisen und gehe dann auf die Suche nach den Antworten.", "enc.stat.found": "Gesammelt", "enc.stat.stars": "Sterne", "enc.stat.read": "Gelesen", "enc.search.label": "Die Enzyklopädie durchsuchen", "enc.search.placeholder": "Ein Wort, dann Enter", "enc.search.none": "Kein Artikel passt zu „{q}“.", "enc.search.count": "{n} gefunden. Drücke Enter, um den ersten zu öffnen.", "enc.search.results": "Suchergebnisse", "enc.index": "Artikelregister", "enc.chapter": "Kapitel {n}", "enc.locked": "Die Schnitzeljagden dieses Kapitels öffnen sich, wenn du „{unit}“ gemeistert hast. Die Artikel kannst du jederzeit lesen.", "enc.readMark": "gelesen", "enc.other": "Weitere Artikel", "enc.plate": "Tafel", "enc.back": "Zurück", "enc.seeAlso": "Siehe auch", "enc.sources": "Quellen", "enc.openSource": "Die Quelle in einem neuen Tab öffnen", "enc.audio.play": "Anhören", "enc.audio.stop": "Anhören beenden", "reader.listen": "Absatz {n} anhören", "reader.listen.stop": "Absatz {n} anhalten", "reader.listenAll": "Den ganzen Text anhören", "reader.listenAll.stop": "Anhören beenden", "enc.runhead": "Artikel", "enc.collect": "Sammeln: {name}", "enc.collect.hint": "Diese Seite beantwortet deinen Hinweis.", "enc.clue.label": "Hinweis {n} von {total}", "enc.clue.bar": "Deine Suche: {title}", "enc.clue.retry": "Wieder da. Lies diese Seite genauer.", "enc.clue.drop": "Die Suche beiseitelegen", "enc.tl.title": "Zeitleiste", "enc.tl.intro": "Ereignisse an einem Lineal, maßstabsgetreu. Mit den Pfeiltasten links und rechts wechselst du zwischen ihnen.", "enc.tl.box": "Zeitleiste der Ereignisse", "enc.tl.read": "Den Artikel lesen", "enc.tl.empty": "Es gibt noch keine datierten Ereignisse.", "enc.bc": "v. Chr.", "enc.map.title": "Karte", "enc.map.intro": "Messingnadeln markieren die Orte der Artikel. Wähle eine Nadel oder einen Namen aus der Liste darunter.", "enc.map.places": "Orte auf dieser Karte", "enc.map.none": "Auf dieser Karte sind noch keine Orte markiert.", "enc.map.box": "Die Karte", "enc.codex.title": "Kodex", "enc.codex.intro": "Alles, was du auf deinen Suchen gesammelt hast, und was dir jedes Stück beigebracht hat.", "enc.codex.count": "{found} von {total} gesammelt", "enc.codex.unknown": "Noch nicht gefunden", "enc.codex.taught": "Das hat es dich gelehrt", "enc.codex.read": "„{title}“ lesen", "enc.codex.empty": "Starte eine Suche, um diese Seite zu füllen.", "enc.hunts.title": "Schnitzeljagden", "enc.hunts.intro": "Jede Jagd gibt dir einen Hinweis. Finde den Artikel, sammle das Gesuchte und beantworte die Frage dazu. Lies zuerst: Die Antwort steht im Artikel.", "enc.hunt.clues": "Hinweise: {n}", "enc.hunt.found": "{found} von {n} gesammelt", "enc.hunt.start": "Die Jagd starten", "enc.hunt.again": "Noch einmal jagen", "enc.hunt.locked": "Gesperrt: Meistere zuerst „{unit}“.", "enc.hunt.empty": "Diese Jagd hat keine Hinweise.", "enc.hunt.final": "Die große Jagd", "enc.hunt.final.intro": "Hinweise aus allen Kapiteln, durcheinander. Zeige, dass du dich erinnerst.", "enc.hunt.final.locked": "Öffnet sich, wenn alle Kapitel gemeistert sind.", "enc.hunt.auto": "Jagd: {unit}", "enc.hunt.auto.intro": "Finde die Seiten und sammle, was sie enthalten.", "enc.auto.clue": "Finde den Artikel über {title}.", "enc.auto.name": "Lesezeichen: {title}", "enc.res.title": "Die Jagd ist vorbei", "enc.res.good": "Gut gejagt! Du hast {n} von {total} gesammelt.", "enc.res.more": "Du hast {n} von {total} gesammelt. Lies die Artikel noch einmal und jage erneut, um dieses Kapitel zu meistern.", "enc.res.unlocked": "Neue Jagden sind offen: {units}.", "enc.res.final": "Die große Jagd ist geschafft. Das Buch gehört dir.", "enc.finish": "Das Buch schließen", "enc.hud": "Jagd: {title}", "enc.lead": "Zu sammeln: {name}", "enc.q.back": "Zurück zum Artikel", "enc.turn": "Umblättern", "enc.fx.found": "Gesammelt: {name}. Es ist in deinem Kodex.", "enc.fx.again": "{name} ist schon in deinem Kodex. Diese Antwort zählt für die Jagd.", "enc.fx.missed": "Noch nicht gesammelt. Lies den Artikel noch einmal: Der Hinweis kommt wieder.", "enc.end.title": "Enzyklopädie gemeistert!", "enc.end.sub": "Du hast jedes Kapitel des Buches durchjagt.", "enc.end.stats": "{found} von {total} gesammelt. Gelesene Artikel: {read} von {articles}." } }, W1 = (t) => {
+  const sd = (t, e) => "".concat(t, "/").concat(e), W1 = { en: { "enc.tagline": "An illustrated encyclopedia to explore", "enc.open": "Open the book", "enc.continue": "Continue reading", "enc.nav.label": "Parts of the book", "enc.nav.title": "Title page", "enc.nav.index": "Index", "enc.nav.timeline": "Timeline", "enc.nav.map": "Map", "enc.nav.codex": "Codex", "enc.nav.hunts": "Hunts", "enc.masthead.sub": "Browse the articles, follow the links, then go hunting for the answers.", "enc.stat.found": "Collected", "enc.stat.stars": "Stars", "enc.stat.read": "Read", "enc.search.label": "Search the encyclopedia", "enc.search.placeholder": "A word, then Enter", "enc.search.none": 'No article matches "{q}".', "enc.search.count": "{n} found. Press Enter to open the first.", "enc.search.results": "Search results", "enc.index": "Index of articles", "enc.chapter": "Chapter {n}", "enc.locked": 'The hunts of this chapter open when you have mastered "{unit}". The articles are free to read.', "enc.readMark": "read", "enc.other": "More articles", "enc.plate": "Plate", "enc.back": "Back", "enc.seeAlso": "See also", "enc.sources": "Sources", "enc.openSource": "Open the source in a new tab", "enc.audio.play": "Listen", "enc.audio.stop": "Stop listening", "reader.listen": "Listen to paragraph {n}", "reader.listen.stop": "Stop paragraph {n}", "reader.listenAll": "Listen to the whole text", "reader.listenAll.stop": "Stop listening", "enc.runhead": "Article", "enc.collect": "Collect: {name}", "enc.collect.hint": "This page answers your clue.", "enc.clue.label": "Clue {n} of {total}", "enc.clue.bar": "Your hunt: {title}", "enc.clue.retry": "Back again. Read this page more closely.", "enc.clue.drop": "Put the hunt aside", "enc.tl.title": "Timeline", "enc.tl.intro": "Events along a ruler, true to scale. Use the left and right arrow keys to move between them.", "enc.tl.box": "Timeline of events", "enc.tl.read": "Read the article", "enc.tl.empty": "There are no dated events yet.", "enc.bc": "BC", "enc.map.title": "Map", "enc.map.intro": "Brass pins mark the places of the articles. Choose a pin, or a name from the list below it.", "enc.map.places": "Places on this map", "enc.map.none": "No places are marked on this map yet.", "enc.map.box": "The map", "enc.codex.title": "Codex", "enc.codex.intro": "Everything you have collected on your hunts, and the fact each one taught you.", "enc.codex.count": "{found} of {total} collected", "enc.codex.unknown": "Not found yet", "enc.codex.taught": "It taught you", "enc.codex.read": 'Read "{title}"', "enc.codex.empty": "Start a hunt to fill this page.", "enc.hunts.title": "Scavenger hunts", "enc.hunts.intro": "Each hunt gives you a clue. Find the article, collect the thing, and answer its question. Read first: the answer is in the article.", "enc.hunt.clues": "Clues: {n}", "enc.hunt.found": "{found} of {n} collected", "enc.hunt.start": "Start the hunt", "enc.hunt.again": "Hunt again", "enc.hunt.locked": 'Locked: master "{unit}" first.', "enc.hunt.empty": "No clues in this hunt.", "enc.hunt.final": "The grand hunt", "enc.hunt.final.intro": "Clues from every chapter, mixed up. Show that you remember.", "enc.hunt.final.locked": "Opens when every chapter is mastered.", "enc.hunt.auto": "Hunt: {unit}", "enc.hunt.auto.intro": "Find the pages and collect what they hold.", "enc.auto.clue": "Find the article about {title}.", "enc.auto.name": "Bookmark: {title}", "enc.res.title": "The hunt is over", "enc.res.good": "Well hunted! You collected {n} of {total}.", "enc.res.more": "You collected {n} of {total}. Read the articles again and hunt once more to master this chapter.", "enc.res.unlocked": "New hunts are open: {units}.", "enc.res.final": "The grand hunt is done. The book is yours.", "enc.finish": "Close the book", "enc.hud": "Hunt: {title}", "enc.lead": "To collect: {name}", "enc.q.back": "Back to the article", "enc.turn": "Turn the page", "enc.fx.found": "Collected: {name}. It is in your codex.", "enc.fx.again": "{name} is already in your codex. This answer counts for the hunt.", "enc.fx.missed": "Not collected yet. Read the article again: the clue comes back.", "enc.end.title": "Encyclopedia mastered!", "enc.end.sub": "You hunted through every chapter of the book.", "enc.end.stats": "Collected {found} of {total}. Articles read: {read} of {articles}." }, hr: { "enc.tagline": "Ilustrirana enciklopedija za istraživanje", "enc.open": "Otvori knjigu", "enc.continue": "Nastavi čitati", "enc.nav.label": "Dijelovi knjige", "enc.nav.title": "Naslovnica", "enc.nav.index": "Kazalo", "enc.nav.timeline": "Vremenska crta", "enc.nav.map": "Karta", "enc.nav.codex": "Kodeks", "enc.nav.hunts": "Potrage", "enc.masthead.sub": "Listaj članke, prati poveznice, a zatim kreni u potragu za odgovorima.", "enc.stat.found": "Skupljeno", "enc.stat.stars": "Zvjezdice", "enc.stat.read": "Pročitano", "enc.search.label": "Pretraži enciklopediju", "enc.search.placeholder": "Riječ, pa Enter", "enc.search.none": 'Nijedan članak ne odgovara upitu "{q}".', "enc.search.count": "Pronađeno: {n}. Pritisni Enter da otvoriš prvi.", "enc.search.results": "Rezultati pretrage", "enc.index": "Kazalo članaka", "enc.chapter": "Poglavlje {n}", "enc.locked": 'Potrage ovog poglavlja otvaraju se kad savladaš cjelinu "{unit}". Članke možeš čitati slobodno.', "enc.readMark": "pročitano", "enc.other": "Ostali članci", "enc.plate": "Ilustracija", "enc.back": "Natrag", "enc.seeAlso": "Vidi i", "enc.sources": "Izvori", "enc.openSource": "Otvori izvor u novoj kartici", "enc.audio.play": "Poslušaj", "enc.audio.stop": "Zaustavi slušanje", "reader.listen": "Poslušaj odlomak {n}", "reader.listen.stop": "Zaustavi odlomak {n}", "reader.listenAll": "Poslušaj cijeli tekst", "reader.listenAll.stop": "Zaustavi slušanje", "enc.runhead": "Članak", "enc.collect": "Uzmi: {name}", "enc.collect.hint": "Ova stranica odgovara na tvoj trag.", "enc.clue.label": "Trag {n} od {total}", "enc.clue.bar": "Tvoja potraga: {title}", "enc.clue.retry": "Opet na redu. Pročitaj ovu stranicu pažljivije.", "enc.clue.drop": "Odloži potragu", "enc.tl.title": "Vremenska crta", "enc.tl.intro": "Događaji na ravnalu, u mjerilu. Lijevom i desnom strelicom prelaziš s jednog na drugi.", "enc.tl.box": "Vremenska crta događaja", "enc.tl.read": "Pročitaj članak", "enc.tl.empty": "Još nema datiranih događaja.", "enc.bc": "pr. Kr.", "enc.map.title": "Karta", "enc.map.intro": "Mjedene pribadače označavaju mjesta iz članaka. Odaberi pribadaču ili ime s popisa ispod karte.", "enc.map.places": "Mjesta na karti", "enc.map.none": "Na ovoj karti još nema označenih mjesta.", "enc.map.box": "Karta", "enc.codex.title": "Kodeks", "enc.codex.intro": "Sve što si skupio u potragama i činjenica koju te je svaki predmet naučio.", "enc.codex.count": "Skupljeno {found} od {total}", "enc.codex.unknown": "Još nije pronađeno", "enc.codex.taught": "Naučio te je", "enc.codex.read": 'Pročitaj "{title}"', "enc.codex.empty": "Započni potragu da ispuniš ovu stranicu.", "enc.hunts.title": "Potrage", "enc.hunts.intro": "Svaka potraga daje trag. Pronađi članak, uzmi predmet i odgovori na njegovo pitanje. Prvo čitaj: odgovor je u članku.", "enc.hunt.clues": "Tragova: {n}", "enc.hunt.found": "Skupljeno {found} od {n}", "enc.hunt.start": "Kreni u potragu", "enc.hunt.again": "Potraži ponovno", "enc.hunt.locked": 'Zaključano: prvo savladaj cjelinu "{unit}".', "enc.hunt.empty": "Ova potraga nema tragova.", "enc.hunt.final": "Velika potraga", "enc.hunt.final.intro": "Tragovi iz svih poglavlja, pomiješani. Pokaži da pamtiš.", "enc.hunt.final.locked": "Otvara se kad su sva poglavlja savladana.", "enc.hunt.auto": "Potraga: {unit}", "enc.hunt.auto.intro": "Pronađi stranice i skupi što skrivaju.", "enc.auto.clue": "Pronađi članak o temi: {title}.", "enc.auto.name": "Straničnik: {title}", "enc.res.title": "Potraga je gotova", "enc.res.good": "Dobra potraga! Skupio/la si {n} od {total}.", "enc.res.more": "Skupio/la si {n} od {total}. Pročitaj članke ponovno i potraži još jednom da savladaš ovo poglavlje.", "enc.res.unlocked": "Otvorene su nove potrage: {units}.", "enc.res.final": "Velika potraga je gotova. Knjiga je tvoja.", "enc.finish": "Zatvori knjigu", "enc.hud": "Potraga: {title}", "enc.lead": "Za uzeti: {name}", "enc.q.back": "Natrag na članak", "enc.turn": "Okreni stranicu", "enc.fx.found": "Skupljeno: {name}. Nalazi se u tvom kodeksu.", "enc.fx.again": "{name} već imaš u kodeksu. Ovaj odgovor se ipak računa za potragu.", "enc.fx.missed": "Još nije skupljeno. Pročitaj članak ponovno: trag se vraća.", "enc.end.title": "Enciklopedija savladana!", "enc.end.sub": "Proveo/la si potragu kroz svako poglavlje knjige.", "enc.end.stats": "Skupljeno {found} od {total}. Pročitanih članaka: {read} od {articles}." }, de: { "enc.tagline": "Eine bebilderte Enzyklopädie zum Entdecken", "enc.open": "Das Buch öffnen", "enc.continue": "Weiterlesen", "enc.nav.label": "Teile des Buches", "enc.nav.title": "Titelseite", "enc.nav.index": "Register", "enc.nav.timeline": "Zeitleiste", "enc.nav.map": "Karte", "enc.nav.codex": "Kodex", "enc.nav.hunts": "Schnitzeljagden", "enc.masthead.sub": "Blättere durch die Artikel, folge den Verweisen und gehe dann auf die Suche nach den Antworten.", "enc.stat.found": "Gesammelt", "enc.stat.stars": "Sterne", "enc.stat.read": "Gelesen", "enc.search.label": "Die Enzyklopädie durchsuchen", "enc.search.placeholder": "Ein Wort, dann Enter", "enc.search.none": "Kein Artikel passt zu „{q}“.", "enc.search.count": "{n} gefunden. Drücke Enter, um den ersten zu öffnen.", "enc.search.results": "Suchergebnisse", "enc.index": "Artikelregister", "enc.chapter": "Kapitel {n}", "enc.locked": "Die Schnitzeljagden dieses Kapitels öffnen sich, wenn du „{unit}“ gemeistert hast. Die Artikel kannst du jederzeit lesen.", "enc.readMark": "gelesen", "enc.other": "Weitere Artikel", "enc.plate": "Tafel", "enc.back": "Zurück", "enc.seeAlso": "Siehe auch", "enc.sources": "Quellen", "enc.openSource": "Die Quelle in einem neuen Tab öffnen", "enc.audio.play": "Anhören", "enc.audio.stop": "Anhören beenden", "reader.listen": "Absatz {n} anhören", "reader.listen.stop": "Absatz {n} anhalten", "reader.listenAll": "Den ganzen Text anhören", "reader.listenAll.stop": "Anhören beenden", "enc.runhead": "Artikel", "enc.collect": "Sammeln: {name}", "enc.collect.hint": "Diese Seite beantwortet deinen Hinweis.", "enc.clue.label": "Hinweis {n} von {total}", "enc.clue.bar": "Deine Suche: {title}", "enc.clue.retry": "Wieder da. Lies diese Seite genauer.", "enc.clue.drop": "Die Suche beiseitelegen", "enc.tl.title": "Zeitleiste", "enc.tl.intro": "Ereignisse an einem Lineal, maßstabsgetreu. Mit den Pfeiltasten links und rechts wechselst du zwischen ihnen.", "enc.tl.box": "Zeitleiste der Ereignisse", "enc.tl.read": "Den Artikel lesen", "enc.tl.empty": "Es gibt noch keine datierten Ereignisse.", "enc.bc": "v. Chr.", "enc.map.title": "Karte", "enc.map.intro": "Messingnadeln markieren die Orte der Artikel. Wähle eine Nadel oder einen Namen aus der Liste darunter.", "enc.map.places": "Orte auf dieser Karte", "enc.map.none": "Auf dieser Karte sind noch keine Orte markiert.", "enc.map.box": "Die Karte", "enc.codex.title": "Kodex", "enc.codex.intro": "Alles, was du auf deinen Suchen gesammelt hast, und was dir jedes Stück beigebracht hat.", "enc.codex.count": "{found} von {total} gesammelt", "enc.codex.unknown": "Noch nicht gefunden", "enc.codex.taught": "Das hat es dich gelehrt", "enc.codex.read": "„{title}“ lesen", "enc.codex.empty": "Starte eine Suche, um diese Seite zu füllen.", "enc.hunts.title": "Schnitzeljagden", "enc.hunts.intro": "Jede Jagd gibt dir einen Hinweis. Finde den Artikel, sammle das Gesuchte und beantworte die Frage dazu. Lies zuerst: Die Antwort steht im Artikel.", "enc.hunt.clues": "Hinweise: {n}", "enc.hunt.found": "{found} von {n} gesammelt", "enc.hunt.start": "Die Jagd starten", "enc.hunt.again": "Noch einmal jagen", "enc.hunt.locked": "Gesperrt: Meistere zuerst „{unit}“.", "enc.hunt.empty": "Diese Jagd hat keine Hinweise.", "enc.hunt.final": "Die große Jagd", "enc.hunt.final.intro": "Hinweise aus allen Kapiteln, durcheinander. Zeige, dass du dich erinnerst.", "enc.hunt.final.locked": "Öffnet sich, wenn alle Kapitel gemeistert sind.", "enc.hunt.auto": "Jagd: {unit}", "enc.hunt.auto.intro": "Finde die Seiten und sammle, was sie enthalten.", "enc.auto.clue": "Finde den Artikel über {title}.", "enc.auto.name": "Lesezeichen: {title}", "enc.res.title": "Die Jagd ist vorbei", "enc.res.good": "Gut gejagt! Du hast {n} von {total} gesammelt.", "enc.res.more": "Du hast {n} von {total} gesammelt. Lies die Artikel noch einmal und jage erneut, um dieses Kapitel zu meistern.", "enc.res.unlocked": "Neue Jagden sind offen: {units}.", "enc.res.final": "Die große Jagd ist geschafft. Das Buch gehört dir.", "enc.finish": "Das Buch schließen", "enc.hud": "Jagd: {title}", "enc.lead": "Zu sammeln: {name}", "enc.q.back": "Zurück zum Artikel", "enc.turn": "Umblättern", "enc.fx.found": "Gesammelt: {name}. Es ist in deinem Kodex.", "enc.fx.again": "{name} ist schon in deinem Kodex. Diese Antwort zählt für die Jagd.", "enc.fx.missed": "Noch nicht gesammelt. Lies den Artikel noch einmal: Der Hinweis kommt wieder.", "enc.end.title": "Enzyklopädie gemeistert!", "enc.end.sub": "Du hast jedes Kapitel des Buches durchjagt.", "enc.end.stats": "{found} von {total} gesammelt. Gelesene Artikel: {read} von {articles}." } }, H1 = (t) => {
     try {
       return new URL(t).hostname.replace(/^www\./, "");
     } catch (e) {
       return t;
     }
   };
-  function H1(t, e) {
+  function V1(t, e) {
     var _a3, _b3;
     const s = t.s, n = t.arts.get(e);
     if (!n) return d("div", {});
@@ -8954,7 +8954,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return d("div", { class: "enc-article" }, d("div", { class: "enc-toolbar" }, T("back", "‹ ".concat(s.s("enc.back")), () => t.back(), { class: "btn btn-small btn-ghost" })), d("article", { class: "enc-spread", testid: "article", "data-article": e }, d("div", { class: "enc-text" }, d("p", { class: "enc-runhead" }, d("span", {}, i || s.s("enc.runhead")), d("span", { class: "enc-runhead-sep", "aria-hidden": "true" }, "❦"), d("span", {}, s.courseTitle())), d("h1", { class: "screen-title enc-article-title", tabindex: "-1", testid: "article-title" }, n.title), d("p", { class: "enc-rule", "aria-hidden": "true" }), l, d("div", { class: "enc-body gloss-scope", testid: "article-body", ...b.length > 0 && s.pack.targetLang ? { lang: s.pack.targetLang } : {} }, x.map((_, z) => {
       var _a4;
       return br(_, v, y, w, (_a4 = $[z]) == null ? void 0 : _a4.heading);
-    }), b.length > 0 ? v.el : null)), d("aside", { class: "enc-plates" }, u, f ? d("div", { class: "enc-audio-wrap" }, f, d("span", { class: "sr-only", id: "enc-audio-desc" }, r ? s.t(r.alt) : "")) : null, m.length > 0 ? d("section", { class: "enc-related", testid: "related" }, d("h2", {}, s.s("enc.seeAlso")), d("ul", {}, m.map((_) => d("li", {}, T("related-".concat(_), t.articleTitle(_), () => t.article(_, () => t.article(e)), { class: "enc-related-btn" }))))) : null, k.length > 0 ? d("section", { class: "enc-sources", testid: "citations" }, d("h2", {}, s.s("enc.sources")), d("ul", {}, k.map((_) => d("li", { testid: "citation-".concat(_.id) }, d("span", { class: "enc-source-name" }, _.source), _.claim && s.text.hasText(_.claim) ? d("span", { class: "enc-source-claim" }, s.t(_.claim)) : null, _.url ? d("a", { class: "enc-source-link", href: _.url, target: "_blank", rel: "noopener noreferrer", testid: "citation-link-".concat(_.id) }, W1(_.url), d("span", { class: "sr-only" }, " (".concat(s.s("enc.openSource"), ")"))) : null)))) : null)));
+    }), b.length > 0 ? v.el : null)), d("aside", { class: "enc-plates" }, u, f ? d("div", { class: "enc-audio-wrap" }, f, d("span", { class: "sr-only", id: "enc-audio-desc" }, r ? s.t(r.alt) : "")) : null, m.length > 0 ? d("section", { class: "enc-related", testid: "related" }, d("h2", {}, s.s("enc.seeAlso")), d("ul", {}, m.map((_) => d("li", {}, T("related-".concat(_), t.articleTitle(_), () => t.article(_, () => t.article(e)), { class: "enc-related-btn" }))))) : null, k.length > 0 ? d("section", { class: "enc-sources", testid: "citations" }, d("h2", {}, s.s("enc.sources")), d("ul", {}, k.map((_) => d("li", { testid: "citation-".concat(_.id) }, d("span", { class: "enc-source-name" }, _.source), _.claim && s.text.hasText(_.claim) ? d("span", { class: "enc-source-claim" }, s.t(_.claim)) : null, _.url ? d("a", { class: "enc-source-link", href: _.url, target: "_blank", rel: "noopener noreferrer", testid: "citation-link-".concat(_.id) }, H1(_.url), d("span", { class: "sr-only" }, " (".concat(s.s("enc.openSource"), ")"))) : null)))) : null)));
   }
   function nd(t) {
     const e = [[10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]];
@@ -8962,7 +8962,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const [i, r] of e) for (; n >= i; ) s += r, n -= i;
     return s;
   }
-  function V1(t) {
+  function Y1(t) {
     const e = t.s, s = t.statusCounts(), n = (b, v, w) => d("span", { class: "enc-stat", testid: w }, d("span", { class: "enc-stat-label" }, b), d("b", { class: "enc-stat-value" }, v)), i = d("ul", { class: "enc-results", testid: "search-results" }), r = d("p", { class: "enc-search-status", id: "enc-search-status", role: "status", testid: "search-status" }), o = (b) => {
       const v = t.search(b);
       Ts(i);
@@ -8991,21 +8991,21 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }), g = t.articleList().filter((b) => !p.has(b.id) && !h.some((v) => v.id === b.unit)), k = g.length > 0 ? d("section", { class: "enc-chapter", testid: "chapter-other" }, d("h2", { class: "enc-chapter-title" }, d("span", { class: "enc-chapter-name" }, e.s("enc.other"))), d("ul", { class: "enc-entries" }, g.map((b) => f(b.id)))) : null;
     return d("div", { class: "enc-explore" }, d("header", { class: "enc-masthead" }, d("p", { class: "enc-eyebrow" }, e.pack.subject.charAt(0).toLocaleUpperCase() + e.pack.subject.slice(1)), d("h1", { class: "screen-title enc-title", tabindex: "-1", testid: "explore-title" }, e.courseTitle()), d("p", { class: "enc-orn", "aria-hidden": "true" }, "❦"), d("p", { class: "enc-sub" }, e.s("enc.masthead.sub")), d("p", { class: "enc-stats", testid: "status" }, n(e.s("enc.stat.found"), "".concat(s.found, " / ").concat(s.total), "status-found"), n(e.s("enc.stat.stars"), "".concat(s.stars, " / ").concat(s.maxStars), "status-stars"), n(e.s("enc.stat.read"), "".concat(s.read, " / ").concat(s.articles), "status-read"))), d("div", { class: "enc-columns" }, d("aside", { class: "enc-side" }, c, u), d("div", { class: "enc-indexwrap" }, d("h2", { class: "sr-only" }, e.s("enc.index")), d("div", { class: "enc-index" }, m, k))));
   }
-  function Y1(t) {
+  function J1(t) {
     const e = t.pinned(), s = t.hunt;
     if (!e || !s) return null;
     const n = t.s;
     return d("div", { class: "enc-clue".concat(e.retry ? " is-retry" : ""), role: "group", "aria-label": n.s("enc.clue.bar", { title: s.final ? n.s("enc.hunt.final") : t.huntTitle(s.hunt) }), testid: "clue-bar", "data-step": e.step.id }, d("span", { class: "enc-clue-pin", "aria-hidden": "true" }), d("div", { class: "enc-clue-main" }, d("span", { class: "enc-clue-label" }, "".concat(s.final ? n.s("enc.hunt.final") : t.huntTitle(s.hunt), " · ").concat(n.s("enc.clue.label", { n: e.n, total: e.total }))), d("p", { class: "enc-clue-text", testid: "clue" }, t.stepClue(e.step)), e.retry ? d("span", { class: "tag tag-retry enc-clue-retry", testid: "clue-retry" }, n.s("enc.clue.retry")) : null), T("clue-drop", n.s("enc.clue.drop"), () => t.dropHunt(), { class: "btn btn-small btn-ghost enc-clue-drop" }));
   }
-  function J1(t, e, s) {
+  function Q1(t, e, s) {
     const n = t.s;
     return d("div", { class: "enc-hud", testid: "hunt-hud" }, d("span", { class: "enc-hud-title" }, n.s("enc.hud", { title: e.final ? n.s("enc.hunt.final") : t.huntTitle(e.hunt) })), d("span", { class: "enc-hud-step" }, n.s("enc.clue.label", { n: s, total: e.steps.length })), d("span", { class: "enc-hud-pips", role: "img", "aria-label": n.s("enc.hunt.found", { found: e.collected.length, n: e.steps.length }) }, e.steps.map((i) => d("span", { class: "enc-hud-pip".concat(e.collected.includes(i.id) ? " is-found" : ""), "aria-hidden": "true" }))));
   }
-  function Q1(t) {
+  function X1(t) {
     const e = t.s, s = t.statusCounts(), n = t.model.hunts.map((i) => ({ hunt: i, steps: t.stepsOf(i) })).filter((i) => i.steps.length > 0).map((i) => d("section", { class: "enc-codex-group", "data-unit": i.hunt.unit }, d("h2", {}, e.unitTitle(i.hunt.unit)), d("ul", { class: "enc-codex-grid" }, i.steps.map((r) => t.found(r) ? d("li", { class: "enc-specimen is-found", testid: "codex-".concat(r.id), "data-found": "true" }, d("span", { class: "enc-medal", "aria-hidden": "true" }, "✦"), d("h3", { class: "enc-specimen-name" }, t.collectibleName(r)), d("p", { class: "enc-specimen-taught" }, d("span", { class: "enc-specimen-taught-label" }, "".concat(e.s("enc.codex.taught"), ": ")), t.taught(r)), T("codex-link-".concat(r.id), e.s("enc.codex.read", { title: t.articleTitle(r.article) }), () => t.article(r.article, () => t.codex()), { class: "btn btn-small enc-specimen-link" })) : d("li", { class: "enc-specimen is-unknown", testid: "codex-".concat(r.id), "data-found": "false" }, d("span", { class: "enc-medal", "aria-hidden": "true" }, "?"), d("p", { class: "enc-specimen-name" }, e.s("enc.codex.unknown")))))));
     return d("div", { class: "enc-codex" }, d("h1", { class: "screen-title enc-part-title", tabindex: "-1", testid: "codex-title" }, e.s("enc.codex.title")), d("p", { class: "enc-part-intro" }, e.s("enc.codex.intro")), d("p", { class: "enc-codex-count", testid: "codex-count", "data-found": String(s.found), "data-total": String(s.total) }, e.s("enc.codex.count", { found: s.found, total: s.total })), s.found === 0 ? d("p", { class: "enc-codex-empty", testid: "codex-empty" }, e.s("enc.codex.empty")) : null, n);
   }
-  function X1(t, e) {
+  function e$(t, e) {
     const s = t.s, n = s.units(), i = e ? d("div", { class: "enc-result".concat(e.stars >= 2 ? " is-good" : ""), role: "group", "aria-label": s.s("enc.res.title"), testid: "hunt-result", "data-stars": String(e.stars), "data-final": e.final ? "true" : "false", "data-collected": String(e.collected), "data-total": String(e.total) }, d("h2", { class: "enc-result-title" }, s.s("enc.res.title")), s.stars(e.stars, "hunt-result-stars"), d("p", { class: "enc-result-text" }, t.resultText(e))) : null, r = n.flatMap((l, u) => {
       const h = t.model.hunts.filter((m) => m.unit === l.id);
       if (h.length === 0) return [];
@@ -9017,7 +9017,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }), o = t.isFinalOpen(), a = t.finalSteps(), c = a.length > 0 ? d("section", { class: "enc-hunt-chapter enc-grand", "data-locked": o ? null : "true", testid: "hunt-chapter-final" }, d("div", { class: "enc-hunt-chapter-head" }, d("h2", { class: "enc-chapter-title" }, d("span", { class: "enc-numeral", "aria-hidden": "true" }, "★"), d("span", { class: "enc-chapter-name" }, s.s("enc.hunt.final"))), s.stars(s.bossStars(), "hunt-stars-final")), d("article", { class: "enc-hunt-card", "data-locked": o ? null : "true" }, d("p", { class: "enc-hunt-intro" }, s.s("enc.hunt.final.intro")), d("p", { class: "enc-hunt-meta" }, s.s("enc.hunt.clues", { n: a.length })), o ? null : d("p", { class: "enc-hunt-note", testid: "hunt-locked-final" }, d("span", { "aria-hidden": "true" }, "🔒 "), s.s("enc.hunt.final.locked")), T("hunt-final", s.bossStars() > 0 ? s.s("enc.hunt.again") : s.s("enc.hunt.start"), () => t.startFinal(), { class: "btn btn-primary enc-hunt-go", ...o ? {} : { disabled: true }, "data-locked": o ? null : "true", "data-stars": String(s.bossStars()) }))) : null;
     return d("div", { class: "enc-hunts" }, d("h1", { class: "screen-title enc-part-title", tabindex: "-1", testid: "hunts-title" }, s.s("enc.hunts.title")), d("p", { class: "enc-part-intro" }, s.s("enc.hunts.intro")), i, s.bossStars() >= 1 ? d("div", { class: "actions" }, T("finish", s.s("enc.finish"), () => t.end(), { class: "btn btn-big" })) : null, r, c);
   }
-  function e$(t) {
+  function t$(t) {
     let e = 1 / 0;
     for (let s = 0; s < t.length; s++) for (let n = s + 1; n < t.length; n++) {
       const i = t[s], r = t[n];
@@ -9025,25 +9025,25 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return e;
   }
-  function t$(t, e, s = 34, n = 300) {
-    const i = e$(t);
+  function s$(t, e, s = 34, n = 300) {
+    const i = t$(t);
     return !Number.isFinite(i) || i <= 0 ? Math.min(e, n) : Math.round(Math.min(e, Math.max(n, e * s / i)));
   }
-  function s$(t, e, s) {
+  function n$(t, e, s) {
     const n = s === "left" || s === "right", i = [...t].sort((a, c) => (n ? a.x - c.x || a.y - c.y : a.y - c.y || a.x - c.x) || a.id.localeCompare(c.id)), r = i.findIndex((a) => a.id === e);
     return i.length === 0 ? void 0 : i[(r + (s === "right" || s === "down" ? 1 : -1) + i.length) % i.length];
   }
-  const n$ = (t, e, s) => ({ left: "".concat(Math.round(t.x / e * 1e4) / 100, "%"), top: "".concat(Math.round(t.y / s * 1e4) / 100, "%") }), Br = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1e3, 2e3, 5e3];
-  function i$(t, e = 9) {
+  const i$ = (t, e, s) => ({ left: "".concat(Math.round(t.x / e * 1e4) / 100, "%"), top: "".concat(Math.round(t.y / s * 1e4) / 100, "%") }), Br = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1e3, 2e3, 5e3];
+  function r$(t, e = 9) {
     for (const s of Br) if (t / s <= e) return s;
     return Br[Br.length - 1];
   }
-  function r$(t, e) {
-    const s = Math.max(1, e - t), n = i$(s), i = n >= 10 ? n / 5 : n >= 2 ? n / 2 : n, r = [], o = Math.ceil(t / i) * i;
+  function o$(t, e) {
+    const s = Math.max(1, e - t), n = r$(s), i = n >= 10 ? n / 5 : n >= 2 ? n / 2 : n, r = [], o = Math.ceil(t / i) * i;
     for (let a = o; a <= e; a += i) a !== 0 && r.push({ year: a, major: a % n === 0 });
     return r;
   }
-  function o$(t, e = {}) {
+  function a$(t, e = {}) {
     var _a3, _b3, _c2;
     const s = (_a3 = e.card) != null ? _a3 : 150, n = (_b3 = e.gap) != null ? _b3 : 12, i = Math.round(s / 2) + 14, r = [...t].sort((v, w) => v.year - w.year || v.id.localeCompare(w.id)), o = r.length, a = Math.ceil(o / 2), c = Math.max((_c2 = e.minWidth) != null ? _c2 : 760, a * (s + n) + 2 * i - n), l = o > 0 ? r[0].year : 0, u = o > 0 ? r[o - 1].year : 0, h = Math.max(1, u - l), p = (c - 2 * i) / h, f = (v) => o === 1 || u === l ? c / 2 : i + (v - l) * p, m = r.map((v, w) => ({ id: v.id, year: v.year, tick: f(v.year), x: f(v.year), lane: w % 2 })), g = s + n;
     for (const v of [0, 1]) {
@@ -9057,13 +9057,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         $.x = Math.min(c - i, $.x), y < w.length - 1 && ($.x = Math.min($.x, w[y + 1].x - g));
       }
     }
-    const k = (v) => l + (v - i) / p, b = o === 0 || u === l ? [] : r$(Math.floor(k(0)), Math.ceil(k(c))).map((v) => ({ year: v.year, x: i + (v.year - l) * p, major: v.major }));
+    const k = (v) => l + (v - i) / p, b = o === 0 || u === l ? [] : o$(Math.floor(k(0)), Math.ceil(k(c))).map((v) => ({ year: v.year, x: i + (v.year - l) * p, major: v.major }));
     return { width: c, pad: i, events: m, ticks: b.filter((v) => v.x >= 0 && v.x <= c), min: l, max: u };
   }
   const id = (t, e) => t < 0 ? "".concat(-t, " ").concat(e) : String(t), Fr = 150, Vn = 440, Yn = 54;
-  function a$(t) {
+  function c$(t) {
     var _a3, _b3;
-    const e = t.s, s = t.model.timeline, n = o$(s.map((m) => ({ id: m.id, year: m.year })), { card: Fr }), i = new Map(s.map((m) => [m.id, m])), r = e.s("enc.bc"), o = Vn / 2;
+    const e = t.s, s = t.model.timeline, n = a$(s.map((m) => ({ id: m.id, year: m.year })), { card: Fr }), i = new Map(s.map((m) => [m.id, m])), r = e.s("enc.bc"), o = Vn / 2;
     (!t.eventId || !i.has(t.eventId)) && (t.eventId = (_b3 = (_a3 = n.events[0]) == null ? void 0 : _a3.id) != null ? _b3 : null);
     const a = d("div", { class: "enc-tl-detail", role: "status", testid: "event-detail" }), c = (m) => {
       const g = i.get(m);
@@ -9089,11 +9089,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     } }, d("div", { class: "enc-tl-track", style: "width:".concat(n.width, "px;height:").concat(Vn, "px") }, u, h, p));
     return t.eventId && l(t.eventId), d("div", { class: "enc-timeline" }, d("h1", { class: "screen-title enc-part-title", tabindex: "-1", testid: "timeline-title" }, e.s("enc.tl.title")), d("p", { class: "enc-part-intro" }, s.length > 0 ? e.s("enc.tl.intro") : e.s("enc.tl.empty")), f, a);
   }
-  function c$(t) {
+  function l$(t) {
     const e = t.s, s = t.model.map, n = s ? e.pack.assets.find((h) => h.id === s.asset) : void 0, i = s ? e.data.assets[s.asset] : void 0;
     if (!s || !n || !i) return d("div", { class: "enc-map-view" }, d("h1", { class: "screen-title enc-part-title", tabindex: "-1" }, e.s("enc.map.title")), d("p", {}, e.s("enc.map.none")));
-    const r = s.places.filter((h) => t.arts.has(h.article)), o = s.width > 0 && s.height > 0, a = (h) => t.article(h, () => t.map()), c = o ? t$(r, s.width) : 0, l = o ? r.map((h) => {
-      const p = n$(h, s.width, s.height);
+    const r = s.places.filter((h) => t.arts.has(h.article)), o = s.width > 0 && s.height > 0, a = (h) => t.article(h, () => t.map()), c = o ? s$(r, s.width) : 0, l = o ? r.map((h) => {
+      const p = i$(h, s.width, s.height);
       return T("place-".concat(h.id), [d("span", { class: "enc-pin-head", "aria-hidden": "true" }), d("span", { class: "enc-pin-name", "aria-hidden": "true" }, e.t(h.label))], () => a(h.article), { class: "enc-pin", "aria-label": e.t(h.label), "data-article": h.article, style: "left:".concat(p.left, ";top:").concat(p.top) });
     }) : [], u = d("div", { class: "enc-map-stage", testid: "map", style: o ? "aspect-ratio:".concat(s.width, " / ").concat(s.height, ";min-width:").concat(c, "px") : "", onkeydown: (h) => {
       var _a3, _b3;
@@ -9101,12 +9101,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (!f || p.altKey || p.ctrlKey || p.metaKey) return;
       const m = (_a3 = document.activeElement) == null ? void 0 : _a3.getAttribute("data-testid");
       if (!(m == null ? void 0 : m.startsWith("place-"))) return;
-      const g = s$(r, m.slice(6), f);
+      const g = n$(r, m.slice(6), f);
       g && (p.preventDefault(), (_b3 = u.querySelector('[data-testid="place-'.concat(g.id, '"]'))) == null ? void 0 : _b3.focus());
     } }, d("img", { class: "enc-map-img", src: i, alt: e.t(n.alt) }), l);
     return d("div", { class: "enc-map-view" }, d("h1", { class: "screen-title enc-part-title", tabindex: "-1", testid: "map-title" }, e.s("enc.map.title")), d("p", { class: "enc-part-intro" }, r.length > 0 ? e.s("enc.map.intro") : e.s("enc.map.none")), d("figure", { class: "enc-map-figure" }, d("div", { class: "enc-map-scroll", role: "group", "aria-label": e.s("enc.map.box") }, u), d("figcaption", {}, e.t(n.alt))), r.length > 0 ? d("section", { class: "enc-places", testid: "places" }, d("h2", {}, e.s("enc.map.places")), d("ul", {}, r.map((h) => d("li", {}, T("place-link-".concat(h.id), [d("span", { class: "enc-place-dot", "aria-hidden": "true" }), e.t(h.label)], () => a(h.article), { class: "enc-place-btn" }))))) : null);
   }
-  function l$(t, e, s) {
+  function u$(t, e, s) {
     const n = [];
     for (let i = 1; ; i++) {
       const r = t["art-".concat(e, "-p").concat(s).concat(i > 1 ? "-".concat(i) : "")];
@@ -9119,11 +9119,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     var _a3;
     return (_a3 = document.scrollingElement) != null ? _a3 : document.documentElement;
   };
-  function u$() {
+  function d$() {
     const t = rd(), e = t.scrollHeight - t.clientHeight;
     return e > 0 ? t.scrollTop / e : 0;
   }
-  function d$(t, e, s) {
+  function h$(t, e, s) {
     if (s.length === 0) return null;
     const n = t.s.ui, i = t.glossOff();
     return d("section", { class: "enc-glossary", testid: "glossary-panel", "aria-labelledby": "enc-glossary-h" }, d("h2", { id: "enc-glossary-h" }, n("gloss.panel")), d("ul", {}, s.map((r) => {
@@ -9132,13 +9132,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return d("li", { testid: "glossary-entry-".concat(r.id) }, d("span", { class: "enc-gloss-main" }, d("strong", { class: "enc-gloss-lemma" }, (_b3 = r.lemma) != null ? _b3 : r.term), r.pos ? d("span", { class: "gloss-pos" }, n("gloss.pos.".concat(r.pos))) : null, d("span", { class: "enc-gloss-text" }, r.gloss), r.note ? d("span", { class: "enc-gloss-note" }, r.note) : null), d("label", { class: "enc-gloss-deck" }, a, d("span", {}, n("gloss.deck"))));
     })));
   }
-  function h$(t, e) {
+  function p$(t, e) {
     var _a3;
     const s = t.s, n = s.ui, i = t.chapters(), r = Math.max(0, i.findIndex((W) => W.id === e)), o = i[r];
     if (!o) return d("div", {});
     const a = t.glossWords(e), c = kr(n), l = t.glossOff(), u = new Set(a.filter((W) => l.has("".concat(e, "/").concat(W.id))).map((W) => W.id)), h = mr(o.paragraphs.map((W) => [{ text: W }])), p = gr(h.map((W) => W.runs), a), f = t.chapterRead(e), m = i[r - 1], g = i[r + 1], k = o.unit ? s.unitTitle(o.unit) : "", b = t.chapterItems(e), v = d("nav", { class: "enc-reader-toc", "aria-label": n("reader.toc"), testid: "reader-toc" }, d("h2", {}, n("reader.toc")), d("ol", {}, i.map((W, ie) => d("li", {}, T("reader-chapter-".concat(W.id), [d("span", { class: "enc-reader-num" }, String(ie + 1)), d("span", { class: "enc-reader-toc-title" }, W.title), t.chapterRead(W.id) ? [d("span", { class: "mark", "aria-hidden": "true" }, "✓"), d("span", { class: "sr-only" }, " (".concat(n("reader.chapterRead"), ")"))] : null], () => t.reader(W.id), { class: "enc-reader-toc-btn", "data-read": String(t.chapterRead(W.id)), ...W.id === e ? { "aria-current": "true" } : {} }))))), w = d("div", { class: "enc-reader-end", testid: "reader-end", "aria-hidden": "true" }), y = d("p", { class: "enc-reader-progress", testid: "reader-progress", "data-chapter": e, "data-index": String(r + 1), "data-total": String(i.length), "data-read": String(f), "aria-live": "polite" }, n("reader.progress", { n: r + 1, total: i.length })), $ = (W) => {
       t.markChapterRead(e), W && t.reader(W);
-    }, x = d("div", { class: "enc-reader-nav" }, T("reader-prev", "‹ ".concat(n("reader.prev")), () => m ? t.reader(m.id) : void 0, { class: "btn", ...m ? {} : { disabled: true } }), y, T("reader-next", "".concat(n("reader.next"), " ›"), () => $(g == null ? void 0 : g.id), { class: "btn btn-primary", ...g ? {} : { disabled: true } })), _ = o.paragraphs.map((W, ie) => l$(s.data.assets, e, ie + 1)), z = { from: -1 }, O = /* @__PURE__ */ new Map(), R = { el: null }, S = () => {
+    }, x = d("div", { class: "enc-reader-nav" }, T("reader-prev", "‹ ".concat(n("reader.prev")), () => m ? t.reader(m.id) : void 0, { class: "btn", ...m ? {} : { disabled: true } }), y, T("reader-next", "".concat(n("reader.next"), " ›"), () => $(g == null ? void 0 : g.id), { class: "btn btn-primary", ...g ? {} : { disabled: true } })), _ = o.paragraphs.map((W, ie) => u$(s.data.assets, e, ie + 1)), z = { from: -1 }, O = /* @__PURE__ */ new Map(), R = { el: null }, S = () => {
       for (const [W, ie] of O) {
         const zt = t.audio !== null && z.from >= 0 && W === z.from;
         ie.textContent = zt ? "■" : "▶", ie.setAttribute("aria-label", s.s(zt ? "reader.listen.stop" : "reader.listen", { n: W + 1 }));
@@ -9178,7 +9178,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return O.set(ie, Gs), d("div", { class: "enc-reader-para" }, Gs, zt);
     }), c.el), D = j ? T("reader-play-all", "▶ ".concat(s.s("reader.listenAll")), () => A(0, o.paragraphs.length - 1), { class: "btn btn-small enc-reader-play-all" }) : null;
     R.el = D;
-    const G = b.length > 0 ? T("reader-practice", n("reader.practice"), () => t.practice(e), { class: "btn btn-small" }) : null, B = d("div", { class: "enc-reader", testid: "reader", "data-chapter": e }, v, d("article", { class: "enc-reader-main" }, d("p", { class: "enc-runhead" }, d("span", {}, k || n("reader.title")), d("span", { class: "enc-runhead-sep", "aria-hidden": "true" }, "❦"), d("span", {}, n("reader.chapter", { n: r + 1 }))), d("h1", { class: "screen-title enc-reader-title", tabindex: "-1", testid: "reader-title", "data-autofocus": "" }, o.title), d("p", { class: "enc-rule", "aria-hidden": "true" }), a.length > 0 ? d("p", { class: "enc-reader-hint" }, n("reader.hint")) : null, D, I, w, d("p", { class: "enc-reader-done", testid: "reader-done", hidden: !f }, g ? n("reader.read") : "".concat(n("reader.read"), " ").concat(n("reader.last"))), x, G, d$(t, e, a)));
+    const G = b.length > 0 ? T("reader-practice", n("reader.practice"), () => t.practice(e), { class: "btn btn-small" }) : null, B = d("div", { class: "enc-reader", testid: "reader", "data-chapter": e }, v, d("article", { class: "enc-reader-main" }, d("p", { class: "enc-runhead" }, d("span", {}, k || n("reader.title")), d("span", { class: "enc-runhead-sep", "aria-hidden": "true" }, "❦"), d("span", {}, n("reader.chapter", { n: r + 1 }))), d("h1", { class: "screen-title enc-reader-title", tabindex: "-1", testid: "reader-title", "data-autofocus": "" }, o.title), d("p", { class: "enc-rule", "aria-hidden": "true" }), a.length > 0 ? d("p", { class: "enc-reader-hint" }, n("reader.hint")) : null, D, I, w, d("p", { class: "enc-reader-done", testid: "reader-done", hidden: !f }, g ? n("reader.read") : "".concat(n("reader.read"), " ").concat(n("reader.last"))), x, G, h$(t, e, a)));
     B.addEventListener("keydown", (W) => {
       W.ctrlKey || W.metaKey || W.altKey || W.shiftKey || Is(W.target) || (W.key === "ArrowLeft" && m ? (W.preventDefault(), t.reader(m.id)) : W.key === "ArrowRight" && g && (W.preventDefault(), $(g.id)));
     });
@@ -9187,7 +9187,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     };
     let he;
     function Ie() {
-      he = void 0, B.isConnected && t.rememberReader(e, u$());
+      he = void 0, B.isConnected && t.rememberReader(e, d$());
     }
     window.addEventListener("scroll", ke, { passive: true });
     let Ue;
@@ -9200,8 +9200,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       W.scrollTop = (H == null ? void 0 : H.chapter) === e && ie > 0 ? Math.round(H.scroll * ie) : 0;
     }), B;
   }
-  const p$ = ["index", "reader", "timeline", "map", "codex", "hunts"];
-  class f$ {
+  const f$ = ["index", "reader", "timeline", "map", "codex", "hunts"];
+  class m$ {
     constructor(e) {
       __publicField(this, "s");
       __publicField(this, "model");
@@ -9223,7 +9223,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       var _a3;
       this.model = wl(this.s.pack, this.s.section(), this.s.text), this.arts = new Map(this.model.articles.map((n) => [n.id, { id: n.id, title: this.s.t(n.titleKey), paragraphs: gl(n.bodyKeys.map((i) => this.s.t(i))), ...n.unit ? { unit: n.unit } : {}, ...n.assetId ? { assetId: n.assetId } : {}, citations: n.citations, related: n.related, virtual: n.virtual }])), this.linkCache = /* @__PURE__ */ new Map();
       const e = this.s.section(), s = new Set(Object.entries((_a3 = e == null ? void 0 : e.glossary) != null ? _a3 : {}).flatMap(([n, i]) => i.map((r) => sd(n, r.id))));
-      this.data = U1(this.s.shellData(), new Set(this.allSteps().map((n) => n.id)), new Set(this.model.articles.map((n) => n.id)), s);
+      this.data = B1(this.s.shellData(), new Set(this.allSteps().map((n) => n.id)), new Set(this.model.articles.map((n) => n.id)), s);
     }
     allSteps() {
       return this.model.hunts.flatMap((e) => e.steps);
@@ -9252,11 +9252,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     segments(e) {
       const s = this.arts.get(e);
-      return s ? C1(s.paragraphs, e, this.articleList().map((n) => ({ id: n.id, title: n.title }))) : [];
+      return s ? Z1(s.paragraphs, e, this.articleList().map((n) => ({ id: n.id, title: n.title }))) : [];
     }
     linksFrom(e) {
       let s = this.linkCache.get(e);
-      return s || (s = Z1(this.segments(e)), this.linkCache.set(e, s)), s;
+      return s || (s = U1(this.segments(e)), this.linkCache.set(e, s)), s;
     }
     via(e) {
       for (const s of this.articleList()) if (s.id !== e && this.linksFrom(s.id).includes(e)) return { from: s.id, testid: "link-".concat(e) };
@@ -9264,7 +9264,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return null;
     }
     chapters() {
-      return ay(this.s.pack, this.model.articles).map((e) => this.arts.get(e.id));
+      return cy(this.s.pack, this.model.articles).map((e) => this.arts.get(e.id));
     }
     hasReader() {
       var _a3;
@@ -9288,7 +9288,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return new Set((_a3 = this.data.glossOff) != null ? _a3 : []);
     }
     setGlossDeck(e, s, n) {
-      this.data = q1(this.data, sd(e, s), n), this.saveData();
+      this.data = G1(this.data, sd(e, s), n), this.saveData();
     }
     readerChapter() {
       var _a3, _b3, _c2, _d2;
@@ -9296,7 +9296,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return (_d2 = (_b3 = e.find((n) => n.id === s)) == null ? void 0 : _b3.id) != null ? _d2 : (_c2 = e[0]) == null ? void 0 : _c2.id;
     }
     rememberReader(e, s) {
-      const n = F1(this.data, e, s);
+      const n = K1(this.data, e, s);
       n !== this.data && (this.data = n, this.saveData());
     }
     chapterRead(e) {
@@ -9305,7 +9305,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     markChapterRead(e) {
       var _a3, _b3, _c2;
-      this.chapterRead(e) || (this.data = K1(td(this.data, e), e), this.saveData(), (_a3 = document.querySelector('[data-testid="reader-progress"]')) == null ? void 0 : _a3.setAttribute("data-read", "true"), (_b3 = document.querySelector('[data-testid="reader-done"]')) == null ? void 0 : _b3.removeAttribute("hidden"), (_c2 = document.querySelector('[data-testid="reader-chapter-'.concat(e, '"]'))) == null ? void 0 : _c2.setAttribute("data-read", "true"));
+      this.chapterRead(e) || (this.data = q1(td(this.data, e), e), this.saveData(), (_a3 = document.querySelector('[data-testid="reader-progress"]')) == null ? void 0 : _a3.setAttribute("data-read", "true"), (_b3 = document.querySelector('[data-testid="reader-done"]')) == null ? void 0 : _b3.removeAttribute("hidden"), (_c2 = document.querySelector('[data-testid="reader-chapter-'.concat(e, '"]'))) == null ? void 0 : _c2.setAttribute("data-read", "true"));
     }
     chapterItems(e) {
       return this.s.pack.items.filter((s) => {
@@ -9368,7 +9368,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     nav(e) {
       const s = this.s, n = { index: () => this.explore(), reader: () => this.reader(), timeline: () => this.timeline(), map: () => this.map(), codex: () => this.codex(), hunts: () => this.hunts() };
-      return d("nav", { class: "enc-tabs", "aria-label": s.s("enc.nav.label") }, T("menu", s.s("enc.nav.title"), () => this.title(), { class: "enc-tab enc-tab-title" }), p$.filter((i) => this.partAvailable(i)).map((i) => T("nav-".concat(i), i === "reader" ? s.ui("reader.nav") : s.s("enc.nav.".concat(i)), () => {
+      return d("nav", { class: "enc-tabs", "aria-label": s.s("enc.nav.label") }, T("menu", s.s("enc.nav.title"), () => this.title(), { class: "enc-tab enc-tab-title" }), f$.filter((i) => this.partAvailable(i)).map((i) => T("nav-".concat(i), i === "reader" ? s.ui("reader.nav") : s.s("enc.nav.".concat(i)), () => {
         this.trail = [], n[i]();
       }, { class: "enc-tab", ...i === e ? { "aria-current": "page" } : {} })));
     }
@@ -9376,7 +9376,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.stopAudio();
       for (const o of this.cleanup.splice(0)) o();
       this.cleanup = this.pendingCleanup.splice(0);
-      const r = d("div", { class: "enc-page enc-page-".concat(e), "data-part": s != null ? s : "" }, this.nav(s), Y1(this), n);
+      const r = d("div", { class: "enc-page enc-page-".concat(e), "data-part": s != null ? s : "" }, this.nav(s), J1(this), n);
       return this.s.render(e, r, { view: { ...this.baseView(), ...i } });
     }
     baseView() {
@@ -9394,35 +9394,35 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.rebuild(), this.s.finished = false, this.trail = [], this.s.render("title", Zs(this.s, { startLabel: this.readerFirst() ? this.s.ui(this.data.reader ? "reader.continue" : "reader.open") : this.s.started ? this.s.s("enc.continue") : this.s.s("enc.open"), onStart: () => this.readerFirst() ? this.reader() : this.explore() }, () => this.title(), this.titleState));
     }
     explore() {
-      this.s.finished = false, this.page("explore", "index", V1(this), { query: this.query });
+      this.s.finished = false, this.page("explore", "index", Y1(this), { query: this.query });
     }
     reader(e) {
       var _a3;
       const s = this.chapters();
       if (s.length === 0) return this.explore();
       const n = s.some((i) => i.id === e) ? e : this.readerChapter();
-      n !== ((_a3 = this.data.reader) == null ? void 0 : _a3.chapter) && this.rememberReader(n, 0), this.trail = [], this.page("reader", "reader", h$(this, n), { chapter: n });
+      n !== ((_a3 = this.data.reader) == null ? void 0 : _a3.chapter) && this.rememberReader(n, 0), this.trail = [], this.page("reader", "reader", p$(this, n), { chapter: n });
     }
     article(e, s) {
       if (!this.arts.has(e)) return this.explore();
-      s && this.trail.push(s), this.data.read.includes(e) || (this.data = td(this.data, e), this.saveData()), this.page("article", null, H1(this, e), { article: e });
+      s && this.trail.push(s), this.data.read.includes(e) || (this.data = td(this.data, e), this.saveData()), this.page("article", null, V1(this, e), { article: e });
     }
     back() {
       const e = this.trail.pop();
       e ? e() : this.explore();
     }
     timeline() {
-      this.page("timeline", "timeline", a$(this), { event: this.eventId });
+      this.page("timeline", "timeline", c$(this), { event: this.eventId });
     }
     map() {
-      this.page("map", "map", c$(this));
+      this.page("map", "map", l$(this));
     }
     codex() {
-      this.page("codex", "codex", Q1(this));
+      this.page("codex", "codex", X1(this));
     }
     hunts() {
       const e = this.result;
-      this.page("hunts", "hunts", X1(this, e), { result: e }), e && this.s.live(this.resultText(e));
+      this.page("hunts", "hunts", e$(this, e), { result: e }), e && this.s.live(this.resultText(e));
     }
     resultText(e) {
       const s = this.s;
@@ -9461,10 +9461,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (!s || !n || n.id !== e.item) return;
       const i = this.s.item(e.item);
       if (!i) return;
-      const r = this.collectibleName(e), o = s.steps.indexOf(e) + 1, a = this.found(e), c = J1(this, s, o);
+      const r = this.collectibleName(e), o = s.steps.indexOf(e) + 1, a = this.found(e), c = Q1(this, s, o);
       lt(this.s, { item: i, context: "hunt", retry: n.retry, ...s.final ? { roundKind: "boss" } : { roundKind: "unit", unitId: s.hunt.unit }, roundSize: s.run.size, index: s.answered, hud: c, lead: d("span", {}, this.s.s("enc.lead", { name: r })), view: () => ({ ...this.baseView(), step: e.id, article: e.article }), nextLabel: this.s.s("enc.turn"), leaveLabel: this.s.s("enc.q.back"), onLeave: () => this.article(e.article), onAnswered: (l) => {
         var _a3, _b3;
-        s.run = this.s.record(s.run, n, l), s.answered += 1, l.result.correct && (s.collected.includes(e.id) || s.collected.push(e.id), this.data = B1(this.data, e.id), this.saveData(), (_a3 = c.querySelectorAll(".enc-hud-pip")[o - 1]) == null ? void 0 : _a3.classList.add("is-found"), (_b3 = c.querySelector(".enc-hud-pips")) == null ? void 0 : _b3.setAttribute("aria-label", this.s.s("enc.hunt.found", { found: s.collected.length, n: s.steps.length })));
+        s.run = this.s.record(s.run, n, l), s.answered += 1, l.result.correct && (s.collected.includes(e.id) || s.collected.push(e.id), this.data = F1(this.data, e.id), this.saveData(), (_a3 = c.querySelectorAll(".enc-hud-pip")[o - 1]) == null ? void 0 : _a3.classList.add("is-found"), (_b3 = c.querySelector(".enc-hud-pips")) == null ? void 0 : _b3.setAttribute("aria-label", this.s.s("enc.hunt.found", { found: s.collected.length, n: s.steps.length })));
       }, effect: (l) => l.result.correct ? { text: this.s.s(a ? "enc.fx.again" : "enc.fx.found", { name: r }), tone: "good" } : { text: this.s.s("enc.fx.missed"), tone: "bad" }, onNext: () => {
         s.pick = this.s.next(s.run), s.pick ? this.article(e.article) : this.finishHunt();
       } });
@@ -9497,17 +9497,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }, codex: () => this.allSteps().filter((e) => this.validStep(e)).map((e) => ({ id: e.id, found: this.found(e) })), queue: () => [...this.s.progress.queue] };
     }
   }
-  function m$(t, e) {
+  function g$(t, e) {
     let s = null, n = null;
     return { id: t, mount(i) {
-      const r = new Cs(i, { shellId: t, theme: e, strings: G1 });
-      s = r, n = new f$(r), r.mount(), r.setDebug(n.debug()), n.title();
+      const r = new Cs(i, { shellId: t, theme: e, strings: W1 });
+      s = r, n = new m$(r), r.mount(), r.setDebug(n.debug()), n.title();
     }, unmount() {
       n == null ? void 0 : n.stopAudio(), s == null ? void 0 : s.unmount(), s = null, n = null;
     } };
   }
-  const od = m$("encyclopedia", "parchment"), Rt = 40, ad = 80, cd = 60, Jn = 26;
-  function g$(t) {
+  const od = g$("encyclopedia", "parchment"), Rt = 40, ad = 80, cd = 60, Jn = 26;
+  function k$(t) {
     var _a3, _b3, _c2;
     const e = t.rooms.map((h) => h.id), s = /* @__PURE__ */ new Map();
     if (e.includes(t.entry)) {
@@ -9533,7 +9533,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const h of t.rooms) for (const p of h.doors) e.includes(p.to) && p.to !== h.id && u.push({ from: h.id, to: p.to, back: s.get(p.to) <= s.get(h.id) });
     return { nodes: c, edges: u, width: Jn * 2 + Rt + (r - 1) * ad, height: Jn * 2 + Rt + (a - 1) * cd };
   }
-  function k$(t, e) {
+  function b$(t, e) {
     var _a3, _b3;
     const s = /* @__PURE__ */ new Map(), n = (r, o) => {
       const a = s.get(r);
@@ -9551,7 +9551,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return i.filter((r) => r.length > 0);
   }
-  const Ae = (t, e = {}, ...s) => de(t, e, ...s.filter((n) => n !== null)), V = (t, e, s = {}) => Ae("path", { class: t, d: e, ...s }), pe = (t, e, s, n, i, r = {}) => Ae("rect", { class: t, x: e, y: s, width: n, height: i, ...r }), fe = (t, e, s, n) => Ae("circle", { class: t, cx: e, cy: s, r: n }), b$ = (t, e, s, n) => {
+  const Ae = (t, e = {}, ...s) => de(t, e, ...s.filter((n) => n !== null)), V = (t, e, s = {}) => Ae("path", { class: t, d: e, ...s }), pe = (t, e, s, n, i, r = {}) => Ae("rect", { class: t, x: e, y: s, width: n, height: i, ...r }), fe = (t, e, s, n) => Ae("circle", { class: t, cx: e, cy: s, r: n }), v$ = (t, e, s, n) => {
     const i = Ae("text", { class: t, x: e, y: s, "text-anchor": "middle" });
     return i.appendChild(document.createTextNode(n)), i;
   }, rs = (t, e, ...s) => de("svg", { class: t, viewBox: e, "aria-hidden": "true", focusable: "false", preserveAspectRatio: "xMidYMid meet" }, ...s.filter((n) => n !== null)), Kr = "M20 168V68C20 42 38 22 60 22S100 42 100 68V168Z";
@@ -9559,19 +9559,19 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const e = rs("mm-door-svg", "0 0 120 170", V("d-arch", "M6 170V66C6 30 32 6 60 6S114 30 114 66V170Z"), V("d-joint", "M60 6V22M33 13L39 28M87 13L81 28M13 40L28 47M107 40L92 47M8 90H20M100 90H112M8 130H20M100 130H112"), V("d-keystone", "M52 6H68L66 22H54Z"), V("d-opening", Kr), V("d-light", Kr), Ae("g", { class: "d-leaf" }, V("d-wood", Kr), V("d-plank", "M40 25V168M60 22V168M80 25V168"), pe("d-iron", 20, 62, 80, 8), pe("d-iron", 20, 114, 80, 8), fe("d-stud", 28, 66, 2.4), fe("d-stud", 52, 66, 2.4), fe("d-stud", 68, 66, 2.4), fe("d-stud", 92, 66, 2.4), fe("d-stud", 28, 118, 2.4), fe("d-stud", 92, 118, 2.4), fe("d-ring", 84, 92, 7), Ae("g", { class: "d-lock" }, V("d-shackle", "M52 84V78A8 8 0 0 1 68 78V84", { fill: "none" }), pe("d-lockbody", 48, 84, 24, 18, { rx: 2 }), fe("d-keyhole", 60, 92, 3))));
     return e.setAttribute("data-open", String(t)), e;
   }
-  const v$ = (t, e) => t.setAttribute("data-open", String(e));
-  function w$() {
+  const w$ = (t, e) => t.setAttribute("data-open", String(e));
+  function y$() {
     return rs("mm-torch-svg", "0 0 28 58", fe("t-glow", 14, 14, 20), V("t-bracket", "M14 58V34M6 32H22", { fill: "none" }), V("t-cup", "M7 24H21L18 36H10Z"), V("t-flame", "M14 2C19 9 23 14 21 19C20 23 17 25 14 25C11 25 8 23 7 19C6 15 9 11 11 8C12 11 13 12 14 2Z"), V("t-core", "M14 12C17 16 18 18 17 21C16 23 15 24 14 24C13 24 11 23 11 21C11 19 12 18 14 12Z"), V("t-ember", "M10 24H18", { fill: "none" }));
   }
   function Gr(t, e, s) {
-    return d("span", { class: "mm-torches", testid: "torches", role: "img", "aria-label": s, "data-torches": String(t), "data-max": String(e) }, Array.from({ length: e }, (n, i) => d("span", { class: "mm-torch ".concat(i < t ? "is-lit" : "is-out"), "aria-hidden": "true" }, w$())));
+    return d("span", { class: "mm-torches", testid: "torches", role: "img", "aria-label": s, "data-torches": String(t), "data-max": String(e) }, Array.from({ length: e }, (n, i) => d("span", { class: "mm-torch ".concat(i < t ? "is-lit" : "is-out"), "aria-hidden": "true" }, y$())));
   }
   const ld = (t, e, s, n) => {
     let i = "";
     for (let r = t; r + n * 0.6 <= e; r += n) i += "M".concat(r, " ").concat(s, "h").concat(n * 0.55, "v-9h-").concat(n * 0.55, "z");
     return i;
   };
-  function y$(t) {
+  function S$(t) {
     const e = (t % 6 + 6) % 6, s = V("p-robe p-c".concat(e), "M8 120C8 96 26 84 50 84S92 96 92 120Z"), n = pe("p-skin", 44, 70, 12, 18, { rx: 4 }), i = Ae("ellipse", { class: "p-skin", cx: 50, cy: 54, rx: 19, ry: 22 }), r = [fe("p-eye", 43, 54, 2.2), fe("p-eye", 57, 54, 2.2), V("p-mouth", "M44 66Q50 70 56 66", { fill: "none" })], o = [];
     switch (e) {
       case 0:
@@ -9594,8 +9594,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return rs("mm-portrait-svg", "0 0 100 120", fe("p-back", 50, 60, 54), s, n, i, ...r, ...o);
   }
-  function S$(t, e) {
-    return d("div", { class: "mm-portrait", "data-look": String(t.look % 6) }, e ? d("img", { src: e.url, alt: e.alt, class: "mm-portrait-img", loading: "lazy" }) : y$(t.look));
+  function $$(t, e) {
+    return d("div", { class: "mm-portrait", "data-look": String(t.look % 6) }, e ? d("img", { src: e.url, alt: e.alt, class: "mm-portrait-img", loading: "lazy" }) : S$(t.look));
   }
   function Qn(t) {
     return rs("mm-throne-svg", "0 -34 200 224", V("th-floor", "M10 186H190L178 168H22Z"), V("th-step", "M30 168H170L162 150H38Z"), V("th-back", "M62 150V50C62 24 80 10 100 10S138 24 138 50V150Z"), V("th-back-in", "M72 146V54C72 34 85 22 100 22S128 34 128 54V146Z"), V("th-finial", "M56 52L62 28L68 52ZM132 52L138 28L144 52Z"), pe("th-seat", 56, 118, 88, 30, { rx: 4 }), pe("th-cushion", 64, 106, 72, 16, { rx: 8 }), pe("th-arm", 50, 98, 16, 52, { rx: 4 }), pe("th-arm", 134, 98, 16, 52, { rx: 4 }), V("th-gem", "M100 34L108 44L100 54L92 44Z"), fe("th-gem", 100, 80, 5), Ae("g", { class: "th-crown".concat(t ? " is-won" : "") }, fe("th-halo", 100, 0, 22), V("th-crown-shape", "M78 0L82 -18L92 -8L100 -22L108 -8L118 -18L122 0Z"), pe("th-crown-band", 78, 0, 44, 6, { rx: 2 })));
@@ -9603,7 +9603,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function Wr() {
     return rs("mm-key-svg", "0 0 64 64", fe("k-ring", 18, 18, 12), fe("k-hole", 18, 18, 5), V("k-shaft", "M26 26L56 56M44 44L52 36M50 50L58 42", { fill: "none" }));
   }
-  function $$(t, e, s) {
+  function z$(t, e, s) {
     const n = new Map(t.nodes.map((l) => [l.id, l])), i = Rt / 2, r = t.edges.map((l) => {
       const u = n.get(l.from), h = n.get(l.to);
       if (!u || !h) return null;
@@ -9616,11 +9616,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return Ae("g", { class: f }, V("m-line", "M".concat(g, " ").concat(u.y, "C").concat(v, " ").concat(u.y, " ").concat(v, " ").concat(h.y, " ").concat(k, " ").concat(h.y), { fill: "none" }), V("m-arrow", "M".concat(k, " ").concat(h.y, "l-9 -5v10z")), p ? null : fe("m-lock", v, b, 4.5));
     }), o = t.nodes.map((l) => {
       const u = l.id === e.here, h = "m-room".concat(u ? " is-here" : "").concat(e.keys.has(l.id) ? " is-key" : "").concat(l.id === e.entry ? " is-entry" : "");
-      return Ae("g", { class: h, "data-room": l.id }, pe("m-stone", l.x - i, l.y - i, Rt, Rt, { rx: 5 }), b$("m-num", l.x, l.y + 6, String(l.n)), e.keys.has(l.id) ? V("m-key", "M".concat(l.x + i - 6, " ").concat(l.y - i - 3, "l5 -5l5 5l-5 5z")) : null, u ? V("m-here", "M".concat(l.x, " ").concat(l.y - i - 4, "l-6 -10l6 -4l6 4z")) : null);
+      return Ae("g", { class: h, "data-room": l.id }, pe("m-stone", l.x - i, l.y - i, Rt, Rt, { rx: 5 }), v$("m-num", l.x, l.y + 6, String(l.n)), e.keys.has(l.id) ? V("m-key", "M".concat(l.x + i - 6, " ").concat(l.y - i - 3, "l5 -5l5 5l-5 5z")) : null, u ? V("m-here", "M".concat(l.x, " ").concat(l.y - i - 4, "l-6 -10l6 -4l6 4z")) : null);
     }), a = [...r, ...o].filter((l) => l !== null);
     return de("svg", { class: "mm-minimap-svg", viewBox: "0 0 ".concat(t.width, " ").concat(t.height), role: "img", "aria-label": s, preserveAspectRatio: "xMidYMid meet", testid: "minimap" }, ...a);
   }
-  function z$(t, e, s) {
+  function _$(t, e, s) {
     const r = Math.ceil(t.length / 2), o = [...t.slice(0, r), "keep", ...t.slice(r)], a = t.length * 76 + 100 + 40, c = [pe("s-sky", 0, 0, a, 180), pe("s-ground", 0, 164, a, 16)];
     let l = 20;
     return o.forEach((u, h) => {
@@ -9632,24 +9632,24 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       c.push(Ae("g", { class: "s-tower is-".concat(u.state), transform: "translate(".concat(l, " 0)") }, pe("s-wall", 0, f, 60, p), V("s-merlon", ld(-3, 63, f, 15).replace(/v-9h/g, "v-11h")), pe("s-window", 26, f + 22, 8, 18, { rx: 4 }), pe("s-window", 26, f + 54, 8, 18, { rx: 4 }), u.state === "won" ? Ae("g", { class: "s-won" }, V("s-pole", "M30 ".concat(f - 14, "V").concat(f - 34), { fill: "none" }), V("s-key-flag", "M30 ".concat(f - 34, "H52L46 ").concat(f - 27, "L52 ").concat(f - 20, "H30Z"))) : null)), l += 76;
     }), de("svg", { class: "mm-skyline-svg", viewBox: "-4 -12 ".concat(a, " 194"), role: "img", "aria-label": s, preserveAspectRatio: "xMidYMax meet", testid: "castle-map" }, ...c.filter((u) => u !== null));
   }
-  const _$ = { en: { "maze.tagline": "A castle of questions", "maze.title.art": "A castle gatehouse with a torch burning on each side of the gate.", "maze.title.intro": "Every door is a question. Answer it to open the door, win the key of each wing, then face the throne room.", "maze.castle.title": "The castle", "maze.castle.sub": "Pick a wing. Each wing hides a key; when you hold every key the throne room opens.", "maze.castle.map": "Map of the castle: {won} of {total} keys won.", "maze.keys": "Keys: {n} of {total}", "maze.wing.sealed": "Sealed", "maze.wing.needs": "Needs the key of: {wings}", "maze.wing.key": "Key won", "maze.wing.go": "Enter the wing", "maze.wing.resume": "Walk on", "maze.wing.rooms": "{n} rooms", "maze.throne.name": "The throne room", "maze.throne.sealed": "Sealed until you hold every key.", "maze.throne.ready": "The golden doors stand open.", "maze.throne.crowned": "Crowned", "maze.throne.desc": "A gauntlet of questions from every wing. Win one star or more and the crown is yours.", "maze.throne.begin": "Face the gauntlet", "maze.throne.won": "The crown is yours", "maze.throne.lost": "The crown slips away", "maze.throne.lost.text": "Fewer than 1 star. Look at what you missed and face the gauntlet again.", "maze.throne.retry": "Face the gauntlet again", "maze.throne.finish": "Claim the castle", "maze.throne.step": "Gauntlet, question {i} of {n}", "maze.to.castle": "Castle map", "maze.torches": "Torches: {n} of {max}", "maze.wing.of": "Wing: {wing}", "maze.back": "Go back to {room}", "maze.doors": "Doors", "maze.door.locked": "Locked: answer to open", "maze.door.open": "Open", "maze.talk": "Talk", "maze.hint": "Ask for a hint", "maze.keyroom": "The key of this wing lies here.", "maze.take": "Take the key", "maze.minimap": "Map of the wing", "maze.map.here": "you are here", "maze.map.key": "key room", "maze.map.open": "open door", "maze.map.locked": "locked door", "maze.map.alt": "Map of the wing {wing}: {n} rooms. You are in room {here}.", "maze.notice.ghost": "The castle ghost led you back to the entrance hall and relit your torches. The doors you opened stay open.", "maze.say.right": "Well done!", "maze.say.wrong": "Do not lose heart. That door will ask something else next time.", "maze.asks": "The door to {room} asks:", "maze.stepback": "Step back", "maze.fx.open": "The door swings open.", "maze.fx.torch": "Your torch gutters: {n} left.", "maze.fx.dark": "Your last torch dies. The castle ghost leads you back to the entrance hall.", "maze.fx.t.right": "The gold of the crown glows.", "maze.fx.t.torch": "A torch gutters in the throne room: {n} left.", "maze.fx.t.relit": "The last torch dies, but the ghost relights them all. The gauntlet goes on.", "maze.next.walk": "Walk through", "maze.next.room": "Back to the room", "maze.next.ghost": "Follow the ghost", "maze.next.throne": "Onward", "maze.done.won": "The wing is cleared", "maze.done.crumble": "The wing crumbles", "maze.done.key": "The key of {wing} is yours.", "maze.done.crumble.text": "Fewer than 2 stars: the doors close again. Walk the wing once more.", "maze.done.unlocked": "New wings open: {wings}", "maze.done.throne": "You hold every key. The throne room is open.", "maze.done.misses": "Questions that beat you", "maze.done.accuracy": "{n} % right first time", "maze.retry": "Walk the wing again", "maze.end.title": "The castle is yours!", "maze.end.sub": "You hold every key and wear the crown.", "maze.end.keys": "Keys won: {n} of {total}", "maze.portrait": "Portrait of {name}.", "maze.auto.wing": "A wing of the castle", "maze.auto.hall": "The entrance hall", "maze.auto.hall.desc": "Torches burn in iron rings and the stone floor is worn smooth. Doors wait ahead, and each one asks a question.", "maze.auto.gallery": "The portrait gallery", "maze.auto.gallery2": "The long gallery", "maze.auto.gallery3": "The echoing cloister", "maze.auto.keyroom": "The key chamber", "maze.auto.keyroom.desc": "On a stone table lies the key of this wing.", "maze.auto.side": "The side chamber", "maze.auto.side.desc": "A small study with a reading desk: a quieter way round, through two doors.", "maze.auto.gate.name": "The gatekeeper", "maze.auto.gate.line": "Welcome. Each door here asks a question; answer it and the way opens. Miss, and your torch gutters.", "maze.auto.gate.right": "Good. These doors like a quick mind.", "maze.auto.gate.wrong": "Never mind. A different question waits at that door.", "maze.auto.scholar.name": "The scholar", "maze.auto.scholar.line": "I have read everything on these shelves. Think it through and the door will open.", "maze.auto.scholar.right": "Splendid reasoning!", "maze.auto.scholar.wrong": "Hm. Read the explanation, then try again.", "maze.auto.archivist.name": "The archivist", "maze.auto.archivist.line": "The records are kept here: the long way round, but a gentle one.", "maze.auto.archivist.right": "Filed under: correct.", "maze.auto.archivist.wrong": "Misfiled! It happens. Read the note.", "maze.auto.keeper.name": "The keeper of keys", "maze.auto.keeper.line": "The key is nearly yours. Walk through the last door.", "maze.auto.keeper.right": "The lock likes you.", "maze.auto.keeper.wrong": "The lock stays shut, for now." }, hr: { "maze.tagline": "Dvorac pun pitanja", "maze.title.art": "Ulazna kula dvorca; s obje strane vrata gori baklja.", "maze.title.intro": "Svaka su vrata pitanje. Odgovori da ih otvoriš, osvoji ključ svakog krila pa se suoči s prijestolnom dvoranom.", "maze.castle.title": "Dvorac", "maze.castle.sub": "Odaberi krilo. U svakom je krilu skriven ključ; kad imaš sve ključeve, otvara se prijestolna dvorana.", "maze.castle.map": "Karta dvorca: osvojeno ključeva {won} od {total}.", "maze.keys": "Ključevi: {n} od {total}", "maze.wing.sealed": "Zapečaćeno", "maze.wing.needs": "Treba ključ krila: {wings}", "maze.wing.key": "Ključ osvojen", "maze.wing.go": "Uđi u krilo", "maze.wing.resume": "Nastavi hodati", "maze.wing.rooms": "{n} soba", "maze.throne.name": "Prijestolna dvorana", "maze.throne.sealed": "Zapečaćena dok nemaš sve ključeve.", "maze.throne.ready": "Zlatna su vrata otvorena.", "maze.throne.crowned": "Okrunjen", "maze.throne.desc": "Niz pitanja iz svakog krila. Osvoji jednu zvjezdicu ili više i kruna je tvoja.", "maze.throne.begin": "Suoči se s izazovom", "maze.throne.won": "Kruna je tvoja", "maze.throne.lost": "Kruna ti izmiče", "maze.throne.lost.text": "Manje od 1 zvjezdice. Pogledaj što si promašio i suoči se s izazovom ponovno.", "maze.throne.retry": "Suoči se s izazovom ponovno", "maze.throne.finish": "Preuzmi dvorac", "maze.throne.step": "Izazov, pitanje {i} od {n}", "maze.to.castle": "Karta dvorca", "maze.torches": "Baklje: {n} od {max}", "maze.wing.of": "Krilo: {wing}", "maze.back": "Vrati se u: {room}", "maze.doors": "Vrata", "maze.door.locked": "Zaključana: odgovori da ih otvoriš", "maze.door.open": "Otvorena", "maze.talk": "Razgovaraj", "maze.hint": "Zatraži savjet", "maze.keyroom": "Ovdje leži ključ ovog krila.", "maze.take": "Uzmi ključ", "maze.minimap": "Karta krila", "maze.map.here": "ovdje si", "maze.map.key": "soba s ključem", "maze.map.open": "otvorena vrata", "maze.map.locked": "zaključana vrata", "maze.map.alt": "Karta krila {wing}: {n} soba. Nalaziš se u sobi {here}.", "maze.notice.ghost": "Duh dvorca vratio te u ulaznu dvoranu i ponovno ti zapalio baklje. Vrata koja su otvorena ostaju otvorena.", "maze.say.right": "Odlično!", "maze.say.wrong": "Ne gubi hrabrost. Ta će vrata sljedeći put pitati nešto drugo.", "maze.asks": "Vrata u sobu {room} pitaju:", "maze.stepback": "Odstupi", "maze.fx.open": "Vrata se otvaraju.", "maze.fx.torch": "Tvoja baklja posustaje: preostalo ih je {n}.", "maze.fx.dark": "Tvoja posljednja baklja gasne. Duh dvorca vodi te natrag u ulaznu dvoranu.", "maze.fx.t.right": "Zlato krune zasjalo je.", "maze.fx.t.torch": "Baklja u prijestolnoj dvorani posustaje: preostalo ih je {n}.", "maze.fx.t.relit": "Posljednja baklja gasne, ali duh ih sve ponovno pali. Izazov se nastavlja.", "maze.next.walk": "Prođi kroz vrata", "maze.next.room": "Natrag u sobu", "maze.next.ghost": "Slijedi duha", "maze.next.throne": "Dalje", "maze.done.won": "Krilo je očišćeno", "maze.done.crumble": "Krilo se ruši", "maze.done.key": "Ključ krila {wing} je tvoj.", "maze.done.crumble.text": "Manje od 2 zvjezdice: vrata se opet zatvaraju. Prođi krilo još jednom.", "maze.done.unlocked": "Otvorena nova krila: {wings}", "maze.done.throne": "Imaš sve ključeve. Prijestolna dvorana je otvorena.", "maze.done.misses": "Pitanja koja su te svladala", "maze.done.accuracy": "{n} % točno iz prvog pokušaja", "maze.retry": "Prođi krilo ponovno", "maze.end.title": "Dvorac je tvoj!", "maze.end.sub": "Imaš sve ključeve i nosiš krunu.", "maze.end.keys": "Osvojeni ključevi: {n} od {total}", "maze.portrait": "Portret: {name}.", "maze.auto.wing": "Krilo dvorca", "maze.auto.hall": "Ulazna dvorana", "maze.auto.hall.desc": "Baklje gore u željeznim obručima, a kameni je pod izglačan. Pred tobom su vrata i svaka postavljaju pitanje.", "maze.auto.gallery": "Galerija portreta", "maze.auto.gallery2": "Duga galerija", "maze.auto.gallery3": "Odjekujući klaustar", "maze.auto.keyroom": "Soba s ključem", "maze.auto.keyroom.desc": "Na kamenom stolu leži ključ ovog krila.", "maze.auto.side": "Bočna odaja", "maze.auto.side.desc": "Mala radna soba s pultom za čitanje: mirniji put, kroz dvoja vrata.", "maze.auto.gate.name": "Vratar", "maze.auto.gate.line": "Dobro došao. Svaka vrata ovdje postavljaju pitanje; odgovori i put je slobodan. Pogriješiš li, baklja ti posustaje.", "maze.auto.gate.right": "Dobro. Ova vrata vole brz um.", "maze.auto.gate.wrong": "Ne mari. Na tim vratima čeka drugo pitanje.", "maze.auto.scholar.name": "Učenjak", "maze.auto.scholar.line": "Pročitao sam sve s ovih polica. Dobro razmisli i vrata će se otvoriti.", "maze.auto.scholar.right": "Izvrsno zaključivanje!", "maze.auto.scholar.wrong": "Hm. Pročitaj objašnjenje pa pokušaj ponovno.", "maze.auto.archivist.name": "Arhivar", "maze.auto.archivist.line": "Ovdje se čuvaju zapisi: dulji put, ali blag.", "maze.auto.archivist.right": "Arhivirano: točno.", "maze.auto.archivist.wrong": "Krivo razvrstano! Događa se. Pročitaj bilješku.", "maze.auto.keeper.name": "Čuvar ključeva", "maze.auto.keeper.line": "Ključ je gotovo tvoj. Prođi posljednja vrata.", "maze.auto.keeper.right": "Brava te voli.", "maze.auto.keeper.wrong": "Brava za sada ostaje zatvorena." }, de: { "maze.tagline": "Ein Schloss voller Fragen", "maze.title.art": "Ein Torhaus des Schlosses, an jeder Seite des Tors brennt eine Fackel.", "maze.title.intro": "Jede Tür ist eine Frage. Beantworte sie, um die Tür zu öffnen, gewinne den Schlüssel jedes Flügels und stelle dich dann im Thronsaal.", "maze.castle.title": "Das Schloss", "maze.castle.sub": "Wähle einen Flügel. Jeder Flügel versteckt einen Schlüssel; wenn du alle Schlüssel hast, öffnet sich der Thronsaal.", "maze.castle.map": "Karte des Schlosses: {won} von {total} Schlüsseln gewonnen.", "maze.keys": "Schlüssel: {n} von {total}", "maze.wing.sealed": "Versiegelt", "maze.wing.needs": "Braucht den Schlüssel von: {wings}", "maze.wing.key": "Schlüssel gewonnen", "maze.wing.go": "Den Flügel betreten", "maze.wing.resume": "Weitergehen", "maze.wing.rooms": "{n} Räume", "maze.throne.name": "Der Thronsaal", "maze.throne.sealed": "Versiegelt, bis du alle Schlüssel hast.", "maze.throne.ready": "Die goldenen Türen stehen offen.", "maze.throne.crowned": "Gekrönt", "maze.throne.desc": "Ein Fragenparcours aus allen Flügeln. Gewinne einen Stern oder mehr, und die Krone gehört dir.", "maze.throne.begin": "Den Parcours wagen", "maze.throne.won": "Die Krone gehört dir", "maze.throne.lost": "Die Krone entgleitet dir", "maze.throne.lost.text": "Weniger als 1 Stern. Sieh dir an, was du verpasst hast, und wage den Parcours noch einmal.", "maze.throne.retry": "Den Parcours noch einmal wagen", "maze.throne.finish": "Das Schloss einnehmen", "maze.throne.step": "Parcours, Frage {i} von {n}", "maze.to.castle": "Schlosskarte", "maze.torches": "Fackeln: {n} von {max}", "maze.wing.of": "Flügel: {wing}", "maze.back": "Zurück zu: {room}", "maze.doors": "Türen", "maze.door.locked": "Verschlossen: Antworte, um zu öffnen", "maze.door.open": "Offen", "maze.talk": "Sprechen", "maze.hint": "Um einen Tipp bitten", "maze.keyroom": "Der Schlüssel dieses Flügels liegt hier.", "maze.take": "Den Schlüssel nehmen", "maze.minimap": "Karte des Flügels", "maze.map.here": "du bist hier", "maze.map.key": "Schlüsselraum", "maze.map.open": "offene Tür", "maze.map.locked": "verschlossene Tür", "maze.map.alt": "Karte des Flügels {wing}: {n} Räume. Du bist in Raum {here}.", "maze.notice.ghost": "Der Schlossgeist hat dich zurück in die Eingangshalle geführt und deine Fackeln neu entzündet. Die Türen, die du geöffnet hast, bleiben offen.", "maze.say.right": "Gut gemacht!", "maze.say.wrong": "Lass den Mut nicht sinken. Diese Tür stellt dir beim nächsten Mal eine andere Frage.", "maze.asks": "Die Tür zu „{room}“ fragt:", "maze.stepback": "Zurücktreten", "maze.fx.open": "Die Tür schwingt auf.", "maze.fx.torch": "Deine Fackel flackert: noch {n} übrig.", "maze.fx.dark": "Deine letzte Fackel erlischt. Der Schlossgeist führt dich zurück in die Eingangshalle.", "maze.fx.t.right": "Das Gold der Krone leuchtet.", "maze.fx.t.torch": "Im Thronsaal flackert eine Fackel: noch {n} übrig.", "maze.fx.t.relit": "Die letzte Fackel erlischt, aber der Geist entzündet alle neu. Der Parcours geht weiter.", "maze.next.walk": "Hindurchgehen", "maze.next.room": "Zurück in den Raum", "maze.next.ghost": "Dem Geist folgen", "maze.next.throne": "Weiter", "maze.done.won": "Der Flügel ist bezwungen", "maze.done.crumble": "Der Flügel zerfällt", "maze.done.key": "Der Schlüssel von {wing} gehört dir.", "maze.done.crumble.text": "Weniger als 2 Sterne: Die Türen schließen sich wieder. Durchquere den Flügel noch einmal.", "maze.done.unlocked": "Neue Flügel öffnen sich: {wings}", "maze.done.throne": "Du hast alle Schlüssel. Der Thronsaal ist offen.", "maze.done.misses": "Fragen, die dich besiegt haben", "maze.done.accuracy": "{n} % gleich beim ersten Mal richtig", "maze.retry": "Den Flügel noch einmal durchqueren", "maze.end.title": "Das Schloss gehört dir!", "maze.end.sub": "Du hast alle Schlüssel und trägst die Krone.", "maze.end.keys": "Gewonnene Schlüssel: {n} von {total}", "maze.portrait": "Porträt von {name}.", "maze.auto.wing": "Ein Flügel des Schlosses", "maze.auto.hall": "Die Eingangshalle", "maze.auto.hall.desc": "Fackeln brennen in eisernen Ringen, und der Steinboden ist glatt getreten. Vor dir warten Türen, und jede stellt eine Frage.", "maze.auto.gallery": "Die Porträtgalerie", "maze.auto.gallery2": "Die lange Galerie", "maze.auto.gallery3": "Der hallende Kreuzgang", "maze.auto.keyroom": "Die Schlüsselkammer", "maze.auto.keyroom.desc": "Auf einem Steintisch liegt der Schlüssel dieses Flügels.", "maze.auto.side": "Die Seitenkammer", "maze.auto.side.desc": "Ein kleines Studierzimmer mit einem Lesepult: ein ruhigerer Weg, durch zwei Türen.", "maze.auto.gate.name": "Der Torwächter", "maze.auto.gate.line": "Willkommen. Jede Tür hier stellt eine Frage; beantworte sie, und der Weg öffnet sich. Liegst du falsch, flackert deine Fackel.", "maze.auto.gate.right": "Gut. Diese Türen mögen einen wachen Verstand.", "maze.auto.gate.wrong": "Macht nichts. An dieser Tür wartet eine andere Frage.", "maze.auto.scholar.name": "Der Gelehrte", "maze.auto.scholar.line": "Ich habe alles in diesen Regalen gelesen. Denk in Ruhe nach, und die Tür öffnet sich.", "maze.auto.scholar.right": "Hervorragend überlegt!", "maze.auto.scholar.wrong": "Hm. Lies die Erklärung und versuche es noch einmal.", "maze.auto.archivist.name": "Die Archivarin", "maze.auto.archivist.line": "Hier werden die Akten geführt: der lange Weg, aber ein sanfter.", "maze.auto.archivist.right": "Abgelegt unter: richtig.", "maze.auto.archivist.wrong": "Falsch abgelegt! Das passiert. Lies die Notiz.", "maze.auto.keeper.name": "Der Schlüsselbewahrer", "maze.auto.keeper.line": "Der Schlüssel ist fast dein. Geh durch die letzte Tür.", "maze.auto.keeper.right": "Das Schloss mag dich.", "maze.auto.keeper.wrong": "Das Schloss bleibt vorerst verschlossen." } };
-  function j$(t, e, s) {
+  const j$ = { en: { "maze.tagline": "A castle of questions", "maze.title.art": "A castle gatehouse with a torch burning on each side of the gate.", "maze.title.intro": "Every door is a question. Answer it to open the door, win the key of each wing, then face the throne room.", "maze.castle.title": "The castle", "maze.castle.sub": "Pick a wing. Each wing hides a key; when you hold every key the throne room opens.", "maze.castle.map": "Map of the castle: {won} of {total} keys won.", "maze.keys": "Keys: {n} of {total}", "maze.wing.sealed": "Sealed", "maze.wing.needs": "Needs the key of: {wings}", "maze.wing.key": "Key won", "maze.wing.go": "Enter the wing", "maze.wing.resume": "Walk on", "maze.wing.rooms": "{n} rooms", "maze.throne.name": "The throne room", "maze.throne.sealed": "Sealed until you hold every key.", "maze.throne.ready": "The golden doors stand open.", "maze.throne.crowned": "Crowned", "maze.throne.desc": "A gauntlet of questions from every wing. Win one star or more and the crown is yours.", "maze.throne.begin": "Face the gauntlet", "maze.throne.won": "The crown is yours", "maze.throne.lost": "The crown slips away", "maze.throne.lost.text": "Fewer than 1 star. Look at what you missed and face the gauntlet again.", "maze.throne.retry": "Face the gauntlet again", "maze.throne.finish": "Claim the castle", "maze.throne.step": "Gauntlet, question {i} of {n}", "maze.to.castle": "Castle map", "maze.torches": "Torches: {n} of {max}", "maze.wing.of": "Wing: {wing}", "maze.back": "Go back to {room}", "maze.doors": "Doors", "maze.door.locked": "Locked: answer to open", "maze.door.open": "Open", "maze.talk": "Talk", "maze.hint": "Ask for a hint", "maze.keyroom": "The key of this wing lies here.", "maze.take": "Take the key", "maze.minimap": "Map of the wing", "maze.map.here": "you are here", "maze.map.key": "key room", "maze.map.open": "open door", "maze.map.locked": "locked door", "maze.map.alt": "Map of the wing {wing}: {n} rooms. You are in room {here}.", "maze.notice.ghost": "The castle ghost led you back to the entrance hall and relit your torches. The doors you opened stay open.", "maze.say.right": "Well done!", "maze.say.wrong": "Do not lose heart. That door will ask something else next time.", "maze.asks": "The door to {room} asks:", "maze.stepback": "Step back", "maze.fx.open": "The door swings open.", "maze.fx.torch": "Your torch gutters: {n} left.", "maze.fx.dark": "Your last torch dies. The castle ghost leads you back to the entrance hall.", "maze.fx.t.right": "The gold of the crown glows.", "maze.fx.t.torch": "A torch gutters in the throne room: {n} left.", "maze.fx.t.relit": "The last torch dies, but the ghost relights them all. The gauntlet goes on.", "maze.next.walk": "Walk through", "maze.next.room": "Back to the room", "maze.next.ghost": "Follow the ghost", "maze.next.throne": "Onward", "maze.done.won": "The wing is cleared", "maze.done.crumble": "The wing crumbles", "maze.done.key": "The key of {wing} is yours.", "maze.done.crumble.text": "Fewer than 2 stars: the doors close again. Walk the wing once more.", "maze.done.unlocked": "New wings open: {wings}", "maze.done.throne": "You hold every key. The throne room is open.", "maze.done.misses": "Questions that beat you", "maze.done.accuracy": "{n} % right first time", "maze.retry": "Walk the wing again", "maze.end.title": "The castle is yours!", "maze.end.sub": "You hold every key and wear the crown.", "maze.end.keys": "Keys won: {n} of {total}", "maze.portrait": "Portrait of {name}.", "maze.auto.wing": "A wing of the castle", "maze.auto.hall": "The entrance hall", "maze.auto.hall.desc": "Torches burn in iron rings and the stone floor is worn smooth. Doors wait ahead, and each one asks a question.", "maze.auto.gallery": "The portrait gallery", "maze.auto.gallery2": "The long gallery", "maze.auto.gallery3": "The echoing cloister", "maze.auto.keyroom": "The key chamber", "maze.auto.keyroom.desc": "On a stone table lies the key of this wing.", "maze.auto.side": "The side chamber", "maze.auto.side.desc": "A small study with a reading desk: a quieter way round, through two doors.", "maze.auto.gate.name": "The gatekeeper", "maze.auto.gate.line": "Welcome. Each door here asks a question; answer it and the way opens. Miss, and your torch gutters.", "maze.auto.gate.right": "Good. These doors like a quick mind.", "maze.auto.gate.wrong": "Never mind. A different question waits at that door.", "maze.auto.scholar.name": "The scholar", "maze.auto.scholar.line": "I have read everything on these shelves. Think it through and the door will open.", "maze.auto.scholar.right": "Splendid reasoning!", "maze.auto.scholar.wrong": "Hm. Read the explanation, then try again.", "maze.auto.archivist.name": "The archivist", "maze.auto.archivist.line": "The records are kept here: the long way round, but a gentle one.", "maze.auto.archivist.right": "Filed under: correct.", "maze.auto.archivist.wrong": "Misfiled! It happens. Read the note.", "maze.auto.keeper.name": "The keeper of keys", "maze.auto.keeper.line": "The key is nearly yours. Walk through the last door.", "maze.auto.keeper.right": "The lock likes you.", "maze.auto.keeper.wrong": "The lock stays shut, for now." }, hr: { "maze.tagline": "Dvorac pun pitanja", "maze.title.art": "Ulazna kula dvorca; s obje strane vrata gori baklja.", "maze.title.intro": "Svaka su vrata pitanje. Odgovori da ih otvoriš, osvoji ključ svakog krila pa se suoči s prijestolnom dvoranom.", "maze.castle.title": "Dvorac", "maze.castle.sub": "Odaberi krilo. U svakom je krilu skriven ključ; kad imaš sve ključeve, otvara se prijestolna dvorana.", "maze.castle.map": "Karta dvorca: osvojeno ključeva {won} od {total}.", "maze.keys": "Ključevi: {n} od {total}", "maze.wing.sealed": "Zapečaćeno", "maze.wing.needs": "Treba ključ krila: {wings}", "maze.wing.key": "Ključ osvojen", "maze.wing.go": "Uđi u krilo", "maze.wing.resume": "Nastavi hodati", "maze.wing.rooms": "{n} soba", "maze.throne.name": "Prijestolna dvorana", "maze.throne.sealed": "Zapečaćena dok nemaš sve ključeve.", "maze.throne.ready": "Zlatna su vrata otvorena.", "maze.throne.crowned": "Okrunjen", "maze.throne.desc": "Niz pitanja iz svakog krila. Osvoji jednu zvjezdicu ili više i kruna je tvoja.", "maze.throne.begin": "Suoči se s izazovom", "maze.throne.won": "Kruna je tvoja", "maze.throne.lost": "Kruna ti izmiče", "maze.throne.lost.text": "Manje od 1 zvjezdice. Pogledaj što si promašio i suoči se s izazovom ponovno.", "maze.throne.retry": "Suoči se s izazovom ponovno", "maze.throne.finish": "Preuzmi dvorac", "maze.throne.step": "Izazov, pitanje {i} od {n}", "maze.to.castle": "Karta dvorca", "maze.torches": "Baklje: {n} od {max}", "maze.wing.of": "Krilo: {wing}", "maze.back": "Vrati se u: {room}", "maze.doors": "Vrata", "maze.door.locked": "Zaključana: odgovori da ih otvoriš", "maze.door.open": "Otvorena", "maze.talk": "Razgovaraj", "maze.hint": "Zatraži savjet", "maze.keyroom": "Ovdje leži ključ ovog krila.", "maze.take": "Uzmi ključ", "maze.minimap": "Karta krila", "maze.map.here": "ovdje si", "maze.map.key": "soba s ključem", "maze.map.open": "otvorena vrata", "maze.map.locked": "zaključana vrata", "maze.map.alt": "Karta krila {wing}: {n} soba. Nalaziš se u sobi {here}.", "maze.notice.ghost": "Duh dvorca vratio te u ulaznu dvoranu i ponovno ti zapalio baklje. Vrata koja su otvorena ostaju otvorena.", "maze.say.right": "Odlično!", "maze.say.wrong": "Ne gubi hrabrost. Ta će vrata sljedeći put pitati nešto drugo.", "maze.asks": "Vrata u sobu {room} pitaju:", "maze.stepback": "Odstupi", "maze.fx.open": "Vrata se otvaraju.", "maze.fx.torch": "Tvoja baklja posustaje: preostalo ih je {n}.", "maze.fx.dark": "Tvoja posljednja baklja gasne. Duh dvorca vodi te natrag u ulaznu dvoranu.", "maze.fx.t.right": "Zlato krune zasjalo je.", "maze.fx.t.torch": "Baklja u prijestolnoj dvorani posustaje: preostalo ih je {n}.", "maze.fx.t.relit": "Posljednja baklja gasne, ali duh ih sve ponovno pali. Izazov se nastavlja.", "maze.next.walk": "Prođi kroz vrata", "maze.next.room": "Natrag u sobu", "maze.next.ghost": "Slijedi duha", "maze.next.throne": "Dalje", "maze.done.won": "Krilo je očišćeno", "maze.done.crumble": "Krilo se ruši", "maze.done.key": "Ključ krila {wing} je tvoj.", "maze.done.crumble.text": "Manje od 2 zvjezdice: vrata se opet zatvaraju. Prođi krilo još jednom.", "maze.done.unlocked": "Otvorena nova krila: {wings}", "maze.done.throne": "Imaš sve ključeve. Prijestolna dvorana je otvorena.", "maze.done.misses": "Pitanja koja su te svladala", "maze.done.accuracy": "{n} % točno iz prvog pokušaja", "maze.retry": "Prođi krilo ponovno", "maze.end.title": "Dvorac je tvoj!", "maze.end.sub": "Imaš sve ključeve i nosiš krunu.", "maze.end.keys": "Osvojeni ključevi: {n} od {total}", "maze.portrait": "Portret: {name}.", "maze.auto.wing": "Krilo dvorca", "maze.auto.hall": "Ulazna dvorana", "maze.auto.hall.desc": "Baklje gore u željeznim obručima, a kameni je pod izglačan. Pred tobom su vrata i svaka postavljaju pitanje.", "maze.auto.gallery": "Galerija portreta", "maze.auto.gallery2": "Duga galerija", "maze.auto.gallery3": "Odjekujući klaustar", "maze.auto.keyroom": "Soba s ključem", "maze.auto.keyroom.desc": "Na kamenom stolu leži ključ ovog krila.", "maze.auto.side": "Bočna odaja", "maze.auto.side.desc": "Mala radna soba s pultom za čitanje: mirniji put, kroz dvoja vrata.", "maze.auto.gate.name": "Vratar", "maze.auto.gate.line": "Dobro došao. Svaka vrata ovdje postavljaju pitanje; odgovori i put je slobodan. Pogriješiš li, baklja ti posustaje.", "maze.auto.gate.right": "Dobro. Ova vrata vole brz um.", "maze.auto.gate.wrong": "Ne mari. Na tim vratima čeka drugo pitanje.", "maze.auto.scholar.name": "Učenjak", "maze.auto.scholar.line": "Pročitao sam sve s ovih polica. Dobro razmisli i vrata će se otvoriti.", "maze.auto.scholar.right": "Izvrsno zaključivanje!", "maze.auto.scholar.wrong": "Hm. Pročitaj objašnjenje pa pokušaj ponovno.", "maze.auto.archivist.name": "Arhivar", "maze.auto.archivist.line": "Ovdje se čuvaju zapisi: dulji put, ali blag.", "maze.auto.archivist.right": "Arhivirano: točno.", "maze.auto.archivist.wrong": "Krivo razvrstano! Događa se. Pročitaj bilješku.", "maze.auto.keeper.name": "Čuvar ključeva", "maze.auto.keeper.line": "Ključ je gotovo tvoj. Prođi posljednja vrata.", "maze.auto.keeper.right": "Brava te voli.", "maze.auto.keeper.wrong": "Brava za sada ostaje zatvorena." }, de: { "maze.tagline": "Ein Schloss voller Fragen", "maze.title.art": "Ein Torhaus des Schlosses, an jeder Seite des Tors brennt eine Fackel.", "maze.title.intro": "Jede Tür ist eine Frage. Beantworte sie, um die Tür zu öffnen, gewinne den Schlüssel jedes Flügels und stelle dich dann im Thronsaal.", "maze.castle.title": "Das Schloss", "maze.castle.sub": "Wähle einen Flügel. Jeder Flügel versteckt einen Schlüssel; wenn du alle Schlüssel hast, öffnet sich der Thronsaal.", "maze.castle.map": "Karte des Schlosses: {won} von {total} Schlüsseln gewonnen.", "maze.keys": "Schlüssel: {n} von {total}", "maze.wing.sealed": "Versiegelt", "maze.wing.needs": "Braucht den Schlüssel von: {wings}", "maze.wing.key": "Schlüssel gewonnen", "maze.wing.go": "Den Flügel betreten", "maze.wing.resume": "Weitergehen", "maze.wing.rooms": "{n} Räume", "maze.throne.name": "Der Thronsaal", "maze.throne.sealed": "Versiegelt, bis du alle Schlüssel hast.", "maze.throne.ready": "Die goldenen Türen stehen offen.", "maze.throne.crowned": "Gekrönt", "maze.throne.desc": "Ein Fragenparcours aus allen Flügeln. Gewinne einen Stern oder mehr, und die Krone gehört dir.", "maze.throne.begin": "Den Parcours wagen", "maze.throne.won": "Die Krone gehört dir", "maze.throne.lost": "Die Krone entgleitet dir", "maze.throne.lost.text": "Weniger als 1 Stern. Sieh dir an, was du verpasst hast, und wage den Parcours noch einmal.", "maze.throne.retry": "Den Parcours noch einmal wagen", "maze.throne.finish": "Das Schloss einnehmen", "maze.throne.step": "Parcours, Frage {i} von {n}", "maze.to.castle": "Schlosskarte", "maze.torches": "Fackeln: {n} von {max}", "maze.wing.of": "Flügel: {wing}", "maze.back": "Zurück zu: {room}", "maze.doors": "Türen", "maze.door.locked": "Verschlossen: Antworte, um zu öffnen", "maze.door.open": "Offen", "maze.talk": "Sprechen", "maze.hint": "Um einen Tipp bitten", "maze.keyroom": "Der Schlüssel dieses Flügels liegt hier.", "maze.take": "Den Schlüssel nehmen", "maze.minimap": "Karte des Flügels", "maze.map.here": "du bist hier", "maze.map.key": "Schlüsselraum", "maze.map.open": "offene Tür", "maze.map.locked": "verschlossene Tür", "maze.map.alt": "Karte des Flügels {wing}: {n} Räume. Du bist in Raum {here}.", "maze.notice.ghost": "Der Schlossgeist hat dich zurück in die Eingangshalle geführt und deine Fackeln neu entzündet. Die Türen, die du geöffnet hast, bleiben offen.", "maze.say.right": "Gut gemacht!", "maze.say.wrong": "Lass den Mut nicht sinken. Diese Tür stellt dir beim nächsten Mal eine andere Frage.", "maze.asks": "Die Tür zu „{room}“ fragt:", "maze.stepback": "Zurücktreten", "maze.fx.open": "Die Tür schwingt auf.", "maze.fx.torch": "Deine Fackel flackert: noch {n} übrig.", "maze.fx.dark": "Deine letzte Fackel erlischt. Der Schlossgeist führt dich zurück in die Eingangshalle.", "maze.fx.t.right": "Das Gold der Krone leuchtet.", "maze.fx.t.torch": "Im Thronsaal flackert eine Fackel: noch {n} übrig.", "maze.fx.t.relit": "Die letzte Fackel erlischt, aber der Geist entzündet alle neu. Der Parcours geht weiter.", "maze.next.walk": "Hindurchgehen", "maze.next.room": "Zurück in den Raum", "maze.next.ghost": "Dem Geist folgen", "maze.next.throne": "Weiter", "maze.done.won": "Der Flügel ist bezwungen", "maze.done.crumble": "Der Flügel zerfällt", "maze.done.key": "Der Schlüssel von {wing} gehört dir.", "maze.done.crumble.text": "Weniger als 2 Sterne: Die Türen schließen sich wieder. Durchquere den Flügel noch einmal.", "maze.done.unlocked": "Neue Flügel öffnen sich: {wings}", "maze.done.throne": "Du hast alle Schlüssel. Der Thronsaal ist offen.", "maze.done.misses": "Fragen, die dich besiegt haben", "maze.done.accuracy": "{n} % gleich beim ersten Mal richtig", "maze.retry": "Den Flügel noch einmal durchqueren", "maze.end.title": "Das Schloss gehört dir!", "maze.end.sub": "Du hast alle Schlüssel und trägst die Krone.", "maze.end.keys": "Gewonnene Schlüssel: {n} von {total}", "maze.portrait": "Porträt von {name}.", "maze.auto.wing": "Ein Flügel des Schlosses", "maze.auto.hall": "Die Eingangshalle", "maze.auto.hall.desc": "Fackeln brennen in eisernen Ringen, und der Steinboden ist glatt getreten. Vor dir warten Türen, und jede stellt eine Frage.", "maze.auto.gallery": "Die Porträtgalerie", "maze.auto.gallery2": "Die lange Galerie", "maze.auto.gallery3": "Der hallende Kreuzgang", "maze.auto.keyroom": "Die Schlüsselkammer", "maze.auto.keyroom.desc": "Auf einem Steintisch liegt der Schlüssel dieses Flügels.", "maze.auto.side": "Die Seitenkammer", "maze.auto.side.desc": "Ein kleines Studierzimmer mit einem Lesepult: ein ruhigerer Weg, durch zwei Türen.", "maze.auto.gate.name": "Der Torwächter", "maze.auto.gate.line": "Willkommen. Jede Tür hier stellt eine Frage; beantworte sie, und der Weg öffnet sich. Liegst du falsch, flackert deine Fackel.", "maze.auto.gate.right": "Gut. Diese Türen mögen einen wachen Verstand.", "maze.auto.gate.wrong": "Macht nichts. An dieser Tür wartet eine andere Frage.", "maze.auto.scholar.name": "Der Gelehrte", "maze.auto.scholar.line": "Ich habe alles in diesen Regalen gelesen. Denk in Ruhe nach, und die Tür öffnet sich.", "maze.auto.scholar.right": "Hervorragend überlegt!", "maze.auto.scholar.wrong": "Hm. Lies die Erklärung und versuche es noch einmal.", "maze.auto.archivist.name": "Die Archivarin", "maze.auto.archivist.line": "Hier werden die Akten geführt: der lange Weg, aber ein sanfter.", "maze.auto.archivist.right": "Abgelegt unter: richtig.", "maze.auto.archivist.wrong": "Falsch abgelegt! Das passiert. Lies die Notiz.", "maze.auto.keeper.name": "Der Schlüsselbewahrer", "maze.auto.keeper.line": "Der Schlüssel ist fast dein. Geh durch die letzte Tür.", "maze.auto.keeper.right": "Das Schloss mag dich.", "maze.auto.keeper.wrong": "Das Schloss bleibt vorerst verschlossen." } };
+  function x$(t, e, s) {
     return { wingId: t.id, run: e, room: t.entry, trail: [], open: [], torches: s, maxTorches: s, mood: "none", ghosted: false };
   }
   const os = (t, e, s) => t.open.includes(In(e, s)), ud = (t, e, s) => os(t, e, s) ? t : { ...t, open: [...t.open, In(e, s)] }, Hr = (t, e) => ({ ...t, trail: [...t.trail, t.room], room: e, ghosted: false });
-  function x$(t) {
+  function E$(t) {
     const e = t.trail.at(-1);
     return e === void 0 ? t : { ...t, room: e, trail: t.trail.slice(0, -1), ghosted: false };
   }
-  function E$(t) {
+  function A$(t) {
     const e = Math.max(0, t.torches - 1);
     return { walk: { ...t, torches: e }, dark: e === 0 };
   }
-  const A$ = (t, e) => ({ ...t, room: e, trail: [], torches: t.maxTorches, ghosted: true, mood: "groan" });
-  function T$(t, e) {
+  const T$ = (t, e) => ({ ...t, room: e, trail: [], torches: t.maxTorches, ghosted: true, mood: "groan" });
+  function I$(t, e) {
     return t ? e >= 2 ? "cheer" : "none" : "groan";
   }
-  function I$(t, e, s, n) {
+  function M$(t, e, s, n) {
     var _a3;
     const i = t.pool.filter((u) => e.includes(u)), r = s({ ...t, pool: i, size: t.asked.length + i.length });
     if (r) return r;
@@ -9658,8 +9658,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const a = (_a3 = t.results.at(-1)) == null ? void 0 : _a3.id, c = e.filter((u) => u !== a), l = c.length > 0 ? c : [...e];
     return l.length > 0 ? { id: n.choice(l), retry: true } : null;
   }
-  const dd = "mindmaze", M$ = "castle";
-  class O$ {
+  const dd = "mindmaze", O$ = "castle";
+  class N$ {
     constructor(e) {
       __publicField(this, "host");
       __publicField(this, "session");
@@ -9668,7 +9668,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       __publicField(this, "throne", null);
       __publicField(this, "currentWing", null);
       __publicField(this, "titleState", ns());
-      this.host = e, this.session = new Cs(e, { shellId: dd, theme: M$, strings: _$ }), this.maze = zl(this.session.pack, this.session.section());
+      this.host = e, this.session = new Cs(e, { shellId: dd, theme: O$, strings: j$ }), this.maze = zl(this.session.pack, this.session.section());
     }
     get s() {
       return this.session.s;
@@ -9747,21 +9747,21 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     castle() {
       const e = this.session;
       e.finished = false, this.currentWing = null;
-      const s = this.s, n = k$(this.maze.wings, e.units()), i = new Map(this.maze.wings.map((p) => [p.id, p])), r = this.everyKey(), o = this.maze.wings.length, a = this.keysWon(), c = this.maze.wings.map((p) => ({ state: e.isMastered(p.unit) ? "won" : e.isUnlocked(p.unit) ? "open" : "sealed" })), l = (p) => {
+      const s = this.s, n = b$(this.maze.wings, e.units()), i = new Map(this.maze.wings.map((p) => [p.id, p])), r = this.everyKey(), o = this.maze.wings.length, a = this.keysWon(), c = this.maze.wings.map((p) => ({ state: e.isMastered(p.unit) ? "won" : e.isUnlocked(p.unit) ? "open" : "sealed" })), l = (p) => {
         var _a3, _b3, _c2, _d2;
         const f = !e.isUnlocked(p.unit), m = e.unitStars(p.unit), g = e.isMastered(p.unit), b = ((_b3 = (_a3 = e.pack.units.find((w) => w.id === p.unit)) == null ? void 0 : _a3.requires) != null ? _b3 : []).filter((w) => !e.isMastered(w)).map((w) => {
           var _a4;
           return this.label((_a4 = this.maze.wings.find((y) => y.unit === w)) == null ? void 0 : _a4.name) || e.unitTitle(w);
         }).join(", "), v = this.walks.has(p.id);
         return d("li", { class: "mm-wing-item" }, d("button", { type: "button", class: "mm-wing ".concat(f ? "is-locked" : "is-open").concat(g ? " is-key" : ""), testid: "wing-".concat(p.id), "data-stars": String(m), "data-locked": String(f), "data-key": String(g), "data-unit": p.unit, "data-requires": ((_d2 = (_c2 = e.pack.units.find((w) => w.id === p.unit)) == null ? void 0 : _c2.requires) != null ? _d2 : []).join(" "), ...f ? { disabled: true } : {}, onclick: () => this.enterWing(p) }, d("span", { class: "mm-wing-name" }, this.label(p.name)), p.description ? d("span", { class: "mm-wing-desc" }, this.label(p.description)) : null, d("span", { class: "mm-wing-meta" }, f ? "".concat(s("maze.wing.sealed"), ". ").concat(s("maze.wing.needs", { wings: b })) : g ? "".concat(s("maze.wing.key")) : v ? s("maze.wing.resume") : s("maze.wing.rooms", { n: p.rooms.length })), g ? d("span", { class: "mm-wing-keyicon" }, Wr()) : null, e.stars(m)));
-      }, u = d("button", { type: "button", class: "mm-throne-btn ".concat(r ? "is-open" : "is-locked").concat(this.crowned() ? " is-crowned" : ""), testid: "throne", "data-locked": String(!r), "data-stars": String(e.bossStars()), ...r ? {} : { disabled: true }, onclick: () => this.throneIntro() }, d("span", { class: "mm-throne-icon" }, Qn(this.crowned())), d("span", { class: "mm-wing-name" }, this.label(this.maze.throne.name) || s("maze.throne.name")), d("span", { class: "mm-wing-meta" }, this.crowned() ? s("maze.throne.crowned") : s(r ? "maze.throne.ready" : "maze.throne.sealed")), e.stars(e.bossStars())), h = d("section", { class: "castle-screen mm-castle" }, d("div", { class: "topbar" }, T("menu", "‹ ".concat(e.ui("menu")), () => this.title(), { class: "btn btn-small btn-ghost" }), d("span", { class: "topbar-stars", testid: "castle-keys" }, s("maze.keys", { n: a, total: o }))), d("h1", { class: "screen-title", tabindex: "-1", testid: "castle-title" }, s("maze.castle.title")), d("p", { class: "subject" }, s("maze.castle.sub")), d("div", { class: "mm-skyline" }, z$(c, this.crowned() ? "won" : r ? "open" : "sealed", s("maze.castle.map", { won: a, total: o }))), d("div", { class: "mm-throne-wrap" }, u), d("ol", { class: "mm-wing-rows", testid: "wing-map" }, [...n].reverse().map((p) => d("li", { class: "mm-wing-row" }, d("div", { class: "mm-corridor", "aria-hidden": "true" }), d("ul", { class: "mm-wing-list" }, p.map((f) => l(i.get(f))))))));
+      }, u = d("button", { type: "button", class: "mm-throne-btn ".concat(r ? "is-open" : "is-locked").concat(this.crowned() ? " is-crowned" : ""), testid: "throne", "data-locked": String(!r), "data-stars": String(e.bossStars()), ...r ? {} : { disabled: true }, onclick: () => this.throneIntro() }, d("span", { class: "mm-throne-icon" }, Qn(this.crowned())), d("span", { class: "mm-wing-name" }, this.label(this.maze.throne.name) || s("maze.throne.name")), d("span", { class: "mm-wing-meta" }, this.crowned() ? s("maze.throne.crowned") : s(r ? "maze.throne.ready" : "maze.throne.sealed")), e.stars(e.bossStars())), h = d("section", { class: "castle-screen mm-castle" }, d("div", { class: "topbar" }, T("menu", "‹ ".concat(e.ui("menu")), () => this.title(), { class: "btn btn-small btn-ghost" }), d("span", { class: "topbar-stars", testid: "castle-keys" }, s("maze.keys", { n: a, total: o }))), d("h1", { class: "screen-title", tabindex: "-1", testid: "castle-title" }, s("maze.castle.title")), d("p", { class: "subject" }, s("maze.castle.sub")), d("div", { class: "mm-skyline" }, _$(c, this.crowned() ? "won" : r ? "open" : "sealed", s("maze.castle.map", { won: a, total: o }))), d("div", { class: "mm-throne-wrap" }, u), d("ol", { class: "mm-wing-rows", testid: "wing-map" }, [...n].reverse().map((p) => d("li", { class: "mm-wing-row" }, d("div", { class: "mm-corridor", "aria-hidden": "true" }), d("ul", { class: "mm-wing-list" }, p.map((f) => l(i.get(f))))))));
       e.render("castle", h, { view: this.castleView() });
     }
     enterWing(e) {
       const s = this.session;
       if (this.currentWing = e.id, !this.walks.has(e.id)) {
         const n = s.startRun(this.poolOfWing(e), { kind: "unit", unitId: e.unit });
-        this.walks.set(e.id, j$(e, n, this.maze.torches));
+        this.walks.set(e.id, x$(e, n, this.maze.torches));
       }
       this.room();
     }
@@ -9774,17 +9774,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         const R = os(n, r.id, z.to), S = wt(i, z.to), A = this.roomName(i, z.to);
         return d("li", { class: "mm-door-item" }, d("button", { type: "button", class: "mm-door ".concat(R ? "is-open" : "is-locked").concat((S == null ? void 0 : S.key) ? " is-key" : ""), testid: "door-".concat(z.to), "data-state": R ? "open" : "locked", ...(S == null ? void 0 : S.key) ? { "data-key": "true" } : {}, onclick: () => this.pressDoor(r, z) }, qr(R), d("span", { class: "mm-door-num", "aria-hidden": "true" }, String(O + 1)), d("span", { class: "mm-door-name" }, A), d("span", { class: "mm-door-state" }, R ? "✓ ".concat(o("maze.door.open")) : o("maze.door.locked"))));
       }, f = r.doors.length ? d("section", { class: "mm-doors", "aria-labelledby": "mm-doors-h" }, d("h2", { class: "sr-only", id: "mm-doors-h" }, o("maze.doors")), d("ul", { class: "mm-door-list", testid: "doors" }, r.doors.map(p))) : null, m = r.key ? d("div", { class: "mm-keybox" }, d("span", { class: "mm-keybox-icon" }, Wr()), d("p", {}, o("maze.keyroom")), T("take-key", o("maze.take"), () => this.takeKey(), { class: "btn btn-primary btn-big" })) : null, g = h !== void 0 ? T("back", "‹ ".concat(o("maze.back", { room: this.roomName(i, h) })), () => {
-        this.setWalk({ ...x$(n), mood: "none" }), this.room();
-      }, { class: "btn btn-ghost" }) : null, k = n.ghosted ? d("p", { class: "mm-notice", role: "status", testid: "notice" }, o("maze.notice.ghost")) : null, b = g$(i), v = new Set(js(i)), w = o("maze.map.alt", { wing: this.label(i.name), n: i.rooms.length, here: String((_b3 = (_a3 = b.nodes.find((z) => z.id === n.room)) == null ? void 0 : _a3.n) != null ? _b3 : 0) }), y = [...b.nodes].sort((z, O) => z.n - O.n).map((z) => {
+        this.setWalk({ ...E$(n), mood: "none" }), this.room();
+      }, { class: "btn btn-ghost" }) : null, k = n.ghosted ? d("p", { class: "mm-notice", role: "status", testid: "notice" }, o("maze.notice.ghost")) : null, b = k$(i), v = new Set(js(i)), w = o("maze.map.alt", { wing: this.label(i.name), n: i.rooms.length, here: String((_b3 = (_a3 = b.nodes.find((z) => z.id === n.room)) == null ? void 0 : _a3.n) != null ? _b3 : 0) }), y = [...b.nodes].sort((z, O) => z.n - O.n).map((z) => {
         const O = wt(i, z.id), R = [z.id === n.room ? o("maze.map.here") : "", v.has(z.id) ? o("maze.map.key") : ""].filter(Boolean).join(", ");
         return d("li", { class: "mm-legend-item".concat(z.id === n.room ? " is-here" : ""), "data-room": z.id }, d("b", {}, "".concat(z.n, ".")), " ", this.roomLabel(O.name), R ? d("em", {}, " (".concat(R, ")")) : null);
-      }), $ = d("section", { class: "mm-map", "aria-labelledby": "mm-map-h" }, d("h2", { id: "mm-map-h" }, o("maze.minimap")), d("div", { class: "mm-parchment" }, $$(b, { here: n.room, open: a, keys: v, entry: i.entry }, w)), d("ol", { class: "mm-legend", testid: "minimap-list" }, y)), x = this.characterPanel(r, i, n), _ = d("section", { class: "room-screen mm-room" }, d("div", { class: "topbar mm-topbar" }, T("to-castle", "‹ ".concat(o("maze.to.castle")), () => this.castle(), { class: "btn btn-small btn-ghost" }), d("span", { class: "mm-wing-tag", testid: "wing-tag" }, o("maze.wing.of", { wing: this.label(i.name) })), Gr(n.torches, n.maxTorches, o("maze.torches", { n: n.torches, max: n.maxTorches }))), k, d("div", { class: "mm-layout" }, d("div", { class: "mm-scene" }, d("h1", { class: "screen-title mm-room-name", tabindex: "-1", testid: "room-name" }, c), l ? d("p", { class: "mm-room-desc", testid: "room-desc" }, l) : null, u ? d("figure", { class: "mm-room-figure" }, d("img", { src: u.url, alt: u.alt, loading: "lazy" })) : null, f, m, g ? d("div", { class: "actions" }, g) : null), d("aside", { class: "mm-side" }, x, $)));
+      }), $ = d("section", { class: "mm-map", "aria-labelledby": "mm-map-h" }, d("h2", { id: "mm-map-h" }, o("maze.minimap")), d("div", { class: "mm-parchment" }, z$(b, { here: n.room, open: a, keys: v, entry: i.entry }, w)), d("ol", { class: "mm-legend", testid: "minimap-list" }, y)), x = this.characterPanel(r, i, n), _ = d("section", { class: "room-screen mm-room" }, d("div", { class: "topbar mm-topbar" }, T("to-castle", "‹ ".concat(o("maze.to.castle")), () => this.castle(), { class: "btn btn-small btn-ghost" }), d("span", { class: "mm-wing-tag", testid: "wing-tag" }, o("maze.wing.of", { wing: this.label(i.name) })), Gr(n.torches, n.maxTorches, o("maze.torches", { n: n.torches, max: n.maxTorches }))), k, d("div", { class: "mm-layout" }, d("div", { class: "mm-scene" }, d("h1", { class: "screen-title mm-room-name", tabindex: "-1", testid: "room-name" }, c), l ? d("p", { class: "mm-room-desc", testid: "room-desc" }, l) : null, u ? d("figure", { class: "mm-room-figure" }, d("img", { src: u.url, alt: u.alt, loading: "lazy" })) : null, f, m, g ? d("div", { class: "actions" }, g) : null), d("aside", { class: "mm-side" }, x, $)));
       e.render("room", _, { unitId: i.unit, roundKind: "unit", roundSize: n.run.size, view: (_c2 = this.roomView()) != null ? _c2 : {} });
     }
     characterPanel(e, s, n) {
       const i = e.character;
       if (!i) return null;
-      const r = this.s, o = this.label(i.name), a = this.assetOf(i.portrait), c = S$(i, a ? { url: a.url, alt: r("maze.portrait", { name: o }) } : null), l = d("p", { class: "mm-bubble mm-line", testid: "character-line", hidden: true }, this.label(i.line)), u = this.hintFor(e, i, n), h = d("p", { class: "mm-bubble mm-hint", testid: "character-hint", hidden: true }, u != null ? u : ""), p = T("talk", r("maze.talk"), () => {
+      const r = this.s, o = this.label(i.name), a = this.assetOf(i.portrait), c = $$(i, a ? { url: a.url, alt: r("maze.portrait", { name: o }) } : null), l = d("p", { class: "mm-bubble mm-line", testid: "character-line", hidden: true }, this.label(i.line)), u = this.hintFor(e, i, n), h = d("p", { class: "mm-bubble mm-hint", testid: "character-hint", hidden: true }, u != null ? u : ""), p = T("talk", r("maze.talk"), () => {
         l.hidden = !l.hidden, p.setAttribute("aria-expanded", String(!l.hidden));
       }, { class: "btn btn-small", "aria-expanded": "false" }), f = () => {
         h.hidden = !h.hidden, m == null ? void 0 : m.setAttribute("aria-expanded", String(!h.hidden));
@@ -9809,7 +9809,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.askDoor(e, s);
     }
     askDoor(e, s) {
-      const n = this.session, i = this.currentWing, r = this.wing(i), o = this.walks.get(i), a = this.s, c = I$(o.run, s.items, (f) => n.next(f), n.rng), l = c ? n.item(c.id) : void 0;
+      const n = this.session, i = this.currentWing, r = this.wing(i), o = this.walks.get(i), a = this.s, c = M$(o.run, s.items, (f) => n.next(f), n.rng), l = c ? n.item(c.id) : void 0;
       if (!c || !n.canAsk(l)) return this.setWalk({ ...Hr(ud(o, e.id, s.to), s.to), mood: "none" }), this.room();
       const u = qr(false), h = Gr(o.torches, o.maxTorches, a("maze.torches", { n: o.torches, max: o.maxTorches })), p = d("div", { class: "mm-hud" }, d("div", { class: "mm-hud-door" }, u), d("div", { class: "mm-hud-text" }, d("p", { class: "mm-hud-wing" }, this.label(r.name)), h));
       lt(n, { item: l, context: "door", retry: c.retry, hud: p, lead: d("span", {}, a("maze.asks", { room: this.roomName(r, s.to) })), unitId: r.unit, roundKind: "unit", roundSize: o.run.size, index: o.run.results.length, view: () => {
@@ -9819,13 +9819,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         let m = this.walks.get(i);
         m = { ...m, run: n.record(m.run, c, f), ghosted: false };
         const g = f.result.correct;
-        m = { ...m, mood: T$(g, n.combo) }, g ? (m = ud(m, e.id, s.to), v$(u, true), this.burst()) : (m = E$(m).walk, this.setTorches(h, m)), this.setWalk(m);
+        m = { ...m, mood: I$(g, n.combo) }, g ? (m = ud(m, e.id, s.to), w$(u, true), this.burst()) : (m = A$(m).walk, this.setTorches(h, m)), this.setWalk(m);
       }, effect: (f) => {
         const m = this.walks.get(i);
         return f.result.correct ? { text: a("maze.fx.open"), tone: "good" } : m.torches === 0 ? { text: a("maze.fx.dark"), tone: "bad" } : { text: a("maze.fx.torch", { n: m.torches }), tone: "bad" };
       }, nextLabel: (f) => f.result.correct ? a("maze.next.walk") : this.walks.get(i).torches === 0 ? a("maze.next.ghost") : a("maze.next.room"), onNext: (f) => {
         const m = this.walks.get(i);
-        f.result.correct ? this.setWalk(Hr(m, s.to)) : m.torches === 0 && this.setWalk(A$(m, r.entry)), this.room();
+        f.result.correct ? this.setWalk(Hr(m, s.to)) : m.torches === 0 && this.setWalk(T$(m, r.entry)), this.room();
       } });
     }
     setTorches(e, s) {
@@ -9896,11 +9896,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   const hd = /* @__PURE__ */ (() => {
     let t = null;
     return { id: dd, mount(e) {
-      t = new O$(e), t.mount();
+      t = new N$(e), t.mount();
     }, unmount() {
       t == null ? void 0 : t.unmount(), t = null;
     } };
-  })(), N$ = (t) => t.toLowerCase().replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, ""), P$ = (t) => "unit-".concat(N$(t)), Xn = "quiz-arena", pd = "chalkboard", R$ = /* @__PURE__ */ new Set(["hotspot", "listening", "flashcard"]), D$ = (t, e) => {
+  })(), P$ = (t) => t.toLowerCase().replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, ""), R$ = (t) => "unit-".concat(P$(t)), Xn = "quiz-arena", pd = "chalkboard", D$ = /* @__PURE__ */ new Set(["hotspot", "listening", "flashcard"]), L$ = (t, e) => {
     var _a3;
     const s = t.pack.languages;
     if (e && s.includes(e)) return e;
@@ -9911,7 +9911,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return s.includes(t.defaultLang) ? t.defaultLang : s[0];
   };
-  class L$ {
+  class C$ {
     constructor(e) {
       __publicField(this, "host");
       __publicField(this, "pack");
@@ -9946,7 +9946,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }, () => this.save()));
       __publicField(this, "speechMade", null);
       __publicField(this, "titleState", ns());
-      this.host = e, this.data = e.data, this.pack = e.data.pack, this.store = new vu(this.pack, wu()), this.progress = this.store.load(), this.lang = D$(this.data, this.progress.settings.lang), this.ui = Os(this.lang), this.text = Ht(this.data.catalogs, this.lang, this.pack.targetLang), this.check = Wt({ pack: this.pack, text: this.text }), this.rng = Gt(e.seed, "arena"), this.audio = new Eu({ cues: this.pack.cues, assets: this.data.assets, loops: xu(this.pack.extensions), settings: () => this.progress.settings }), this.audioMenu = new Mu({ ui: (s, n) => this.ui(s, n), channels: Tu(this.pack.cues, this.data.assets), settings: () => this.progress.settings, update: (s) => {
+      this.host = e, this.data = e.data, this.pack = e.data.pack, this.store = new vu(this.pack, wu()), this.progress = this.store.load(), this.lang = L$(this.data, this.progress.settings.lang), this.ui = Os(this.lang), this.text = Ht(this.data.catalogs, this.lang, this.pack.targetLang), this.check = Wt({ pack: this.pack, text: this.text }), this.rng = Gt(e.seed, "arena"), this.audio = new Eu({ cues: this.pack.cues, assets: this.data.assets, loops: xu(this.pack.extensions), settings: () => this.progress.settings }), this.audioMenu = new Mu({ ui: (s, n) => this.ui(s, n), channels: Tu(this.pack.cues, this.data.assets), settings: () => this.progress.settings, update: (s) => {
         this.progress = { ...this.progress, settings: { ...this.progress.settings, ...s } }, this.save();
       }, refresh: () => this.audio.refresh() }), this.setLang(this.lang, false);
     }
@@ -9994,7 +9994,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         case "item":
         case "feedback": {
           const s = this.round;
-          return !s || s.kind === "review" || s.kind === "verbs" ? "menu" : s.kind === "boss" ? "boss" : P$((_a3 = s.unitId) != null ? _a3 : "");
+          return !s || s.kind === "review" || s.kind === "verbs" ? "menu" : s.kind === "boss" ? "boss" : R$((_a3 = s.unitId) != null ? _a3 : "");
         }
         case "end":
           return "end";
@@ -10089,7 +10089,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return d("section", { class: "map-screen" }, d("div", { class: "topbar" }, T("menu", "‹ ".concat(e("menu")), () => this.go("title"), { class: "btn btn-small btn-ghost" }), d("span", { class: "topbar-stars", testid: "map-stars" }, "★ ".concat(e("map.stars", { n: du(this.pack, this.progress), total: this.pack.units.length * 3 })))), this.heading("h1", e("map.title"), "map-title"), d("p", { class: "subject" }, this.courseTitle()), Pr(this.pack).length > 0 ? d("div", { class: "actions actions-center" }, T("verb-drill", "🔤 ".concat(e("map.verbs", { n: Du(this.pack, this.progress.cards, Date.now()) })), () => this.beginRound("verbs"), { class: "btn" })) : null, l.length > 0 ? d("div", { class: "actions actions-center" }, T("review", "↻ ".concat(e("map.review", { n: l.length })), () => this.go("review"), { class: "btn" })) : null, d("ol", { class: "map-levels", testid: "unit-map" }, r, c), a > 0 ? d("div", { class: "actions actions-center" }, T("finish", e("summary.finish"), () => this.finish(), { class: "btn btn-primary" })) : null);
     }
     beginRound(e, s) {
-      const n = s1(this.pack, e, { ...s ? { unitId: s } : {}, queue: this.progress.queue, difficulty: e === "boss" ? 4 : this.difficulty, cards: this.progress.cards, now: Date.now(), exclude: lS(this.pack.items, gu(this.progress)) });
+      const n = n1(this.pack, e, { ...s ? { unitId: s } : {}, queue: this.progress.queue, difficulty: e === "boss" ? 4 : this.difficulty, cards: this.progress.cards, now: Date.now(), exclude: uS(this.pack.items, gu(this.progress)) });
       if (n.size === 0) return this.go("map");
       this.round = n, this.roundNumber += 1, this.roundScore = 0, this.roundBestCombo = 0, this.combo = 0, this.lastResult = void 0, this.finished = false, this.nextQuestion();
     }
@@ -10154,7 +10154,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     startTimer() {
       const e = this.current;
-      if (!e || !this.progress.settings.timer || !i1(e.item)) return;
+      if (!e || !this.progress.settings.timer || !r1(e.item)) return;
       const s = Or(this.pack).timerSeconds * 1e3;
       e.deadline = Date.now() + s;
       const n = () => {
@@ -10203,7 +10203,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (!e || !s) return d("p", {}, this.ui("loading"));
       const n = this.ui, i = e.item;
       this.hud.score = d("b", { testid: "hud-score" }, String(this.progress.score)), this.hud.combo = d("b", { testid: "hud-combo" }, "x".concat(this.combo)), this.hud.progress = d("span", { class: "pips", testid: "hud-progress" }, this.pips()), this.hud.timer = d("div", { class: "timer", role: "timer", testid: "hud-timer", hidden: true }, d("span", { class: "timer-s" }), d("span", { class: "timer-bar" }, d("span", { class: "timer-fill" })));
-      const r = d("header", { class: "hud" }, T("leave", "‹ ".concat(n("leave")), () => this.leaveRound(), { class: "btn btn-small btn-ghost" }), d("div", { class: "hud-mid" }, d("span", { class: "hud-unit", testid: "hud-unit" }, this.roundTitle()), this.hud.progress), d("div", { class: "hud-stats" }, d("span", { class: "stat" }, d("small", {}, n("score")), this.hud.score), d("span", { class: "combo ".concat(this.combo >= 3 ? "is-hot" : ""), "data-combo": String(Math.min(this.combo, 10)) }, d("small", {}, n("combo")), this.hud.combo)), this.hud.timer), o = d("p", { class: "q-meta", testid: "question-number" }, e.pick.retry ? d("span", { class: "tag tag-retry", testid: "retry-tag" }, n("retry")) : n("question", { i: Math.min(s.asked.length + (e.answered ? 0 : 1), s.size), n: s.size })), a = e.renderer.ownsPrompt ? d("h1", { class: "sr-only" }, this.roundTitle()) : d("h1", { class: "prompt", testid: "prompt", tabindex: "-1" }, this.text.t(i.prompt)), c = R$.has(i.kind) ? null : Vl(this.itemContext(i)), l = i.hint, u = l && this.text.hasText(l) ? this.text.t(l) : null;
+      const r = d("header", { class: "hud" }, T("leave", "‹ ".concat(n("leave")), () => this.leaveRound(), { class: "btn btn-small btn-ghost" }), d("div", { class: "hud-mid" }, d("span", { class: "hud-unit", testid: "hud-unit" }, this.roundTitle()), this.hud.progress), d("div", { class: "hud-stats" }, d("span", { class: "stat" }, d("small", {}, n("score")), this.hud.score), d("span", { class: "combo ".concat(this.combo >= 3 ? "is-hot" : ""), "data-combo": String(Math.min(this.combo, 10)) }, d("small", {}, n("combo")), this.hud.combo)), this.hud.timer), o = d("p", { class: "q-meta", testid: "question-number" }, e.pick.retry ? d("span", { class: "tag tag-retry", testid: "retry-tag" }, n("retry")) : n("question", { i: Math.min(s.asked.length + (e.answered ? 0 : 1), s.size), n: s.size })), a = e.renderer.ownsPrompt ? d("h1", { class: "sr-only" }, this.roundTitle()) : d("h1", { class: "prompt", testid: "prompt", tabindex: "-1" }, this.text.t(i.prompt)), c = D$.has(i.kind) ? null : Vl(this.itemContext(i)), l = i.hint, u = l && this.text.hasText(l) ? this.text.t(l) : null;
       let h = false;
       const p = d("p", { class: "hint-text", testid: "hint-text", hidden: true }, u != null ? u : ""), f = u ? T("hint", "💡 ".concat(n("hint")), () => {
         h = !h, p.hidden = !h, f == null ? void 0 : f.setAttribute("aria-expanded", String(h));
@@ -10270,27 +10270,27 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
   }
   const fd = { id: Xn, mount(t) {
-    const e = new L$(t);
+    const e = new C$(t);
     this.unmount = () => e.unmount(), e.mount();
   } };
   function md(t) {
     return d("span", { class: "pc-level", "data-level": t }, t);
   }
-  function C$(t) {
+  function Z$(t) {
     var _a3;
     return t.url ? d("span", { class: "pc-avatar has-image", "aria-hidden": "true" }, d("img", { src: t.url, alt: "" })) : d("span", { class: "pc-avatar pc-av-".concat(t.index % 6 + 1), "aria-hidden": "true" }, (_a3 = [...t.name][0]) != null ? _a3 : "?");
   }
   function Vr(t) {
     var _a3, _b3;
     const e = d("div", { class: "pc-bubble" }, d("p", { class: "pc-name" }, t.speaker.name), t.lead ? d("p", { class: "pc-lead" }, t.lead) : null, t.text !== null ? d("p", { class: "pc-text", ...t.lang ? { lang: t.lang } : {} }, t.text) : d("p", { class: "pc-text pc-hidden-text" }, (_a3 = t.hidden) != null ? _a3 : "..."), t.note ? d("p", { class: "pc-note" }, t.note) : null, (_b3 = t.extra) != null ? _b3 : null, t.actions && t.actions.some(Boolean) ? d("div", { class: "pc-actions" }, t.actions) : null);
-    return d("li", { class: "pc-line is-".concat(t.kind).concat(t.slow ? " is-slow" : ""), testid: t.testid, ...t.outcome ? { "data-outcome": t.outcome } : {} }, C$(t.speaker), e);
+    return d("li", { class: "pc-line is-".concat(t.kind).concat(t.slow ? " is-slow" : ""), testid: t.testid, ...t.outcome ? { "data-outcome": t.outcome } : {} }, Z$(t.speaker), e);
   }
   const gd = (t, e, s, n = {}) => T(t, e, s, { class: "btn btn-small btn-ghost", ...n }), me = (t, e, ...s) => de(t, e, ...s);
-  function Z$() {
+  function U$() {
     return [me("path", { class: "pc-pot", d: "M34 110 L86 110 L79 136 Q78 138 76 138 L44 138 Q42 138 41 136 Z" }), me("path", { class: "pc-pot-shade", d: "M70 110 L86 110 L79 136 Q78 138 76 138 L62 138 Z" }), me("path", { class: "pc-rim", d: "M28 100 Q28 96 32 96 L88 96 Q92 96 92 100 L92 108 Q92 110 90 110 L30 110 Q28 110 28 108 Z" }), me("ellipse", { class: "pc-soil", cx: 60, cy: 96, rx: 28, ry: 4.5 })];
   }
   const St = (t, e) => me("path", { class: "pc-leaf ".concat(t), d: e });
-  function U$(t) {
+  function B$(t) {
     switch (t) {
       case "seed":
         return [me("ellipse", { class: "pc-seed", cx: 60, cy: 93, rx: 5, ry: 3.2, transform: "rotate(-18 60 93)" }), me("circle", { class: "pc-seed-dot", cx: 50, cy: 94, r: 1.4 }), me("circle", { class: "pc-seed-dot", cx: 72, cy: 93.5, r: 1.2 })];
@@ -10305,9 +10305,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
   }
   function kd(t) {
-    return de("svg", { class: "pc-plant stage-".concat(t), viewBox: "0 0 120 142", "aria-hidden": "true", focusable: "false" }, ...Z$(), me("g", { class: "pc-grow" }, ...U$(t)));
+    return de("svg", { class: "pc-plant stage-".concat(t), viewBox: "0 0 120 142", "aria-hidden": "true", focusable: "false" }, ...U$(), me("g", { class: "pc-grow" }, ...B$(t)));
   }
-  const B$ = 3;
+  const F$ = 3;
   function bd(t) {
     return { sceneId: t.id, cursor: $e(t, t.start) ? t.start : null, log: [], turns: [], retry: null };
   }
@@ -10319,24 +10319,24 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = $e(t, e.cursor);
     return s ? qe(s) ? { type: "turn", line: s, retry: false, tries: 0 } : { type: "say", line: s } : { type: "done" };
   }
-  function F$(t, e) {
+  function K$(t, e) {
     const s = Dt(t, e);
     return s.type !== "say" ? e : { ...e, cursor: s.line.next, log: [...e.log, { kind: "say", lineId: s.line.id, speaker: s.line.say }] };
   }
   const Yr = (t) => [...t.log].reverse().find((e) => e.kind === "say");
-  function K$(t, e, s) {
+  function q$(t, e, s) {
     var _a3, _b3;
     const n = Dt(t, e);
     if (n.type !== "turn") return e;
     const { line: i } = n, r = n.tries + 1, o = (_b3 = (_a3 = Yr(e)) == null ? void 0 : _a3.speaker) != null ? _b3 : "", c = !n.retry ? [...e.turns, { lineId: i.id, itemId: i.reply, tries: r, score: Math.max(0, Math.min(1, s.score)), right: s.correct, shown: false }] : e.turns.map((l) => l.lineId === i.id ? { ...l, tries: r, right: l.right || s.correct } : l);
-    return s.correct ? { ...e, turns: c, retry: null, cursor: i.next, log: [...e.log, { kind: "you", lineId: i.id, outcome: "right", text: s.text }] } : r >= B$ ? { ...e, turns: c.map((l) => l.lineId === i.id ? { ...l, shown: true } : l), retry: null, cursor: i.next, log: [...e.log, { kind: "help", lineId: i.id, speaker: o, attempt: r }, { kind: "you", lineId: i.id, outcome: "shown", text: s.text }] } : { ...e, turns: c, retry: { lineId: i.id, tries: r }, log: [...e.log, { kind: "help", lineId: i.id, speaker: o, attempt: r }] };
+    return s.correct ? { ...e, turns: c, retry: null, cursor: i.next, log: [...e.log, { kind: "you", lineId: i.id, outcome: "right", text: s.text }] } : r >= F$ ? { ...e, turns: c.map((l) => l.lineId === i.id ? { ...l, shown: true } : l), retry: null, cursor: i.next, log: [...e.log, { kind: "help", lineId: i.id, speaker: o, attempt: r }, { kind: "you", lineId: i.id, outcome: "shown", text: s.text }] } : { ...e, turns: c, retry: { lineId: i.id, tries: r }, log: [...e.log, { kind: "help", lineId: i.id, speaker: o, attempt: r }] };
   }
-  function q$(t, e) {
+  function G$(t, e) {
     const s = Dt(t, e);
     return s.type !== "turn" ? e : { ...e, retry: null, cursor: s.line.next };
   }
-  const G$ = (t, e) => Dt(t, e).type === "done";
-  function W$(t) {
+  const W$ = (t, e) => Dt(t, e).type === "done";
+  function H$(t) {
     return t.turns.length === 0 ? 0 : t.turns.reduce((e, s) => e + s.score, 0) / t.turns.length;
   }
   const Lt = (t) => xs(t).path.filter((e) => qe($e(t, e))).length;
@@ -10350,7 +10350,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       l && !u && i.add(a.id);
     }), i;
   }
-  function H$(t, e, s) {
+  function V$(t, e, s) {
     var _a3, _b3, _c2, _d2;
     if (e.youSay && s.hasText(e.youSay)) return s.t(e.youSay);
     if (!t) return null;
@@ -10377,7 +10377,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return null;
     }
   }
-  function V$(t) {
+  function Y$(t) {
     const { section: e, pack: s } = t, n = new Set(s.units.filter((l) => Es(e, l.id).length > 0).map((l) => l.id)), i = [], r = Tt(s.units), o = (l, u = /* @__PURE__ */ new Set()) => l.flatMap((h) => {
       var _a3, _b3;
       return u.has(h) ? [] : (u.add(h), n.has(h) ? t.mastered(h) ? [] : [h] : o((_b3 = (_a3 = s.units.find((p) => p.id === h)) == null ? void 0 : _a3.requires) != null ? _b3 : [], u));
@@ -10397,7 +10397,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return i;
   }
-  function Y$(t, e) {
+  function J$(t, e) {
     const s = new Set(t.filter((n) => n.locked).map((n) => n.scene.id));
     return e.filter((n) => !n.locked && s.has(n.scene.id)).map((n) => n.scene.id);
   }
@@ -10406,7 +10406,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     if (e) return "wilted";
     if (!t || t.last === null) return "seed";
     if (t.reps === 0) return "wilted";
-    switch (hb(t)) {
+    switch (pb(t)) {
       case "mature":
         return "bloom";
       case "young":
@@ -10417,7 +10417,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return "seed";
     }
   }
-  function J$(t) {
+  function Q$(t) {
     const e = new Set(t.queue), s = new Set(t.doneUnits), n = new Set(t.pack.items.map((i) => i.id));
     return t.section.garden.filter((i) => n.has(i.item)).map((i) => {
       const r = t.cards[i.item], o = Il(t.pack, i), a = r !== void 0 || o !== void 0 && s.has(o);
@@ -10432,20 +10432,20 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const s of t) s.planted && (e[s.stage] += 1);
     return e;
   }
-  function Q$(t, e) {
+  function X$(t, e) {
     if (e === "wilted") return t === "wilted" ? "same" : "wilted";
     const s = t === "wilted" ? -1 : vd.indexOf(t);
     return vd.indexOf(e) > s ? "grew" : "same";
   }
-  function X$(t, e) {
+  function ez(t, e) {
     return t.dueAt === null ? null : t.dueAt <= e ? 0 : Math.ceil((t.dueAt - e) / Fi);
   }
-  const ez = (t, e) => e !== "" && " ".concat(t, " ").includes(" ".concat(e, " "));
-  function tz(t, e, s, n = /* @__PURE__ */ new Set()) {
+  const tz = (t, e) => e !== "" && " ".concat(t, " ").includes(" ".concat(e, " "));
+  function sz(t, e, s, n = /* @__PURE__ */ new Set()) {
     const i = Pe(s(e.text)), r = [...t.scenes.filter((o) => n.has(o.id)), ...t.scenes.filter((o) => !n.has(o.id))];
     for (const o of r) for (const a of xs(o).path) {
       const c = $e(o, a);
-      if (c && Se(c) && ez(Pe(s(c.text)), i)) return { sceneId: o.id, lineId: c.id, speaker: c.say, text: c.text, how: "heard" };
+      if (c && Se(c) && tz(Pe(s(c.text)), i)) return { sceneId: o.id, lineId: c.id, speaker: c.say, text: c.text, how: "heard" };
     }
     for (const o of r) {
       const a = xs(o).path;
@@ -10459,8 +10459,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return null;
   }
-  const sz = { en: { "rp.tagline": "A postcard from a café on the Adriatic", "rp.title.level": "Level {level}", "rp.title.about": "Talk your way through three conversations, then keep the words alive in your garden.", "rp.scenes.title": "Conversations", "rp.scenes.sub": "Pick a scene. Answer in the language you are learning: choose or type.", "rp.scenes.stars": "{n} of {total} stars", "rp.scenes.locked": "Finish the earlier scenes first (2 stars).", "rp.scenes.finale": "The finale mixes everything you have learned.", "rp.scenes.finale.locked": "Open every scene with 2 stars to take the finale.", "rp.scenes.garden": "Vocabulary garden", "rp.scene.turns": "{n} turns", "rp.scene.open": "Play", "rp.scene.back": "Back to the scenes", "rp.scene.setting": "Setting", "rp.next": "Next line", "rp.turn": "Your turn", "rp.lead": "Your turn {i} of {n}", "rp.water.lead": "Watering {i} of {n}", "rp.garden.planted": "{n} of {total} words planted", "rp.cont": "Continue the conversation", "rp.retry": "Try again", "rp.finish": "Finish the scene", "rp.log": "The conversation so far", "rp.translate": "Translate", "rp.translate.hide": "Hide translation", "rp.play": "Play this line", "rp.listen": "Listen", "rp.hidden": "Listen to the clip: the words appear after your answer.", "rp.said": "{name} says:", "rp.you": "You", "rp.again": "{name} says it again, slowly:", "rp.again.second": "{name} tries once more, even more slowly:", "rp.again.plain": "Sorry? Once more, slowly.", "rp.model": "You could say:", "rp.model.shown": "The conversation goes on. Your words are saved for review.", "rp.effect.right": "{name} understands you and the conversation goes on.", "rp.effect.wrong": "{name} did not quite understand. The line comes again.", "rp.effect.shown": "{name} shows you what to say and the conversation goes on.", "rp.effect.grew": 'The plant for "{word}" grew: {from} to {to}.', "rp.effect.planted": 'The plant for "{word}" is in the garden.', "rp.effect.wilted": 'The plant for "{word}" wilts. Water it again soon.', "rp.effect.same": 'The plant for "{word}" stays a {stage}.', "rp.hud.last": "The last thing said to you", "rp.hud.plant": "The plant you are watering", "rp.done.title": "Scene finished", "rp.done.finale": "Finale finished", "rp.done.accuracy": "{n}% right first time", "rp.done.words": "New words in your garden", "rp.done.nowords": "No new words this time.", "rp.done.unlocked": "Opened: {scenes}", "rp.done.need": "Two stars open the next scene. Play this one again.", "rp.done.boss.fail": "Not yet: one star beats the finale. Play it again.", "rp.done.replay": "Play the scene again", "rp.done.garden": "Visit the garden", "rp.done.finish": "Finish the course", "rp.garden.title": "Vocabulary garden", "rp.garden.sub": "One plant for every word you have met. Plants grow when you remember the word and wilt when you forget it.", "rp.garden.stats": "{seed} seeds, {sprout} sprouts, {bud} buds, {bloom} in bloom, {wilted} wilted", "rp.garden.empty": "The garden is empty. Finish a scene and its words are planted here.", "rp.garden.packet": "{n} more words are still in the seed packet. Finish scenes to plant them.", "rp.garden.met": 'Heard in the scene "{scene}", where {name} said: "{line}"', "rp.garden.used": 'You used it in the scene "{scene}", after {name} said: "{line}"', "rp.garden.next": "Next watering: {when}", "rp.garden.next.due": "now", "rp.garden.next.days": "in {n} days", "rp.garden.next.day": "tomorrow", "rp.water": "Water the plants ({n})", "rp.water.none": "Nothing to water right now", "rp.water.done": "Watered: {right} of {n} remembered. Come back when the plants are thirsty again.", "rp.water.empty": "All the plants are happy for now.", "rp.garden.back": "Back to the scenes", "rp.stage.seed": "seed", "rp.stage.sprout": "sprout", "rp.stage.bud": "bud", "rp.stage.bloom": "bloom", "rp.stage.wilted": "wilted", "rp.stage.label": "Stage: {stage}", "rp.plant.alt": "A potted plant: {stage}", "rp.end.title": "You can hold a conversation!", "rp.end.sub": "You mastered every scene and finished the finale. Keep watering the garden.", "rp.end.words": "{n} words in the garden, {bloom} in bloom" }, hr: { "rp.tagline": "Razglednica iz kafića na Jadranu", "rp.title.level": "Razina {level}", "rp.title.about": "Prođite tri razgovora, a zatim održavajte riječi na životu u svom vrtu.", "rp.scenes.title": "Razgovori", "rp.scenes.sub": "Odaberite scenu. Odgovarajte na jeziku koji učite: birajte ili tipkajte.", "rp.scenes.stars": "{n} od {total} zvjezdica", "rp.scenes.locked": "Prvo završite prethodne scene (2 zvjezdice).", "rp.scenes.finale": "Finale miješa sve što ste naučili.", "rp.scenes.finale.locked": "Otvorite svaku scenu s 2 zvjezdice za finale.", "rp.scenes.garden": "Vrt riječi", "rp.scene.turns": "{n} odgovora", "rp.scene.open": "Igraj", "rp.scene.back": "Natrag na scene", "rp.scene.setting": "Mjesto radnje", "rp.next": "Sljedeća replika", "rp.turn": "Vi ste na redu", "rp.lead": "Vi ste na redu: {i} od {n}", "rp.water.lead": "Zalijevanje {i} od {n}", "rp.garden.planted": "{n} od {total} riječi posađeno", "rp.cont": "Nastavite razgovor", "rp.retry": "Pokušajte ponovno", "rp.finish": "Završi scenu", "rp.log": "Razgovor do sada", "rp.translate": "Prijevod", "rp.translate.hide": "Sakrij prijevod", "rp.play": "Poslušaj repliku", "rp.listen": "Slušajte", "rp.hidden": "Poslušajte snimku: riječi se pojave nakon vašeg odgovora.", "rp.said": "{name} kaže:", "rp.you": "Vi", "rp.again": "{name} ponavlja polako:", "rp.again.second": "{name} pokušava još jednom, još sporije:", "rp.again.plain": "Molim? Još jednom, polako.", "rp.model": "Mogli biste reći:", "rp.model.shown": "Razgovor ide dalje. Vaše riječi su spremljene za ponavljanje.", "rp.effect.right": "{name} vas razumije i razgovor ide dalje.", "rp.effect.wrong": "{name} vas nije baš razumio. Replika dolazi ponovno.", "rp.effect.shown": "{name} vam pokazuje što reći i razgovor ide dalje.", "rp.effect.grew": 'Biljka za "{word}" je narasla: {from} u {to}.', "rp.effect.planted": 'Biljka za "{word}" je u vrtu.', "rp.effect.wilted": 'Biljka za "{word}" vene. Uskoro je zalijte ponovno.', "rp.effect.same": 'Biljka za "{word}" ostaje: {stage}.', "rp.hud.last": "Zadnje što vam je rečeno", "rp.hud.plant": "Biljka koju zalijevate", "rp.done.title": "Scena je gotova", "rp.done.finale": "Finale je gotovo", "rp.done.accuracy": "{n}% točno iz prvog pokušaja", "rp.done.words": "Nove riječi u vašem vrtu", "rp.done.nowords": "Ovaj put nema novih riječi.", "rp.done.unlocked": "Otvoreno: {scenes}", "rp.done.need": "Dvije zvjezdice otvaraju sljedeću scenu. Odigrajte ovu ponovno.", "rp.done.boss.fail": "Još ne: jedna zvjezdica pobjeđuje finale. Odigrajte ga ponovno.", "rp.done.replay": "Odigraj scenu ponovno", "rp.done.garden": "Posjeti vrt", "rp.done.finish": "Završi tečaj", "rp.garden.title": "Vrt riječi", "rp.garden.sub": "Jedna biljka za svaku riječ koju ste upoznali. Biljke rastu kad se sjetite riječi, a venu kad je zaboravite.", "rp.garden.stats": "{seed} sjemenki, {sprout} klica, {bud} pupova, {bloom} u cvatu, {wilted} uvelih", "rp.garden.empty": "Vrt je prazan. Završite scenu i njezine riječi bit će posađene ovdje.", "rp.garden.packet": "Još {n} riječi je u vrećici sjemenki. Završite scene da ih posadite.", "rp.garden.met": 'Čuli ste je u sceni "{scene}", gdje je {name} rekao: "{line}"', "rp.garden.used": 'Upotrijebili ste je u sceni "{scene}", nakon što je {name} rekao: "{line}"', "rp.garden.next": "Sljedeće zalijevanje: {when}", "rp.garden.next.due": "sada", "rp.garden.next.days": "za {n} dana", "rp.garden.next.day": "sutra", "rp.water": "Zalij biljke ({n})", "rp.water.none": "Trenutno nema što zalijevati", "rp.water.done": "Zalijevanje: sjetili ste se {right} od {n}. Vratite se kad biljke ponovno ožedne.", "rp.water.empty": "Sve su biljke za sada zadovoljne.", "rp.garden.back": "Natrag na scene", "rp.stage.seed": "sjemenka", "rp.stage.sprout": "klica", "rp.stage.bud": "pup", "rp.stage.bloom": "cvijet", "rp.stage.wilted": "uvela", "rp.stage.label": "Stadij: {stage}", "rp.plant.alt": "Biljka u loncu: {stage}", "rp.end.title": "Znate voditi razgovor!", "rp.end.sub": "Savladali ste svaku scenu i završili finale. Nastavite zalijevati vrt.", "rp.end.words": "{n} riječi u vrtu, {bloom} u cvatu" }, de: { "rp.tagline": "Eine Postkarte aus einem Café an der Adria", "rp.title.level": "Stufe {level}", "rp.title.about": "Meistere drei Gespräche und halte dann die Wörter in deinem Garten lebendig.", "rp.scenes.title": "Gespräche", "rp.scenes.sub": "Wähle eine Szene. Antworte in der Sprache, die du lernst: auswählen oder tippen.", "rp.scenes.stars": "{n} von {total} Sternen", "rp.scenes.locked": "Beende zuerst die früheren Szenen (2 Sterne).", "rp.scenes.finale": "Das Finale mischt alles, was du gelernt hast.", "rp.scenes.finale.locked": "Öffne jede Szene mit 2 Sternen, um das Finale zu spielen.", "rp.scenes.garden": "Vokabelgarten", "rp.scene.turns": "{n} Runden", "rp.scene.open": "Spielen", "rp.scene.back": "Zurück zu den Szenen", "rp.scene.setting": "Schauplatz", "rp.next": "Nächste Zeile", "rp.turn": "Du bist dran", "rp.lead": "Du bist dran, {i} von {n}", "rp.water.lead": "Gießen {i} von {n}", "rp.garden.planted": "{n} von {total} Wörtern gepflanzt", "rp.cont": "Das Gespräch fortsetzen", "rp.retry": "Noch einmal versuchen", "rp.finish": "Die Szene beenden", "rp.log": "Das bisherige Gespräch", "rp.translate": "Übersetzen", "rp.translate.hide": "Übersetzung ausblenden", "rp.play": "Diese Zeile abspielen", "rp.listen": "Zuhören", "rp.hidden": "Höre dir den Clip an: Die Worte erscheinen nach deiner Antwort.", "rp.said": "{name} sagt:", "rp.you": "Du", "rp.again": "{name} sagt es noch einmal, langsam:", "rp.again.second": "{name} versucht es noch einmal, noch langsamer:", "rp.again.plain": "Wie bitte? Noch einmal, langsam.", "rp.model": "Du könntest sagen:", "rp.model.shown": "Das Gespräch geht weiter. Deine Worte sind zum Wiederholen gespeichert.", "rp.effect.right": "{name} versteht dich und das Gespräch geht weiter.", "rp.effect.wrong": "{name} hat dich nicht ganz verstanden. Die Zeile kommt noch einmal.", "rp.effect.shown": "{name} zeigt dir, was du sagen kannst, und das Gespräch geht weiter.", "rp.effect.grew": "Die Pflanze für „{word}“ ist gewachsen: {from} zu {to}.", "rp.effect.planted": "Die Pflanze für „{word}“ steht im Garten.", "rp.effect.wilted": "Die Pflanze für „{word}“ welkt. Gieße sie bald wieder.", "rp.effect.same": "Die Pflanze für „{word}“ bleibt: {stage}.", "rp.hud.last": "Das Letzte, was zu dir gesagt wurde", "rp.hud.plant": "Die Pflanze, die du gießt", "rp.done.title": "Szene beendet", "rp.done.finale": "Finale beendet", "rp.done.accuracy": "{n} % gleich beim ersten Mal richtig", "rp.done.words": "Neue Wörter in deinem Garten", "rp.done.nowords": "Diesmal keine neuen Wörter.", "rp.done.unlocked": "Geöffnet: {scenes}", "rp.done.need": "Zwei Sterne öffnen die nächste Szene. Spiele diese noch einmal.", "rp.done.boss.fail": "Noch nicht: Ein Stern besiegt das Finale. Spiele es noch einmal.", "rp.done.replay": "Die Szene noch einmal spielen", "rp.done.garden": "Den Garten besuchen", "rp.done.finish": "Den Kurs abschließen", "rp.garden.title": "Vokabelgarten", "rp.garden.sub": "Eine Pflanze für jedes Wort, dem du begegnet bist. Pflanzen wachsen, wenn du dich an das Wort erinnerst, und welken, wenn du es vergisst.", "rp.garden.stats": "{seed} Samen, {sprout} Sprossen, {bud} Knospen, {bloom} in Blüte, {wilted} welk", "rp.garden.empty": "Der Garten ist leer. Beende eine Szene, und ihre Wörter werden hier gepflanzt.", "rp.garden.packet": "{n} weitere Wörter sind noch in der Samentüte. Beende Szenen, um sie zu pflanzen.", "rp.garden.met": "Gehört in der Szene „{scene}“, in der {name} sagte: „{line}“", "rp.garden.used": "Verwendet in der Szene „{scene}“, nachdem {name} gesagt hatte: „{line}“", "rp.garden.next": "Nächstes Gießen: {when}", "rp.garden.next.due": "jetzt", "rp.garden.next.days": "in {n} Tagen", "rp.garden.next.day": "morgen", "rp.water": "Die Pflanzen gießen ({n})", "rp.water.none": "Im Moment gibt es nichts zu gießen", "rp.water.done": "Gegossen: {right} von {n} erinnert. Komm wieder, wenn die Pflanzen wieder durstig sind.", "rp.water.empty": "Alle Pflanzen sind vorerst zufrieden.", "rp.garden.back": "Zurück zu den Szenen", "rp.stage.seed": "Samen", "rp.stage.sprout": "Spross", "rp.stage.bud": "Knospe", "rp.stage.bloom": "Blüte", "rp.stage.wilted": "welk", "rp.stage.label": "Stufe: {stage}", "rp.plant.alt": "Eine Topfpflanze: {stage}", "rp.end.title": "Du kannst ein Gespräch führen!", "rp.end.sub": "Du hast jede Szene gemeistert und das Finale geschafft. Gieße den Garten weiter.", "rp.end.words": "{n} Wörter im Garten, {bloom} in Blüte" } }, yd = "roleplay", nz = "postcard", Sd = 8;
-  class iz {
+  const nz = { en: { "rp.tagline": "A postcard from a café on the Adriatic", "rp.title.level": "Level {level}", "rp.title.about": "Talk your way through three conversations, then keep the words alive in your garden.", "rp.scenes.title": "Conversations", "rp.scenes.sub": "Pick a scene. Answer in the language you are learning: choose or type.", "rp.scenes.stars": "{n} of {total} stars", "rp.scenes.locked": "Finish the earlier scenes first (2 stars).", "rp.scenes.finale": "The finale mixes everything you have learned.", "rp.scenes.finale.locked": "Open every scene with 2 stars to take the finale.", "rp.scenes.garden": "Vocabulary garden", "rp.scene.turns": "{n} turns", "rp.scene.open": "Play", "rp.scene.back": "Back to the scenes", "rp.scene.setting": "Setting", "rp.next": "Next line", "rp.turn": "Your turn", "rp.lead": "Your turn {i} of {n}", "rp.water.lead": "Watering {i} of {n}", "rp.garden.planted": "{n} of {total} words planted", "rp.cont": "Continue the conversation", "rp.retry": "Try again", "rp.finish": "Finish the scene", "rp.log": "The conversation so far", "rp.translate": "Translate", "rp.translate.hide": "Hide translation", "rp.play": "Play this line", "rp.listen": "Listen", "rp.hidden": "Listen to the clip: the words appear after your answer.", "rp.said": "{name} says:", "rp.you": "You", "rp.again": "{name} says it again, slowly:", "rp.again.second": "{name} tries once more, even more slowly:", "rp.again.plain": "Sorry? Once more, slowly.", "rp.model": "You could say:", "rp.model.shown": "The conversation goes on. Your words are saved for review.", "rp.effect.right": "{name} understands you and the conversation goes on.", "rp.effect.wrong": "{name} did not quite understand. The line comes again.", "rp.effect.shown": "{name} shows you what to say and the conversation goes on.", "rp.effect.grew": 'The plant for "{word}" grew: {from} to {to}.', "rp.effect.planted": 'The plant for "{word}" is in the garden.', "rp.effect.wilted": 'The plant for "{word}" wilts. Water it again soon.', "rp.effect.same": 'The plant for "{word}" stays a {stage}.', "rp.hud.last": "The last thing said to you", "rp.hud.plant": "The plant you are watering", "rp.done.title": "Scene finished", "rp.done.finale": "Finale finished", "rp.done.accuracy": "{n}% right first time", "rp.done.words": "New words in your garden", "rp.done.nowords": "No new words this time.", "rp.done.unlocked": "Opened: {scenes}", "rp.done.need": "Two stars open the next scene. Play this one again.", "rp.done.boss.fail": "Not yet: one star beats the finale. Play it again.", "rp.done.replay": "Play the scene again", "rp.done.garden": "Visit the garden", "rp.done.finish": "Finish the course", "rp.garden.title": "Vocabulary garden", "rp.garden.sub": "One plant for every word you have met. Plants grow when you remember the word and wilt when you forget it.", "rp.garden.stats": "{seed} seeds, {sprout} sprouts, {bud} buds, {bloom} in bloom, {wilted} wilted", "rp.garden.empty": "The garden is empty. Finish a scene and its words are planted here.", "rp.garden.packet": "{n} more words are still in the seed packet. Finish scenes to plant them.", "rp.garden.met": 'Heard in the scene "{scene}", where {name} said: "{line}"', "rp.garden.used": 'You used it in the scene "{scene}", after {name} said: "{line}"', "rp.garden.next": "Next watering: {when}", "rp.garden.next.due": "now", "rp.garden.next.days": "in {n} days", "rp.garden.next.day": "tomorrow", "rp.water": "Water the plants ({n})", "rp.water.none": "Nothing to water right now", "rp.water.done": "Watered: {right} of {n} remembered. Come back when the plants are thirsty again.", "rp.water.empty": "All the plants are happy for now.", "rp.garden.back": "Back to the scenes", "rp.stage.seed": "seed", "rp.stage.sprout": "sprout", "rp.stage.bud": "bud", "rp.stage.bloom": "bloom", "rp.stage.wilted": "wilted", "rp.stage.label": "Stage: {stage}", "rp.plant.alt": "A potted plant: {stage}", "rp.end.title": "You can hold a conversation!", "rp.end.sub": "You mastered every scene and finished the finale. Keep watering the garden.", "rp.end.words": "{n} words in the garden, {bloom} in bloom" }, hr: { "rp.tagline": "Razglednica iz kafića na Jadranu", "rp.title.level": "Razina {level}", "rp.title.about": "Prođite tri razgovora, a zatim održavajte riječi na životu u svom vrtu.", "rp.scenes.title": "Razgovori", "rp.scenes.sub": "Odaberite scenu. Odgovarajte na jeziku koji učite: birajte ili tipkajte.", "rp.scenes.stars": "{n} od {total} zvjezdica", "rp.scenes.locked": "Prvo završite prethodne scene (2 zvjezdice).", "rp.scenes.finale": "Finale miješa sve što ste naučili.", "rp.scenes.finale.locked": "Otvorite svaku scenu s 2 zvjezdice za finale.", "rp.scenes.garden": "Vrt riječi", "rp.scene.turns": "{n} odgovora", "rp.scene.open": "Igraj", "rp.scene.back": "Natrag na scene", "rp.scene.setting": "Mjesto radnje", "rp.next": "Sljedeća replika", "rp.turn": "Vi ste na redu", "rp.lead": "Vi ste na redu: {i} od {n}", "rp.water.lead": "Zalijevanje {i} od {n}", "rp.garden.planted": "{n} od {total} riječi posađeno", "rp.cont": "Nastavite razgovor", "rp.retry": "Pokušajte ponovno", "rp.finish": "Završi scenu", "rp.log": "Razgovor do sada", "rp.translate": "Prijevod", "rp.translate.hide": "Sakrij prijevod", "rp.play": "Poslušaj repliku", "rp.listen": "Slušajte", "rp.hidden": "Poslušajte snimku: riječi se pojave nakon vašeg odgovora.", "rp.said": "{name} kaže:", "rp.you": "Vi", "rp.again": "{name} ponavlja polako:", "rp.again.second": "{name} pokušava još jednom, još sporije:", "rp.again.plain": "Molim? Još jednom, polako.", "rp.model": "Mogli biste reći:", "rp.model.shown": "Razgovor ide dalje. Vaše riječi su spremljene za ponavljanje.", "rp.effect.right": "{name} vas razumije i razgovor ide dalje.", "rp.effect.wrong": "{name} vas nije baš razumio. Replika dolazi ponovno.", "rp.effect.shown": "{name} vam pokazuje što reći i razgovor ide dalje.", "rp.effect.grew": 'Biljka za "{word}" je narasla: {from} u {to}.', "rp.effect.planted": 'Biljka za "{word}" je u vrtu.', "rp.effect.wilted": 'Biljka za "{word}" vene. Uskoro je zalijte ponovno.', "rp.effect.same": 'Biljka za "{word}" ostaje: {stage}.', "rp.hud.last": "Zadnje što vam je rečeno", "rp.hud.plant": "Biljka koju zalijevate", "rp.done.title": "Scena je gotova", "rp.done.finale": "Finale je gotovo", "rp.done.accuracy": "{n}% točno iz prvog pokušaja", "rp.done.words": "Nove riječi u vašem vrtu", "rp.done.nowords": "Ovaj put nema novih riječi.", "rp.done.unlocked": "Otvoreno: {scenes}", "rp.done.need": "Dvije zvjezdice otvaraju sljedeću scenu. Odigrajte ovu ponovno.", "rp.done.boss.fail": "Još ne: jedna zvjezdica pobjeđuje finale. Odigrajte ga ponovno.", "rp.done.replay": "Odigraj scenu ponovno", "rp.done.garden": "Posjeti vrt", "rp.done.finish": "Završi tečaj", "rp.garden.title": "Vrt riječi", "rp.garden.sub": "Jedna biljka za svaku riječ koju ste upoznali. Biljke rastu kad se sjetite riječi, a venu kad je zaboravite.", "rp.garden.stats": "{seed} sjemenki, {sprout} klica, {bud} pupova, {bloom} u cvatu, {wilted} uvelih", "rp.garden.empty": "Vrt je prazan. Završite scenu i njezine riječi bit će posađene ovdje.", "rp.garden.packet": "Još {n} riječi je u vrećici sjemenki. Završite scene da ih posadite.", "rp.garden.met": 'Čuli ste je u sceni "{scene}", gdje je {name} rekao: "{line}"', "rp.garden.used": 'Upotrijebili ste je u sceni "{scene}", nakon što je {name} rekao: "{line}"', "rp.garden.next": "Sljedeće zalijevanje: {when}", "rp.garden.next.due": "sada", "rp.garden.next.days": "za {n} dana", "rp.garden.next.day": "sutra", "rp.water": "Zalij biljke ({n})", "rp.water.none": "Trenutno nema što zalijevati", "rp.water.done": "Zalijevanje: sjetili ste se {right} od {n}. Vratite se kad biljke ponovno ožedne.", "rp.water.empty": "Sve su biljke za sada zadovoljne.", "rp.garden.back": "Natrag na scene", "rp.stage.seed": "sjemenka", "rp.stage.sprout": "klica", "rp.stage.bud": "pup", "rp.stage.bloom": "cvijet", "rp.stage.wilted": "uvela", "rp.stage.label": "Stadij: {stage}", "rp.plant.alt": "Biljka u loncu: {stage}", "rp.end.title": "Znate voditi razgovor!", "rp.end.sub": "Savladali ste svaku scenu i završili finale. Nastavite zalijevati vrt.", "rp.end.words": "{n} riječi u vrtu, {bloom} u cvatu" }, de: { "rp.tagline": "Eine Postkarte aus einem Café an der Adria", "rp.title.level": "Stufe {level}", "rp.title.about": "Meistere drei Gespräche und halte dann die Wörter in deinem Garten lebendig.", "rp.scenes.title": "Gespräche", "rp.scenes.sub": "Wähle eine Szene. Antworte in der Sprache, die du lernst: auswählen oder tippen.", "rp.scenes.stars": "{n} von {total} Sternen", "rp.scenes.locked": "Beende zuerst die früheren Szenen (2 Sterne).", "rp.scenes.finale": "Das Finale mischt alles, was du gelernt hast.", "rp.scenes.finale.locked": "Öffne jede Szene mit 2 Sternen, um das Finale zu spielen.", "rp.scenes.garden": "Vokabelgarten", "rp.scene.turns": "{n} Runden", "rp.scene.open": "Spielen", "rp.scene.back": "Zurück zu den Szenen", "rp.scene.setting": "Schauplatz", "rp.next": "Nächste Zeile", "rp.turn": "Du bist dran", "rp.lead": "Du bist dran, {i} von {n}", "rp.water.lead": "Gießen {i} von {n}", "rp.garden.planted": "{n} von {total} Wörtern gepflanzt", "rp.cont": "Das Gespräch fortsetzen", "rp.retry": "Noch einmal versuchen", "rp.finish": "Die Szene beenden", "rp.log": "Das bisherige Gespräch", "rp.translate": "Übersetzen", "rp.translate.hide": "Übersetzung ausblenden", "rp.play": "Diese Zeile abspielen", "rp.listen": "Zuhören", "rp.hidden": "Höre dir den Clip an: Die Worte erscheinen nach deiner Antwort.", "rp.said": "{name} sagt:", "rp.you": "Du", "rp.again": "{name} sagt es noch einmal, langsam:", "rp.again.second": "{name} versucht es noch einmal, noch langsamer:", "rp.again.plain": "Wie bitte? Noch einmal, langsam.", "rp.model": "Du könntest sagen:", "rp.model.shown": "Das Gespräch geht weiter. Deine Worte sind zum Wiederholen gespeichert.", "rp.effect.right": "{name} versteht dich und das Gespräch geht weiter.", "rp.effect.wrong": "{name} hat dich nicht ganz verstanden. Die Zeile kommt noch einmal.", "rp.effect.shown": "{name} zeigt dir, was du sagen kannst, und das Gespräch geht weiter.", "rp.effect.grew": "Die Pflanze für „{word}“ ist gewachsen: {from} zu {to}.", "rp.effect.planted": "Die Pflanze für „{word}“ steht im Garten.", "rp.effect.wilted": "Die Pflanze für „{word}“ welkt. Gieße sie bald wieder.", "rp.effect.same": "Die Pflanze für „{word}“ bleibt: {stage}.", "rp.hud.last": "Das Letzte, was zu dir gesagt wurde", "rp.hud.plant": "Die Pflanze, die du gießt", "rp.done.title": "Szene beendet", "rp.done.finale": "Finale beendet", "rp.done.accuracy": "{n} % gleich beim ersten Mal richtig", "rp.done.words": "Neue Wörter in deinem Garten", "rp.done.nowords": "Diesmal keine neuen Wörter.", "rp.done.unlocked": "Geöffnet: {scenes}", "rp.done.need": "Zwei Sterne öffnen die nächste Szene. Spiele diese noch einmal.", "rp.done.boss.fail": "Noch nicht: Ein Stern besiegt das Finale. Spiele es noch einmal.", "rp.done.replay": "Die Szene noch einmal spielen", "rp.done.garden": "Den Garten besuchen", "rp.done.finish": "Den Kurs abschließen", "rp.garden.title": "Vokabelgarten", "rp.garden.sub": "Eine Pflanze für jedes Wort, dem du begegnet bist. Pflanzen wachsen, wenn du dich an das Wort erinnerst, und welken, wenn du es vergisst.", "rp.garden.stats": "{seed} Samen, {sprout} Sprossen, {bud} Knospen, {bloom} in Blüte, {wilted} welk", "rp.garden.empty": "Der Garten ist leer. Beende eine Szene, und ihre Wörter werden hier gepflanzt.", "rp.garden.packet": "{n} weitere Wörter sind noch in der Samentüte. Beende Szenen, um sie zu pflanzen.", "rp.garden.met": "Gehört in der Szene „{scene}“, in der {name} sagte: „{line}“", "rp.garden.used": "Verwendet in der Szene „{scene}“, nachdem {name} gesagt hatte: „{line}“", "rp.garden.next": "Nächstes Gießen: {when}", "rp.garden.next.due": "jetzt", "rp.garden.next.days": "in {n} Tagen", "rp.garden.next.day": "morgen", "rp.water": "Die Pflanzen gießen ({n})", "rp.water.none": "Im Moment gibt es nichts zu gießen", "rp.water.done": "Gegossen: {right} von {n} erinnert. Komm wieder, wenn die Pflanzen wieder durstig sind.", "rp.water.empty": "Alle Pflanzen sind vorerst zufrieden.", "rp.garden.back": "Zurück zu den Szenen", "rp.stage.seed": "Samen", "rp.stage.sprout": "Spross", "rp.stage.bud": "Knospe", "rp.stage.bloom": "Blüte", "rp.stage.wilted": "welk", "rp.stage.label": "Stufe: {stage}", "rp.plant.alt": "Eine Topfpflanze: {stage}", "rp.end.title": "Du kannst ein Gespräch führen!", "rp.end.sub": "Du hast jede Szene gemeistert und das Finale geschafft. Gieße den Garten weiter.", "rp.end.words": "{n} Wörter im Garten, {bloom} in Blüte" } }, yd = "roleplay", iz = "postcard", Sd = 8;
+  class rz {
     constructor(e) {
       __publicField(this, "host");
       __publicField(this, "session");
@@ -10471,7 +10471,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       __publicField(this, "audio", null);
       __publicField(this, "titleState", ns());
       var _a3;
-      this.host = e, this.session = new Cs(e, { shellId: yd, theme: nz, strings: sz }), this.section = (_a3 = this.session.section()) != null ? _a3 : El.parse({});
+      this.host = e, this.session = new Cs(e, { shellId: yd, theme: iz, strings: nz }), this.section = (_a3 = this.session.section()) != null ? _a3 : El.parse({});
     }
     get s() {
       return this.session.s;
@@ -10503,11 +10503,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     board() {
       const e = this.session;
-      return V$({ section: this.section, pack: e.pack, mastered: (s) => e.isMastered(s), unitStars: (s) => e.unitStars(s), bossStars: e.bossStars() });
+      return Y$({ section: this.section, pack: e.pack, mastered: (s) => e.isMastered(s), unitStars: (s) => e.unitStars(s), bossStars: e.bossStars() });
     }
     plants() {
       const e = this.session;
-      return J$({ section: this.section, pack: e.pack, cards: e.progress.cards, queue: e.progress.queue, doneUnits: this.doneUnits(), now: Date.now() });
+      return Q$({ section: this.section, pack: e.pack, cards: e.progress.cards, queue: e.progress.queue, doneUnits: this.doneUnits(), now: Date.now() });
     }
     wordsOfItem(e) {
       return this.section.garden.filter((s) => s.item === e);
@@ -10633,7 +10633,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     nextLine() {
       const e = this.playing;
-      e && (e.st = F$(e.scene, e.st), this.scene());
+      e && (e.st = K$(e.scene, e.st), this.scene());
     }
     askTurn() {
       const e = this.session, s = this.s, n = this.playing;
@@ -10642,7 +10642,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (r.type !== "turn") return this.scene();
       this.stopAudio();
       const o = r.line, a = e.item(o.reply);
-      if (!e.canAsk(a)) return n.st = q$(i, n.st), this.afterTurn();
+      if (!e.canAsk(a)) return n.st = G$(i, n.st), this.afterTurn();
       const c = this.stageOfItem(a.id), l = this.helperOf(n.st), u = this.who(l).name, h = Yr(n.st), p = h ? $e(i, h.lineId) : void 0, f = !!p && Se(p) && Jr(i, n.st, (v) => !!e.data.assets[v]).has(p.id);
       let m = null;
       p && Se(p) && (m = this.sayBubble(p, { testid: "hud-last", kind: "hud", hidden: f, noPlay: f && a.kind === "listening" }));
@@ -10653,8 +10653,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }, leaveLabel: s("rp.scene.back"), onLeave: () => {
         this.stopAudio(), this.scene();
       }, onAnswered: (v) => {
-        const w = H$(a, o, e.text);
-        if (n.st = K$(i, n.st, { correct: v.result.correct, score: v.result.score, text: w }), f && p && Se(p) && m) {
+        const w = V$(a, o, e.text);
+        if (n.st = q$(i, n.st, { correct: v.result.correct, score: v.result.score, text: w }), f && p && Se(p) && m) {
           const y = m.querySelector(".pc-text");
           y && (y.textContent = e.text.t(p.text), y.classList.remove("pc-hidden-text"), this.targetLang && y.setAttribute("lang", this.targetLang));
         }
@@ -10666,21 +10666,21 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     afterTurn() {
       const e = this.playing;
       if (!e) return this.scenes();
-      if (G$(e.scene, e.st)) return this.sceneDone();
+      if (W$(e.scene, e.st)) return this.sceneDone();
       this.scene();
     }
     plantNote(e, s) {
       const n = this.wordsOfItem(e)[0];
       if (!n) return "";
-      const i = this.s, r = this.session.text.t(n.text), o = this.stageOfItem(e), a = Q$(s, o);
+      const i = this.s, r = this.session.text.t(n.text), o = this.stageOfItem(e), a = X$(s, o);
       return a === "wilted" ? i("rp.effect.wilted", { word: r }) : a === "grew" ? s === "seed" ? i("rp.effect.planted", { word: r }) : i("rp.effect.grew", { word: r, from: this.stageName(s), to: this.stageName(o) }) : i("rp.effect.same", { word: r, stage: this.stageName(o) });
     }
     sceneDone() {
       const e = this.session, s = this.s, n = this.playing;
       if (!n) return this.scenes();
-      const i = n.scene, r = this.board(), o = W$(n.st), a = n.finale ? e.recordUnit({ boss: true }, o) : i.unit ? e.recordUnit({ unitId: i.unit }, o) : { stars: 0, unlocked: [] }, c = a.stars;
+      const i = n.scene, r = this.board(), o = H$(n.st), a = n.finale ? e.recordUnit({ boss: true }, o) : i.unit ? e.recordUnit({ unitId: i.unit }, o) : { stars: 0, unlocked: [] }, c = a.stars;
       this.markDone(i.id), e.playCue(n.finale ? "boss" : "unit-complete");
-      const l = Y$(r, this.board()).map((k) => {
+      const l = J$(r, this.board()).map((k) => {
         var _a3, _b3;
         return e.t(i.id === k ? i.title : (_b3 = (_a3 = this.section.scenes.find((b) => b.id === k)) == null ? void 0 : _a3.title) != null ? _b3 : k);
       }), u = new Set(n.st.turns.map((k) => k.itemId)), h = this.plants().filter((k) => u.has(k.word.item)), p = Math.round(o * 100), f = n.finale ? c >= 1 : c >= 2;
@@ -10697,7 +10697,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const s = this.session, n = this.s;
       this.playing = null, this.water = null, this.stopAudio();
       const i = this.plants(), r = i.filter((m) => m.planted), o = Xr(i), a = Qr(i), c = new Set(this.doneScenes()), l = Date.now(), u = (m) => s.text.t(m), h = (m) => {
-        const g = tz(this.section, m.word, u, c), k = g ? this.section.scenes.find((y) => y.id === g.sceneId) : void 0, b = g && k ? n(g.how === "heard" ? "rp.garden.met" : "rp.garden.used", { scene: s.t(k.title), name: this.who(g.speaker).name, line: u(g.text) }) : null, v = X$(m, l), w = v === null || v === 0 ? n("rp.garden.next.due") : v === 1 ? n("rp.garden.next.day") : n("rp.garden.next.days", { n: v });
+        const g = sz(this.section, m.word, u, c), k = g ? this.section.scenes.find((y) => y.id === g.sceneId) : void 0, b = g && k ? n(g.how === "heard" ? "rp.garden.met" : "rp.garden.used", { scene: s.t(k.title), name: this.who(g.speaker).name, line: u(g.text) }) : null, v = ez(m, l), w = v === null || v === 0 ? n("rp.garden.next.due") : v === 1 ? n("rp.garden.next.day") : n("rp.garden.next.days", { n: v });
         return d("li", { class: "pc-plant-card stage-".concat(m.stage).concat(m.due ? " is-due" : ""), testid: "plant-".concat(m.word.id), "data-stage": m.stage, "data-due": String(m.due), "data-item": m.word.item }, d("div", { class: "pc-plant-pic" }, kd(m.stage)), d("div", { class: "pc-plant-body" }, d("p", { class: "pc-plant-word", ...this.targetLang ? { lang: this.targetLang } : {} }, u(m.word.text)), d("p", { class: "pc-plant-gloss" }, s.t(m.word.gloss)), d("p", { class: "pc-plant-stage" }, d("span", { class: "pc-stage-chip" }, this.stageName(m.stage)), " ", d("span", { class: "sr-only" }, n("rp.stage.label", { stage: this.stageName(m.stage) }))), b ? d("p", { class: "pc-plant-met" }, b) : null, d("p", { class: "pc-plant-next" }, n("rp.garden.next", { when: w }))));
       }, p = i.length - r.length, f = d("section", { class: "garden-screen pc-garden" }, d("div", { class: "topbar" }, T("to-scenes", "‹ ".concat(n("rp.garden.back")), () => this.scenes(), { class: "btn btn-small btn-ghost" }), d("span", { class: "topbar-stars", testid: "garden-planted" }, n("rp.garden.planted", { n: r.length, total: i.length }))), d("h1", { class: "screen-title", tabindex: "-1", testid: "garden-title" }, n("rp.garden.title")), d("p", { class: "subject" }, n("rp.garden.sub")), r.length > 0 ? d("p", { class: "pc-garden-stats", testid: "garden-stats" }, n("rp.garden.stats", o)) : d("p", { class: "message", testid: "garden-empty" }, n("rp.garden.empty")), e ? d("p", { class: "message message-ok", role: "status", testid: "water-result" }, n("rp.water.done", { right: e.right, n: e.n })) : null, d("div", { class: "actions actions-center" }, a.length > 0 ? T("water", "💧 ".concat(n("rp.water", { n: Math.min(a.length, Sd) })), () => this.startWater(), { class: "btn btn-primary btn-big", "data-autofocus": "" }) : d("p", { class: "message", testid: "water-empty" }, r.length > 0 ? n("rp.water.empty") : n("rp.water.none"))), r.length > 0 ? d("ul", { class: "pc-plant-list", testid: "plant-list" }, r.map(h)) : null, p > 0 ? d("p", { class: "pc-packet", testid: "garden-packet" }, n("rp.garden.packet", { n: p })) : null);
       s.render("garden", f, { view: this.gardenView(e) });
@@ -10737,24 +10737,24 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   const $d = /* @__PURE__ */ (() => {
     let t = null;
     return { id: yd, mount(e) {
-      t = new iz(e), t.mount();
+      t = new rz(e), t.mount();
     }, unmount() {
       t == null ? void 0 : t.unmount(), t = null;
     } };
-  })(), Te = 100, rz = 100, eo = 25, oz = 30, az = 0.25, cz = 2, zd = (t) => Number.isFinite(t) ? Math.min(1, Math.max(0, t)) : 0, to = (t) => Math.min(cz, 1 + az * Math.max(0, t)), lz = (t, e, s = rz) => Math.round(s * zd(t) * to(e)), uz = (t, e, s = eo) => t ? 0 : Math.max(1, Math.round(s * (1 - zd(e)))), dz = (t, e = eo, s = Te, n = Te) => ({ foeHp: t, foeMax: t, hp: s, maxHp: n, streak: 0, turns: 0, strike: e });
-  function hz(t, e) {
-    const s = to(t.streak), n = lz(e.score, t.streak), i = Math.max(0, t.foeHp - n), r = i === 0, o = r ? 0 : uz(e.correct, e.score, t.strike), a = Math.max(0, t.hp - o);
+  })(), Te = 100, oz = 100, eo = 25, az = 30, cz = 0.25, lz = 2, zd = (t) => Number.isFinite(t) ? Math.min(1, Math.max(0, t)) : 0, to = (t) => Math.min(lz, 1 + cz * Math.max(0, t)), uz = (t, e, s = oz) => Math.round(s * zd(t) * to(e)), dz = (t, e, s = eo) => t ? 0 : Math.max(1, Math.round(s * (1 - zd(e)))), hz = (t, e = eo, s = Te, n = Te) => ({ foeHp: t, foeMax: t, hp: s, maxHp: n, streak: 0, turns: 0, strike: e });
+  function pz(t, e) {
+    const s = to(t.streak), n = uz(e.score, t.streak), i = Math.max(0, t.foeHp - n), r = i === 0, o = r ? 0 : dz(e.correct, e.score, t.strike), a = Math.max(0, t.hp - o);
     return { battle: { ...t, foeHp: i, hp: a, streak: e.correct ? t.streak + 1 : 0, turns: t.turns + 1 }, dealt: n, taken: o, multiplier: s, won: r, fainted: !r && a === 0 };
   }
-  const pz = (t, e) => e <= 0 ? 0 : Math.max(0, Math.min(100, Math.round(t / e * 100))), fz = { k: "ink", w: "white", g: "gold", G: "gold-dark", s: "skin", S: "skin-shade", h: "hair", t: "tunic", T: "tunic-dark", c: "cape", r: "red", R: "red-dark", C: "cape-dark", n: "green", N: "green-dark", p: "purple", P: "purple-dark", o: "orange", y: "cyan", b: "brown", m: "stone", M: "stone-dark" }, ei = ["................", ".....kkkkkk.....", "....khhhhhhk....", "...khhhhhhhhk...", "...khhssssshk...", "...kssksskssk...", "...kssssssssk...", "....kssSSssk....", "...kttttttttk...", "..ksttttttttsk..", "..kstttggtttsk..", "..ksttttttttsk..", "...kttttttttk...", "...kttkkkkttk...", "...kbbk..kbbk...", "...kkkk..kkkk..."], _d = [".......kk.......", "......kppk......", ".....kppppk.....", "....kppgppPk....", "...kppppppppk...", "..kkkppppppkkk..", "...kssssssssk...", "...kskssskssk...", "...kwwwwwwwwk...", "..kpwwwwwwwwpk..", "..kpPwwwwwwPpk..", "..kspPppppPpsk..", "..kpppggggpppk..", "..kppppppppppk..", "..kpppppppppPk..", "..kkkkkkkkkkkk.."], jd = ["................", ".....kkkkkk.....", "....knnnnnnk....", "...knnnnnnnnk...", "...knnssssnnk...", "...knskssksnk...", "...kssssssssk...", "....kssSSssk....", "...kNnnnnnnNk...", "..ksNnnnnnnNsk..", "..ksNnggggnNsk..", "..kskNnnnnNksk..", "...kNnnnnnnNk...", "...kNnkkkknNk...", "...kbbk..kbbk...", "...kkkk..kkkk..."], Fs = [["................", "................", "................", ".....kkkkkk.....", "...kknnnnnnkk...", "..knnwwnnnnnnk..", "..knwnnnnnnnnk..", ".knnnnnnnnnnnnk.", ".knnkkknnkkknnk.", ".knnkwknnkwknnk.", ".knnkkknnkkknnk.", ".knnnnnkknnnnNk.", ".kNnnnnnnnnnNNk.", "..kNNNNNNNNNNk..", "...kkkkkkkkkk...", "................"], ["................", "..k..........k..", ".kPk........kPk.", ".kPPk.kkkk.kPPk.", "kPPPPkkppkkPPPPk", "kPPpPPkppkPPpPPk", "kPpPPPpppppPPPpk", ".kPPPPpwkkwpPPPk", "..kkPPppkkppPkk.", "....kkppppppkk..", ".....kwppppwk...", "......kppppk....", ".......kkkk.....", "................", "................", "................"], ["................", "..kk........kk..", "..kck......kck..", "..kcCkkkkkkCck..", "...kccccccccck..", "...kcwkcccwkck..", "...kccccccccck..", "....kcckkkcck...", "...kcccwwwccck..", "..kcCcccccccCck.", "..kccCcccccCcck.", "...kccccccccck..", "....kcccccccck..", "....kcckkkkcck..", "...kCCk....kCCk.", "...kkkk....kkkk."], ["................", ".....kkkkkk.....", "...kkwwwwwwkk...", "..kwwwwwwwwwwk..", "..kwwkkwwwkkwk..", ".kwwwkykwwkykwwk", ".kwwwkkwwwkkwwk.", ".kwwwwwwwwwwwwk.", ".kwwwwwkkwwwwwk.", ".kwwwwwwwwwwwwk.", ".kwwwwwwwwwwwwk.", ".kwwwwwwwwwwwwk.", ".kwwkwwwkwwwkwk.", ".kwkkkwkkkwkkkk.", "..k..kk..kk..k..", "................"]], ti = ["..g.gg..gg.g....".slice(0, 16), "..gggggggggg....".slice(0, 16), "..kGggggggGk....".slice(0, 16), ".kkkmmmmmmmkk...".slice(0, 16), ".kmmmmmmmmmmmk..".slice(0, 16), ".kmmrrmmmrrmmk..".slice(0, 16), ".kmmrwmmmrwmmk..".slice(0, 16), ".kmmmmmkmmmmmk..".slice(0, 16), "..kmmkkkkkmmk...".slice(0, 16), ".kkmMmmmmmMmkk..".slice(0, 16), "kmmkMmmmmmMkmmk.".slice(0, 16), "kmmkmmmgmmmkmmk.".slice(0, 16), "kMMkmmmmmmmkMMk.".slice(0, 16), ".kkkmmMkMmmkkk..".slice(0, 16), "...kmmmkmmmk....".slice(0, 16), "...kkkkkkkkk....".slice(0, 16)], mz = ["................", "................", "................", "................", "......kkkk......", ".....kggggk.....", "....kggkkggk....", "....kgkkkgGk....", ".......kgGk.....", "......kgGk......", "......kgGk......", "......kkk.......", "................", "......kggk......", "......kGGk......", "......kkkk......"], ee = 16, gz = ["ink", "white", "gold", "gold-dark", "skin", "skin-shade", "hair", "tunic", "tunic-dark", "cape", "cape-dark", "red", "red-dark", "green", "green-dark", "purple", "purple-dark", "orange", "cyan", "brown", "stone", "stone-dark", "grass-1", "grass-2", "grass-3", "flower-1", "flower-2", "path-1", "path-2", "path-3", "water-1", "water-2", "water-3", "leaf-1", "leaf-2", "leaf-3", "trunk", "wall-1", "wall-2", "wall-3", "sky-1", "sky-2", "sky-3", "sky-4", "sky-5", "moon", "hill-1", "hill-2", "gate", "gate-dark", "glow"];
-  function kz(t) {
+  const fz = (t, e) => e <= 0 ? 0 : Math.max(0, Math.min(100, Math.round(t / e * 100))), mz = { k: "ink", w: "white", g: "gold", G: "gold-dark", s: "skin", S: "skin-shade", h: "hair", t: "tunic", T: "tunic-dark", c: "cape", r: "red", R: "red-dark", C: "cape-dark", n: "green", N: "green-dark", p: "purple", P: "purple-dark", o: "orange", y: "cyan", b: "brown", m: "stone", M: "stone-dark" }, ei = ["................", ".....kkkkkk.....", "....khhhhhhk....", "...khhhhhhhhk...", "...khhssssshk...", "...kssksskssk...", "...kssssssssk...", "....kssSSssk....", "...kttttttttk...", "..ksttttttttsk..", "..kstttggtttsk..", "..ksttttttttsk..", "...kttttttttk...", "...kttkkkkttk...", "...kbbk..kbbk...", "...kkkk..kkkk..."], _d = [".......kk.......", "......kppk......", ".....kppppk.....", "....kppgppPk....", "...kppppppppk...", "..kkkppppppkkk..", "...kssssssssk...", "...kskssskssk...", "...kwwwwwwwwk...", "..kpwwwwwwwwpk..", "..kpPwwwwwwPpk..", "..kspPppppPpsk..", "..kpppggggpppk..", "..kppppppppppk..", "..kpppppppppPk..", "..kkkkkkkkkkkk.."], jd = ["................", ".....kkkkkk.....", "....knnnnnnk....", "...knnnnnnnnk...", "...knnssssnnk...", "...knskssksnk...", "...kssssssssk...", "....kssSSssk....", "...kNnnnnnnNk...", "..ksNnnnnnnNsk..", "..ksNnggggnNsk..", "..kskNnnnnNksk..", "...kNnnnnnnNk...", "...kNnkkkknNk...", "...kbbk..kbbk...", "...kkkk..kkkk..."], Fs = [["................", "................", "................", ".....kkkkkk.....", "...kknnnnnnkk...", "..knnwwnnnnnnk..", "..knwnnnnnnnnk..", ".knnnnnnnnnnnnk.", ".knnkkknnkkknnk.", ".knnkwknnkwknnk.", ".knnkkknnkkknnk.", ".knnnnnkknnnnNk.", ".kNnnnnnnnnnNNk.", "..kNNNNNNNNNNk..", "...kkkkkkkkkk...", "................"], ["................", "..k..........k..", ".kPk........kPk.", ".kPPk.kkkk.kPPk.", "kPPPPkkppkkPPPPk", "kPPpPPkppkPPpPPk", "kPpPPPpppppPPPpk", ".kPPPPpwkkwpPPPk", "..kkPPppkkppPkk.", "....kkppppppkk..", ".....kwppppwk...", "......kppppk....", ".......kkkk.....", "................", "................", "................"], ["................", "..kk........kk..", "..kck......kck..", "..kcCkkkkkkCck..", "...kccccccccck..", "...kcwkcccwkck..", "...kccccccccck..", "....kcckkkcck...", "...kcccwwwccck..", "..kcCcccccccCck.", "..kccCcccccCcck.", "...kccccccccck..", "....kcccccccck..", "....kcckkkkcck..", "...kCCk....kCCk.", "...kkkk....kkkk."], ["................", ".....kkkkkk.....", "...kkwwwwwwkk...", "..kwwwwwwwwwwk..", "..kwwkkwwwkkwk..", ".kwwwkykwwkykwwk", ".kwwwkkwwwkkwwk.", ".kwwwwwwwwwwwwk.", ".kwwwwwkkwwwwwk.", ".kwwwwwwwwwwwwk.", ".kwwwwwwwwwwwwk.", ".kwwwwwwwwwwwwk.", ".kwwkwwwkwwwkwk.", ".kwkkkwkkkwkkkk.", "..k..kk..kk..k..", "................"]], ti = ["..g.gg..gg.g....".slice(0, 16), "..gggggggggg....".slice(0, 16), "..kGggggggGk....".slice(0, 16), ".kkkmmmmmmmkk...".slice(0, 16), ".kmmmmmmmmmmmk..".slice(0, 16), ".kmmrrmmmrrmmk..".slice(0, 16), ".kmmrwmmmrwmmk..".slice(0, 16), ".kmmmmmkmmmmmk..".slice(0, 16), "..kmmkkkkkmmk...".slice(0, 16), ".kkmMmmmmmMmkk..".slice(0, 16), "kmmkMmmmmmMkmmk.".slice(0, 16), "kmmkmmmgmmmkmmk.".slice(0, 16), "kMMkmmmmmmmkMMk.".slice(0, 16), ".kkkmmMkMmmkkk..".slice(0, 16), "...kmmmkmmmk....".slice(0, 16), "...kkkkkkkkk....".slice(0, 16)], gz = ["................", "................", "................", "................", "......kkkk......", ".....kggggk.....", "....kggkkggk....", "....kgkkkgGk....", ".......kgGk.....", "......kgGk......", "......kgGk......", "......kkk.......", "................", "......kggk......", "......kGGk......", "......kkkk......"], ee = 16, kz = ["ink", "white", "gold", "gold-dark", "skin", "skin-shade", "hair", "tunic", "tunic-dark", "cape", "cape-dark", "red", "red-dark", "green", "green-dark", "purple", "purple-dark", "orange", "cyan", "brown", "stone", "stone-dark", "grass-1", "grass-2", "grass-3", "flower-1", "flower-2", "path-1", "path-2", "path-3", "water-1", "water-2", "water-3", "leaf-1", "leaf-2", "leaf-3", "trunk", "wall-1", "wall-2", "wall-3", "sky-1", "sky-2", "sky-3", "sky-4", "sky-5", "moon", "hill-1", "hill-2", "gate", "gate-dark", "glow"];
+  function bz(t) {
     const e = document.createElement("span");
     e.setAttribute("aria-hidden", "true"), e.style.cssText = "position:absolute;visibility:hidden;pointer-events:none;width:0;height:0", t.appendChild(e);
     const s = {};
-    for (const n of gz) e.style.color = "", e.style.color = "var(--pixel-".concat(n, ")"), s[n] = getComputedStyle(e).color || "rgb(255 0 255)";
+    for (const n of kz) e.style.color = "", e.style.color = "var(--pixel-".concat(n, ")"), s[n] = getComputedStyle(e).color || "rgb(255 0 255)";
     return e.remove(), s;
   }
-  const bz = () => ({ sprites: {} });
+  const vz = () => ({ sprites: {} });
   function Ks(t) {
     return t ? new Promise((e) => {
       const s = new Image();
@@ -10774,15 +10774,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       for (let l = 0; l < c.length; l++) {
         const u = c[o ? c.length - 1 - l : l];
         if (u === ".") continue;
-        const h = fz[u];
+        const h = mz[u];
         h && (t.fillStyle = s[h], t.fillRect(n + l * r, i + a * r, r, r));
       }
     }
   }
-  const xd = ["................", ".....kkkkkk.....", "...kkbbbbbbkk...", "..kbbbcbbbbbbk..", "..kbbcbbbbabbk..", ".kbbbbbbbbbbabk.", ".kbcbbbbabbbbbk.", ".kbbbbbbbbbbbak.", ".kbbbabbbbbcbak.", "..kbbbbbbbbbbk..", "..kkaabbbbaakk..", "....kkaaaakk....", "......kttk......", "......kttk......", ".....kkttkk.....", "................"], vz = { k: "ink", a: "leaf-1", b: "leaf-2", c: "leaf-3", t: "trunk" }, Ed = (t, e, s, n, i) => {
+  const xd = ["................", ".....kkkkkk.....", "...kkbbbbbbkk...", "..kbbbcbbbbbbk..", "..kbbcbbbbabbk..", ".kbbbbbbbbbbabk.", ".kbcbbbbabbbbbk.", ".kbbbbbbbbbbbak.", ".kbbbabbbbbcbak.", "..kbbbbbbbbbbk..", "..kkaabbbbaakk..", "....kkaaaakk....", "......kttk......", "......kttk......", ".....kkttkk.....", "................"], wz = { k: "ink", a: "leaf-1", b: "leaf-2", c: "leaf-3", t: "trunk" }, Ed = (t, e, s, n, i) => {
     var _a3, _b3;
     return (_b3 = (_a3 = t[s + i]) == null ? void 0 : _a3[e + n]) != null ? _b3 : "#";
-  }, wz = (t) => t === "," || t === "@" || t === "N" || t === "B", yz = (t) => t === "~";
+  }, yz = (t) => t === "," || t === "@" || t === "N" || t === "B", Sz = (t) => t === "~";
   function Ad(t, e, s, n, i, r, o) {
     K(t, s, n, ee, ee, e["grass-1"]);
     for (let a = 0; a < 6; a++) {
@@ -10801,7 +10801,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (let l = 0; l < 4; l++) K(t, n + Math.floor(ne(r, o, a.seed, l + 90) * 14), i + Math.floor(ne(r, o, a.seed, l + 100) * 14), 2, 1, e["path-3"]);
     const c = (l, u, h, p) => {
       const f = Ed(s, r, o, l, u);
-      if (!(wz(f) || f === "#" || f === "G")) for (let m = 0; m < ee; m++) {
+      if (!(yz(f) || f === "#" || f === "G")) for (let m = 0; m < ee; m++) {
         const g = 1 + Math.floor(ne(r, o, a.seed, 110 + m + (l + 2) * 16 + (u + 2) * 64) * 3);
         for (let k = 0; k < g; k++) {
           const b = m, v = p ? ee - 1 - k : k;
@@ -10811,7 +10811,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     };
     c(0, -1, true, false), c(0, 1, true, true), c(-1, 0, false, false), c(1, 0, false, true);
   }
-  function Sz(t, e, s, n, i, r, o, a) {
+  function $z(t, e, s, n, i, r, o, a) {
     K(t, n, i, ee, ee, e["water-1"]);
     const c = a.frame * 2;
     for (let u = 0; u < 3; u++) {
@@ -10820,17 +10820,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     a.frame === 1 && ne(r, o, a.seed, 140) < 0.7 && K(t, n + Math.floor(ne(r, o, a.seed, 141) * 13) + 1, i + Math.floor(ne(r, o, a.seed, 142) * 13) + 1, 1, 1, e["water-3"]), a.frame === 0 && ne(r, o, a.seed, 143) < 0.5 && K(t, n + Math.floor(ne(r, o, a.seed, 144) * 13) + 1, i + Math.floor(ne(r, o, a.seed, 145) * 13) + 1, 1, 1, e["water-3"]);
     const l = (u, h, p, f) => {
-      if (!yz(Ed(s, r, o, u, h))) for (let m = 0; m < ee; m++) ne(r, o, a.seed, 150 + m + (u + 2) * 16 + (h + 2) * 64) < 0.8 && K(t, n + (p ? m : f ? ee - 1 : 0), i + (p ? f ? ee - 1 : 0 : m), 1, 1, e["water-3"]);
+      if (!Sz(Ed(s, r, o, u, h))) for (let m = 0; m < ee; m++) ne(r, o, a.seed, 150 + m + (u + 2) * 16 + (h + 2) * 64) < 0.8 && K(t, n + (p ? m : f ? ee - 1 : 0), i + (p ? f ? ee - 1 : 0 : m), 1, 1, e["water-3"]);
     };
     l(0, -1, true, false), l(0, 1, true, true), l(-1, 0, false, false), l(1, 0, false, true);
   }
-  function $z(t, e, s, n, i, r, o) {
+  function zz(t, e, s, n, i, r, o) {
     Ad(t, e, s, n, i, r, o), K(t, s + 3, n + 13, 10, 2, e["grass-2"]);
     for (let a = 0; a < xd.length; a++) {
       const c = xd[a];
       for (let l = 0; l < c.length; l++) {
         const u = c[l];
-        u !== "." && K(t, s + l, n + a, 1, 1, e[vz[u]]);
+        u !== "." && K(t, s + l, n + a, 1, 1, e[wz[u]]);
       }
     }
   }
@@ -10845,7 +10845,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       ne(i, r, o.seed, 160 + a) < 0.4 && K(t, s + Math.floor(ne(i, r, o.seed, 170 + a) * 12) + 2, n + c + 1, 2, 1, e["wall-2"]);
     }
   }
-  function zz(t, e, s, n, i, r, o, a) {
+  function _z(t, e, s, n, i, r, o, a) {
     if (Id(t, e, s, n, i, r, o), K(t, s + 2, n + 2, 12, 14, e.ink), a) K(t, s + 3, n + 3, 10, 13, e["sky-3"]), K(t, s + 4, n + 5, 8, 11, e["sky-4"]), K(t, s + 5, n + 8, 6, 8, e.glow), K(t, s + 6, n + 11, 4, 5, e.moon), o.frame === 1 ? K(t, s + 7, n + 6, 1, 1, e.gold) : K(t, s + 9, n + 7, 1, 1, e.gold);
     else {
       K(t, s + 3, n + 3, 10, 13, e.gate);
@@ -10853,7 +10853,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       K(t, s + 3, n + 6, 10, 1, e.ink), K(t, s + 3, n + 12, 10, 1, e.ink), K(t, s + 7, n + 9, 2, 2, e.gold), K(t, s + 3, n + 2, 1, 1, e["wall-1"]), K(t, s + 12, n + 2, 1, 1, e["wall-1"]);
     }
   }
-  function _z(t, e, s, n, i, r, o, a, c) {
+  function jz(t, e, s, n, i, r, o, a, c) {
     if (c === "B") {
       K(t, n, i, ee, ee, e["wall-2"]), K(t, n + 1, i + 1, 14, 14, e["wall-1"]), K(t, n + 2, i + 2, 12, 1, e["wall-3"]);
       for (const [l, u] of [[7, 3], [8, 3], [5, 5], [6, 5], [9, 5], [10, 5], [4, 7], [11, 7], [5, 9], [10, 9], [6, 11], [9, 11], [7, 12], [8, 12]]) K(t, n + l, i + u, 1, 1, e["red-dark"]);
@@ -10862,7 +10862,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     Td(t, e, s, n, i, r, o, a);
     for (const [l, u] of [[7, 4], [8, 4], [5, 5], [6, 5], [9, 5], [10, 5], [4, 7], [11, 7], [5, 9], [6, 10], [9, 10], [10, 9], [7, 11], [8, 11]]) K(t, n + l, i + u, 1, 1, e["gold-dark"]);
   }
-  function jz(t, e, s, n, i, r, o, a) {
+  function xz(t, e, s, n, i, r, o, a) {
     var _a3, _b3;
     const c = (_b3 = (_a3 = s[i]) == null ? void 0 : _a3[n]) != null ? _b3 : "#", l = n * ee, u = i * ee;
     if (a == null ? void 0 : a.tiles) {
@@ -10874,17 +10874,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       case "#":
         return Id(t, e, l, u, n, i, r);
       case "T":
-        return $z(t, e, l, u, n, i, r);
+        return zz(t, e, l, u, n, i, r);
       case "~":
-        return Sz(t, e, s, l, u, n, i, r);
+        return $z(t, e, s, l, u, n, i, r);
       case ",":
       case "@":
         return Td(t, e, s, l, u, n, i, r);
       case "N":
       case "B":
-        return _z(t, e, s, l, u, n, i, r, c);
+        return jz(t, e, s, l, u, n, i, r, c);
       case "G":
-        return zz(t, e, l, u, n, i, r, o);
+        return _z(t, e, l, u, n, i, r, o);
       default:
         return Ad(t, e, l, u, n, i, r);
     }
@@ -10894,15 +10894,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const s = document.createElement("canvas");
     return s.width = t, s.height = e, s;
   }
-  function xz(t, e, s, n, i, r) {
+  function Ez(t, e, s, n, i, r) {
     var _a3, _b3;
     const { w: o, h: a } = Md(t), c = Od(o, a), l = c.getContext("2d");
     l.imageSmoothingEnabled = false;
-    for (let u = 0; u < t.length; u++) for (let h = 0; h < ((_b3 = (_a3 = t[u]) == null ? void 0 : _a3.length) != null ? _b3 : 0); h++) jz(l, e, t, h, u, { seed: s, frame: n }, i, r);
+    for (let u = 0; u < t.length; u++) for (let h = 0; h < ((_b3 = (_a3 = t[u]) == null ? void 0 : _a3.length) != null ? _b3 : 0); h++) xz(l, e, t, h, u, { seed: s, frame: n }, i, r);
     return c;
   }
-  const Ez = (t) => t.kind === "boss" ? ti : t.kind === "foe" ? Fs[(t.n - 1) % Fs.length] : t.kind === "giver" ? _d : jd;
-  class Az {
+  const Az = (t) => t.kind === "boss" ? ti : t.kind === "foe" ? Fs[(t.n - 1) % Fs.length] : t.kind === "giver" ? _d : jd;
+  class Tz {
     constructor(e) {
       __publicField(this, "o");
       __publicField(this, "canvas");
@@ -10935,7 +10935,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.frame = this.frame === 0 ? 1 : 0, this.ticks++, this.draw();
     }
     layer(e) {
-      return (this.layerGate !== e || this.layers.length === 0) && (this.layers = [0, 1].map((s) => xz(this.o.area.rows, this.o.pal, this.o.seed, s, e, this.o.skin)), this.layerGate = e), this.layers[this.o.reduced ? 0 : this.frame];
+      return (this.layerGate !== e || this.layers.length === 0) && (this.layers = [0, 1].map((s) => Ez(this.o.area.rows, this.o.pal, this.o.seed, s, e, this.o.skin)), this.layerGate = e), this.layers[this.o.reduced ? 0 : this.frame];
     }
     draw() {
       var _a3;
@@ -10948,7 +10948,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           const l = a.at[0] * ee, u = a.at[1] * ee;
           s.globalAlpha = 0.35, K(s, l + 3, u + 13, 10, 2, i.ink), s.globalAlpha = 1;
           const h = a.kind === "boss" ? r == null ? void 0 : r.sprites.boss : a.kind === "foe" ? r == null ? void 0 : r.sprites.foe : a.kind === "giver" || a.kind === "npc" ? r == null ? void 0 : r.sprites.npc : void 0;
-          h ? s.drawImage(h, l, u + c, ee, ee) : $t(s, Ez(a), i, l, u + c), a.mark && $t(s, mz, i, l, u - 11 + (this.frame === 1 && !this.o.reduced ? -1 : 0));
+          h ? s.drawImage(h, l, u + c, ee, ee) : $t(s, Az(a), i, l, u + c), a.mark && $t(s, gz, i, l, u - 11 + (this.frame === 1 && !this.o.reduced ? -1 : 0));
         } });
       }
       o.push({ y: e.hero[1], paint: () => {
@@ -10968,7 +10968,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
   }
   const ut = 160, Nd = 64;
-  function Tz(t, e, s) {
+  function Iz(t, e, s) {
     ["sky-1", "sky-2", "sky-3", "sky-4", "sky-5"].forEach((i, r) => K(t, 0, r * 8, ut, 8, e[i]));
     for (let i = 0; i < 26; i++) K(t, Math.floor(ne(i, 1, s, 3) * ut), Math.floor(ne(i, 2, s, 3) * 26), 1, 1, e.white);
     K(t, 128, 6, 8, 8, e.moon), K(t, 130, 5, 4, 10, e.moon), K(t, 126, 8, 12, 4, e.moon);
@@ -10985,9 +10985,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (let i = 0; i < ut; i += 5) K(t, i + Math.floor(ne(i, 5, s, 9) * 3), 42 + Math.floor(ne(i, 6, s, 9) * 20), 1, 1, e["grass-3"]);
     K(t, 0, 58, ut, 2, e["path-1"]), K(t, 0, 58, ut, 1, e["path-3"]);
   }
-  function Iz(t, e, s, n, i) {
+  function Mz(t, e, s, n, i) {
     const r = t.getContext("2d"), o = Math.max(1, Math.round(t.width / ut));
-    r.setTransform(o, 0, 0, o, 0, 0), r.imageSmoothingEnabled = false, Tz(r, e, n);
+    r.setTransform(o, 0, 0, o, 0, 0), r.imageSmoothingEnabled = false, Iz(r, e, n);
     const a = (u, h) => {
       r.globalAlpha = 0.4, K(r, u, 57, h, 3, e.ink), r.globalAlpha = 1;
     };
@@ -10997,25 +10997,25 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const l = s.boss ? i == null ? void 0 : i.sprites.boss : i == null ? void 0 : i.sprites.foe;
     s.down ? (r.globalAlpha = 0.5, l ? r.drawImage(l, 94, 30, 48, 30) : $t(r, s.foe, e, 94, 28, 3), r.globalAlpha = 1) : l ? r.drawImage(l, 94, 10, 48, 48) : $t(r, s.foe, e, 94, 10, 3);
   }
-  function Mz(t, e, s, n) {
+  function Oz(t, e, s, n) {
     const i = t.getContext("2d"), r = Math.max(1, Math.round(t.width / Math.max(1, ...s.map((a) => a.length))));
     i.imageSmoothingEnabled = false;
     const o = (a) => a === "#" ? e["wall-1"] : a === "T" ? e["leaf-2"] : a === "~" ? e["water-1"] : a === "," || a === "@" || a === "N" ? e["path-1"] : a === "B" ? e["wall-3"] : a === "G" ? e.gold : e["grass-1"];
     s.forEach((a, c) => [...a].forEach((l, u) => K(i, u * r, c * r, r, r, o(l))));
     for (const a of n) K(i, a.at[0] * r, a.at[1] * r, r, r, a.kind === "giver" ? e.gold : a.kind === "boss" ? e.purple : e.red);
   }
-  const Pd = (t) => ({ pos: t.start, face: "right", accepted: false, foesDown: [], bossDown: false, scores: [], counted: [], done: false }), Oz = (t, e) => ({ ...Pd(t), accepted: e.accepted }), Nz = "goto-boss";
+  const Pd = (t) => ({ pos: t.start, face: "right", accepted: false, foesDown: [], bossDown: false, scores: [], counted: [], done: false }), Nz = (t, e) => ({ ...Pd(t), accepted: e.accepted }), Pz = "goto-boss";
   function Ct(t, e) {
     const s = t.npcs.map((n) => ({ id: n.id, kind: "npc", at: n.at, giver: n.quest, goto: "goto-".concat(n.id) }));
     for (const n of t.foes) e.foesDown.includes(n.id) || s.push({ id: n.id, kind: "foe", at: n.at, giver: false, goto: "goto-".concat(n.id) });
-    return e.bossDown || s.push({ id: t.boss.id, kind: "boss", at: t.boss.at, giver: false, goto: Nz }), s;
+    return e.bossDown || s.push({ id: t.boss.id, kind: "boss", at: t.boss.at, giver: false, goto: Pz }), s;
   }
-  const Pz = (t, e) => new Set(Ct(t, e).map((s) => Ce(s.at)));
+  const Rz = (t, e) => new Set(Ct(t, e).map((s) => Ce(s.at)));
   function si(t, e) {
     return e.done ? "done" : e.accepted ? t.foes.every((s) => e.foesDown.includes(s.id)) ? "boss" : "foes" : "talk";
   }
   const so = (t, e) => [t[0] + On[e][0], t[1] + On[e][1]];
-  function Rz(t, e, s, n) {
+  function Dz(t, e, s, n) {
     const i = so(e.pos, s), r = Ct(t, e).find((a) => ot(a.at, i));
     if (r) return { kind: "bump", person: r };
     const o = es(t.rows, i);
@@ -11036,7 +11036,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function no(t, e, s, n) {
     const i = ii(t, e).find((o) => o.testid === s || o.id === s);
     if (!i) return null;
-    const r = Pz(t, e);
+    const r = Rz(t, e);
     return i.kind === "gate" ? n ? Ol(t.rows, e.pos, (o) => ot(o, i.at), { blocked: r, gateOpen: n }) : Nl(t.rows, e.pos, i.at, { blocked: r }) : Nl(t.rows, e.pos, i.at, { blocked: r, gateOpen: n });
   }
   function Rd(t, e, s) {
@@ -11060,25 +11060,25 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return t.gate ? r("gate", "gate", "goto-gate") : { kind: "leave", id: "areas", adjacent: false, steps: 0 };
   }
-  const Dd = (t) => t.length === 0 ? 0 : t.reduce((e, s) => e + s, 0) / t.length, Dz = { en: { "rpg.tagline": "A pixel quest through what you are learning", "rpg.title.art": "A pixel landscape: night sky, hills, a castle and a small hero", "rpg.hero.default": "Hero", "rpg.intro.title": "The story", "rpg.story.next": "Next", "rpg.story.begin": "Begin the quest", "rpg.story.skip": "Skip the story", "rpg.story.count": "Page {n} of {total}", "rpg.auto.intro.1": "A quiet land lies under a night sky, and its roads are blocked by foes made of muddled ideas.", "rpg.auto.intro.2": "You are {hero}, a young adventurer. Every right answer is a strike, and every fact you learn goes into your pack as a scroll.", "rpg.auto.intro.3": "Visit each area, speak with its sage and beat the foes. Then the gates will open.", "rpg.auto.outro.1": "The last foe falls and the muddle clears. Everything you learned is now yours to keep.", "rpg.areas.title": "The world map", "rpg.areas.intro": "Pick a place. Each area is a quest that teaches one unit.", "rpg.area.enter": "Enter", "rpg.area.locked": "Locked: master {units} first.", "rpg.area.quest": "Quest", "rpg.final.title": "The final battle", "rpg.final.ready": "The last foe mixes every unit. Answer well.", "rpg.final.locked": "Master every area (2 stars) to face the last foe.", "rpg.final.go": "Face the last foe", "rpg.auto.final": "The Grand Muddle", "rpg.to.title": "Back to the title", "rpg.hp": "HP {hp} / {max}", "rpg.map.label": "Map of {area}", "rpg.where": "You are in {area}, at column {x}, row {y}.", "rpg.near": "Next to you: {names}.", "rpg.near.none": "Nobody is next to you.", "rpg.side.left": "left", "rpg.side.right": "right", "rpg.side.up": "above", "rpg.side.down": "below", "rpg.pad": "Walk", "rpg.move.up": "Up", "rpg.move.down": "Down", "rpg.move.left": "Left", "rpg.move.right": "Right", "rpg.talk": "Talk", "rpg.fight": "Fight", "rpg.talk.none": "Nobody is next to you. Walk up to someone first.", "rpg.keys": "Arrow keys or WASD walk, Enter talks.", "rpg.targets": "Walk to", "rpg.goto": "Walk to {name}", "rpg.goto.gate": "Walk to the gate", "rpg.inventory": "Scrolls ({n})", "rpg.to.areas": "World map", "rpg.quest.title": "Quest log", "rpg.quest.talk": "Talk to {name}", "rpg.quest.foes": "Beat the foes ({done} of {total})", "rpg.quest.boss": "Defeat {name}", "rpg.quest.gate": "Open the gate (2 stars)", "rpg.quest.done": "done", "rpg.quest.todo": "to do", "rpg.msg.need.giver": "Speak with {name} first: the quest has to begin.", "rpg.msg.need.foes": "Beat the other foes first ({n} left).", "rpg.msg.gate.shut": "The gate is shut. Finish the quest with 2 stars to open it.", "rpg.msg.noway": "There is no way there.", "rpg.msg.won": "You beat {name}!", "rpg.msg.inn": "You fainted and woke up at the inn with full HP. {name} is still waiting; the quest goes on.", "rpg.msg.fled": "You ran away. {name} is still waiting.", "rpg.msg.accepted": "Quest accepted: {area}.", "rpg.msg.walking": "Walking...", "rpg.dialogue.next": "Continue", "rpg.dialogue.bye": "Goodbye", "rpg.dialogue.later": "Not now", "rpg.dialogue.count": "Line {n} of {total}", "rpg.quest.accept": "Accept the quest", "rpg.portrait": "Portrait of {name}", "rpg.auto.sage": "The Sage", "rpg.auto.sage.1": 'Welcome, {hero}. This is the land of "{unit}".', "rpg.auto.sage.2": "Foes made of muddled ideas roam here: {n} of them, and {boss} guards the gate. Every right answer is a strike.", "rpg.auto.sage.3": "Beat them all with what you know, and the gate will open. Good luck!", "rpg.sage.hint": "Beat the foes ({n} left), then face {boss}.", "rpg.sage.boss": "Only {boss} is left. Face it!", "rpg.sage.done": "Well fought! The gate is open.", "rpg.sage.retry": "The gate needs 2 stars. Try the quest again and answer right the first time.", "rpg.auto.foe.1": "Fog Slime", "rpg.auto.foe.2": "Doubt Bat", "rpg.auto.foe.3": "Myth Imp", "rpg.auto.foe.4": "Rumour Ghost", "rpg.auto.boss": 'Guardian of "{unit}"', "rpg.battle.appears": "{name} blocks the way!", "rpg.battle.boss": "A boss: its strikes are harder.", "rpg.battle.hint": "Every question is a move. A right answer strikes the foe; a wrong one lets it hit back. Answers right in a row make your strikes stronger.", "rpg.battle.start": "Fight!", "rpg.battle.flee": "Run away", "rpg.battle.turn": "Turn {n}: answer to strike {name}.", "rpg.battle.hero": "You", "rpg.battle.foe.hp": "{name}: HP {hp} of {max}", "rpg.battle.hero.hp": "You: HP {hp} of {max}", "rpg.battle.streak": "Streak {n} (strike x{m})", "rpg.fx.strike": "You strike {name} for {n}!", "rpg.fx.strike.streak": "You strike {name} for {n}! (streak x{m})", "rpg.fx.hit": "{name} hits you for {n}.", "rpg.fx.both": "You hit {name} for {n}, and it hits back for {m}.", "rpg.fx.scroll": "A new scroll is in your pack.", "rpg.fx.fall": "{name} falls!", "rpg.fx.faint": "You faint...", "rpg.next.turn": "Next turn", "rpg.next.win": "Victory!", "rpg.next.faint": "Wake up at the inn", "rpg.inv.title": "Scrolls of knowledge", "rpg.inv.intro": "Every fact you earned with a right answer in battle.", "rpg.inv.empty": "No scrolls yet. Each right answer in battle adds one.", "rpg.inv.back": "Back", "rpg.inv.from": "From: {unit}", "rpg.qd.title": "Quest complete!", "rpg.qd.accuracy": "{n}% right the first time", "rpg.qd.gate.open": "The gate is open: walk through it to go on.", "rpg.qd.gate.shut": "The gate stays shut: you need 2 stars. Replay the quest.", "rpg.qd.unlocked": "New area: {units}", "rpg.qd.replay": "Replay the quest", "rpg.qd.world": "Back to the map", "rpg.outro.title": "The end of the quest", "rpg.end.sub": "Every area is mastered and the last foe has fallen.", "rpg.end.scrolls": "Scrolls collected: {n}", "rpg.story.end": "The end", "rpg.msg.rest": "You rest and win back {n} HP.", "rpg.battle.alt": "{hero} faces {foe} on a grassy field under a night sky.", "rpg.mini.alt": "Small map of {area}", "rpg.final.finish": "See the ending", "rpg.final.beaten": "The last foe is beaten.", "rpg.area.mastered": "Mastered", "rpg.story.alt": "Portrait of {name}", "rpg.quest.replay.hint": "Replay the quest to earn more stars." }, hr: { "rpg.tagline": "Pikselna pustolovina kroz ono što učiš", "rpg.title.art": "Pikselni krajolik: noćno nebo, brežuljci, dvorac i mali junak", "rpg.hero.default": "Junak", "rpg.intro.title": "Priča", "rpg.story.next": "Dalje", "rpg.story.begin": "Započni pustolovinu", "rpg.story.skip": "Preskoči priču", "rpg.story.count": "Stranica {n} od {total}", "rpg.auto.intro.1": "Mirna zemlja leži pod noćnim nebom, a putove joj zatvaraju neprijatelji sazdani od pomiješanih ideja.", "rpg.auto.intro.2": "Ti si {hero}, mladi pustolov. Svaki točan odgovor je udarac, a svaka činjenica koju naučiš ide u torbu kao svitak.", "rpg.auto.intro.3": "Posjeti svako područje, razgovaraj s mudracem i pobijedi neprijatelje. Tada će se vrata otvoriti.", "rpg.auto.outro.1": "Posljednji neprijatelj pada i zbrka se razbistrila. Sve što si naučio sada je tvoje.", "rpg.areas.title": "Karta svijeta", "rpg.areas.intro": "Odaberi mjesto. Svako područje je zadatak koji uči jednu cjelinu.", "rpg.area.enter": "Uđi", "rpg.area.locked": "Zaključano: prvo savladaj {units}.", "rpg.area.quest": "Zadatak", "rpg.final.title": "Završna bitka", "rpg.final.ready": "Posljednji neprijatelj miješa sve cjeline. Odgovaraj pažljivo.", "rpg.final.locked": "Savladaj svako područje (2 zvjezdice) da bi se suočio s posljednjim neprijateljem.", "rpg.final.go": "Suoči se s posljednjim neprijateljem", "rpg.auto.final": "Veliki Zbrkanac", "rpg.to.title": "Natrag na naslovnicu", "rpg.hp": "HP {hp} / {max}", "rpg.map.label": "Karta područja: {area}", "rpg.where": "Nalaziš se u području {area}, u stupcu {x}, retku {y}.", "rpg.near": "Pokraj tebe: {names}.", "rpg.near.none": "Pokraj tebe nema nikoga.", "rpg.side.left": "lijevo", "rpg.side.right": "desno", "rpg.side.up": "iznad", "rpg.side.down": "ispod", "rpg.pad": "Hodaj", "rpg.move.up": "Gore", "rpg.move.down": "Dolje", "rpg.move.left": "Lijevo", "rpg.move.right": "Desno", "rpg.talk": "Razgovaraj", "rpg.fight": "Bori se", "rpg.talk.none": "Pokraj tebe nema nikoga. Prvo priđi nekome.", "rpg.keys": "Strelice ili WASD za hodanje, Enter za razgovor.", "rpg.targets": "Idi do", "rpg.goto": "Idi do: {name}", "rpg.goto.gate": "Idi do vrata", "rpg.inventory": "Svici ({n})", "rpg.to.areas": "Karta svijeta", "rpg.quest.title": "Dnevnik zadatka", "rpg.quest.talk": "Razgovaraj s: {name}", "rpg.quest.foes": "Pobijedi neprijatelje ({done} od {total})", "rpg.quest.boss": "Pobijedi: {name}", "rpg.quest.gate": "Otvori vrata (2 zvjezdice)", "rpg.quest.done": "gotovo", "rpg.quest.todo": "preostaje", "rpg.msg.need.giver": "Prvo razgovaraj s: {name}. Zadatak mora početi.", "rpg.msg.need.foes": "Prvo pobijedi ostale neprijatelje (još {n}).", "rpg.msg.gate.shut": "Vrata su zatvorena. Završi zadatak s 2 zvjezdice da ih otvoriš.", "rpg.msg.noway": "Tamo nema puta.", "rpg.msg.won": "Pobijedio si: {name}!", "rpg.msg.inn": "Onesvijestio si se i probudio u gostionici s punim HP-om. {name} te još čeka; zadatak se nastavlja.", "rpg.msg.fled": "Pobjegao si. {name} te još čeka.", "rpg.msg.accepted": "Zadatak prihvaćen: {area}.", "rpg.msg.walking": "Hodam...", "rpg.dialogue.next": "Nastavi", "rpg.dialogue.bye": "Doviđenja", "rpg.dialogue.later": "Ne sada", "rpg.dialogue.count": "Redak {n} od {total}", "rpg.quest.accept": "Prihvati zadatak", "rpg.portrait": "Portret: {name}", "rpg.auto.sage": "Mudrac", "rpg.auto.sage.1": 'Dobro došao, {hero}. Ovo je zemlja cjeline "{unit}".', "rpg.auto.sage.2": "Ovdje lutaju neprijatelji sazdani od pomiješanih ideja: njih {n}, a vrata čuva {boss}. Svaki točan odgovor je udarac.", "rpg.auto.sage.3": "Pobijedi ih svojim znanjem i vrata će se otvoriti. Sretno!", "rpg.sage.hint": "Pobijedi neprijatelje (još {n}), a zatim se suoči s: {boss}.", "rpg.sage.boss": "Ostao je samo {boss}. Suoči se s njim!", "rpg.sage.done": "Dobro si se borio! Vrata su otvorena.", "rpg.sage.retry": "Za vrata trebaju 2 zvjezdice. Ponovi zadatak i odgovori točno iz prvog pokušaja.", "rpg.auto.foe.1": "Magleni Sluz", "rpg.auto.foe.2": "Šišmiš Sumnje", "rpg.auto.foe.3": "Vragolan Mita", "rpg.auto.foe.4": "Duh Glasina", "rpg.auto.boss": 'Čuvar cjeline "{unit}"', "rpg.battle.appears": "{name} ti zatvara put!", "rpg.battle.boss": "Šef: njegovi su udarci jači.", "rpg.battle.hint": "Svako pitanje je potez. Točan odgovor udara neprijatelja, a netočan mu dopušta da uzvrati. Uzastopni točni odgovori jačaju tvoje udarce.", "rpg.battle.start": "U borbu!", "rpg.battle.flee": "Pobjegni", "rpg.battle.turn": "Potez {n}: odgovori i udari: {name}.", "rpg.battle.hero": "Ti", "rpg.battle.foe.hp": "{name}: HP {hp} od {max}", "rpg.battle.hero.hp": "Ti: HP {hp} od {max}", "rpg.battle.streak": "Niz {n} (udarac x{m})", "rpg.fx.strike": "Udaraš: {name}, šteta {n}!", "rpg.fx.strike.streak": "Udaraš: {name}, šteta {n}! (niz x{m})", "rpg.fx.hit": "{name} te udara, šteta {n}.", "rpg.fx.both": "Pogađaš: {name}, šteta {n}, a on uzvraća štetom {m}.", "rpg.fx.scroll": "Novi svitak je u tvojoj torbi.", "rpg.fx.fall": "{name} pada!", "rpg.fx.faint": "Onesvijestio si se...", "rpg.next.turn": "Sljedeći potez", "rpg.next.win": "Pobjeda!", "rpg.next.faint": "Probudi se u gostionici", "rpg.inv.title": "Svici znanja", "rpg.inv.intro": "Svaka činjenica koju si zaradio točnim odgovorom u borbi.", "rpg.inv.empty": "Još nema svitaka. Svaki točan odgovor u borbi dodaje jedan.", "rpg.inv.back": "Natrag", "rpg.inv.from": "Iz cjeline: {unit}", "rpg.qd.title": "Zadatak je gotov!", "rpg.qd.accuracy": "{n}% točno iz prvog pokušaja", "rpg.qd.gate.open": "Vrata su otvorena: prođi kroz njih da nastaviš.", "rpg.qd.gate.shut": "Vrata ostaju zatvorena: trebaju ti 2 zvjezdice. Ponovi zadatak.", "rpg.qd.unlocked": "Novo područje: {units}", "rpg.qd.replay": "Ponovi zadatak", "rpg.qd.world": "Natrag na kartu", "rpg.outro.title": "Kraj pustolovine", "rpg.end.sub": "Svako je područje savladano i posljednji je neprijatelj pao.", "rpg.end.scrolls": "Skupljeni svici: {n}", "rpg.story.end": "Kraj", "rpg.msg.rest": "Odmaraš i vraćaš {n} HP.", "rpg.battle.alt": "{hero} se suočava s neprijateljem {foe} na travnatom polju pod noćnim nebom.", "rpg.mini.alt": "Mala karta područja: {area}", "rpg.final.finish": "Pogledaj završetak", "rpg.final.beaten": "Posljednji neprijatelj je pobijeđen.", "rpg.area.mastered": "Savladano", "rpg.story.alt": "Portret: {name}", "rpg.quest.replay.hint": "Ponovi zadatak da zaradiš više zvjezdica." }, de: { "rpg.tagline": "Ein Pixel-Abenteuer durch das, was du lernst", "rpg.title.art": "Eine Pixel-Landschaft: Nachthimmel, Hügel, ein Schloss und ein kleiner Held", "rpg.hero.default": "Held", "rpg.intro.title": "Die Geschichte", "rpg.story.next": "Weiter", "rpg.story.begin": "Das Abenteuer beginnen", "rpg.story.skip": "Die Geschichte überspringen", "rpg.story.count": "Seite {n} von {total}", "rpg.auto.intro.1": "Ein stilles Land liegt unter einem Nachthimmel, und seine Wege werden von Feinden aus wirren Gedanken versperrt.", "rpg.auto.intro.2": "Du bist {hero}, ein junger Abenteurer. Jede richtige Antwort ist ein Schlag, und jede Tatsache, die du lernst, wandert als Schriftrolle in deinen Rucksack.", "rpg.auto.intro.3": "Besuche jedes Gebiet, sprich mit seinem Weisen und besiege die Feinde. Dann öffnen sich die Tore.", "rpg.auto.outro.1": "Der letzte Feind fällt und das Durcheinander lichtet sich. Alles, was du gelernt hast, gehört nun dir.", "rpg.areas.title": "Die Weltkarte", "rpg.areas.intro": "Wähle einen Ort. Jedes Gebiet ist ein Abenteuer, das eine Einheit lehrt.", "rpg.area.enter": "Betreten", "rpg.area.locked": "Gesperrt: Meistere zuerst {units}.", "rpg.area.quest": "Abenteuer", "rpg.final.title": "Der letzte Kampf", "rpg.final.ready": "Der letzte Feind mischt alle Einheiten. Antworte gut.", "rpg.final.locked": "Meistere jedes Gebiet (2 Sterne), um dich dem letzten Feind zu stellen.", "rpg.final.go": "Dem letzten Feind gegenübertreten", "rpg.auto.final": "Das Große Durcheinander", "rpg.to.title": "Zurück zum Titel", "rpg.hp": "LP {hp} / {max}", "rpg.map.label": "Karte von {area}", "rpg.where": "Du bist in {area}, in Spalte {x}, Zeile {y}.", "rpg.near": "Neben dir: {names}.", "rpg.near.none": "Niemand ist neben dir.", "rpg.side.left": "links", "rpg.side.right": "rechts", "rpg.side.up": "oben", "rpg.side.down": "unten", "rpg.pad": "Gehen", "rpg.move.up": "Hoch", "rpg.move.down": "Runter", "rpg.move.left": "Links", "rpg.move.right": "Rechts", "rpg.talk": "Sprechen", "rpg.fight": "Kämpfen", "rpg.talk.none": "Niemand ist neben dir. Geh zuerst zu jemandem hin.", "rpg.keys": "Pfeiltasten oder WASD zum Gehen, Enter zum Sprechen.", "rpg.targets": "Gehe zu", "rpg.goto": "Zu {name} gehen", "rpg.goto.gate": "Zum Tor gehen", "rpg.inventory": "Schriftrollen ({n})", "rpg.to.areas": "Weltkarte", "rpg.quest.title": "Questbuch", "rpg.quest.talk": "Sprich mit {name}", "rpg.quest.foes": "Besiege die Feinde ({done} von {total})", "rpg.quest.boss": "Besiege {name}", "rpg.quest.gate": "Öffne das Tor (2 Sterne)", "rpg.quest.done": "erledigt", "rpg.quest.todo": "offen", "rpg.msg.need.giver": "Sprich zuerst mit {name}: Das Abenteuer muss beginnen.", "rpg.msg.need.foes": "Besiege zuerst die anderen Feinde (noch {n}).", "rpg.msg.gate.shut": "Das Tor ist zu. Schließe das Abenteuer mit 2 Sternen ab, um es zu öffnen.", "rpg.msg.noway": "Dorthin führt kein Weg.", "rpg.msg.won": "Du hast {name} besiegt!", "rpg.msg.inn": "Du bist ohnmächtig geworden und im Gasthaus mit voller LP aufgewacht. {name} wartet noch; das Abenteuer geht weiter.", "rpg.msg.fled": "Du bist weggelaufen. {name} wartet noch.", "rpg.msg.accepted": "Auftrag angenommen: {area}.", "rpg.msg.walking": "Unterwegs …", "rpg.dialogue.next": "Weiter", "rpg.dialogue.bye": "Auf Wiedersehen", "rpg.dialogue.later": "Jetzt nicht", "rpg.dialogue.count": "Zeile {n} von {total}", "rpg.quest.accept": "Den Auftrag annehmen", "rpg.portrait": "Porträt von {name}", "rpg.auto.sage": "Der Weise", "rpg.auto.sage.1": "Willkommen, {hero}. Dies ist das Land von „{unit}“.", "rpg.auto.sage.2": "Hier streifen Feinde aus wirren Gedanken umher: {n} an der Zahl, und {boss} bewacht das Tor. Jede richtige Antwort ist ein Schlag.", "rpg.auto.sage.3": "Besiege sie alle mit dem, was du weißt, und das Tor öffnet sich. Viel Glück!", "rpg.sage.hint": "Besiege die Feinde (noch {n}), dann stelle dich {boss}.", "rpg.sage.boss": "Nur noch {boss} ist übrig. Stelle dich ihm!", "rpg.sage.done": "Gut gekämpft! Das Tor ist offen.", "rpg.sage.retry": "Das Tor braucht 2 Sterne. Versuche das Abenteuer noch einmal und antworte gleich beim ersten Mal richtig.", "rpg.auto.foe.1": "Nebelschleim", "rpg.auto.foe.2": "Zweifelfledermaus", "rpg.auto.foe.3": "Mythenwichtel", "rpg.auto.foe.4": "Gerüchtegeist", "rpg.auto.boss": "Wächter von „{unit}“", "rpg.battle.appears": "{name} versperrt den Weg!", "rpg.battle.boss": "Ein Endgegner: Seine Schläge sind härter.", "rpg.battle.hint": "Jede Frage ist ein Zug. Eine richtige Antwort trifft den Feind; eine falsche lässt ihn zurückschlagen. Mehrere richtige Antworten hintereinander machen deine Schläge stärker.", "rpg.battle.start": "Kämpfen!", "rpg.battle.flee": "Weglaufen", "rpg.battle.turn": "Runde {n}: Antworte, um {name} zu treffen.", "rpg.battle.hero": "Du", "rpg.battle.foe.hp": "{name}: LP {hp} von {max}", "rpg.battle.hero.hp": "Du: LP {hp} von {max}", "rpg.battle.streak": "Serie {n} (Schlag x{m})", "rpg.fx.strike": "Du triffst {name} mit {n}!", "rpg.fx.strike.streak": "Du triffst {name} mit {n}! (Serie x{m})", "rpg.fx.hit": "{name} trifft dich mit {n}.", "rpg.fx.both": "Du triffst {name} mit {n}, und er schlägt mit {m} zurück.", "rpg.fx.scroll": "Eine neue Schriftrolle ist in deinem Rucksack.", "rpg.fx.fall": "{name} fällt!", "rpg.fx.faint": "Du wirst ohnmächtig …", "rpg.next.turn": "Nächste Runde", "rpg.next.win": "Sieg!", "rpg.next.faint": "Im Gasthaus aufwachen", "rpg.inv.title": "Schriftrollen des Wissens", "rpg.inv.intro": "Jede Tatsache, die du mit einer richtigen Antwort im Kampf verdient hast.", "rpg.inv.empty": "Noch keine Schriftrollen. Jede richtige Antwort im Kampf bringt eine.", "rpg.inv.back": "Zurück", "rpg.inv.from": "Aus: {unit}", "rpg.qd.title": "Abenteuer geschafft!", "rpg.qd.accuracy": "{n} % gleich beim ersten Mal richtig", "rpg.qd.gate.open": "Das Tor ist offen: Geh hindurch, um weiterzukommen.", "rpg.qd.gate.shut": "Das Tor bleibt zu: Du brauchst 2 Sterne. Spiele das Abenteuer noch einmal.", "rpg.qd.unlocked": "Neues Gebiet: {units}", "rpg.qd.replay": "Das Abenteuer noch einmal spielen", "rpg.qd.world": "Zurück zur Karte", "rpg.outro.title": "Das Ende des Abenteuers", "rpg.end.sub": "Jedes Gebiet ist gemeistert und der letzte Feind ist gefallen.", "rpg.end.scrolls": "Gesammelte Schriftrollen: {n}", "rpg.story.end": "Ende", "rpg.msg.rest": "Du ruhst dich aus und gewinnst {n} LP zurück.", "rpg.battle.alt": "{hero} steht {foe} auf einer Wiese unter einem Nachthimmel gegenüber.", "rpg.mini.alt": "Kleine Karte von {area}", "rpg.final.finish": "Das Ende ansehen", "rpg.final.beaten": "Der letzte Feind ist besiegt.", "rpg.area.mastered": "Gemeistert", "rpg.story.alt": "Porträt von {name}", "rpg.quest.replay.hint": "Spiele das Abenteuer noch einmal, um mehr Sterne zu verdienen." } };
+  const Dd = (t) => t.length === 0 ? 0 : t.reduce((e, s) => e + s, 0) / t.length, Lz = { en: { "rpg.tagline": "A pixel quest through what you are learning", "rpg.title.art": "A pixel landscape: night sky, hills, a castle and a small hero", "rpg.hero.default": "Hero", "rpg.intro.title": "The story", "rpg.story.next": "Next", "rpg.story.begin": "Begin the quest", "rpg.story.skip": "Skip the story", "rpg.story.count": "Page {n} of {total}", "rpg.auto.intro.1": "A quiet land lies under a night sky, and its roads are blocked by foes made of muddled ideas.", "rpg.auto.intro.2": "You are {hero}, a young adventurer. Every right answer is a strike, and every fact you learn goes into your pack as a scroll.", "rpg.auto.intro.3": "Visit each area, speak with its sage and beat the foes. Then the gates will open.", "rpg.auto.outro.1": "The last foe falls and the muddle clears. Everything you learned is now yours to keep.", "rpg.areas.title": "The world map", "rpg.areas.intro": "Pick a place. Each area is a quest that teaches one unit.", "rpg.area.enter": "Enter", "rpg.area.locked": "Locked: master {units} first.", "rpg.area.quest": "Quest", "rpg.final.title": "The final battle", "rpg.final.ready": "The last foe mixes every unit. Answer well.", "rpg.final.locked": "Master every area (2 stars) to face the last foe.", "rpg.final.go": "Face the last foe", "rpg.auto.final": "The Grand Muddle", "rpg.to.title": "Back to the title", "rpg.hp": "HP {hp} / {max}", "rpg.map.label": "Map of {area}", "rpg.where": "You are in {area}, at column {x}, row {y}.", "rpg.near": "Next to you: {names}.", "rpg.near.none": "Nobody is next to you.", "rpg.side.left": "left", "rpg.side.right": "right", "rpg.side.up": "above", "rpg.side.down": "below", "rpg.pad": "Walk", "rpg.move.up": "Up", "rpg.move.down": "Down", "rpg.move.left": "Left", "rpg.move.right": "Right", "rpg.talk": "Talk", "rpg.fight": "Fight", "rpg.talk.none": "Nobody is next to you. Walk up to someone first.", "rpg.keys": "Arrow keys or WASD walk, Enter talks.", "rpg.targets": "Walk to", "rpg.goto": "Walk to {name}", "rpg.goto.gate": "Walk to the gate", "rpg.inventory": "Scrolls ({n})", "rpg.to.areas": "World map", "rpg.quest.title": "Quest log", "rpg.quest.talk": "Talk to {name}", "rpg.quest.foes": "Beat the foes ({done} of {total})", "rpg.quest.boss": "Defeat {name}", "rpg.quest.gate": "Open the gate (2 stars)", "rpg.quest.done": "done", "rpg.quest.todo": "to do", "rpg.msg.need.giver": "Speak with {name} first: the quest has to begin.", "rpg.msg.need.foes": "Beat the other foes first ({n} left).", "rpg.msg.gate.shut": "The gate is shut. Finish the quest with 2 stars to open it.", "rpg.msg.noway": "There is no way there.", "rpg.msg.won": "You beat {name}!", "rpg.msg.inn": "You fainted and woke up at the inn with full HP. {name} is still waiting; the quest goes on.", "rpg.msg.fled": "You ran away. {name} is still waiting.", "rpg.msg.accepted": "Quest accepted: {area}.", "rpg.msg.walking": "Walking...", "rpg.dialogue.next": "Continue", "rpg.dialogue.bye": "Goodbye", "rpg.dialogue.later": "Not now", "rpg.dialogue.count": "Line {n} of {total}", "rpg.quest.accept": "Accept the quest", "rpg.portrait": "Portrait of {name}", "rpg.auto.sage": "The Sage", "rpg.auto.sage.1": 'Welcome, {hero}. This is the land of "{unit}".', "rpg.auto.sage.2": "Foes made of muddled ideas roam here: {n} of them, and {boss} guards the gate. Every right answer is a strike.", "rpg.auto.sage.3": "Beat them all with what you know, and the gate will open. Good luck!", "rpg.sage.hint": "Beat the foes ({n} left), then face {boss}.", "rpg.sage.boss": "Only {boss} is left. Face it!", "rpg.sage.done": "Well fought! The gate is open.", "rpg.sage.retry": "The gate needs 2 stars. Try the quest again and answer right the first time.", "rpg.auto.foe.1": "Fog Slime", "rpg.auto.foe.2": "Doubt Bat", "rpg.auto.foe.3": "Myth Imp", "rpg.auto.foe.4": "Rumour Ghost", "rpg.auto.boss": 'Guardian of "{unit}"', "rpg.battle.appears": "{name} blocks the way!", "rpg.battle.boss": "A boss: its strikes are harder.", "rpg.battle.hint": "Every question is a move. A right answer strikes the foe; a wrong one lets it hit back. Answers right in a row make your strikes stronger.", "rpg.battle.start": "Fight!", "rpg.battle.flee": "Run away", "rpg.battle.turn": "Turn {n}: answer to strike {name}.", "rpg.battle.hero": "You", "rpg.battle.foe.hp": "{name}: HP {hp} of {max}", "rpg.battle.hero.hp": "You: HP {hp} of {max}", "rpg.battle.streak": "Streak {n} (strike x{m})", "rpg.fx.strike": "You strike {name} for {n}!", "rpg.fx.strike.streak": "You strike {name} for {n}! (streak x{m})", "rpg.fx.hit": "{name} hits you for {n}.", "rpg.fx.both": "You hit {name} for {n}, and it hits back for {m}.", "rpg.fx.scroll": "A new scroll is in your pack.", "rpg.fx.fall": "{name} falls!", "rpg.fx.faint": "You faint...", "rpg.next.turn": "Next turn", "rpg.next.win": "Victory!", "rpg.next.faint": "Wake up at the inn", "rpg.inv.title": "Scrolls of knowledge", "rpg.inv.intro": "Every fact you earned with a right answer in battle.", "rpg.inv.empty": "No scrolls yet. Each right answer in battle adds one.", "rpg.inv.back": "Back", "rpg.inv.from": "From: {unit}", "rpg.qd.title": "Quest complete!", "rpg.qd.accuracy": "{n}% right the first time", "rpg.qd.gate.open": "The gate is open: walk through it to go on.", "rpg.qd.gate.shut": "The gate stays shut: you need 2 stars. Replay the quest.", "rpg.qd.unlocked": "New area: {units}", "rpg.qd.replay": "Replay the quest", "rpg.qd.world": "Back to the map", "rpg.outro.title": "The end of the quest", "rpg.end.sub": "Every area is mastered and the last foe has fallen.", "rpg.end.scrolls": "Scrolls collected: {n}", "rpg.story.end": "The end", "rpg.msg.rest": "You rest and win back {n} HP.", "rpg.battle.alt": "{hero} faces {foe} on a grassy field under a night sky.", "rpg.mini.alt": "Small map of {area}", "rpg.final.finish": "See the ending", "rpg.final.beaten": "The last foe is beaten.", "rpg.area.mastered": "Mastered", "rpg.story.alt": "Portrait of {name}", "rpg.quest.replay.hint": "Replay the quest to earn more stars." }, hr: { "rpg.tagline": "Pikselna pustolovina kroz ono što učiš", "rpg.title.art": "Pikselni krajolik: noćno nebo, brežuljci, dvorac i mali junak", "rpg.hero.default": "Junak", "rpg.intro.title": "Priča", "rpg.story.next": "Dalje", "rpg.story.begin": "Započni pustolovinu", "rpg.story.skip": "Preskoči priču", "rpg.story.count": "Stranica {n} od {total}", "rpg.auto.intro.1": "Mirna zemlja leži pod noćnim nebom, a putove joj zatvaraju neprijatelji sazdani od pomiješanih ideja.", "rpg.auto.intro.2": "Ti si {hero}, mladi pustolov. Svaki točan odgovor je udarac, a svaka činjenica koju naučiš ide u torbu kao svitak.", "rpg.auto.intro.3": "Posjeti svako područje, razgovaraj s mudracem i pobijedi neprijatelje. Tada će se vrata otvoriti.", "rpg.auto.outro.1": "Posljednji neprijatelj pada i zbrka se razbistrila. Sve što si naučio sada je tvoje.", "rpg.areas.title": "Karta svijeta", "rpg.areas.intro": "Odaberi mjesto. Svako područje je zadatak koji uči jednu cjelinu.", "rpg.area.enter": "Uđi", "rpg.area.locked": "Zaključano: prvo savladaj {units}.", "rpg.area.quest": "Zadatak", "rpg.final.title": "Završna bitka", "rpg.final.ready": "Posljednji neprijatelj miješa sve cjeline. Odgovaraj pažljivo.", "rpg.final.locked": "Savladaj svako područje (2 zvjezdice) da bi se suočio s posljednjim neprijateljem.", "rpg.final.go": "Suoči se s posljednjim neprijateljem", "rpg.auto.final": "Veliki Zbrkanac", "rpg.to.title": "Natrag na naslovnicu", "rpg.hp": "HP {hp} / {max}", "rpg.map.label": "Karta područja: {area}", "rpg.where": "Nalaziš se u području {area}, u stupcu {x}, retku {y}.", "rpg.near": "Pokraj tebe: {names}.", "rpg.near.none": "Pokraj tebe nema nikoga.", "rpg.side.left": "lijevo", "rpg.side.right": "desno", "rpg.side.up": "iznad", "rpg.side.down": "ispod", "rpg.pad": "Hodaj", "rpg.move.up": "Gore", "rpg.move.down": "Dolje", "rpg.move.left": "Lijevo", "rpg.move.right": "Desno", "rpg.talk": "Razgovaraj", "rpg.fight": "Bori se", "rpg.talk.none": "Pokraj tebe nema nikoga. Prvo priđi nekome.", "rpg.keys": "Strelice ili WASD za hodanje, Enter za razgovor.", "rpg.targets": "Idi do", "rpg.goto": "Idi do: {name}", "rpg.goto.gate": "Idi do vrata", "rpg.inventory": "Svici ({n})", "rpg.to.areas": "Karta svijeta", "rpg.quest.title": "Dnevnik zadatka", "rpg.quest.talk": "Razgovaraj s: {name}", "rpg.quest.foes": "Pobijedi neprijatelje ({done} od {total})", "rpg.quest.boss": "Pobijedi: {name}", "rpg.quest.gate": "Otvori vrata (2 zvjezdice)", "rpg.quest.done": "gotovo", "rpg.quest.todo": "preostaje", "rpg.msg.need.giver": "Prvo razgovaraj s: {name}. Zadatak mora početi.", "rpg.msg.need.foes": "Prvo pobijedi ostale neprijatelje (još {n}).", "rpg.msg.gate.shut": "Vrata su zatvorena. Završi zadatak s 2 zvjezdice da ih otvoriš.", "rpg.msg.noway": "Tamo nema puta.", "rpg.msg.won": "Pobijedio si: {name}!", "rpg.msg.inn": "Onesvijestio si se i probudio u gostionici s punim HP-om. {name} te još čeka; zadatak se nastavlja.", "rpg.msg.fled": "Pobjegao si. {name} te još čeka.", "rpg.msg.accepted": "Zadatak prihvaćen: {area}.", "rpg.msg.walking": "Hodam...", "rpg.dialogue.next": "Nastavi", "rpg.dialogue.bye": "Doviđenja", "rpg.dialogue.later": "Ne sada", "rpg.dialogue.count": "Redak {n} od {total}", "rpg.quest.accept": "Prihvati zadatak", "rpg.portrait": "Portret: {name}", "rpg.auto.sage": "Mudrac", "rpg.auto.sage.1": 'Dobro došao, {hero}. Ovo je zemlja cjeline "{unit}".', "rpg.auto.sage.2": "Ovdje lutaju neprijatelji sazdani od pomiješanih ideja: njih {n}, a vrata čuva {boss}. Svaki točan odgovor je udarac.", "rpg.auto.sage.3": "Pobijedi ih svojim znanjem i vrata će se otvoriti. Sretno!", "rpg.sage.hint": "Pobijedi neprijatelje (još {n}), a zatim se suoči s: {boss}.", "rpg.sage.boss": "Ostao je samo {boss}. Suoči se s njim!", "rpg.sage.done": "Dobro si se borio! Vrata su otvorena.", "rpg.sage.retry": "Za vrata trebaju 2 zvjezdice. Ponovi zadatak i odgovori točno iz prvog pokušaja.", "rpg.auto.foe.1": "Magleni Sluz", "rpg.auto.foe.2": "Šišmiš Sumnje", "rpg.auto.foe.3": "Vragolan Mita", "rpg.auto.foe.4": "Duh Glasina", "rpg.auto.boss": 'Čuvar cjeline "{unit}"', "rpg.battle.appears": "{name} ti zatvara put!", "rpg.battle.boss": "Šef: njegovi su udarci jači.", "rpg.battle.hint": "Svako pitanje je potez. Točan odgovor udara neprijatelja, a netočan mu dopušta da uzvrati. Uzastopni točni odgovori jačaju tvoje udarce.", "rpg.battle.start": "U borbu!", "rpg.battle.flee": "Pobjegni", "rpg.battle.turn": "Potez {n}: odgovori i udari: {name}.", "rpg.battle.hero": "Ti", "rpg.battle.foe.hp": "{name}: HP {hp} od {max}", "rpg.battle.hero.hp": "Ti: HP {hp} od {max}", "rpg.battle.streak": "Niz {n} (udarac x{m})", "rpg.fx.strike": "Udaraš: {name}, šteta {n}!", "rpg.fx.strike.streak": "Udaraš: {name}, šteta {n}! (niz x{m})", "rpg.fx.hit": "{name} te udara, šteta {n}.", "rpg.fx.both": "Pogađaš: {name}, šteta {n}, a on uzvraća štetom {m}.", "rpg.fx.scroll": "Novi svitak je u tvojoj torbi.", "rpg.fx.fall": "{name} pada!", "rpg.fx.faint": "Onesvijestio si se...", "rpg.next.turn": "Sljedeći potez", "rpg.next.win": "Pobjeda!", "rpg.next.faint": "Probudi se u gostionici", "rpg.inv.title": "Svici znanja", "rpg.inv.intro": "Svaka činjenica koju si zaradio točnim odgovorom u borbi.", "rpg.inv.empty": "Još nema svitaka. Svaki točan odgovor u borbi dodaje jedan.", "rpg.inv.back": "Natrag", "rpg.inv.from": "Iz cjeline: {unit}", "rpg.qd.title": "Zadatak je gotov!", "rpg.qd.accuracy": "{n}% točno iz prvog pokušaja", "rpg.qd.gate.open": "Vrata su otvorena: prođi kroz njih da nastaviš.", "rpg.qd.gate.shut": "Vrata ostaju zatvorena: trebaju ti 2 zvjezdice. Ponovi zadatak.", "rpg.qd.unlocked": "Novo područje: {units}", "rpg.qd.replay": "Ponovi zadatak", "rpg.qd.world": "Natrag na kartu", "rpg.outro.title": "Kraj pustolovine", "rpg.end.sub": "Svako je područje savladano i posljednji je neprijatelj pao.", "rpg.end.scrolls": "Skupljeni svici: {n}", "rpg.story.end": "Kraj", "rpg.msg.rest": "Odmaraš i vraćaš {n} HP.", "rpg.battle.alt": "{hero} se suočava s neprijateljem {foe} na travnatom polju pod noćnim nebom.", "rpg.mini.alt": "Mala karta područja: {area}", "rpg.final.finish": "Pogledaj završetak", "rpg.final.beaten": "Posljednji neprijatelj je pobijeđen.", "rpg.area.mastered": "Savladano", "rpg.story.alt": "Portret: {name}", "rpg.quest.replay.hint": "Ponovi zadatak da zaradiš više zvjezdica." }, de: { "rpg.tagline": "Ein Pixel-Abenteuer durch das, was du lernst", "rpg.title.art": "Eine Pixel-Landschaft: Nachthimmel, Hügel, ein Schloss und ein kleiner Held", "rpg.hero.default": "Held", "rpg.intro.title": "Die Geschichte", "rpg.story.next": "Weiter", "rpg.story.begin": "Das Abenteuer beginnen", "rpg.story.skip": "Die Geschichte überspringen", "rpg.story.count": "Seite {n} von {total}", "rpg.auto.intro.1": "Ein stilles Land liegt unter einem Nachthimmel, und seine Wege werden von Feinden aus wirren Gedanken versperrt.", "rpg.auto.intro.2": "Du bist {hero}, ein junger Abenteurer. Jede richtige Antwort ist ein Schlag, und jede Tatsache, die du lernst, wandert als Schriftrolle in deinen Rucksack.", "rpg.auto.intro.3": "Besuche jedes Gebiet, sprich mit seinem Weisen und besiege die Feinde. Dann öffnen sich die Tore.", "rpg.auto.outro.1": "Der letzte Feind fällt und das Durcheinander lichtet sich. Alles, was du gelernt hast, gehört nun dir.", "rpg.areas.title": "Die Weltkarte", "rpg.areas.intro": "Wähle einen Ort. Jedes Gebiet ist ein Abenteuer, das eine Einheit lehrt.", "rpg.area.enter": "Betreten", "rpg.area.locked": "Gesperrt: Meistere zuerst {units}.", "rpg.area.quest": "Abenteuer", "rpg.final.title": "Der letzte Kampf", "rpg.final.ready": "Der letzte Feind mischt alle Einheiten. Antworte gut.", "rpg.final.locked": "Meistere jedes Gebiet (2 Sterne), um dich dem letzten Feind zu stellen.", "rpg.final.go": "Dem letzten Feind gegenübertreten", "rpg.auto.final": "Das Große Durcheinander", "rpg.to.title": "Zurück zum Titel", "rpg.hp": "LP {hp} / {max}", "rpg.map.label": "Karte von {area}", "rpg.where": "Du bist in {area}, in Spalte {x}, Zeile {y}.", "rpg.near": "Neben dir: {names}.", "rpg.near.none": "Niemand ist neben dir.", "rpg.side.left": "links", "rpg.side.right": "rechts", "rpg.side.up": "oben", "rpg.side.down": "unten", "rpg.pad": "Gehen", "rpg.move.up": "Hoch", "rpg.move.down": "Runter", "rpg.move.left": "Links", "rpg.move.right": "Rechts", "rpg.talk": "Sprechen", "rpg.fight": "Kämpfen", "rpg.talk.none": "Niemand ist neben dir. Geh zuerst zu jemandem hin.", "rpg.keys": "Pfeiltasten oder WASD zum Gehen, Enter zum Sprechen.", "rpg.targets": "Gehe zu", "rpg.goto": "Zu {name} gehen", "rpg.goto.gate": "Zum Tor gehen", "rpg.inventory": "Schriftrollen ({n})", "rpg.to.areas": "Weltkarte", "rpg.quest.title": "Questbuch", "rpg.quest.talk": "Sprich mit {name}", "rpg.quest.foes": "Besiege die Feinde ({done} von {total})", "rpg.quest.boss": "Besiege {name}", "rpg.quest.gate": "Öffne das Tor (2 Sterne)", "rpg.quest.done": "erledigt", "rpg.quest.todo": "offen", "rpg.msg.need.giver": "Sprich zuerst mit {name}: Das Abenteuer muss beginnen.", "rpg.msg.need.foes": "Besiege zuerst die anderen Feinde (noch {n}).", "rpg.msg.gate.shut": "Das Tor ist zu. Schließe das Abenteuer mit 2 Sternen ab, um es zu öffnen.", "rpg.msg.noway": "Dorthin führt kein Weg.", "rpg.msg.won": "Du hast {name} besiegt!", "rpg.msg.inn": "Du bist ohnmächtig geworden und im Gasthaus mit voller LP aufgewacht. {name} wartet noch; das Abenteuer geht weiter.", "rpg.msg.fled": "Du bist weggelaufen. {name} wartet noch.", "rpg.msg.accepted": "Auftrag angenommen: {area}.", "rpg.msg.walking": "Unterwegs …", "rpg.dialogue.next": "Weiter", "rpg.dialogue.bye": "Auf Wiedersehen", "rpg.dialogue.later": "Jetzt nicht", "rpg.dialogue.count": "Zeile {n} von {total}", "rpg.quest.accept": "Den Auftrag annehmen", "rpg.portrait": "Porträt von {name}", "rpg.auto.sage": "Der Weise", "rpg.auto.sage.1": "Willkommen, {hero}. Dies ist das Land von „{unit}“.", "rpg.auto.sage.2": "Hier streifen Feinde aus wirren Gedanken umher: {n} an der Zahl, und {boss} bewacht das Tor. Jede richtige Antwort ist ein Schlag.", "rpg.auto.sage.3": "Besiege sie alle mit dem, was du weißt, und das Tor öffnet sich. Viel Glück!", "rpg.sage.hint": "Besiege die Feinde (noch {n}), dann stelle dich {boss}.", "rpg.sage.boss": "Nur noch {boss} ist übrig. Stelle dich ihm!", "rpg.sage.done": "Gut gekämpft! Das Tor ist offen.", "rpg.sage.retry": "Das Tor braucht 2 Sterne. Versuche das Abenteuer noch einmal und antworte gleich beim ersten Mal richtig.", "rpg.auto.foe.1": "Nebelschleim", "rpg.auto.foe.2": "Zweifelfledermaus", "rpg.auto.foe.3": "Mythenwichtel", "rpg.auto.foe.4": "Gerüchtegeist", "rpg.auto.boss": "Wächter von „{unit}“", "rpg.battle.appears": "{name} versperrt den Weg!", "rpg.battle.boss": "Ein Endgegner: Seine Schläge sind härter.", "rpg.battle.hint": "Jede Frage ist ein Zug. Eine richtige Antwort trifft den Feind; eine falsche lässt ihn zurückschlagen. Mehrere richtige Antworten hintereinander machen deine Schläge stärker.", "rpg.battle.start": "Kämpfen!", "rpg.battle.flee": "Weglaufen", "rpg.battle.turn": "Runde {n}: Antworte, um {name} zu treffen.", "rpg.battle.hero": "Du", "rpg.battle.foe.hp": "{name}: LP {hp} von {max}", "rpg.battle.hero.hp": "Du: LP {hp} von {max}", "rpg.battle.streak": "Serie {n} (Schlag x{m})", "rpg.fx.strike": "Du triffst {name} mit {n}!", "rpg.fx.strike.streak": "Du triffst {name} mit {n}! (Serie x{m})", "rpg.fx.hit": "{name} trifft dich mit {n}.", "rpg.fx.both": "Du triffst {name} mit {n}, und er schlägt mit {m} zurück.", "rpg.fx.scroll": "Eine neue Schriftrolle ist in deinem Rucksack.", "rpg.fx.fall": "{name} fällt!", "rpg.fx.faint": "Du wirst ohnmächtig …", "rpg.next.turn": "Nächste Runde", "rpg.next.win": "Sieg!", "rpg.next.faint": "Im Gasthaus aufwachen", "rpg.inv.title": "Schriftrollen des Wissens", "rpg.inv.intro": "Jede Tatsache, die du mit einer richtigen Antwort im Kampf verdient hast.", "rpg.inv.empty": "Noch keine Schriftrollen. Jede richtige Antwort im Kampf bringt eine.", "rpg.inv.back": "Zurück", "rpg.inv.from": "Aus: {unit}", "rpg.qd.title": "Abenteuer geschafft!", "rpg.qd.accuracy": "{n} % gleich beim ersten Mal richtig", "rpg.qd.gate.open": "Das Tor ist offen: Geh hindurch, um weiterzukommen.", "rpg.qd.gate.shut": "Das Tor bleibt zu: Du brauchst 2 Sterne. Spiele das Abenteuer noch einmal.", "rpg.qd.unlocked": "Neues Gebiet: {units}", "rpg.qd.replay": "Das Abenteuer noch einmal spielen", "rpg.qd.world": "Zurück zur Karte", "rpg.outro.title": "Das Ende des Abenteuers", "rpg.end.sub": "Jedes Gebiet ist gemeistert und der letzte Feind ist gefallen.", "rpg.end.scrolls": "Gesammelte Schriftrollen: {n}", "rpg.story.end": "Ende", "rpg.msg.rest": "Du ruhst dich aus und gewinnst {n} LP zurück.", "rpg.battle.alt": "{hero} steht {foe} auf einer Wiese unter einem Nachthimmel gegenüber.", "rpg.mini.alt": "Kleine Karte von {area}", "rpg.final.finish": "Das Ende ansehen", "rpg.final.beaten": "Der letzte Feind ist besiegt.", "rpg.area.mastered": "Gemeistert", "rpg.story.alt": "Porträt von {name}", "rpg.quest.replay.hint": "Spiele das Abenteuer noch einmal, um mehr Sterne zu verdienen." } };
   function io(t, e, s, n, i) {
     const r = d("span", { class: "hp-fill ".concat(n === "foe" ? "is-foe" : "") }), o = d("span", { class: "hp-text" }), a = d("div", { class: "hp-line", testid: i }, o, d("span", { class: "hp-bar", "aria-hidden": "true" }, r)), c = (l, u) => {
       o.textContent = t(l, u);
-      const h = pz(l, u);
+      const h = fz(l, u);
       r.style.width = "".concat(h, "%"), r.classList.toggle("is-low", h <= 30 && n === "hero"), a.setAttribute("data-hp", String(l)), a.setAttribute("data-max", String(u));
     };
     return c(e, s), { el: a, set: c };
   }
-  const Lz = (t) => Number.isInteger(t) ? String(t) : t.toFixed(2).replace(/0$/, "");
-  function Cz(t) {
-    const e = d("canvas", { class: "rpg-canvas rpg-battle-canvas", width: ut * 3, height: Nd * 3, role: "img", "aria-label": t.words.alt, testid: "battle-scene" }), s = io(t.words.heroLine, t.battle.hp, t.battle.maxHp, "hero", "hero-hp"), n = io(t.words.foeLine, t.battle.foeHp, t.battle.foeMax, "foe", "foe-hp"), i = d("p", { class: "rpg-streak", testid: "streak" }), r = d("div", { class: "rpg-scene-view" }, e), o = d("div", { class: "rpg-scene" }, d("div", { class: "rpg-scene-bars" }, d("div", { class: "rpg-panel" }, d("span", { class: "rpg-who" }, t.words.hero), s.el), d("div", { class: "rpg-panel" }, d("span", { class: "rpg-who" }, t.words.foeName), n.el)), r, i), a = (u, h) => Iz(e, t.pal, { foe: t.foe, boss: t.boss, down: u, heroDown: h }, t.seed, t.skin), c = (u, h) => {
+  const Cz = (t) => Number.isInteger(t) ? String(t) : t.toFixed(2).replace(/0$/, "");
+  function Zz(t) {
+    const e = d("canvas", { class: "rpg-canvas rpg-battle-canvas", width: ut * 3, height: Nd * 3, role: "img", "aria-label": t.words.alt, testid: "battle-scene" }), s = io(t.words.heroLine, t.battle.hp, t.battle.maxHp, "hero", "hero-hp"), n = io(t.words.foeLine, t.battle.foeHp, t.battle.foeMax, "foe", "foe-hp"), i = d("p", { class: "rpg-streak", testid: "streak" }), r = d("div", { class: "rpg-scene-view" }, e), o = d("div", { class: "rpg-scene" }, d("div", { class: "rpg-scene-bars" }, d("div", { class: "rpg-panel" }, d("span", { class: "rpg-who" }, t.words.hero), s.el), d("div", { class: "rpg-panel" }, d("span", { class: "rpg-who" }, t.words.foeName), n.el)), r, i), a = (u, h) => Mz(e, t.pal, { foe: t.foe, boss: t.boss, down: u, heroDown: h }, t.seed, t.skin), c = (u, h) => {
       const p = d("span", { class: "rpg-pop ".concat(h), "aria-hidden": "true" }, u);
       r.appendChild(p), window.setTimeout(() => p.remove(), 1300);
     }, l = (u, h) => {
       var _a3, _b3;
       s.set(u.hp, u.maxHp), n.set(u.foeHp, u.foeMax);
       const p = to(u.streak);
-      i.textContent = t.words.streakLine(u.streak, Lz(p)), i.classList.toggle("is-hot", u.streak > 0), o.setAttribute("data-streak", String(u.streak)), a((_a3 = h == null ? void 0 : h.foeDown) != null ? _a3 : false, (_b3 = h == null ? void 0 : h.heroDown) != null ? _b3 : false), h && (h.dealt > 0 && c("-".concat(h.dealt), "is-foe"), h.taken > 0 && (c("-".concat(h.taken), "is-hero"), Ms(r, "is-hit", 500)));
+      i.textContent = t.words.streakLine(u.streak, Cz(p)), i.classList.toggle("is-hot", u.streak > 0), o.setAttribute("data-streak", String(u.streak)), a((_a3 = h == null ? void 0 : h.foeDown) != null ? _a3 : false, (_b3 = h == null ? void 0 : h.heroDown) != null ? _b3 : false), h && (h.dealt > 0 && c("-".concat(h.dealt), "is-foe"), h.taken > 0 && (c("-".concat(h.taken), "is-hero"), Ms(r, "is-hit", 500)));
     };
     return l(t.battle), { el: o, update: l };
   }
@@ -11087,12 +11087,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const e = d("canvas", { class: "rpg-portrait", width: 16, height: 16, role: "img", "aria-label": t.alt, testid: "portrait" }), s = e.getContext("2d");
     return s && (s.imageSmoothingEnabled = false, $t(s, t.sprite, t.pal, 0, 0)), e;
   }
-  const Cd = "rpg", Zz = "pixel", Zd = 40, Uz = 70, Ud = (t) => {
+  const Cd = "rpg", Uz = "pixel", Zd = 40, Bz = 70, Ud = (t) => {
     let e = 2166136261;
     for (let s = 0; s < t.length; s++) e = Math.imul(e ^ t.charCodeAt(s), 16777619);
     return e >>> 0;
-  }, Bz = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right", w: "up", W: "up", s: "down", S: "down", a: "left", A: "left", d: "right", D: "right" };
-  class Fz {
+  }, Fz = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right", w: "up", W: "up", s: "down", S: "down", a: "left", A: "left", d: "right", D: "right" };
+  class Kz {
     constructor(e) {
       __publicField(this, "host");
       __publicField(this, "session");
@@ -11100,21 +11100,21 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       __publicField(this, "titleState", ns());
       __publicField(this, "progress", /* @__PURE__ */ new Map());
       __publicField(this, "palette", null);
-      __publicField(this, "skin", bz());
+      __publicField(this, "skin", vz());
       __publicField(this, "scrolls", []);
       __publicField(this, "hp", Te);
       __publicField(this, "w", null);
       __publicField(this, "message", "");
       __publicField(this, "event", "");
       __publicField(this, "reduced", typeof window < "u" && typeof window.matchMedia == "function" && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-      this.host = e, this.session = new Cs(e, { shellId: Cd, theme: Zz, strings: Dz }), this.layout = Bl(this.session.pack, this.session.section()), this.loadScrolls();
+      this.host = e, this.session = new Cs(e, { shellId: Cd, theme: Uz, strings: Lz }), this.layout = Bl(this.session.pack, this.session.section()), this.loadScrolls();
     }
     get s() {
       return this.session.s;
     }
     get pal() {
       var _a3;
-      return (_a3 = this.palette) != null ? _a3 : this.palette = kz(this.host.root), this.palette;
+      return (_a3 = this.palette) != null ? _a3 : this.palette = bz(this.host.root), this.palette;
     }
     mount() {
       const e = this.session;
@@ -11235,7 +11235,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const e = this.session, s = this.s, n = e.allMastered(), i = this.takeMessage(), r = (l) => {
         var _a3, _b3;
         const u = !e.isUnlocked(l.unitId), h = e.unitStars(l.unitId), p = e.isMastered(l.unitId), f = ((_b3 = (_a3 = e.pack.units.find((k) => k.id === l.unitId)) == null ? void 0 : _a3.requires) != null ? _b3 : []).filter((k) => !e.isMastered(k)).map((k) => e.unitTitle(k)), m = d("canvas", { class: "rpg-mini", width: 192, height: Math.round(192 * l.rows.length / Math.max(...l.rows.map((k) => k.length))), role: "img", "aria-label": s("rpg.mini.alt", { area: this.areaName(l) }) });
-        Mz(m, this.pal, l.rows, [...l.npcs.map((k) => ({ at: k.at, kind: "giver" })), ...l.foes.map((k) => ({ at: k.at, kind: "foe" })), { at: l.boss.at, kind: "boss" }]);
+        Oz(m, this.pal, l.rows, [...l.npcs.map((k) => ({ at: k.at, kind: "giver" })), ...l.foes.map((k) => ({ at: k.at, kind: "foe" })), { at: l.boss.at, kind: "boss" }]);
         const g = T("area-".concat(l.id), [m, d("span", { class: "rpg-area-title" }, this.areaName(l)), d("span", { class: "rpg-area-unit" }, e.unitTitle(l.unitId)), u ? d("span", { class: "rpg-area-need" }, s("rpg.area.locked", { units: f.join(", ") })) : p ? d("span", { class: "rpg-area-need" }, s("rpg.area.mastered")) : d("span", { class: "rpg-area-need" }, s("rpg.area.quest")), e.stars(h)], () => this.enterArea(l), { class: "rpg-area-card".concat(u ? " is-locked" : "").concat(p ? " is-mastered" : ""), "data-stars": String(h), "data-locked": String(u), "data-unit": l.unitId, ...u ? { disabled: true } : {} });
         return d("li", {}, g);
       }, o = e.bossStars() >= 1, a = d("div", { class: "rpg-panel rpg-final" }, d("h2", {}, s("rpg.final.title")), d("p", {}, s(n ? "rpg.final.ready" : "rpg.final.locked")), e.stars(e.bossStars(), "final-stars"), d("div", { class: "rpg-actions" }, T("final-boss", s("rpg.final.go"), () => this.finalIntro(), { class: "btn btn-primary", "data-stars": String(e.bossStars()), "data-locked": String(!n), ...n ? {} : { disabled: true } }), o ? T("finish", s("rpg.final.finish"), () => this.story("outro", 0), { class: "btn" }) : null)), c = d("section", { class: "rpg-areas" }, d("h1", { class: "screen-title", tabindex: "-1", testid: "areas-title" }, s("rpg.areas.title")), d("p", { class: "subject" }, s("rpg.areas.intro")), i ? d("p", { class: "rpg-note rpg-message", role: "status", testid: "message" }, i) : null, d("ul", { class: "rpg-area-list", testid: "area-list" }, this.layout.areas.map(r)), a, d("div", { class: "rpg-actions" }, T("inventory", s("rpg.inventory", { n: this.scrolls.length }), () => this.inventory(() => this.areas()), { class: "btn" }), T("to-title", s("rpg.to.title"), () => this.title(), { class: "btn btn-ghost" })));
@@ -11268,7 +11268,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return d("li", {}, T(_.testid, O, () => this.gotoTarget(_.testid), { class: "btn btn-small", "data-kind": _.kind }));
       }, k = d("div", { class: "rpg-panel" }, d("h2", {}, n("rpg.targets")), d("ul", { class: "rpg-targets", testid: "targets" }, m.map(g))), b = e.foes.filter((_) => i.foesDown.includes(_.id)).length, v = (_, z, O) => d("li", { class: O ? "is-done" : "", testid: "quest-".concat(_), "data-done": String(O) }, d("span", { class: "tick", "aria-hidden": "true" }, O ? "✔" : "○"), d("span", {}, z), d("span", { class: "sr-only" }, O ? " (".concat(n("rpg.quest.done"), ")") : " (".concat(n("rpg.quest.todo"), ")"))), w = d("div", { class: "rpg-panel rpg-quest", testid: "quest-log" }, d("h2", {}, n("rpg.quest.title")), d("ol", {}, v("talk", n("rpg.quest.talk", { name: o ? this.npcName(e, o.id) : "" }), i.accepted), e.foes.length > 0 ? v("foes", n("rpg.quest.foes", { done: b, total: e.foes.length }), b === e.foes.length && i.accepted) : null, v("boss", n("rpg.quest.boss", { name: this.bossName(e) }), i.bossDown), e.gate ? v("gate", n("rpg.quest.gate"), r) : null)), y = d("section", { class: "rpg-world" }, d("header", { class: "rpg-hud" }, d("h1", { class: "screen-title rpg-area-name", tabindex: "-1", testid: "area-name" }, this.areaName(e)), d("div", { class: "rpg-hud-tools" }, a.el, T("inventory", n("rpg.inventory", { n: this.scrolls.length }), () => this.inventory(() => this.world(e)), { class: "btn btn-small" }), T("to-areas", n("rpg.to.areas"), () => this.areas(), { class: "btn btn-small" }))), d("div", { class: "rpg-stage" }, d("div", { class: "rpg-view" }, c, l, d("div", { class: "rpg-note" }, u), w), d("aside", { class: "rpg-side" }, f, k)));
       this.session.render("world", y, { unitId: e.unitId, view: this.worldView(e, i, false) });
-      const $ = new Az({ area: e, pal: this.pal, seed: Ud("".concat(s.pack.id, ":").concat(e.id)) % 997, reduced: this.reduced, skin: this.skin });
+      const $ = new Tz({ area: e, pal: this.pal, seed: Ud("".concat(s.pack.id, ":").concat(e.id)) % 997, reduced: this.reduced, skin: this.skin });
       $.canvas.setAttribute("role", "img"), $.canvas.setAttribute("aria-label", n("rpg.map.label", { area: this.areaName(e) })), $.canvas.setAttribute("data-testid", "world-canvas"), c.appendChild($.canvas);
       const x = { area: e, p: i, canvas: $, surroundings: l, message: u, talk: h, hp: a, walking: false, step: 0, timer: 0 };
       this.w = x, $.fit(c), this.refresh();
@@ -11287,7 +11287,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     onKey(e) {
       if (!this.w || this.session.screen !== "world" || e.ctrlKey || e.metaKey || e.altKey || Is(e.target)) return;
-      const n = Bz[e.key];
+      const n = Fz[e.key];
       if (n) {
         e.preventDefault(), this.move(n);
         return;
@@ -11303,7 +11303,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (!s || s.walking) return;
       const { area: n, p: i } = s;
       i.face = e;
-      const r = Rz(n, i, e, this.gateOpen(n));
+      const r = Dz(n, i, e, this.gateOpen(n));
       r.kind === "move" ? (i.pos = r.pos, s.step = s.step === 0 ? 1 : 0, this.event = "moved", this.refresh()) : r.kind === "bump" ? this.interact(r.person) : r.kind === "gate" ? this.areas() : es(n.rows, so(i.pos, e)) === "G" ? this.say(this.s("rpg.msg.gate.shut"), "gate-shut") : this.refresh();
     }
     talk() {
@@ -11345,7 +11345,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const l = (u) => {
         if (this.w !== s) return;
         const h = o[u];
-        i.face = qs(i.pos, h), i.pos = h, s.step = s.step === 0 ? 1 : 0, this.refresh(), u + 1 < o.length ? s.timer = window.setTimeout(() => l(u + 1), Uz) : c();
+        i.face = qs(i.pos, h), i.pos = h, s.step = s.step === 0 ? 1 : 0, this.refresh(), u + 1 < o.length ? s.timer = window.setTimeout(() => l(u + 1), Bz) : c();
       };
       l(0);
     }
@@ -11378,8 +11378,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     newFight(e) {
       var _a3, _b3;
-      const s = this.session, n = e.kind === "foe" ? eo : oz, i = this.itemsFor(e.items, e.area), r = (_a3 = e.area) == null ? void 0 : _a3.unitId;
-      return { id: e.id, kind: e.kind, area: e.area, name: e.name, sprite: e.sprite, items: i, size: (_b3 = e.size) != null ? _b3 : i.length, battle: dz(e.hp, n, this.hp, Te), run: s.startRun(i, { kind: e.kind === "final" ? "boss" : "unit", ...r ? { unitId: r } : {}, ...e.size ? { size: e.size } : {} }), scoring: true, counts: e.counts, scores: [], last: null, newScroll: false };
+      const s = this.session, n = e.kind === "foe" ? eo : az, i = this.itemsFor(e.items, e.area), r = (_a3 = e.area) == null ? void 0 : _a3.unitId;
+      return { id: e.id, kind: e.kind, area: e.area, name: e.name, sprite: e.sprite, items: i, size: (_b3 = e.size) != null ? _b3 : i.length, battle: hz(e.hp, n, this.hp, Te), run: s.startRun(i, { kind: e.kind === "final" ? "boss" : "unit", ...r ? { unitId: r } : {}, ...e.size ? { size: e.size } : {} }), scoring: true, counts: e.counts, scores: [], last: null, newScroll: false };
     }
     startBattle(e, s) {
       const n = this.progressOf(e), i = s.kind === "foe" ? (() => {
@@ -11391,7 +11391,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     sceneFor(e) {
       const s = this.s, n = this.heroName();
-      return Cz({ words: { hero: n, foeName: e.name, foeLine: (i, r) => s("rpg.hp", { hp: i, max: r }), heroLine: (i, r) => s("rpg.hp", { hp: i, max: r }), streakLine: (i, r) => s("rpg.battle.streak", { n: i, m: r }), alt: s("rpg.battle.alt", { hero: n, foe: e.name }) }, pal: this.pal, seed: Ud("".concat(this.session.pack.id, ":").concat(e.id)) % 997, skin: this.skin, foe: e.sprite, boss: e.kind !== "foe", battle: e.battle });
+      return Zz({ words: { hero: n, foeName: e.name, foeLine: (i, r) => s("rpg.hp", { hp: i, max: r }), heroLine: (i, r) => s("rpg.hp", { hp: i, max: r }), streakLine: (i, r) => s("rpg.battle.streak", { n: i, m: r }), alt: s("rpg.battle.alt", { hero: n, foe: e.name }) }, pal: this.pal, seed: Ud("".concat(this.session.pack.id, ":").concat(e.id)) % 997, skin: this.skin, foe: e.sprite, boss: e.kind !== "foe", battle: e.battle });
     }
     fightView(e, s) {
       var _a3, _b3;
@@ -11410,7 +11410,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const o = i, a = this.sceneFor(e);
       e.newScroll = false, lt(s, { item: r, context: e.kind === "foe" ? "battle" : "boss", retry: o.retry, hud: a.el, lead: d("span", {}, n("rpg.battle.turn", { n: e.battle.turns + 1, name: e.name })), ...e.area ? { unitId: e.area.unitId } : {}, roundKind: e.kind === "final" ? "boss" : "unit", roundSize: e.run.size, index: e.run.results.length, view: () => this.fightView(e, "turn"), leaveLabel: n("rpg.battle.flee"), onLeave: () => this.flee(e), onAnswered: (c) => {
         e.run = s.record(e.run, o, c), e.scoring && !o.retry && e.scores.push(c.result.score);
-        const l = hz(e.battle, { correct: c.result.correct, score: c.result.score });
+        const l = pz(e.battle, { correct: c.result.correct, score: c.result.score });
         e.battle = l.battle, e.last = l, this.hp = l.battle.hp, c.result.correct && this.addScroll(r.id) && (e.newScroll = true), a.update(l.battle, { dealt: l.dealt, taken: l.taken, foeDown: l.won, heroDown: l.fainted });
       }, effect: (c) => {
         const l = e.last;
@@ -11454,7 +11454,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     replay(e) {
       const s = this.progressOf(e);
-      this.progress.set(e.id, Oz(e, s)), this.hp = Te, this.event = "replay", this.world(e);
+      this.progress.set(e.id, Nz(e, s)), this.hp = Te, this.event = "replay", this.world(e);
     }
     questDone(e, s, n, i) {
       const r = this.session, o = this.s, a = Math.round(n * 100), c = r.isMastered(e.unitId), l = this.layout.areas.filter((h) => i.includes(h.unitId)).map((h) => this.areaName(h)), u = d("section", { class: "rpg-done" }, d("h1", { class: "screen-title", tabindex: "-1", testid: "quest-title" }, o("rpg.qd.title")), d("p", { class: "subject" }, this.areaName(e)), r.stars(s, "quest-stars"), d("p", { class: "big-number", testid: "quest-accuracy" }, o("rpg.qd.accuracy", { n: a })), d("p", { class: "message ".concat(c ? "message-ok" : "message-bad"), testid: "quest-gate" }, o(c ? "rpg.qd.gate.open" : "rpg.qd.gate.shut")), l.length > 0 ? d("p", { class: "message", testid: "quest-unlocked" }, o("rpg.qd.unlocked", { units: l.join(", ") })) : null, s < 3 ? d("p", { class: "subject" }, o("rpg.quest.replay.hint")) : null, d("div", { class: "rpg-actions" }, T("to-world", o("rpg.qd.world"), () => this.world(e), { class: c ? "btn btn-primary btn-big" : "btn btn-big", ...c ? { "data-autofocus": "" } : {} }), s < 3 ? T("replay-quest", o("rpg.qd.replay"), () => this.replay(e), { class: c ? "btn btn-big" : "btn btn-primary btn-big", ...c ? {} : { "data-autofocus": "" } }) : null, T("to-areas", o("rpg.to.areas"), () => this.areas(), { class: "btn btn-big" })));
@@ -11488,7 +11488,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   const Bd = /* @__PURE__ */ (() => {
     let t = null;
     return { id: Cd, mount(e) {
-      t = new Fz(e), t.mount();
+      t = new Kz(e), t.mount();
     }, unmount() {
       t == null ? void 0 : t.unmount(), t = null;
     } };
@@ -11497,7 +11497,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const e = t.target;
     (e instanceof HTMLImageElement || e instanceof HTMLMediaElement || e instanceof SVGImageElement) && console.error("media failed to load: ".concat(e.currentSrc || e.getAttribute("src") || e.getAttribute("href") || "(no source)"));
   }, true);
-  const Je = V0();
-  for (const t of oS) Je.registerItemKind(t.kind, t);
+  const Je = Y0();
+  for (const t of aS) Je.registerItemKind(t.kind, t);
   Je.registerShell(fd.id, fd), Je.registerShell(od.id, od), Je.registerShell(hd.id, hd), Je.registerShell(Bd.id, Bd), Je.registerShell($d.id, $d), Je.registerShell(Ju.id, Ju), window.EduEngine = Je, Gd(), document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", () => Je.start()) : Je.start();
 })();

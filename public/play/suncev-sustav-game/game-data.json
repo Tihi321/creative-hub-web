@@ -2,7 +2,7 @@
   "format": "edu-game",
   "version": 1,
   "slug": "suncev-sustav",
-  "builtAt": "2026-11-09T21:41:06.089Z",
+  "builtAt": "2026-11-10T12:13:21.080Z",
   "engine": "0.0.1",
   "pack": {
     "schema": 1,
@@ -1240,55 +1240,55 @@
       {
         "id": "mus-menu",
         "kind": "audio",
-        "file": "assets/mus-menu/v1.ogg",
+        "file": "assets/mus-menu/v2.mp3",
         "alt": "asset.mus-menu.alt"
       },
       {
         "id": "mus-unit-u1",
         "kind": "audio",
-        "file": "assets/mus-unit-u1/v1.ogg",
+        "file": "assets/mus-unit-u1/v2.mp3",
         "alt": "asset.mus-unit-u1.alt"
       },
       {
         "id": "mus-unit-u2",
         "kind": "audio",
-        "file": "assets/mus-unit-u2/v1.ogg",
+        "file": "assets/mus-unit-u2/v2.mp3",
         "alt": "asset.mus-unit-u2.alt"
       },
       {
         "id": "mus-unit-u3",
         "kind": "audio",
-        "file": "assets/mus-unit-u3/v1.ogg",
+        "file": "assets/mus-unit-u3/v2.mp3",
         "alt": "asset.mus-unit-u3.alt"
       },
       {
         "id": "mus-boss",
         "kind": "audio",
-        "file": "assets/mus-boss/v1.ogg",
+        "file": "assets/mus-boss/v2.ogg",
         "alt": "asset.mus-boss.alt"
       },
       {
         "id": "mus-end",
         "kind": "audio",
-        "file": "assets/mus-end/v1.ogg",
+        "file": "assets/mus-end/v2.mp3",
         "alt": "asset.mus-end.alt"
       },
       {
         "id": "mus-castle",
         "kind": "audio",
-        "file": "assets/mus-castle/v1.ogg",
+        "file": "assets/mus-castle/v2.ogg",
         "alt": "asset.mus-castle.alt"
       },
       {
         "id": "mus-rpg-overworld",
         "kind": "audio",
-        "file": "assets/mus-rpg-overworld/v1.ogg",
+        "file": "assets/mus-rpg-overworld/v2.ogg",
         "alt": "asset.mus-rpg-overworld.alt"
       },
       {
         "id": "mus-rpg-battle",
         "kind": "audio",
-        "file": "assets/mus-rpg-battle/v1.ogg",
+        "file": "assets/mus-rpg-battle/v2.ogg",
         "alt": "asset.mus-rpg-battle.alt"
       },
       {
@@ -1352,16 +1352,16 @@
         "volume": 0.45
       },
       {
-        "id": "cue-music-boss",
-        "on": "music:boss",
-        "asset": "mus-boss",
+        "id": "cue-music-end",
+        "on": "music:end",
+        "asset": "mus-end",
         "loop": true,
         "volume": 0.45
       },
       {
-        "id": "cue-music-end",
-        "on": "music:end",
-        "asset": "mus-end",
+        "id": "cue-music-boss",
+        "on": "music:boss",
+        "asset": "mus-boss",
         "loop": true,
         "volume": 0.45
       },
@@ -1867,39 +1867,39 @@
         "loops": {
           "mus-menu": {
             "startSec": 0,
-            "endSec": 53.333333
+            "endSec": 86.908
           },
           "mus-unit-u1": {
             "startSec": 0,
-            "endSec": 57.142857
+            "endSec": 86.908
           },
           "mus-unit-u2": {
             "startSec": 0,
-            "endSec": 63.157891
+            "endSec": 86.908
           },
           "mus-unit-u3": {
             "startSec": 0,
-            "endSec": 60
+            "endSec": 86.908
           },
           "mus-boss": {
             "startSec": 0,
-            "endSec": 57.6
+            "endSec": 64
           },
           "mus-end": {
             "startSec": 0,
-            "endSec": 54.857143
+            "endSec": 86.908
           },
           "mus-castle": {
             "startSec": 0,
-            "endSec": 64
+            "endSec": 90
           },
           "mus-rpg-overworld": {
             "startSec": 0,
-            "endSec": 62.608707
+            "endSec": 88.888889
           },
           "mus-rpg-battle": {
             "startSec": 0,
-            "endSec": 57.6
+            "endSec": 61.935488
           }
         }
       }
@@ -2646,15 +2646,15 @@
     "img-rpg-npc-1": "assets/img-rpg-npc-1/v1.webp",
     "img-rpg-npc-2": "assets/img-rpg-npc-2/v1.webp",
     "img-rpg-npc-3": "assets/img-rpg-npc-3/v1.webp",
-    "mus-menu": "assets/mus-menu/v1.ogg",
-    "mus-unit-u1": "assets/mus-unit-u1/v1.ogg",
-    "mus-unit-u2": "assets/mus-unit-u2/v1.ogg",
-    "mus-unit-u3": "assets/mus-unit-u3/v1.ogg",
-    "mus-boss": "assets/mus-boss/v1.ogg",
-    "mus-end": "assets/mus-end/v1.ogg",
-    "mus-castle": "assets/mus-castle/v1.ogg",
-    "mus-rpg-overworld": "assets/mus-rpg-overworld/v1.ogg",
-    "mus-rpg-battle": "assets/mus-rpg-battle/v1.ogg",
+    "mus-menu": "assets/mus-menu/v2.mp3",
+    "mus-unit-u1": "assets/mus-unit-u1/v2.mp3",
+    "mus-unit-u2": "assets/mus-unit-u2/v2.mp3",
+    "mus-unit-u3": "assets/mus-unit-u3/v2.mp3",
+    "mus-boss": "assets/mus-boss/v2.ogg",
+    "mus-end": "assets/mus-end/v2.mp3",
+    "mus-castle": "assets/mus-castle/v2.ogg",
+    "mus-rpg-overworld": "assets/mus-rpg-overworld/v2.ogg",
+    "mus-rpg-battle": "assets/mus-rpg-battle/v2.ogg",
     "sfx-correct": "assets/sfx-correct/v1.ogg",
     "sfx-wrong": "assets/sfx-wrong/v1.ogg",
     "sfx-combo": "assets/sfx-combo/v1.ogg",

@@ -2,7 +2,7 @@
   "format": "edu-game",
   "version": 1,
   "slug": "deutsch-a1-pilot",
-  "builtAt": "2026-11-09T21:41:08.440Z",
+  "builtAt": "2026-11-10T12:13:21.763Z",
   "engine": "0.0.1",
   "pack": {
     "schema": 1,
@@ -1916,61 +1916,61 @@
       {
         "id": "mus-menu",
         "kind": "audio",
-        "file": "assets/mus-menu/v1.ogg",
+        "file": "assets/mus-menu/v2.ogg",
         "alt": "asset.mus-menu.alt"
       },
       {
         "id": "mus-unit-u1",
         "kind": "audio",
-        "file": "assets/mus-unit-u1/v1.ogg",
+        "file": "assets/mus-unit-u1/v2.ogg",
         "alt": "asset.mus-unit-u1.alt"
       },
       {
         "id": "mus-unit-u2",
         "kind": "audio",
-        "file": "assets/mus-unit-u2/v1.ogg",
+        "file": "assets/mus-unit-u2/v2.ogg",
         "alt": "asset.mus-unit-u2.alt"
       },
       {
         "id": "mus-unit-u3",
         "kind": "audio",
-        "file": "assets/mus-unit-u3/v1.ogg",
+        "file": "assets/mus-unit-u3/v2.ogg",
         "alt": "asset.mus-unit-u3.alt"
       },
       {
         "id": "mus-unit-u4",
         "kind": "audio",
-        "file": "assets/mus-unit-u4/v1.ogg",
+        "file": "assets/mus-unit-u4/v2.ogg",
         "alt": "asset.mus-unit-u4.alt"
       },
       {
         "id": "mus-boss",
         "kind": "audio",
-        "file": "assets/mus-boss/v1.ogg",
+        "file": "assets/mus-boss/v2.ogg",
         "alt": "asset.mus-boss.alt"
       },
       {
         "id": "mus-end",
         "kind": "audio",
-        "file": "assets/mus-end/v1.ogg",
+        "file": "assets/mus-end/v2.ogg",
         "alt": "asset.mus-end.alt"
       },
       {
         "id": "mus-castle",
         "kind": "audio",
-        "file": "assets/mus-castle/v1.ogg",
+        "file": "assets/mus-castle/v2.ogg",
         "alt": "asset.mus-castle.alt"
       },
       {
         "id": "mus-rpg-overworld",
         "kind": "audio",
-        "file": "assets/mus-rpg-overworld/v1.ogg",
+        "file": "assets/mus-rpg-overworld/v2.ogg",
         "alt": "asset.mus-rpg-overworld.alt"
       },
       {
         "id": "mus-rpg-battle",
         "kind": "audio",
-        "file": "assets/mus-rpg-battle/v1.ogg",
+        "file": "assets/mus-rpg-battle/v2.ogg",
         "alt": "asset.mus-rpg-battle.alt"
       },
       {
@@ -2387,19 +2387,19 @@
         "loops": {
           "mus-menu": {
             "startSec": 0,
-            "endSec": 93.333333
+            "endSec": 88.888889
           },
           "mus-unit-u1": {
             "startSec": 0,
-            "endSec": 87.272744
+            "endSec": 83.478277
           },
           "mus-unit-u2": {
             "startSec": 0,
-            "endSec": 86.153832
+            "endSec": 92.307687
           },
           "mus-unit-u3": {
             "startSec": 0,
-            "endSec": 96
+            "endSec": 100
           },
           "mus-unit-u4": {
             "startSec": 0,
@@ -2407,11 +2407,11 @@
           },
           "mus-boss": {
             "startSec": 0,
-            "endSec": 60
+            "endSec": 64
           },
           "mus-end": {
             "startSec": 0,
-            "endSec": 101.818186
+            "endSec": 80
           },
           "mus-castle": {
             "startSec": 0,
@@ -2419,11 +2419,11 @@
           },
           "mus-rpg-overworld": {
             "startSec": 0,
-            "endSec": 80
+            "endSec": 87.272744
           },
           "mus-rpg-battle": {
             "startSec": 0,
-            "endSec": 67.2
+            "endSec": 60.952381
           }
         }
       }
@@ -2571,7 +2571,15 @@
         "asset.sfx-wrong.alt": "Ein sanfter tiefer Klang für eine falsche Antwort",
         "asset.sfx-combo.alt": "Ein funkelnder Klang für eine Reihe richtiger Antworten",
         "asset.sfx-level-up.alt": "Eine fröhliche Fanfare am Ende einer Runde",
-        "asset.sfx-boss.alt": "Ein dramatischer Klang am Ende der Schlussrunde"
+        "asset.sfx-boss.alt": "Ein dramatischer Klang am Ende der Schlussrunde",
+        "asset.voice-de-item-u1-q5-listen-transcript.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u1-q7-opt-a.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u2-q9-opt-a.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u2-q11-listen-transcript.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u3-q3-listen-transcript.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u3-q8-opt-a.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u4-q1-listen-transcript.alt": "Snimka fraze za slušanje",
+        "asset.voice-de-item-u4-q2-opt-a.alt": "Snimka fraze za slušanje"
       },
       "accepted": {
         "item.u1-q5.answer": [
@@ -3255,21 +3263,21 @@
         "item.u3-q8-listen.prompt": "Poslušaj snimku i odaberi ono što čuješ.",
         "item.u4-q1-listen.prompt": "Poslušaj snimku i upiši što čuješ.",
         "item.u4-q2-listen.prompt": "Poslušaj snimku i odaberi ono što čuješ.",
-        "asset.mus-menu.alt": "Nježna chiptune glazba na početnom zaslonu",
-        "asset.mus-unit-u1.alt": "Vesela chiptune glazba tijekom runde 1. cjeline",
-        "asset.mus-unit-u2.alt": "Vesela chiptune glazba tijekom runde 2. cjeline",
-        "asset.mus-unit-u3.alt": "Vesela chiptune glazba tijekom runde 3. cjeline",
-        "asset.mus-unit-u4.alt": "Vesela chiptune glazba tijekom runde 4. cjeline",
-        "asset.mus-boss.alt": "Napeta ali prijateljska chiptune glazba tijekom završne runde",
-        "asset.mus-end.alt": "Topla chiptune glazba na završnom zaslonu",
-        "asset.mus-castle.alt": "Tajanstvena chiptune glazba u dvorcu",
-        "asset.mus-rpg-overworld.alt": "Lagana putnička chiptune glazba u igri",
-        "asset.mus-rpg-battle.alt": "Užurbana ali prijateljska chiptune glazba kad se postavi pitanje",
-        "asset.sfx-correct.alt": "Svijetli zvuk za točan odgovor",
-        "asset.sfx-wrong.alt": "Tihi niski zvuk za netočan odgovor",
-        "asset.sfx-combo.alt": "Zvjezdani zvuk za niz točnih odgovora",
-        "asset.sfx-level-up.alt": "Vesela fanfara na kraju runde",
-        "asset.sfx-boss.alt": "Dramatičan zvuk na kraju završne runde"
+        "asset.mus-menu.alt": "The menu music of the game about German for beginners",
+        "asset.mus-unit-u1.alt": "The music of unit-u1 of the game about German for beginners",
+        "asset.mus-unit-u2.alt": "The music of unit-u2 of the game about German for beginners",
+        "asset.mus-unit-u3.alt": "The music of unit-u3 of the game about German for beginners",
+        "asset.mus-unit-u4.alt": "The music of unit-u4 of the game about German for beginners",
+        "asset.mus-boss.alt": "The boss music of the game about German for beginners",
+        "asset.mus-end.alt": "The end music of the game about German for beginners",
+        "asset.mus-castle.alt": "The music of castle of the game about German for beginners",
+        "asset.mus-rpg-overworld.alt": "The music of rpg-overworld of the game about German for beginners",
+        "asset.mus-rpg-battle.alt": "The music of rpg-battle of the game about German for beginners",
+        "asset.sfx-correct.alt": "The sound for a correct answer",
+        "asset.sfx-wrong.alt": "The sound for a wrong answer",
+        "asset.sfx-combo.alt": "The sound for a combo",
+        "asset.sfx-level-up.alt": "The sound for finishing a unit",
+        "asset.sfx-boss.alt": "The sound for finishing the boss round"
       },
       "accepted": {
         "item.u4-q8.answer": [
@@ -3288,16 +3296,16 @@
     "voice-de-item-u3-q8-opt-a": "assets/voice-de-item-u3-q8-opt-a/v1.mp3",
     "voice-de-item-u4-q1-listen-transcript": "assets/voice-de-item-u4-q1-listen-transcript/v1.mp3",
     "voice-de-item-u4-q2-opt-a": "assets/voice-de-item-u4-q2-opt-a/v1.mp3",
-    "mus-menu": "assets/mus-menu/v1.ogg",
-    "mus-unit-u1": "assets/mus-unit-u1/v1.ogg",
-    "mus-unit-u2": "assets/mus-unit-u2/v1.ogg",
-    "mus-unit-u3": "assets/mus-unit-u3/v1.ogg",
-    "mus-unit-u4": "assets/mus-unit-u4/v1.ogg",
-    "mus-boss": "assets/mus-boss/v1.ogg",
-    "mus-end": "assets/mus-end/v1.ogg",
-    "mus-castle": "assets/mus-castle/v1.ogg",
-    "mus-rpg-overworld": "assets/mus-rpg-overworld/v1.ogg",
-    "mus-rpg-battle": "assets/mus-rpg-battle/v1.ogg",
+    "mus-menu": "assets/mus-menu/v2.ogg",
+    "mus-unit-u1": "assets/mus-unit-u1/v2.ogg",
+    "mus-unit-u2": "assets/mus-unit-u2/v2.ogg",
+    "mus-unit-u3": "assets/mus-unit-u3/v2.ogg",
+    "mus-unit-u4": "assets/mus-unit-u4/v2.ogg",
+    "mus-boss": "assets/mus-boss/v2.ogg",
+    "mus-end": "assets/mus-end/v2.ogg",
+    "mus-castle": "assets/mus-castle/v2.ogg",
+    "mus-rpg-overworld": "assets/mus-rpg-overworld/v2.ogg",
+    "mus-rpg-battle": "assets/mus-rpg-battle/v2.ogg",
     "sfx-correct": "assets/sfx-correct/v1.ogg",
     "sfx-wrong": "assets/sfx-wrong/v1.ogg",
     "sfx-combo": "assets/sfx-combo/v1.ogg",
