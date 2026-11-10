@@ -61,7 +61,7 @@ fix the build in its tool or remove the play from the catalog.
 `site.budgetMB` in the catalog (600 MiB) caps `public/` plus 5 MiB for the site itself. Over budget,
 or any file over 95 MB, `publish` exits 2 and prints the totals, the largest works and files and the
 split by type. The files stay so you can look; do not commit them. Options: leave a work out, or lower
-the audio bitrate (one constant in `scripts/lib/encode.mjs`, 96 kb/s today) and run
+the audio bitrate (constants in `scripts/lib/encode.mjs`: speech and SFX 96 kb/s, music Vorbis q5 / mp3 160k, music fallback q4 / 128k) and run
 `npm run publish -- --force`.
 
 ## GitHub Pages
